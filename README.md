@@ -1,1 +1,1 @@
-# healthy-church-mobile-app-ui
+# hc-mobile-app-ui
