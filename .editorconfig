@@ -15,22 +15,27 @@ indent_size = 2
 # JS and JSX
 [{*.js, *.jsx}]
 indent_style = space
-indent_size = 4
+indent_size = 2
+
+# Ts and TSX
+[{*.ts, *.tsx}]
+indent_style = space
+indent_size = 2
 
 # CSS, Less and Sass
 [{*.css, *.less, *.sass}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # HTML, Handlebars
 [{*.html, *.hbs}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # JSON and Similar
 [{*.json, *.yaml, *.yml}]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # Windows files
 [*.bat]
