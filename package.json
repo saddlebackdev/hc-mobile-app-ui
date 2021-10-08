@@ -2,6 +2,7 @@
   "name": "mau",
   "version": "0.0.1",
   "private": true,
+  "main": "./source/index.ts",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
