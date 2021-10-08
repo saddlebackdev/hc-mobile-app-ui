@@ -86,7 +86,6 @@
         "no-shadow-restricted-names": "error",
         "no-undef": "error",
         "no-undef-init": "error",
-        "no-unused-vars": "warn",
 
         // Common JS
         "callback-return": "warn",
