@@ -7,8 +7,8 @@ export const defaultTheme: ITheme = {
     // Brand
     primaryLight: '#00AEFF',
     primaryDark: '#1C93C4',
-    secondaryLight: '#134174',
-    secondaryDark: '#00254D',
+    secondaryLight: '#1C2530',
+    secondaryDark: '#1C2530',
 
     // Intents
     infoLight: '#00AEEF',
@@ -27,8 +27,8 @@ export const defaultTheme: ITheme = {
     grayTwo: '#EDF1F5',
     grayThree: '#DBE0E3',
     grayFour: '#97A4AB',
-    grayFive: '#384D5D',
-    graySix: '#1C2352',
+    grayFive: '#38424D',
+    graySix: '#1C2530',
   },
   typography: {
     sizes: {
