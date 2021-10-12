@@ -7,7 +7,13 @@ import {IProps} from './heading.types';
 
 // Styles
 const Heading = Styled.Text<IProps>`
-  color: ${({theme}) => theme.colors.graySix};
+  color: ${({theme, inversed}) => {
+    if (inversed) {
+      return theme.colors.white;
+    }
+
+    return theme.colors.graySix;
+  }};
 
   font-size: ${({theme, variant = 'h1'}): string => {
     return `${theme.typography?.sizes?.headings[variant]}px`;

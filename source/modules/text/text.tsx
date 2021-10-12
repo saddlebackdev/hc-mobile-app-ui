@@ -7,9 +7,13 @@ import {IProps} from './text.types';
 
 // Component
 const Text = Styled.Text<IProps>`
-  color: ${({theme, isMuted, isCaption}) => {
+  color: ${({theme, inversed, isMuted, isCaption}) => {
     if (isCaption || isMuted) {
       return theme.colors.grayFour;
+    }
+
+    if (inversed) {
+      return theme.colors.white;
     }
 
     return theme.colors.graySix;

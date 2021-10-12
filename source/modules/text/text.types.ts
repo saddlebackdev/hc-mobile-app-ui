@@ -3,6 +3,7 @@ import React from 'react';
 
 // Props
 export interface IProps {
+  inversed?: boolean;
   isMuted?: boolean;
   isSubtitle?: boolean;
   isCaption?: boolean;
