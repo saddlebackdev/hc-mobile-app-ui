@@ -31,7 +31,17 @@ export const defaultTheme: ITheme = {
     graySix: '#1C2352',
   },
   typography: {
-    // Default System Fonts
+    sizes: {
+      small: 14,
+      regular: 16,
+      headings: {
+        h1: 40,
+        h2: 24,
+        h3: 20,
+        h4: 18,
+        h5: 16,
+      },
+    },
   },
   spacing: {
     minorScale: 6,

@@ -4,8 +4,8 @@ export interface ITheme {
     // Brand
     primaryLight: string;
     primaryDark: string;
-    secondaryLight?: string;
-    secondaryDark?: string;
+    secondaryLight: string;
+    secondaryDark: string;
 
     // Intents
     infoLight: string;
@@ -20,31 +20,43 @@ export interface ITheme {
     // Monotone
     white: string;
     black: string;
-    grayOne?: string;
-    grayTwo?: string;
-    grayThree?: string;
-    grayFour?: string;
-    grayFive?: string;
-    graySix?: string;
+    grayOne: string;
+    grayTwo: string;
+    grayThree: string;
+    grayFour: string;
+    grayFive: string;
+    graySix: string;
   };
   typography: {
-    // Sans
-    sansRegular?: string;
-    sansItalics?: string;
-    sansSemiBold?: string;
-    sansBold?: string;
-
-    // Serif
-    serifRegular?: string;
-    serifItalics?: string;
-    serifSemiBold?: string;
-    serifBold?: string;
-
-    // Mono
-    monoRegular?: string;
-    monoItalics?: string;
-    monoSemiBold?: string;
-    monoBold?: string;
+    primary?: {
+      regular: string;
+      italics?: string;
+      semiBold?: string;
+      bold?: string;
+    };
+    secondary?: {
+      regular: string;
+      italics?: string;
+      semiBold?: string;
+      bold?: string;
+    };
+    tertiary?: {
+      regular: string;
+      italics?: string;
+      semiBold?: string;
+      bold?: string;
+    };
+    sizes: {
+      small: number;
+      regular: number;
+      headings: {
+        h1: number;
+        h2: number;
+        h3: number;
+        h4: number;
+        h5: number;
+      };
+    };
   };
   spacing: {
     minorScale: number;
@@ -55,5 +67,5 @@ export interface ITheme {
 // Props
 export interface IProps {
   children: React.ReactNode;
-  theme: ITheme;
+  theme?: ITheme;
 }
