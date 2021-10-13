@@ -43,10 +43,6 @@ export const defaultTheme: ITheme = {
       },
     },
   },
-  spacing: {
-    minorScale: 6,
-    majorScale: 12,
-  },
 };
 
 // Exports
