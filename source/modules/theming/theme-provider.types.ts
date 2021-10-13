@@ -58,10 +58,6 @@ export interface ITheme {
       };
     };
   };
-  spacing: {
-    minorScale: number;
-    majorScale: number;
-  };
 }
 
 // Props
