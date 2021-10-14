@@ -6,3 +6,4 @@ export {default as Text} from './modules/text/text';
 export {default as Button} from './modules/button/button';
 export {DeviceUtils} from './modules/utilities';
 export {majorScale, minorScale} from './modules/scales';
+export {default as Icon} from './modules/icon/icon';
