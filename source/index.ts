@@ -7,3 +7,4 @@ export {default as Button} from './modules/button/button';
 export {default as SelectPicker} from './modules/select-picker/select-picker';
 export {DeviceUtils} from './modules/utilities';
 export {majorScale, minorScale} from './modules/scales';
+export {default as Icon} from './modules/icon/icon';

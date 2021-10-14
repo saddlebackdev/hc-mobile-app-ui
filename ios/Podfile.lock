@@ -339,6 +339,8 @@ PODS:
     - React-perflogger (= 0.66.0)
   - RNCPicker (2.1.0):
     - React-Core
+  - RNSVG (12.1.1):
+    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -397,6 +399,7 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
+  - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -477,6 +480,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCPicker:
     :path: "../node_modules/@react-native-picker/picker"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -524,6 +529,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 4bb657a97aa74568d9ed634c8bd478299bb8a3a6
   ReactCommon: eb059748e842a1a86025ebbd4ac9d99e74492f88
   RNCPicker: f7a40b21b915b7a187624d52f52b7bc2f73ea413
+  RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   Yoga: c11abbf5809216c91fcd62f5571078b83d9b6720
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
