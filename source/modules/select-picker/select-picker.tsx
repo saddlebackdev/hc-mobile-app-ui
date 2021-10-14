@@ -13,6 +13,7 @@ import {DeviceUtils} from '../utilities';
 // Components
 import Text from '../text/text';
 import {majorScale} from '../scales';
+import Icon from '../icon/icon';
 
 // Styles
 const StyledView = Styled.View``;
@@ -37,7 +38,12 @@ const getStyles = ({colors, typography}: ITheme): Partial<PickerStyle> => {
       height: 50,
     },
     input: {
+      color: colors.graySix,
       fontSize: typography.sizes.regular,
+    },
+    iconContainer: {
+      marginTop: 7,
+      marginRight: 4,
     },
     chevronContainer: {
       paddingTop: 12,
@@ -83,6 +89,17 @@ const getStyles = ({colors, typography}: ITheme): Partial<PickerStyle> => {
   return baseStyles;
 };
 
+// Get Icon
+const getIcon = () => {
+  return () => {
+    if (DeviceUtils.isAndroid()) {
+      return null;
+    }
+
+    return <Icon size={14} type="chevronDown" />;
+  };
+};
+
 // Component
 const SelectPicker: React.FC<IProps> = ({
   label,
@@ -110,10 +127,10 @@ const SelectPicker: React.FC<IProps> = ({
       {label && <StyledLabel>{label}</StyledLabel>}
 
       <RNPickerSelect
-        fixAndroidTouchableBug
-        useNativeAndroidPickerStyle
-        {...additionalProps}
+        Icon={getIcon()}
         style={getStyles(theme)}
+        fixAndroidTouchableBug
+        {...additionalProps}
       />
     </StyledView>
   );
