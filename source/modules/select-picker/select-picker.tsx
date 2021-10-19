@@ -35,14 +35,14 @@ const getStyles = ({colors, typography}: ITheme): Partial<PickerStyle> => {
       borderColor: colors.grayThree,
       borderRadius: 3,
       borderWidth: 1,
-      height: 50,
+      height: 44,
     },
     input: {
       color: colors.graySix,
       fontSize: typography.sizes.regular,
     },
     iconContainer: {
-      marginTop: 7,
+      marginTop: 4,
       marginRight: 4,
     },
     chevronContainer: {
@@ -56,7 +56,7 @@ const getStyles = ({colors, typography}: ITheme): Partial<PickerStyle> => {
       ...baseStyles,
       inputAndroid: {
         ...baseStyles.input,
-        marginTop: -3,
+        marginTop: -6,
 
         // Something wrong with Typescript
         // Doesnt allow using string if moved to baseStyles
@@ -76,7 +76,6 @@ const getStyles = ({colors, typography}: ITheme): Partial<PickerStyle> => {
       },
       inputIOS: {
         ...baseStyles.input,
-        marginTop: 3,
 
         // Something wrong with Typescript
         // Doesnt allow using string if moved to baseStyles
