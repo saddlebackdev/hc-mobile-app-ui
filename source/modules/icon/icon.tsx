@@ -7,10 +7,13 @@ import {IProps} from './icon.types';
 
 // Icons
 import IconChevronDown from './images/chevron-down.svg';
+import IconCalendar from './images/calendar.svg';
 
 // Icons
 const IconFiles = {
   chevronDown: IconChevronDown,
+  calendar: IconCalendar,
+  date: IconCalendar,
 };
 
 // Component
