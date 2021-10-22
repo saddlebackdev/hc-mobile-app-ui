@@ -8,7 +8,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "./node_modules/.bin/jest .",
-    "lint": "./node_modules/.bin/eslint ."
+    "lint": "./node_modules/.bin/eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "@react-native-community/datetimepicker": "^3.5.2",
@@ -23,14 +23,12 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.1.2",
-    "@types/jest": "^27.0.2",
+    "@testing-library/jest-native": "^4.0.2",
+    "@testing-library/react-native": "^8.0.0",
+    "@types/jest": "^26.0.23",
     "@types/react-native": "^0.65.0",
     "@types/react-test-renderer": "^17.0.1",
     "@types/styled-components-react-native": "^5.1.1",
-    "@types/testing-library__jest-dom": "^5.14.1",
-    "@types/testing-library__react": "^10.2.0",
     "babel-jest": "^26.6.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -39,16 +37,29 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "husky": "^7.0.2",
-    "jest": "^27.3.1",
+    "jest": "^26.6.3",
     "lint-staged": "^11.2.0",
     "metro-react-native-babel-preset": "^0.66.2",
     "prettier": "^2.4.1",
     "react-native-svg-transformer": "^0.14.3",
     "react-test-renderer": "17.0.2",
-    "ts-jest": "^27.0.7",
     "typescript": "^3.8.3"
   },
   "resolutions": {
     "@types/react": "^17"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }

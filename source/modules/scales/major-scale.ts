@@ -1,7 +1,7 @@
 // Defaults
 
 // TODO: Hardcoding these numbers for now
-const majorScaleUnit: number = 11;
+export const majorScaleUnit: number = 11;
 
 // Major Scale
 export const majorScale = (n: number = 1, unit?: string) => {
