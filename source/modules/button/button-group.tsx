@@ -3,7 +3,11 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IButtonGroupProps, IButtonGroupItemProps} from './button-group.types';
+import {
+  IProps,
+  IButtonGroupProps,
+  IButtonGroupItemProps,
+} from './button-group.types';
 
 // Shared
 import {majorScale} from '../scales';
@@ -22,7 +26,7 @@ export const StyledItem = Styled.View<IButtonGroupItemProps>`
 `;
 
 // Component
-export const ButtonGroup: React.FC = ({children}) => {
+export const ButtonGroup: React.FC<IProps> = ({children}) => {
   const numberOfChildren = React.Children.toArray(children).length;
 
   return (

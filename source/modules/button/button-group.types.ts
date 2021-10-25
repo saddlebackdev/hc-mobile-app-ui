@@ -12,3 +12,8 @@ export interface IButtonGroupItemProps extends ViewProps {
   hasRightMargin: boolean;
   hasLeftMargin: boolean;
 }
+
+// IProps
+export interface IProps {
+  children: Array<React.ReactElement>;
+}
