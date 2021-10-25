@@ -12,5 +12,5 @@ export interface IProps {
     | 'muted'
     | 'white';
 
-  type: 'chevronDown' | 'calendar' | 'date';
+  type: 'chevronDown' | 'calendar' | 'date' | 'success' | 'tick';
 }

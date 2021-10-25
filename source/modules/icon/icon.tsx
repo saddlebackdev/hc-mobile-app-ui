@@ -8,12 +8,15 @@ import {IProps} from './icon.types';
 // Icons
 import IconChevronDown from './images/chevron-down.svg';
 import IconCalendar from './images/calendar.svg';
+import IconSuccess from './images/success.svg';
 
 // Icons
 const IconFiles = {
   chevronDown: IconChevronDown,
   calendar: IconCalendar,
   date: IconCalendar,
+  success: IconSuccess,
+  tick: IconSuccess,
 };
 
 // Component
