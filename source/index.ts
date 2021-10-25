@@ -2,6 +2,9 @@
 export {default as Button} from './modules/button/button';
 export {default as ButtonGroup} from './modules/button/button-group';
 
+// Checkbox
+export {default as Checkbox} from './modules/checkbox/checkbox';
+
 // Date Picker
 export {default as DatePicker} from './modules/date-picker/date-picker';
 
