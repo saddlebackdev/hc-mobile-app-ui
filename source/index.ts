@@ -1,11 +1,24 @@
-// Modules
-export {default as defaultTheme} from './modules/theming/default-theme';
-export {default as ThemeProvider} from './modules/theming/theme-provider';
+// Button
+export {default as Button} from './modules/button/button';
+export {default as ButtonGroup} from './modules/button/button-group';
+
+// Date Picker
+export {default as DatePicker} from './modules/date-picker/date-picker';
+
+// Select Picker
+export {default as SelectPicker} from './modules/select-picker/select-picker';
+
+// Icons
+export {default as Icon} from './modules/icon/icon';
+
+// Typography
 export {default as Heading} from './modules/heading/heading';
 export {default as Text} from './modules/text/text';
-export {default as Button} from './modules/button/button';
-export {default as SelectPicker} from './modules/select-picker/select-picker';
-export {DeviceUtils} from './modules/utilities';
+
+// Theming
+export {default as defaultTheme} from './modules/theming/default-theme';
+export {default as ThemeProvider} from './modules/theming/theme-provider';
+
+// Utilities
 export {majorScale, minorScale} from './modules/scales';
-export {default as Icon} from './modules/icon/icon';
-export {default as DatePicker} from './modules/date-picker/date-picker';
+export {DeviceUtils} from './modules/utilities';
