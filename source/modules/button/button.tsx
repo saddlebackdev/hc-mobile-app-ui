@@ -56,9 +56,13 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
     return appearance === 'outline' ? '1px' : '0px';
   }};
 
-  border-color: ${({appearance, color, theme}) => {
+  border-color: ${({appearance, color, disabled, theme}) => {
     if (appearance === 'filled') {
       return 'transparent';
+    }
+
+    if (disabled) {
+      return theme.colors.grayThree;
     }
 
     switch (color) {
