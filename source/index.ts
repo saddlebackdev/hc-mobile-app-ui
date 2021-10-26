@@ -14,6 +14,9 @@ export {default as SelectPicker} from './modules/select-picker/select-picker';
 // Icons
 export {default as Icon} from './modules/icon/icon';
 
+// Radio
+export {default as Radio} from './modules/radio/radio';
+
 // Typography
 export {default as Heading} from './modules/heading/heading';
 export {default as Text} from './modules/text/text';
