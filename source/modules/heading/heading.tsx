@@ -22,22 +22,25 @@ const Heading = Styled.Text<IProps>`
   font-weight: ${({variant}): string => {
     switch (variant) {
       case 'h1': {
-        return '400';
+        return '700';
       }
       case 'h2': {
-        return '400';
+        return '700';
       }
       case 'h3': {
-        return 'bold';
+        return '700';
       }
       case 'h4': {
-        return 'bold';
+        return '700';
       }
       case 'h5': {
-        return 'bold';
+        return '600';
+      }
+      case 'h6': {
+        return '600';
       }
       default: {
-        return '400';
+        return '700';
       }
     }
   }};

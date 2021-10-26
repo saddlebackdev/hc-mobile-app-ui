@@ -28,24 +28,6 @@ export interface ITheme {
     graySix: string;
   };
   typography: {
-    primary?: {
-      regular: string;
-      italics?: string;
-      semiBold?: string;
-      bold?: string;
-    };
-    secondary?: {
-      regular: string;
-      italics?: string;
-      semiBold?: string;
-      bold?: string;
-    };
-    tertiary?: {
-      regular: string;
-      italics?: string;
-      semiBold?: string;
-      bold?: string;
-    };
     sizes: {
       small: number;
       regular: number;
@@ -55,6 +37,7 @@ export interface ITheme {
         h3: number;
         h4: number;
         h5: number;
+        h6: number;
       };
     };
   };
