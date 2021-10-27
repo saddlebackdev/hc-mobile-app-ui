@@ -1,115 +1,320 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
+// Modules
 import React from 'react';
+import {SafeAreaView} from 'react-native';
+import Styled from 'styled-components/native';
+
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
+  Button,
+  ButtonGroup,
+  Checkbox,
   Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+  Heading,
+  Radio,
+  ThemeProvider,
+  PillToggle,
+  TextInput,
+} from './source';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+// Interfaces
+interface IProps {}
 
-const Section: React.FC<{
-  title: string;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+const Wrapper = Styled.ScrollView`
+  padding: 30px;
+`;
+const Section = Styled.View`
+  margin-top: 30px;
+  margin-bottom: 30px;
+`;
+const Row = Styled.View`
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
 
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+// Component
+export const App: React.FC<IProps> = (): React.ReactElement => {
+  const [isChecked, setIsChecked] = React.useState(true);
+  const [selectedRadio, setSelectedRadio] = React.useState(2);
+  const [activePill, setActivePill] = React.useState(2);
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const pillToggleOptions = [
+    {label: 'Selected', value: 1, onPress: setActivePill},
+    {label: 'Unselected', value: 2, onPress: setActivePill},
+  ];
+
+  const options = [
+    {label: 'Label 1', value: 1},
+    {label: 'Label 2', value: 2, disabled: true},
+    {label: 'Label 3', value: 3, disabled: true},
+    {label: 'Label 4', value: 4},
+  ];
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+    <SafeAreaView>
+      <ThemeProvider>
+        <Wrapper>
+          {/* Text Input */}
+          <Section>
+            <Row>
+              <TextInput
+                label="Email Address"
+                placeholder="jane.doe@ag.com"
+                onChange={() => null}
+                numberOfLines={12}
+                multiline
+                required
+              />
+            </Row>
+            <Row>
+              <TextInput
+                label="Email Address"
+                placeholder="jane.doe@ag.com"
+                onChange={() => null}
+                disabled
+              />
+            </Row>
+            <Row>
+              <TextInput
+                label="Email Address"
+                placeholder="jane.doe@ag.com"
+                onChange={() => null}
+              />
+            </Row>
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
+
+          {/* Pill Toggle */}
+          <Section>
+            <PillToggle
+              selected={activePill}
+              options={pillToggleOptions}
+              disabled={false}
+            />
           </Section>
-          <Section title="Debug">
-            <DebugInstructions />
+
+          {/* Radio */}
+          <Section>
+            <Radio
+              direction="vertical"
+              selected={selectedRadio}
+              onChange={setSelectedRadio}
+              options={options}
+            />
           </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
+
+          {/* Buttons */}
+          <Section>
+            <Row>
+              <Button appearance="filled" color="primary">
+                Primary Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="filled" color="secondary">
+                Secondary Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="filled" color="info">
+                Informative Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="filled" color="success">
+                Success Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="filled" color="warning">
+                Warning Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="filled" color="danger">
+                Danger Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="filled" disabled>
+                Disabled Button
+              </Button>
+            </Row>
           </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+          <Section>
+            <Row>
+              <Button appearance="outline" color="primary">
+                Primary Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="outline" color="secondary">
+                Secondary Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="outline" color="info">
+                Informative Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="outline" color="success">
+                Success Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="outline" color="warning">
+                Warning Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="outline" color="danger">
+                Danger Button
+              </Button>
+            </Row>
+            <Row>
+              <Button appearance="outline" disabled>
+                Disabled Button
+              </Button>
+            </Row>
+          </Section>
+
+          {/* Button Group */}
+          <Section>
+            <Row>
+              <ButtonGroup>
+                <Button appearance="outline" color="secondary">
+                  Cancel
+                </Button>
+                <Button appearance="filled">Submit</Button>
+              </ButtonGroup>
+            </Row>
+            <Row>
+              <ButtonGroup>
+                <Button appearance="outline" color="secondary">
+                  Cancel
+                </Button>
+                <Button appearance="filled" disabled>
+                  Submit
+                </Button>
+              </ButtonGroup>
+            </Row>
+            <Row>
+              <ButtonGroup>
+                <Button appearance="outline" color="secondary">
+                  Cancel
+                </Button>
+                <Button appearance="filled" color="success">
+                  Keep
+                </Button>
+                <Button color="danger" appearance="filled">
+                  Delete
+                </Button>
+              </ButtonGroup>
+            </Row>
+          </Section>
+
+          {/* Checkbox */}
+          <Section>
+            <Row>
+              <Checkbox
+                isChecked={isChecked}
+                onPress={() => setIsChecked(!isChecked)}
+                label="Label for Checkbox"
+                hint="This is a hint"
+              />
+            </Row>
+            <Row>
+              <Checkbox
+                isChecked={!isChecked}
+                onPress={() => setIsChecked(!isChecked)}
+                label="Label for Checkbox"
+                hint="This is a hint"
+              />
+            </Row>
+            <Row>
+              <Checkbox
+                disabled
+                isChecked={isChecked}
+                onPress={() => setIsChecked(!isChecked)}
+                label="Label for Checkbox"
+                hint="This is a hint"
+              />
+            </Row>
+            <Row>
+              <Checkbox
+                disabled
+                isChecked={!isChecked}
+                onPress={() => setIsChecked(!isChecked)}
+                label="Label for Checkbox"
+                hint="This is a hint"
+              />
+            </Row>
+          </Section>
+
+          {/* Typography */}
+          <Section>
+            <Row>
+              <Heading variant="h1">Heading 1</Heading>
+            </Row>
+            <Row>
+              <Heading variant="h2">Heading 2</Heading>
+            </Row>
+            <Row>
+              <Heading variant="h3">Heading 3</Heading>
+            </Row>
+            <Row>
+              <Heading variant="h4">Heading 4</Heading>
+            </Row>
+            <Row>
+              <Heading variant="h5">Heading 5</Heading>
+            </Row>
+            <Row>
+              <Heading variant="h6">Heading 6</Heading>
+            </Row>
+          </Section>
+
+          {/* Typography */}
+          <Section>
+            <Row>
+              <Text>
+                PARAGRAPH &mdash; Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </Text>
+            </Row>
+            <Row>
+              <Text isMuted>
+                MUTED &mdash; Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.
+              </Text>
+            </Row>
+            <Row>
+              <Text isCaption>
+                CAPTION and SUBTITLE &mdash; Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+              </Text>
+            </Row>
+          </Section>
+        </Wrapper>
+      </ThemeProvider>
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
+// Exports
 export default App;
