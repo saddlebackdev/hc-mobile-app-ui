@@ -1,12 +1,11 @@
 // Modules
-import React from 'react';
+import {TextProps} from 'react-native';
 
 // Props
-export interface IProps {
+export interface IProps extends TextProps {
   inversed?: boolean;
   isMuted?: boolean;
   isSubtitle?: boolean;
   isCaption?: boolean;
   alignment?: 'left' | 'center' | 'right';
-  children: React.ReactNode;
 }

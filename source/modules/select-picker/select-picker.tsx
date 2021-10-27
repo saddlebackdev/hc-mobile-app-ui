@@ -16,7 +16,7 @@ import {majorScale} from '../scales';
 import Icon from '../icon/icon';
 
 // Styles
-const StyledView = Styled.View``;
+const StyledWrapper = Styled.View``;
 const StyledLabel = Styled(Text)`
   font-weight: 700;
   margin-bottom: ${majorScale(1, 'px')};
@@ -122,7 +122,7 @@ const SelectPicker: React.FC<IProps> = ({
   }
 
   return (
-    <StyledView>
+    <StyledWrapper>
       {label && <StyledLabel>{label}</StyledLabel>}
 
       <RNPickerSelect
@@ -131,7 +131,7 @@ const SelectPicker: React.FC<IProps> = ({
         fixAndroidTouchableBug
         {...additionalProps}
       />
-    </StyledView>
+    </StyledWrapper>
   );
 };
 

@@ -3,7 +3,7 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IProps, IStyledButton, IStyledText} from './button.types';
+import {IProps, IStyledButton, IStyledLabel} from './button.types';
 
 // Styles
 const StyledButton = Styled.TouchableOpacity<IStyledButton>`
@@ -90,7 +90,7 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
     }
   }};
 `;
-const StyledText = Styled.Text<IStyledText>`
+const StyledLabel = Styled.Text<IStyledLabel>`
   font-weight: 500;
 
   font-size: ${({small, theme}) => {
@@ -135,30 +135,35 @@ const StyledText = Styled.Text<IStyledText>`
 `;
 
 // Component
-const Button: React.FC<IProps> = ({
-  disabled = false,
-  appearance = 'filled',
-  color = 'primary',
-  children,
-  small = false,
-}): React.ReactElement => {
-  return (
-    <StyledButton
-      activeOpacity={0.75}
-      disabled={disabled}
-      appearance={appearance}
-      color={color}
-      small={small}>
-      <StyledText
+const Button: React.FC<IProps> = React.memo(
+  ({
+    disabled = false,
+    appearance = 'filled',
+    color = 'primary',
+    children,
+    small = false,
+  }): React.ReactElement => {
+    return (
+      <StyledButton
+        activeOpacity={0.75}
+        disabled={disabled}
         appearance={appearance}
-        small={small}
         color={color}
-        disabled={disabled}>
-        {children}
-      </StyledText>
-    </StyledButton>
-  );
-};
+        small={small}>
+        <StyledLabel
+          appearance={appearance}
+          small={small}
+          color={color}
+          disabled={disabled}>
+          {children}
+        </StyledLabel>
+      </StyledButton>
+    );
+  },
+);
+
+// Properties
+Button.displayName = 'Button';
 
 // Exports
-export default React.memo(Button);
+export default Button;

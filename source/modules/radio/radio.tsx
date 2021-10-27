@@ -7,7 +7,7 @@ import {
   IProps,
   IStyledWrapper,
   IStyledGroup,
-  IStyledRadioMark,
+  IStyledRadioInner,
 } from './radio.types';
 
 // Shared
@@ -47,7 +47,7 @@ const StyledGroup = Styled.TouchableOpacity<IStyledGroup>`
     return majorScale(2);
   }};
 `;
-const StyledRadioWrapper = Styled.View`
+const StyledRadioOuter = Styled.View`
   width: 22px; height: 22px;
   background-color: ${({theme}) => theme.colors.white};
 
@@ -59,7 +59,7 @@ const StyledRadioWrapper = Styled.View`
     return theme.colors.grayThree;
   }}
 `;
-const StyledRadioMark = Styled.View<IStyledRadioMark>`
+const StyledRadioInner = Styled.View<IStyledRadioInner>`
   align-items: center;
   justify-content: center;
   width: 14px; height: 14px;
@@ -69,70 +69,74 @@ const StyledRadioMark = Styled.View<IStyledRadioMark>`
     return $isDisabled ? theme.colors.grayFour : theme.colors.primaryLight;
   }};
 `;
-const StyledRadioLabelWrapper = Styled.View`
+const StyledRadioLabelWrapper = Styled(Text)`
   padding-left: ${majorScale()};
   padding-top: 2px;
 `;
 
 // Component
-export const Radio: React.FC<IProps> = ({
-  onChange,
-  selected,
-  disabled: isRadioDisabled,
-  direction,
-  options,
-}): React.ReactElement => {
-  const touchableHitslop = {
-    top: 12,
-    right: 12,
-    bottom: 12,
-    left: 12,
-  };
+export const Radio: React.FC<IProps> = React.memo(
+  ({
+    onChange,
+    selected,
+    disabled: isRadioDisabled,
+    direction,
+    options,
+  }): React.ReactElement => {
+    const touchableHitslop = {
+      top: 12,
+      right: 12,
+      bottom: 12,
+      left: 12,
+    };
 
-  return (
-    <StyledWrapper $direction={direction}>
-      {options.map((option, ndx) => {
-        const _onPressOption = () => {
-          if (isRadioDisabled || option.disabled) {
-            return;
-          }
+    return (
+      <StyledWrapper $direction={direction}>
+        {options.map((option, ndx) => {
+          const _onPressOption = () => {
+            if (isRadioDisabled || option.disabled) {
+              return;
+            }
 
-          onChange(option.value);
-        };
+            onChange(option.value);
+          };
 
-        const isSelected = option.value === selected;
+          const isSelected = option.value === selected;
 
-        const isFirstElement = ndx === 0;
-        const isLastElement = options.length - 1 === ndx;
+          const isFirstElement = ndx === 0;
+          const isLastElement = options.length - 1 === ndx;
 
-        return (
-          <StyledGroup
-            key={option.label}
-            hitSlop={touchableHitslop}
-            onPress={_onPressOption}
-            activeOpacity={option.disabled ? 1 : 0.75}
-            $direction={direction}
-            $isFirstChild={isFirstElement}
-            $isLastChild={isLastElement}
-            disabled={isRadioDisabled || option.disabled}>
-            <StyledRadioWrapper>
-              {isSelected && (
-                <StyledRadioMark
-                  $isDisabled={isRadioDisabled || option.disabled}
-                />
-              )}
-            </StyledRadioWrapper>
-            <StyledRadioLabelWrapper>
-              <Text isMuted={isRadioDisabled || option.disabled}>
+          return (
+            <StyledGroup
+              key={option.label}
+              hitSlop={touchableHitslop}
+              onPress={_onPressOption}
+              activeOpacity={option.disabled ? 1 : 0.75}
+              $direction={direction}
+              $isFirstChild={isFirstElement}
+              $isLastChild={isLastElement}
+              disabled={isRadioDisabled || option.disabled}>
+              <StyledRadioOuter>
+                {isSelected && (
+                  <StyledRadioInner
+                    $isDisabled={isRadioDisabled || option.disabled}
+                  />
+                )}
+              </StyledRadioOuter>
+              <StyledRadioLabelWrapper
+                isMuted={isRadioDisabled || option.disabled}>
                 {option.label}
-              </Text>
-            </StyledRadioLabelWrapper>
-          </StyledGroup>
-        );
-      })}
-    </StyledWrapper>
-  );
-};
+              </StyledRadioLabelWrapper>
+            </StyledGroup>
+          );
+        })}
+      </StyledWrapper>
+    );
+  },
+);
+
+// Properties
+Radio.displayName = 'Radio';
 
 // Exports
 export default Radio;

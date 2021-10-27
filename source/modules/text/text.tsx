@@ -1,5 +1,4 @@
 // Modules
-import React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
@@ -41,4 +40,4 @@ const Text = Styled.Text<IProps>`
 `;
 
 // Exports
-export default React.memo(Text);
+export default Text;

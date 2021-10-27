@@ -1,5 +1,4 @@
 // Modules
-import React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
@@ -59,4 +58,4 @@ const Heading = Styled.Text<IProps>`
 `;
 
 // Exports
-export default React.memo(Heading);
+export default Heading;

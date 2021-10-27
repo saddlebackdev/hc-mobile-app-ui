@@ -45,6 +45,5 @@ export interface ITheme {
 
 // Props
 export interface IProps {
-  children: React.ReactNode;
   theme?: ITheme;
 }

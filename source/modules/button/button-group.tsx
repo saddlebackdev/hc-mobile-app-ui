@@ -21,12 +21,12 @@ export const StyledWrapper = Styled.View<IButtonGroupProps>`
 `;
 export const StyledItem = Styled.View<IButtonGroupItemProps>`
   flex: 1;
-  margin-right: ${({hasRightMargin}) => (hasRightMargin ? majorScale() : 0)};
-  margin-left: ${({hasLeftMargin}) => (hasLeftMargin ? majorScale() : 0)};
+  margin-right: ${({$hasRightMargin}) => ($hasRightMargin ? majorScale() : 0)};
+  margin-left: ${({$hasLeftMargin}) => ($hasLeftMargin ? majorScale() : 0)};
 `;
 
 // Component
-export const ButtonGroup: React.FC<IProps> = ({children}) => {
+export const ButtonGroup: React.FC<IProps> = React.memo(({children}) => {
   const numberOfChildren = React.Children.toArray(children).length;
 
   return (
@@ -37,15 +37,18 @@ export const ButtonGroup: React.FC<IProps> = ({children}) => {
 
         return (
           <StyledItem
-            hasLeftMargin={!isFirstChild}
-            hasRightMargin={!isLastChild}>
+            $hasLeftMargin={!isFirstChild}
+            $hasRightMargin={!isLastChild}>
             {child}
           </StyledItem>
         );
       })}
     </StyledWrapper>
   );
-};
+});
+
+// Properties
+ButtonGroup.displayName = 'ButtonGroup';
 
 // Exports
-export default React.memo(ButtonGroup);
+export default ButtonGroup;

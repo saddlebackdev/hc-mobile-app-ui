@@ -6,8 +6,8 @@ import Styled from 'styled-components/native';
 import {
   IProps,
   IStyledWrapperProps,
-  IStyledCheckboxWrapperProps,
-  IStyledCheckboxMarkWrapperProps,
+  IStyledCheckboxOuter,
+  IStyledCheckboxInner,
 } from './checkbox.types';
 
 // Shared
@@ -19,7 +19,7 @@ import {majorScale} from '../scales';
 const StyledWrapper = Styled.TouchableOpacity<IStyledWrapperProps>`
   flex-direction: row;
 `;
-const StyledCheckboxWrapper = Styled.View<IStyledCheckboxWrapperProps>`
+const StyledCheckboxOuter = Styled.View<IStyledCheckboxOuter>`
   width: 24px; height: 24px;
   border-radius: 3px;
   overflow: hidden;
@@ -36,7 +36,7 @@ const StyledCheckboxWrapper = Styled.View<IStyledCheckboxWrapperProps>`
     return $isChecked ? theme.colors.primaryLight : theme.colors.grayThree;
   }};
 `;
-const StyledCheckboxMarkWrapper = Styled.View<IStyledCheckboxMarkWrapperProps>`
+const StyledCheckboxInner = Styled.View<IStyledCheckboxInner>`
   align-items: center;
   justify-content: center;
   width: 24px; height: 24px;
@@ -48,54 +48,53 @@ const StyledCheckboxMarkWrapper = Styled.View<IStyledCheckboxMarkWrapperProps>`
   }};
 `;
 const StyledDetailsWrapper = Styled.View`
-  padding-top: 2px;
+  padding-top: 3px;
   padding-left: ${majorScale()};
 `;
-const StyledDetailsLabelWrapper = Styled.View`
+const StyledCheckboxLabel = Styled(Text)`
   margin-bottom: 4px;
 `;
-const StyledDetailsHintWrapper = Styled.View``;
+const StyledCheckboxHint = Styled(Text)``;
 
 // Component
-export const Checkbox: React.FC<IProps> = ({
-  hint,
-  label,
-  isChecked = false,
-  disabled,
-  onPress,
-}): React.ReactElement => {
-  const touchableHitslop = {
-    top: 12,
-    right: 12,
-    bottom: 12,
-    left: 12,
-  };
+export const Checkbox: React.FC<IProps> = React.memo(
+  ({hint, label, isChecked = false, disabled, onPress}): React.ReactElement => {
+    const touchableHitslop = {
+      top: 12,
+      right: 12,
+      bottom: 12,
+      left: 12,
+    };
 
-  return (
-    <StyledWrapper
-      disabled={disabled}
-      activeOpacity={0.75}
-      onPress={onPress}
-      hitSlop={touchableHitslop}>
-      <StyledCheckboxWrapper $isChecked={isChecked} $isDisabled={disabled}>
-        {isChecked && (
-          <StyledCheckboxMarkWrapper $isDisabled={disabled}>
-            <Icon type="tick" color={disabled ? 'muted' : 'white'} size={14} />
-          </StyledCheckboxMarkWrapper>
-        )}
-      </StyledCheckboxWrapper>
+    return (
+      <StyledWrapper
+        disabled={disabled}
+        activeOpacity={0.75}
+        onPress={onPress}
+        hitSlop={touchableHitslop}>
+        <StyledCheckboxOuter $isChecked={isChecked} $isDisabled={disabled}>
+          {isChecked && (
+            <StyledCheckboxInner $isDisabled={disabled}>
+              <Icon
+                type="tick"
+                color={disabled ? 'muted' : 'white'}
+                size={14}
+              />
+            </StyledCheckboxInner>
+          )}
+        </StyledCheckboxOuter>
 
-      <StyledDetailsWrapper>
-        <StyledDetailsLabelWrapper>
-          <Text>{label}</Text>
-        </StyledDetailsLabelWrapper>
-        <StyledDetailsHintWrapper>
-          <Text isCaption>{hint}</Text>
-        </StyledDetailsHintWrapper>
-      </StyledDetailsWrapper>
-    </StyledWrapper>
-  );
-};
+        <StyledDetailsWrapper>
+          <StyledCheckboxLabel>{label}</StyledCheckboxLabel>
+          <StyledCheckboxHint isCaption>{hint}</StyledCheckboxHint>
+        </StyledDetailsWrapper>
+      </StyledWrapper>
+    );
+  },
+);
+
+// Properties
+Checkbox.displayName = 'Checkbox';
 
 // Exports
-export default React.memo(Checkbox);
+export default Checkbox;
