@@ -4,7 +4,7 @@
 export const minorScaleUnit: number = 5;
 
 // Minor Scale
-export const minorScale = (n: number = 1, unit?: string) => {
+export const minorScale = (n: number = 1, unit: string = 'px') => {
   if (unit) {
     return `${minorScaleUnit * n}${unit}`;
   }
