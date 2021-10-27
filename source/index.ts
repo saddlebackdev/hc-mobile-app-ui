@@ -17,6 +17,9 @@ export {default as Icon} from './modules/icon/icon';
 // Radio
 export {default as Radio} from './modules/radio/radio';
 
+// Form
+export {default as TextInput} from './modules/text-input/text-input';
+
 // Typography
 export {default as Heading} from './modules/heading/heading';
 export {default as Text} from './modules/text/text';
