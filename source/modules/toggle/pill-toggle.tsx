@@ -3,7 +3,12 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IProps, IStyledWrapper, IStyledItemWrapper} from './pill-toggle.types';
+import {
+  IProps,
+  IStyledWrapper,
+  IStyledItem,
+  IStyledItemLabel,
+} from './pill-toggle.types';
 
 // Shared
 import Text from '../text/text';
@@ -14,7 +19,7 @@ const StyledWrapper = Styled.View<IStyledWrapper>`
   display: flex;
   flex-direction: row;
 `;
-const StyledItemWrapper = Styled.TouchableOpacity<IStyledItemWrapper>`
+const StyledItem = Styled.TouchableOpacity<IStyledItem>`
   background: ${({$isSelected, $isDisabled, theme}) => {
     if ($isSelected) {
       if ($isDisabled) {
@@ -60,7 +65,7 @@ const StyledItemWrapper = Styled.TouchableOpacity<IStyledItemWrapper>`
     return $isLastChild ? majorScale(2) : 0;
   }};
 `;
-const StyledItemLabel = Styled(Text)`
+const StyledItemLabel = Styled(Text)<IStyledItemLabel>`
   font-size: ${({theme}) => theme.typography.sizes.small}px;
   padding-horizontal: ${majorScale(2)};
   padding-vertical: ${minorScale(2)};
@@ -89,7 +94,7 @@ export const PillToggle: React.FC<IProps> = ({
         };
 
         return (
-          <StyledItemWrapper
+          <StyledItem
             key={option.label}
             activeOpacity={0.75}
             $isDisabled={isToggleDisabled || option.disabled}
@@ -98,12 +103,12 @@ export const PillToggle: React.FC<IProps> = ({
             $isSelected={isSelected}
             onPress={_onPressItem}>
             <StyledItemLabel
-              isMuted={isToggleDisabled || option.disabled || !isSelected}
               $isDisabled={isToggleDisabled || option.disabled}
+              isMuted={isToggleDisabled || option.disabled || !isSelected}
               inversed={isSelected}>
               {option.label}
             </StyledItemLabel>
-          </StyledItemWrapper>
+          </StyledItem>
         );
       })}
     </StyledWrapper>

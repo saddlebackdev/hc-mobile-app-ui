@@ -1,22 +1,18 @@
-// Modules
-import {TouchableOpacityProps} from 'react-native';
-
 // Common Props
 interface ICommonProps {
+  disabled?: boolean | null;
   appearance?: 'filled' | 'outline';
   color?: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'danger';
   small?: boolean;
 }
 
-// Styled Text
-export interface IStyledText extends ICommonProps {
-  disabled?: boolean | null;
-}
+// Styled Label
+export interface IStyledLabel extends ICommonProps {}
 
 // Styled Button
 export interface IStyledButton extends ICommonProps {}
 
 // Props
-export interface IProps extends IStyledButton, TouchableOpacityProps {
+export interface IProps extends IStyledButton {
   children: String;
 }

@@ -1,6 +1,5 @@
 // Modules
 import React from 'react';
-import {ViewProps} from 'react-native';
 
 // Button Group Props
 export interface IButtonGroupProps {
@@ -8,12 +7,12 @@ export interface IButtonGroupProps {
 }
 
 // Button Group Item Props
-export interface IButtonGroupItemProps extends ViewProps {
-  hasRightMargin: boolean;
-  hasLeftMargin: boolean;
+export interface IButtonGroupItemProps {
+  $hasRightMargin: boolean;
+  $hasLeftMargin: boolean;
 }
 
 // IProps
 export interface IProps {
-  children: Array<React.ReactElement>;
+  children: Array<React.ReactElement> | React.ReactElement;
 }

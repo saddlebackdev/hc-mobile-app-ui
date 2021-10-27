@@ -20,58 +20,59 @@ const IconFiles = {
 };
 
 // Component
-export const Icon: React.FC<IProps> = ({
-  color,
-  size = 24,
-  type,
-}): React.ReactElement => {
-  // Hooks
-  const theme = useTheme();
+export const Icon: React.FC<IProps> = React.memo(
+  ({color, size = 24, type}): React.ReactElement => {
+    // Hooks
+    const theme = useTheme();
 
-  const IconComponent = IconFiles[type];
+    const IconComponent = IconFiles[type];
 
-  let iconColor;
+    let iconColor;
 
-  switch (color) {
-    case 'primary': {
-      iconColor = theme.colors.primaryLight;
-      break;
+    switch (color) {
+      case 'primary': {
+        iconColor = theme.colors.primaryLight;
+        break;
+      }
+      case 'secondary': {
+        iconColor = theme.colors.secondaryLight;
+        break;
+      }
+      case 'info': {
+        iconColor = theme.colors.infoLight;
+        break;
+      }
+      case 'success': {
+        iconColor = theme.colors.successLight;
+        break;
+      }
+      case 'warning': {
+        iconColor = theme.colors.warningLight;
+        break;
+      }
+      case 'danger': {
+        iconColor = theme.colors.dangerLight;
+        break;
+      }
+      case 'muted': {
+        iconColor = theme.colors.grayFour;
+        break;
+      }
+      case 'white': {
+        iconColor = theme.colors.white;
+        break;
+      }
+      default: {
+        iconColor = theme.colors.graySix;
+      }
     }
-    case 'secondary': {
-      iconColor = theme.colors.secondaryLight;
-      break;
-    }
-    case 'info': {
-      iconColor = theme.colors.infoLight;
-      break;
-    }
-    case 'success': {
-      iconColor = theme.colors.successLight;
-      break;
-    }
-    case 'warning': {
-      iconColor = theme.colors.warningLight;
-      break;
-    }
-    case 'danger': {
-      iconColor = theme.colors.dangerLight;
-      break;
-    }
-    case 'muted': {
-      iconColor = theme.colors.grayFour;
-      break;
-    }
-    case 'white': {
-      iconColor = theme.colors.white;
-      break;
-    }
-    default: {
-      iconColor = theme.colors.graySix;
-    }
-  }
 
-  return <IconComponent fill={iconColor} width={size} height={size} />;
-};
+    return <IconComponent fill={iconColor} width={size} height={size} />;
+  },
+);
+
+// Properties
+Icon.displayName = 'Icon';
 
 // Exports
-export default React.memo(Icon);
+export default Icon;

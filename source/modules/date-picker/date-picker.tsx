@@ -45,7 +45,7 @@ const StyledPickerWrapper = Styled.View<IStyledPickerWrapper>`
 `;
 const StyledLabel = Styled(Text)`
   font-weight: 700;
-  margin-bottom: ${majorScale(1, 'px')};
+  margin-bottom: ${majorScale()};
   font-size: 18px;
 `;
 
@@ -54,89 +54,94 @@ import Icon from '../icon/icon';
 import Text from '../text/text';
 
 // Component
-const DatePicker: React.FC<IProps> = ({
-  label,
-  customDateFormatter,
-  selectedDate,
-  onDateChange,
-  ...rest
-}): React.ReactElement => {
-  // State
-  const [isOpen, setIsOpen] = useState(false);
+const DatePicker: React.FC<IProps> = React.memo(
+  ({
+    label,
+    customDateFormatter,
+    selectedDate,
+    onDateChange,
+    ...rest
+  }): React.ReactElement => {
+    // State
+    const [isOpen, setIsOpen] = useState(false);
 
-  // Get Formatted Date
-  const getFormattedDate = (date: Date): string => {
-    if (customDateFormatter) {
-      return customDateFormatter(date);
-    }
+    // Get Formatted Date
+    const getFormattedDate = (date: Date): string => {
+      if (customDateFormatter) {
+        return customDateFormatter(date);
+      }
 
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
 
-    return [month, day, year].join('/');
-  };
+      return [month, day, year].join('/');
+    };
 
-  // On Change Date
-  const onChange = (_event: any, date: any): void => {
-    // Weird Android Implementation
-    // See: https://github.com/react-native-datetimepicker/datetimepicker#basic-usage-with-state
-    setIsOpen(DeviceUtils.isIos());
+    // On Change Date
+    const onChange = (_event: any, date: any): void => {
+      // Weird Android Implementation
+      // See: https://github.com/react-native-datetimepicker/datetimepicker#basic-usage-with-state
+      setIsOpen(DeviceUtils.isIos());
 
-    onDateChange(date || selectedDate);
-  };
+      onDateChange(date || selectedDate);
+    };
 
-  // Open Picker
-  const openPicker = () => {
-    setIsOpen(true);
-  };
+    // Open Picker
+    const openPicker = () => {
+      setIsOpen(true);
+    };
 
-  // Hide Picker
-  const hidePicker = () => {
-    setIsOpen(false);
-  };
+    // Hide Picker
+    const hidePicker = () => {
+      setIsOpen(false);
+    };
 
-  const isAndroid = DeviceUtils.isAndroid();
-  const isIos = DeviceUtils.isIos();
+    const isAndroid = DeviceUtils.isAndroid();
+    const isIos = DeviceUtils.isIos();
 
-  return (
-    <React.Fragment>
-      {label && <StyledLabel>{label}</StyledLabel>}
-      <StyledTouchable activeOpacity={1} onPress={openPicker}>
-        <StyledWrapper>
-          <Text>{getFormattedDate(selectedDate)}</Text>
-          <Icon type="calendar" size={16} />
-        </StyledWrapper>
-      </StyledTouchable>
+    return (
+      <React.Fragment>
+        {label && <StyledLabel>{label}</StyledLabel>}
+        <StyledTouchable activeOpacity={1} onPress={openPicker}>
+          <StyledWrapper>
+            <Text>{getFormattedDate(selectedDate)}</Text>
+            <Icon type="calendar" size={16} />
+          </StyledWrapper>
+        </StyledTouchable>
 
-      {/* Android */}
-      {isAndroid && isOpen ? (
-        <DateTimePicker
-          display="spinner"
-          value={selectedDate}
-          onChange={onChange}
-        />
-      ) : null}
-
-      {/* IOS */}
-      <StyledModal
-        visible={isIos && isOpen}
-        supportedOrientations={['portrait', 'landscape']}
-        animationType="fade"
-        transparent>
-        <StyledOverlay activeOpacity={1} onPress={hidePicker} />
-        <StyledPickerWrapper>
+        {/* Android */}
+        {isAndroid && isOpen ? (
           <DateTimePicker
-            {...rest}
             display="spinner"
             value={selectedDate}
             onChange={onChange}
           />
-        </StyledPickerWrapper>
-      </StyledModal>
-    </React.Fragment>
-  );
-};
+        ) : null}
+
+        {/* IOS */}
+        <StyledModal
+          visible={isIos && isOpen}
+          supportedOrientations={['portrait', 'landscape']}
+          animationType="fade"
+          transparent>
+          <StyledOverlay activeOpacity={1} onPress={hidePicker} />
+          <StyledPickerWrapper>
+            <DateTimePicker
+              {...rest}
+              display="spinner"
+              value={selectedDate}
+              onChange={onChange}
+            />
+          </StyledPickerWrapper>
+        </StyledModal>
+      </React.Fragment>
+    );
+  },
+);
+
+// Properties
+DatePicker.displayName = 'DatePicker';
 
 // Exports
-export default React.memo(DatePicker);
+export default DatePicker;

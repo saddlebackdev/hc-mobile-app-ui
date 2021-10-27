@@ -5,19 +5,20 @@ import {TouchableOpacityProps, ViewProps} from 'react-native';
 export interface IStyledWrapperProps extends TouchableOpacityProps {}
 
 // Styled Checkbox Wrapper Props
-export interface IStyledCheckboxWrapperProps extends ViewProps {
+export interface IStyledCheckboxOuter extends ViewProps {
   $isChecked: boolean;
-  $isDisabled?: boolean | null | undefined;
+  $isDisabled?: boolean;
 }
 
 // Styled Checkbox Mark Wrapper Props
-export interface IStyledCheckboxMarkWrapperProps
-  extends Partial<IStyledCheckboxWrapperProps> {
-  $isDisabled?: boolean | null | undefined;
+export interface IStyledCheckboxInner extends Partial<IStyledCheckboxOuter> {
+  $isDisabled?: boolean;
 }
 
 // Props
-export interface IProps extends Partial<TouchableOpacityProps> {
+export interface IProps {
+  onPress: any;
+  disabled?: boolean;
   isChecked: boolean;
   label?: string;
   hint?: string;

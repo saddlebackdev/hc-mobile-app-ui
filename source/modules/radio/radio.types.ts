@@ -9,8 +9,8 @@ export interface IStyledGroup extends IStyledWrapper {
   $isLastChild?: boolean;
 }
 
-// Styled Radio Mark
-export interface IStyledRadioMark {
+// Styled Radio Inner
+export interface IStyledRadioInner {
   $isDisabled?: boolean;
 }
 
