@@ -25,6 +25,9 @@ export {default as Text} from './modules/text/text';
 export {default as defaultTheme} from './modules/theming/default-theme';
 export {default as ThemeProvider} from './modules/theming/theme-provider';
 
+// Toggles
+export {default as PillToggle} from './modules/toggle/pill-toggle';
+
 // Utilities
 export {majorScale, minorScale} from './modules/scales';
 export {DeviceUtils} from './modules/utilities';
