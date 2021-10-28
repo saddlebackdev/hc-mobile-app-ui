@@ -30,26 +30,28 @@ export const StyledItem = Styled.View<IButtonGroupItemProps>`
 `;
 
 // Component
-export const ButtonGroup: React.FC<IProps> = React.memo(({children}) => {
-  const numberOfChildren = React.Children.toArray(children).length;
+export const ButtonGroup: React.FC<IProps> = React.memo(
+  ({children, testID}) => {
+    const numberOfChildren = React.Children.toArray(children).length;
 
-  return (
-    <StyledWrapper>
-      {React.Children.map(children, (child, ndx) => {
-        const isFirstChild = ndx === 0;
-        const isLastChild = numberOfChildren - 1 === ndx;
+    return (
+      <StyledWrapper testID={testID}>
+        {React.Children.map(children, (child, ndx) => {
+          const isFirstChild = ndx === 0;
+          const isLastChild = numberOfChildren - 1 === ndx;
 
-        return (
-          <StyledItem
-            $hasLeftMargin={!isFirstChild}
-            $hasRightMargin={!isLastChild}>
-            {child}
-          </StyledItem>
-        );
-      })}
-    </StyledWrapper>
-  );
-});
+          return (
+            <StyledItem
+              $hasLeftMargin={!isFirstChild}
+              $hasRightMargin={!isLastChild}>
+              {child}
+            </StyledItem>
+          );
+        })}
+      </StyledWrapper>
+    );
+  },
+);
 
 // Properties
 ButtonGroup.displayName = 'ButtonGroup';
