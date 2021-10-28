@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Rendering Variants danger: should match snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#EE4335",
+      "borderColor": "transparent",
+      "borderRadius": 4,
+      "borderWidth": 0,
+      "display": "flex",
+      "height": 44,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    appearance="filled"
+    color="danger"
+    disabled={false}
+    small={false}
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+          "fontWeight": "500",
+        },
+      ]
+    }
+    testID="button-label"
+  >
+    Button
+  </Text>
+</View>
+`;
+
+exports[`Button Rendering Variants default: should match snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00AEFF",
+      "borderColor": "transparent",
+      "borderRadius": 4,
+      "borderWidth": 0,
+      "display": "flex",
+      "height": 44,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    appearance="filled"
+    color="primary"
+    disabled={false}
+    small={false}
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+          "fontWeight": "500",
+        },
+      ]
+    }
+    testID="button-label"
+  >
+    Button
+  </Text>
+</View>
+`;
+
+exports[`Button Rendering Variants info: should match snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00AEEF",
+      "borderColor": "transparent",
+      "borderRadius": 4,
+      "borderWidth": 0,
+      "display": "flex",
+      "height": 44,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    appearance="filled"
+    color="info"
+    disabled={false}
+    small={false}
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+          "fontWeight": "500",
+        },
+      ]
+    }
+    testID="button-label"
+  >
+    Button
+  </Text>
+</View>
+`;
+
+exports[`Button Rendering Variants outline: should match snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#00AEFF",
+      "borderRadius": 4,
+      "borderWidth": 1,
+      "display": "flex",
+      "height": 44,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    appearance="outline"
+    color="primary"
+    disabled={false}
+    small={false}
+    style={
+      Array [
+        Object {
+          "color": "#00AEFF",
+          "fontSize": 16,
+          "fontWeight": "500",
+        },
+      ]
+    }
+    testID="button-label"
+  >
+    Button
+  </Text>
+</View>
+`;
+
+exports[`Button Rendering Variants primary: should match snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00AEFF",
+      "borderColor": "transparent",
+      "borderRadius": 4,
+      "borderWidth": 0,
+      "display": "flex",
+      "height": 44,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    appearance="filled"
+    color="primary"
+    disabled={false}
+    small={false}
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+          "fontWeight": "500",
+        },
+      ]
+    }
+    testID="button-label"
+  >
+    Button
+  </Text>
+</View>
+`;
+
+exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#1C2530",
+      "borderColor": "transparent",
+      "borderRadius": 4,
+      "borderWidth": 0,
+      "display": "flex",
+      "height": 44,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    appearance="filled"
+    color="secondary"
+    disabled={false}
+    small={false}
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+          "fontWeight": "500",
+        },
+      ]
+    }
+    testID="button-label"
+  >
+    Button
+  </Text>
+</View>
+`;
+
+exports[`Button Rendering Variants small: should match snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#00AEFF",
+      "borderColor": "transparent",
+      "borderRadius": 4,
+      "borderWidth": 0,
+      "display": "flex",
+      "height": 32,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    appearance="filled"
+    color="primary"
+    disabled={false}
+    small={true}
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 14,
+          "fontWeight": "500",
+        },
+      ]
+    }
+    testID="button-label"
+  >
+    Button
+  </Text>
+</View>
+`;
+
+exports[`Button Rendering Variants success: should match snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#54CD86",
+      "borderColor": "transparent",
+      "borderRadius": 4,
+      "borderWidth": 0,
+      "display": "flex",
+      "height": 44,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    appearance="filled"
+    color="success"
+    disabled={false}
+    small={false}
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+          "fontWeight": "500",
+        },
+      ]
+    }
+    testID="button-label"
+  >
+    Button
+  </Text>
+</View>
+`;
+
+exports[`Button Rendering Variants warning: should match snapshot 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F99E49",
+      "borderColor": "transparent",
+      "borderRadius": 4,
+      "borderWidth": 0,
+      "display": "flex",
+      "height": 44,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="button"
+>
+  <Text
+    appearance="filled"
+    color="warning"
+    disabled={false}
+    small={false}
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+          "fontWeight": "500",
+        },
+      ]
+    }
+    testID="button-label"
+  >
+    Button
+  </Text>
+</View>
+`;

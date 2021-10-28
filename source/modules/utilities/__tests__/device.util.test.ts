@@ -1,4 +1,4 @@
-// npx jest ./source/modules/utilities/__tests__/device.util.test.js
+// npx jest ./source/modules/utilities/__tests__/device.util.test.ts
 
 import {Platform} from 'react-native';
 

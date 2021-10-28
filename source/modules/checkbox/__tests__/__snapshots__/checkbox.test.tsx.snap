@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Rendering renders itself correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  hitSlop={
+    Object {
+      "bottom": 12,
+      "left": 12,
+      "right": 12,
+      "top": 12,
+    }
+  }
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+  testID="checkbox"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#DBE0E3",
+          "borderRadius": 3,
+          "borderStyle": "solid",
+          "borderWidth": 2,
+          "height": 24,
+          "overflow": "hidden",
+          "width": 24,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "paddingLeft": 11,
+          "paddingTop": 3,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontSize": 16,
+            "marginBottom": 4,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="checkbox-label"
+    />
+    <Text
+      isCaption={true}
+      style={
+        Array [
+          Object {
+            "color": "#97A4AB",
+            "fontSize": 14,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="checkbox-hint"
+    />
+  </View>
+</View>
+`;

@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1C2530",
+          "fontSize": 18,
+          "fontWeight": "700",
+          "marginBottom": 11,
+          "textAlign": "left",
+        },
+      ]
+    }
+    testID="input-label"
+  >
+     
+  </Text>
+  <TextInput
+    editable={true}
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    onFocus={[Function]}
+    placeholderTextColor="#97A4AB"
+    selectTextOnFocus={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#DBE0E3",
+          "borderRadius": 3,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "color": "#1C2530",
+          "fontSize": 16,
+          "height": 44,
+          "paddingHorizontal": 11,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="input"
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`TextInput Rendering should render label when passed 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1C2530",
+          "fontSize": 18,
+          "fontWeight": "700",
+          "marginBottom": 11,
+          "textAlign": "left",
+        },
+      ]
+    }
+    testID="input-label"
+  >
+    A Label
+     
+  </Text>
+  <TextInput
+    editable={true}
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    onFocus={[Function]}
+    placeholderTextColor="#97A4AB"
+    selectTextOnFocus={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#DBE0E3",
+          "borderRadius": 3,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "color": "#1C2530",
+          "fontSize": 16,
+          "height": 44,
+          "paddingHorizontal": 11,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="input"
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`TextInput Rendering should render label with an asterisk when "required" 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1C2530",
+          "fontSize": 18,
+          "fontWeight": "700",
+          "marginBottom": 11,
+          "textAlign": "left",
+        },
+      ]
+    }
+    testID="input-label"
+  >
+    A Label
+     
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#EE4335",
+            "fontSize": 16,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="input-label-asterisk"
+    >
+      *
+    </Text>
+  </Text>
+  <TextInput
+    editable={true}
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    onFocus={[Function]}
+    placeholderTextColor="#97A4AB"
+    selectTextOnFocus={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#DBE0E3",
+          "borderRadius": 3,
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "color": "#1C2530",
+          "fontSize": 16,
+          "height": 44,
+          "paddingHorizontal": 11,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="input"
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;

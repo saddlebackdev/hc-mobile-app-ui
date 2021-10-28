@@ -1,6 +1,6 @@
 // Modules
 import React from 'react';
-import {ThemeProvider as StyledThemeProvider} from 'styled-components';
+import {ThemeProvider as StyledThemeProvider} from 'styled-components/native';
 
 // Types
 import {IProps} from './theme-provider.types';

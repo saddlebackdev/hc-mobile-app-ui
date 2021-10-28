@@ -39,5 +39,10 @@ const Text = Styled.Text<IProps>`
   }};
 `;
 
+// Default Props
+Text.defaultProps = {
+  testID: 'text',
+};
+
 // Exports
 export default Text;

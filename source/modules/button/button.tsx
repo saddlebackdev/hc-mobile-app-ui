@@ -142,15 +142,24 @@ const Button: React.FC<IProps> = React.memo(
     color = 'primary',
     children,
     small = false,
+    ...props
   }): React.ReactElement => {
+    // Do not allow overwriting styles
+    if (props.style) {
+      props.style = {};
+    }
+
     return (
       <StyledButton
+        testID="button"
         activeOpacity={0.75}
         disabled={disabled}
         appearance={appearance}
         color={color}
-        small={small}>
+        small={small}
+        {...props}>
         <StyledLabel
+          testID="button-label"
           appearance={appearance}
           small={small}
           color={color}

@@ -45,7 +45,7 @@ const StyledPickerWrapper = Styled.View<IStyledPickerWrapper>`
 `;
 const StyledLabel = Styled(Text)`
   font-weight: 700;
-  margin-bottom: ${majorScale()};
+  margin-bottom: ${majorScale(1, 'px')};
   font-size: 18px;
 `;
 

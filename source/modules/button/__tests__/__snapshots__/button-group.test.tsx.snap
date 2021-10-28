@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup Rendering renders its children correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "width": "100%",
+      },
+    ]
+  }
+  testID="button-group"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "marginLeft": 0,
+          "marginRight": 11,
+        },
+      ]
+    }
+    testID="button-group-item"
+  >
+    <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00AEFF",
+          "borderColor": "transparent",
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "display": "flex",
+          "height": 44,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        appearance="filled"
+        color="primary"
+        disabled={false}
+        small={false}
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 16,
+              "fontWeight": "500",
+            },
+          ]
+        }
+        testID="button-label"
+      >
+        Simple Button 1
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "marginLeft": 11,
+          "marginRight": 0,
+        },
+      ]
+    }
+    testID="button-group-item"
+  >
+    <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00AEFF",
+          "borderColor": "transparent",
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "display": "flex",
+          "height": 44,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        appearance="filled"
+        color="primary"
+        disabled={false}
+        small={false}
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 16,
+              "fontWeight": "500",
+            },
+          ]
+        }
+        testID="button-label"
+      >
+        Simple Button 2
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ButtonGroup Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "width": "100%",
+      },
+    ]
+  }
+  testID="button-group"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "marginLeft": 0,
+          "marginRight": 11,
+        },
+      ]
+    }
+    testID="button-group-item"
+  >
+    <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00AEFF",
+          "borderColor": "transparent",
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "display": "flex",
+          "height": 44,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        appearance="filled"
+        color="primary"
+        disabled={false}
+        small={false}
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 16,
+              "fontWeight": "500",
+            },
+          ]
+        }
+        testID="button-label"
+      >
+        Simple Button 1
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "marginLeft": 11,
+          "marginRight": 0,
+        },
+      ]
+    }
+    testID="button-group-item"
+  >
+    <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00AEFF",
+          "borderColor": "transparent",
+          "borderRadius": 4,
+          "borderWidth": 0,
+          "display": "flex",
+          "height": 44,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+      testID="button"
+    >
+      <Text
+        appearance="filled"
+        color="primary"
+        disabled={false}
+        small={false}
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 16,
+              "fontWeight": "500",
+            },
+          ]
+        }
+        testID="button-label"
+      >
+        Simple Button 2
+      </Text>
+    </View>
+  </View>
+</View>
+`;

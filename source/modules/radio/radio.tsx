@@ -32,7 +32,7 @@ const StyledGroup = Styled.TouchableOpacity<IStyledGroup>`
       return 0;
     }
 
-    return majorScale(2);
+    return majorScale(2, 'px');
   }};
 
   margin-bottom: ${({$direction, $isLastChild}) => {
@@ -44,7 +44,7 @@ const StyledGroup = Styled.TouchableOpacity<IStyledGroup>`
       return 0;
     }
 
-    return majorScale(2);
+    return majorScale(2, 'px');
   }};
 `;
 const StyledRadioOuter = Styled.View`
@@ -70,7 +70,7 @@ const StyledRadioInner = Styled.View<IStyledRadioInner>`
   }};
 `;
 const StyledRadioLabelWrapper = Styled(Text)`
-  padding-left: ${majorScale()};
+  padding-left: ${majorScale(1, 'px')};
   padding-top: 2px;
 `;
 
@@ -91,7 +91,7 @@ export const Radio: React.FC<IProps> = React.memo(
     };
 
     return (
-      <StyledWrapper $direction={direction}>
+      <StyledWrapper $direction={direction} testID="radio">
         {options.map((option, ndx) => {
           const _onPressOption = () => {
             if (isRadioDisabled || option.disabled) {
@@ -109,6 +109,7 @@ export const Radio: React.FC<IProps> = React.memo(
           return (
             <StyledGroup
               key={option.label}
+              testID="radio-button"
               hitSlop={touchableHitslop}
               onPress={_onPressOption}
               activeOpacity={option.disabled ? 1 : 0.75}
@@ -124,6 +125,7 @@ export const Radio: React.FC<IProps> = React.memo(
                 )}
               </StyledRadioOuter>
               <StyledRadioLabelWrapper
+                testID="radio-label"
                 isMuted={isRadioDisabled || option.disabled}>
                 {option.label}
               </StyledRadioLabelWrapper>

@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Rendering Variants alignment-center: should match snapshot 1`] = `
+<Text
+  alignment="center"
+  style={
+    Array [
+      Object {
+        "color": "#1C2530",
+        "fontSize": 16,
+        "textAlign": "center",
+      },
+    ]
+  }
+  testID="text"
+>
+  Paragraph goes here
+</Text>
+`;
+
+exports[`Text Rendering Variants alignment-left: should match snapshot 1`] = `
+<Text
+  alignment="left"
+  style={
+    Array [
+      Object {
+        "color": "#1C2530",
+        "fontSize": 16,
+        "textAlign": "left",
+      },
+    ]
+  }
+  testID="text"
+>
+  Paragraph goes here
+</Text>
+`;
+
+exports[`Text Rendering Variants alignment-right: should match snapshot 1`] = `
+<Text
+  alignment="right"
+  style={
+    Array [
+      Object {
+        "color": "#1C2530",
+        "fontSize": 16,
+        "textAlign": "right",
+      },
+    ]
+  }
+  testID="text"
+>
+  Paragraph goes here
+</Text>
+`;
+
+exports[`Text Rendering Variants inversed: should match snapshot 1`] = `
+<Text
+  inversed={true}
+  style={
+    Array [
+      Object {
+        "color": "#FFFFFF",
+        "fontSize": 16,
+        "textAlign": "left",
+      },
+    ]
+  }
+  testID="text"
+>
+  Paragraph goes here
+</Text>
+`;
+
+exports[`Text Rendering Variants isCaption: should match snapshot 1`] = `
+<Text
+  isCaption={true}
+  style={
+    Array [
+      Object {
+        "color": "#97A4AB",
+        "fontSize": 14,
+        "textAlign": "left",
+      },
+    ]
+  }
+  testID="text"
+>
+  Paragraph goes here
+</Text>
+`;
+
+exports[`Text Rendering Variants isMuted: should match snapshot 1`] = `
+<Text
+  isMuted={true}
+  style={
+    Array [
+      Object {
+        "color": "#97A4AB",
+        "fontSize": 16,
+        "textAlign": "left",
+      },
+    ]
+  }
+  testID="text"
+>
+  Paragraph goes here
+</Text>
+`;
+
+exports[`Text Rendering Variants isSubtitle: should match snapshot 1`] = `
+<Text
+  isSubtitle={true}
+  style={
+    Array [
+      Object {
+        "color": "#1C2530",
+        "fontSize": 14,
+        "textAlign": "left",
+      },
+    ]
+  }
+  testID="text"
+>
+  Paragraph goes here
+</Text>
+`;
+
+exports[`Text Rendering renders itself correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1C2530",
+        "fontSize": 16,
+        "textAlign": "left",
+      },
+    ]
+  }
+  testID="text"
+>
+  Paragraph goes here
+</Text>
+`;

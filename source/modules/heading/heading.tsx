@@ -57,5 +57,10 @@ const Heading = Styled.Text<IProps>`
   }};
 `;
 
+// Defaults
+Heading.defaultProps = {
+  testID: 'heading',
+};
+
 // Exports
 export default Heading;

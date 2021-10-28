@@ -1,3 +1,5 @@
+import {TouchableOpacityProps} from 'react-native';
+
 // Common Props
 interface ICommonProps {
   disabled?: boolean | null;
@@ -10,7 +12,7 @@ interface ICommonProps {
 export interface IStyledLabel extends ICommonProps {}
 
 // Styled Button
-export interface IStyledButton extends ICommonProps {}
+export interface IStyledButton extends ICommonProps, TouchableOpacityProps {}
 
 // Props
 export interface IProps extends IStyledButton {
