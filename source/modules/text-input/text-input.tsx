@@ -14,7 +14,7 @@ import {majorScale} from '../scales';
 const StyledWrapper = Styled.View``;
 const StyledLabel = Styled(Text)`
   font-weight: 700;
-  margin-bottom: ${majorScale()};
+  margin-bottom: ${majorScale(1, 'px')};
   font-size: 18px;
 `;
 const StyledLabelAsterisk = Styled(Text)`
@@ -22,7 +22,7 @@ const StyledLabelAsterisk = Styled(Text)`
 `;
 const StyledInput = Styled.TextInput<IStyledInput>`
   width: 100%; height: 44px;
-  padding-horizontal: ${majorScale()};
+  padding-horizontal: ${majorScale(1, 'px')};
   border-radius: 3px;
   font-size: 16px;
 

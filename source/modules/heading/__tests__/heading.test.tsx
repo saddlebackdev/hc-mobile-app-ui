@@ -4,14 +4,15 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 
 import Heading from '../heading';
+import ThemeProvider from '../../theming/theme-provider';
 import defaultTheme from '../../theming/default-theme';
 
 describe('Heading', () => {
   it('renders itself correctly', () => {
     const {getByTestId} = render(
-      <Heading theme={defaultTheme} testID="simpleHeading">
-        This is a heading
-      </Heading>,
+      <ThemeProvider theme={defaultTheme}>
+        <Heading testID="simpleHeading">This is a heading</Heading>
+      </ThemeProvider>,
     );
 
     const textElement = getByTestId('simpleHeading');
@@ -21,9 +22,9 @@ describe('Heading', () => {
 
   it('renders renders the text correctly', () => {
     const {getByText} = render(
-      <Heading theme={defaultTheme} testID="simpleHeading">
-        This is a heading
-      </Heading>,
+      <ThemeProvider theme={defaultTheme}>
+        <Heading testID="simpleHeading">This is a heading</Heading>
+      </ThemeProvider>,
     );
 
     const textElement = getByText('This is a heading');

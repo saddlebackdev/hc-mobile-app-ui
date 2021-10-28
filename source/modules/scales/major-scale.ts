@@ -4,7 +4,7 @@
 export const majorScaleUnit: number = 11;
 
 // Major Scale
-export const majorScale = (n: number = 1, unit: string = 'px') => {
+export const majorScale = (n: number = 1, unit?: string) => {
   if (unit) {
     return `${majorScaleUnit * n}${unit}`;
   }

@@ -50,25 +50,25 @@ const StyledItem = Styled.TouchableOpacity<IStyledItem>`
   border-right-width: ${({$isLastChild}) => ($isLastChild ? '1px' : 0)}
 
   border-top-left-radius: ${({$isFirstChild}) => {
-    return $isFirstChild ? majorScale(2) : 0;
+    return $isFirstChild ? majorScale(2, 'px') : 0;
   }};
 
   border-top-right-radius: ${({$isLastChild}) => {
-    return $isLastChild ? majorScale(2) : 0;
+    return $isLastChild ? majorScale(2, 'px') : 0;
   }};
 
   border-bottom-left-radius: ${({$isFirstChild}) => {
-    return $isFirstChild ? majorScale(2) : 0;
+    return $isFirstChild ? majorScale(2, 'px') : 0;
   }};
 
   border-bottom-right-radius: ${({$isLastChild}) => {
-    return $isLastChild ? majorScale(2) : 0;
+    return $isLastChild ? majorScale(2, 'px') : 0;
   }};
 `;
 const StyledItemLabel = Styled(Text)<IStyledItemLabel>`
   font-size: ${({theme}) => theme.typography.sizes.small}px;
-  padding-horizontal: ${majorScale(2)};
-  padding-vertical: ${minorScale(2)};
+  padding-horizontal: ${majorScale(2, 'px')};
+  padding-vertical: ${minorScale(2, 'px')};
 `;
 
 // Component

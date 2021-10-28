@@ -32,7 +32,7 @@ const StyledGroup = Styled.TouchableOpacity<IStyledGroup>`
       return 0;
     }
 
-    return majorScale(2);
+    return majorScale(2, 'px');
   }};
 
   margin-bottom: ${({$direction, $isLastChild}) => {
@@ -44,7 +44,7 @@ const StyledGroup = Styled.TouchableOpacity<IStyledGroup>`
       return 0;
     }
 
-    return majorScale(2);
+    return majorScale(2, 'px');
   }};
 `;
 const StyledRadioOuter = Styled.View`
@@ -70,7 +70,7 @@ const StyledRadioInner = Styled.View<IStyledRadioInner>`
   }};
 `;
 const StyledRadioLabelWrapper = Styled(Text)`
-  padding-left: ${majorScale()};
+  padding-left: ${majorScale(1, 'px')};
   padding-top: 2px;
 `;
 

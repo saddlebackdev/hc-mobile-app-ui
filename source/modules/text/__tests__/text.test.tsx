@@ -4,14 +4,15 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 
 import Text from '../text';
+import ThemeProvider from '../../theming/theme-provider';
 import defaultTheme from '../../theming/default-theme';
 
 describe('Text', () => {
   it('renders itself correctly', () => {
     const {getByTestId} = render(
-      <Text theme={defaultTheme} testID="simpleText">
-        This is a text line
-      </Text>,
+      <ThemeProvider theme={defaultTheme}>
+        <Text testID="simpleText">This is a text line</Text>
+      </ThemeProvider>,
     );
 
     const textElement = getByTestId('simpleText');
@@ -21,9 +22,9 @@ describe('Text', () => {
 
   it('renders renders the text correctly', () => {
     const {getByText} = render(
-      <Text theme={defaultTheme} testID="simpleText">
-        This is a text line
-      </Text>,
+      <ThemeProvider theme={defaultTheme}>
+        <Text testID="simpleText">This is a text line</Text>
+      </ThemeProvider>,
     );
 
     const textElement = getByText('This is a text line');

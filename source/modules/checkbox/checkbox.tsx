@@ -49,7 +49,7 @@ const StyledCheckboxInner = Styled.View<IStyledCheckboxInner>`
 `;
 const StyledDetailsWrapper = Styled.View`
   padding-top: 3px;
-  padding-left: ${majorScale()};
+  padding-left: ${majorScale(1, 'px')};
 `;
 const StyledCheckboxLabel = Styled(Text)`
   margin-bottom: 4px;
