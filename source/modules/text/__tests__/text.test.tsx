@@ -8,27 +8,92 @@ import ThemeProvider from '../../theming/theme-provider';
 import defaultTheme from '../../theming/default-theme';
 
 describe('Text', () => {
-  it('renders itself correctly', () => {
-    const {getByTestId} = render(
-      <ThemeProvider theme={defaultTheme}>
-        <Text testID="simpleText">This is a text line</Text>
-      </ThemeProvider>,
-    );
+  describe('Rendering', () => {
+    it('renders itself correctly', () => {
+      const wrapper = render(
+        <ThemeProvider theme={defaultTheme}>
+          <Text>Paragraph goes here</Text>
+        </ThemeProvider>,
+      );
 
-    const textElement = getByTestId('simpleText');
+      const text = wrapper.getByTestId('text');
 
-    expect(textElement).toBeDefined();
-  });
+      expect(text).toBeDefined();
+      expect(text.children).toEqual(['Paragraph goes here']);
 
-  it('renders renders the text correctly', () => {
-    const {getByText} = render(
-      <ThemeProvider theme={defaultTheme}>
-        <Text testID="simpleText">This is a text line</Text>
-      </ThemeProvider>,
-    );
+      expect(wrapper).toMatchSnapshot();
+    });
 
-    const textElement = getByText('This is a text line');
+    describe('Variants', () => {
+      it('isMuted: should match snapshot', () => {
+        const wrapper = render(
+          <ThemeProvider theme={defaultTheme}>
+            <Text isMuted>Paragraph goes here</Text>
+          </ThemeProvider>,
+        );
 
-    expect(textElement).toBeDefined();
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it('isCaption: should match snapshot', () => {
+        const wrapper = render(
+          <ThemeProvider theme={defaultTheme}>
+            <Text isCaption>Paragraph goes here</Text>
+          </ThemeProvider>,
+        );
+
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it('isSubtitle: should match snapshot', () => {
+        const wrapper = render(
+          <ThemeProvider theme={defaultTheme}>
+            <Text isSubtitle>Paragraph goes here</Text>
+          </ThemeProvider>,
+        );
+
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it('inversed: should match snapshot', () => {
+        const wrapper = render(
+          <ThemeProvider theme={defaultTheme}>
+            <Text inversed>Paragraph goes here</Text>
+          </ThemeProvider>,
+        );
+
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it('alignment-left: should match snapshot', () => {
+        const wrapper = render(
+          <ThemeProvider theme={defaultTheme}>
+            <Text alignment="left">Paragraph goes here</Text>
+          </ThemeProvider>,
+        );
+
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it('alignment-center: should match snapshot', () => {
+        const wrapper = render(
+          <ThemeProvider theme={defaultTheme}>
+            <Text alignment="center">Paragraph goes here</Text>
+          </ThemeProvider>,
+        );
+
+        expect(wrapper).toMatchSnapshot();
+      });
+
+      it('alignment-right: should match snapshot', () => {
+        const wrapper = render(
+          <ThemeProvider theme={defaultTheme}>
+            <Text alignment="right">Paragraph goes here</Text>
+          </ThemeProvider>,
+        );
+
+        expect(wrapper).toMatchSnapshot();
+      });
+    });
   });
 });

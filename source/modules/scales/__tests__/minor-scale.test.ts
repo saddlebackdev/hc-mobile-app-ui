@@ -1,4 +1,4 @@
-// npx jest ./source/modules/scales/__tests__/minor-scale.test.js
+// npx jest ./source/modules/scales/__tests__/minor-scale.test.ts
 
 import minorScale, {minorScaleUnit} from '../minor-scale';
 

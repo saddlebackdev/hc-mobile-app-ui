@@ -1,0 +1,682 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio Rendering Variants horizontal: should match snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+    ]
+  }
+  testID="radio"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 12,
+        "left": 12,
+        "right": 12,
+        "top": 12,
+      }
+    }
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 0,
+        "marginRight": 22,
+        "opacity": 1,
+      }
+    }
+    testID="radio-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#DBE0E3",
+            "borderRadius": 22,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 22,
+            "justifyContent": "center",
+            "width": 22,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00AEFF",
+              "borderRadius": 22,
+              "height": 14,
+              "justifyContent": "center",
+              "width": 14,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontSize": 16,
+            "paddingLeft": 11,
+            "paddingTop": 2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="radio-label"
+    >
+      Option 1
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 12,
+        "left": 12,
+        "right": 12,
+        "top": 12,
+      }
+    }
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 0,
+        "marginRight": 22,
+        "opacity": 1,
+      }
+    }
+    testID="radio-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#DBE0E3",
+            "borderRadius": 22,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 22,
+            "justifyContent": "center",
+            "width": 22,
+          },
+        ]
+      }
+    />
+    <Text
+      isMuted={true}
+      style={
+        Array [
+          Object {
+            "color": "#97A4AB",
+            "fontSize": 16,
+            "paddingLeft": 11,
+            "paddingTop": 2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="radio-label"
+    >
+      Option 2
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 12,
+        "left": 12,
+        "right": 12,
+        "top": 12,
+      }
+    }
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 0,
+        "marginRight": 0,
+        "opacity": 1,
+      }
+    }
+    testID="radio-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#DBE0E3",
+            "borderRadius": 22,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 22,
+            "justifyContent": "center",
+            "width": 22,
+          },
+        ]
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontSize": 16,
+            "paddingLeft": 11,
+            "paddingTop": 2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="radio-label"
+    >
+      Option 3
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Radio Rendering Variants vertical: should match snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+      },
+    ]
+  }
+  testID="radio"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 12,
+        "left": 12,
+        "right": 12,
+        "top": 12,
+      }
+    }
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 22,
+        "marginRight": 0,
+        "opacity": 1,
+      }
+    }
+    testID="radio-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#DBE0E3",
+            "borderRadius": 22,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 22,
+            "justifyContent": "center",
+            "width": 22,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00AEFF",
+              "borderRadius": 22,
+              "height": 14,
+              "justifyContent": "center",
+              "width": 14,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontSize": 16,
+            "paddingLeft": 11,
+            "paddingTop": 2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="radio-label"
+    >
+      Option 1
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 12,
+        "left": 12,
+        "right": 12,
+        "top": 12,
+      }
+    }
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 22,
+        "marginRight": 0,
+        "opacity": 1,
+      }
+    }
+    testID="radio-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#DBE0E3",
+            "borderRadius": 22,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 22,
+            "justifyContent": "center",
+            "width": 22,
+          },
+        ]
+      }
+    />
+    <Text
+      isMuted={true}
+      style={
+        Array [
+          Object {
+            "color": "#97A4AB",
+            "fontSize": 16,
+            "paddingLeft": 11,
+            "paddingTop": 2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="radio-label"
+    >
+      Option 2
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 12,
+        "left": 12,
+        "right": 12,
+        "top": 12,
+      }
+    }
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 0,
+        "marginRight": 0,
+        "opacity": 1,
+      }
+    }
+    testID="radio-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#DBE0E3",
+            "borderRadius": 22,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 22,
+            "justifyContent": "center",
+            "width": 22,
+          },
+        ]
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontSize": 16,
+            "paddingLeft": 11,
+            "paddingTop": 2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="radio-label"
+    >
+      Option 3
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Radio Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+    ]
+  }
+  testID="radio"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 12,
+        "left": 12,
+        "right": 12,
+        "top": 12,
+      }
+    }
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 22,
+        "marginRight": 22,
+        "opacity": 1,
+      }
+    }
+    testID="radio-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#DBE0E3",
+            "borderRadius": 22,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 22,
+            "justifyContent": "center",
+            "width": 22,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00AEFF",
+              "borderRadius": 22,
+              "height": 14,
+              "justifyContent": "center",
+              "width": 14,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontSize": 16,
+            "paddingLeft": 11,
+            "paddingTop": 2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="radio-label"
+    >
+      Option 1
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 12,
+        "left": 12,
+        "right": 12,
+        "top": 12,
+      }
+    }
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 22,
+        "marginRight": 22,
+        "opacity": 1,
+      }
+    }
+    testID="radio-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#DBE0E3",
+            "borderRadius": 22,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 22,
+            "justifyContent": "center",
+            "width": 22,
+          },
+        ]
+      }
+    />
+    <Text
+      isMuted={true}
+      style={
+        Array [
+          Object {
+            "color": "#97A4AB",
+            "fontSize": 16,
+            "paddingLeft": 11,
+            "paddingTop": 2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="radio-label"
+    >
+      Option 2
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 12,
+        "left": 12,
+        "right": 12,
+        "top": 12,
+      }
+    }
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 0,
+        "marginRight": 0,
+        "opacity": 1,
+      }
+    }
+    testID="radio-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#DBE0E3",
+            "borderRadius": 22,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 22,
+            "justifyContent": "center",
+            "width": 22,
+          },
+        ]
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontSize": 16,
+            "paddingLeft": 11,
+            "paddingTop": 2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="radio-label"
+    >
+      Option 3
+    </Text>
+  </View>
+</View>
+`;

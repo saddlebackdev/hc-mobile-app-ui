@@ -68,6 +68,7 @@ export const Checkbox: React.FC<IProps> = React.memo(
 
     return (
       <StyledWrapper
+        testID="checkbox"
         disabled={disabled}
         activeOpacity={0.75}
         onPress={onPress}
@@ -85,8 +86,12 @@ export const Checkbox: React.FC<IProps> = React.memo(
         </StyledCheckboxOuter>
 
         <StyledDetailsWrapper>
-          <StyledCheckboxLabel>{label}</StyledCheckboxLabel>
-          <StyledCheckboxHint isCaption>{hint}</StyledCheckboxHint>
+          <StyledCheckboxLabel testID="checkbox-label">
+            {label}
+          </StyledCheckboxLabel>
+          <StyledCheckboxHint testID="checkbox-hint" isCaption>
+            {hint}
+          </StyledCheckboxHint>
         </StyledDetailsWrapper>
       </StyledWrapper>
     );

@@ -12,132 +12,117 @@ describe('Button', () => {
     it('renders correctly', () => {
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Button testID="primaryButton">Primary Button</Button>
+          <Button>Primary Button</Button>
         </ThemeProvider>,
       );
 
-      const primaryButtonElement = getByTestId('primaryButton');
+      const button = getByTestId('button');
 
-      expect(primaryButtonElement).toBeDefined();
+      expect(button).toBeDefined();
     });
 
     it('renders the label correctly', () => {
-      const {getByText} = render(
+      const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
           <Button>Primary Button</Button>
         </ThemeProvider>,
       );
 
-      const labelElement = getByText('Primary Button');
+      const label = getByTestId('button-label');
 
-      expect(labelElement).toBeDefined();
+      expect(label).toBeDefined();
+      expect(label.children).toEqual(['Primary Button']);
     });
 
     describe('Variants', () => {
       it('default: should match snapshot', () => {
-        const buttonElement = render(
+        const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Button testID="button">Button</Button>
+            <Button>Button</Button>
           </ThemeProvider>,
         );
 
-        expect(buttonElement).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
       });
 
       it('primary: should match snapshot', () => {
-        const buttonElement = render(
+        const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Button color="primary" testID="button">
-              Button
-            </Button>
+            <Button color="primary">Button</Button>
           </ThemeProvider>,
         );
 
-        expect(buttonElement).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
       });
 
       it('secondary: should match snapshot', () => {
-        const buttonElement = render(
+        const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Button color="secondary" testID="button">
-              Button
-            </Button>
+            <Button color="secondary">Button</Button>
           </ThemeProvider>,
         );
 
-        expect(buttonElement).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
       });
 
       it('info: should match snapshot', () => {
-        const buttonElement = render(
+        const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Button color="info" testID="button">
-              Button
-            </Button>
+            <Button color="info">Button</Button>
           </ThemeProvider>,
         );
 
-        expect(buttonElement).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
       });
 
       it('success: should match snapshot', () => {
-        const buttonElement = render(
+        const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Button color="success" testID="button">
-              Button
-            </Button>
+            <Button color="success">Button</Button>
           </ThemeProvider>,
         );
 
-        expect(buttonElement).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
       });
 
       it('warning: should match snapshot', () => {
-        const buttonElement = render(
+        const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Button color="warning" testID="button">
-              Button
-            </Button>
+            <Button color="warning">Button</Button>
           </ThemeProvider>,
         );
 
-        expect(buttonElement).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
       });
 
       it('danger: should match snapshot', () => {
-        const buttonElement = render(
+        const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Button color="danger" testID="button">
-              Button
-            </Button>
+            <Button color="danger">Button</Button>
           </ThemeProvider>,
         );
 
-        expect(buttonElement).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
       });
 
       it('outline: should match snapshot', () => {
-        const buttonElement = render(
+        const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Button appearance="outline" testID="button">
-              Button
-            </Button>
+            <Button appearance="outline">Button</Button>
           </ThemeProvider>,
         );
 
-        expect(buttonElement).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
       });
 
       it('small: should match snapshot', () => {
-        const buttonElement = render(
+        const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Button small testID="button">
-              Button
-            </Button>
+            <Button small>Button</Button>
           </ThemeProvider>,
         );
 
-        expect(buttonElement).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
       });
     });
   });
@@ -148,15 +133,13 @@ describe('Button', () => {
 
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Button testID="primaryButton" onPress={onPressMock}>
-            Primary Button
-          </Button>
+          <Button onPress={onPressMock}>Primary Button</Button>
         </ThemeProvider>,
       );
 
-      const primaryButtonElement = getByTestId('primaryButton');
+      const button = getByTestId('button');
 
-      fireEvent.press(primaryButtonElement);
+      fireEvent.press(button);
 
       expect(onPressMock).toHaveBeenCalledTimes(1);
     });
@@ -166,15 +149,15 @@ describe('Button', () => {
 
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Button testID="primaryButton" onPress={onPressMock} disabled>
+          <Button onPress={onPressMock} disabled>
             Primary Button
           </Button>
         </ThemeProvider>,
       );
 
-      const primaryButtonElement = getByTestId('primaryButton');
+      const button = getByTestId('button');
 
-      fireEvent.press(primaryButtonElement);
+      fireEvent.press(button);
 
       expect(onPressMock).not.toHaveBeenCalled();
     });

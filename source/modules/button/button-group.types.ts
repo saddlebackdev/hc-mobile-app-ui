@@ -15,5 +15,4 @@ export interface IButtonGroupItemProps {
 // IProps
 export interface IProps {
   children: Array<React.ReactElement> | React.ReactElement;
-  testID?: string;
 }

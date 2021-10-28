@@ -1,4 +1,4 @@
-// npx jest ./source/modules/scales/__tests__/major-scale.test.js
+// npx jest ./source/modules/scales/__tests__/major-scale.test.ts
 
 import majorScale, {majorScaleUnit} from '../major-scale';
 

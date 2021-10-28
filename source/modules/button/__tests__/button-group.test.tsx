@@ -13,16 +13,16 @@ describe('ButtonGroup', () => {
     it('renders itself correctly', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
-          <ButtonGroup testID="myButtonGroup">
+          <ButtonGroup>
             <Button>Simple Button 1</Button>
             <Button>Simple Button 2</Button>
           </ButtonGroup>
         </ThemeProvider>,
       );
 
-      const buttonGroupElement = wrapper.getByTestId('myButtonGroup');
+      const buttonGroup = wrapper.getByTestId('button-group');
 
-      expect(buttonGroupElement).toBeDefined();
+      expect(buttonGroup).toBeDefined();
 
       expect(wrapper).toMatchSnapshot();
     });
@@ -31,17 +31,16 @@ describe('ButtonGroup', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
           <ButtonGroup>
-            <Button testID="simpleButton1">Simple Button 1</Button>
-            <Button testID="simpleButton2">Simple Button 2</Button>
+            <Button>Simple Button 1</Button>
+            <Button>Simple Button 2</Button>
           </ButtonGroup>
         </ThemeProvider>,
       );
 
-      const buttonElement1 = wrapper.getByTestId('simpleButton1');
-      const buttonElement2 = wrapper.getByTestId('simpleButton2');
+      const buttons = wrapper.getAllByTestId('button');
 
-      expect(buttonElement1).toBeDefined();
-      expect(buttonElement2).toBeDefined();
+      expect(buttons[0]).toBeDefined();
+      expect(buttons[1]).toBeDefined();
 
       expect(wrapper).toMatchSnapshot();
     });

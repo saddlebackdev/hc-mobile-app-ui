@@ -91,7 +91,7 @@ export const Radio: React.FC<IProps> = React.memo(
     };
 
     return (
-      <StyledWrapper $direction={direction}>
+      <StyledWrapper $direction={direction} testID="radio">
         {options.map((option, ndx) => {
           const _onPressOption = () => {
             if (isRadioDisabled || option.disabled) {
@@ -109,6 +109,7 @@ export const Radio: React.FC<IProps> = React.memo(
           return (
             <StyledGroup
               key={option.label}
+              testID="radio-button"
               hitSlop={touchableHitslop}
               onPress={_onPressOption}
               activeOpacity={option.disabled ? 1 : 0.75}
@@ -124,6 +125,7 @@ export const Radio: React.FC<IProps> = React.memo(
                 )}
               </StyledRadioOuter>
               <StyledRadioLabelWrapper
+                testID="radio-label"
                 isMuted={isRadioDisabled || option.disabled}>
                 {option.label}
               </StyledRadioLabelWrapper>

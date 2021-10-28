@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PillToggle Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+      },
+    ]
+  }
+  testID="pill-toggle"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#00AEFF",
+        "borderBottomLeftRadius": 22,
+        "borderBottomRightRadius": 0,
+        "borderColor": "#00AEFF",
+        "borderRightWidth": 0,
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 22,
+        "borderTopRightRadius": 0,
+        "borderWidth": 1,
+        "opacity": 1,
+      }
+    }
+    testID="pill-toggle-button"
+  >
+    <Text
+      inversed={true}
+      isMuted={false}
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 14,
+            "paddingHorizontal": 22,
+            "paddingVertical": 10,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="pill-toggle-button-label"
+    >
+      Selected
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderBottomLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderColor": "#DBE0E3",
+        "borderRightWidth": 0,
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 0,
+        "borderTopRightRadius": 0,
+        "borderWidth": 1,
+        "opacity": 1,
+      }
+    }
+    testID="pill-toggle-button"
+  >
+    <Text
+      inversed={false}
+      isMuted={true}
+      style={
+        Array [
+          Object {
+            "color": "#97A4AB",
+            "fontSize": 14,
+            "paddingHorizontal": 22,
+            "paddingVertical": 10,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="pill-toggle-button-label"
+    >
+      Unselected
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#EDF1F5",
+        "borderBottomLeftRadius": 0,
+        "borderBottomRightRadius": 22,
+        "borderColor": "#DBE0E3",
+        "borderRightWidth": 1,
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 0,
+        "borderTopRightRadius": 22,
+        "borderWidth": 1,
+        "opacity": 1,
+      }
+    }
+    testID="pill-toggle-button"
+  >
+    <Text
+      inversed={false}
+      isMuted={true}
+      style={
+        Array [
+          Object {
+            "color": "#97A4AB",
+            "fontSize": 14,
+            "paddingHorizontal": 22,
+            "paddingVertical": 10,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="pill-toggle-button-label"
+    >
+      Disabled
+    </Text>
+  </View>
+</View>
+`;

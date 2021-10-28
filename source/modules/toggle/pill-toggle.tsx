@@ -78,15 +78,17 @@ export const PillToggle: React.FC<IProps> = ({
   options,
 }): React.ReactElement => {
   return (
-    <StyledWrapper $isDisabled={isToggleDisabled}>
+    <StyledWrapper $isDisabled={isToggleDisabled} testID="pill-toggle">
       {options.map((option, ndx) => {
         const isSelected = option.value === selected;
 
         const isFirstChild = ndx === 0;
         const isLastChild = options.length - 1 === ndx;
 
+        const isDisabled = isToggleDisabled || option.disabled;
+
         const _onPressItem = () => {
-          if (isToggleDisabled || option.disabled) {
+          if (isDisabled) {
             return;
           }
 
@@ -96,15 +98,17 @@ export const PillToggle: React.FC<IProps> = ({
         return (
           <StyledItem
             key={option.label}
-            activeOpacity={0.75}
-            $isDisabled={isToggleDisabled || option.disabled}
+            testID="pill-toggle-button"
+            activeOpacity={isDisabled ? 1 : 0.75}
+            $isDisabled={isDisabled}
             $isFirstChild={isFirstChild}
             $isLastChild={isLastChild}
             $isSelected={isSelected}
             onPress={_onPressItem}>
             <StyledItemLabel
-              $isDisabled={isToggleDisabled || option.disabled}
-              isMuted={isToggleDisabled || option.disabled || !isSelected}
+              $isDisabled={isDisabled}
+              testID="pill-toggle-button-label"
+              isMuted={isDisabled || !isSelected}
               inversed={isSelected}>
               {option.label}
             </StyledItemLabel>

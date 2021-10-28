@@ -89,10 +89,16 @@ export const TextInput: React.FC<IProps> = ({
 
   return (
     <StyledWrapper>
-      <StyledLabel>
-        {label} {required && <StyledLabelAsterisk>*</StyledLabelAsterisk>}
+      <StyledLabel testID="input-label">
+        {label}{' '}
+        {required && (
+          <StyledLabelAsterisk testID="input-label-asterisk">
+            *
+          </StyledLabelAsterisk>
+        )}
       </StyledLabel>
       <StyledInput
+        testID="input"
         $isFocused={isFocused}
         editable={!disabled}
         selectTextOnFocus={!disabled}
