@@ -63,7 +63,7 @@ const DatePicker: React.FC<IProps> = React.memo(
     ...rest
   }): React.ReactElement => {
     // State
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
     // Get Formatted Date
     const getFormattedDate = (date: Date): string => {
@@ -97,8 +97,8 @@ const DatePicker: React.FC<IProps> = React.memo(
       setIsOpen(false);
     };
 
-    const isAndroid = DeviceUtils.isAndroid();
-    const isIos = DeviceUtils.isIos();
+    const isAndroid: boolean = DeviceUtils.isAndroid();
+    const isIos: boolean = DeviceUtils.isIos();
 
     return (
       <React.Fragment>

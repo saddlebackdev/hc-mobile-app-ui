@@ -1,5 +1,6 @@
 // Theme
 export interface ITheme {
+  /** Colors for the theme */
   colors: {
     // Brand
     primaryLight: string;
@@ -27,6 +28,8 @@ export interface ITheme {
     grayFive: string;
     graySix: string;
   };
+
+  /** Typography for the theme */
   typography: {
     sizes: {
       small: number;

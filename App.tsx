@@ -32,9 +32,9 @@ const Row = Styled.View`
 
 // Component
 export const App: React.FC<IProps> = (): React.ReactElement => {
-  const [isChecked, setIsChecked] = React.useState(true);
-  const [selectedRadio, setSelectedRadio] = React.useState(2);
-  const [activePill, setActivePill] = React.useState(2);
+  const [isChecked, setIsChecked] = React.useState<boolean>(true);
+  const [selectedRadio, setSelectedRadio] = React.useState<number>(2);
+  const [activePill, setActivePill] = React.useState<number>(2);
 
   const pillToggleOptions = [
     {label: 'Selected', value: 1, onPress: setActivePill},
