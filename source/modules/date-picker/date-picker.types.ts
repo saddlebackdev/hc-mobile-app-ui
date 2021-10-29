@@ -21,8 +21,15 @@ export interface IStyledPickerWrapper extends ViewProps {}
 
 // Props
 export interface IProps extends Partial<DatePickerOptions> {
+  /** Function to be called when date is selected */
   onDateChange: Function;
+
+  /** Optional function to format the date */
   customDateFormatter?: Function;
+
+  /** Label for the date picker */
   label?: string;
+
+  /** Currently selected value for the date picker */
   selectedDate: Date;
 }

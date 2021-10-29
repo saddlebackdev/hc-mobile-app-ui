@@ -4,7 +4,13 @@
 export const minorScaleUnit: number = 5;
 
 // Minor Scale
-export const minorScale = (n: number = 1, unit?: string) => {
+export const minorScale = (
+  /** Number of times the minorScaleUnit should be multipled */
+  n: number = 1,
+
+  /** The unit to append. Example 'px' or 'dp' */
+  unit?: string,
+) => {
   if (unit) {
     return `${minorScaleUnit * n}${unit}`;
   }

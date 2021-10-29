@@ -62,7 +62,7 @@ export const TextInput: React.FC<IProps> = ({
   const theme = useTheme();
 
   // State
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState<boolean>(false);
 
   // On Blur
   const _onBlur = (event: NativeSyntheticEvent<TextInputFocusEventData>) => {
