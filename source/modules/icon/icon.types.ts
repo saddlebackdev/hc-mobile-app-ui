@@ -15,5 +15,5 @@ export interface IProps {
     | 'white';
 
   /** Name of the icon */
-  type: 'chevronDown' | 'calendar' | 'date' | 'success' | 'tick';
+  type: 'chevronDown' | 'calendar' | 'date' | 'success' | 'tick' | 'user';
 }

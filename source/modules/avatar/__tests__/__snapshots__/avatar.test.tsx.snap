@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar Rendering renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 33,
+      "justifyContent": "center",
+      "opacity": 1,
+      "overflow": "hidden",
+      "width": 33,
+    }
+  }
+  testID="avatar-button"
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://example.com/baby.jpg",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderColor": "#FFFFFF",
+          "borderRadius": 33,
+          "borderWidth": 1,
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
+    }
+    testID="avatar-image"
+  />
+</View>
+`;

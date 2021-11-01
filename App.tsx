@@ -4,6 +4,7 @@ import {SafeAreaView} from 'react-native';
 import Styled from 'styled-components/native';
 
 import {
+  Avatar,
   Button,
   ButtonGroup,
   Floater,
@@ -20,11 +21,16 @@ import {
 interface IProps {}
 
 const Wrapper = Styled.ScrollView`
-  padding: 30px;
+  padding-vertical: 30px;
 `;
-const Section = Styled.View`
+const Section = Styled.View<{isDark?: boolean}>`
   margin-top: 30px;
   margin-bottom: 30px;
+  padding-horizontal: 30px;
+
+  background-color: ${({isDark, theme}) => {
+    return isDark ? theme.colors.graySix : theme.colors.white;
+  }};
 `;
 const Row = Styled.View`
   margin-top: 10px;
@@ -53,6 +59,16 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     <SafeAreaView>
       <ThemeProvider>
         <Wrapper>
+          {/* Avatar */}
+          <Section isDark>
+            <Row>
+              <Avatar uri="" />
+            </Row>
+            <Row>
+              <Avatar uri="https://images.unsplash.com/photo-1591907235917-3da27ce1421d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=850&q=80" />
+            </Row>
+          </Section>
+
           {/* Text Input */}
           <Section>
             <Row>
