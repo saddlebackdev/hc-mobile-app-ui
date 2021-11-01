@@ -8,6 +8,9 @@ export {default as Checkbox} from './modules/checkbox/checkbox';
 // Date Picker
 export {default as DatePicker} from './modules/date-picker/date-picker';
 
+// Floater
+export {default as Floater} from './modules/floater/floater';
+
 // Select Picker
 export {default as SelectPicker} from './modules/select-picker/select-picker';
 
