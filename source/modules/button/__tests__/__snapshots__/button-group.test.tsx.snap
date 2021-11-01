@@ -56,6 +56,13 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
           "height": 44,
           "justifyContent": "center",
           "opacity": 1,
+          "shadowColor": "black",
+          "shadowOffset": Object {
+            "height": 0,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 0,
           "width": "100%",
         }
       }
@@ -123,6 +130,13 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
           "height": 44,
           "justifyContent": "center",
           "opacity": 1,
+          "shadowColor": "black",
+          "shadowOffset": Object {
+            "height": 0,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 0,
           "width": "100%",
         }
       }
@@ -207,6 +221,13 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
           "height": 44,
           "justifyContent": "center",
           "opacity": 1,
+          "shadowColor": "black",
+          "shadowOffset": Object {
+            "height": 0,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 0,
           "width": "100%",
         }
       }
@@ -274,6 +295,13 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
           "height": 44,
           "justifyContent": "center",
           "opacity": 1,
+          "shadowColor": "black",
+          "shadowOffset": Object {
+            "height": 0,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 0,
           "width": "100%",
         }
       }

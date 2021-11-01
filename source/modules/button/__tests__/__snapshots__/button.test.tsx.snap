@@ -29,6 +29,13 @@ exports[`Button Rendering Variants danger: should match snapshot 1`] = `
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 0,
       "width": "100%",
     }
   }
@@ -84,6 +91,13 @@ exports[`Button Rendering Variants default: should match snapshot 1`] = `
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 0,
       "width": "100%",
     }
   }
@@ -139,6 +153,13 @@ exports[`Button Rendering Variants info: should match snapshot 1`] = `
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 0,
       "width": "100%",
     }
   }
@@ -194,6 +215,13 @@ exports[`Button Rendering Variants outline: should match snapshot 1`] = `
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 0,
       "width": "100%",
     }
   }
@@ -249,6 +277,13 @@ exports[`Button Rendering Variants primary: should match snapshot 1`] = `
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 0,
       "width": "100%",
     }
   }
@@ -304,6 +339,13 @@ exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 0,
       "width": "100%",
     }
   }
@@ -359,6 +401,13 @@ exports[`Button Rendering Variants small: should match snapshot 1`] = `
       "height": 32,
       "justifyContent": "center",
       "opacity": 1,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 0,
       "width": "100%",
     }
   }
@@ -414,6 +463,13 @@ exports[`Button Rendering Variants success: should match snapshot 1`] = `
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 0,
       "width": "100%",
     }
   }
@@ -469,6 +525,13 @@ exports[`Button Rendering Variants warning: should match snapshot 1`] = `
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 0,
+        "width": 0,
+      },
+      "shadowOpacity": 1,
+      "shadowRadius": 0,
       "width": "100%",
     }
   }
