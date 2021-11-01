@@ -80,6 +80,16 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 onChange={() => null}
               />
             </Row>
+            <Row>
+              <TextInput
+                label="Email Address"
+                placeholder="jane.doe@ag.com"
+                onChange={() => null}
+                numberOfLines={12}
+                isUnderlined
+                required
+              />
+            </Row>
           </Section>
 
           {/* Pill Toggle */}
