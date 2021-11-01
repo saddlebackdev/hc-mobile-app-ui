@@ -4,27 +4,39 @@ import {NativeSyntheticEvent, TextInputFocusEventData} from 'react-native';
 import Styled, {useTheme} from 'styled-components/native';
 
 // Types
-import {IProps, IStyledInput} from './text-input.types';
+import {IProps, IStyledInput, IStyledLabel} from './text-input.types';
 
 // Shared
 import Text from '../text/text';
-import {majorScale} from '../scales';
+import {majorScale, minorScale} from '../scales';
 
 // Styles
 const StyledWrapper = Styled.View``;
-const StyledLabel = Styled(Text)`
+const StyledLabel = Styled(Text)<IStyledLabel>`
   font-weight: 700;
-  margin-bottom: ${majorScale(1, 'px')};
-  font-size: 18px;
+  font-size: ${({$isSmallFont}) => ($isSmallFont ? '14px' : '18px')};
+  margin-bottom: ${({$isSmallFont}) => {
+    return $isSmallFont ? minorScale(1, 'px') : majorScale(1, 'px');
+  }};
 `;
-const StyledLabelAsterisk = Styled(Text)`
+const StyledLabelAsterisk = Styled(Text)<IStyledLabel>`
   color: ${({theme}) => theme.colors.dangerLight};
+  font-size: ${({$isSmallFont}) => ($isSmallFont ? '14px' : '18px')};
 `;
 const StyledInput = Styled.TextInput<IStyledInput>`
-  width: 100%; height: 44px;
-  padding-horizontal: ${majorScale(1, 'px')};
+  width: 100%;
   border-radius: 3px;
-  font-size: 16px;
+
+  font-size: ${({$isUnderlined}) => ($isUnderlined ? '20px' : '16px')};
+
+  padding-bottom: ${({multiline}) => (multiline ? majorScale(1, 'px') : 0)};
+  padding-top: ${({multiline}) => (multiline ? majorScale(1, 'px') : 0)};
+
+  padding-horizontal: ${({$isUnderlined}) => {
+    return $isUnderlined ? 0 : majorScale(1, 'px');
+  }};
+
+  height: ${({multiline}) => (multiline ? '88px' : '44px')};
 
   background: ${({editable, theme}) => {
     return editable ? theme.colors.white : theme.colors.grayTwo;
@@ -45,6 +57,10 @@ const StyledInput = Styled.TextInput<IStyledInput>`
 
     return theme.colors.grayThree;
   }};
+
+  border-top-width: ${({$isUnderlined}) => ($isUnderlined ? 0 : '1px')};
+  border-right-width: ${({$isUnderlined}) => ($isUnderlined ? 0 : '1px')};
+  border-left-width: ${({$isUnderlined}) => ($isUnderlined ? 0 : '1px')};
 `;
 
 // Component
@@ -53,6 +69,7 @@ export const TextInput: React.FC<IProps> = ({
   required,
   disabled,
   placeholder,
+  isUnderlined,
   onBlur,
   onChange,
   onFocus,
@@ -89,10 +106,15 @@ export const TextInput: React.FC<IProps> = ({
 
   return (
     <StyledWrapper>
-      <StyledLabel testID="input-label">
+      <StyledLabel
+        isMuted={isUnderlined}
+        $isSmallFont={isUnderlined}
+        testID="input-label">
         {label}{' '}
         {required && (
-          <StyledLabelAsterisk testID="input-label-asterisk">
+          <StyledLabelAsterisk
+            $isSmallFont={isUnderlined}
+            testID="input-label-asterisk">
             *
           </StyledLabelAsterisk>
         )}
@@ -100,6 +122,7 @@ export const TextInput: React.FC<IProps> = ({
       <StyledInput
         testID="input"
         $isFocused={isFocused}
+        $isUnderlined={isUnderlined}
         editable={!disabled}
         selectTextOnFocus={!disabled}
         underlineColorAndroid="transparent"

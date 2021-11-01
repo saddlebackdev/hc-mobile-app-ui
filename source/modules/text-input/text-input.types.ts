@@ -1,13 +1,22 @@
 // Modules
 import {TextInputProps} from 'react-native';
 
+// Styled Label
+export interface IStyledLabel {
+  $isSmallFont?: boolean;
+}
+
 // Styled Input
 export interface IStyledInput extends TextInputProps {
   $isFocused: boolean;
+  $isUnderlined?: boolean;
 }
 
 // Props
 export interface IProps extends Partial<TextInputProps> {
+  /** Enables the underlined variant for the text input */
+  isUnderlined?: boolean;
+
   /** Label for the text input */
   label?: string;
 

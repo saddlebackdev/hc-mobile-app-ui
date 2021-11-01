@@ -36,13 +36,18 @@ exports[`TextInput Rendering renders itself correctly 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderColor": "#DBE0E3",
+          "borderLeftWidth": 1,
           "borderRadius": 3,
+          "borderRightWidth": 1,
           "borderStyle": "solid",
+          "borderTopWidth": 1,
           "borderWidth": 1,
           "color": "#1C2530",
           "fontSize": 16,
           "height": 44,
+          "paddingBottom": 0,
           "paddingHorizontal": 11,
+          "paddingTop": 0,
           "width": "100%",
         },
       ]
@@ -90,13 +95,18 @@ exports[`TextInput Rendering should render label when passed 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderColor": "#DBE0E3",
+          "borderLeftWidth": 1,
           "borderRadius": 3,
+          "borderRightWidth": 1,
           "borderStyle": "solid",
+          "borderTopWidth": 1,
           "borderWidth": 1,
           "color": "#1C2530",
           "fontSize": 16,
           "height": 44,
+          "paddingBottom": 0,
           "paddingHorizontal": 11,
+          "paddingTop": 0,
           "width": "100%",
         },
       ]
@@ -136,7 +146,7 @@ exports[`TextInput Rendering should render label with an asterisk when "required
         Array [
           Object {
             "color": "#EE4335",
-            "fontSize": 16,
+            "fontSize": 18,
             "textAlign": "left",
           },
         ]
@@ -158,13 +168,18 @@ exports[`TextInput Rendering should render label with an asterisk when "required
         Object {
           "backgroundColor": "#FFFFFF",
           "borderColor": "#DBE0E3",
+          "borderLeftWidth": 1,
           "borderRadius": 3,
+          "borderRightWidth": 1,
           "borderStyle": "solid",
+          "borderTopWidth": 1,
           "borderWidth": 1,
           "color": "#1C2530",
           "fontSize": 16,
           "height": 44,
+          "paddingBottom": 0,
           "paddingHorizontal": 11,
+          "paddingTop": 0,
           "width": "100%",
         },
       ]
