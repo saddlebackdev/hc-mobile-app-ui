@@ -20,7 +20,10 @@ interface ICommonProps {
 export interface IStyledLabel extends ICommonProps {}
 
 // Styled Button
-export interface IStyledButton extends ICommonProps, TouchableOpacityProps {}
+export interface IStyledButton extends ICommonProps, TouchableOpacityProps {
+  /** If true, adds bottom shadow to the button */
+  hasShadow?: boolean;
+}
 
 // Props
 export interface IProps extends IStyledButton {

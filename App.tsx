@@ -6,6 +6,7 @@ import Styled from 'styled-components/native';
 import {
   Button,
   ButtonGroup,
+  Floater,
   Checkbox,
   Text,
   Heading,
@@ -311,6 +312,16 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             </Row>
           </Section>
         </Wrapper>
+
+        <Floater
+          alignment="bottom"
+          offsetTop={-80}
+          offsetRight={30}
+          offsetLeft={30}>
+          <Button appearance="filled" hasShadow>
+            Submit
+          </Button>
+        </Floater>
       </ThemeProvider>
     </SafeAreaView>
   );

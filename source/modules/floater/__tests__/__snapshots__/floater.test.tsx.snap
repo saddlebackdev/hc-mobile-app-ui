@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Floater Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "bottom": 0,
+        "position": "relative",
+      },
+    ]
+  }
+  testID="floater"
+>
+  <View
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#00AEFF",
+        "borderColor": "transparent",
+        "borderRadius": 4,
+        "borderWidth": 0,
+        "display": "flex",
+        "height": 44,
+        "justifyContent": "center",
+        "opacity": 1,
+        "shadowColor": "black",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 0,
+        "width": "100%",
+      }
+    }
+    testID="button"
+  >
+    <Text
+      appearance="filled"
+      color="primary"
+      disabled={false}
+      small={false}
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 16,
+            "fontWeight": "500",
+          },
+        ]
+      }
+      testID="button-label"
+    >
+      Primary Button
+    </Text>
+  </View>
+</View>
+`;
