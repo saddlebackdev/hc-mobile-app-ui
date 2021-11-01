@@ -1,3 +1,6 @@
+// Avatar
+export {default as Avatar} from './modules/avatar/avatar';
+
 // Button
 export {default as Button} from './modules/button/button';
 export {default as ButtonGroup} from './modules/button/button-group';
