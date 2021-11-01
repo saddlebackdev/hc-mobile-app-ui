@@ -18,6 +18,14 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
     return small ? '32px' : '44px';
   }};
 
+  box-shadow: ${({hasShadow}) => {
+    if (hasShadow) {
+      return '0 4px 5px rgba(0, 0, 0, 0.175)';
+    }
+
+    return 'none';
+  }};
+
   background-color: ${({appearance, color, disabled, theme}) => {
     if (appearance === 'outline') {
       return theme.colors.white;
@@ -142,6 +150,7 @@ const Button: React.FC<IProps> = React.memo(
     color = 'primary',
     children,
     small = false,
+    hasShadow = false,
     ...props
   }): React.ReactElement => {
     // Do not allow overwriting styles
@@ -157,6 +166,7 @@ const Button: React.FC<IProps> = React.memo(
         appearance={appearance}
         color={color}
         small={small}
+        hasShadow={hasShadow}
         {...props}>
         <StyledLabel
           testID="button-label"

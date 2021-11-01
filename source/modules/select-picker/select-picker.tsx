@@ -136,4 +136,4 @@ const SelectPicker: React.FC<IProps> = ({
 };
 
 // Exports
-export default React.memo(SelectPicker);
+export default SelectPicker;
