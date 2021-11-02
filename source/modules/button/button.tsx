@@ -18,7 +18,11 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
     return small ? '32px' : '44px';
   }};
 
-  box-shadow: ${({hasShadow}) => {
+  box-shadow: ${({disabled, hasShadow}) => {
+    if (disabled) {
+      return 'none';
+    }
+
     if (hasShadow) {
       return '0 4px 5px rgba(0, 0, 0, 0.175)';
     }

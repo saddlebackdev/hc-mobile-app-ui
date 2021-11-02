@@ -2,10 +2,10 @@
 export interface IStyledWrapper {
   $position?: 'absolute' | 'relative';
   $alignment: 'top' | 'bottom';
-  $marginTop?: number;
-  $marginRight?: number;
-  $marginBottom?: number;
-  $marginLeft?: number;
+  $paddingTop?: number;
+  $paddingRight?: number;
+  $paddingBottom?: number;
+  $paddingLeft?: number;
 }
 
 // Props
@@ -16,15 +16,15 @@ export interface IProps {
   /** Aligns the element on the screen to either 'top' or 'bottom' */
   alignment: 'top' | 'bottom';
 
-  /** Adds margin from the top */
+  /** Adds padding from the top */
   offsetTop?: number;
 
-  /** Adds margin from the right */
+  /** Adds padding from the right */
   offsetRight?: number;
 
-  /** Adds margin from the bottom */
+  /** Adds padding from the bottom */
   offsetBottom?: number;
 
-  /** Adds margin from the left */
+  /** Adds padding from the left */
   offsetLeft?: number;
 }
