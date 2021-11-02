@@ -7,7 +7,9 @@ import {IStyledWrapper, IProps} from './floater.types';
 
 // Styles
 const StyledWrapper = Styled.View<IStyledWrapper>`
-  position: ${({$position}) => $position || 'relative'};
+  width: 100%;
+  position: ${({$position}) => $position || 'absolute'};
+  background-color: transparent;
 
   ${({$alignment}) => {
     if ($alignment === 'top') {
@@ -18,24 +20,27 @@ const StyledWrapper = Styled.View<IStyledWrapper>`
     }
   }}
 
-  ${({$marginTop}) => {
-    return typeof $marginTop === 'number' && `margin-top: ${$marginTop}px`;
+  ${({$paddingTop}) => {
+    return typeof $paddingTop === 'number' && `padding-top: ${$paddingTop}px`;
   }}
 
-  ${({$marginRight}) => {
+  ${({$paddingRight}) => {
     return (
-      typeof $marginRight === 'number' && `margin-right: ${$marginRight}px`
+      typeof $paddingRight === 'number' && `padding-right: ${$paddingRight}px`
     );
   }}
 
-  ${({$marginBottom}) => {
+  ${({$paddingBottom}) => {
     return (
-      typeof $marginBottom === 'number' && `margin-bottom: ${$marginBottom}px`
+      typeof $paddingBottom === 'number' &&
+      `padding-bottom: ${$paddingBottom}px`
     );
   }}
 
-  ${({$marginLeft}) => {
-    return typeof $marginLeft === 'number' && `margin-left: ${$marginLeft}px`;
+  ${({$paddingLeft}) => {
+    return (
+      typeof $paddingLeft === 'number' && `padding-left: ${$paddingLeft}px`
+    );
   }}
 `;
 
@@ -54,10 +59,10 @@ export const FloatingActionButton: React.FC<IProps> = ({
       testID="floater"
       $position={position}
       $alignment={alignment}
-      $marginTop={offsetTop}
-      $marginRight={offsetRight}
-      $marginBottom={offsetBottom}
-      $marginLeft={offsetLeft}>
+      $paddingTop={offsetTop}
+      $paddingRight={offsetRight}
+      $paddingBottom={offsetBottom}
+      $paddingLeft={offsetLeft}>
       {children}
     </StyledWrapper>
   );
