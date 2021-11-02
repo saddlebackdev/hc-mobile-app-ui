@@ -5,8 +5,10 @@ exports[`Floater Rendering renders itself correctly 1`] = `
   style={
     Array [
       Object {
+        "backgroundColor": "transparent",
         "bottom": 0,
-        "position": "relative",
+        "position": "absolute",
+        "width": "100%",
       },
     ]
   }
