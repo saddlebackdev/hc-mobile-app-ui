@@ -1,7 +1,6 @@
 {
-  "name": "mau",
+  "name": "hc-mobile-app-ui",
   "version": "0.0.1",
-  "private": true,
   "main": "./source/index.ts",
   "scripts": {
     "android": "react-native run-android",
