@@ -11,6 +11,9 @@ export {default as Checkbox} from './modules/checkbox/checkbox';
 // Date Picker
 export {default as DatePicker} from './modules/date-picker/date-picker';
 
+// Divider
+export {default as Divider} from './modules/divider/divider';
+
 // Floater
 export {default as Floater} from './modules/floater/floater';
 

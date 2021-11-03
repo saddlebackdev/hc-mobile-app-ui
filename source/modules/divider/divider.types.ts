@@ -1,0 +1,2 @@
+// Props
+export interface IProps {}
