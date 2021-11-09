@@ -1,0 +1,29 @@
+.github/
+.vscode/
+coverage/
+node_modules/
+.editorconfig
+.prettierrc
+.watchmanconfig
+.huskyrc.json
+.lintstagedrc.json
+.svgrrc
+jsconfig.json
+babel.config.js
+yarn.lock
+
+# OSX
+.DS_Store
+
+# TS configs
+tsconfig.build.json
+tsconfig.json
+tsconfig-strict.json
+tslint.json
+
+# Eslint
+.eslintignore
+.eslintrc
+
+# Docs
+CONTRIBUTING.md
