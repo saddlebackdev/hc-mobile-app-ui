@@ -79,7 +79,7 @@ export const Checkbox: React.FC<IProps> = React.memo(
               <Icon
                 type="tick"
                 color={disabled ? 'muted' : 'white'}
-                size={14}
+                size={12}
               />
             </StyledCheckboxInner>
           )}
