@@ -20,9 +20,6 @@ export {default as Floater} from './modules/floater/floater';
 // Select Picker
 export {default as SelectPicker} from './modules/select-picker/select-picker';
 
-// Icons
-export {default as Icon} from './modules/icon/icon';
-
 // Radio
 export {default as Radio} from './modules/radio/radio';
 
