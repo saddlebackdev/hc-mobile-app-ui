@@ -1,5 +1,5 @@
 // Modules
-import React from 'react';
+import * as React from 'react';
 
 // Button Group Props
 export interface IButtonGroupProps {

@@ -1,6 +1,6 @@
 // npx jest ./source/modules/checkbox/__tests__/checkbox.test.ts
 
-import React from 'react';
+import * as React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 
 import Checkbox from '../checkbox';

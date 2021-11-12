@@ -1,5 +1,5 @@
 // Modules
-import React from 'react';
+import * as React from 'react';
 import RNPickerSelect, {PickerStyle} from 'react-native-picker-select';
 import Styled, {useTheme} from 'styled-components/native';
 

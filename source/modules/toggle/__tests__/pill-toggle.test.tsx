@@ -1,6 +1,6 @@
 // npx jest ./source/modules/toggle/__tests__/pill-toggle.test.ts
 
-import React from 'react';
+import * as React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 
 import PillToggle from '../pill-toggle';

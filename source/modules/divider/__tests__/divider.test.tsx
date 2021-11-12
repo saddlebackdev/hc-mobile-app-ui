@@ -1,6 +1,6 @@
 // npx jest ./source/modules/divider/__tests__/divider.test.ts
 
-import React from 'react';
+import * as React from 'react';
 import {render} from '@testing-library/react-native';
 
 import Divider from '../divider';

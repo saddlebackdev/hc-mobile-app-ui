@@ -1,5 +1,5 @@
 // Modules
-import React, {useState} from 'react';
+import * as React from 'react';
 import {NativeSyntheticEvent, TextInputFocusEventData} from 'react-native';
 import Styled, {useTheme} from 'styled-components/native';
 
@@ -79,7 +79,7 @@ export const TextInput: React.FC<IProps> = ({
   const theme = useTheme();
 
   // State
-  const [isFocused, setIsFocused] = useState<boolean>(false);
+  const [isFocused, setIsFocused] = React.useState<boolean>(false);
 
   // On Blur
   const _onBlur = (event: NativeSyntheticEvent<TextInputFocusEventData>) => {
