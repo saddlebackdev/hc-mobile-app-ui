@@ -1,6 +1,6 @@
 // npx jest ./source/modules/text/__tests__/text.test.ts
 
-import React from 'react';
+import * as React from 'react';;
 import {render} from '@testing-library/react-native';
 
 import Text from '../text';

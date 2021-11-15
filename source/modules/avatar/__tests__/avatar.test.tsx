@@ -1,6 +1,6 @@
 // npx jest ./source/modules/avatar/__tests__/avatar.test.ts
 
-import React from 'react';
+import * as React from 'react';;
 import {fireEvent, render} from '@testing-library/react-native';
 
 import Avatar from '../avatar';

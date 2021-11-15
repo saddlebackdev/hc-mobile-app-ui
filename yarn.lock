@@ -3530,6 +3530,16 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hc-mobile-app-ui@./hc-mobile-app-ui-v0.0.4.tgz:
+  version "0.0.4"
+  resolved "./hc-mobile-app-ui-v0.0.4.tgz#22e7581ddcd54b4a51bf49077fa409ff34b7bca7"
+  dependencies:
+    "@react-native-community/datetimepicker" "^3.5.2"
+    "@react-native-picker/picker" "^2.1.0"
+    react "17.0.2"
+    react-native "0.66.0"
+    react-native-picker-select "^8.0.4"
+
 hermes-engine@~0.9.0:
   version "0.9.0"
   resolved "https://registry.npmjs.org/hermes-engine/-/hermes-engine-0.9.0.tgz"

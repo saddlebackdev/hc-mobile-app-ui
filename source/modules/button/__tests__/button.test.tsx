@@ -1,6 +1,6 @@
 // npx jest ./source/modules/button/__tests__/button.test.ts
 
-import React from 'react';
+import * as React from 'react';;
 import {fireEvent, render} from '@testing-library/react-native';
 
 import Button from '../button';

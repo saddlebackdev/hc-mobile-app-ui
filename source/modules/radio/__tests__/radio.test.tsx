@@ -1,6 +1,6 @@
 // npx jest ./source/modules/radio/__tests__/radio.test.ts
 
-import React from 'react';
+import * as React from 'react';;
 import {fireEvent, render} from '@testing-library/react-native';
 
 import Radio from '../radio';
