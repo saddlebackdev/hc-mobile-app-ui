@@ -1,6 +1,6 @@
 // npx jest ./source/modules/floater/__tests__/floater.test.ts
 
-import React from 'react';
+import * as React from 'react';;
 import {render} from '@testing-library/react-native';
 
 import Floater from '../floater';
