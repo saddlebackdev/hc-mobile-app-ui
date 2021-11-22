@@ -15,11 +15,6 @@ exports[`Floater Rendering renders itself correctly 1`] = `
   testID="floater"
 >
   <View
-    accessibilityState={
-      Object {
-        "disabled": false,
-      }
-    }
     accessible={true}
     collapsable={false}
     focusable={false}

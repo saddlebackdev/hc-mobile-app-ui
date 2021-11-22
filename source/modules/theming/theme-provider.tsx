@@ -1,5 +1,5 @@
 // Modules
-import * as React from 'react';;
+import * as React from 'react';
 import {ThemeProvider as StyledThemeProvider} from 'styled-components/native';
 
 // Types
