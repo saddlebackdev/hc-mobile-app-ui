@@ -1,6 +1,6 @@
 // npx jest ./source/modules/text-input/__tests__/text-input.test.ts
 
-import * as React from 'react';;
+import * as React from 'react';
 import {render} from '@testing-library/react-native';
 
 import TextInput from '../text-input';

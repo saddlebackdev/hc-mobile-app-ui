@@ -1,6 +1,6 @@
 // npx jest ./source/modules/heading/__tests__/heading.test.ts
 
-import * as React from 'react';;
+import * as React from 'react';
 import {render} from '@testing-library/react-native';
 
 import Heading from '../heading';
