@@ -15,7 +15,7 @@
     "start": "react-native start",
     "test": "./node_modules/.bin/jest .",
     "lint": "./node_modules/.bin/eslint . --ext .js,.jsx,.ts,.tsx",
-    "build": "cd source && ../node_modules/.bin/tsc && cd ../ && mkdir dist/images && mkdir dist/declarations && cp source/declarations/*.ts dist/declarations && cp source/images/*.png dist/images"
+    "build": "./node_modules/.bin/gulp build"
   },
   "dependencies": {
     "@react-native-community/datetimepicker": "^3.5.2",
@@ -44,6 +44,9 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "husky": "^7.0.2",
     "jest": "^26.6.3",
     "lint-staged": "^11.2.0",
