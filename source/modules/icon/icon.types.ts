@@ -13,5 +13,12 @@ export interface IProps {
   color?: 'black' | 'muted' | 'white';
 
   /** Name of the icon */
-  type: 'chevronDown' | 'calendar' | 'date' | 'success' | 'tick' | 'user';
+  type:
+    | 'chevronDown'
+    | 'calendar'
+    | 'date'
+    | 'success'
+    | 'tick'
+    | 'user'
+    | 'closeCircle';
 }

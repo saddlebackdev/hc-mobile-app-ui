@@ -8,6 +8,9 @@ export {default as ButtonGroup} from './modules/button/button-group';
 // Checkbox
 export {default as Checkbox} from './modules/checkbox/checkbox';
 
+// Chip
+export {default as Chip} from './modules/chip/chip';
+
 // Date Picker
 export {default as DatePicker} from './modules/date-picker/date-picker';
 
