@@ -7,6 +7,7 @@ import {
   Avatar,
   Button,
   ButtonGroup,
+  Chip,
   DatePicker,
   SelectPicker,
   Checkbox,
@@ -336,6 +337,34 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   onPress={() => setIsChecked(!isChecked)}
                   label="Unchecked Disabled State"
                 />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Chip */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Chip</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text isCaption>
+                Chips (aka Tags) are compact elements that represent an input,
+                attribute, or action.
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Chip label="Care" onPress={() => undefined} />
+              </Row>
+              <Row>
+                <Chip label="Baptism" onPress={() => undefined} />
+              </Row>
+              <Row>
+                <Chip label="Class 101" onPress={() => undefined} />
+              </Row>
+              <Row>
+                <Chip label="Class 401" onPress={() => undefined} />
               </Row>
             </Section.Content>
           </Section.Wrapper>
