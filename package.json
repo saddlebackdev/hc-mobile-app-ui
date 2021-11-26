@@ -15,11 +15,14 @@
     "start": "react-native start",
     "test": "./node_modules/.bin/jest .",
     "lint": "./node_modules/.bin/eslint . --ext .js,.jsx,.ts,.tsx",
-    "build": "cd source && ../node_modules/.bin/tsc && cd ../ && mkdir dist/images && mkdir dist/declarations && cp source/declarations/*.ts dist/declarations && cp source/images/*.png dist/images"
+    "build": "./node_modules/.bin/gulp build"
   },
   "dependencies": {
     "@react-native-community/datetimepicker": "^3.5.2",
     "@react-native-picker/picker": "^2.1.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "react": "17.0.2",
     "react-native": "0.65.0",
     "react-native-picker-select": "^8.0.4"

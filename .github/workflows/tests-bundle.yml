@@ -22,3 +22,15 @@ jobs:
         run: yarn lint
       - name: Run Unit Tests
         run: yarn test
+  bundle:
+    name: Create Archive
+    runs-on: ubuntu-latest
+    needs: tests
+    steps:
+      - name: Transpile Code
+        run: yarn build
+      - name: Archive Package
+        uses: actions/upload-artifact@master
+        with:
+          name: archive
+          path: dist
