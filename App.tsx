@@ -13,6 +13,7 @@ import {
   Checkbox,
   Divider,
   NestableList,
+  SelectableList,
   Text,
   Heading,
   Radio,
@@ -54,6 +55,8 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const [selectedDate, setSelectedDate] = React.useState<any>(new Date());
   const [activePill, setActivePill] = React.useState<number>(2);
   const [pickerValue, setPickerValue] = React.useState<number>(1);
+  const [selectedListItem, setSelectedListItem] =
+    React.useState<string>('app-list-item-1');
 
   const pickerOptions = [
     {label: 'Option 1', value: 1},
@@ -111,6 +114,44 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
       label: 'Tags',
       onPress: onPressMock,
       id: 'app-list-item-tags',
+    },
+  ];
+
+  const selectableListItems = [
+    {
+      label: 'List Item 1',
+      onPress: () => setSelectedListItem('app-list-item-1'),
+      id: 'app-list-item-1',
+    },
+    {
+      label: 'List Item 2',
+      onPress: () => setSelectedListItem('app-list-item-2'),
+      id: 'app-list-item-2',
+    },
+    {
+      label: 'List Item 3',
+      onPress: () => setSelectedListItem('app-list-item-3'),
+      id: 'app-list-item-3',
+    },
+    {
+      label: 'List Item 4',
+      onPress: () => setSelectedListItem('app-list-item-4'),
+      id: 'app-list-item-4',
+    },
+    {
+      label: 'List Item 5',
+      onPress: () => setSelectedListItem('app-list-item-5'),
+      id: 'app-list-item-5',
+    },
+    {
+      label: 'List Item 6',
+      onPress: () => setSelectedListItem('app-list-item-6'),
+      id: 'app-list-item-6',
+    },
+    {
+      label: 'List Item 7',
+      onPress: () => setSelectedListItem('app-list-item-7'),
+      id: 'app-list-item-7',
     },
   ];
 
@@ -432,14 +473,24 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             <Section.Title>
               <Heading variant="h2">List</Heading>
             </Section.Title>
+
             <Section.Description>
-              <Text isCaption>
-                Nestable Lists are found in Filters and Selectors
-              </Text>
+              <Text isCaption>Nestable List</Text>
             </Section.Description>
             <Section.Content>
               <Row>
                 <NestableList items={nestableListItems} />
+              </Row>
+            </Section.Content>
+            <Section.Description>
+              <Text isCaption>Selectable List</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <SelectableList
+                  selected={selectedListItem}
+                  items={selectableListItems}
+                />
               </Row>
             </Section.Content>
           </Section.Wrapper>

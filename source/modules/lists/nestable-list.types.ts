@@ -5,7 +5,7 @@ export interface IStyledChild {
 
 // Item Child
 export interface IItemChild {
-  id: string;
+  id: string | number;
   disabled?: boolean;
   onPress: any;
   label: string;
@@ -13,7 +13,7 @@ export interface IItemChild {
 
 // Item
 export interface IItem {
-  id: string;
+  id: string | number;
   label: string;
   children?: Array<IItemChild>;
   disabled?: boolean;
