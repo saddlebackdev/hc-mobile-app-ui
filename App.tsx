@@ -12,6 +12,7 @@ import {
   SelectPicker,
   Checkbox,
   Divider,
+  NestableList,
   Text,
   Heading,
   Radio,
@@ -41,6 +42,8 @@ const Row = Styled.View`
   margin-top: 10px;
   margin-bottom: 10px;
 `;
+
+const onPressMock = () => false;
 
 // Component
 export const App: React.FC<IProps> = (): React.ReactElement => {
@@ -74,6 +77,41 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const horizontalOptions = [
     {label: 'Option 1', value: 1},
     {label: 'Option 2', value: 2},
+  ];
+
+  const nestableListItems = [
+    {
+      label: 'Campus',
+      onPress: onPressMock,
+      id: 'app-list-item-campus',
+      children: [
+        {
+          label: 'Lake Forest',
+          id: 'app-list-item-child-lake-forest',
+          onPress: onPressMock,
+        },
+        {
+          label: 'Laguna Woods',
+          id: 'app-list-item-child-laguna-woods',
+          onPress: onPressMock,
+        },
+        {
+          label: 'San Diego',
+          id: 'app-list-item-child-san-diego',
+          onPress: onPressMock,
+        },
+      ],
+    },
+    {
+      label: 'Category',
+      onPress: onPressMock,
+      id: 'app-list-item-category',
+    },
+    {
+      label: 'Tags',
+      onPress: onPressMock,
+      id: 'app-list-item-tags',
+    },
   ];
 
   const avatarUri =
@@ -384,6 +422,24 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   selectedDate={selectedDate}
                   onDateChange={setSelectedDate}
                 />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* List */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">List</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text isCaption>
+                Nestable Lists are found in Filters and Selectors
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <NestableList items={nestableListItems} />
               </Row>
             </Section.Content>
           </Section.Wrapper>
