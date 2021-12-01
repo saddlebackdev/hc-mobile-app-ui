@@ -23,6 +23,7 @@ export {default as Floater} from './modules/floater/floater';
 // Lists
 export {default as NestableList} from './modules/lists/nestable-list';
 export {default as SelectableList} from './modules/lists/selectable-list';
+export {default as CardList} from './modules/lists/card-list';
 
 // Select Picker
 export {default as SelectPicker} from './modules/select-picker/select-picker';
