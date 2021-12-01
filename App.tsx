@@ -14,6 +14,7 @@ import {
   Divider,
   NestableList,
   SelectableList,
+  HorizontalList,
   CardList,
   Text,
   Heading,
@@ -493,6 +494,30 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   selected={selectedListItem}
                   items={selectableListItems}
                 />
+              </Row>
+            </Section.Content>
+
+            <Section.Description>
+              <Text isCaption>Horizontal List</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <HorizontalList
+                  title="Categories"
+                  linkLabel="View All"
+                  onLinkPress={onPressMock}
+                  gutterSize={8}>
+                  <Chip label="One" onPress={onPressMock} />
+                  <Chip label="Two" onPress={onPressMock} />
+                  <Chip label="Three" onPress={onPressMock} />
+                  <Chip label="Four" onPress={onPressMock} />
+                  <Chip label="Five" onPress={onPressMock} />
+                  <Chip label="Six" onPress={onPressMock} />
+                  <Chip label="Seven" onPress={onPressMock} />
+                  <Chip label="Eight" onPress={onPressMock} />
+                  <Chip label="Nine" onPress={onPressMock} />
+                  <Chip label="Ten" onPress={onPressMock} />
+                </HorizontalList>
               </Row>
             </Section.Content>
 
