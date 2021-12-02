@@ -20,6 +20,9 @@ export {default as Divider} from './modules/divider/divider';
 // Floater
 export {default as Floater} from './modules/floater/floater';
 
+// Link
+export {default as Link} from './modules/link/link';
+
 // Lists
 export {default as NestableList} from './modules/lists/nestable-list';
 export {default as SelectableList} from './modules/lists/selectable-list';
