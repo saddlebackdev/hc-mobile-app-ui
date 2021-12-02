@@ -14,7 +14,9 @@ const StyledImage = Styled.Image<IStyledImage>`
 const IconFiles = {
   black: {
     chevronDown: require('../../images/chevron-down-black.png'),
+    chevronRight: require('../../images/chevron-right-black.png'),
     closeCircle: require('../../images/close-x-complex-black.png'),
+    close: require('../../images/close-light-black.png'),
     calendar: require('../../images/calendar-black.png'),
     date: require('../../images/calendar-black.png'),
     success: require('../../images/success-black.png'),
@@ -23,7 +25,9 @@ const IconFiles = {
   },
   muted: {
     chevronDown: require('../../images/chevron-down-muted.png'),
+    chevronRight: require('../../images/chevron-right-muted.png'),
     closeCircle: require('../../images/close-x-complex-muted.png'),
+    close: require('../../images/close-light-muted.png'),
     calendar: require('../../images/calendar-muted.png'),
     date: require('../../images/calendar-muted.png'),
     success: require('../../images/success-muted.png'),
@@ -32,7 +36,9 @@ const IconFiles = {
   },
   white: {
     chevronDown: require('../../images/chevron-down-white.png'),
+    chevronRight: require('../../images/chevron-right-white.png'),
     closeCircle: require('../../images/close-x-complex-white.png'),
+    close: require('../../images/close-light-white.png'),
     calendar: require('../../images/calendar-white.png'),
     date: require('../../images/calendar-white.png'),
     success: require('../../images/success-white.png'),

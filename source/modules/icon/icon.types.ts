@@ -15,10 +15,12 @@ export interface IProps {
   /** Name of the icon */
   type:
     | 'chevronDown'
+    | 'chevronRight'
     | 'calendar'
     | 'date'
     | 'success'
     | 'tick'
     | 'user'
+    | 'close'
     | 'closeCircle';
 }
