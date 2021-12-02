@@ -3,7 +3,12 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IStyledChild, IProps} from './nestable-list.types';
+import {
+  IStyledChild,
+  IParentItemProps,
+  IChildItemProps,
+  IProps,
+} from './nestable-list.types';
 
 // Shared
 import Text from '../text/text';
@@ -23,7 +28,7 @@ const StyledParent = Styled.TouchableOpacity`
   padding-bottom: ${minorScale(2.5)}px;
 `;
 const StyledParentLabel = Styled(Text)`
-  font-weight: bold;
+  font-weight: 500;
   font-size: ${({theme}) => theme.typography.sizes.small}px;
 `;
 const StyledChildContainer = Styled.View`
@@ -40,37 +45,61 @@ const StyledChildLabel = Styled(Text)`
   font-size: ${({theme}) => theme.typography.sizes.small}px;
 `;
 
+const touchableHitslop = {
+  top: 12,
+  right: 12,
+  bottom: 12,
+  left: 12,
+};
+
+// Component
+export const NestableListChildItem: React.FC<IChildItemProps> = ({
+  onPress,
+  isLastChild,
+  label,
+}): React.ReactElement => (
+  <StyledChild
+    onPress={onPress}
+    activeOpacity={0.75}
+    $isLastChild={isLastChild}
+    hitSlop={touchableHitslop}
+    testID="child">
+    <StyledChildLabel testID="child-label">{label}</StyledChildLabel>
+    <Icon type="close" size={8} />
+  </StyledChild>
+);
+
+// Component
+export const NestableListParentItem: React.FC<IParentItemProps> = ({
+  onPress,
+  label,
+}): React.ReactElement => (
+  <StyledParent
+    activeOpacity={0.75}
+    onPress={onPress}
+    hitSlop={touchableHitslop}
+    testID="parent">
+    <StyledParentLabel testID="parent-label">{label}</StyledParentLabel>
+    <Icon type="chevronRight" size={12} />
+  </StyledParent>
+);
+
 // Component
 export const NestableList: React.FC<IProps> = ({items}): React.ReactElement => {
-  const touchableHitslop = {
-    top: 12,
-    right: 12,
-    bottom: 12,
-    left: 12,
-  };
-
   return (
-    <StyledWrapper>
+    <StyledWrapper testID="list">
       {items.map((item, ndx) => {
         const isFirstChild: boolean = ndx === 0;
 
         return (
           <React.Fragment key={item.id}>
             {isFirstChild && <Divider />}
-            <StyledParent
-              onPress={item.onPress}
-              hitSlop={touchableHitslop}
-              testID="list-item-parent">
-              <StyledParentLabel testID="list-item-parent-label">
-                {item.label}
-              </StyledParentLabel>
-              <Icon type="chevronRight" size={12} />
-            </StyledParent>
+            <NestableListParentItem onPress={item.onPress} label={item.label} />
             <Divider />
 
             {item?.children && (
               <React.Fragment>
-                <StyledChildContainer>
+                <StyledChildContainer testID="children">
                   {item.children.map((child, index) => {
                     let isLastChild: boolean = false;
 
@@ -79,14 +108,12 @@ export const NestableList: React.FC<IProps> = ({items}): React.ReactElement => {
                     }
 
                     return (
-                      <StyledChild
+                      <NestableListChildItem
                         onPress={child.onPress}
-                        $isLastChild={isLastChild}
-                        hitSlop={touchableHitslop}
-                        key={child.id}>
-                        <StyledChildLabel>{child.label}</StyledChildLabel>
-                        <Icon type="close" size={8} />
-                      </StyledChild>
+                        isLastChild={isLastChild}
+                        label={child.label}
+                        key={child.id}
+                      />
                     );
                   })}
                 </StyledChildContainer>

@@ -3,7 +3,7 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IProps} from './card-list.types';
+import {ICardListItemProps, IProps} from './card-list.types';
 
 // Shared
 import Text from '../text/text';
@@ -48,6 +48,48 @@ const StyledTags = Styled(Text)`
 `;
 
 // Component
+export const CardListItem: React.FC<ICardListItemProps> = ({
+  photoUrl,
+  title,
+  subTitle,
+  description,
+  tags,
+  onPress,
+}): React.ReactElement => {
+  return (
+    <StyledCard activeOpacity={0.75} onPress={onPress} testID="list-item">
+      <StyledCardPhotoWrapper>
+        <StyledPhoto source={{uri: photoUrl}} testID="item-photo" />
+      </StyledCardPhotoWrapper>
+      <StyledCardDetailsWrapper>
+        <StyledCardDetailsRow>
+          <StyledTitle testID="item-title">{title}</StyledTitle>
+          <StyledSubTitle isCaption testID="item-subtitle">
+            {subTitle}
+          </StyledSubTitle>
+        </StyledCardDetailsRow>
+        <StyledCardDetailsRow>
+          <StyledDescription numberOfLines={2} testID="item-description">
+            {description}
+          </StyledDescription>
+        </StyledCardDetailsRow>
+        <StyledCardDetailsRow>
+          {tags && (
+            <StyledTags testID="item-tags">
+              {tags.map((tag, ndx) => {
+                const isLastChild = tags.length - 1 === ndx;
+
+                return isLastChild ? tag : `${tag} `;
+              })}
+            </StyledTags>
+          )}
+        </StyledCardDetailsRow>
+      </StyledCardDetailsWrapper>
+    </StyledCard>
+  );
+};
+
+// Component
 export const CardList: React.FC<IProps> = ({items}): React.ReactElement => {
   // Key Extractor
   const keyExtractor = (item): string => {
@@ -55,43 +97,16 @@ export const CardList: React.FC<IProps> = ({items}): React.ReactElement => {
   };
 
   // Render Item
-  const renderItem = ({item}): React.ReactElement => {
-    const hasTags = !!item?.tags;
-
-    return (
-      <StyledCard activeOpacity={0.75} onPress={item.onPress}>
-        <StyledCardPhotoWrapper>
-          <StyledPhoto source={{uri: item.photoUrl}} />
-        </StyledCardPhotoWrapper>
-        <StyledCardDetailsWrapper>
-          <StyledCardDetailsRow>
-            <StyledTitle>{item.title}</StyledTitle>
-            <StyledSubTitle isCaption>{item.subTitle}</StyledSubTitle>
-          </StyledCardDetailsRow>
-          <StyledCardDetailsRow>
-            <StyledDescription numberOfLines={2}>
-              {item.description}
-            </StyledDescription>
-          </StyledCardDetailsRow>
-          <StyledCardDetailsRow>
-            {hasTags && (
-              <StyledTags>
-                {item.tags.map((tag, ndx) => {
-                  const isLastChild = item.tags.length - 1 === ndx;
-
-                  if (isLastChild) {
-                    return tag;
-                  }
-
-                  return `${tag}, `;
-                })}
-              </StyledTags>
-            )}
-          </StyledCardDetailsRow>
-        </StyledCardDetailsWrapper>
-      </StyledCard>
-    );
-  };
+  const renderItem = ({item}): React.ReactElement => (
+    <CardListItem
+      photoUrl={item.photoUrl}
+      title={item.title}
+      subTitle={item.subTitle}
+      description={item.description}
+      tags={item.tags}
+      onPress={item.onPress}
+    />
+  );
 
   return (
     <StyledFlatList
@@ -99,6 +114,7 @@ export const CardList: React.FC<IProps> = ({items}): React.ReactElement => {
       keyExtractor={keyExtractor}
       ItemSeparatorComponent={Divider}
       renderItem={renderItem}
+      testID="list"
     />
   );
 };

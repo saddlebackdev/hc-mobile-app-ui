@@ -1,0 +1,786 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList Rendering renders itself correctly 1`] = `
+<RCTScrollView
+  ItemSeparatorComponent={[Function]}
+  data={
+    Array [
+      Object {
+        "description": "A Description",
+        "id": "card-list-item-1",
+        "onPress": [MockFunction],
+        "photoUrl": "https://images.com/abc.png",
+        "subTitle": "A Subtitle",
+        "tags": Array [
+          "Tag One",
+          "Tag Two",
+        ],
+        "title": "A Title",
+      },
+      Object {
+        "description": "A Description",
+        "id": "card-list-item-2",
+        "onPress": [MockFunction],
+        "photoUrl": "https://images.com/abc.png",
+        "subTitle": "A Subtitle",
+        "tags": null,
+        "title": "A Title",
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Array [
+      Object {},
+    ]
+  }
+  testID="list"
+  viewabilityConfigCallbackPairs={Array []}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingVertical": 22,
+          }
+        }
+        testID="list-item"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "width": "35%",
+              },
+            ]
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images.com/abc.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "borderRadius": 8,
+                  "height": 96,
+                  "width": 96,
+                },
+              ]
+            }
+            testID="item-photo"
+          />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "justifyContent": "space-between",
+                "width": "65%",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {},
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#1C2530",
+                    "fontSize": 14,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+              testID="item-title"
+            >
+              A Title
+            </Text>
+            <Text
+              isCaption={true}
+              style={
+                Array [
+                  Object {
+                    "color": "#97A4AB",
+                    "fontSize": 12,
+                    "marginTop": 4,
+                    "textAlign": "left",
+                  },
+                ]
+              }
+              testID="item-subtitle"
+            >
+              A Subtitle
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {},
+              ]
+            }
+          >
+            <Text
+              numberOfLines={2}
+              style={
+                Array [
+                  Object {
+                    "color": "#1C2530",
+                    "fontSize": 14,
+                    "textAlign": "left",
+                  },
+                ]
+              }
+              testID="item-description"
+            >
+              A Description
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {},
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#97A4AB",
+                    "fontSize": 12,
+                    "fontStyle": "italic",
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+              testID="item-tags"
+            >
+              Tag One 
+              Tag Two
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#DBE0E3",
+              "height": 1,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="divider"
+      />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "opacity": 1,
+            "paddingVertical": 22,
+          }
+        }
+        testID="list-item"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "width": "35%",
+              },
+            ]
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images.com/abc.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "borderRadius": 8,
+                  "height": 96,
+                  "width": 96,
+                },
+              ]
+            }
+            testID="item-photo"
+          />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "justifyContent": "space-between",
+                "width": "65%",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {},
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#1C2530",
+                    "fontSize": 14,
+                    "fontWeight": "bold",
+                    "textAlign": "left",
+                  },
+                ]
+              }
+              testID="item-title"
+            >
+              A Title
+            </Text>
+            <Text
+              isCaption={true}
+              style={
+                Array [
+                  Object {
+                    "color": "#97A4AB",
+                    "fontSize": 12,
+                    "marginTop": 4,
+                    "textAlign": "left",
+                  },
+                ]
+              }
+              testID="item-subtitle"
+            >
+              A Subtitle
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {},
+              ]
+            }
+          >
+            <Text
+              numberOfLines={2}
+              style={
+                Array [
+                  Object {
+                    "color": "#1C2530",
+                    "fontSize": 14,
+                    "textAlign": "left",
+                  },
+                ]
+              }
+              testID="item-description"
+            >
+              A Description
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`CardListItem Interactions should call onPress method when pressed 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingVertical": 22,
+    }
+  }
+  testID="list-item"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "35%",
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://images.com/abc.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "height": 96,
+            "width": 96,
+          },
+        ]
+      }
+      testID="item-photo"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "justifyContent": "space-between",
+          "width": "65%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontSize": 14,
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-title"
+      >
+        A Title
+      </Text>
+      <Text
+        isCaption={true}
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontSize": 12,
+              "marginTop": 4,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-subtitle"
+      >
+        A Subtitle
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        numberOfLines={2}
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontSize": 14,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-description"
+      >
+        A Description
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontSize": 12,
+              "fontStyle": "italic",
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-tags"
+      >
+        Tag One 
+        Tag Two
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CardListItem Rendering hides tags when it is null 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingVertical": 22,
+    }
+  }
+  testID="list-item"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "35%",
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://images.com/abc.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "height": 96,
+            "width": 96,
+          },
+        ]
+      }
+      testID="item-photo"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "justifyContent": "space-between",
+          "width": "65%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontSize": 14,
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-title"
+      >
+        A Title
+      </Text>
+      <Text
+        isCaption={true}
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontSize": 12,
+              "marginTop": 4,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-subtitle"
+      >
+        A Subtitle
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        numberOfLines={2}
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontSize": 14,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-description"
+      >
+        A Description
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`CardListItem Rendering renders itself correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "opacity": 1,
+      "paddingVertical": 22,
+    }
+  }
+  testID="list-item"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "35%",
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://images.com/abc.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "height": 96,
+            "width": 96,
+          },
+        ]
+      }
+      testID="item-photo"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "justifyContent": "space-between",
+          "width": "65%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontSize": 14,
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-title"
+      >
+        A Title
+      </Text>
+      <Text
+        isCaption={true}
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontSize": 12,
+              "marginTop": 4,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-subtitle"
+      >
+        A Subtitle
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        numberOfLines={2}
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontSize": 14,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-description"
+      >
+        A Description
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontSize": 12,
+              "fontStyle": "italic",
+              "fontWeight": "bold",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-tags"
+      >
+        Tag One 
+        Tag Two
+      </Text>
+    </View>
+  </View>
+</View>
+`;

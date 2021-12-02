@@ -44,8 +44,11 @@ export const HorizontalList: React.FC<IProps> = ({
   const listItems = React.Children.map(children, child => child);
 
   // Key Extractor
-  const keyExtractor = (item): string => {
-    return item.id;
+  const keyExtractor = (): string => {
+    const random = Math.random();
+    const timestamp = new Date().getUTCMilliseconds();
+
+    return `horizontal-list-item-${random}-${timestamp}`;
   };
 
   // Render Item

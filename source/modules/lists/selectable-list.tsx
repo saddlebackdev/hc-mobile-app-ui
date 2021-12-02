@@ -3,7 +3,7 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IStyledItem, IProps} from './selectable-list.types';
+import {IStyledItem, IListItemProps, IProps} from './selectable-list.types';
 
 // Shared
 import Text from '../text/text';
@@ -23,16 +23,34 @@ const StyledItem = Styled.TouchableOpacity<IStyledItem>`
   align-items: center;
 
   padding-top: ${minorScale(2.75)}px;
-  padding-horizontal: ${majorScale(2)}px;
+  padding-horizontal: ${majorScale(1)}px;
   padding-bottom: ${minorScale(2.5)}px;
 `;
 const StyledItemLabel = Styled(Text)`
-  font-weight: bold;
+  font-weight: 500;
   font-size: ${({theme}) => theme.typography.sizes.small}px;
 `;
 
 // Component
-export const NestableList: React.FC<IProps> = ({
+export const SelectableListItem: React.FC<IListItemProps> = ({
+  onPress,
+  label,
+  isSelected,
+}): React.ReactElement => (
+  <StyledItem
+    testID="item"
+    activeOpacity={0.75}
+    $isSelected={isSelected}
+    onPress={onPress}>
+    <StyledItemLabel testID="item-label" inversed={isSelected}>
+      {label}
+    </StyledItemLabel>
+    {isSelected && <Icon size={12} color="white" type="tick" />}
+  </StyledItem>
+);
+
+// Component
+export const SelectableList: React.FC<IProps> = ({
   items,
   selected,
 }): React.ReactElement => {
@@ -46,18 +64,11 @@ export const NestableList: React.FC<IProps> = ({
     const isSelected = item.id === selected;
 
     return (
-      <StyledItem
-        activeOpacity={0.75}
-        $isSelected={isSelected}
-        testID="selectable-list-item"
-        onPress={item.onPress}>
-        <StyledItemLabel
-          testID="selectable-list-item-label"
-          inversed={isSelected}>
-          {item.label}
-        </StyledItemLabel>
-        {isSelected && <Icon size={12} color="white" type="tick" />}
-      </StyledItem>
+      <SelectableListItem
+        label={item.label}
+        isSelected={isSelected}
+        onPress={item.onPress}
+      />
     );
   };
 
@@ -66,10 +77,10 @@ export const NestableList: React.FC<IProps> = ({
       <Divider />
       <StyledFlatList
         data={items}
-        testID="selectable-list"
         keyExtractor={keyExtractor}
         ItemSeparatorComponent={Divider}
         renderItem={renderItem}
+        testID="list"
       />
       <Divider />
     </React.Fragment>
@@ -77,4 +88,4 @@ export const NestableList: React.FC<IProps> = ({
 };
 
 // Exports
-export default NestableList;
+export default SelectableList;

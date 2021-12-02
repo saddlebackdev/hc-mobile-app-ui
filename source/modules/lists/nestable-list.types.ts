@@ -3,6 +3,19 @@ export interface IStyledChild {
   $isLastChild?: boolean;
 }
 
+// Parent Item Props
+export interface IParentItemProps {
+  onPress: any;
+  label: string;
+}
+
+// Child Item Props
+export interface IChildItemProps {
+  onPress: any;
+  isLastChild?: boolean;
+  label: string;
+}
+
 // Item Child
 export interface IItemChild {
   id: string | number;
