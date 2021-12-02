@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link Rendering renders itself correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID="link"
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#00AEFF",
+          "fontSize": 16,
+          "fontWeight": "500",
+          "textAlign": "left",
+        },
+      ]
+    }
+    testID="link-label"
+  >
+    Go To Link
+  </Text>
+</View>
+`;
+
+exports[`Link Rendering renders the child instead of label correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID="link"
+>
+  <Text
+    testID="link-children"
+  >
+    Custom Label
+  </Text>
+</View>
+`;

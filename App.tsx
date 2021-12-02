@@ -12,6 +12,7 @@ import {
   SelectPicker,
   Checkbox,
   Divider,
+  Link,
   NestableList,
   SelectableList,
   HorizontalList,
@@ -469,6 +470,25 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
               <Row>
                 <Chip label="Class 401" onPress={() => undefined} />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Link */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Link</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text isCaption>
+                Chips (aka Tags) are compact elements that represent an input,
+                attribute, or action.
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Link to="home" label="View All" />
               </Row>
             </Section.Content>
           </Section.Wrapper>
