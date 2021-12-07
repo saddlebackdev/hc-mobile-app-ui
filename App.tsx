@@ -7,6 +7,7 @@ import {
   Avatar,
   Button,
   ButtonGroup,
+  BottomSheet,
   Chip,
   DatePicker,
   SelectPicker,
@@ -60,6 +61,8 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const [pickerValue, setPickerValue] = React.useState<number>(1);
   const [selectedListItem, setSelectedListItem] =
     React.useState<string>('app-list-item-1');
+  const [isBottomSheetOpen, setIsBottomSheetOpen] =
+    React.useState<boolean>(false);
 
   const pickerOptions = [
     {label: 'Option 1', value: 1},
@@ -161,6 +164,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const cardListItems = [
     {
       id: 'card-list-item-1',
+      onPress: onPressMock,
       title: 'Title One',
       subTitle: 'Anahiem',
       photoUrl:
@@ -171,6 +175,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     },
     {
       id: 'card-list-item-2',
+      onPress: onPressMock,
       title: 'Title Two',
       subTitle: 'Lake Forest',
       photoUrl:
@@ -384,6 +389,34 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   </Button>
                 </ButtonGroup>
               </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Avatar */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Bottom Sheet</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text isCaption>Bottom Sheet component</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Button onPress={() => setIsBottomSheetOpen(true)}>
+                  Open Bottom Sheet
+                </Button>
+              </Row>
+
+              <BottomSheet
+                header={{title: 'Select Campus'}}
+                onDismiss={() => setIsBottomSheetOpen(false)}
+                isOpen={isBottomSheetOpen}>
+                <SelectableList
+                  selected={selectedListItem}
+                  items={selectableListItems}
+                />
+              </BottomSheet>
             </Section.Content>
           </Section.Wrapper>
           <Divider />

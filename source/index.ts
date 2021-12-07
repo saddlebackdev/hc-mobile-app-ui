@@ -5,6 +5,9 @@ export {default as Avatar} from './modules/avatar/avatar';
 export {default as Button} from './modules/button/button';
 export {default as ButtonGroup} from './modules/button/button-group';
 
+// Bottom Sheet
+export {default as BottomSheet} from './modules/bottom-sheet/bottom-sheet';
+
 // Checkbox
 export {default as Checkbox} from './modules/checkbox/checkbox';
 

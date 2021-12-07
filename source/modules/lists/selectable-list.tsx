@@ -23,7 +23,7 @@ const StyledItem = Styled.TouchableOpacity<IStyledItem>`
   align-items: center;
 
   padding-top: ${minorScale(2.75)}px;
-  padding-horizontal: ${majorScale(1)}px;
+  padding-horizontal: ${majorScale(2)}px;
   padding-bottom: ${minorScale(2.5)}px;
 `;
 const StyledItemLabel = Styled(Text)`
