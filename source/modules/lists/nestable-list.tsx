@@ -47,7 +47,7 @@ const StyledChildLabel = Styled(Text)`
 `;
 
 // Component
-const NestableListChildItem: React.FC<IChildItemProps> = ({
+export const NestableListChildItem: React.FC<IChildItemProps> = ({
   onPress,
   isLastChild,
   label,
@@ -64,7 +64,7 @@ const NestableListChildItem: React.FC<IChildItemProps> = ({
 );
 
 // Component
-const NestableListParentItem: React.FC<IParentItemProps> = ({
+export const NestableListParentItem: React.FC<IParentItemProps> = ({
   onPress,
   label,
 }): React.ReactElement => (

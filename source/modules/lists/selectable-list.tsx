@@ -32,7 +32,7 @@ const StyledItemLabel = Styled(Text)`
 `;
 
 // Component
-const SelectableListItem: React.FC<IListItemProps> = ({
+export const SelectableListItem: React.FC<IListItemProps> = ({
   onPress,
   label,
   isSelected,
