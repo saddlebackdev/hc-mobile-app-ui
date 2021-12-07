@@ -94,8 +94,8 @@
         // Stylistic
         "camelcase": ["error", {"properties": "always"}],
         "linebreak-style": ["error", "unix"],
-        "max-depth": ["error", 3],
-        "max-params": ["error", 3],
+        "max-depth": ["error", 4],
+        "max-params": ["error", 4],
         "no-inline-comments": "error",
         "no-lonely-if": "error",
         "no-mixed-spaces-and-tabs": "error",

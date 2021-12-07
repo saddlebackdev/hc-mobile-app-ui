@@ -10,9 +10,9 @@ import {IProps} from './bottom-sheet.types';
 // Shared
 import Icon from '../icon/icon';
 import Text from '../text/text';
-import {minorScale, majorScale} from '../scales';
-import {addHitSlop} from '../utilities/add-hitslop.util';
 import Heading from '../heading/heading';
+import {minorScale, majorScale} from '../scales';
+import {LayoutUtils} from '../utilities';
 
 // Constants
 const {height: SCREEN_HEIGHT} = Dimensions.get('screen');
@@ -138,7 +138,7 @@ export const BottomSheet: React.FC<IProps> = ({
             {/* Close Button */}
             <StyledCloseWrapper
               activeOpacity={0.75}
-              hitSlop={addHitSlop(12)}
+              hitSlop={LayoutUtils.addHitSlop(12)}
               onPress={_onDismiss}>
               <Icon type="closeCircle" color="muted" />
             </StyledCloseWrapper>
