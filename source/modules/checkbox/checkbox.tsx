@@ -13,6 +13,7 @@ import {
 // Shared
 import Icon from '../icon/icon';
 import Text from '../text/text';
+import {LayoutUtils} from '../utilities';
 import {majorScale} from '../scales';
 
 // Styles
@@ -58,44 +59,31 @@ const StyledCheckboxHint = Styled(Text)``;
 
 // Component
 export const Checkbox: React.FC<IProps> = React.memo(
-  ({hint, label, isChecked = false, disabled, onPress}): React.ReactElement => {
-    const touchableHitslop = {
-      top: 12,
-      right: 12,
-      bottom: 12,
-      left: 12,
-    };
+  ({hint, label, isChecked = false, disabled, onPress}): React.ReactElement => (
+    <StyledWrapper
+      testID="checkbox"
+      disabled={disabled}
+      activeOpacity={0.75}
+      onPress={onPress}
+      hitSlop={LayoutUtils.addHitSlop(12)}>
+      <StyledCheckboxOuter $isChecked={isChecked} $isDisabled={disabled}>
+        {isChecked && (
+          <StyledCheckboxInner $isDisabled={disabled}>
+            <Icon type="tick" color={disabled ? 'muted' : 'white'} size={12} />
+          </StyledCheckboxInner>
+        )}
+      </StyledCheckboxOuter>
 
-    return (
-      <StyledWrapper
-        testID="checkbox"
-        disabled={disabled}
-        activeOpacity={0.75}
-        onPress={onPress}
-        hitSlop={touchableHitslop}>
-        <StyledCheckboxOuter $isChecked={isChecked} $isDisabled={disabled}>
-          {isChecked && (
-            <StyledCheckboxInner $isDisabled={disabled}>
-              <Icon
-                type="tick"
-                color={disabled ? 'muted' : 'white'}
-                size={12}
-              />
-            </StyledCheckboxInner>
-          )}
-        </StyledCheckboxOuter>
-
-        <StyledDetailsWrapper>
-          <StyledCheckboxLabel testID="checkbox-label">
-            {label}
-          </StyledCheckboxLabel>
-          <StyledCheckboxHint testID="checkbox-hint" isCaption>
-            {hint}
-          </StyledCheckboxHint>
-        </StyledDetailsWrapper>
-      </StyledWrapper>
-    );
-  },
+      <StyledDetailsWrapper>
+        <StyledCheckboxLabel testID="checkbox-label">
+          {label}
+        </StyledCheckboxLabel>
+        <StyledCheckboxHint testID="checkbox-hint" isCaption>
+          {hint}
+        </StyledCheckboxHint>
+      </StyledDetailsWrapper>
+    </StyledWrapper>
+  ),
 );
 
 // Properties

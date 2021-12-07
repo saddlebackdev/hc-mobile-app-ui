@@ -74,10 +74,6 @@ const StyledFooterWrapper = Styled.View``;
 export const BottomSheet: React.FC<IProps> = ({
   isOpen,
   onDismiss,
-  onModalHide,
-  onModalShow,
-  onModalWillHide,
-  onModalWillShow,
   children,
   header,
   footer,
@@ -126,10 +122,6 @@ export const BottomSheet: React.FC<IProps> = ({
       animationOut="slideOutDown"
       onDismiss={_onDismiss}
       onBackButtonPress={_onDismiss}
-      onModalHide={onModalHide}
-      onModalShow={onModalShow}
-      onModalWillHide={onModalWillHide}
-      onModalWillShow={onModalWillShow}
       isVisible={isOpen}
       style={modalStyle}>
       <StyledWrapper>

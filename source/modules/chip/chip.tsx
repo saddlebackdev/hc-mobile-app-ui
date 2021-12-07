@@ -8,6 +8,7 @@ import {IProps} from './chip.types';
 // Shared
 import Text from '../text/text';
 import Icon from '../icon/icon';
+import {LayoutUtils} from '../utilities';
 
 // Styles
 const StyledWrapper = Styled.View`
@@ -34,26 +35,17 @@ const StyledCloseButton = Styled.TouchableOpacity`
 
 // Component
 export const Chip: React.FC<IProps> = React.memo(
-  ({label, onPress}): React.ReactElement => {
-    const touchableHitslop = {
-      top: 6,
-      right: 6,
-      bottom: 6,
-      left: 6,
-    };
-
-    return (
-      <StyledWrapper testID="chip">
-        <StyledLabel testID="chip-label">{label}</StyledLabel>
-        <StyledCloseButton
-          onPress={onPress}
-          testID="chip-close-button"
-          hitSlop={touchableHitslop}>
-          <Icon type="closeCircle" size={16} color="white" />
-        </StyledCloseButton>
-      </StyledWrapper>
-    );
-  },
+  ({label, onPress}): React.ReactElement => (
+    <StyledWrapper testID="chip">
+      <StyledLabel testID="chip-label">{label}</StyledLabel>
+      <StyledCloseButton
+        onPress={onPress}
+        testID="chip-close-button"
+        hitSlop={LayoutUtils.addHitSlop(6)}>
+        <Icon type="closeCircle" size={16} color="white" />
+      </StyledCloseButton>
+    </StyledWrapper>
+  ),
 );
 
 // Properties

@@ -13,6 +13,7 @@ import {
 // Shared
 import Text from '../text/text';
 import Divider from '../divider/divider';
+import {LayoutUtils} from '../utilities';
 import {majorScale, minorScale} from '../scales';
 import Icon from '../icon/icon';
 
@@ -45,15 +46,8 @@ const StyledChildLabel = Styled(Text)`
   font-size: ${({theme}) => theme.typography.sizes.small}px;
 `;
 
-const touchableHitslop = {
-  top: 12,
-  right: 12,
-  bottom: 12,
-  left: 12,
-};
-
 // Component
-export const NestableListChildItem: React.FC<IChildItemProps> = ({
+const NestableListChildItem: React.FC<IChildItemProps> = ({
   onPress,
   isLastChild,
   label,
@@ -62,7 +56,7 @@ export const NestableListChildItem: React.FC<IChildItemProps> = ({
     onPress={onPress}
     activeOpacity={0.75}
     $isLastChild={isLastChild}
-    hitSlop={touchableHitslop}
+    hitSlop={LayoutUtils.addHitSlop(12)}
     testID="child">
     <StyledChildLabel testID="child-label">{label}</StyledChildLabel>
     <Icon type="close" size={8} />
@@ -70,14 +64,14 @@ export const NestableListChildItem: React.FC<IChildItemProps> = ({
 );
 
 // Component
-export const NestableListParentItem: React.FC<IParentItemProps> = ({
+const NestableListParentItem: React.FC<IParentItemProps> = ({
   onPress,
   label,
 }): React.ReactElement => (
   <StyledParent
     activeOpacity={0.75}
     onPress={onPress}
-    hitSlop={touchableHitslop}
+    hitSlop={LayoutUtils.addHitSlop(12)}
     testID="parent">
     <StyledParentLabel testID="parent-label">{label}</StyledParentLabel>
     <Icon type="chevronRight" size={12} />
