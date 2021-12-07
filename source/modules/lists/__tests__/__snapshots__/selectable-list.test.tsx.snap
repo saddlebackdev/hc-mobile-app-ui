@@ -82,7 +82,7 @@ Array [
               "justifyContent": "space-between",
               "opacity": 1,
               "paddingBottom": 12.5,
-              "paddingHorizontal": 11,
+              "paddingHorizontal": 22,
               "paddingTop": 13.75,
             }
           }
@@ -157,7 +157,7 @@ Array [
               "justifyContent": "space-between",
               "opacity": 1,
               "paddingBottom": 12.5,
-              "paddingHorizontal": 11,
+              "paddingHorizontal": 22,
               "paddingTop": 13.75,
             }
           }
@@ -217,7 +217,7 @@ Array [
               "justifyContent": "space-between",
               "opacity": 1,
               "paddingBottom": 12.5,
-              "paddingHorizontal": 11,
+              "paddingHorizontal": 22,
               "paddingTop": 13.75,
             }
           }
@@ -279,7 +279,7 @@ exports[`SelectableListItem Rendering renders itself correctly 1`] = `
       "justifyContent": "space-between",
       "opacity": 1,
       "paddingBottom": 12.5,
-      "paddingHorizontal": 11,
+      "paddingHorizontal": 22,
       "paddingTop": 13.75,
     }
   }
@@ -325,7 +325,7 @@ exports[`SelectableListItem Rendering renders tick icon when selected 1`] = `
       "justifyContent": "space-between",
       "opacity": 1,
       "paddingBottom": 12.5,
-      "paddingHorizontal": 11,
+      "paddingHorizontal": 22,
       "paddingTop": 13.75,
     }
   }
