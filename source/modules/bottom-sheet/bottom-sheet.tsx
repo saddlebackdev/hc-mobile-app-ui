@@ -10,9 +10,9 @@ import {IProps} from './bottom-sheet.types';
 // Shared
 import Icon from '../icon/icon';
 import Text from '../text/text';
-import {minorScale, majorScale} from '../scales';
-import {addHitSlop} from '../utilities/add-hitslop.util';
 import Heading from '../heading/heading';
+import {minorScale, majorScale} from '../scales';
+import {LayoutUtils} from '../utilities';
 
 // Constants
 const {height: SCREEN_HEIGHT} = Dimensions.get('screen');
@@ -74,10 +74,6 @@ const StyledFooterWrapper = Styled.View``;
 export const BottomSheet: React.FC<IProps> = ({
   isOpen,
   onDismiss,
-  onModalHide,
-  onModalShow,
-  onModalWillHide,
-  onModalWillShow,
   children,
   header,
   footer,
@@ -126,10 +122,6 @@ export const BottomSheet: React.FC<IProps> = ({
       animationOut="slideOutDown"
       onDismiss={_onDismiss}
       onBackButtonPress={_onDismiss}
-      onModalHide={onModalHide}
-      onModalShow={onModalShow}
-      onModalWillHide={onModalWillHide}
-      onModalWillShow={onModalWillShow}
       isVisible={isOpen}
       style={modalStyle}>
       <StyledWrapper>
@@ -138,7 +130,7 @@ export const BottomSheet: React.FC<IProps> = ({
             {/* Close Button */}
             <StyledCloseWrapper
               activeOpacity={0.75}
-              hitSlop={addHitSlop(12)}
+              hitSlop={LayoutUtils.addHitSlop(12)}
               onPress={_onDismiss}>
               <Icon type="closeCircle" color="muted" />
             </StyledCloseWrapper>

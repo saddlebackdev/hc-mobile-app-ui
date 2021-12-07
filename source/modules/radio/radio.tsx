@@ -12,6 +12,7 @@ import {
 
 // Shared
 import Text from '../text/text';
+import {LayoutUtils} from '../utilities';
 import {majorScale} from '../scales';
 
 // Styles
@@ -82,59 +83,50 @@ export const Radio: React.FC<IProps> = React.memo(
     disabled: isRadioDisabled,
     direction,
     options,
-  }): React.ReactElement => {
-    const touchableHitslop = {
-      top: 12,
-      right: 12,
-      bottom: 12,
-      left: 12,
-    };
+  }): React.ReactElement => (
+    <StyledWrapper $direction={direction} testID="radio">
+      {options.map((option, ndx) => {
+        const _onPressOption = () => {
+          if (isRadioDisabled || option.disabled) {
+            return;
+          }
 
-    return (
-      <StyledWrapper $direction={direction} testID="radio">
-        {options.map((option, ndx) => {
-          const _onPressOption = () => {
-            if (isRadioDisabled || option.disabled) {
-              return;
-            }
+          onChange(option.value);
+        };
 
-            onChange(option.value);
-          };
+        const isSelected = option.value === selected;
 
-          const isSelected = option.value === selected;
+        const isFirstElement = ndx === 0;
+        const isLastElement = options.length - 1 === ndx;
 
-          const isFirstElement = ndx === 0;
-          const isLastElement = options.length - 1 === ndx;
-
-          return (
-            <StyledGroup
-              key={option.label}
-              testID="radio-button"
-              hitSlop={touchableHitslop}
-              onPress={_onPressOption}
-              activeOpacity={option.disabled ? 1 : 0.75}
-              $direction={direction}
-              $isFirstChild={isFirstElement}
-              $isLastChild={isLastElement}
-              disabled={isRadioDisabled || option.disabled}>
-              <StyledRadioOuter>
-                {isSelected && (
-                  <StyledRadioInner
-                    $isDisabled={isRadioDisabled || option.disabled}
-                  />
-                )}
-              </StyledRadioOuter>
-              <StyledRadioLabelWrapper
-                testID="radio-label"
-                isMuted={isRadioDisabled || option.disabled}>
-                {option.label}
-              </StyledRadioLabelWrapper>
-            </StyledGroup>
-          );
-        })}
-      </StyledWrapper>
-    );
-  },
+        return (
+          <StyledGroup
+            key={option.label}
+            testID="radio-button"
+            hitSlop={LayoutUtils.addHitSlop(12)}
+            onPress={_onPressOption}
+            activeOpacity={option.disabled ? 1 : 0.75}
+            $direction={direction}
+            $isFirstChild={isFirstElement}
+            $isLastChild={isLastElement}
+            disabled={isRadioDisabled || option.disabled}>
+            <StyledRadioOuter>
+              {isSelected && (
+                <StyledRadioInner
+                  $isDisabled={isRadioDisabled || option.disabled}
+                />
+              )}
+            </StyledRadioOuter>
+            <StyledRadioLabelWrapper
+              testID="radio-label"
+              isMuted={isRadioDisabled || option.disabled}>
+              {option.label}
+            </StyledRadioLabelWrapper>
+          </StyledGroup>
+        );
+      })}
+    </StyledWrapper>
+  ),
 );
 
 // Properties
