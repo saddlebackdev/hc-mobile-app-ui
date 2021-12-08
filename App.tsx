@@ -13,6 +13,7 @@ import {
   SelectPicker,
   Checkbox,
   Divider,
+  ExpandableCard,
   Link,
   NestableList,
   SelectableList,
@@ -46,6 +47,7 @@ const Section = {
 const Row = Styled.View`
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 4px;
 `;
 
 const onPressMock = () => false;
@@ -59,6 +61,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const [selectedDate, setSelectedDate] = React.useState<any>(new Date());
   const [activePill, setActivePill] = React.useState<number>(2);
   const [pickerValue, setPickerValue] = React.useState<number>(1);
+  const [isCardExpanded, setIsCardExpanded] = React.useState<boolean>(false);
   const [selectedListItem, setSelectedListItem] =
     React.useState<string>('app-list-item-1');
   const [isBottomSheetOpen, setIsBottomSheetOpen] =
@@ -193,7 +196,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     <ThemeProvider>
       <SafeAreaView>
         <Wrapper>
-          {/* Avatar */}
+          {/* Intro */}
           <Section.Wrapper>
             <Section.Title>
               <Heading variant="h6">Healthy Church</Heading>
@@ -393,7 +396,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
           </Section.Wrapper>
           <Divider />
 
-          {/* Avatar */}
+          {/* Bottom Sheet */}
           <Section.Wrapper>
             <Section.Title>
               <Heading variant="h2">Bottom Sheet</Heading>
@@ -546,67 +549,33 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
           </Section.Wrapper>
           <Divider />
 
-          {/* List */}
+          {/* Expandable Card */}
           <Section.Wrapper>
             <Section.Title>
-              <Heading variant="h2">List</Heading>
+              <Heading variant="h2">Expandable Card</Heading>
             </Section.Title>
-
-            {/* Nestable List */}
             <Section.Description>
-              <Text isCaption>Nestable List</Text>
+              <Text isCaption>
+                When interacted with, the card expands and collapses
+              </Text>
             </Section.Description>
             <Section.Content>
               <Row>
-                <NestableList items={nestableListItems} />
-              </Row>
-            </Section.Content>
-
-            {/* Selectable List */}
-            <Section.Description>
-              <Text isCaption>Selectable List</Text>
-            </Section.Description>
-            <Section.Content>
-              <Row>
-                <SelectableList
-                  selected={selectedListItem}
-                  items={selectableListItems}
-                />
-              </Row>
-            </Section.Content>
-
-            {/* Horizontal List */}
-            <Section.Description>
-              <Text isCaption>Horizontal List</Text>
-            </Section.Description>
-            <Section.Content>
-              <Row>
-                <HorizontalList
-                  title="Categories"
-                  linkLabel="View All"
-                  onLinkPress={onPressMock}
-                  gutterSize={8}>
-                  <Chip label="One" onPress={onPressMock} />
-                  <Chip label="Two" onPress={onPressMock} />
-                  <Chip label="Three" onPress={onPressMock} />
-                  <Chip label="Four" onPress={onPressMock} />
-                  <Chip label="Five" onPress={onPressMock} />
-                  <Chip label="Six" onPress={onPressMock} />
-                  <Chip label="Seven" onPress={onPressMock} />
-                  <Chip label="Eight" onPress={onPressMock} />
-                  <Chip label="Nine" onPress={onPressMock} />
-                  <Chip label="Ten" onPress={onPressMock} />
-                </HorizontalList>
-              </Row>
-            </Section.Content>
-
-            {/* Card List */}
-            <Section.Description>
-              <Text isCaption>Card List</Text>
-            </Section.Description>
-            <Section.Content>
-              <Row>
-                <CardList items={cardListItems} />
+                <ExpandableCard
+                  isOpen={isCardExpanded}
+                  tileColor="infoLight"
+                  tileContent={<Text>A</Text>}
+                  onPress={() => setIsCardExpanded(!isCardExpanded)}
+                  subTitle="Today's message from god"
+                  title="Daily Verse">
+                  <Text isSubtitle>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores velit exercitationem vitae quam! Voluptatem
+                    perspiciatis cumque dolorem, dolores, omnis dolor delectus
+                    iusto quasi sit voluptatum totam mollitia error, fugit
+                    aspernatur.
+                  </Text>
+                </ExpandableCard>
               </Row>
             </Section.Content>
           </Section.Wrapper>
@@ -851,6 +820,72 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             </Section.Content>
           </Section.Wrapper>
         </Wrapper>
+
+        {/* List */}
+        <Section.Wrapper>
+          <Section.Title>
+            <Heading variant="h2">List</Heading>
+          </Section.Title>
+
+          {/* Nestable List */}
+          <Section.Description>
+            <Text isCaption>Nestable List</Text>
+          </Section.Description>
+          <Section.Content>
+            <Row>
+              <NestableList items={nestableListItems} />
+            </Row>
+          </Section.Content>
+
+          {/* Selectable List */}
+          <Section.Description>
+            <Text isCaption>Selectable List</Text>
+          </Section.Description>
+          <Section.Content>
+            <Row>
+              <SelectableList
+                selected={selectedListItem}
+                items={selectableListItems}
+              />
+            </Row>
+          </Section.Content>
+
+          {/* Horizontal List */}
+          <Section.Description>
+            <Text isCaption>Horizontal List</Text>
+          </Section.Description>
+          <Section.Content>
+            <Row>
+              <HorizontalList
+                title="Categories"
+                linkLabel="View All"
+                onLinkPress={onPressMock}
+                gutterSize={8}>
+                <Chip label="One" onPress={onPressMock} />
+                <Chip label="Two" onPress={onPressMock} />
+                <Chip label="Three" onPress={onPressMock} />
+                <Chip label="Four" onPress={onPressMock} />
+                <Chip label="Five" onPress={onPressMock} />
+                <Chip label="Six" onPress={onPressMock} />
+                <Chip label="Seven" onPress={onPressMock} />
+                <Chip label="Eight" onPress={onPressMock} />
+                <Chip label="Nine" onPress={onPressMock} />
+                <Chip label="Ten" onPress={onPressMock} />
+              </HorizontalList>
+            </Row>
+          </Section.Content>
+
+          {/* Card List */}
+          <Section.Description>
+            <Text isCaption>Card List</Text>
+          </Section.Description>
+          <Section.Content>
+            <Row>
+              <CardList items={cardListItems} />
+            </Row>
+          </Section.Content>
+        </Section.Wrapper>
+        <Divider />
       </SafeAreaView>
     </ThemeProvider>
   );
