@@ -21,6 +21,8 @@ export interface IProps {
     | 'success'
     | 'tick'
     | 'user'
+    | 'expand'
+    | 'shrink'
     | 'close'
     | 'closeCircle';
 }

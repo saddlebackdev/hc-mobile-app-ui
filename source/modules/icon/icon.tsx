@@ -13,6 +13,8 @@ const StyledImage = Styled.Image<IStyledImage>`
 // Icon Files
 const IconFiles = {
   black: {
+    expand: require('../../images/expand-black.png'),
+    shrink: require('../../images/shrink-black.png'),
     chevronDown: require('../../images/chevron-down-black.png'),
     chevronRight: require('../../images/chevron-right-black.png'),
     closeCircle: require('../../images/close-x-complex-black.png'),
@@ -24,6 +26,8 @@ const IconFiles = {
     user: require('../../images/user-black.png'),
   },
   muted: {
+    expand: require('../../images/expand-muted.png'),
+    shrink: require('../../images/shrink-muted.png'),
     chevronDown: require('../../images/chevron-down-muted.png'),
     chevronRight: require('../../images/chevron-right-muted.png'),
     closeCircle: require('../../images/close-x-complex-muted.png'),
@@ -35,6 +39,8 @@ const IconFiles = {
     user: require('../../images/user-muted.png'),
   },
   white: {
+    expand: require('../../images/expand-white.png'),
+    shrink: require('../../images/shrink-white.png'),
     chevronDown: require('../../images/chevron-down-white.png'),
     chevronRight: require('../../images/chevron-right-white.png'),
     closeCircle: require('../../images/close-x-complex-white.png'),
