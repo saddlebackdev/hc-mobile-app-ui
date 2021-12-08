@@ -29,6 +29,10 @@ export {IProps as DatePickerProps} from './modules/date-picker/date-picker.types
 export {default as Divider} from './modules/divider/divider';
 export {IProps as DividerProps} from './modules/divider/divider.types';
 
+// Expandable Card
+export {default as ExpandableCard} from './modules/cards/expandable-card';
+export {IProps as ExpandableCardProps} from './modules/cards/expandable-card.types';
+
 // Floater
 export {default as Floater} from './modules/floater/floater';
 export {IProps as FloaterProps} from './modules/floater/floater.types';
