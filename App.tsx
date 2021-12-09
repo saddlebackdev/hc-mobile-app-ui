@@ -22,6 +22,7 @@ import {
   Text,
   Heading,
   Radio,
+  Tiles,
   ThemeProvider,
   PillToggle,
   TextInput,
@@ -186,6 +187,50 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       tags: ['Family', 'Baptism'],
+    },
+  ];
+
+  const tilesItems = [
+    {
+      onPress: onPressMock,
+      id: 'tile-group-tile-worship',
+      tileColor: 'primaryLight',
+      title: 'Worship',
+    },
+    {
+      onPress: onPressMock,
+      id: 'tile-group-tile-baptism',
+      tileContent: <Heading inversed>&uarr;</Heading>,
+      tileColor: 'secondaryLight',
+      title: 'Baptism',
+    },
+    {
+      onPress: onPressMock,
+      id: 'tile-group-tile-prayer1',
+      tileContent: <Heading inversed>&larr;</Heading>,
+      tileColor: 'successLight',
+      title: 'Prayer',
+    },
+    {
+      disabled: true,
+      onPress: onPressMock,
+      id: 'tile-group-tile-prayer2',
+      tileContent: <Heading inversed>&rarr;</Heading>,
+      tileColor: 'dangerLight',
+      title: 'Prayer',
+    },
+    {
+      onPress: onPressMock,
+      id: 'tile-group-tile-prayer3',
+      tileContent: <Heading inversed>&darr;</Heading>,
+      tileColor: 'warningLight',
+      title: 'Prayer',
+    },
+    {
+      onPress: onPressMock,
+      id: 'tile-group-tile-prayer4',
+      tileColor: 'infoLight',
+      title: 'Prayer',
     },
   ];
 
@@ -420,6 +465,22 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   items={selectableListItems}
                 />
               </BottomSheet>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Tiles */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Tiles</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text isCaption>Tiles contain titles and icons</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Tiles columns={2} items={tilesItems} />
+              </Row>
             </Section.Content>
           </Section.Wrapper>
           <Divider />
