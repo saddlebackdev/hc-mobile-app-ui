@@ -99,6 +99,10 @@ export {
 export {default as PillToggle} from './modules/toggle/pill-toggle';
 export {IProps as PillToggleProps} from './modules/toggle/pill-toggle.types';
 
+// Tile Group
+export {default as Tiles} from './modules/tiles/tiles';
+export {IProps as TilesProps} from './modules/tiles/tiles.types';
+
 // Utilities
 export {majorScale, minorScale} from './modules/scales';
 export {DeviceUtils, LayoutUtils} from './modules/utilities';
