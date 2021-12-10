@@ -24,6 +24,7 @@ import {
   Radio,
   Tiles,
   ThemeProvider,
+  IconToggle,
   PillToggle,
   TextInput,
 } from './source';
@@ -78,6 +79,35 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const pillToggleOptions = [
     {label: 'Selected', value: 1, onPress: setActivePill},
     {label: 'Unselected', value: 2, onPress: setActivePill},
+  ];
+
+  const iconToggleOptions = [
+    {
+      label: 'Laughing',
+      onPress: setActivePill,
+      content: selected => {
+        return selected ? (
+          <Text>😂</Text>
+        ) : (
+          // eslint-disable-next-line react-native/no-inline-styles
+          <Text style={{opacity: 0.5}}>😂</Text>
+        );
+      },
+      value: 1,
+    },
+    {
+      label: 'Crying',
+      onPress: setActivePill,
+      content: selected => {
+        return selected ? (
+          <Text>😭</Text>
+        ) : (
+          // eslint-disable-next-line react-native/no-inline-styles
+          <Text style={{opacity: 0.5}}>😭</Text>
+        );
+      },
+      value: 2,
+    },
   ];
 
   const options = [
@@ -805,6 +835,34 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             <Section.Content>
               <Row>
                 <PillToggle selected={1} options={pillToggleOptions} disabled />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Icon Toggle */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Icon Toggle</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text isCaption>
+                Group Radio buttons together in a icon-pill container
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <IconToggle
+                  selected={activePill}
+                  options={iconToggleOptions}
+                  disabled={false}
+                />
+              </Row>
+            </Section.Content>
+
+            <Section.Content>
+              <Row>
+                <IconToggle selected={1} options={iconToggleOptions} disabled />
               </Row>
             </Section.Content>
           </Section.Wrapper>
