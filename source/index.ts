@@ -98,6 +98,8 @@ export {
 // Toggles
 export {default as PillToggle} from './modules/toggle/pill-toggle';
 export {IProps as PillToggleProps} from './modules/toggle/pill-toggle.types';
+export {default as IconToggle} from './modules/toggle/icon-toggle';
+export {IProps as IconToggleProps} from './modules/toggle/icon-toggle.types';
 
 // Tile Group
 export {default as Tiles} from './modules/tiles/tiles';
