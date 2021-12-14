@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconToggle Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+    ]
+  }
+  testID="icon-toggle"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+    testID="icon-toggle-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 64,
+            "height": 64,
+            "justifyContent": "center",
+            "shadowColor": "rgba(0, 0, 0, .15)",
+            "shadowOffset": Object {
+              "height": 6,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 12,
+            "width": 64,
+          },
+        ]
+      }
+      testID="icon-toggle-content"
+    >
+      <Text>
+        😂
+      </Text>
+    </View>
+    <Text
+      isMuted={false}
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontSize": 14,
+            "fontWeight": "normal",
+            "paddingHorizontal": 22,
+            "paddingVertical": 10,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="icon-toggle-label"
+    >
+      Laughing
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+    testID="icon-toggle-button"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 64,
+            "height": 64,
+            "justifyContent": "center",
+            "shadowColor": "#FFFFFF",
+            "shadowOffset": Object {
+              "height": 6,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 12,
+            "width": 64,
+          },
+        ]
+      }
+      testID="icon-toggle-content"
+    >
+      <Text
+        style={
+          Object {
+            "opacity": 0.5,
+          }
+        }
+      >
+        😭
+      </Text>
+    </View>
+    <Text
+      isMuted={true}
+      style={
+        Array [
+          Object {
+            "color": "#97A4AB",
+            "fontSize": 14,
+            "fontWeight": "normal",
+            "paddingHorizontal": 22,
+            "paddingVertical": 10,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="icon-toggle-label"
+    >
+      Crying
+    </Text>
+  </View>
+</View>
+`;

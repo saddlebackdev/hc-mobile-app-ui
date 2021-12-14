@@ -59,34 +59,26 @@ export const TileGroup: React.FC<IProps> = ({
     setTileSize(width);
   };
 
-  // On Press
-  const _onPress = item => {
-    if (item.disabled) {
-      return;
-    }
-
-    item.onPress();
-  };
-
   return (
-    <StyledWrapper>
-      {items.map(item => {
-        return (
-          <StyledTile
-            key={item.id}
-            $height={tileSize}
-            $width={100 / columns}
-            $disabled={item.disabled}
-            activeOpacity={item.disabled ? 0.25 : 0.75}
-            onPress={() => _onPress(item)}
-            onLayout={_onLayout}>
-            <StyledTileContainer $color={item.tileColor}>
-              <StyledTileContent>{item.tileContent}</StyledTileContent>
-              <StyledTileTitle>{item.title}</StyledTileTitle>
-            </StyledTileContainer>
-          </StyledTile>
-        );
-      })}
+    <StyledWrapper testID="tiles">
+      {items.map(item => (
+        <StyledTile
+          key={item.id}
+          $height={tileSize}
+          $width={100 / columns}
+          $disabled={item.disabled}
+          activeOpacity={item.disabled ? 0.25 : 0.75}
+          onPress={!item.disabled && item.onPress()}
+          onLayout={_onLayout}
+          testID="tile">
+          <StyledTileContainer $color={item.tileColor}>
+            <StyledTileContent testID="tile-content">
+              {item.tileContent}
+            </StyledTileContent>
+            <StyledTileTitle testID="tile-title">{item.title}</StyledTileTitle>
+          </StyledTileContainer>
+        </StyledTile>
+      ))}
     </StyledWrapper>
   );
 };

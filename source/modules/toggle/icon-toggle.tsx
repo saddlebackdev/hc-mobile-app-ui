@@ -82,6 +82,7 @@ export const IconToggle: React.FC<IProps> = ({
             activeOpacity={isDisabled ? 1 : 0.75}
             onPress={_onPressItem}>
             <StyledItemContent
+              testID="icon-toggle-content"
               $isDisabled={isDisabled}
               $isSelected={isSelected}>
               {option.content(isSelected)}
@@ -89,8 +90,8 @@ export const IconToggle: React.FC<IProps> = ({
 
             <StyledItemLabel
               $isDisabled={isDisabled}
-              testID="icon-toggle-button-label"
-              isMuted={isDisabled || !isSelected}>
+              isMuted={isDisabled || !isSelected}
+              testID="icon-toggle-label">
               {option.label}
             </StyledItemLabel>
           </StyledItem>
