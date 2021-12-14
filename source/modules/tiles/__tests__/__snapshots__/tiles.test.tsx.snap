@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tiles Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "width": "100%",
+      },
+    ]
+  }
+  testID="tiles"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": -6,
+        "opacity": 0.25,
+        "overflow": "hidden",
+        "paddingBottom": 6,
+        "paddingLeft": 6,
+        "paddingRight": 6,
+        "paddingTop": 6,
+        "width": "50%",
+      }
+    }
+    testID="tile"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#00AEFF",
+            "borderRadius": 5,
+            "height": "100%",
+            "justifyContent": "space-between",
+            "paddingBottom": 11,
+            "paddingLeft": 11,
+            "paddingRight": 11,
+            "paddingTop": 11,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-end",
+            },
+          ]
+        }
+        testID="tile-content"
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "color": "#FFFFFF",
+              "fontSize": 14,
+              "fontWeight": "bold",
+              "marginLeft": 4,
+              "textAlign": "left",
+              "textTransform": "uppercase",
+            },
+          ]
+        }
+        testID="tile-title"
+      >
+        Worship
+      </Text>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": -6,
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingBottom": 6,
+        "paddingLeft": 6,
+        "paddingRight": 6,
+        "paddingTop": 6,
+        "width": "50%",
+      }
+    }
+    testID="tile"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#1C2530",
+            "borderRadius": 5,
+            "height": "100%",
+            "justifyContent": "space-between",
+            "paddingBottom": 11,
+            "paddingLeft": 11,
+            "paddingRight": 11,
+            "paddingTop": 11,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-end",
+            },
+          ]
+        }
+        testID="tile-content"
+      >
+        <Text>
+          X
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "color": "#FFFFFF",
+              "fontSize": 14,
+              "fontWeight": "bold",
+              "marginLeft": 4,
+              "textAlign": "left",
+              "textTransform": "uppercase",
+            },
+          ]
+        }
+        testID="tile-title"
+      >
+        Baptism
+      </Text>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": -6,
+        "opacity": 1,
+        "overflow": "hidden",
+        "paddingBottom": 6,
+        "paddingLeft": 6,
+        "paddingRight": 6,
+        "paddingTop": 6,
+        "width": "50%",
+      }
+    }
+    testID="tile"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#54CD86",
+            "borderRadius": 5,
+            "height": "100%",
+            "justifyContent": "space-between",
+            "paddingBottom": 11,
+            "paddingLeft": 11,
+            "paddingRight": 11,
+            "paddingTop": 11,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-end",
+            },
+          ]
+        }
+        testID="tile-content"
+      >
+        <Text>
+          X
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "alignSelf": "flex-start",
+              "color": "#FFFFFF",
+              "fontSize": 14,
+              "fontWeight": "bold",
+              "marginLeft": 4,
+              "textAlign": "left",
+              "textTransform": "uppercase",
+            },
+          ]
+        }
+        testID="tile-title"
+      >
+        Prayer
+      </Text>
+    </View>
+  </View>
+</View>
+`;
