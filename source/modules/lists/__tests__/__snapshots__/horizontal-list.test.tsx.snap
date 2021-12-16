@@ -97,6 +97,7 @@ exports[`HorizontalList Rendering should render the link 1`] = `
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 20,
             "fontWeight": "700",
             "textAlign": "left",
@@ -130,6 +131,7 @@ exports[`HorizontalList Rendering should render the link 1`] = `
           Array [
             Object {
               "color": "#00AEFF",
+              "fontFamily": "System",
               "fontSize": 14,
               "fontWeight": "500",
               "textAlign": "left",
@@ -231,6 +233,7 @@ exports[`HorizontalList Rendering should render the title when passed 1`] = `
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 20,
             "fontWeight": "700",
             "textAlign": "left",

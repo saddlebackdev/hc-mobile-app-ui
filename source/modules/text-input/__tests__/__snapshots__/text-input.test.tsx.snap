@@ -13,6 +13,7 @@ exports[`TextInput Rendering renders itself correctly 1`] = `
       Array [
         Object {
           "color": "#1C2530",
+          "fontFamily": "System",
           "fontSize": 18,
           "fontWeight": "700",
           "marginBottom": 11,
@@ -71,6 +72,7 @@ exports[`TextInput Rendering should render label when passed 1`] = `
       Array [
         Object {
           "color": "#1C2530",
+          "fontFamily": "System",
           "fontSize": 18,
           "fontWeight": "700",
           "marginBottom": 11,
@@ -130,6 +132,7 @@ exports[`TextInput Rendering should render label with an asterisk when "required
       Array [
         Object {
           "color": "#1C2530",
+          "fontFamily": "System",
           "fontSize": 18,
           "fontWeight": "700",
           "marginBottom": 11,
@@ -146,7 +149,9 @@ exports[`TextInput Rendering should render label with an asterisk when "required
         Array [
           Object {
             "color": "#EE4335",
+            "fontFamily": "System",
             "fontSize": 18,
+            "fontWeight": "400",
             "textAlign": "left",
           },
         ]

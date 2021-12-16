@@ -72,6 +72,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
           Array [
             Object {
               "color": "#FFFFFF",
+              "fontFamily": "System",
               "fontSize": 16,
               "fontWeight": "500",
             },
@@ -141,6 +142,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
           Array [
             Object {
               "color": "#FFFFFF",
+              "fontFamily": "System",
               "fontSize": 16,
               "fontWeight": "500",
             },
@@ -227,6 +229,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "color": "#FFFFFF",
+              "fontFamily": "System",
               "fontSize": 16,
               "fontWeight": "500",
             },
@@ -296,6 +299,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "color": "#FFFFFF",
+              "fontFamily": "System",
               "fontSize": 16,
               "fontWeight": "500",
             },

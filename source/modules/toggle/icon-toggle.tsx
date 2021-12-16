@@ -90,7 +90,7 @@ export const IconToggle: React.FC<IProps> = ({
 
             <StyledItemLabel
               $isDisabled={isDisabled}
-              isMuted={isDisabled || !isSelected}
+              muted={isDisabled || !isSelected}
               testID="icon-toggle-label">
               {option.label}
             </StyledItemLabel>

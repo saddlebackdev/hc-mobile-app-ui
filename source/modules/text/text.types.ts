@@ -7,13 +7,19 @@ export interface IProps extends TextProps {
   inversed?: boolean;
 
   /** If true, renders the text as muted */
-  isMuted?: boolean;
+  muted?: boolean;
 
   /** If true, renders the text as a subtitle */
-  isSubtitle?: boolean;
+  subtitle?: boolean;
 
   /** If true, renders the text as a caption */
-  isCaption?: boolean;
+  caption?: boolean;
+
+  /** Font family to use. */
+  font?: 'primary' | 'secondary' | string;
+
+  /** Weight of the font. */
+  weight?: 300 | 400 | 500 | 600 | 700 | 800;
 
   /** Determines the alignment of the text. Can be left, center or right. Defaults to left */
   alignment?: 'left' | 'center' | 'right';

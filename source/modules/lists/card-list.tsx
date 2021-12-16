@@ -64,7 +64,7 @@ export const CardListItem: React.FC<ICardListItemProps> = ({
       <StyledCardDetailsWrapper>
         <StyledCardDetailsRow>
           <StyledTitle testID="item-title">{title}</StyledTitle>
-          <StyledSubTitle isCaption testID="item-subtitle">
+          <StyledSubTitle caption testID="item-subtitle">
             {subTitle}
           </StyledSubTitle>
         </StyledCardDetailsRow>

@@ -3,6 +3,9 @@ export interface IProps {
   /** If true, inverses the color of text */
   inversed?: boolean;
 
+  /** Font family to use. */
+  font?: 'primary' | 'secondary' | string;
+
   /** Determines the alignment of the text. Can be left, center or right. Defaults to left */
   alignment?: 'left' | 'center' | 'right';
 

@@ -31,6 +31,10 @@ export interface ITheme {
 
   /** Typography for the theme */
   typography: {
+    faces: {
+      primary: string;
+      secondary: string;
+    };
     sizes: {
       small: number;
       regular: number;

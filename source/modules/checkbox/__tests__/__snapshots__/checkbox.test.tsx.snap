@@ -60,7 +60,9 @@ exports[`Checkbox Rendering renders itself correctly 1`] = `
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "marginBottom": 4,
             "textAlign": "left",
           },
@@ -69,12 +71,14 @@ exports[`Checkbox Rendering renders itself correctly 1`] = `
       testID="checkbox-label"
     />
     <Text
-      isCaption={true}
+      caption={true}
       style={
         Array [
           Object {
             "color": "#97A4AB",
+            "fontFamily": "System",
             "fontSize": 14,
+            "fontWeight": "400",
             "textAlign": "left",
           },
         ]

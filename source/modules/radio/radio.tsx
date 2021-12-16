@@ -119,7 +119,7 @@ export const Radio: React.FC<IProps> = React.memo(
             </StyledRadioOuter>
             <StyledRadioLabelWrapper
               testID="radio-label"
-              isMuted={isRadioDisabled || option.disabled}>
+              muted={isRadioDisabled || option.disabled}>
               {option.label}
             </StyledRadioLabelWrapper>
           </StyledGroup>

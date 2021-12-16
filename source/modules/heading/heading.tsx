@@ -18,6 +18,10 @@ const Heading = Styled.Text<IProps>`
     return `${theme.typography?.sizes?.headings[variant]}px`;
   }};
 
+  font-family: ${({theme, font = 'primary'}) => {
+    return theme.typography.faces[font];
+  }};
+
   font-weight: ${({variant}): string => {
     switch (variant) {
       case 'h1': {

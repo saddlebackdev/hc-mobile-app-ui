@@ -17,7 +17,9 @@ interface ICommonProps {
 }
 
 // Styled Label
-export interface IStyledLabel extends ICommonProps {}
+export interface IStyledLabel extends ICommonProps {
+  $font?: 'primary' | 'secondary' | string;
+}
 
 // Styled Button
 export interface IStyledButton extends ICommonProps, TouchableOpacityProps {
@@ -27,6 +29,9 @@ export interface IStyledButton extends ICommonProps, TouchableOpacityProps {
 
 // Props
 export interface IProps extends IStyledButton {
-  /** Label for the button */
+  /** Label for the button. */
   children: string;
+
+  /** Font family to use. */
+  font?: 'primary' | 'secondary' | string;
 }

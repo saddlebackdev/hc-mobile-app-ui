@@ -7,7 +7,9 @@ exports[`Text Rendering Variants alignment-center: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 16,
+        "fontWeight": "400",
         "textAlign": "center",
       },
     ]
@@ -25,7 +27,9 @@ exports[`Text Rendering Variants alignment-left: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 16,
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
@@ -43,8 +47,30 @@ exports[`Text Rendering Variants alignment-right: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 16,
+        "fontWeight": "400",
         "textAlign": "right",
+      },
+    ]
+  }
+  testID="text"
+>
+  Paragraph goes here
+</Text>
+`;
+
+exports[`Text Rendering Variants caption: should match snapshot 1`] = `
+<Text
+  caption={true}
+  style={
+    Array [
+      Object {
+        "color": "#97A4AB",
+        "fontFamily": "System",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "textAlign": "left",
       },
     ]
   }
@@ -61,7 +87,9 @@ exports[`Text Rendering Variants inversed: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#FFFFFF",
+        "fontFamily": "System",
         "fontSize": 16,
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
@@ -72,32 +100,16 @@ exports[`Text Rendering Variants inversed: should match snapshot 1`] = `
 </Text>
 `;
 
-exports[`Text Rendering Variants isCaption: should match snapshot 1`] = `
+exports[`Text Rendering Variants muted: should match snapshot 1`] = `
 <Text
-  isCaption={true}
+  muted={true}
   style={
     Array [
       Object {
         "color": "#97A4AB",
-        "fontSize": 14,
-        "textAlign": "left",
-      },
-    ]
-  }
-  testID="text"
->
-  Paragraph goes here
-</Text>
-`;
-
-exports[`Text Rendering Variants isMuted: should match snapshot 1`] = `
-<Text
-  isMuted={true}
-  style={
-    Array [
-      Object {
-        "color": "#97A4AB",
+        "fontFamily": "System",
         "fontSize": 16,
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
@@ -108,18 +120,20 @@ exports[`Text Rendering Variants isMuted: should match snapshot 1`] = `
 </Text>
 `;
 
-exports[`Text Rendering Variants isSubtitle: should match snapshot 1`] = `
+exports[`Text Rendering Variants subtitle: should match snapshot 1`] = `
 <Text
-  isSubtitle={true}
   style={
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 14,
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
   }
+  subtitle={true}
   testID="text"
 >
   Paragraph goes here
@@ -132,7 +146,9 @@ exports[`Text Rendering renders itself correctly 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 16,
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
