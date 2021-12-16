@@ -42,12 +42,14 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
   >
     <Text
       inversed={true}
-      isMuted={false}
+      muted={false}
       style={
         Array [
           Object {
             "color": "#FFFFFF",
+            "fontFamily": "System",
             "fontSize": 14,
+            "fontWeight": "400",
             "paddingHorizontal": 22,
             "paddingVertical": 10,
             "textAlign": "left",
@@ -89,12 +91,14 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
   >
     <Text
       inversed={false}
-      isMuted={true}
+      muted={true}
       style={
         Array [
           Object {
             "color": "#97A4AB",
+            "fontFamily": "System",
             "fontSize": 14,
+            "fontWeight": "400",
             "paddingHorizontal": 22,
             "paddingVertical": 10,
             "textAlign": "left",
@@ -136,12 +140,14 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
   >
     <Text
       inversed={false}
-      isMuted={true}
+      muted={true}
       style={
         Array [
           Object {
             "color": "#97A4AB",
+            "fontFamily": "System",
             "fontSize": 14,
+            "fontWeight": "400",
             "paddingHorizontal": 22,
             "paddingVertical": 10,
             "textAlign": "left",

@@ -78,7 +78,9 @@ exports[`Radio Rendering Variants horizontal: should match snapshot 1`] = `
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
             "textAlign": "left",
@@ -138,12 +140,14 @@ exports[`Radio Rendering Variants horizontal: should match snapshot 1`] = `
       }
     />
     <Text
-      isMuted={true}
+      muted={true}
       style={
         Array [
           Object {
             "color": "#97A4AB",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
             "textAlign": "left",
@@ -207,7 +211,9 @@ exports[`Radio Rendering Variants horizontal: should match snapshot 1`] = `
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
             "textAlign": "left",
@@ -300,7 +306,9 @@ exports[`Radio Rendering Variants vertical: should match snapshot 1`] = `
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
             "textAlign": "left",
@@ -360,12 +368,14 @@ exports[`Radio Rendering Variants vertical: should match snapshot 1`] = `
       }
     />
     <Text
-      isMuted={true}
+      muted={true}
       style={
         Array [
           Object {
             "color": "#97A4AB",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
             "textAlign": "left",
@@ -429,7 +439,9 @@ exports[`Radio Rendering Variants vertical: should match snapshot 1`] = `
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
             "textAlign": "left",
@@ -522,7 +534,9 @@ exports[`Radio Rendering renders itself correctly 1`] = `
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
             "textAlign": "left",
@@ -582,12 +596,14 @@ exports[`Radio Rendering renders itself correctly 1`] = `
       }
     />
     <Text
-      isMuted={true}
+      muted={true}
       style={
         Array [
           Object {
             "color": "#97A4AB",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
             "textAlign": "left",
@@ -651,7 +667,9 @@ exports[`Radio Rendering renders itself correctly 1`] = `
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 16,
+            "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
             "textAlign": "left",

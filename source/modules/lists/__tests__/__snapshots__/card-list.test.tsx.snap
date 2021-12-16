@@ -125,6 +125,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 Array [
                   Object {
                     "color": "#1C2530",
+                    "fontFamily": "System",
                     "fontSize": 14,
                     "fontWeight": "bold",
                     "textAlign": "left",
@@ -136,12 +137,14 @@ exports[`CardList Rendering renders itself correctly 1`] = `
               A Title
             </Text>
             <Text
-              isCaption={true}
+              caption={true}
               style={
                 Array [
                   Object {
                     "color": "#97A4AB",
+                    "fontFamily": "System",
                     "fontSize": 12,
+                    "fontWeight": "400",
                     "marginTop": 4,
                     "textAlign": "left",
                   },
@@ -165,7 +168,9 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 Array [
                   Object {
                     "color": "#1C2530",
+                    "fontFamily": "System",
                     "fontSize": 14,
+                    "fontWeight": "400",
                     "textAlign": "left",
                   },
                 ]
@@ -187,6 +192,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 Array [
                   Object {
                     "color": "#97A4AB",
+                    "fontFamily": "System",
                     "fontSize": 12,
                     "fontStyle": "italic",
                     "fontWeight": "bold",
@@ -289,6 +295,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 Array [
                   Object {
                     "color": "#1C2530",
+                    "fontFamily": "System",
                     "fontSize": 14,
                     "fontWeight": "bold",
                     "textAlign": "left",
@@ -300,12 +307,14 @@ exports[`CardList Rendering renders itself correctly 1`] = `
               A Title
             </Text>
             <Text
-              isCaption={true}
+              caption={true}
               style={
                 Array [
                   Object {
                     "color": "#97A4AB",
+                    "fontFamily": "System",
                     "fontSize": 12,
+                    "fontWeight": "400",
                     "marginTop": 4,
                     "textAlign": "left",
                   },
@@ -329,7 +338,9 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 Array [
                   Object {
                     "color": "#1C2530",
+                    "fontFamily": "System",
                     "fontSize": 14,
+                    "fontWeight": "400",
                     "textAlign": "left",
                   },
                 ]
@@ -424,6 +435,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
           Array [
             Object {
               "color": "#1C2530",
+              "fontFamily": "System",
               "fontSize": 14,
               "fontWeight": "bold",
               "textAlign": "left",
@@ -435,12 +447,14 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
         A Title
       </Text>
       <Text
-        isCaption={true}
+        caption={true}
         style={
           Array [
             Object {
               "color": "#97A4AB",
+              "fontFamily": "System",
               "fontSize": 12,
+              "fontWeight": "400",
               "marginTop": 4,
               "textAlign": "left",
             },
@@ -464,7 +478,9 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
           Array [
             Object {
               "color": "#1C2530",
+              "fontFamily": "System",
               "fontSize": 14,
+              "fontWeight": "400",
               "textAlign": "left",
             },
           ]
@@ -486,6 +502,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
           Array [
             Object {
               "color": "#97A4AB",
+              "fontFamily": "System",
               "fontSize": 12,
               "fontStyle": "italic",
               "fontWeight": "bold",
@@ -574,6 +591,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
           Array [
             Object {
               "color": "#1C2530",
+              "fontFamily": "System",
               "fontSize": 14,
               "fontWeight": "bold",
               "textAlign": "left",
@@ -585,12 +603,14 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
         A Title
       </Text>
       <Text
-        isCaption={true}
+        caption={true}
         style={
           Array [
             Object {
               "color": "#97A4AB",
+              "fontFamily": "System",
               "fontSize": 12,
+              "fontWeight": "400",
               "marginTop": 4,
               "textAlign": "left",
             },
@@ -614,7 +634,9 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
           Array [
             Object {
               "color": "#1C2530",
+              "fontFamily": "System",
               "fontSize": 14,
+              "fontWeight": "400",
               "textAlign": "left",
             },
           ]
@@ -706,6 +728,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "color": "#1C2530",
+              "fontFamily": "System",
               "fontSize": 14,
               "fontWeight": "bold",
               "textAlign": "left",
@@ -717,12 +740,14 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
         A Title
       </Text>
       <Text
-        isCaption={true}
+        caption={true}
         style={
           Array [
             Object {
               "color": "#97A4AB",
+              "fontFamily": "System",
               "fontSize": 12,
+              "fontWeight": "400",
               "marginTop": 4,
               "textAlign": "left",
             },
@@ -746,7 +771,9 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "color": "#1C2530",
+              "fontFamily": "System",
               "fontSize": 14,
+              "fontWeight": "400",
               "textAlign": "left",
             },
           ]
@@ -768,6 +795,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "color": "#97A4AB",
+              "fontFamily": "System",
               "fontSize": 12,
               "fontStyle": "italic",
               "fontWeight": "bold",

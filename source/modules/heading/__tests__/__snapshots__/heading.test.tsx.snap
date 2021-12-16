@@ -7,6 +7,7 @@ exports[`Heading Rendering Variants alignment-center: should match snapshot 1`] 
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 24,
         "fontWeight": "700",
         "textAlign": "center",
@@ -26,6 +27,7 @@ exports[`Heading Rendering Variants alignment-left: should match snapshot 1`] = 
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 24,
         "fontWeight": "700",
         "textAlign": "left",
@@ -45,6 +47,7 @@ exports[`Heading Rendering Variants alignment-right: should match snapshot 1`] =
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 24,
         "fontWeight": "700",
         "textAlign": "right",
@@ -63,6 +66,7 @@ exports[`Heading Rendering Variants h1: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 24,
         "fontWeight": "700",
         "textAlign": "left",
@@ -82,6 +86,7 @@ exports[`Heading Rendering Variants h2: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 20,
         "fontWeight": "700",
         "textAlign": "left",
@@ -101,6 +106,7 @@ exports[`Heading Rendering Variants h3: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 18,
         "fontWeight": "700",
         "textAlign": "left",
@@ -120,6 +126,7 @@ exports[`Heading Rendering Variants h4: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 16,
         "fontWeight": "700",
         "textAlign": "left",
@@ -139,6 +146,7 @@ exports[`Heading Rendering Variants h5: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 16,
         "fontWeight": "600",
         "textAlign": "left",
@@ -158,6 +166,7 @@ exports[`Heading Rendering Variants h6: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 14,
         "fontWeight": "600",
         "textAlign": "left",
@@ -178,6 +187,7 @@ exports[`Heading Rendering Variants inversed: should match snapshot 1`] = `
     Array [
       Object {
         "color": "#FFFFFF",
+        "fontFamily": "System",
         "fontSize": 24,
         "fontWeight": "700",
         "textAlign": "left",
@@ -196,6 +206,7 @@ exports[`Heading Rendering renders itself correctly 1`] = `
     Array [
       Object {
         "color": "#1C2530",
+        "fontFamily": "System",
         "fontSize": 24,
         "fontWeight": "700",
         "textAlign": "left",

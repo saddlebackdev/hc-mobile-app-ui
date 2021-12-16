@@ -94,6 +94,7 @@ Array [
               Array [
                 Object {
                   "color": "#FFFFFF",
+                  "fontFamily": "System",
                   "fontSize": 14,
                   "fontWeight": "500",
                   "textAlign": "left",
@@ -169,6 +170,7 @@ Array [
               Array [
                 Object {
                   "color": "#1C2530",
+                  "fontFamily": "System",
                   "fontSize": 14,
                   "fontWeight": "500",
                   "textAlign": "left",
@@ -229,6 +231,7 @@ Array [
               Array [
                 Object {
                   "color": "#1C2530",
+                  "fontFamily": "System",
                   "fontSize": 14,
                   "fontWeight": "500",
                   "textAlign": "left",
@@ -291,6 +294,7 @@ exports[`SelectableListItem Rendering renders itself correctly 1`] = `
       Array [
         Object {
           "color": "#1C2530",
+          "fontFamily": "System",
           "fontSize": 14,
           "fontWeight": "500",
           "textAlign": "left",
@@ -337,6 +341,7 @@ exports[`SelectableListItem Rendering renders tick icon when selected 1`] = `
       Array [
         Object {
           "color": "#FFFFFF",
+          "fontFamily": "System",
           "fontSize": 14,
           "fontWeight": "500",
           "textAlign": "left",

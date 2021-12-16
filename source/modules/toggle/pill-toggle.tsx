@@ -108,7 +108,7 @@ export const PillToggle: React.FC<IProps> = ({
             <StyledItemLabel
               $isDisabled={isDisabled}
               testID="pill-toggle-button-label"
-              isMuted={isDisabled || !isSelected}
+              muted={isDisabled || !isSelected}
               inversed={isSelected}>
               {option.label}
             </StyledItemLabel>

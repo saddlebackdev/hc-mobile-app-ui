@@ -59,11 +59,12 @@ exports[`IconToggle Rendering renders itself correctly 1`] = `
       </Text>
     </View>
     <Text
-      isMuted={false}
+      muted={false}
       style={
         Array [
           Object {
             "color": "#1C2530",
+            "fontFamily": "System",
             "fontSize": 14,
             "fontWeight": "normal",
             "paddingHorizontal": 22,
@@ -131,11 +132,12 @@ exports[`IconToggle Rendering renders itself correctly 1`] = `
       </Text>
     </View>
     <Text
-      isMuted={true}
+      muted={true}
       style={
         Array [
           Object {
             "color": "#97A4AB",
+            "fontFamily": "System",
             "fontSize": 14,
             "fontWeight": "normal",
             "paddingHorizontal": 22,

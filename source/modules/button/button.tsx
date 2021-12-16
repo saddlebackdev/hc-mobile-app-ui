@@ -105,6 +105,10 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
 const StyledLabel = Styled.Text<IStyledLabel>`
   font-weight: 500;
 
+  font-family: ${({theme, $font = 'primary'}) => {
+    return theme.typography.faces[$font];
+  }};
+
   font-size: ${({small, theme}) => {
     return small
       ? `${theme.typography.sizes.small}px`
@@ -149,6 +153,7 @@ const StyledLabel = Styled.Text<IStyledLabel>`
 // Component
 const Button: React.FC<IProps> = React.memo(
   ({
+    font = 'primary',
     disabled = false,
     appearance = 'filled',
     color = 'primary',
@@ -173,6 +178,7 @@ const Button: React.FC<IProps> = React.memo(
         hasShadow={hasShadow}
         {...props}>
         <StyledLabel
+          $font={font}
           testID="button-label"
           appearance={appearance}
           small={small}

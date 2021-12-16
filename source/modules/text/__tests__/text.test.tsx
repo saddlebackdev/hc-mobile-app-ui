@@ -25,30 +25,30 @@ describe('Text', () => {
     });
 
     describe('Variants', () => {
-      it('isMuted: should match snapshot', () => {
+      it('muted: should match snapshot', () => {
         const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Text isMuted>Paragraph goes here</Text>
+            <Text muted>Paragraph goes here</Text>
           </ThemeProvider>,
         );
 
         expect(wrapper).toMatchSnapshot();
       });
 
-      it('isCaption: should match snapshot', () => {
+      it('caption: should match snapshot', () => {
         const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Text isCaption>Paragraph goes here</Text>
+            <Text caption>Paragraph goes here</Text>
           </ThemeProvider>,
         );
 
         expect(wrapper).toMatchSnapshot();
       });
 
-      it('isSubtitle: should match snapshot', () => {
+      it('subtitle: should match snapshot', () => {
         const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Text isSubtitle>Paragraph goes here</Text>
+            <Text subtitle>Paragraph goes here</Text>
           </ThemeProvider>,
         );
 

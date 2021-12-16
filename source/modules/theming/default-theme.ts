@@ -31,6 +31,10 @@ export const defaultTheme: ITheme = {
     graySix: '#1C2530',
   },
   typography: {
+    faces: {
+      primary: 'System',
+      secondary: 'System',
+    },
     sizes: {
       small: 14,
       regular: 16,

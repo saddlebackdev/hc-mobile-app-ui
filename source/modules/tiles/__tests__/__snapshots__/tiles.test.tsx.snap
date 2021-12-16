@@ -73,6 +73,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
             Object {
               "alignSelf": "flex-start",
               "color": "#FFFFFF",
+              "fontFamily": "System",
               "fontSize": 14,
               "fontWeight": "bold",
               "marginLeft": 4,
@@ -151,6 +152,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
             Object {
               "alignSelf": "flex-start",
               "color": "#FFFFFF",
+              "fontFamily": "System",
               "fontSize": 14,
               "fontWeight": "bold",
               "marginLeft": 4,
@@ -229,6 +231,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
             Object {
               "alignSelf": "flex-start",
               "color": "#FFFFFF",
+              "fontFamily": "System",
               "fontSize": 14,
               "fontWeight": "bold",
               "marginLeft": 4,

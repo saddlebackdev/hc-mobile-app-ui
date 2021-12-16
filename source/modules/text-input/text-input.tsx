@@ -107,7 +107,7 @@ export const TextInput: React.FC<IProps> = ({
   return (
     <StyledWrapper>
       <StyledLabel
-        isMuted={isUnderlined}
+        muted={isUnderlined}
         $isSmallFont={isUnderlined}
         testID="input-label">
         {label}{' '}
