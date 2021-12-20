@@ -110,8 +110,6 @@ export const BottomSheet: React.FC<IProps> = ({
 
   const modalStyle = {margin: 0};
 
-  const shouldShowFooter = typeof footer === 'function';
-
   return (
     <Modal
       coverScreen
@@ -144,7 +142,7 @@ export const BottomSheet: React.FC<IProps> = ({
                     {header.title}
                   </StyledHeader.Title>
 
-                  {header.description && (
+                  {header?.description && (
                     <StyledHeader.Description>
                       {header.description}
                     </StyledHeader.Description>
@@ -156,7 +154,7 @@ export const BottomSheet: React.FC<IProps> = ({
               <StyledContentWrapper>{children}</StyledContentWrapper>
 
               {/* Footer */}
-              {shouldShowFooter && (
+              {footer && (
                 <StyledFooterWrapper>
                   <SafeAreaView>{footer()}</SafeAreaView>
                 </StyledFooterWrapper>
