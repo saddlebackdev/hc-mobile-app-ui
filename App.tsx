@@ -1,5 +1,5 @@
 // Modules
-import React from 'react';
+import * as React from 'react';
 import {SafeAreaView} from 'react-native';
 import Styled from 'styled-components/native';
 

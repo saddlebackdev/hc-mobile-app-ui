@@ -1,5 +1,5 @@
 // Modules
-import React, {useEffect} from 'react';
+import * as React from 'react';
 import {Animated, Dimensions, SafeAreaView} from 'react-native';
 import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
@@ -95,7 +95,7 @@ export const BottomSheet: React.FC<IProps> = ({
     animSlideDownContainer.start(onDismiss);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (isOpen) {
       animSlideUpContainer.start();
     } else {
