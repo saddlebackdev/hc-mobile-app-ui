@@ -1,5 +1,5 @@
 // Modules
-import React, {useState} from 'react';
+import * as React from 'react';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import Styled from 'styled-components/native';
 
@@ -63,7 +63,7 @@ const DatePicker: React.FC<IProps> = React.memo(
     ...rest
   }): React.ReactElement => {
     // State
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
     // Get Formatted Date
     const getFormattedDate = (date: Date): string => {
