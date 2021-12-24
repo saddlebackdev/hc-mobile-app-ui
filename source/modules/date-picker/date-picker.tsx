@@ -6,6 +6,7 @@ import Styled from 'styled-components/native';
 // Types
 import {
   IProps,
+  IStyledLabel,
   IStyledTouchable,
   IStyledWrapper,
   IStyledModal,
@@ -26,12 +27,17 @@ const StyledWrapper = Styled.View<IStyledWrapper>`
   justify-content: space-between;
   width: 100%; height: 44px;
 
-  border-width: 1px;
+  border-bottom-width: 1px;
+  border-top-width: ${({$isUnderlined}) => ($isUnderlined ? 0 : 1)}px;
+  border-right-width: ${({$isUnderlined}) => ($isUnderlined ? 0 : 1)}px;
+  border-left-width: ${({$isUnderlined}) => ($isUnderlined ? 0 : 1)}px;
   border-color: ${({theme}) => theme.colors.grayThree};
   border-radius: 4px;
 
   paddingVertical: ${minorScale(1, 'px')};
-  paddingHorizontal: ${majorScale(1, 'px')};
+  paddingHorizontal: ${({$isUnderlined}) => {
+    return $isUnderlined ? 0 : majorScale(1, 'px');
+  }};
 `;
 const StyledModal = Styled.Modal<IStyledModal>``;
 const StyledOverlay = Styled.TouchableOpacity<IStyledOverlay>`
@@ -43,10 +49,12 @@ const StyledPickerWrapper = Styled.View<IStyledPickerWrapper>`
   height: 220px;
   overflow: hidden;
 `;
-const StyledLabel = Styled(Text)`
+const StyledLabel = Styled(Text)<IStyledLabel>`
   font-weight: 700;
-  margin-bottom: ${majorScale(1, 'px')};
-  font-size: 18px;
+  font-size: ${({$isSmallFont}) => ($isSmallFont ? '14px' : '18px')};
+  margin-bottom: ${({$isSmallFont}) => {
+    return $isSmallFont ? minorScale(1, 'px') : majorScale(1, 'px');
+  }};
 `;
 
 // Shared
@@ -57,6 +65,7 @@ import Text from '../text/text';
 const DatePicker: React.FC<IProps> = React.memo(
   ({
     label,
+    isUnderlined = false,
     customDateFormatter,
     selectedDate,
     onDateChange,
@@ -102,9 +111,14 @@ const DatePicker: React.FC<IProps> = React.memo(
 
     return (
       <React.Fragment>
-        {label && <StyledLabel>{label}</StyledLabel>}
+        {label && (
+          <StyledLabel muted={isUnderlined} $isSmallFont={isUnderlined}>
+            {label}
+          </StyledLabel>
+        )}
+
         <StyledTouchable activeOpacity={1} onPress={openPicker}>
-          <StyledWrapper>
+          <StyledWrapper $isUnderlined={isUnderlined}>
             <Text>{getFormattedDate(selectedDate)}</Text>
             <Icon type="calendar" size={16} />
           </StyledWrapper>

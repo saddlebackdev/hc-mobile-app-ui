@@ -8,6 +8,12 @@ export interface IStyledTouchable extends TouchableOpacityProps {}
 // Styled Wrapper
 export interface IStyledWrapper extends ViewProps {
   small?: boolean;
+  $isUnderlined: boolean;
+}
+
+// Styled Label
+export interface IStyledLabel {
+  $isSmallFont: boolean;
 }
 
 // Styled Modal
@@ -32,4 +38,7 @@ export interface IProps extends Partial<DatePickerOptions> {
 
   /** Currently selected value for the date picker */
   selectedDate: Date;
+
+  /** Enables the underlined variant for the date picker */
+  isUnderlined?: boolean;
 }
