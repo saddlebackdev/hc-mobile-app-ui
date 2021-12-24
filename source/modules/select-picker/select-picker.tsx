@@ -4,7 +4,7 @@ import RNPickerSelect, {PickerStyle} from 'react-native-picker-select';
 import Styled, {useTheme} from 'styled-components/native';
 
 // Types
-import {IProps} from './select-picker.types';
+import {IStyledLabel, IProps} from './select-picker.types';
 import {ITheme} from '../theming/theme-provider.types';
 
 // Utils
@@ -12,19 +12,24 @@ import {DeviceUtils} from '../utilities';
 
 // Components
 import Text from '../text/text';
-import {majorScale} from '../scales';
+import {majorScale, minorScale} from '../scales';
 import Icon from '../icon/icon';
 
 // Styles
 const StyledWrapper = Styled.View``;
-const StyledLabel = Styled(Text)`
+const StyledLabel = Styled(Text)<IStyledLabel>`
   font-weight: 700;
-  margin-bottom: ${majorScale(1, 'px')};
-  font-size: 18px;
+  font-size: ${({$isSmallFont}) => ($isSmallFont ? '14px' : '18px')};
+  margin-bottom: ${({$isSmallFont}) => {
+    return $isSmallFont ? minorScale(1, 'px') : majorScale(1, 'px');
+  }};
 `;
 
 // Get Styles
-const getStyles = ({colors, typography}: ITheme): Partial<PickerStyle> => {
+const getStyles = (
+  {colors, typography}: ITheme,
+  isUnderlined: boolean,
+): Partial<PickerStyle> => {
   const baseStyles = {
     placeholder: {
       color: colors.grayFour,
@@ -34,12 +39,14 @@ const getStyles = ({colors, typography}: ITheme): Partial<PickerStyle> => {
       backgroundColor: colors.white,
       borderColor: colors.grayThree,
       borderRadius: 3,
-      borderWidth: 1,
+      borderTopWidth: isUnderlined ? 0 : 1,
+      borderRightWidth: isUnderlined ? 0 : 1,
+      borderLeftWidth: isUnderlined ? 0 : 1,
+      borderBottomWidth: 1,
       height: 44,
     },
     input: {
       color: colors.graySix,
-      fontSize: typography.sizes.regular,
     },
     iconContainer: {
       marginTop: 4,
@@ -71,7 +78,7 @@ const getStyles = ({colors, typography}: ITheme): Partial<PickerStyle> => {
       ...baseStyles,
       viewContainer: {
         ...baseStyles.viewContainer,
-        paddingHorizontal: majorScale(1),
+        paddingHorizontal: isUnderlined ? 0 : majorScale(1),
         paddingVertical: majorScale(1),
       },
       inputIOS: {
@@ -104,6 +111,7 @@ const SelectPicker: React.FC<IProps> = ({
   label,
   placeholder = 'Select an option',
   shouldShowPlaceholder = true,
+  isUnderlined = false,
   ...rest
 }): React.ReactElement => {
   // Hooks
@@ -123,11 +131,15 @@ const SelectPicker: React.FC<IProps> = ({
 
   return (
     <StyledWrapper>
-      {label && <StyledLabel>{label}</StyledLabel>}
+      {label && (
+        <StyledLabel muted={isUnderlined} $isSmallFont={isUnderlined}>
+          {label}
+        </StyledLabel>
+      )}
 
       <RNPickerSelect
         Icon={getIcon()}
-        style={getStyles(theme)}
+        style={getStyles(theme, isUnderlined)}
         fixAndroidTouchableBug
         {...additionalProps}
       />
