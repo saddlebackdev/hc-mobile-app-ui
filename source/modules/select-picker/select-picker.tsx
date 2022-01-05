@@ -47,6 +47,8 @@ const getStyles = (
     },
     input: {
       color: colors.graySix,
+      fontFamily: typography.faces.primary,
+      fontSize: isUnderlined ? 20 : 16,
     },
     iconContainer: {
       marginTop: 4,

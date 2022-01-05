@@ -3,6 +3,9 @@ export interface ICardListItemProps {
   /** URL of photo to be shown on the left. */
   photoUrl?: string;
 
+  /** Fallback photo in case photoUrl is not present. */
+  fallbackImage?: any;
+
   /** Title for this list item. */
   title: string;
 

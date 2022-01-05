@@ -3,7 +3,13 @@ import * as React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IStyledTile, IStyledTileContainer, IProps} from './tiles.types';
+import {
+  IStyledTile,
+  IStyledTileContainer,
+  IStyledTileContent,
+  IStyledTileTitle,
+  IProps,
+} from './tiles.types';
 
 // Shared
 import Text from '../text/text';
@@ -24,29 +30,33 @@ const StyledTile = Styled.TouchableOpacity<IStyledTile>`
 `;
 const StyledTileContainer = Styled.View<IStyledTileContainer>`
   width: 100%; height: 100%;
-  justify-content: space-between;
   padding: ${majorScale(1)}px;
   border-radius: 5px;
+
+  justify-content: ${({$isCentered}) => {
+    return $isCentered ? 'center' : 'space-between';
+  }};
 
   background: ${({theme, $color = 'secondaryDark'}) => {
     return theme.colors[$color] || theme.colors.secondaryDark;
   }};
 `;
-const StyledTileContent = Styled.View`
-  align-self: flex-end;
+const StyledTileContent = Styled.View<IStyledTileContent>`
+  align-self: ${({$isCentered}) => ($isCentered ? 'center' : 'flex-end')};
+  margin-bottom: ${({$isCentered}) => ($isCentered ? '6px' : '0px')};
 `;
-const StyledTileTitle = Styled(Text)`
-  font-weight: bold;
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
+const StyledTileTitle = Styled(Text)<IStyledTileTitle>`
+  font-weight: 600;
   color: ${({theme}) => theme.colors.white};
-  text-transform: uppercase;
-  align-self: flex-start;
-  margin-left: 4px;
+  font-size: ${({theme}) => theme.typography.sizes.small}px;
+  align-self: ${({$isCentered}) => ($isCentered ? 'center' : 'flex-start')};
+  margin-left: ${({$isCentered}) => ($isCentered ? '0px' : '4px')};
 `;
 
 // Component
 export const TileGroup: React.FC<IProps> = ({
   items,
+  centered = false,
   columns = 2,
 }): React.ReactElement => {
   // State
@@ -71,11 +81,13 @@ export const TileGroup: React.FC<IProps> = ({
           onPress={!item.disabled && item.onPress()}
           onLayout={_onLayout}
           testID="tile">
-          <StyledTileContainer $color={item.tileColor}>
-            <StyledTileContent testID="tile-content">
+          <StyledTileContainer $isCentered={centered} $color={item.tileColor}>
+            <StyledTileContent $isCentered={centered} testID="tile-content">
               {item.tileContent}
             </StyledTileContent>
-            <StyledTileTitle testID="tile-title">{item.title}</StyledTileTitle>
+            <StyledTileTitle $isCentered={centered} testID="tile-title">
+              {item.title}
+            </StyledTileTitle>
           </StyledTileContainer>
         </StyledTile>
       ))}

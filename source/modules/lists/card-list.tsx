@@ -50,6 +50,7 @@ const StyledTags = Styled(Text)`
 // Component
 export const CardListItem: React.FC<ICardListItemProps> = ({
   photoUrl,
+  fallbackImage,
   title,
   subTitle,
   description,
@@ -59,7 +60,10 @@ export const CardListItem: React.FC<ICardListItemProps> = ({
   return (
     <StyledCard activeOpacity={0.75} onPress={onPress} testID="list-item">
       <StyledCardPhotoWrapper>
-        <StyledPhoto source={{uri: photoUrl}} testID="item-photo" />
+        <StyledPhoto
+          source={photoUrl ? {uri: photoUrl} : fallbackImage}
+          testID="item-photo"
+        />
       </StyledCardPhotoWrapper>
       <StyledCardDetailsWrapper>
         <StyledCardDetailsRow>
@@ -100,6 +104,7 @@ export const CardList: React.FC<IProps> = ({items}): React.ReactElement => {
   const renderItem = ({item}): React.ReactElement => (
     <CardListItem
       photoUrl={item.photoUrl}
+      fallbackImage={item.fallbackImage}
       title={item.title}
       subTitle={item.subTitle}
       description={item.description}

@@ -161,6 +161,7 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
     }
   >
     <Text
+      inversed={false}
       style={
         Array [
           Object {
@@ -177,6 +178,8 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
       Some Title
     </Text>
     <Text
+      inversed={false}
+      muted={true}
       style={
         Array [
           Object {
@@ -255,6 +258,7 @@ exports[`ExpandableCard Rendering: Tile tile renders correctly 1`] = `
     }
   >
     <Text
+      inversed={false}
       style={
         Array [
           Object {
