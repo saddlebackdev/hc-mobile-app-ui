@@ -62,6 +62,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "alignSelf": "flex-end",
+              "marginBottom": 0,
             },
           ]
         }
@@ -75,10 +76,9 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
               "color": "#FFFFFF",
               "fontFamily": "System",
               "fontSize": 14,
-              "fontWeight": "bold",
+              "fontWeight": "600",
               "marginLeft": 4,
               "textAlign": "left",
-              "textTransform": "uppercase",
             },
           ]
         }
@@ -137,6 +137,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "alignSelf": "flex-end",
+              "marginBottom": 0,
             },
           ]
         }
@@ -154,10 +155,9 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
               "color": "#FFFFFF",
               "fontFamily": "System",
               "fontSize": 14,
-              "fontWeight": "bold",
+              "fontWeight": "600",
               "marginLeft": 4,
               "textAlign": "left",
-              "textTransform": "uppercase",
             },
           ]
         }
@@ -216,6 +216,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "alignSelf": "flex-end",
+              "marginBottom": 0,
             },
           ]
         }
@@ -233,10 +234,9 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
               "color": "#FFFFFF",
               "fontFamily": "System",
               "fontSize": 14,
-              "fontWeight": "bold",
+              "fontWeight": "600",
               "marginLeft": 4,
               "textAlign": "left",
-              "textTransform": "uppercase",
             },
           ]
         }
