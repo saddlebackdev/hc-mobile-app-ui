@@ -3,7 +3,14 @@ import {ReactElement} from 'react';
 
 // Styled Tile Container
 export interface IStyledTileContainer {
+  $isCentered: boolean;
   $color?: string;
+}
+export interface IStyledTileContent {
+  $isCentered: boolean;
+}
+export interface IStyledTileTitle {
+  $isCentered: boolean;
 }
 
 // Styled Tile
@@ -41,6 +48,9 @@ export interface IItem {
 export interface IProps {
   /** Arary of tiles to be rendered. */
   items: Array<IItem>;
+
+  /** Center the tile items both horizontally and vertically. */
+  centered?: boolean;
 
   /** Number of colums to be rendered. */
   columns?: number;
