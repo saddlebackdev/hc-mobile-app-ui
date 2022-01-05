@@ -35,7 +35,6 @@ const StyledTileTitle = Styled(Text)`
 `;
 const StyledTileSubtitle = Styled(Text)`
   font-size: 12px;
-  color: ${({theme}) => theme.colors.grayFour};
   margin-bottom: -2px;
   margin-top: 3px;
 `;
@@ -66,6 +65,7 @@ export const ExpandableCard: React.FC<IProps> = ({
   subTitle,
   tileContent,
   tileColor = 'secondaryDark',
+  inversed = false,
   onPress,
   isOpen,
   children,
@@ -81,9 +81,14 @@ export const ExpandableCard: React.FC<IProps> = ({
           {tileContent ? tileContent : null}
         </StyledTileIconWrapper>
         <StyledTileDetails>
-          <StyledTileTitle testID="tile-title">{title}</StyledTileTitle>
+          <StyledTileTitle inversed={inversed} testID="tile-title">
+            {title}
+          </StyledTileTitle>
           {subTitle && (
-            <StyledTileSubtitle testID="tile-subtitle">
+            <StyledTileSubtitle
+              muted
+              inversed={inversed}
+              testID="tile-subtitle">
               {subTitle}
             </StyledTileSubtitle>
           )}

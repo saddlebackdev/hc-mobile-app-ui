@@ -25,4 +25,7 @@ export interface IProps {
 
   /** Toggle function for the tile. */
   onPress: any;
+
+  /** Inversed variant for the tile when collapsed. */
+  inversed?: boolean;
 }
