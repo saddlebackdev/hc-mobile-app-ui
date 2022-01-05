@@ -44,7 +44,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "#00AEFF",
+            "backgroundColor": "#1C2530",
             "borderRadius": 5,
             "height": "100%",
             "justifyContent": "space-between",
@@ -142,11 +142,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
           ]
         }
         testID="tile-content"
-      >
-        <Text>
-          X
-        </Text>
-      </View>
+      />
       <Text
         style={
           Array [
@@ -198,7 +194,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "#54CD86",
+            "backgroundColor": "#1C2530",
             "borderRadius": 5,
             "height": "100%",
             "justifyContent": "space-between",
@@ -221,11 +217,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
           ]
         }
         testID="tile-content"
-      >
-        <Text>
-          X
-        </Text>
-      </View>
+      />
       <Text
         style={
           Array [

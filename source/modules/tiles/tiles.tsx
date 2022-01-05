@@ -94,9 +94,9 @@ export const TileGroup: React.FC<IProps> = ({
             onLayout={_onLayout}
             onPress={onPress}
             testID="tile">
-            <StyledTileContainer $isCentered={centered} $color={item.tileColor}>
+            <StyledTileContainer $isCentered={centered} $color={item.color}>
               <StyledTileContent $isCentered={centered} testID="tile-content">
-                {item.tileContent}
+                {item.content}
               </StyledTileContent>
               <StyledTileTitle $isCentered={centered} testID="tile-title">
                 {item.title}

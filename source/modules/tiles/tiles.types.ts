@@ -29,10 +29,10 @@ export interface IItem {
   size?: number;
 
   /** A React element to be rendered inside tile. */
-  tileContent?: ReactElement;
+  content?: ReactElement;
 
   /** Color of the tile. Should be a color name from the theme. Defaults to secondaryDark. */
-  tileColor?: string;
+  color?: string;
 
   /** Title for the tile. */
   title: string;
