@@ -42,6 +42,9 @@ export interface IItem {
 
   /** Flag to determine whether the tile is active or disabled. */
   disabled?: boolean;
+
+  /** Flag to determine whether the tile is visible or not. */
+  hidden?: boolean;
 }
 
 // Props

@@ -4,6 +4,7 @@
 
 ### v0.0.10
 
+- Fix onPress issue in Tiles
 - Fix bottom sheet stuttering
 - Add inversed variant for expandable card
 - Add fallback image prop for card list

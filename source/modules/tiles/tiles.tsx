@@ -71,26 +71,40 @@ export const TileGroup: React.FC<IProps> = ({
 
   return (
     <StyledWrapper testID="tiles">
-      {items.map(item => (
-        <StyledTile
-          key={item.id}
-          $height={tileSize}
-          $width={100 / columns}
-          $disabled={item.disabled}
-          activeOpacity={item.disabled ? 0.25 : 0.75}
-          onPress={!item.disabled && item.onPress()}
-          onLayout={_onLayout}
-          testID="tile">
-          <StyledTileContainer $isCentered={centered} $color={item.tileColor}>
-            <StyledTileContent $isCentered={centered} testID="tile-content">
-              {item.tileContent}
-            </StyledTileContent>
-            <StyledTileTitle $isCentered={centered} testID="tile-title">
-              {item.title}
-            </StyledTileTitle>
-          </StyledTileContainer>
-        </StyledTile>
-      ))}
+      {items.map(item => {
+        if (item.hidden) {
+          return null;
+        }
+
+        const onPress = () => {
+          if (item.disabled) {
+            return;
+          }
+
+          item.onPress();
+        };
+
+        return (
+          <StyledTile
+            key={item.id}
+            $height={tileSize}
+            $width={100 / columns}
+            $disabled={item.disabled}
+            activeOpacity={item.disabled ? 0.25 : 0.75}
+            onLayout={_onLayout}
+            onPress={onPress}
+            testID="tile">
+            <StyledTileContainer $isCentered={centered} $color={item.tileColor}>
+              <StyledTileContent $isCentered={centered} testID="tile-content">
+                {item.tileContent}
+              </StyledTileContent>
+              <StyledTileTitle $isCentered={centered} testID="tile-title">
+                {item.title}
+              </StyledTileTitle>
+            </StyledTileContainer>
+          </StyledTile>
+        );
+      })}
     </StyledWrapper>
   );
 };
