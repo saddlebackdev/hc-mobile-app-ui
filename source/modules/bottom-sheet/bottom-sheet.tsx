@@ -97,7 +97,9 @@ export const BottomSheet: React.FC<IProps> = ({
 
   React.useEffect(() => {
     if (isOpen) {
-      animSlideUpContainer.start();
+      setTimeout(() => {
+        animSlideUpContainer.start();
+      }, 400);
     } else {
       animSlideDownContainer.start();
     }
