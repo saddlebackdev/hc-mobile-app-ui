@@ -509,7 +509,15 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             </Section.Description>
             <Section.Content>
               <Row>
-                <Tiles columns={2} items={tilesItems} />
+                <Tiles columns={3} items={tilesItems} />
+              </Row>
+            </Section.Content>
+            <Section.Description>
+              <Text caption>Centered Variant</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Tiles columns={3} items={tilesItems} centered />
               </Row>
             </Section.Content>
           </Section.Wrapper>
