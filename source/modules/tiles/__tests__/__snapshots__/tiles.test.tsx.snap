@@ -91,7 +91,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
   <View
     accessible={true}
     collapsable={false}
-    focusable={false}
+    focusable={true}
     nativeID="animatedComponent"
     onClick={[Function]}
     onLayout={[Function]}
@@ -170,7 +170,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
   <View
     accessible={true}
     collapsable={false}
-    focusable={false}
+    focusable={true}
     nativeID="animatedComponent"
     onClick={[Function]}
     onLayout={[Function]}
