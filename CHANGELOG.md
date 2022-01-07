@@ -1,6 +1,11 @@
 # Changelog
 
-----
+### v0.0.11
+
+- Export CardListItem as a separate component
+- Add paddedHeader prop to HorizontalList component
+
+---
 
 ### v0.0.10
 
