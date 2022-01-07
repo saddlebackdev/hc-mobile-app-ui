@@ -88,6 +88,7 @@ exports[`HorizontalList Rendering should render the link 1`] = `
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginBottom": 22,
+          "paddingHorizontal": 0,
         },
       ]
     }
@@ -224,6 +225,7 @@ exports[`HorizontalList Rendering should render the title when passed 1`] = `
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginBottom": 22,
+          "paddingHorizontal": 0,
         },
       ]
     }

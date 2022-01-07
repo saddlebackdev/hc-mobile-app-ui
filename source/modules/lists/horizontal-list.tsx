@@ -3,7 +3,7 @@ import * as React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IStyledItem, IProps} from './horizontal-list.types';
+import {IStyledHeader, IStyledItem, IProps} from './horizontal-list.types';
 
 // Shared
 import Text from '../text/text';
@@ -12,11 +12,15 @@ import {majorScale} from '../scales';
 
 // Styles
 const StyledWrapper = Styled.View``;
-const StyledHeader = Styled.View`
+const StyledHeader = Styled.View<IStyledHeader>`
   flex-direction: row;
   margin-bottom: ${majorScale(2)}px;
   justify-content: space-between;
   align-items: center;
+
+  padding-horizontal: ${({$paddedHeader}) => {
+    return `${$paddedHeader ? majorScale(2) : 0}px`;
+  }};
 `;
 const StyledHeaderTitle = Styled(Heading)``;
 const StyledHeaderLink = Styled.TouchableOpacity``;
@@ -38,6 +42,7 @@ export const HorizontalList: React.FC<IProps> = ({
   linkLabel,
   onLinkPress,
   gutterSize = 0,
+  paddedHeader = false,
   children,
 }): React.ReactElement => {
   // List Items
@@ -75,7 +80,7 @@ export const HorizontalList: React.FC<IProps> = ({
     <StyledWrapper>
       {/* Header */}
       {shouldShowHeader && (
-        <StyledHeader>
+        <StyledHeader $paddedHeader={paddedHeader}>
           <StyledHeaderTitle testID="title" variant="h2">
             {title}
           </StyledHeaderTitle>

@@ -1,3 +1,8 @@
+// Styled Header
+export interface IStyledHeader {
+  $paddedHeader: boolean;
+}
+
 // Styled Item
 export interface IStyledItem {
   $gutterSize: number;
@@ -17,4 +22,7 @@ export interface IProps {
 
   /** Space between the list items. */
   gutterSize?: number;
+
+  /** Adds horizontal padding to the header when true. */
+  paddedHeader?: boolean;
 }
