@@ -69,7 +69,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "flexDirection": "row",
+            "flexDirection": "column",
             "opacity": 1,
             "paddingVertical": 22,
           }
@@ -80,131 +80,141 @@ exports[`CardList Rendering renders itself correctly 1`] = `
           style={
             Array [
               Object {
-                "width": "35%",
+                "flexDirection": "row",
               },
             ]
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://images.com/abc.png",
-              }
-            }
+          <View
             style={
               Array [
                 Object {
-                  "borderRadius": 8,
-                  "height": 96,
-                  "width": 96,
+                  "width": "35%",
                 },
               ]
             }
-            testID="item-photo"
-          />
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "justifyContent": "space-between",
-                "width": "65%",
-              },
-            ]
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {},
-              ]
-            }
           >
-            <Text
+            <Image
+              source={
+                Object {
+                  "uri": "https://images.com/abc.png",
+                }
+              }
               style={
                 Array [
                   Object {
-                    "color": "#1C2530",
-                    "fontFamily": "System",
-                    "fontSize": 14,
-                    "fontWeight": "bold",
-                    "textAlign": "left",
+                    "borderRadius": 8,
+                    "height": 96,
+                    "width": 96,
                   },
                 ]
               }
-              testID="item-title"
-            >
-              A Title
-            </Text>
-            <Text
-              caption={true}
-              style={
-                Array [
-                  Object {
-                    "color": "#97A4AB",
-                    "fontFamily": "System",
-                    "fontSize": 12,
-                    "fontWeight": "400",
-                    "marginTop": 4,
-                    "textAlign": "left",
-                  },
-                ]
-              }
-              testID="item-subtitle"
-            >
-              A Subtitle
-            </Text>
+              testID="item-photo"
+            />
           </View>
           <View
             style={
               Array [
-                Object {},
+                Object {
+                  "justifyContent": "space-between",
+                  "width": "65%",
+                },
               ]
             }
           >
-            <Text
-              numberOfLines={2}
+            <View
               style={
                 Array [
-                  Object {
-                    "color": "#1C2530",
-                    "fontFamily": "System",
-                    "fontSize": 14,
-                    "fontWeight": "400",
-                    "textAlign": "left",
-                  },
+                  Object {},
                 ]
               }
-              testID="item-description"
             >
-              A Description
-            </Text>
-          </View>
-          <View
-            style={
-              Array [
-                Object {},
-              ]
-            }
-          >
-            <Text
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1C2530",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "bold",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="item-title"
+              >
+                A Title
+              </Text>
+              <Text
+                caption={true}
+                style={
+                  Array [
+                    Object {
+                      "color": "#97A4AB",
+                      "fontFamily": "System",
+                      "fontSize": 12,
+                      "fontWeight": "400",
+                      "marginTop": 4,
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="item-subtitle"
+              >
+                A Subtitle
+              </Text>
+            </View>
+            <View
               style={
                 Array [
-                  Object {
-                    "color": "#97A4AB",
-                    "fontFamily": "System",
-                    "fontSize": 12,
-                    "fontStyle": "italic",
-                    "fontWeight": "bold",
-                    "textAlign": "left",
-                  },
+                  Object {},
                 ]
               }
-              testID="item-tags"
             >
-              Tag One 
-              Tag Two
-            </Text>
+              <Text
+                numberOfLines={2}
+                style={
+                  Array [
+                    Object {
+                      "color": "#1C2530",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="item-description"
+              >
+                A Description
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {},
+                ]
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#97A4AB",
+                      "fontFamily": "System",
+                      "fontSize": 12,
+                      "fontStyle": "italic",
+                      "fontWeight": "bold",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="item-tags"
+              >
+                Tag One 
+                Tag Two
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -239,7 +249,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "flexDirection": "row",
+            "flexDirection": "column",
             "opacity": 1,
             "paddingVertical": 22,
           }
@@ -250,565 +260,126 @@ exports[`CardList Rendering renders itself correctly 1`] = `
           style={
             Array [
               Object {
-                "width": "35%",
+                "flexDirection": "row",
               },
             ]
           }
         >
-          <Image
-            source={
-              Object {
-                "uri": "https://images.com/abc.png",
-              }
-            }
+          <View
             style={
               Array [
                 Object {
-                  "borderRadius": 8,
-                  "height": 96,
-                  "width": 96,
+                  "width": "35%",
                 },
               ]
             }
-            testID="item-photo"
-          />
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "justifyContent": "space-between",
-                "width": "65%",
-              },
-            ]
-          }
-        >
-          <View
-            style={
-              Array [
-                Object {},
-              ]
-            }
           >
-            <Text
+            <Image
+              source={
+                Object {
+                  "uri": "https://images.com/abc.png",
+                }
+              }
               style={
                 Array [
                   Object {
-                    "color": "#1C2530",
-                    "fontFamily": "System",
-                    "fontSize": 14,
-                    "fontWeight": "bold",
-                    "textAlign": "left",
+                    "borderRadius": 8,
+                    "height": 96,
+                    "width": 96,
                   },
                 ]
               }
-              testID="item-title"
-            >
-              A Title
-            </Text>
-            <Text
-              caption={true}
-              style={
-                Array [
-                  Object {
-                    "color": "#97A4AB",
-                    "fontFamily": "System",
-                    "fontSize": 12,
-                    "fontWeight": "400",
-                    "marginTop": 4,
-                    "textAlign": "left",
-                  },
-                ]
-              }
-              testID="item-subtitle"
-            >
-              A Subtitle
-            </Text>
+              testID="item-photo"
+            />
           </View>
           <View
             style={
               Array [
-                Object {},
+                Object {
+                  "justifyContent": "space-between",
+                  "width": "65%",
+                },
               ]
             }
           >
-            <Text
-              numberOfLines={2}
+            <View
               style={
                 Array [
-                  Object {
-                    "color": "#1C2530",
-                    "fontFamily": "System",
-                    "fontSize": 14,
-                    "fontWeight": "400",
-                    "textAlign": "left",
-                  },
+                  Object {},
                 ]
               }
-              testID="item-description"
             >
-              A Description
-            </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1C2530",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "bold",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="item-title"
+              >
+                A Title
+              </Text>
+              <Text
+                caption={true}
+                style={
+                  Array [
+                    Object {
+                      "color": "#97A4AB",
+                      "fontFamily": "System",
+                      "fontSize": 12,
+                      "fontWeight": "400",
+                      "marginTop": 4,
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="item-subtitle"
+              >
+                A Subtitle
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {},
+                ]
+              }
+            >
+              <Text
+                numberOfLines={2}
+                style={
+                  Array [
+                    Object {
+                      "color": "#1C2530",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontWeight": "400",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="item-description"
+              >
+                A Description
+              </Text>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {},
+                ]
+              }
+            />
           </View>
-          <View
-            style={
-              Array [
-                Object {},
-              ]
-            }
-          />
         </View>
       </View>
     </View>
   </View>
 </RCTScrollView>
-`;
-
-exports[`CardListItem Interactions should call onPress method when pressed 1`] = `
-<View
-  accessible={true}
-  collapsable={false}
-  focusable={true}
-  nativeID="animatedComponent"
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "flexDirection": "row",
-      "opacity": 1,
-      "paddingVertical": 22,
-    }
-  }
-  testID="list-item"
->
-  <View
-    style={
-      Array [
-        Object {
-          "width": "35%",
-        },
-      ]
-    }
-  >
-    <Image
-      source={
-        Object {
-          "uri": "https://images.com/abc.png",
-        }
-      }
-      style={
-        Array [
-          Object {
-            "borderRadius": 8,
-            "height": 96,
-            "width": 96,
-          },
-        ]
-      }
-      testID="item-photo"
-    />
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "justifyContent": "space-between",
-          "width": "65%",
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Array [
-          Object {},
-        ]
-      }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#1C2530",
-              "fontFamily": "System",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-title"
-      >
-        A Title
-      </Text>
-      <Text
-        caption={true}
-        style={
-          Array [
-            Object {
-              "color": "#97A4AB",
-              "fontFamily": "System",
-              "fontSize": 12,
-              "fontWeight": "400",
-              "marginTop": 4,
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-subtitle"
-      >
-        A Subtitle
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {},
-        ]
-      }
-    >
-      <Text
-        numberOfLines={2}
-        style={
-          Array [
-            Object {
-              "color": "#1C2530",
-              "fontFamily": "System",
-              "fontSize": 14,
-              "fontWeight": "400",
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-description"
-      >
-        A Description
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {},
-        ]
-      }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#97A4AB",
-              "fontFamily": "System",
-              "fontSize": 12,
-              "fontStyle": "italic",
-              "fontWeight": "bold",
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-tags"
-      >
-        Tag One 
-        Tag Two
-      </Text>
-    </View>
-  </View>
-</View>
-`;
-
-exports[`CardListItem Rendering hides tags when it is null 1`] = `
-<View
-  accessible={true}
-  collapsable={false}
-  focusable={true}
-  nativeID="animatedComponent"
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "flexDirection": "row",
-      "opacity": 1,
-      "paddingVertical": 22,
-    }
-  }
-  testID="list-item"
->
-  <View
-    style={
-      Array [
-        Object {
-          "width": "35%",
-        },
-      ]
-    }
-  >
-    <Image
-      source={
-        Object {
-          "uri": "https://images.com/abc.png",
-        }
-      }
-      style={
-        Array [
-          Object {
-            "borderRadius": 8,
-            "height": 96,
-            "width": 96,
-          },
-        ]
-      }
-      testID="item-photo"
-    />
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "justifyContent": "space-between",
-          "width": "65%",
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Array [
-          Object {},
-        ]
-      }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#1C2530",
-              "fontFamily": "System",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-title"
-      >
-        A Title
-      </Text>
-      <Text
-        caption={true}
-        style={
-          Array [
-            Object {
-              "color": "#97A4AB",
-              "fontFamily": "System",
-              "fontSize": 12,
-              "fontWeight": "400",
-              "marginTop": 4,
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-subtitle"
-      >
-        A Subtitle
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {},
-        ]
-      }
-    >
-      <Text
-        numberOfLines={2}
-        style={
-          Array [
-            Object {
-              "color": "#1C2530",
-              "fontFamily": "System",
-              "fontSize": 14,
-              "fontWeight": "400",
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-description"
-      >
-        A Description
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {},
-        ]
-      }
-    />
-  </View>
-</View>
-`;
-
-exports[`CardListItem Rendering renders itself correctly 1`] = `
-<View
-  accessible={true}
-  collapsable={false}
-  focusable={true}
-  nativeID="animatedComponent"
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "flexDirection": "row",
-      "opacity": 1,
-      "paddingVertical": 22,
-    }
-  }
-  testID="list-item"
->
-  <View
-    style={
-      Array [
-        Object {
-          "width": "35%",
-        },
-      ]
-    }
-  >
-    <Image
-      source={
-        Object {
-          "uri": "https://images.com/abc.png",
-        }
-      }
-      style={
-        Array [
-          Object {
-            "borderRadius": 8,
-            "height": 96,
-            "width": 96,
-          },
-        ]
-      }
-      testID="item-photo"
-    />
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "justifyContent": "space-between",
-          "width": "65%",
-        },
-      ]
-    }
-  >
-    <View
-      style={
-        Array [
-          Object {},
-        ]
-      }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#1C2530",
-              "fontFamily": "System",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-title"
-      >
-        A Title
-      </Text>
-      <Text
-        caption={true}
-        style={
-          Array [
-            Object {
-              "color": "#97A4AB",
-              "fontFamily": "System",
-              "fontSize": 12,
-              "fontWeight": "400",
-              "marginTop": 4,
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-subtitle"
-      >
-        A Subtitle
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {},
-        ]
-      }
-    >
-      <Text
-        numberOfLines={2}
-        style={
-          Array [
-            Object {
-              "color": "#1C2530",
-              "fontFamily": "System",
-              "fontSize": 14,
-              "fontWeight": "400",
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-description"
-      >
-        A Description
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {},
-        ]
-      }
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#97A4AB",
-              "fontFamily": "System",
-              "fontSize": 12,
-              "fontStyle": "italic",
-              "fontWeight": "bold",
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="item-tags"
-      >
-        Tag One 
-        Tag Two
-      </Text>
-    </View>
-  </View>
-</View>
 `;
