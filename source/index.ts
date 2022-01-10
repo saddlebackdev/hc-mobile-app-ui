@@ -62,7 +62,7 @@ export {IProps as HorizontalListProps} from './modules/lists/horizontal-list.typ
 
 // Card List
 export {default as CardList} from './modules/lists/card-list';
-export {default as CardListItem} from './modules/lists/card-list';
+export {default as CardListItem} from './modules/lists/card-list-item';
 export {
   IProps as CardListProps,
   ICardListItem as CardListItemProps,

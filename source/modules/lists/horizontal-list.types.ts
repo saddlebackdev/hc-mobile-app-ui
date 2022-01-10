@@ -6,6 +6,8 @@ export interface IStyledHeader {
 // Styled Item
 export interface IStyledItem {
   $gutterSize: number;
+  $hasPaddedHeader: number;
+  $isFirstChild: boolean;
   $isLastChild: boolean;
 }
 
