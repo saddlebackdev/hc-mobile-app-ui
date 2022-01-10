@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.0.12
+
+- Fix list padding in HorizontalList when paddedHeader is true
+- Fix CardListItem export and undefined React issue
+
+---
+
 ### v0.0.11
 
 - Export CardListItem as a separate component

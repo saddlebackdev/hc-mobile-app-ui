@@ -31,9 +31,29 @@ const StyledHeaderLinkLabel = Styled(Text)`
 `;
 const StyledFlatList = Styled.FlatList``;
 const StyledItem = Styled.View<IStyledItem>`
-  margin-right: ${({$gutterSize, $isLastChild}) => {
-    return $isLastChild ? 0 : $gutterSize;
-  }}px;
+  margin-left: ${({$hasPaddedHeader, $isFirstChild}) => {
+    if (!$isFirstChild) {
+      return '0px';
+    }
+
+    if ($hasPaddedHeader) {
+      return `${majorScale(2)}px`;
+    }
+
+    return '0px';
+  }};
+
+  margin-right: ${({$gutterSize, $hasPaddedHeader, $isLastChild}) => {
+    if (!$isLastChild) {
+      return `${$gutterSize}px`;
+    }
+
+    if ($hasPaddedHeader) {
+      return `${majorScale(2)}px`;
+    }
+
+    return '0px';
+  }};
 `;
 
 // Component
@@ -58,15 +78,19 @@ export const HorizontalList: React.FC<IProps> = ({
 
   // Render Item
   const renderItem = ({item, index}): React.ReactElement => {
-    let isLastChild = false;
+    let isFirstChild = false,
+      isLastChild = false;
 
     if (listItems) {
+      isFirstChild = index === 0;
       isLastChild = listItems.length - 1 === index;
     }
 
     return (
       <StyledItem
         $gutterSize={gutterSize}
+        $hasPaddedHeader={paddedHeader}
+        $isFirstChild={isFirstChild}
         $isLastChild={isLastChild}
         testID="list-item">
         {item}
