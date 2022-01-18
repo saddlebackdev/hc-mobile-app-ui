@@ -79,7 +79,7 @@ exports[`Radio Rendering Variants horizontal: should match snapshot 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
@@ -146,7 +146,7 @@ exports[`Radio Rendering Variants horizontal: should match snapshot 1`] = `
           Object {
             "color": "#97A4AB",
             "fontFamily": "System",
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
@@ -212,7 +212,7 @@ exports[`Radio Rendering Variants horizontal: should match snapshot 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
@@ -307,7 +307,7 @@ exports[`Radio Rendering Variants vertical: should match snapshot 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
@@ -374,7 +374,7 @@ exports[`Radio Rendering Variants vertical: should match snapshot 1`] = `
           Object {
             "color": "#97A4AB",
             "fontFamily": "System",
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
@@ -440,7 +440,7 @@ exports[`Radio Rendering Variants vertical: should match snapshot 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
@@ -535,7 +535,7 @@ exports[`Radio Rendering renders itself correctly 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
@@ -602,7 +602,7 @@ exports[`Radio Rendering renders itself correctly 1`] = `
           Object {
             "color": "#97A4AB",
             "fontFamily": "System",
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,
@@ -668,7 +668,7 @@ exports[`Radio Rendering renders itself correctly 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "400",
             "paddingLeft": 11,
             "paddingTop": 2,

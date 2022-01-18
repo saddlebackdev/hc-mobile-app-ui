@@ -78,7 +78,7 @@ export const Checkbox: React.FC<IProps> = React.memo(
         <StyledCheckboxLabel testID="checkbox-label">
           {label}
         </StyledCheckboxLabel>
-        <StyledCheckboxHint testID="checkbox-hint" caption>
+        <StyledCheckboxHint testID="checkbox-hint" variant="caption">
           {hint}
         </StyledCheckboxHint>
       </StyledDetailsWrapper>
