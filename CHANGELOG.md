@@ -1,5 +1,17 @@
 # Changelog
 
+### v0.0.13
+
+- Text related changes and update snapshots
+- Fix linkLabel font size of HorizontalList
+- Hide CardListItem's optional fields when not passed
+- Hide TextInput label when not passed
+- Hide chip close button when onPress is not passed
+- Allow Button to use any color from theme
+- Update Text component to have variants
+
+---
+
 ### v0.0.12
 
 - Fix list padding in HorizontalList when paddedHeader is true
