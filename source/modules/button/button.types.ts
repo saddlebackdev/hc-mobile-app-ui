@@ -9,8 +9,15 @@ interface ICommonProps {
   /** Determines the appearance of the button. Can be filled or outline. Defaults to filled */
   appearance?: 'filled' | 'outline';
 
-  /** Determines the color of the button. Can be primary, secondary, info, success, warning or danger. Defaults to primary */
-  color?: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'danger';
+  /** Determines the color of the button. Can be primary, secondary, info, success, warning, danger or any color from the theme. Defaults to primary */
+  color?:
+    | 'primary'
+    | 'secondary'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | string;
 
   /** If true, renders a small button */
   small?: boolean;
