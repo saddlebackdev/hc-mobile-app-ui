@@ -4,5 +4,5 @@ export interface IProps {
   label: string;
 
   /** Function to be called when close icon is pressed. */
-  onPress: any;
+  onPress?: any;
 }

@@ -14,9 +14,8 @@ import {LayoutUtils} from '../utilities';
 const StyledWrapper = Styled.View`
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-
   align-self: flex-start;
+  align-items: center;
 
   background-color: ${({theme}) => theme.colors.grayFour};
 
@@ -38,12 +37,15 @@ export const Chip: React.FC<IProps> = React.memo(
   ({label, onPress}): React.ReactElement => (
     <StyledWrapper testID="chip">
       <StyledLabel testID="chip-label">{label}</StyledLabel>
-      <StyledCloseButton
-        onPress={onPress}
-        testID="chip-close-button"
-        hitSlop={LayoutUtils.addHitSlop(6)}>
-        <Icon type="closeCircle" size={16} color="white" />
-      </StyledCloseButton>
+
+      {onPress && (
+        <StyledCloseButton
+          onPress={onPress}
+          testID="chip-close-button"
+          hitSlop={LayoutUtils.addHitSlop(6)}>
+          <Icon type="closeCircle" size={16} color="white" />
+        </StyledCloseButton>
+      )}
     </StyledWrapper>
   ),
 );
