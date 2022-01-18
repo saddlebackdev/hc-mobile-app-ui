@@ -62,7 +62,6 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
       style={
         Array [
           Object {
-            "justifyContent": "space-between",
             "width": "65%",
           },
         ]
@@ -99,7 +98,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
                 "fontFamily": "System",
                 "fontSize": 12,
                 "fontWeight": "400",
-                "marginTop": 4,
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]
@@ -126,6 +125,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontWeight": "400",
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]
@@ -151,6 +151,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
                 "fontSize": 12,
                 "fontStyle": "italic",
                 "fontWeight": "bold",
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]
@@ -228,7 +229,6 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
       style={
         Array [
           Object {
-            "justifyContent": "space-between",
             "width": "65%",
           },
         ]
@@ -265,7 +265,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
                 "fontFamily": "System",
                 "fontSize": 12,
                 "fontWeight": "400",
-                "marginTop": 4,
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]
@@ -292,6 +292,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontWeight": "400",
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]
@@ -368,7 +369,6 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
       style={
         Array [
           Object {
-            "justifyContent": "space-between",
             "width": "65%",
           },
         ]
@@ -405,7 +405,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
                 "fontFamily": "System",
                 "fontSize": 12,
                 "fontWeight": "400",
-                "marginTop": 4,
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]
@@ -432,6 +432,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontWeight": "400",
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]
@@ -457,6 +458,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
                 "fontSize": 12,
                 "fontStyle": "italic",
                 "fontWeight": "bold",
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]

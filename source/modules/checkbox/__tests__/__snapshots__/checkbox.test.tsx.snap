@@ -45,46 +45,5 @@ exports[`Checkbox Rendering renders itself correctly 1`] = `
       ]
     }
   />
-  <View
-    style={
-      Array [
-        Object {
-          "paddingLeft": 11,
-          "paddingTop": 3,
-        },
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "#1C2530",
-            "fontFamily": "System",
-            "fontSize": 18,
-            "fontWeight": "400",
-            "marginBottom": 4,
-            "textAlign": "left",
-          },
-        ]
-      }
-      testID="checkbox-label"
-    />
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "#1C2530",
-            "fontFamily": "System",
-            "fontSize": 14,
-            "fontWeight": "400",
-            "textAlign": "left",
-          },
-        ]
-      }
-      testID="checkbox-hint"
-      variant="caption"
-    />
-  </View>
 </View>
 `;

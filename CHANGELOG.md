@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.0.14
+
+- Fix spacing for CardListItem details view
+- Fix Checkbox label font size and hide optional fields when not passed
+
+---
+
 ### v0.0.13
 
 - Add parentPadding and childPadding props to NestableList
