@@ -91,7 +91,7 @@ export const NestableList: React.FC<IProps> = ({items}): React.ReactElement => {
             <NestableListParentItem onPress={item.onPress} label={item.label} />
             <Divider />
 
-            {item?.children && (
+            {item?.children?.length ? (
               <React.Fragment>
                 <StyledChildContainer testID="children">
                   {item.children.map((child, index) => {
@@ -114,7 +114,7 @@ export const NestableList: React.FC<IProps> = ({items}): React.ReactElement => {
 
                 <Divider />
               </React.Fragment>
-            )}
+            ) : null}
           </React.Fragment>
         );
       })}

@@ -149,6 +149,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
       label: 'Category',
       onPress: onPressMock,
       id: 'app-list-item-category',
+      children: [],
     },
     {
       label: 'Tags',
