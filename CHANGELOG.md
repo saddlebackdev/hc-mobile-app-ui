@@ -8,6 +8,7 @@
 - Hide TextInput label when not passed
 - Hide chip close button when onPress is not passed
 - Allow Button to use any color from theme
+- Fix null child issue in ButtonGroup
 - Update Text component to have variants
 
 ---
