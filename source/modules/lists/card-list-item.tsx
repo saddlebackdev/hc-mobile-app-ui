@@ -25,7 +25,6 @@ const StyledCardPhotoWrapper = Styled.View`
 `;
 const StyledCardDetailsWrapper = Styled.View`
   width: 65%;
-  justify-content: space-between;
 `;
 const StyledCardDetailsRow = Styled.View``;
 const StyledPhoto = Styled.Image`
@@ -38,9 +37,10 @@ const StyledTitle = Styled(Text)`
 `;
 const StyledSubTitle = Styled(Text)`
   font-size: 12px;
-  margin-top: 4px;
+  margin-top: 8px;
 `;
 const StyledDescription = Styled(Text)`
+  margin-top: 8px;
   font-size: ${({theme}) => theme.typography.sizes.small}px;
 `;
 const StyledTags = Styled(Text)`
@@ -48,6 +48,7 @@ const StyledTags = Styled(Text)`
   font-style: italic;
   font-weight: bold;
   color: ${({theme}) => theme.colors.grayFour};
+  marginTop: 8px;
 `;
 
 // Component
@@ -74,22 +75,22 @@ export const CardListItem: React.FC<IProps> = ({
           <StyledCardDetailsRow>
             <StyledTitle testID="item-title">{title}</StyledTitle>
 
-            {subTitle && (
+            {subTitle ? (
               <StyledSubTitle variant="caption" testID="item-subtitle">
                 {subTitle}
               </StyledSubTitle>
-            )}
+            ) : null}
           </StyledCardDetailsRow>
 
-          {description && (
+          {description ? (
             <StyledCardDetailsRow>
               <StyledDescription numberOfLines={2} testID="item-description">
                 {description}
               </StyledDescription>
             </StyledCardDetailsRow>
-          )}
+          ) : null}
 
-          {tags && (
+          {tags ? (
             <StyledCardDetailsRow>
               <StyledTags testID="item-tags">
                 {tags.map((tag, ndx) => {
@@ -99,11 +100,11 @@ export const CardListItem: React.FC<IProps> = ({
                 })}
               </StyledTags>
             </StyledCardDetailsRow>
-          )}
+          ) : null}
         </StyledCardDetailsWrapper>
       </StyledCardContent>
 
-      {marker && <StyledCardMarker>{marker}</StyledCardMarker>}
+      {marker ? <StyledCardMarker>{marker}</StyledCardMarker> : null}
     </StyledCard>
   </React.Fragment>
 );
