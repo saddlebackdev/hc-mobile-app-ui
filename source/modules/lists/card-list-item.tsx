@@ -73,17 +73,24 @@ export const CardListItem: React.FC<IProps> = ({
         <StyledCardDetailsWrapper>
           <StyledCardDetailsRow>
             <StyledTitle testID="item-title">{title}</StyledTitle>
-            <StyledSubTitle caption testID="item-subtitle">
-              {subTitle}
-            </StyledSubTitle>
+
+            {subTitle && (
+              <StyledSubTitle variant="caption" testID="item-subtitle">
+                {subTitle}
+              </StyledSubTitle>
+            )}
           </StyledCardDetailsRow>
-          <StyledCardDetailsRow>
-            <StyledDescription numberOfLines={2} testID="item-description">
-              {description}
-            </StyledDescription>
-          </StyledCardDetailsRow>
-          <StyledCardDetailsRow>
-            {tags && (
+
+          {description && (
+            <StyledCardDetailsRow>
+              <StyledDescription numberOfLines={2} testID="item-description">
+                {description}
+              </StyledDescription>
+            </StyledCardDetailsRow>
+          )}
+
+          {tags && (
+            <StyledCardDetailsRow>
               <StyledTags testID="item-tags">
                 {tags.map((tag, ndx) => {
                   const isLastChild = tags.length - 1 === ndx;
@@ -91,8 +98,8 @@ export const CardListItem: React.FC<IProps> = ({
                   return isLastChild ? tag : `${tag} `;
                 })}
               </StyledTags>
-            )}
-          </StyledCardDetailsRow>
+            </StyledCardDetailsRow>
+          )}
         </StyledCardDetailsWrapper>
       </StyledCardContent>
 
