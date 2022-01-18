@@ -4,6 +4,8 @@ import Styled from 'styled-components/native';
 
 // Types
 import {
+  IStyledParent,
+  IStyledChildContainer,
   IStyledChild,
   IParentItemProps,
   IChildItemProps,
@@ -19,21 +21,27 @@ import Icon from '../icon/icon';
 
 // Styles
 const StyledWrapper = Styled.View``;
-const StyledParent = Styled.TouchableOpacity`
+const StyledParent = Styled.TouchableOpacity<IStyledParent>`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
   padding-top: ${minorScale(2.75)}px;
-  padding-horizontal: ${majorScale(1)}px;
   padding-bottom: ${minorScale(2.5)}px;
+
+  padding-horizontal: ${({$horizontalPadding}) => {
+    return $horizontalPadding || majorScale(1);
+  }}px;
 `;
 const StyledParentLabel = Styled(Text)`
   font-weight: 500;
   font-size: ${({theme}) => theme.typography.sizes.small}px;
 `;
-const StyledChildContainer = Styled.View`
-  padding: ${majorScale(2)}px;
+const StyledChildContainer = Styled.View<IStyledChildContainer>`
+  padding-vertical: ${majorScale(2)}px;
+  padding-horizontal: ${({$horizontalPadding}) => {
+    return $horizontalPadding || majorScale(2);
+  }}px;
 `;
 const StyledChild = Styled.TouchableOpacity<IStyledChild>`
   flex-direction: row;
@@ -66,10 +74,12 @@ export const NestableListChildItem: React.FC<IChildItemProps> = ({
 // Component
 export const NestableListParentItem: React.FC<IParentItemProps> = ({
   onPress,
+  horizontalPadding,
   label,
 }): React.ReactElement => (
   <StyledParent
     activeOpacity={0.75}
+    $horizontalPadding={horizontalPadding}
     onPress={onPress}
     hitSlop={LayoutUtils.addHitSlop(12)}
     testID="parent">
@@ -79,7 +89,11 @@ export const NestableListParentItem: React.FC<IParentItemProps> = ({
 );
 
 // Component
-export const NestableList: React.FC<IProps> = ({items}): React.ReactElement => {
+export const NestableList: React.FC<IProps> = ({
+  items,
+  parentPadding,
+  childPadding,
+}): React.ReactElement => {
   return (
     <StyledWrapper testID="list">
       {items.map((item, ndx) => {
@@ -88,12 +102,18 @@ export const NestableList: React.FC<IProps> = ({items}): React.ReactElement => {
         return (
           <React.Fragment key={item.id}>
             {isFirstChild && <Divider />}
-            <NestableListParentItem onPress={item.onPress} label={item.label} />
+            <NestableListParentItem
+              onPress={item.onPress}
+              horizontalPadding={parentPadding}
+              label={item.label}
+            />
             <Divider />
 
             {item?.children?.length ? (
               <React.Fragment>
-                <StyledChildContainer testID="children">
+                <StyledChildContainer
+                  $horizontalPadding={childPadding}
+                  testID="children">
                   {item.children.map((child, index) => {
                     let isLastChild: boolean = false;
 

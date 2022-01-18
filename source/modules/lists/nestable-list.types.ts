@@ -1,6 +1,17 @@
+// Styled Parent
+export interface IStyledParent {
+  $horizontalPadding?: number;
+}
+
+// Styled Child Container
+export interface IStyledChildContainer {
+  $horizontalPadding?: number;
+}
+
 // Styled Child
 export interface IStyledChild {
   $isLastChild?: boolean;
+  $horizontalPadding?: number;
 }
 
 // Parent Item Props
@@ -10,6 +21,9 @@ export interface IParentItemProps {
 
   /** Label for this item. */
   label: string;
+
+  /** */
+  horizontalPadding?: number;
 }
 
 // Child Item Props
@@ -49,4 +63,10 @@ export interface IItem extends IItemChild {
 export interface IProps {
   /** List items to be shown. */
   items: Array<IItem>;
+
+  /** Horizontal padding for parent item. */
+  parentPadding?: number;
+
+  /** Horizontal padding for child item. */
+  childPadding?: number;
 }
