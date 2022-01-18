@@ -35,10 +35,10 @@ describe('Text', () => {
         expect(wrapper).toMatchSnapshot();
       });
 
-      it('caption: should match snapshot', () => {
+      it('variant="caption": should match snapshot', () => {
         const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Text caption>Paragraph goes here</Text>
+            <Text variant="caption">Paragraph goes here</Text>
           </ThemeProvider>,
         );
 

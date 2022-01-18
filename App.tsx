@@ -294,7 +294,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Avatar</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>Used to show profile photo</Text>
+              <Text variant="caption">Used to show profile photo</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -310,7 +310,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Buttons - Filled</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>
+              <Text variant="caption">
                 Solid buttons are high-emphasis. They contain actions that are
                 primary to your app.
               </Text>
@@ -361,7 +361,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Buttons - Outlined</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>
+              <Text variant="caption">
                 Outlined buttons are medium-emphasis buttons. They contain
                 actions that are not the primary action.
               </Text>
@@ -412,7 +412,9 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Buttons - Variants</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>There a multiple variants for buttons.</Text>
+              <Text variant="caption">
+                There a multiple variants for buttons.
+              </Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -431,7 +433,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Button Groups</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>
+              <Text variant="caption">
                 When buttons are grouped two-up, the primary cta is solid on the
                 right, and the secondary cta is outlined on the left.
               </Text>
@@ -477,7 +479,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Bottom Sheet</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>Bottom Sheet component</Text>
+              <Text variant="caption">Bottom Sheet component</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -505,7 +507,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Tiles</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>Tiles contain titles and icons</Text>
+              <Text variant="caption">Tiles contain titles and icons</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -513,7 +515,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
             </Section.Content>
             <Section.Description>
-              <Text caption>Centered Variant</Text>
+              <Text variant="caption">Centered Variant</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -529,7 +531,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Checkbox</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>General Use and Alternative Anatomy</Text>
+              <Text variant="caption">General Use and Alternative Anatomy</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -588,7 +590,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Chip</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>
+              <Text variant="caption">
                 Chips (aka Tags) are compact elements that represent an input,
                 attribute, or action.
               </Text>
@@ -616,7 +618,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Link</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>
+              <Text variant="caption">
                 Chips (aka Tags) are compact elements that represent an input,
                 attribute, or action.
               </Text>
@@ -635,7 +637,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Date Picker</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>General Use</Text>
+              <Text variant="caption">General Use</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -663,7 +665,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Expandable Card</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>
+              <Text variant="caption">
                 When interacted with, the card expands and collapses
               </Text>
             </Section.Description>
@@ -676,7 +678,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   onPress={() => setIsCardExpanded(!isCardExpanded)}
                   subTitle="Today's message from god"
                   title="Daily Verse">
-                  <Text subtitle>
+                  <Text variant="subtitle1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maiores velit exercitationem vitae quam! Voluptatem
                     perspiciatis cumque dolorem, dolores, omnis dolor delectus
@@ -695,7 +697,9 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Headings</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>Headings have variants ranging from h1 to h6</Text>
+              <Text variant="caption">
+                Headings have variants ranging from h1 to h6
+              </Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -726,7 +730,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Text</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>
+              <Text variant="caption">
                 Apart from the default variant, text also has variants like
                 caption, muted and subtitle
               </Text>
@@ -757,7 +761,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 </Text>
               </Row>
               <Row>
-                <Text caption>
+                <Text variant="caption">
                   CAPTION and SUBTITLE &mdash; Lorem ipsum dolor sit amet,
                   consectetur adipiscing elit, sed do eiusmod tempor incididunt
                   ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -778,7 +782,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Radio</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>Vertical Variant</Text>
+              <Text variant="caption">Vertical Variant</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -791,7 +795,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
             </Section.Content>
             <Section.Description>
-              <Text caption>Horizontal Variant</Text>
+              <Text variant="caption">Horizontal Variant</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -812,7 +816,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Select Picker</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>Vertical Variant</Text>
+              <Text variant="caption">Vertical Variant</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -842,7 +846,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Pill Toggle</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>
+              <Text variant="caption">
                 Group Radio buttons together in a pill container
               </Text>
             </Section.Description>
@@ -870,7 +874,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Icon Toggle</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>
+              <Text variant="caption">
                 Group Radio buttons together in a icon-pill container
               </Text>
             </Section.Description>
@@ -898,7 +902,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Text Input</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>Simple text input control.</Text>
+              <Text variant="caption">Simple text input control.</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -936,7 +940,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Heading variant="h2">Text Area</Heading>
             </Section.Title>
             <Section.Description>
-              <Text caption>Simple text area control.</Text>
+              <Text variant="caption">Simple text area control.</Text>
             </Section.Description>
             <Section.Content>
               <Row>
@@ -972,7 +976,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
 
           {/* Nestable List */}
           <Section.Description>
-            <Text caption>Nestable List</Text>
+            <Text variant="caption">Nestable List</Text>
           </Section.Description>
           <Section.Content>
             <Row>
@@ -982,7 +986,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
 
           {/* Selectable List */}
           <Section.Description>
-            <Text caption>Selectable List</Text>
+            <Text variant="caption">Selectable List</Text>
           </Section.Description>
           <Section.Content>
             <Row>
@@ -995,7 +999,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
 
           {/* Horizontal List */}
           <Section.Description>
-            <Text caption>Horizontal List</Text>
+            <Text variant="caption">Horizontal List</Text>
           </Section.Description>
           <Section.Content>
             <Row>
@@ -1020,7 +1024,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
 
           {/* Card List */}
           <Section.Description>
-            <Text caption>Card List</Text>
+            <Text variant="caption">Card List</Text>
           </Section.Description>
           <Section.Content>
             <Row>
