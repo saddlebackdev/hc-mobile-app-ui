@@ -102,10 +102,8 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
     style={
       Array [
         Object {
-          "paddingBottom": 22,
-          "paddingLeft": 22,
-          "paddingRight": 22,
-          "paddingTop": 22,
+          "paddingHorizontal": 22,
+          "paddingVertical": 22,
         },
       ]
     }

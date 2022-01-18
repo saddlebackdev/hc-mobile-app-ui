@@ -2,6 +2,8 @@
 
 ### v0.0.13
 
+- Add parentPadding and childPadding props to NestableList
+- Hide NestableList Children View when no children are present
 - Text related changes and update snapshots
 - Fix linkLabel font size of HorizontalList
 - Hide CardListItem's optional fields when not passed
