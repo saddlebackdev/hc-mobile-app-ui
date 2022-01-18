@@ -106,19 +106,22 @@ export const TextInput: React.FC<IProps> = ({
 
   return (
     <StyledWrapper>
-      <StyledLabel
-        muted={isUnderlined}
-        $isSmallFont={isUnderlined}
-        testID="input-label">
-        {label}{' '}
-        {required && (
-          <StyledLabelAsterisk
-            $isSmallFont={isUnderlined}
-            testID="input-label-asterisk">
-            *
-          </StyledLabelAsterisk>
-        )}
-      </StyledLabel>
+      {label && (
+        <StyledLabel
+          muted={isUnderlined}
+          $isSmallFont={isUnderlined}
+          testID="input-label">
+          {label}{' '}
+          {required && (
+            <StyledLabelAsterisk
+              $isSmallFont={isUnderlined}
+              testID="input-label-asterisk">
+              *
+            </StyledLabelAsterisk>
+          )}
+        </StyledLabel>
+      )}
+
       <StyledInput
         testID="input"
         $isFocused={isFocused}
