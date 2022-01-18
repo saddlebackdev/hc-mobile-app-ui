@@ -146,11 +146,10 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 A Title
               </Text>
               <Text
-                caption={true}
                 style={
                   Array [
                     Object {
-                      "color": "#97A4AB",
+                      "color": "#1C2530",
                       "fontFamily": "System",
                       "fontSize": 12,
                       "fontWeight": "400",
@@ -160,6 +159,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                   ]
                 }
                 testID="item-subtitle"
+                variant="caption"
               >
                 A Subtitle
               </Text>
@@ -326,11 +326,10 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 A Title
               </Text>
               <Text
-                caption={true}
                 style={
                   Array [
                     Object {
-                      "color": "#97A4AB",
+                      "color": "#1C2530",
                       "fontFamily": "System",
                       "fontSize": 12,
                       "fontWeight": "400",
@@ -340,6 +339,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                   ]
                 }
                 testID="item-subtitle"
+                variant="caption"
               >
                 A Subtitle
               </Text>
@@ -369,13 +369,6 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                 A Description
               </Text>
             </View>
-            <View
-              style={
-                Array [
-                  Object {},
-                ]
-              }
-            />
           </View>
         </View>
       </View>

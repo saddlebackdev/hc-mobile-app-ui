@@ -59,6 +59,10 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
         return theme.colors.dangerLight;
       }
       default: {
+        if (color && theme.colors[color]) {
+          return theme.colors[color];
+        }
+
         return theme.colors.primaryLight;
       }
     }
@@ -97,6 +101,10 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
         return theme.colors.dangerLight;
       }
       default: {
+        if (color && theme.colors[color]) {
+          return theme.colors[color];
+        }
+
         return theme.colors.primaryLight;
       }
     }
@@ -112,7 +120,7 @@ const StyledLabel = Styled.Text<IStyledLabel>`
   font-size: ${({small, theme}) => {
     return small
       ? `${theme.typography.sizes.small}px`
-      : `${theme.typography.sizes.regular}px`;
+      : `${theme.typography.sizes.text.button}px`;
   }};
 
   color: ${({appearance, color, disabled, theme}) => {
@@ -144,6 +152,10 @@ const StyledLabel = Styled.Text<IStyledLabel>`
         return theme.colors.dangerLight;
       }
       default: {
+        if (color && theme.colors[color]) {
+          return theme.colors[color];
+        }
+
         return theme.colors.primaryLight;
       }
     }

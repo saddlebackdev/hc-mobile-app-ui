@@ -8,7 +8,7 @@ exports[`Text Rendering Variants alignment-center: should match snapshot 1`] = `
       Object {
         "color": "#1C2530",
         "fontFamily": "System",
-        "fontSize": 16,
+        "fontSize": 18,
         "fontWeight": "400",
         "textAlign": "center",
       },
@@ -28,7 +28,7 @@ exports[`Text Rendering Variants alignment-left: should match snapshot 1`] = `
       Object {
         "color": "#1C2530",
         "fontFamily": "System",
-        "fontSize": 16,
+        "fontSize": 18,
         "fontWeight": "400",
         "textAlign": "left",
       },
@@ -48,29 +48,9 @@ exports[`Text Rendering Variants alignment-right: should match snapshot 1`] = `
       Object {
         "color": "#1C2530",
         "fontFamily": "System",
-        "fontSize": 16,
+        "fontSize": 18,
         "fontWeight": "400",
         "textAlign": "right",
-      },
-    ]
-  }
-  testID="text"
->
-  Paragraph goes here
-</Text>
-`;
-
-exports[`Text Rendering Variants caption: should match snapshot 1`] = `
-<Text
-  caption={true}
-  style={
-    Array [
-      Object {
-        "color": "#97A4AB",
-        "fontFamily": "System",
-        "fontSize": 14,
-        "fontWeight": "400",
-        "textAlign": "left",
       },
     ]
   }
@@ -88,7 +68,7 @@ exports[`Text Rendering Variants inversed: should match snapshot 1`] = `
       Object {
         "color": "#FFFFFF",
         "fontFamily": "System",
-        "fontSize": 16,
+        "fontSize": 18,
         "fontWeight": "400",
         "textAlign": "left",
       },
@@ -108,7 +88,7 @@ exports[`Text Rendering Variants muted: should match snapshot 1`] = `
       Object {
         "color": "#97A4AB",
         "fontFamily": "System",
-        "fontSize": 16,
+        "fontSize": 18,
         "fontWeight": "400",
         "textAlign": "left",
       },
@@ -127,7 +107,7 @@ exports[`Text Rendering Variants subtitle: should match snapshot 1`] = `
       Object {
         "color": "#1C2530",
         "fontFamily": "System",
-        "fontSize": 14,
+        "fontSize": 18,
         "fontWeight": "400",
         "textAlign": "left",
       },
@@ -140,6 +120,26 @@ exports[`Text Rendering Variants subtitle: should match snapshot 1`] = `
 </Text>
 `;
 
+exports[`Text Rendering Variants variant="caption": should match snapshot 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1C2530",
+        "fontFamily": "System",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "textAlign": "left",
+      },
+    ]
+  }
+  testID="text"
+  variant="caption"
+>
+  Paragraph goes here
+</Text>
+`;
+
 exports[`Text Rendering renders itself correctly 1`] = `
 <Text
   style={
@@ -147,7 +147,7 @@ exports[`Text Rendering renders itself correctly 1`] = `
       Object {
         "color": "#1C2530",
         "fontFamily": "System",
-        "fontSize": 16,
+        "fontSize": 18,
         "fontWeight": "400",
         "textAlign": "left",
       },

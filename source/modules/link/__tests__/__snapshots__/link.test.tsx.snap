@@ -26,7 +26,7 @@ exports[`Link Rendering renders itself correctly 1`] = `
         Object {
           "color": "#00AEFF",
           "fontFamily": "System",
-          "fontSize": 16,
+          "fontSize": 18,
           "fontWeight": "500",
           "textAlign": "left",
         },

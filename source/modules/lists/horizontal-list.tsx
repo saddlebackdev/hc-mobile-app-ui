@@ -26,7 +26,6 @@ const StyledHeaderTitle = Styled(Heading)``;
 const StyledHeaderLink = Styled.TouchableOpacity``;
 const StyledHeaderLinkLabel = Styled(Text)`
   color: ${({theme}) => theme.colors.primaryLight};
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
   font-weight: 500;
 `;
 const StyledFlatList = Styled.FlatList``;

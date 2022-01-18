@@ -8,23 +8,6 @@ exports[`TextInput Rendering renders itself correctly 1`] = `
     ]
   }
 >
-  <Text
-    style={
-      Array [
-        Object {
-          "color": "#1C2530",
-          "fontFamily": "System",
-          "fontSize": 18,
-          "fontWeight": "700",
-          "marginBottom": 11,
-          "textAlign": "left",
-        },
-      ]
-    }
-    testID="input-label"
-  >
-     
-  </Text>
   <TextInput
     editable={true}
     onBlur={[Function]}

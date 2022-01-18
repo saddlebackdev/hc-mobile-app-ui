@@ -134,7 +134,7 @@ exports[`HorizontalList Rendering should render the link 1`] = `
             Object {
               "color": "#00AEFF",
               "fontFamily": "System",
-              "fontSize": 14,
+              "fontSize": 18,
               "fontWeight": "500",
               "textAlign": "left",
             },

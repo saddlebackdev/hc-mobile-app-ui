@@ -38,6 +38,14 @@ export interface ITheme {
     sizes: {
       small: number;
       regular: number;
+      text: {
+        body1: number;
+        body2: number;
+        caption: number;
+        button: number;
+        subtitle1: number;
+        subtitle2: number;
+      };
       headings: {
         h1: number;
         h2: number;

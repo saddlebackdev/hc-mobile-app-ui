@@ -26,23 +26,23 @@ export interface IChildItemProps {
 
 // Item Child
 export interface IItemChild {
-  /** Function to be called when this item is pressed. */
+  /** A unique ID for this item. */
   id: string | number;
-  /** Function to be called when this item is pressed. */
+
+  /** If true, disables the item. Defaults to false */
   disabled?: boolean;
+
   /** Function to be called when this item is pressed. */
   onPress: any;
-  /** Function to be called when this item is pressed. */
+
+  /** Label for the item */
   label: string;
 }
 
 // Item
-export interface IItem {
-  id: string | number;
-  label: string;
+export interface IItem extends IItemChild {
+  /**  */
   children?: Array<IItemChild>;
-  disabled?: boolean;
-  onPress: any;
 }
 
 // Props

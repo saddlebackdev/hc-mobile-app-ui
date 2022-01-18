@@ -36,6 +36,10 @@ export const ButtonGroup: React.FC<IProps> = React.memo(({children}) => {
   return (
     <StyledWrapper testID="button-group">
       {React.Children.map(children, (child, ndx) => {
+        if (!child) {
+          return null;
+        }
+
         const isFirstChild = ndx === 0;
         const isLastChild = numberOfChildren - 1 === ndx;
 

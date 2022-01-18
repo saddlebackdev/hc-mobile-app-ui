@@ -38,6 +38,14 @@ export const defaultTheme: ITheme = {
     sizes: {
       small: 14,
       regular: 16,
+      text: {
+        body1: 18,
+        body2: 16,
+        caption: 14,
+        button: 16,
+        subtitle1: 16,
+        subtitle2: 14,
+      },
       headings: {
         h1: 24,
         h2: 20,
