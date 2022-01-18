@@ -53,6 +53,7 @@ const StyledDetailsWrapper = Styled.View`
   padding-left: ${majorScale(1, 'px')};
 `;
 const StyledCheckboxLabel = Styled(Text)`
+  font-size: ${({theme}) => theme.typography.sizes.small}px;
   margin-bottom: 4px;
 `;
 const StyledCheckboxHint = Styled(Text)``;
@@ -74,14 +75,21 @@ export const Checkbox: React.FC<IProps> = React.memo(
         )}
       </StyledCheckboxOuter>
 
-      <StyledDetailsWrapper>
-        <StyledCheckboxLabel testID="checkbox-label">
-          {label}
-        </StyledCheckboxLabel>
-        <StyledCheckboxHint testID="checkbox-hint" variant="caption">
-          {hint}
-        </StyledCheckboxHint>
-      </StyledDetailsWrapper>
+      {label || hint ? (
+        <StyledDetailsWrapper>
+          {label ? (
+            <StyledCheckboxLabel testID="checkbox-label">
+              {label}
+            </StyledCheckboxLabel>
+          ) : null}
+
+          {hint ? (
+            <StyledCheckboxHint testID="checkbox-hint" variant="caption">
+              {hint}
+            </StyledCheckboxHint>
+          ) : null}
+        </StyledDetailsWrapper>
+      ) : null}
     </StyledWrapper>
   ),
 );
