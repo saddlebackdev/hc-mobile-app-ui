@@ -4,7 +4,7 @@ export interface IProps {
   label?: string;
 
   /** Function to be called when the link is pressed. */
-  onLinkPress?: any;
+  onPress?: any;
 
   /** Path to be redirected to. It can be a URL or an in-app route. */
   to: string;

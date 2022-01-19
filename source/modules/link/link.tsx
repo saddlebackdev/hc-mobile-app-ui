@@ -10,24 +10,23 @@ import {IProps} from './link.types';
 import Text from '../text/text';
 
 // Styles
-const StyledWrapper = Styled.TouchableOpacity``;
+const StyledTouchable = Styled.TouchableOpacity``;
 const StyledLabel = Styled(Text)`
   color: ${({theme}) => theme.colors.primaryLight};
-  font-weight: 500;
 `;
 
 // Component
 export const Link: React.FC<IProps> = ({
   label,
   children,
-  onLinkPress,
+  onPress,
   to,
 }): React.ReactElement => {
-  // On Press
-  const onPress = async () => {
+  // On Link Press
+  const onLinkPress = async () => {
     try {
-      if (onLinkPress) {
-        return onLinkPress(to);
+      if (onPress) {
+        return onPress(to);
       }
 
       if (!to) {
@@ -48,13 +47,15 @@ export const Link: React.FC<IProps> = ({
   };
 
   return (
-    <StyledWrapper activeOpacity={0.75} onPress={onPress} testID="link">
+    <StyledTouchable activeOpacity={0.75} onPress={onLinkPress} testID="link">
       {label ? (
-        <StyledLabel testID="link-label">{label}</StyledLabel>
+        <StyledLabel weight="semiBold" testID="link-label">
+          {label}
+        </StyledLabel>
       ) : (
         children
       )}
-    </StyledWrapper>
+    </StyledTouchable>
   );
 };
 
