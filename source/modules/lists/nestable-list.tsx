@@ -14,6 +14,7 @@ import {
 
 // Shared
 import Text from '../text/text';
+import Heading from '../heading/heading';
 import Divider from '../divider/divider';
 import {LayoutUtils} from '../utilities';
 import {majorScale, minorScale} from '../scales';
@@ -33,10 +34,7 @@ const StyledParent = Styled.TouchableOpacity<IStyledParent>`
     return $horizontalPadding || majorScale(1);
   }}px;
 `;
-const StyledParentLabel = Styled(Text)`
-  font-weight: 500;
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
-`;
+const StyledParentLabel = Styled(Heading)``;
 const StyledChildContainer = Styled.View<IStyledChildContainer>`
   padding-vertical: ${majorScale(2)}px;
   padding-horizontal: ${({$horizontalPadding}) => {
@@ -50,9 +48,7 @@ const StyledChild = Styled.TouchableOpacity<IStyledChild>`
 
   margin-bottom: ${({$isLastChild}) => ($isLastChild ? 0 : majorScale(1.25))}px;
 `;
-const StyledChildLabel = Styled(Text)`
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
-`;
+const StyledChildLabel = Styled(Text)``;
 
 // Component
 export const NestableListChildItem: React.FC<IChildItemProps> = ({
@@ -66,7 +62,9 @@ export const NestableListChildItem: React.FC<IChildItemProps> = ({
     $isLastChild={isLastChild}
     hitSlop={LayoutUtils.addHitSlop(12)}
     testID="child">
-    <StyledChildLabel testID="child-label">{label}</StyledChildLabel>
+    <StyledChildLabel variant="subtitle2" testID="child-label">
+      {label}
+    </StyledChildLabel>
     <Icon type="close" size={8} />
   </StyledChild>
 );
@@ -83,7 +81,9 @@ export const NestableListParentItem: React.FC<IParentItemProps> = ({
     onPress={onPress}
     hitSlop={LayoutUtils.addHitSlop(12)}
     testID="parent">
-    <StyledParentLabel testID="parent-label">{label}</StyledParentLabel>
+    <StyledParentLabel variant="h5" testID="parent-label">
+      {label}
+    </StyledParentLabel>
     <Icon type="chevronRight" size={12} />
   </StyledParent>
 );

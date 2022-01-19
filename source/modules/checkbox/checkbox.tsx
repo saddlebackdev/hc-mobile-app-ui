@@ -84,7 +84,7 @@ export const Checkbox: React.FC<IProps> = React.memo(
           ) : null}
 
           {hint ? (
-            <StyledCheckboxHint testID="checkbox-hint" variant="caption">
+            <StyledCheckboxHint muted testID="checkbox-hint" variant="caption">
               {hint}
             </StyledCheckboxHint>
           ) : null}

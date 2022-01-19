@@ -51,10 +51,10 @@ describe('Link', () => {
   });
 
   describe('Interactions', () => {
-    it('should call the onLinkPress method when it is passed', () => {
+    it('should call the onPress method when it is passed', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
-          <Link label="Go To Link" to="home" onLinkPress={onLinkPressMock} />
+          <Link label="Go To Link" to="home" onPress={onLinkPressMock} />
         </ThemeProvider>,
       );
 

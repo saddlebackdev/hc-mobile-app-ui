@@ -7,6 +7,7 @@ import {IProps} from './card-list-item.types';
 
 // Shared
 import Text from '../text/text';
+import Heading from '../heading/heading';
 import {majorScale} from '../scales';
 
 // Styles
@@ -31,10 +32,7 @@ const StyledPhoto = Styled.Image`
   width: 96px; height: 96px;
   border-radius: 8px;
 `;
-const StyledTitle = Styled(Text)`
-  font-weight: bold;
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
-`;
+const StyledTitle = Styled(Heading)``;
 const StyledSubTitle = Styled(Text)`
   font-size: 12px;
   margin-top: 8px;
@@ -43,13 +41,7 @@ const StyledDescription = Styled(Text)`
   margin-top: 8px;
   font-size: ${({theme}) => theme.typography.sizes.small}px;
 `;
-const StyledTags = Styled(Text)`
-  font-size: 12px;
-  font-style: italic;
-  font-weight: bold;
-  color: ${({theme}) => theme.colors.grayFour};
-  marginTop: 8px;
-`;
+const StyledTags = Styled(Text)``;
 
 // Component
 export const CardListItem: React.FC<IProps> = ({
@@ -73,10 +65,12 @@ export const CardListItem: React.FC<IProps> = ({
         </StyledCardPhotoWrapper>
         <StyledCardDetailsWrapper>
           <StyledCardDetailsRow>
-            <StyledTitle testID="item-title">{title}</StyledTitle>
+            <StyledTitle variant="h4" testID="item-title">
+              {title}
+            </StyledTitle>
 
             {subTitle ? (
-              <StyledSubTitle variant="caption" testID="item-subtitle">
+              <StyledSubTitle variant="subtitle2" testID="item-subtitle">
                 {subTitle}
               </StyledSubTitle>
             ) : null}
@@ -84,7 +78,10 @@ export const CardListItem: React.FC<IProps> = ({
 
           {description ? (
             <StyledCardDetailsRow>
-              <StyledDescription numberOfLines={2} testID="item-description">
+              <StyledDescription
+                numberOfLines={2}
+                variant="subtitle2"
+                testID="item-description">
                 {description}
               </StyledDescription>
             </StyledCardDetailsRow>
@@ -92,7 +89,12 @@ export const CardListItem: React.FC<IProps> = ({
 
           {tags ? (
             <StyledCardDetailsRow>
-              <StyledTags testID="item-tags">
+              <StyledTags
+                muted
+                italic
+                variant="subtitle2"
+                weight="bold"
+                testID="item-tags">
                 {tags.map((tag, ndx) => {
                   const isLastChild = tags.length - 1 === ndx;
 

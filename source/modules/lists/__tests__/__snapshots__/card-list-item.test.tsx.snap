@@ -80,13 +80,14 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
               Object {
                 "color": "#1C2530",
                 "fontFamily": "System",
-                "fontSize": 14,
-                "fontWeight": "bold",
+                "fontSize": 16,
+                "fontWeight": "700",
                 "textAlign": "left",
               },
             ]
           }
           testID="item-title"
+          variant="h4"
         >
           A Title
         </Text>
@@ -97,6 +98,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
                 "color": "#1C2530",
                 "fontFamily": "System",
                 "fontSize": 12,
+                "fontStyle": "normal",
                 "fontWeight": "400",
                 "marginTop": 8,
                 "textAlign": "left",
@@ -104,7 +106,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
             ]
           }
           testID="item-subtitle"
-          variant="caption"
+          variant="subtitle2"
         >
           A Subtitle
         </Text>
@@ -124,6 +126,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
                 "color": "#1C2530",
                 "fontFamily": "System",
                 "fontSize": 14,
+                "fontStyle": "normal",
                 "fontWeight": "400",
                 "marginTop": 8,
                 "textAlign": "left",
@@ -131,6 +134,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
             ]
           }
           testID="item-description"
+          variant="subtitle2"
         >
           A Description
         </Text>
@@ -143,20 +147,23 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
         }
       >
         <Text
+          italic={true}
+          muted={true}
           style={
             Array [
               Object {
                 "color": "#97A4AB",
                 "fontFamily": "System",
-                "fontSize": 12,
+                "fontSize": 14,
                 "fontStyle": "italic",
-                "fontWeight": "bold",
-                "marginTop": 8,
+                "fontWeight": "700",
                 "textAlign": "left",
               },
             ]
           }
           testID="item-tags"
+          variant="subtitle2"
+          weight="bold"
         >
           Tag One 
           Tag Two
@@ -247,13 +254,14 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
               Object {
                 "color": "#1C2530",
                 "fontFamily": "System",
-                "fontSize": 14,
-                "fontWeight": "bold",
+                "fontSize": 16,
+                "fontWeight": "700",
                 "textAlign": "left",
               },
             ]
           }
           testID="item-title"
+          variant="h4"
         >
           A Title
         </Text>
@@ -264,6 +272,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
                 "color": "#1C2530",
                 "fontFamily": "System",
                 "fontSize": 12,
+                "fontStyle": "normal",
                 "fontWeight": "400",
                 "marginTop": 8,
                 "textAlign": "left",
@@ -271,7 +280,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
             ]
           }
           testID="item-subtitle"
-          variant="caption"
+          variant="subtitle2"
         >
           A Subtitle
         </Text>
@@ -291,6 +300,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
                 "color": "#1C2530",
                 "fontFamily": "System",
                 "fontSize": 14,
+                "fontStyle": "normal",
                 "fontWeight": "400",
                 "marginTop": 8,
                 "textAlign": "left",
@@ -298,6 +308,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
             ]
           }
           testID="item-description"
+          variant="subtitle2"
         >
           A Description
         </Text>
@@ -387,13 +398,14 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
               Object {
                 "color": "#1C2530",
                 "fontFamily": "System",
-                "fontSize": 14,
-                "fontWeight": "bold",
+                "fontSize": 16,
+                "fontWeight": "700",
                 "textAlign": "left",
               },
             ]
           }
           testID="item-title"
+          variant="h4"
         >
           A Title
         </Text>
@@ -404,6 +416,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
                 "color": "#1C2530",
                 "fontFamily": "System",
                 "fontSize": 12,
+                "fontStyle": "normal",
                 "fontWeight": "400",
                 "marginTop": 8,
                 "textAlign": "left",
@@ -411,7 +424,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
             ]
           }
           testID="item-subtitle"
-          variant="caption"
+          variant="subtitle2"
         >
           A Subtitle
         </Text>
@@ -431,6 +444,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
                 "color": "#1C2530",
                 "fontFamily": "System",
                 "fontSize": 14,
+                "fontStyle": "normal",
                 "fontWeight": "400",
                 "marginTop": 8,
                 "textAlign": "left",
@@ -438,6 +452,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
             ]
           }
           testID="item-description"
+          variant="subtitle2"
         >
           A Description
         </Text>
@@ -450,20 +465,23 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
         }
       >
         <Text
+          italic={true}
+          muted={true}
           style={
             Array [
               Object {
                 "color": "#97A4AB",
                 "fontFamily": "System",
-                "fontSize": 12,
+                "fontSize": 14,
                 "fontStyle": "italic",
-                "fontWeight": "bold",
-                "marginTop": 8,
+                "fontWeight": "700",
                 "textAlign": "left",
               },
             ]
           }
           testID="item-tags"
+          variant="subtitle2"
+          weight="bold"
         >
           Tag One 
           Tag Two

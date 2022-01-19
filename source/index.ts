@@ -41,6 +41,10 @@ export {IProps as FloaterProps} from './modules/floater/floater.types';
 export {default as Link} from './modules/link/link';
 export {IProps as LinkProps} from './modules/link/link.types';
 
+// List Header
+export {default as ListHeader} from './modules/lists/list-header';
+export {IProps as ListHeaderProps} from './modules/lists/list-header.types';
+
 // Nestable List
 export {default as NestableList} from './modules/lists/nestable-list';
 export {

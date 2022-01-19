@@ -6,7 +6,6 @@ import Styled from 'styled-components/native';
 import {IStyledHeader, IStyledItem, IProps} from './horizontal-list.types';
 
 // Shared
-import Text from '../text/text';
 import Heading from '../heading/heading';
 import {majorScale} from '../scales';
 
@@ -24,9 +23,8 @@ const StyledHeader = Styled.View<IStyledHeader>`
 `;
 const StyledHeaderTitle = Styled(Heading)``;
 const StyledHeaderLink = Styled.TouchableOpacity``;
-const StyledHeaderLinkLabel = Styled(Text)`
+const StyledHeaderLinkLabel = Styled(Heading)`
   color: ${({theme}) => theme.colors.primaryLight};
-  font-weight: 500;
 `;
 const StyledFlatList = Styled.FlatList``;
 const StyledItem = Styled.View<IStyledItem>`
@@ -104,7 +102,7 @@ export const HorizontalList: React.FC<IProps> = ({
       {/* Header */}
       {shouldShowHeader && (
         <StyledHeader $paddedHeader={paddedHeader}>
-          <StyledHeaderTitle testID="title" variant="h2">
+          <StyledHeaderTitle testID="title" variant="h1">
             {title}
           </StyledHeaderTitle>
 
@@ -113,7 +111,7 @@ export const HorizontalList: React.FC<IProps> = ({
               testID="link"
               activeOpacity={0.75}
               onPress={onLinkPress}>
-              <StyledHeaderLinkLabel testID="link-label">
+              <StyledHeaderLinkLabel variant="h6" testID="link-label">
                 {linkLabel}
               </StyledHeaderLinkLabel>
             </StyledHeaderLink>

@@ -18,6 +18,7 @@ import {
   NestableList,
   SelectableList,
   HorizontalList,
+  ListHeader,
   CardList,
   Text,
   Heading,
@@ -300,6 +301,26 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             <Section.Content>
               <Row>
                 <Avatar uri={avatarUri} />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* List Header */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">List Header</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used as the header for card lists.</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <ListHeader
+                  title="Categories"
+                  linkLabel="View All"
+                  onLinkPress={onPressMock}
+                />
               </Row>
             </Section.Content>
           </Section.Wrapper>

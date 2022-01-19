@@ -69,6 +69,10 @@ const Text = Styled.Text<IProps>`
     }
   }};
 
+  font-style: ${({italic}) => {
+    return italic ? 'italic' : 'normal';
+  }};
+
   text-align: ${({alignment}): string => {
     if (alignment === 'right') {
       return 'right';

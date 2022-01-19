@@ -27,12 +27,14 @@ exports[`Link Rendering renders itself correctly 1`] = `
           "color": "#00AEFF",
           "fontFamily": "System",
           "fontSize": 18,
-          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontWeight": "600",
           "textAlign": "left",
         },
       ]
     }
     testID="link-label"
+    weight="semiBold"
   >
     Go To Link
   </Text>
