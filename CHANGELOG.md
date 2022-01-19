@@ -1,5 +1,15 @@
 # Changelog
 
+### v0.0.15
+
+- Update In-app documentation
+- Rename prop onLinkPress → onPress of Link component
+- Typography updates throughtout the framework
+- Fix italic props on Text component
+- Added ListHeader component
+
+---
+
 ### v0.0.14
 
 - Fix spacing for CardListItem details view
