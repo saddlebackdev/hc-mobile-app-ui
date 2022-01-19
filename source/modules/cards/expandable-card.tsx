@@ -8,6 +8,7 @@ import {IStyledTileIconWrapper, IProps} from './expandable-card.types';
 // Shared
 import Text from '../text/text';
 import Icon from '../icon/icon';
+import Heading from '../heading/heading';
 import {LayoutUtils} from '../utilities';
 import {majorScale} from '../scales';
 
@@ -29,10 +30,7 @@ const StyledTileIconWrapper = Styled.View<IStyledTileIconWrapper>`
   }};
 `;
 const StyledTileDetails = Styled.View``;
-const StyledTileTitle = Styled(Text)`
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
-  font-weight: bold;
-`;
+const StyledTileTitle = Styled(Heading)``;
 const StyledTileSubtitle = Styled(Text)`
   font-size: 12px;
   margin-bottom: -2px;
@@ -50,10 +48,7 @@ const StyledCardHeaderWrapper = Styled.View`
   padding: ${majorScale(2)}px;
   padding-bottom: 0;
 `;
-const StyledCardHeaderTitle = Styled(Text)`
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
-  font-weight: bold;
-`;
+const StyledCardHeaderTitle = Styled(Heading)``;
 const StyledCardHeaderCloseButton = Styled.TouchableOpacity``;
 const StyledCardContent = Styled.View`
   padding: ${majorScale(2)}px;
@@ -81,7 +76,7 @@ export const ExpandableCard: React.FC<IProps> = ({
           {tileContent ? tileContent : null}
         </StyledTileIconWrapper>
         <StyledTileDetails>
-          <StyledTileTitle inversed={inversed} testID="tile-title">
+          <StyledTileTitle variant="h4" inversed={inversed} testID="tile-title">
             {title}
           </StyledTileTitle>
           {subTitle && (
@@ -100,7 +95,7 @@ export const ExpandableCard: React.FC<IProps> = ({
   return (
     <StyledCardWrapper testID="card">
       <StyledCardHeaderWrapper>
-        <StyledCardHeaderTitle testID="card-title">
+        <StyledCardHeaderTitle variant="h4" testID="card-title">
           {title}
         </StyledCardHeaderTitle>
         <StyledCardHeaderCloseButton
