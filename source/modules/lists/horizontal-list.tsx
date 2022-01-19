@@ -111,10 +111,7 @@ export const HorizontalList: React.FC<IProps> = ({
               testID="link"
               activeOpacity={0.75}
               onPress={onLinkPress}>
-              <StyledHeaderLinkLabel
-                variant="h6"
-                weight="semiBold"
-                testID="link-label">
+              <StyledHeaderLinkLabel variant="h6" testID="link-label">
                 {linkLabel}
               </StyledHeaderLinkLabel>
             </StyledHeaderLink>

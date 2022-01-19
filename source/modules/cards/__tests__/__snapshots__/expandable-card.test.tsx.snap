@@ -34,13 +34,14 @@ exports[`ExpandableCard Rendering: Card card renders correctly 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 14,
-            "fontWeight": "bold",
+            "fontSize": 16,
+            "fontWeight": "700",
             "textAlign": "left",
           },
         ]
       }
       testID="card-title"
+      variant="h4"
     >
       Title
     </Text>
@@ -167,13 +168,14 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 14,
-            "fontWeight": "bold",
+            "fontSize": 16,
+            "fontWeight": "700",
             "textAlign": "left",
           },
         ]
       }
       testID="tile-title"
+      variant="h4"
     >
       Some Title
     </Text>
@@ -186,6 +188,7 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
             "color": "#97A4AB",
             "fontFamily": "System",
             "fontSize": 12,
+            "fontStyle": "normal",
             "fontWeight": "400",
             "marginBottom": -2,
             "marginTop": 3,
@@ -264,13 +267,14 @@ exports[`ExpandableCard Rendering: Tile tile renders correctly 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 14,
-            "fontWeight": "bold",
+            "fontSize": 16,
+            "fontWeight": "700",
             "textAlign": "left",
           },
         ]
       }
       testID="tile-title"
+      variant="h4"
     >
       Title
     </Text>

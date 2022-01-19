@@ -60,13 +60,14 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 14,
-            "fontWeight": "500",
+            "fontSize": 16,
+            "fontWeight": "600",
             "textAlign": "left",
           },
         ]
       }
       testID="parent-label"
+      variant="h5"
     >
       Campus
     </Text>
@@ -147,12 +148,14 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
               "color": "#1C2530",
               "fontFamily": "System",
               "fontSize": 14,
+              "fontStyle": "normal",
               "fontWeight": "400",
               "textAlign": "left",
             },
           ]
         }
         testID="child-label"
+        variant="subtitle2"
       >
         Lake Forest
       </Text>
@@ -210,12 +213,14 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
               "color": "#1C2530",
               "fontFamily": "System",
               "fontSize": 14,
+              "fontStyle": "normal",
               "fontWeight": "400",
               "textAlign": "left",
             },
           ]
         }
         testID="child-label"
+        variant="subtitle2"
       >
         Laguna Woods
       </Text>
@@ -273,12 +278,14 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
               "color": "#1C2530",
               "fontFamily": "System",
               "fontSize": 14,
+              "fontStyle": "normal",
               "fontWeight": "400",
               "textAlign": "left",
             },
           ]
         }
         testID="child-label"
+        variant="subtitle2"
       >
         San Diego
       </Text>
@@ -350,13 +357,14 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 14,
-            "fontWeight": "500",
+            "fontSize": 16,
+            "fontWeight": "600",
             "textAlign": "left",
           },
         ]
       }
       testID="parent-label"
+      variant="h5"
     >
       Category
     </Text>
@@ -427,13 +435,14 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 14,
-            "fontWeight": "500",
+            "fontSize": 16,
+            "fontWeight": "600",
             "textAlign": "left",
           },
         ]
       }
       testID="parent-label"
+      variant="h5"
     >
       Tags
     </Text>
@@ -507,12 +516,14 @@ exports[`NestableListChildItem Rendering renders itself correctly 1`] = `
           "color": "#1C2530",
           "fontFamily": "System",
           "fontSize": 14,
+          "fontStyle": "normal",
           "fontWeight": "400",
           "textAlign": "left",
         },
       ]
     }
     testID="child-label"
+    variant="subtitle2"
   >
     Lake Forest
   </Text>
@@ -574,13 +585,14 @@ exports[`NestableListParentItem Rendering renders itself correctly 1`] = `
         Object {
           "color": "#1C2530",
           "fontFamily": "System",
-          "fontSize": 14,
-          "fontWeight": "500",
+          "fontSize": 16,
+          "fontWeight": "600",
           "textAlign": "left",
         },
       ]
     }
     testID="parent-label"
+    variant="h5"
   >
     Campus
   </Text>
