@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
+import {Text} from 'react-native';
 
 import Avatar from '../avatar';
 import ThemeProvider from '../../theming/theme-provider';
@@ -19,6 +20,20 @@ describe('Avatar', () => {
       const image = wrapper.getByTestId('avatar-image');
 
       expect(image).toBeDefined();
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('renders the passed marker correctly', () => {
+      const wrapper = render(
+        <ThemeProvider theme={defaultTheme}>
+          <Avatar marker={<Text>O</Text>} uri="https://example.com/baby.jpg" />
+        </ThemeProvider>,
+      );
+
+      const marker = wrapper.getByTestId('avatar-marker');
+
+      expect(marker).toBeDefined();
 
       expect(wrapper).toMatchSnapshot();
     });

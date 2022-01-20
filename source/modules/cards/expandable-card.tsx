@@ -33,8 +33,8 @@ const StyledTileDetails = Styled.View``;
 const StyledTileTitle = Styled(Heading)``;
 const StyledTileSubtitle = Styled(Text)`
   font-size: 12px;
-  margin-bottom: -2px;
-  margin-top: 3px;
+  margin-bottom: 4px;
+  margin-top: 4px;
 `;
 const StyledCardWrapper = Styled.View`
   width: 100%;
@@ -53,6 +53,17 @@ const StyledCardHeaderCloseButton = Styled.TouchableOpacity``;
 const StyledCardContent = Styled.View`
   padding: ${majorScale(2)}px;
 `;
+const StyledMarker = Styled.View`
+  margin-top: 1px;
+  margin-left: 8px;
+  width: 8px; height: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+`;
+const StyledRow = Styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
 
 // Component
 export const ExpandableCard: React.FC<IProps> = ({
@@ -61,6 +72,8 @@ export const ExpandableCard: React.FC<IProps> = ({
   tileContent,
   tileColor = 'secondaryDark',
   inversed = false,
+  subTitleMarker,
+  titleMarker,
   onPress,
   isOpen,
   children,
@@ -76,17 +89,35 @@ export const ExpandableCard: React.FC<IProps> = ({
           {tileContent ? tileContent : null}
         </StyledTileIconWrapper>
         <StyledTileDetails>
-          <StyledTileTitle variant="h4" inversed={inversed} testID="tile-title">
-            {title}
-          </StyledTileTitle>
-          {subTitle && (
-            <StyledTileSubtitle
-              muted
+          {subTitle ? (
+            <StyledRow>
+              <StyledTileSubtitle
+                muted
+                inversed={inversed}
+                testID="tile-subtitle">
+                {subTitle}
+              </StyledTileSubtitle>
+
+              {subTitleMarker ? (
+                <StyledMarker testID="subtitle-marker">
+                  {subTitleMarker}
+                </StyledMarker>
+              ) : null}
+            </StyledRow>
+          ) : null}
+
+          <StyledRow>
+            <StyledTileTitle
+              variant="h4"
               inversed={inversed}
-              testID="tile-subtitle">
-              {subTitle}
-            </StyledTileSubtitle>
-          )}
+              testID="tile-title">
+              {title}
+            </StyledTileTitle>
+
+            {titleMarker ? (
+              <StyledMarker testID="title-marker">{titleMarker}</StyledMarker>
+            ) : null}
+          </StyledRow>
         </StyledTileDetails>
       </StyledTileWrapper>
     );

@@ -28,4 +28,10 @@ export interface IProps {
 
   /** Inversed variant for the tile when collapsed. */
   inversed?: boolean;
+
+  /** A react element to be rendered beside the card subtitle when closed. */
+  subTitleMarker?: ReactElement;
+
+  /** A react element to be rendered beside the card title when closed. */
+  titleMarker?: ReactElement;
 }

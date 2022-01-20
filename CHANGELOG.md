@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.0.16
+
+- Add marker prop in Avatar component
+- Add titleMarker and subTitlemarker props in ExpandableCard component
+
 ### v0.0.15
 
 - Update In-app documentation

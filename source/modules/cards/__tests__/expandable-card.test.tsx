@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 
 import ExpandableCard from '../expandable-card';
 import ThemeProvider from '../../theming/theme-provider';
@@ -85,6 +85,48 @@ describe('ExpandableCard', () => {
       const tileContent = wrapper.getByTestId('tile-content');
 
       expect(tileContent).toBeDefined();
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('renders title marker properly', () => {
+      const wrapper = render(
+        <ThemeProvider theme={defaultTheme}>
+          <ExpandableCard
+            title="Some Title"
+            titleMarker={<Text>O</Text>}
+            subTitle="Some Subtitle"
+            tileContent={<View />}
+            onPress={jest.fn()}
+            isOpen={false}
+          />
+        </ThemeProvider>,
+      );
+
+      const marker = wrapper.getByTestId('title-marker');
+
+      expect(marker).toBeDefined();
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('renders subTitle Marker properly', () => {
+      const wrapper = render(
+        <ThemeProvider theme={defaultTheme}>
+          <ExpandableCard
+            title="Some Title"
+            subTitle="Some Subtitle"
+            subTitleMarker={<Text>O</Text>}
+            tileContent={<View />}
+            onPress={jest.fn()}
+            isOpen={false}
+          />
+        </ThemeProvider>,
+      );
+
+      const marker = wrapper.getByTestId('subtitle-marker');
+
+      expect(marker).toBeDefined();
 
       expect(wrapper).toMatchSnapshot();
     });
