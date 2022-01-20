@@ -105,6 +105,286 @@ exports[`ExpandableCard Rendering: Card card renders correctly 1`] = `
 </View>
 `;
 
+exports[`ExpandableCard Rendering: Tile renders subTitle Marker properly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  hitSlop={
+    Object {
+      "bottom": 12,
+      "left": 12,
+      "right": 12,
+      "top": 12,
+    }
+  }
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="tile"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#1C2530",
+          "borderRadius": 10,
+          "height": 48,
+          "justifyContent": "center",
+          "marginRight": 11,
+          "width": 48,
+        },
+      ]
+    }
+    testID="tile-content"
+  >
+    <View />
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <Text
+        inversed={false}
+        muted={true}
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontFamily": "System",
+              "fontSize": 12,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "marginBottom": 4,
+              "marginTop": 4,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="tile-subtitle"
+      >
+        Some Subtitle
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 8,
+              "height": 8,
+              "marginLeft": 8,
+              "marginTop": 1,
+              "overflow": "hidden",
+              "width": 8,
+            },
+          ]
+        }
+        testID="subtitle-marker"
+      >
+        <Text>
+          O
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <Text
+        inversed={false}
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 16,
+              "fontWeight": "700",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="tile-title"
+        variant="h4"
+      >
+        Some Title
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ExpandableCard Rendering: Tile renders title marker properly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  hitSlop={
+    Object {
+      "bottom": 12,
+      "left": 12,
+      "right": 12,
+      "top": 12,
+    }
+  }
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+  testID="tile"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#1C2530",
+          "borderRadius": 10,
+          "height": 48,
+          "justifyContent": "center",
+          "marginRight": 11,
+          "width": 48,
+        },
+      ]
+    }
+    testID="tile-content"
+  >
+    <View />
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <Text
+        inversed={false}
+        muted={true}
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontFamily": "System",
+              "fontSize": 12,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "marginBottom": 4,
+              "marginTop": 4,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="tile-subtitle"
+      >
+        Some Subtitle
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <Text
+        inversed={false}
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 16,
+              "fontWeight": "700",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="tile-title"
+        variant="h4"
+      >
+        Some Title
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 8,
+              "height": 8,
+              "marginLeft": 8,
+              "marginTop": 1,
+              "overflow": "hidden",
+              "width": 8,
+            },
+          ]
+        }
+        testID="title-marker"
+      >
+        <Text>
+          O
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColor value 1`] = `
 <View
   accessible={true}
@@ -161,45 +441,67 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
       ]
     }
   >
-    <Text
-      inversed={false}
+    <View
       style={
         Array [
           Object {
-            "color": "#1C2530",
-            "fontFamily": "System",
-            "fontSize": 16,
-            "fontWeight": "700",
-            "textAlign": "left",
+            "alignItems": "center",
+            "flexDirection": "row",
           },
         ]
       }
-      testID="tile-title"
-      variant="h4"
     >
-      Some Title
-    </Text>
-    <Text
-      inversed={false}
-      muted={true}
+      <Text
+        inversed={false}
+        muted={true}
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontFamily": "System",
+              "fontSize": 12,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "marginBottom": 4,
+              "marginTop": 4,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="tile-subtitle"
+      >
+        Some Subtitle
+      </Text>
+    </View>
+    <View
       style={
         Array [
           Object {
-            "color": "#97A4AB",
-            "fontFamily": "System",
-            "fontSize": 12,
-            "fontStyle": "normal",
-            "fontWeight": "400",
-            "marginBottom": -2,
-            "marginTop": 3,
-            "textAlign": "left",
+            "alignItems": "center",
+            "flexDirection": "row",
           },
         ]
       }
-      testID="tile-subtitle"
     >
-      Some Subtitle
-    </Text>
+      <Text
+        inversed={false}
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 16,
+              "fontWeight": "700",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="tile-title"
+        variant="h4"
+      >
+        Some Title
+      </Text>
+    </View>
   </View>
 </View>
 `;
@@ -260,24 +562,35 @@ exports[`ExpandableCard Rendering: Tile tile renders correctly 1`] = `
       ]
     }
   >
-    <Text
-      inversed={false}
+    <View
       style={
         Array [
           Object {
-            "color": "#1C2530",
-            "fontFamily": "System",
-            "fontSize": 16,
-            "fontWeight": "700",
-            "textAlign": "left",
+            "alignItems": "center",
+            "flexDirection": "row",
           },
         ]
       }
-      testID="tile-title"
-      variant="h4"
     >
-      Title
-    </Text>
+      <Text
+        inversed={false}
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 16,
+              "fontWeight": "700",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="tile-title"
+        variant="h4"
+      >
+        Title
+      </Text>
+    </View>
   </View>
 </View>
 `;
