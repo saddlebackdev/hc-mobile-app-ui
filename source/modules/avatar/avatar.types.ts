@@ -1,9 +1,16 @@
 // Modules
+import React from 'react';
 import {ImageProps} from 'react-native';
 
 // Styled Wrapper
 export interface IStyledWrapper {
   onPress?: any;
+}
+
+// Styled Marker
+export interface IStyledMarker {
+  $offsetBottom: number;
+  $offsetRight: number;
 }
 
 // Styled Image
@@ -15,6 +22,9 @@ export interface IStyledImage extends ImageProps {
 export interface IProps {
   /** URL of the image */
   uri: string | undefined;
+
+  /** React element to be rendered over the bottom-right corner of the image/icon. */
+  marker?: React.ReactElement;
 
   /** Function to be called when the avatar is pressed */
   onPress?: any;
