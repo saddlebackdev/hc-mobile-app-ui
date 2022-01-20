@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {SafeAreaView} from 'react-native';
+import {View, SafeAreaView} from 'react-native';
 import Styled from 'styled-components/native';
 
 import {
@@ -269,6 +269,11 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const avatarUri =
     'https://images.unsplash.com/photo-1591907235917-3da27ce1421d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=850&q=80';
 
+  const redDotMarker = (
+    // eslint-disable-next-line react-native/no-inline-styles
+    <View style={{width: '100%', height: '100%', backgroundColor: 'red'}} />
+  );
+
   return (
     <ThemeProvider>
       <SafeAreaView>
@@ -301,6 +306,15 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             <Section.Content>
               <Row>
                 <Avatar uri={avatarUri} />
+              </Row>
+              <Row>
+                <Avatar uri={avatarUri} marker={redDotMarker} />
+              </Row>
+              <Row>
+                <Avatar uri={undefined} />
+              </Row>
+              <Row>
+                <Avatar uri={undefined} marker={redDotMarker} />
               </Row>
             </Section.Content>
           </Section.Wrapper>
@@ -699,6 +713,44 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   tileContent={<Text>A</Text>}
                   onPress={() => setIsCardExpanded(!isCardExpanded)}
                   subTitle="Today's message from god"
+                  title="Daily Verse">
+                  <Text variant="subtitle1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores velit exercitationem vitae quam! Voluptatem
+                    perspiciatis cumque dolorem, dolores, omnis dolor delectus
+                    iusto quasi sit voluptatum totam mollitia error, fugit
+                    aspernatur.
+                  </Text>
+                </ExpandableCard>
+              </Row>
+
+              <Row>
+                <ExpandableCard
+                  isOpen={isCardExpanded}
+                  tileColor="infoLight"
+                  tileContent={<Text>A</Text>}
+                  onPress={() => setIsCardExpanded(!isCardExpanded)}
+                  subTitle="Today's message from god"
+                  subTitleMarker={redDotMarker}
+                  title="Daily Verse">
+                  <Text variant="subtitle1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores velit exercitationem vitae quam! Voluptatem
+                    perspiciatis cumque dolorem, dolores, omnis dolor delectus
+                    iusto quasi sit voluptatum totam mollitia error, fugit
+                    aspernatur.
+                  </Text>
+                </ExpandableCard>
+              </Row>
+
+              <Row>
+                <ExpandableCard
+                  isOpen={isCardExpanded}
+                  tileColor="infoLight"
+                  tileContent={<Text>A</Text>}
+                  onPress={() => setIsCardExpanded(!isCardExpanded)}
+                  subTitle="Today's message from god"
+                  titleMarker={redDotMarker}
                   title="Daily Verse">
                   <Text variant="subtitle1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
