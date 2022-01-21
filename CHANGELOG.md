@@ -2,7 +2,9 @@
 
 ### v0.0.17
 
-- Fix Tile component's continuous setState updates
+- Add inversed prop in Avatar component
+- Fix marker sizes in ExpandableCard and Avatar components
+- Fix Tiles component's continuous setState updates
 
 ---
 
