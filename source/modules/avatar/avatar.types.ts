@@ -26,6 +26,9 @@ export interface IProps {
   /** React element to be rendered over the bottom-right corner of the image/icon. */
   marker?: React.ReactElement;
 
+  /** Renders a white icon instead of a black */
+  inversed?: boolean;
+
   /** Function to be called when the avatar is pressed */
   onPress?: any;
 }

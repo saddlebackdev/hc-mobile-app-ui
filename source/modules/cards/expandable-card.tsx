@@ -55,9 +55,9 @@ const StyledCardContent = Styled.View`
 `;
 const StyledMarker = Styled.View`
   margin-top: 1px;
-  margin-left: 8px;
-  width: 8px; height: 8px;
-  border-radius: 8px;
+  margin-left: 10px;
+  width: 12px; height: 12px;
+  border-radius: 12px;
   overflow: hidden;
 `;
 const StyledRow = Styled.View`
