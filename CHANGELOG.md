@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.17
+
+- Fix Tile component's continuous setState updates
+
+---
+
 ### v0.0.16
 
 - Add marker prop in Avatar component
