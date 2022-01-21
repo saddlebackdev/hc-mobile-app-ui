@@ -61,11 +61,17 @@ export const TileGroup: React.FC<IProps> = ({
 }): React.ReactElement => {
   // State
   const [tileSize, setTileSize] = React.useState<number>(0);
+  const [isLayoutSet, setIsLayoutSet] = React.useState<boolean>(false);
 
   // On Layout
   const _onLayout = event => {
+    if (isLayoutSet) {
+      return;
+    }
+
     const {width} = event.nativeEvent.layout;
 
+    setIsLayoutSet(true);
     setTileSize(width);
   };
 
