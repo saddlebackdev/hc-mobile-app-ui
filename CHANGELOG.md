@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.18
+
+- Fix and add markerOffset props to Avatar component
+
+---
+
 ### v0.0.17
 
 - Add inversed prop in Avatar component
