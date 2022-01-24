@@ -96,11 +96,11 @@ exports[`Avatar Rendering renders the passed marker correctly 1`] = `
       Array [
         Object {
           "borderRadius": 12,
-          "bottom": 2,
+          "bottom": -1,
           "height": 12,
           "overflow": "hidden",
           "position": "absolute",
-          "right": 2,
+          "right": -1,
           "width": 12,
         },
       ]

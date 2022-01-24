@@ -39,6 +39,8 @@ const StyledMarker = Styled.View<IStyledMarker>`
 export const Avatar: React.FC<IProps> = ({
   uri,
   onPress,
+  markerOffsetRight,
+  markerOffsetBottom,
   inversed,
   marker,
 }): React.ReactElement => {
@@ -50,8 +52,8 @@ export const Avatar: React.FC<IProps> = ({
 
           {marker ? (
             <StyledMarker
-              $offsetRight={2}
-              $offsetBottom={2}
+              $offsetRight={markerOffsetRight || -1}
+              $offsetBottom={markerOffsetBottom || -1}
               testID="avatar-marker">
               {marker}
             </StyledMarker>
@@ -63,8 +65,8 @@ export const Avatar: React.FC<IProps> = ({
 
           {marker ? (
             <StyledMarker
-              $offsetRight={4}
-              $offsetBottom={4}
+              $offsetRight={markerOffsetRight || 1.5}
+              $offsetBottom={markerOffsetBottom || 1.5}
               testID="avatar-marker">
               {marker}
             </StyledMarker>
