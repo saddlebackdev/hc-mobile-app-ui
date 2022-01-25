@@ -14,6 +14,7 @@ export interface IProps {
 
   /** Name of the icon */
   type:
+    | 'chevronUp'
     | 'chevronDown'
     | 'chevronRight'
     | 'calendar'
