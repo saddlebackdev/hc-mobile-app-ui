@@ -5,6 +5,7 @@ import Styled from 'styled-components/native';
 
 import {
   Avatar,
+  Accordion,
   Button,
   ButtonGroup,
   BottomSheet,
@@ -59,8 +60,6 @@ const onPressMock = () => false;
 export const App: React.FC<IProps> = (): React.ReactElement => {
   const [isChecked, setIsChecked] = React.useState<boolean>(true);
   const [selectedRadio, setSelectedRadio] = React.useState<number>(2);
-  const [selectedHorizontalRadio, setSelectedHorizontalRadio] =
-    React.useState<number>(2);
   const [selectedDate, setSelectedDate] = React.useState<any>(new Date());
   const [activePill, setActivePill] = React.useState<number>(2);
   const [pickerValue, setPickerValue] = React.useState<number>(1);
@@ -69,6 +68,8 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     React.useState<string>('app-list-item-1');
   const [isBottomSheetOpen, setIsBottomSheetOpen] =
     React.useState<boolean>(false);
+  const [selectedHorizontalRadio, setSelectedHorizontalRadio] =
+    React.useState<number>(2);
 
   const pickerOptions = [
     {label: 'Option 1', value: 1},
@@ -315,6 +316,49 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
               <Row>
                 <Avatar uri={undefined} marker={redDotMarker} />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Accordion */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Accordion</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show profile photo</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Accordion title="Accordion 1">
+                  <Text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Placeat corporis repellendus maxime vero nesciunt eos,
+                    obcaecati est magni laborum. Magni eius obcaecati ratione
+                    vel officia fugiat inventore voluptatem hic nulla!
+                  </Text>
+                </Accordion>
+              </Row>
+              <Row>
+                <Accordion title="Accordion 2">
+                  <Text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Placeat corporis repellendus maxime vero nesciunt eos,
+                    obcaecati est magni laborum. Magni eius obcaecati ratione
+                    vel officia fugiat inventore voluptatem hic nulla!
+                  </Text>
+                </Accordion>
+              </Row>
+              <Row>
+                <Accordion title="Accordion 3" isOpen>
+                  <Text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Placeat corporis repellendus maxime vero nesciunt eos,
+                    obcaecati est magni laborum. Magni eius obcaecati ratione
+                    vel officia fugiat inventore voluptatem hic nulla!
+                  </Text>
+                </Accordion>
               </Row>
             </Section.Content>
           </Section.Wrapper>

@@ -1,5 +1,14 @@
 # Changelog
 
+### v0.0.19
+
+- Add Accordion component
+- Add chevron up icon and update user icons
+- Remove padding from centered tiles
+- Fix avatar icon size
+
+---
+
 ### v0.0.18
 
 - Fix and add markerOffset props to Avatar component

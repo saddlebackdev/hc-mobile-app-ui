@@ -39,9 +39,9 @@ const StyledMarker = Styled.View<IStyledMarker>`
 export const Avatar: React.FC<IProps> = ({
   uri,
   onPress,
-  markerOffsetRight,
-  markerOffsetBottom,
-  inversed,
+  markerOffsetRight = -1,
+  markerOffsetBottom = -1,
+  inversed = false,
   marker,
 }): React.ReactElement => {
   return (
@@ -52,8 +52,8 @@ export const Avatar: React.FC<IProps> = ({
 
           {marker ? (
             <StyledMarker
-              $offsetRight={markerOffsetRight || -1}
-              $offsetBottom={markerOffsetBottom || -1}
+              $offsetRight={markerOffsetRight}
+              $offsetBottom={markerOffsetBottom}
               testID="avatar-marker">
               {marker}
             </StyledMarker>
@@ -61,12 +61,12 @@ export const Avatar: React.FC<IProps> = ({
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Icon type="user" color={inversed ? 'white' : 'black'} size={24} />
+          <Icon type="user" color={inversed ? 'white' : 'black'} size={33} />
 
           {marker ? (
             <StyledMarker
-              $offsetRight={markerOffsetRight || 1.5}
-              $offsetBottom={markerOffsetBottom || 1.5}
+              $offsetRight={markerOffsetRight}
+              $offsetBottom={markerOffsetBottom}
               testID="avatar-marker">
               {marker}
             </StyledMarker>

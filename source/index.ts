@@ -2,6 +2,10 @@
 export {default as Avatar} from './modules/avatar/avatar';
 export {IProps as AvatarProps} from './modules/avatar/avatar.types';
 
+// Accordion
+export {default as Accordion} from './modules/accordion/accordion';
+export {IProps as AccordionProps} from './modules/accordion/accordion.types';
+
 // Button
 export {default as Button} from './modules/button/button';
 export {IProps as ButtonProps} from './modules/button/button.types';

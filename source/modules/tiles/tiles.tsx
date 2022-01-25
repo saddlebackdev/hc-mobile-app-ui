@@ -30,8 +30,9 @@ const StyledTile = Styled.TouchableOpacity<IStyledTile>`
 `;
 const StyledTileContainer = Styled.View<IStyledTileContainer>`
   width: 100%; height: 100%;
-  padding: ${majorScale(1)}px;
   border-radius: 5px;
+
+  padding: ${({$isCentered}) => ($isCentered ? 0 : majorScale(1))}px;
 
   justify-content: ${({$isCentered}) => {
     return $isCentered ? 'center' : 'space-between';

@@ -15,8 +15,9 @@ const IconFiles = {
   black: {
     expand: require('../../images/expand-black.png'),
     shrink: require('../../images/shrink-black.png'),
-    chevronDown: require('../../images/chevron-down-black.png'),
+    chevronUp: require('../../images/chevron-up-black.png'),
     chevronRight: require('../../images/chevron-right-black.png'),
+    chevronDown: require('../../images/chevron-down-black.png'),
     closeCircle: require('../../images/close-x-complex-black.png'),
     close: require('../../images/close-light-black.png'),
     calendar: require('../../images/calendar-black.png'),
@@ -28,8 +29,9 @@ const IconFiles = {
   muted: {
     expand: require('../../images/expand-muted.png'),
     shrink: require('../../images/shrink-muted.png'),
-    chevronDown: require('../../images/chevron-down-muted.png'),
+    chevronUp: require('../../images/chevron-up-muted.png'),
     chevronRight: require('../../images/chevron-right-muted.png'),
+    chevronDown: require('../../images/chevron-down-muted.png'),
     closeCircle: require('../../images/close-x-complex-muted.png'),
     close: require('../../images/close-light-muted.png'),
     calendar: require('../../images/calendar-muted.png'),
@@ -41,8 +43,9 @@ const IconFiles = {
   white: {
     expand: require('../../images/expand-white.png'),
     shrink: require('../../images/shrink-white.png'),
-    chevronDown: require('../../images/chevron-down-white.png'),
+    chevronUp: require('../../images/chevron-up-white.png'),
     chevronRight: require('../../images/chevron-right-white.png'),
+    chevronDown: require('../../images/chevron-down-white.png'),
     closeCircle: require('../../images/close-x-complex-white.png'),
     close: require('../../images/close-light-white.png'),
     calendar: require('../../images/calendar-white.png'),
