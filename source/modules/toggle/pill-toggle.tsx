@@ -66,7 +66,6 @@ const StyledItem = Styled.TouchableOpacity<IStyledItem>`
   }};
 `;
 const StyledItemLabel = Styled(Text)<IStyledItemLabel>`
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
   padding-horizontal: ${majorScale(2, 'px')};
   padding-vertical: ${minorScale(2, 'px')};
 `;
@@ -106,6 +105,8 @@ export const PillToggle: React.FC<IProps> = ({
             $isSelected={isSelected}
             onPress={_onPressItem}>
             <StyledItemLabel
+              small
+              weight="semiBold"
               $isDisabled={isDisabled}
               testID="pill-toggle-button-label"
               muted={isDisabled || !isSelected}
