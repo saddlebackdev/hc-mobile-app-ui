@@ -26,10 +26,7 @@ const StyledItem = Styled.TouchableOpacity<IStyledItem>`
   padding-horizontal: ${majorScale(2)}px;
   padding-bottom: ${minorScale(2.5)}px;
 `;
-const StyledItemLabel = Styled(Text)`
-  font-weight: 500;
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
-`;
+const StyledItemLabel = Styled(Text)``;
 
 // Component
 export const SelectableListItem: React.FC<IListItemProps> = ({
@@ -42,7 +39,11 @@ export const SelectableListItem: React.FC<IListItemProps> = ({
     activeOpacity={0.75}
     $isSelected={isSelected}
     onPress={onPress}>
-    <StyledItemLabel testID="item-label" inversed={isSelected}>
+    <StyledItemLabel
+      small
+      weight="semiBold"
+      inversed={isSelected}
+      testID="item-label">
       {label}
     </StyledItemLabel>
     {isSelected && <Icon size={12} color="white" type="tick" />}

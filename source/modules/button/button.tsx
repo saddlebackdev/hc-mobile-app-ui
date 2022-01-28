@@ -5,9 +5,13 @@ import Styled from 'styled-components/native';
 // Types
 import {IProps, IStyledButton, IStyledLabel} from './button.types';
 
+// Shared
+import {minorScale} from '../scales';
+
 // Styles
 const StyledButton = Styled.TouchableOpacity<IStyledButton>`
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -111,10 +115,8 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
   }};
 `;
 const StyledLabel = Styled.Text<IStyledLabel>`
-  font-weight: 500;
-
   font-family: ${({theme, $font = 'primary'}) => {
-    return theme.typography.faces[$font];
+    return theme.typography.faces[`${$font}SemiBold`];
   }};
 
   font-size: ${({small, theme}) => {
@@ -161,6 +163,12 @@ const StyledLabel = Styled.Text<IStyledLabel>`
     }
   }};
 `;
+const StyledLeftIcon = Styled.View`
+  margin-right: ${minorScale(2)}px;
+`;
+const StyledRightIcon = Styled.View`
+  margin-left: ${minorScale(2)}px;
+`;
 
 // Component
 const Button: React.FC<IProps> = React.memo(
@@ -169,6 +177,8 @@ const Button: React.FC<IProps> = React.memo(
     disabled = false,
     appearance = 'filled',
     color = 'primary',
+    leftIcon,
+    rightIcon,
     children,
     small = false,
     hasShadow = false,
@@ -189,6 +199,10 @@ const Button: React.FC<IProps> = React.memo(
         small={small}
         hasShadow={hasShadow}
         {...props}>
+        {/* Left Marker */}
+        {leftIcon ? <StyledLeftIcon>{leftIcon}</StyledLeftIcon> : null}
+
+        {/* Label */}
         <StyledLabel
           $font={font}
           testID="button-label"
@@ -198,6 +212,9 @@ const Button: React.FC<IProps> = React.memo(
           disabled={disabled}>
           {children}
         </StyledLabel>
+
+        {/* Right Marker */}
+        {rightIcon ? <StyledRightIcon>{rightIcon}</StyledRightIcon> : null}
       </StyledButton>
     );
   },

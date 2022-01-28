@@ -65,6 +65,7 @@ exports[`TextInput Rendering should render label when passed 1`] = `
       ]
     }
     testID="input-label"
+    weight="bold"
   >
     A Label
      
@@ -126,6 +127,7 @@ exports[`TextInput Rendering should render label with an asterisk when "required
       ]
     }
     testID="input-label"
+    weight="bold"
   >
     A Label
      

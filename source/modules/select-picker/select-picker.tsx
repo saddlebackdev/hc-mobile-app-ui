@@ -18,10 +18,8 @@ import Icon from '../icon/icon';
 // Styles
 const StyledWrapper = Styled.View``;
 const StyledLabel = Styled(Text)<IStyledLabel>`
-  font-weight: 700;
-  font-size: ${({$isSmallFont}) => ($isSmallFont ? '14px' : '18px')};
-  margin-bottom: ${({$isSmallFont}) => {
-    return $isSmallFont ? minorScale(1, 'px') : majorScale(1, 'px');
+  margin-bottom: ${({$addBottomMargin}) => {
+    return $addBottomMargin ? minorScale(1, 'px') : majorScale(1, 'px');
   }};
 `;
 
@@ -47,7 +45,7 @@ const getStyles = (
     },
     input: {
       color: colors.graySix,
-      fontFamily: typography.faces.primary,
+      fontFamily: typography.faces.primaryRegular,
       fontSize: isUnderlined ? 20 : 16,
     },
     iconContainer: {
@@ -134,7 +132,11 @@ const SelectPicker: React.FC<IProps> = ({
   return (
     <StyledWrapper>
       {label && (
-        <StyledLabel muted={isUnderlined} $isSmallFont={isUnderlined}>
+        <StyledLabel
+          weight="bold"
+          small={isUnderlined}
+          $addBottomMargin={isUnderlined}
+          muted={isUnderlined}>
           {label}
         </StyledLabel>
       )}

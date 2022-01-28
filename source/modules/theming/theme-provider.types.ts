@@ -32,8 +32,17 @@ export interface ITheme {
   /** Typography for the theme */
   typography: {
     faces: {
-      primary: string;
-      secondary: string;
+      // Primary
+      primaryLight: string;
+      primaryRegular: string;
+      primarySemiBold: string;
+      primaryBold: string;
+
+      // Secondary
+      secondaryRegular: string;
+      secondaryLight: string;
+      secondarySemiBold: string;
+      secondaryBold: string;
     };
     sizes: {
       small: number;

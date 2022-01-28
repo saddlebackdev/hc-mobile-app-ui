@@ -3,7 +3,7 @@ import {PickerSelectProps} from 'react-native-picker-select';
 
 // Styled Labe
 export interface IStyledLabel {
-  $isSmallFont: boolean;
+  $addBottomMargin: boolean;
 }
 
 // Props

@@ -34,6 +34,7 @@ exports[`Floater Rendering renders itself correctly 1`] = `
         "borderRadius": 4,
         "borderWidth": 0,
         "display": "flex",
+        "flexDirection": "row",
         "height": 44,
         "justifyContent": "center",
         "opacity": 1,
@@ -60,7 +61,6 @@ exports[`Floater Rendering renders itself correctly 1`] = `
             "color": "#FFFFFF",
             "fontFamily": "System",
             "fontSize": 16,
-            "fontWeight": "500",
           },
         ]
       }

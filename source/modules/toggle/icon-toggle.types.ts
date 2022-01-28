@@ -7,9 +7,6 @@ interface ICommonProps {
 //Styled Item Content
 export interface IStyledItemContent extends ICommonProps {}
 
-//Styled Item Label
-export interface IStyledItemLabel extends ICommonProps {}
-
 // Props
 export interface IProps {
   /** Determines if the toggle control is disabled or not. Defaults to false */

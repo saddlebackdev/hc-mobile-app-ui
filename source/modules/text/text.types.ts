@@ -3,11 +3,14 @@ import {TextProps} from 'react-native';
 
 // Props
 export interface IProps extends TextProps {
-  /** If true, inverses the color of text */
+  /** If true, inverses the color of text. */
   inversed?: boolean;
 
-  /** If true, renders the text as muted */
+  /** If true, renders the text as muted. */
   muted?: boolean;
+
+  /** If true, renders the text with small font size. */
+  small?: boolean;
 
   /** Determines the variant of the text. */
   variant?:
@@ -25,8 +28,8 @@ export interface IProps extends TextProps {
   italic?: boolean;
 
   /** Weight of the font. */
-  weight?: 400 | 600 | 700 | 'regular' | 'semiBold' | 'bold';
+  weight?: 'light' | 'regular' | 'semiBold' | 'bold';
 
-  /** Determines the alignment of the text. Can be left, center or right. Defaults to left */
+  /** Determines the alignment of the text. Can be left, center or right. Defaults to left. */
   alignment?: 'left' | 'center' | 'right';
 }

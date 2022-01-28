@@ -47,8 +47,6 @@ const StyledTileContent = Styled.View<IStyledTileContent>`
   margin-bottom: ${({$isCentered}) => ($isCentered ? '6px' : '0px')};
 `;
 const StyledTileTitle = Styled(Text)<IStyledTileTitle>`
-  font-weight: 600;
-  color: ${({theme}) => theme.colors.white};
   font-size: ${({theme}) => theme.typography.sizes.small}px;
   align-self: ${({$isCentered}) => ($isCentered ? 'center' : 'flex-start')};
   margin-left: ${({$isCentered}) => ($isCentered ? '0px' : '4px')};
@@ -105,7 +103,11 @@ export const TileGroup: React.FC<IProps> = ({
               <StyledTileContent $isCentered={centered} testID="tile-content">
                 {item.content}
               </StyledTileContent>
-              <StyledTileTitle $isCentered={centered} testID="tile-title">
+              <StyledTileTitle
+                weight="semiBold"
+                $isCentered={centered}
+                testID="tile-title"
+                inversed>
                 {item.title}
               </StyledTileTitle>
             </StyledTileContainer>

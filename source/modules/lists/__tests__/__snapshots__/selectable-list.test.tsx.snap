@@ -90,6 +90,7 @@ Array [
         >
           <Text
             inversed={true}
+            small={true}
             style={
               Array [
                 Object {
@@ -97,12 +98,13 @@ Array [
                   "fontFamily": "System",
                   "fontSize": 14,
                   "fontStyle": "normal",
-                  "fontWeight": "500",
+                  "fontWeight": "600",
                   "textAlign": "left",
                 },
               ]
             }
             testID="item-label"
+            weight="semiBold"
           >
             List Item 1
           </Text>
@@ -167,6 +169,7 @@ Array [
         >
           <Text
             inversed={false}
+            small={true}
             style={
               Array [
                 Object {
@@ -174,12 +177,13 @@ Array [
                   "fontFamily": "System",
                   "fontSize": 14,
                   "fontStyle": "normal",
-                  "fontWeight": "500",
+                  "fontWeight": "600",
                   "textAlign": "left",
                 },
               ]
             }
             testID="item-label"
+            weight="semiBold"
           >
             List Item 2
           </Text>
@@ -229,6 +233,7 @@ Array [
         >
           <Text
             inversed={false}
+            small={true}
             style={
               Array [
                 Object {
@@ -236,12 +241,13 @@ Array [
                   "fontFamily": "System",
                   "fontSize": 14,
                   "fontStyle": "normal",
-                  "fontWeight": "500",
+                  "fontWeight": "600",
                   "textAlign": "left",
                 },
               ]
             }
             testID="item-label"
+            weight="semiBold"
           >
             List Item 3
           </Text>
@@ -293,6 +299,7 @@ exports[`SelectableListItem Rendering renders itself correctly 1`] = `
 >
   <Text
     inversed={false}
+    small={true}
     style={
       Array [
         Object {
@@ -300,12 +307,13 @@ exports[`SelectableListItem Rendering renders itself correctly 1`] = `
           "fontFamily": "System",
           "fontSize": 14,
           "fontStyle": "normal",
-          "fontWeight": "500",
+          "fontWeight": "600",
           "textAlign": "left",
         },
       ]
     }
     testID="item-label"
+    weight="semiBold"
   >
     List Item 1
   </Text>
@@ -341,6 +349,7 @@ exports[`SelectableListItem Rendering renders tick icon when selected 1`] = `
 >
   <Text
     inversed={true}
+    small={true}
     style={
       Array [
         Object {
@@ -348,12 +357,13 @@ exports[`SelectableListItem Rendering renders tick icon when selected 1`] = `
           "fontFamily": "System",
           "fontSize": 14,
           "fontStyle": "normal",
-          "fontWeight": "500",
+          "fontWeight": "600",
           "textAlign": "left",
         },
       ]
     }
     testID="item-label"
+    weight="semiBold"
   >
     List Item 1
   </Text>

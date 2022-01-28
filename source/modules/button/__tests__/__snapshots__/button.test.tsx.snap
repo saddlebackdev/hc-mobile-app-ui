@@ -21,6 +21,7 @@ exports[`Button Rendering Variants danger: should match snapshot 1`] = `
       "borderRadius": 4,
       "borderWidth": 0,
       "display": "flex",
+      "flexDirection": "row",
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
@@ -47,7 +48,6 @@ exports[`Button Rendering Variants danger: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
-          "fontWeight": "500",
         },
       ]
     }
@@ -79,6 +79,7 @@ exports[`Button Rendering Variants default: should match snapshot 1`] = `
       "borderRadius": 4,
       "borderWidth": 0,
       "display": "flex",
+      "flexDirection": "row",
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
@@ -105,7 +106,6 @@ exports[`Button Rendering Variants default: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
-          "fontWeight": "500",
         },
       ]
     }
@@ -137,6 +137,7 @@ exports[`Button Rendering Variants info: should match snapshot 1`] = `
       "borderRadius": 4,
       "borderWidth": 0,
       "display": "flex",
+      "flexDirection": "row",
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
@@ -163,7 +164,6 @@ exports[`Button Rendering Variants info: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
-          "fontWeight": "500",
         },
       ]
     }
@@ -195,6 +195,7 @@ exports[`Button Rendering Variants outline: should match snapshot 1`] = `
       "borderRadius": 4,
       "borderWidth": 1,
       "display": "flex",
+      "flexDirection": "row",
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
@@ -221,7 +222,6 @@ exports[`Button Rendering Variants outline: should match snapshot 1`] = `
           "color": "#00AEFF",
           "fontFamily": "System",
           "fontSize": 16,
-          "fontWeight": "500",
         },
       ]
     }
@@ -253,6 +253,7 @@ exports[`Button Rendering Variants primary: should match snapshot 1`] = `
       "borderRadius": 4,
       "borderWidth": 0,
       "display": "flex",
+      "flexDirection": "row",
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
@@ -279,7 +280,6 @@ exports[`Button Rendering Variants primary: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
-          "fontWeight": "500",
         },
       ]
     }
@@ -311,6 +311,7 @@ exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
       "borderRadius": 4,
       "borderWidth": 0,
       "display": "flex",
+      "flexDirection": "row",
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
@@ -337,7 +338,6 @@ exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
-          "fontWeight": "500",
         },
       ]
     }
@@ -369,6 +369,7 @@ exports[`Button Rendering Variants small: should match snapshot 1`] = `
       "borderRadius": 4,
       "borderWidth": 0,
       "display": "flex",
+      "flexDirection": "row",
       "height": 32,
       "justifyContent": "center",
       "opacity": 1,
@@ -395,7 +396,6 @@ exports[`Button Rendering Variants small: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 14,
-          "fontWeight": "500",
         },
       ]
     }
@@ -427,6 +427,7 @@ exports[`Button Rendering Variants success: should match snapshot 1`] = `
       "borderRadius": 4,
       "borderWidth": 0,
       "display": "flex",
+      "flexDirection": "row",
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
@@ -453,7 +454,6 @@ exports[`Button Rendering Variants success: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
-          "fontWeight": "500",
         },
       ]
     }
@@ -485,6 +485,7 @@ exports[`Button Rendering Variants warning: should match snapshot 1`] = `
       "borderRadius": 4,
       "borderWidth": 0,
       "display": "flex",
+      "flexDirection": "row",
       "height": 44,
       "justifyContent": "center",
       "opacity": 1,
@@ -511,7 +512,6 @@ exports[`Button Rendering Variants warning: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
-          "fontWeight": "500",
         },
       ]
     }
