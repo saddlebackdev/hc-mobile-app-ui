@@ -1,4 +1,5 @@
 // Modules
+import React from 'react';
 import {TouchableOpacityProps} from 'react-native';
 
 // Common Props
@@ -41,4 +42,10 @@ export interface IProps extends IStyledButton {
 
   /** Font family to use. */
   font?: 'primary' | 'secondary' | string;
+
+  /** A React Element to be rendered before the button label. */
+  leftIcon?: React.ReactElement;
+
+  /** A React Element to be rendered after the button label. */
+  rightIcon?: React.ReactElement;
 }

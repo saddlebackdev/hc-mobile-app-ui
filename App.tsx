@@ -30,6 +30,7 @@ import {
   PillToggle,
   TextInput,
 } from './source';
+import Icon from './source/modules/icon/icon';
 
 // Interfaces
 interface IProps {}
@@ -397,12 +398,20 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             </Section.Description>
             <Section.Content>
               <Row>
-                <Button appearance="filled" color="primary">
+                <Button
+                  appearance="filled"
+                  color="primary"
+                  leftIcon={<Icon type="user" size={16} color="white" />}>
                   Primary Button
                 </Button>
               </Row>
               <Row>
-                <Button appearance="filled" color="secondary">
+                <Button
+                  appearance="filled"
+                  color="secondary"
+                  rightIcon={
+                    <Icon type="chevronRight" size={12} color="white" />
+                  }>
                   Secondary Button
                 </Button>
               </Row>
