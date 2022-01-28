@@ -10,6 +10,7 @@ exports[`Text Rendering Variants alignment-center: should match snapshot 1`] = `
         "fontFamily": "System",
         "fontSize": 18,
         "fontStyle": "normal",
+        "fontWeight": "400",
         "textAlign": "center",
       },
     ]
@@ -30,6 +31,7 @@ exports[`Text Rendering Variants alignment-left: should match snapshot 1`] = `
         "fontFamily": "System",
         "fontSize": 18,
         "fontStyle": "normal",
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
@@ -50,6 +52,7 @@ exports[`Text Rendering Variants alignment-right: should match snapshot 1`] = `
         "fontFamily": "System",
         "fontSize": 18,
         "fontStyle": "normal",
+        "fontWeight": "400",
         "textAlign": "right",
       },
     ]
@@ -70,6 +73,7 @@ exports[`Text Rendering Variants inversed: should match snapshot 1`] = `
         "fontFamily": "System",
         "fontSize": 18,
         "fontStyle": "normal",
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
@@ -90,6 +94,7 @@ exports[`Text Rendering Variants muted: should match snapshot 1`] = `
         "fontFamily": "System",
         "fontSize": 18,
         "fontStyle": "normal",
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
@@ -109,6 +114,7 @@ exports[`Text Rendering Variants subtitle: should match snapshot 1`] = `
         "fontFamily": "System",
         "fontSize": 18,
         "fontStyle": "normal",
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
@@ -129,6 +135,7 @@ exports[`Text Rendering Variants variant="caption": should match snapshot 1`] = 
         "fontFamily": "System",
         "fontSize": 14,
         "fontStyle": "normal",
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]
@@ -149,6 +156,7 @@ exports[`Text Rendering renders itself correctly 1`] = `
         "fontFamily": "System",
         "fontSize": 18,
         "fontStyle": "normal",
+        "fontWeight": "400",
         "textAlign": "left",
       },
     ]

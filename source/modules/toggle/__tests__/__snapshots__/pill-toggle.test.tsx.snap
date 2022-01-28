@@ -43,6 +43,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
     <Text
       inversed={true}
       muted={false}
+      small={true}
       style={
         Array [
           Object {
@@ -50,6 +51,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
             "fontFamily": "System",
             "fontSize": 14,
             "fontStyle": "normal",
+            "fontWeight": "600",
             "paddingHorizontal": 22,
             "paddingVertical": 10,
             "textAlign": "left",
@@ -57,6 +59,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
         ]
       }
       testID="pill-toggle-button-label"
+      weight="semiBold"
     >
       Selected
     </Text>
@@ -92,6 +95,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
     <Text
       inversed={false}
       muted={true}
+      small={true}
       style={
         Array [
           Object {
@@ -99,6 +103,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
             "fontFamily": "System",
             "fontSize": 14,
             "fontStyle": "normal",
+            "fontWeight": "600",
             "paddingHorizontal": 22,
             "paddingVertical": 10,
             "textAlign": "left",
@@ -106,6 +111,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
         ]
       }
       testID="pill-toggle-button-label"
+      weight="semiBold"
     >
       Unselected
     </Text>
@@ -141,6 +147,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
     <Text
       inversed={false}
       muted={true}
+      small={true}
       style={
         Array [
           Object {
@@ -148,6 +155,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
             "fontFamily": "System",
             "fontSize": 14,
             "fontStyle": "normal",
+            "fontWeight": "600",
             "paddingHorizontal": 22,
             "paddingVertical": 10,
             "textAlign": "left",
@@ -155,6 +163,7 @@ exports[`PillToggle Rendering renders itself correctly 1`] = `
         ]
       }
       testID="pill-toggle-button-label"
+      weight="semiBold"
     >
       Disabled
     </Text>

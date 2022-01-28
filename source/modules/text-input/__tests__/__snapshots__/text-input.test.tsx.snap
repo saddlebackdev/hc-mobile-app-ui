@@ -58,6 +58,7 @@ exports[`TextInput Rendering should render label when passed 1`] = `
           "fontFamily": "System",
           "fontSize": 18,
           "fontStyle": "normal",
+          "fontWeight": "700",
           "marginBottom": 11,
           "textAlign": "left",
         },
@@ -119,6 +120,7 @@ exports[`TextInput Rendering should render label with an asterisk when "required
           "fontFamily": "System",
           "fontSize": 18,
           "fontStyle": "normal",
+          "fontWeight": "700",
           "marginBottom": 11,
           "textAlign": "left",
         },
@@ -137,6 +139,7 @@ exports[`TextInput Rendering should render label with an asterisk when "required
             "fontFamily": "System",
             "fontSize": 18,
             "fontStyle": "normal",
+            "fontWeight": "400",
             "textAlign": "left",
           },
         ]

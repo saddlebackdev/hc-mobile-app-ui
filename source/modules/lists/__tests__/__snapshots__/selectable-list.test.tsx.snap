@@ -98,6 +98,7 @@ Array [
                   "fontFamily": "System",
                   "fontSize": 14,
                   "fontStyle": "normal",
+                  "fontWeight": "600",
                   "textAlign": "left",
                 },
               ]
@@ -176,6 +177,7 @@ Array [
                   "fontFamily": "System",
                   "fontSize": 14,
                   "fontStyle": "normal",
+                  "fontWeight": "600",
                   "textAlign": "left",
                 },
               ]
@@ -239,6 +241,7 @@ Array [
                   "fontFamily": "System",
                   "fontSize": 14,
                   "fontStyle": "normal",
+                  "fontWeight": "600",
                   "textAlign": "left",
                 },
               ]
@@ -304,6 +307,7 @@ exports[`SelectableListItem Rendering renders itself correctly 1`] = `
           "fontFamily": "System",
           "fontSize": 14,
           "fontStyle": "normal",
+          "fontWeight": "600",
           "textAlign": "left",
         },
       ]
@@ -353,6 +357,7 @@ exports[`SelectableListItem Rendering renders tick icon when selected 1`] = `
           "fontFamily": "System",
           "fontSize": 14,
           "fontStyle": "normal",
+          "fontWeight": "600",
           "textAlign": "left",
         },
       ]
