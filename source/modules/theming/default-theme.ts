@@ -1,5 +1,15 @@
+// Modules
+import {Platform} from 'react-native';
+
 // Interfaces
 import {ITheme} from './theme-provider.types';
+
+const fonts = {
+  light: Platform.OS === 'android' ? 'sans-serif-light' : 'System',
+  regular: Platform.OS === 'android' ? 'sans-serif' : 'System',
+  semiBold: Platform.OS === 'android' ? 'sans-serif-medium' : 'System',
+  bold: Platform.OS === 'android' ? 'sans-serif-medium' : 'System',
+};
 
 // Default Theme
 export const defaultTheme: ITheme = {
@@ -32,8 +42,17 @@ export const defaultTheme: ITheme = {
   },
   typography: {
     faces: {
-      primary: 'System',
-      secondary: 'System',
+      // Primary
+      primaryLight: fonts.light,
+      primaryRegular: fonts.regular,
+      primarySemiBold: fonts.semiBold,
+      primaryBold: fonts.bold,
+
+      // Secondary
+      secondaryLight: fonts.light,
+      secondaryRegular: fonts.regular,
+      secondarySemiBold: fonts.semiBold,
+      secondaryBold: fonts.bold,
     },
     sizes: {
       small: 14,

@@ -26,7 +26,6 @@ exports[`Chip Rendering renders correctly 1`] = `
           "fontFamily": "System",
           "fontSize": 14,
           "fontStyle": "normal",
-          "fontWeight": "400",
           "textAlign": "left",
         },
       ]

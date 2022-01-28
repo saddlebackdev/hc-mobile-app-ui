@@ -61,7 +61,6 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
             "color": "#1C2530",
             "fontFamily": "System",
             "fontSize": 16,
-            "fontWeight": "600",
             "textAlign": "left",
           },
         ]
@@ -149,7 +148,6 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
               "fontFamily": "System",
               "fontSize": 14,
               "fontStyle": "normal",
-              "fontWeight": "400",
               "textAlign": "left",
             },
           ]
@@ -214,7 +212,6 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
               "fontFamily": "System",
               "fontSize": 14,
               "fontStyle": "normal",
-              "fontWeight": "400",
               "textAlign": "left",
             },
           ]
@@ -279,7 +276,6 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
               "fontFamily": "System",
               "fontSize": 14,
               "fontStyle": "normal",
-              "fontWeight": "400",
               "textAlign": "left",
             },
           ]
@@ -358,7 +354,6 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
             "color": "#1C2530",
             "fontFamily": "System",
             "fontSize": 16,
-            "fontWeight": "600",
             "textAlign": "left",
           },
         ]
@@ -436,7 +431,6 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
             "color": "#1C2530",
             "fontFamily": "System",
             "fontSize": 16,
-            "fontWeight": "600",
             "textAlign": "left",
           },
         ]
@@ -517,7 +511,6 @@ exports[`NestableListChildItem Rendering renders itself correctly 1`] = `
           "fontFamily": "System",
           "fontSize": 14,
           "fontStyle": "normal",
-          "fontWeight": "400",
           "textAlign": "left",
         },
       ]
@@ -586,7 +579,6 @@ exports[`NestableListParentItem Rendering renders itself correctly 1`] = `
           "color": "#1C2530",
           "fontFamily": "System",
           "fontSize": 16,
-          "fontWeight": "600",
           "textAlign": "left",
         },
       ]

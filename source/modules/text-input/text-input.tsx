@@ -13,15 +13,12 @@ import {majorScale, minorScale} from '../scales';
 // Styles
 const StyledWrapper = Styled.View``;
 const StyledLabel = Styled(Text)<IStyledLabel>`
-  font-weight: 700;
-  font-size: ${({$isSmallFont}) => ($isSmallFont ? '14px' : '18px')};
-  margin-bottom: ${({$isSmallFont}) => {
-    return $isSmallFont ? minorScale(1, 'px') : majorScale(1, 'px');
+  margin-bottom: ${({$addBottomMargin}) => {
+    return $addBottomMargin ? minorScale(1, 'px') : majorScale(1, 'px');
   }};
 `;
 const StyledLabelAsterisk = Styled(Text)<IStyledLabel>`
   color: ${({theme}) => theme.colors.dangerLight};
-  font-size: ${({$isSmallFont}) => ($isSmallFont ? '14px' : '18px')};
 `;
 const StyledInput = Styled.TextInput<IStyledInput>`
   width: 100%;
@@ -108,13 +105,15 @@ export const TextInput: React.FC<IProps> = ({
     <StyledWrapper>
       {label && (
         <StyledLabel
+          weight="bold"
+          small={isUnderlined}
           muted={isUnderlined}
-          $isSmallFont={isUnderlined}
+          $addBottomMargin={isUnderlined}
           testID="input-label">
           {label}{' '}
           {required && (
             <StyledLabelAsterisk
-              $isSmallFont={isUnderlined}
+              small={isUnderlined}
               testID="input-label-asterisk">
               *
             </StyledLabelAsterisk>

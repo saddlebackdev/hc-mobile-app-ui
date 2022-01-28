@@ -18,11 +18,7 @@ const Heading = Styled.Text<IProps>`
     return `${theme.typography?.sizes?.headings[variant]}px`;
   }};
 
-  font-family: ${({theme, font = 'primary'}) => {
-    return theme.typography.faces[font];
-  }};
-
-  font-weight: ${({variant}): string => {
+  font-weight: ${({variant = 'h1'}): string => {
     switch (variant) {
       case 'h1': {
         return '700';
@@ -44,6 +40,36 @@ const Heading = Styled.Text<IProps>`
       }
       default: {
         return '700';
+      }
+    }
+  }};
+
+  font-family: ${({theme, variant, font = 'primary'}) => {
+    if (!variant) {
+      return theme.typography.faces[`${font}Bold`];
+    }
+
+    switch (variant) {
+      case 'h1': {
+        return theme.typography.faces[`${font}Bold`];
+      }
+      case 'h2': {
+        return theme.typography.faces[`${font}Bold`];
+      }
+      case 'h3': {
+        return theme.typography.faces[`${font}Bold`];
+      }
+      case 'h4': {
+        return theme.typography.faces[`${font}Bold`];
+      }
+      case 'h5': {
+        return theme.typography.faces[`${font}SemiBold`];
+      }
+      case 'h6': {
+        return theme.typography.faces[`${font}SemiBold`];
+      }
+      default: {
+        return theme.typography.faces[`${font}Bold`];
       }
     }
   }};

@@ -60,6 +60,7 @@ exports[`IconToggle Rendering renders itself correctly 1`] = `
     </View>
     <Text
       muted={false}
+      small={true}
       style={
         Array [
           Object {
@@ -67,7 +68,6 @@ exports[`IconToggle Rendering renders itself correctly 1`] = `
             "fontFamily": "System",
             "fontSize": 14,
             "fontStyle": "normal",
-            "fontWeight": "normal",
             "paddingHorizontal": 22,
             "paddingVertical": 10,
             "textAlign": "left",
@@ -75,6 +75,7 @@ exports[`IconToggle Rendering renders itself correctly 1`] = `
         ]
       }
       testID="icon-toggle-label"
+      weight="bold"
     >
       Laughing
     </Text>
@@ -134,6 +135,7 @@ exports[`IconToggle Rendering renders itself correctly 1`] = `
     </View>
     <Text
       muted={true}
+      small={true}
       style={
         Array [
           Object {
@@ -141,7 +143,6 @@ exports[`IconToggle Rendering renders itself correctly 1`] = `
             "fontFamily": "System",
             "fontSize": 14,
             "fontStyle": "normal",
-            "fontWeight": "normal",
             "paddingHorizontal": 22,
             "paddingVertical": 10,
             "textAlign": "left",
@@ -149,6 +150,7 @@ exports[`IconToggle Rendering renders itself correctly 1`] = `
         ]
       }
       testID="icon-toggle-label"
+      weight="regular"
     >
       Crying
     </Text>

@@ -3,11 +3,7 @@ import * as React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {
-  IProps,
-  IStyledItemContent,
-  IStyledItemLabel,
-} from './icon-toggle.types';
+import {IProps, IStyledItemContent} from './icon-toggle.types';
 
 // Shared
 import Text from '../text/text';
@@ -47,9 +43,7 @@ const StyledItemContent = Styled.View<IStyledItemContent>`
     return $isSelected ? 'rgba(0, 0, 0, .15)' : theme.colors.white;
   }};
 `;
-const StyledItemLabel = Styled(Text)<IStyledItemLabel>`
-  font-size: ${({theme}) => theme.typography.sizes.small}px;
-  font-weight: ${({$isSelected}) => ($isSelected ? 'bold' : 'normal')};
+const StyledItemLabel = Styled(Text)`
   padding-horizontal: ${majorScale(2, 'px')};
   padding-vertical: ${minorScale(2, 'px')};
 `;
@@ -89,7 +83,8 @@ export const IconToggle: React.FC<IProps> = ({
             </StyledItemContent>
 
             <StyledItemLabel
-              $isDisabled={isDisabled}
+              small
+              weight={isSelected ? 'bold' : 'regular'}
               muted={isDisabled || !isSelected}
               testID="icon-toggle-label">
               {option.label}

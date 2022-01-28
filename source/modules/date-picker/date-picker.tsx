@@ -50,8 +50,8 @@ const StyledPickerWrapper = Styled.View<IStyledPickerWrapper>`
   overflow: hidden;
 `;
 const StyledLabel = Styled(Text)<IStyledLabel>`
-  font-weight: 700;
   font-size: ${({$isSmallFont}) => ($isSmallFont ? '14px' : '18px')};
+
   margin-bottom: ${({$isSmallFont}) => {
     return $isSmallFont ? minorScale(1, 'px') : majorScale(1, 'px');
   }};
@@ -112,7 +112,10 @@ const DatePicker: React.FC<IProps> = React.memo(
     return (
       <React.Fragment>
         {label && (
-          <StyledLabel muted={isUnderlined} $isSmallFont={isUnderlined}>
+          <StyledLabel
+            weight="bold"
+            $isSmallFont={isUnderlined}
+            muted={isUnderlined}>
             {label}
           </StyledLabel>
         )}

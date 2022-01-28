@@ -35,7 +35,6 @@ exports[`ExpandableCard Rendering: Card card renders correctly 1`] = `
             "color": "#1C2530",
             "fontFamily": "System",
             "fontSize": 16,
-            "fontWeight": "700",
             "textAlign": "left",
           },
         ]
@@ -181,7 +180,6 @@ exports[`ExpandableCard Rendering: Tile renders subTitle Marker properly 1`] = `
               "fontFamily": "System",
               "fontSize": 12,
               "fontStyle": "normal",
-              "fontWeight": "400",
               "marginBottom": 4,
               "marginTop": 4,
               "textAlign": "left",
@@ -230,7 +228,6 @@ exports[`ExpandableCard Rendering: Tile renders subTitle Marker properly 1`] = `
               "color": "#1C2530",
               "fontFamily": "System",
               "fontSize": 16,
-              "fontWeight": "700",
               "textAlign": "left",
             },
           ]
@@ -321,7 +318,6 @@ exports[`ExpandableCard Rendering: Tile renders title marker properly 1`] = `
               "fontFamily": "System",
               "fontSize": 12,
               "fontStyle": "normal",
-              "fontWeight": "400",
               "marginBottom": 4,
               "marginTop": 4,
               "textAlign": "left",
@@ -351,7 +347,6 @@ exports[`ExpandableCard Rendering: Tile renders title marker properly 1`] = `
               "color": "#1C2530",
               "fontFamily": "System",
               "fontSize": 16,
-              "fontWeight": "700",
               "textAlign": "left",
             },
           ]
@@ -461,7 +456,6 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
               "fontFamily": "System",
               "fontSize": 12,
               "fontStyle": "normal",
-              "fontWeight": "400",
               "marginBottom": 4,
               "marginTop": 4,
               "textAlign": "left",
@@ -491,7 +485,6 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
               "color": "#1C2530",
               "fontFamily": "System",
               "fontSize": 16,
-              "fontWeight": "700",
               "textAlign": "left",
             },
           ]
@@ -580,7 +573,6 @@ exports[`ExpandableCard Rendering: Tile tile renders correctly 1`] = `
               "color": "#1C2530",
               "fontFamily": "System",
               "fontSize": 16,
-              "fontWeight": "700",
               "textAlign": "left",
             },
           ]

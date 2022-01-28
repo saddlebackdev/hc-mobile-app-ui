@@ -101,7 +101,6 @@ exports[`HorizontalList Rendering should render the link 1`] = `
             "color": "#1C2530",
             "fontFamily": "System",
             "fontSize": 24,
-            "fontWeight": "700",
             "textAlign": "left",
           },
         ]
@@ -135,7 +134,6 @@ exports[`HorizontalList Rendering should render the link 1`] = `
               "color": "#00AEFF",
               "fontFamily": "System",
               "fontSize": 14,
-              "fontWeight": "600",
               "textAlign": "left",
             },
           ]
@@ -240,7 +238,6 @@ exports[`HorizontalList Rendering should render the title when passed 1`] = `
             "color": "#1C2530",
             "fontFamily": "System",
             "fontSize": 24,
-            "fontWeight": "700",
             "textAlign": "left",
           },
         ]

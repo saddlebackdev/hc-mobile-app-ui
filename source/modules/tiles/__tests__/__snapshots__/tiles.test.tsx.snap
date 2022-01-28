@@ -69,6 +69,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
         testID="tile-content"
       />
       <Text
+        inversed={true}
         style={
           Array [
             Object {
@@ -77,13 +78,13 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
               "fontFamily": "System",
               "fontSize": 14,
               "fontStyle": "normal",
-              "fontWeight": "600",
               "marginLeft": 4,
               "textAlign": "left",
             },
           ]
         }
         testID="tile-title"
+        weight="semiBold"
       >
         Worship
       </Text>
@@ -145,6 +146,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
         testID="tile-content"
       />
       <Text
+        inversed={true}
         style={
           Array [
             Object {
@@ -153,13 +155,13 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
               "fontFamily": "System",
               "fontSize": 14,
               "fontStyle": "normal",
-              "fontWeight": "600",
               "marginLeft": 4,
               "textAlign": "left",
             },
           ]
         }
         testID="tile-title"
+        weight="semiBold"
       >
         Baptism
       </Text>
@@ -221,6 +223,7 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
         testID="tile-content"
       />
       <Text
+        inversed={true}
         style={
           Array [
             Object {
@@ -229,13 +232,13 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
               "fontFamily": "System",
               "fontSize": 14,
               "fontStyle": "normal",
-              "fontWeight": "600",
               "marginLeft": 4,
               "textAlign": "left",
             },
           ]
         }
         testID="tile-title"
+        weight="semiBold"
       >
         Prayer
       </Text>

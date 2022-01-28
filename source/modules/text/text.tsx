@@ -18,7 +18,11 @@ const Text = Styled.Text<IProps>`
     return theme.colors.graySix;
   }};
 
-  font-size: ${({theme, variant}): string => {
+  font-size: ${({theme, small, variant}): string => {
+    if (small) {
+      return `${theme.typography.sizes.small}px`;
+    }
+
     switch (variant) {
       case 'body1': {
         return `${theme.typography.sizes.text.body1}px`;
@@ -44,27 +48,46 @@ const Text = Styled.Text<IProps>`
     }
   }};
 
-  font-family: ${({theme, font = 'primary'}): string => {
-    return theme.typography.faces[font];
+  font-weight: ${({weight = 'regular'}): string => {
+    switch (weight) {
+      case 'light': {
+        return '300';
+      }
+      case 'regular': {
+        return '400';
+      }
+      case 'semiBold': {
+        return '600';
+      }
+      case 'bold': {
+        return '700';
+      }
+      default: {
+        return '400';
+      }
+    }
   }};
 
-  font-weight: ${({weight = 400}): number => {
-    if (typeof weight === 'number') {
-      return weight;
+  font-family: ${({theme, weight, font = 'primary'}): string => {
+    if (!weight) {
+      return theme.typography.faces[`${font}Regular`];
     }
 
     switch (weight) {
+      case 'light': {
+        return theme.typography.faces[`${font}Light`];
+      }
       case 'regular': {
-        return 400;
+        return theme.typography.faces[`${font}Regular`];
       }
       case 'semiBold': {
-        return 600;
+        return theme.typography.faces[`${font}SemiBold`];
       }
       case 'bold': {
-        return 700;
+        return theme.typography.faces[`${font}Bold`];
       }
       default: {
-        return 400;
+        return theme.typography.faces[`${font}Regular`];
       }
     }
   }};

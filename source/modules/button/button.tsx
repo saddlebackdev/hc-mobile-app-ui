@@ -111,10 +111,8 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
   }};
 `;
 const StyledLabel = Styled.Text<IStyledLabel>`
-  font-weight: 500;
-
   font-family: ${({theme, $font = 'primary'}) => {
-    return theme.typography.faces[$font];
+    return theme.typography.faces[`${$font}SemiBold`];
   }};
 
   font-size: ${({small, theme}) => {

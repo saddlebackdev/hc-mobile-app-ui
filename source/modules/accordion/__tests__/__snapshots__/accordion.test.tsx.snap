@@ -56,7 +56,6 @@ exports[`Accordion Interactions should open the accordion on click 1`] = `
             "fontFamily": "System",
             "fontSize": 18,
             "fontStyle": "normal",
-            "fontWeight": "600",
             "textAlign": "left",
           },
         ]
@@ -169,7 +168,6 @@ exports[`Accordion Rendering renders correctly 1`] = `
             "fontFamily": "System",
             "fontSize": 18,
             "fontStyle": "normal",
-            "fontWeight": "600",
             "textAlign": "left",
           },
         ]
@@ -280,7 +278,6 @@ exports[`Accordion Rendering renders in "open" state correctly 1`] = `
             "fontFamily": "System",
             "fontSize": 18,
             "fontStyle": "normal",
-            "fontWeight": "600",
             "textAlign": "left",
           },
         ]

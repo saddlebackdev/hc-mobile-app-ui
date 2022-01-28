@@ -3,7 +3,7 @@ import {TextInputProps} from 'react-native';
 
 // Styled Label
 export interface IStyledLabel {
-  $isSmallFont?: boolean;
+  $addBottomMargin?: boolean;
 }
 
 // Styled Input
