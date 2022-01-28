@@ -1,5 +1,13 @@
 # Changelog
 
+### v0.0.20
+
+- Update PillToggle labels to be semibold
+- Add leftIcon and rightIcon props on Button
+- Fix weighted fonts on Android
+
+---
+
 ### v0.0.19
 
 - Add Accordion component
