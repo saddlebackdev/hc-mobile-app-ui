@@ -10,7 +10,7 @@ import {
 } from './button-group.types';
 
 // Shared
-import {majorScale} from '../scales';
+import {minorScale} from '../scales';
 
 // Styles
 export const StyledWrapper = Styled.View<IButtonGroupProps>`
@@ -22,11 +22,11 @@ export const StyledWrapper = Styled.View<IButtonGroupProps>`
 export const StyledItem = Styled.View<IButtonGroupItemProps>`
   flex: 1;
   margin-right: ${({$hasRightMargin}) => {
-    return $hasRightMargin ? majorScale(1, 'px') : 0;
-  }};
+    return $hasRightMargin ? minorScale(1) : 0;
+  }}px;
   margin-left: ${({$hasLeftMargin}) => {
-    return $hasLeftMargin ? majorScale(1, 'px') : 0;
-  }};
+    return $hasLeftMargin ? minorScale(1) : 0;
+  }}px;
 `;
 
 // Component

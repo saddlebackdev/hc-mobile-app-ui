@@ -48,6 +48,7 @@ exports[`Button Rendering Variants danger: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
+          "fontWeight": "600",
         },
       ]
     }
@@ -106,6 +107,7 @@ exports[`Button Rendering Variants default: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
+          "fontWeight": "600",
         },
       ]
     }
@@ -164,6 +166,7 @@ exports[`Button Rendering Variants info: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
+          "fontWeight": "600",
         },
       ]
     }
@@ -222,6 +225,7 @@ exports[`Button Rendering Variants outline: should match snapshot 1`] = `
           "color": "#00AEFF",
           "fontFamily": "System",
           "fontSize": 16,
+          "fontWeight": "600",
         },
       ]
     }
@@ -280,6 +284,7 @@ exports[`Button Rendering Variants primary: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
+          "fontWeight": "600",
         },
       ]
     }
@@ -338,6 +343,7 @@ exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
+          "fontWeight": "600",
         },
       ]
     }
@@ -396,6 +402,7 @@ exports[`Button Rendering Variants small: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 14,
+          "fontWeight": "600",
         },
       ]
     }
@@ -454,6 +461,7 @@ exports[`Button Rendering Variants success: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
+          "fontWeight": "600",
         },
       ]
     }
@@ -512,6 +520,7 @@ exports[`Button Rendering Variants warning: should match snapshot 1`] = `
           "color": "#FFFFFF",
           "fontFamily": "System",
           "fontSize": 16,
+          "fontWeight": "600",
         },
       ]
     }

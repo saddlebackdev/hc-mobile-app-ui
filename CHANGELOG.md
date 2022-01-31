@@ -1,5 +1,13 @@
 # Changelog
 
+### v0.0.21
+
+- Add LowerPrompt component
+- Reduce space between buttons in ButtonGroup
+- Fix Button label font weight
+
+---
+
 ### v0.0.20
 
 - Update PillToggle labels to be semibold

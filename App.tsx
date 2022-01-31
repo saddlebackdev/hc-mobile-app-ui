@@ -16,6 +16,7 @@ import {
   Divider,
   ExpandableCard,
   Link,
+  LowerPrompt,
   NestableList,
   SelectableList,
   HorizontalList,
@@ -68,6 +69,12 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const [selectedListItem, setSelectedListItem] =
     React.useState<string>('app-list-item-1');
   const [isBottomSheetOpen, setIsBottomSheetOpen] =
+    React.useState<boolean>(false);
+  const [isSimpleLowerPromptOpen, setIsSimpleLowerPromptOpen] =
+    React.useState<boolean>(false);
+  const [isSuccessLowerPromptOpen, setIsSuccessLowerPromptOpen] =
+    React.useState<boolean>(false);
+  const [isDangerLowerPromptOpen, setIsDangerLowerPromptOpen] =
     React.useState<boolean>(false);
   const [selectedHorizontalRadio, setSelectedHorizontalRadio] =
     React.useState<number>(2);
@@ -586,6 +593,68 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   items={selectableListItems}
                 />
               </BottomSheet>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Lower Prompt */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Lower Prompt</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Lower Prompt component</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Button onPress={() => setIsSimpleLowerPromptOpen(true)}>
+                  Open Lower Prompt - Simple
+                </Button>
+              </Row>
+              <Row>
+                <Button
+                  color="success"
+                  onPress={() => setIsSuccessLowerPromptOpen(true)}>
+                  Open Lower Prompt - Success
+                </Button>
+              </Row>
+              <Row>
+                <Button
+                  color="danger"
+                  onPress={() => setIsDangerLowerPromptOpen(true)}>
+                  Open Lower Prompt - Danger
+                </Button>
+              </Row>
+
+              <LowerPrompt
+                leftButtonCallback={() => setIsSimpleLowerPromptOpen(false)}
+                isOpen={isSimpleLowerPromptOpen}>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ea
+                sit et explicabo obcaecati, hic alias inventore illo est,
+                accusamus quos a voluptatem, ipsam amet quaerat id vel. Ducimus,
+                tempore.
+              </LowerPrompt>
+
+              <LowerPrompt
+                intent="success"
+                leftButtonLabel="Not Now"
+                rightButtonLabel="Update"
+                rightButtonCallback={() => setIsSuccessLowerPromptOpen(false)}
+                leftButtonCallback={() => setIsSuccessLowerPromptOpen(false)}
+                isOpen={isSuccessLowerPromptOpen}>
+                A new version of this sermon outline is available. Your saved
+                notes will be lost if you update to the latest version.
+              </LowerPrompt>
+
+              <LowerPrompt
+                intent="danger"
+                leftButtonLabel="Cancel"
+                rightButtonLabel="Delete"
+                rightButtonCallback={() => setIsDangerLowerPromptOpen(false)}
+                leftButtonCallback={() => setIsDangerLowerPromptOpen(false)}
+                isOpen={isDangerLowerPromptOpen}>
+                Are you sure you want to discard these changes?
+              </LowerPrompt>
             </Section.Content>
           </Section.Wrapper>
           <Divider />

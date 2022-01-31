@@ -22,7 +22,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
           "flexGrow": 1,
           "flexShrink": 1,
           "marginLeft": 0,
-          "marginRight": 11,
+          "marginRight": 5,
         },
       ]
     }
@@ -75,6 +75,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
               "color": "#FFFFFF",
               "fontFamily": "System",
               "fontSize": 16,
+              "fontWeight": "600",
             },
           ]
         }
@@ -91,7 +92,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
           "flexBasis": 0,
           "flexGrow": 1,
           "flexShrink": 1,
-          "marginLeft": 11,
+          "marginLeft": 5,
           "marginRight": 0,
         },
       ]
@@ -145,6 +146,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
               "color": "#FFFFFF",
               "fontFamily": "System",
               "fontSize": 16,
+              "fontWeight": "600",
             },
           ]
         }
@@ -179,7 +181,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
           "flexGrow": 1,
           "flexShrink": 1,
           "marginLeft": 0,
-          "marginRight": 11,
+          "marginRight": 5,
         },
       ]
     }
@@ -232,6 +234,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
               "color": "#FFFFFF",
               "fontFamily": "System",
               "fontSize": 16,
+              "fontWeight": "600",
             },
           ]
         }
@@ -248,7 +251,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
           "flexBasis": 0,
           "flexGrow": 1,
           "flexShrink": 1,
-          "marginLeft": 11,
+          "marginLeft": 5,
           "marginRight": 0,
         },
       ]
@@ -302,6 +305,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
               "color": "#FFFFFF",
               "fontFamily": "System",
               "fontSize": 16,
+              "fontWeight": "600",
             },
           ]
         }
