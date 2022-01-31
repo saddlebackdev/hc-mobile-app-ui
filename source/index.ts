@@ -45,6 +45,10 @@ export {IProps as FloaterProps} from './modules/floater/floater.types';
 export {default as Link} from './modules/link/link';
 export {IProps as LinkProps} from './modules/link/link.types';
 
+// LowerPrompt
+export {default as LowerPrompt} from './modules/lower-prompt/lower-prompt';
+export {IProps as LowerPromptProps} from './modules/lower-prompt/lower-prompt.types';
+
 // List Header
 export {default as ListHeader} from './modules/lists/list-header';
 export {IProps as ListHeaderProps} from './modules/lists/list-header.types';
