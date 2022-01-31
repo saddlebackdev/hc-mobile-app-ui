@@ -115,6 +115,8 @@ const StyledButton = Styled.TouchableOpacity<IStyledButton>`
   }};
 `;
 const StyledLabel = Styled.Text<IStyledLabel>`
+  font-weight: 600;
+
   font-family: ${({theme, $font = 'primary'}) => {
     return theme.typography.faces[`${$font}SemiBold`];
   }};
@@ -124,6 +126,7 @@ const StyledLabel = Styled.Text<IStyledLabel>`
       ? `${theme.typography.sizes.small}px`
       : `${theme.typography.sizes.text.button}px`;
   }};
+
 
   color: ${({appearance, color, disabled, theme}) => {
     if (appearance === 'filled') {
