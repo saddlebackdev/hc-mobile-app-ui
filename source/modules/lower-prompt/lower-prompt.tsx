@@ -69,7 +69,7 @@ export const LowerPrompt: React.FC<IProps> = ({
                 testID="right-button"
                 color={intent || rightButtonColor || 'success'}
                 onPress={rightButtonCallback}>
-                {rightButtonLabel}
+                {rightButtonLabel || ''}
               </Button>
             </ButtonGroup>
           ) : (
