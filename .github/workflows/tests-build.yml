@@ -19,7 +19,7 @@ jobs:
           cache: 'yarn'
       - name: Install Packages
         run: yarn install
-      - name: Run ESLint
+      - name: Run Lint
         run: yarn lint
       - name: Run Unit Tests
         run: yarn test
@@ -35,6 +35,8 @@ jobs:
         with:
           node-version: 16
           cache: 'yarn'
+      - name: Install Packages
+        run: yarn install
       - name: Create Build
         run: yarn build
       - name: Create Package
