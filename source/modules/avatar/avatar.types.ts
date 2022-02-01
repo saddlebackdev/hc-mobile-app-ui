@@ -32,9 +32,9 @@ export interface IProps {
   /** Position of marker from bottom. */
   markerOffsetBottom?: number;
 
-  /** Renders a white icon instead of a black */
+  /** Renders a white icon instead of a black. */
   inversed?: boolean;
 
-  /** Function to be called when the avatar is pressed */
+  /** Function to be called when the avatar is pressed. */
   onPress?: any;
 }

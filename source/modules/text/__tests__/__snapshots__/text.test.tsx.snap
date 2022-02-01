@@ -112,15 +112,15 @@ exports[`Text Rendering Variants subtitle: should match snapshot 1`] = `
       Object {
         "color": "#1C2530",
         "fontFamily": "System",
-        "fontSize": 18,
+        "fontSize": 16,
         "fontStyle": "normal",
         "fontWeight": "400",
         "textAlign": "left",
       },
     ]
   }
-  subtitle={true}
   testID="text"
+  variant="subtitle1"
 >
   Paragraph goes here
 </Text>

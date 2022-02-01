@@ -48,7 +48,7 @@ describe('Text', () => {
       it('subtitle: should match snapshot', () => {
         const wrapper = render(
           <ThemeProvider theme={defaultTheme}>
-            <Text subtitle>Paragraph goes here</Text>
+            <Text variant="subtitle1">Paragraph goes here</Text>
           </ThemeProvider>,
         );
 
