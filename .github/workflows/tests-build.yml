@@ -1,0 +1,41 @@
+name: Runs Tests and Build
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 16
+          cache: 'yarn'
+      - name: Install Packages
+        run: yarn install
+      - name: Run ESLint
+        run: yarn lint
+      - name: Run Unit Tests
+        run: yarn test
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: tests
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 16
+          cache: 'yarn'
+      - name: Create Build
+        run: yarn build
+      - name: Create Package
+        run: yarn pack
