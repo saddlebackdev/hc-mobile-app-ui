@@ -58,6 +58,10 @@ export {IProps as HeadingProps} from './modules/heading/heading.types';
 export {default as HorizontalList} from './modules/horizontal-list/horizontal-list';
 export {IProps as HorizontalListProps} from './modules/horizontal-list/horizontal-list.types';
 
+// Icon
+export {default as Icon} from './modules/icon/icon-external';
+export {IProps as IconProps} from './modules/icon/icon-external.types';
+
 // Icon Toggle
 export {default as IconToggle} from './modules/icon-toggle/icon-toggle';
 export {IProps as IconToggleProps} from './modules/icon-toggle/icon-toggle.types';
