@@ -29,6 +29,11 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
     testID="button-group-item"
   >
     <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={false}
@@ -100,6 +105,11 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
     testID="button-group-item"
   >
     <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={false}
@@ -188,6 +198,11 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
     testID="button-group-item"
   >
     <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={false}
@@ -259,6 +274,11 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
     testID="button-group-item"
   >
     <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
       accessible={true}
       collapsable={false}
       focusable={false}

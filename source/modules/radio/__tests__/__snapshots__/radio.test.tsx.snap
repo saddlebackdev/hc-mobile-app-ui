@@ -94,6 +94,11 @@ exports[`Radio Rendering Variants horizontal: should match snapshot 1`] = `
     </Text>
   </View>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -325,6 +330,11 @@ exports[`Radio Rendering Variants vertical: should match snapshot 1`] = `
     </Text>
   </View>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -556,6 +566,11 @@ exports[`Radio Rendering renders itself correctly 1`] = `
     </Text>
   </View>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}

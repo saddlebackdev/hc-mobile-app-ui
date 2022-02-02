@@ -2,6 +2,11 @@
 
 exports[`Button Rendering Variants danger: should match snapshot 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -61,6 +66,11 @@ exports[`Button Rendering Variants danger: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants default: should match snapshot 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -120,6 +130,11 @@ exports[`Button Rendering Variants default: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants info: should match snapshot 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -179,6 +194,11 @@ exports[`Button Rendering Variants info: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants outline: should match snapshot 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -238,6 +258,11 @@ exports[`Button Rendering Variants outline: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants primary: should match snapshot 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -297,6 +322,11 @@ exports[`Button Rendering Variants primary: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -356,6 +386,11 @@ exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants small: should match snapshot 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -415,6 +450,11 @@ exports[`Button Rendering Variants small: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants success: should match snapshot 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
@@ -474,6 +514,11 @@ exports[`Button Rendering Variants success: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants warning: should match snapshot 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={false}
