@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {render} from '@testing-library/react-native';
 
-import Button from '../button';
+import Button from '../../button/button';
 import ButtonGroup from '../button-group';
 import ThemeProvider from '../../theming/theme-provider';
 import defaultTheme from '../../theming/default-theme';

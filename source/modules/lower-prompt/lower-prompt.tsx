@@ -9,7 +9,7 @@ import {IProps} from './lower-prompt.types';
 // Shared
 import Text from '../text/text';
 import {majorScale} from '../scales';
-import ButtonGroup from '../button/button-group';
+import ButtonGroup from '../button-group/button-group';
 import Button from '../button/button';
 
 // Styles

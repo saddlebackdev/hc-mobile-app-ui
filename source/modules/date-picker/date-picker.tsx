@@ -15,6 +15,8 @@ import {
 } from './date-picker.types';
 
 // Shared
+import Icon from '../icon/icon';
+import Text from '../text/text';
 import {majorScale, minorScale} from '../scales';
 import {DeviceUtils} from '../utilities';
 
@@ -56,10 +58,6 @@ const StyledLabel = Styled(Text)<IStyledLabel>`
     return $isSmallFont ? minorScale(1, 'px') : majorScale(1, 'px');
   }};
 `;
-
-// Shared
-import Icon from '../icon/icon';
-import Text from '../text/text';
 
 // Component
 const DatePicker: React.FC<IProps> = React.memo(

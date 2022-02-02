@@ -1,21 +1,30 @@
+// Accordion
+export {default as Accordion} from './modules/accordion/accordion';
+export {IProps as AccordionProps} from './modules/accordion/accordion.types';
+
 // Avatar
 export {default as Avatar} from './modules/avatar/avatar';
 export {IProps as AvatarProps} from './modules/avatar/avatar.types';
 
-// Accordion
-export {default as Accordion} from './modules/accordion/accordion';
-export {IProps as AccordionProps} from './modules/accordion/accordion.types';
+// Bottom Sheet
+export {default as BottomSheet} from './modules/bottom-sheet/bottom-sheet';
+export {IProps as BottomSheetProps} from './modules/bottom-sheet/bottom-sheet.types';
 
 // Button
 export {default as Button} from './modules/button/button';
 export {IProps as ButtonProps} from './modules/button/button.types';
 
-export {default as ButtonGroup} from './modules/button/button-group';
-export {IProps as ButtonGroupProps} from './modules/button/button-group.types';
+// Button Group
+export {default as ButtonGroup} from './modules/button-group/button-group';
+export {IProps as ButtonGroupProps} from './modules/button-group/button-group.types';
 
-// Bottom Sheet
-export {default as BottomSheet} from './modules/bottom-sheet/bottom-sheet';
-export {IProps as BottomSheetProps} from './modules/bottom-sheet/bottom-sheet.types';
+// Card List
+export {default as CardList} from './modules/card-list/card-list';
+export {IProps as CardListProps} from './modules/card-list/card-list.types';
+
+// Card List Item
+export {default as CardListItem} from './modules/card-list/card-list-item';
+export {IProps as CardListItemProps} from './modules/card-list/card-list-item.types';
 
 // Checkbox
 export {default as Checkbox} from './modules/checkbox/checkbox';
@@ -34,71 +43,74 @@ export {default as Divider} from './modules/divider/divider';
 export {IProps as DividerProps} from './modules/divider/divider.types';
 
 // Expandable Card
-export {default as ExpandableCard} from './modules/cards/expandable-card';
-export {IProps as ExpandableCardProps} from './modules/cards/expandable-card.types';
+export {default as ExpandableCard} from './modules/expandable-card/expandable-card';
+export {IProps as ExpandableCardProps} from './modules/expandable-card/expandable-card.types';
 
 // Floater
 export {default as Floater} from './modules/floater/floater';
 export {IProps as FloaterProps} from './modules/floater/floater.types';
 
+// Heading
+export {default as Heading} from './modules/heading/heading';
+export {IProps as HeadingProps} from './modules/heading/heading.types';
+
+// Horizontal List
+export {default as HorizontalList} from './modules/horizontal-list/horizontal-list';
+export {IProps as HorizontalListProps} from './modules/horizontal-list/horizontal-list.types';
+
+// Icon Toggle
+export {default as IconToggle} from './modules/icon-toggle/icon-toggle';
+export {IProps as IconToggleProps} from './modules/icon-toggle/icon-toggle.types';
+
 // Link
 export {default as Link} from './modules/link/link';
 export {IProps as LinkProps} from './modules/link/link.types';
 
-// LowerPrompt
+// List Header
+export {default as ListHeader} from './modules/list-header/list-header';
+export {IProps as ListHeaderProps} from './modules/list-header/list-header.types';
+
+// Lower Prompt
 export {default as LowerPrompt} from './modules/lower-prompt/lower-prompt';
 export {IProps as LowerPromptProps} from './modules/lower-prompt/lower-prompt.types';
 
-// List Header
-export {default as ListHeader} from './modules/lists/list-header';
-export {IProps as ListHeaderProps} from './modules/lists/list-header.types';
-
 // Nestable List
-export {default as NestableList} from './modules/lists/nestable-list';
+export {default as NestableList} from './modules/nestable-list/nestable-list';
 export {
   IProps as NestableListProps,
   IParentItemProps as NestableListParentProps,
   IChildItemProps as NestableListChildProps,
-} from './modules/lists/nestable-list.types';
+} from './modules/nestable-list/nestable-list.types';
 
-// Selectable List
-export {default as SelectableList} from './modules/lists/selectable-list';
-export {
-  IProps as SelectableListProps,
-  IListItemProps as SelectableListItemProps,
-} from './modules/lists/selectable-list.types';
-
-// Horizontal List
-export {default as HorizontalList} from './modules/lists/horizontal-list';
-export {IProps as HorizontalListProps} from './modules/lists/horizontal-list.types';
-
-// Card List
-export {default as CardList} from './modules/lists/card-list';
-export {default as CardListItem} from './modules/lists/card-list-item';
-export {
-  IProps as CardListProps,
-  ICardListItem as CardListItemProps,
-} from './modules/lists/card-list.types';
-
-// Select Picker
-export {default as SelectPicker} from './modules/select-picker/select-picker';
-export {IProps as SelectPickerProps} from './modules/select-picker/select-picker.types';
+// Pill Toggle
+export {default as PillToggle} from './modules/pill-toggle/pill-toggle';
+export {IProps as PillToggleProps} from './modules/pill-toggle/pill-toggle.types';
 
 // Radio
 export {default as Radio} from './modules/radio/radio';
 export {IProps as RadioProps} from './modules/radio/radio.types';
 
+// Scales
+export {majorScale, minorScale} from './modules/scales';
+
+// Select Picker
+export {default as SelectPicker} from './modules/select-picker/select-picker';
+export {IProps as SelectPickerProps} from './modules/select-picker/select-picker.types';
+
+// Selectable List
+export {default as SelectableList} from './modules/selectable-list/selectable-list';
+export {
+  IProps as SelectableListProps,
+  IListItemProps as SelectableListItemProps,
+} from './modules/selectable-list/selectable-list.types';
+
+// Text
+export {default as Text} from './modules/text/text';
+export {IProps as TextProps} from './modules/text/text.types';
+
 // Text Input
 export {default as TextInput} from './modules/text-input/text-input';
 export {IProps as TextInputProps} from './modules/text-input/text-input.types';
-
-// Typography: Heading
-export {default as Heading} from './modules/heading/heading';
-export {IProps as HeadingProps} from './modules/heading/heading.types';
-
-// Typography: Text
-export {default as Text} from './modules/text/text';
-export {IProps as TextProps} from './modules/text/text.types';
 
 // Theming
 export {default as defaultTheme} from './modules/theming/default-theme';
@@ -108,16 +120,9 @@ export {
   ITheme as ThemeProps,
 } from './modules/theming/theme-provider.types';
 
-// Toggles
-export {default as PillToggle} from './modules/toggle/pill-toggle';
-export {IProps as PillToggleProps} from './modules/toggle/pill-toggle.types';
-export {default as IconToggle} from './modules/toggle/icon-toggle';
-export {IProps as IconToggleProps} from './modules/toggle/icon-toggle.types';
-
-// Tile Group
+// Tiles
 export {default as Tiles} from './modules/tiles/tiles';
 export {IProps as TilesProps} from './modules/tiles/tiles.types';
 
 // Utilities
-export {majorScale, minorScale} from './modules/scales';
 export {DeviceUtils, LayoutUtils} from './modules/utilities';
