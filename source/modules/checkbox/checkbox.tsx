@@ -60,7 +60,14 @@ const StyledCheckboxHint = Styled(Text)``;
 
 // Component
 export const Checkbox: React.FC<IProps> = React.memo(
-  ({hint, label, isChecked = false, disabled, onPress}): React.ReactElement => (
+  ({
+    hint,
+    label,
+    inversed,
+    isChecked = false,
+    disabled,
+    onPress,
+  }): React.ReactElement => (
     <StyledWrapper
       testID="checkbox"
       disabled={disabled}
@@ -78,13 +85,17 @@ export const Checkbox: React.FC<IProps> = React.memo(
       {label || hint ? (
         <StyledDetailsWrapper>
           {label ? (
-            <StyledCheckboxLabel testID="checkbox-label">
+            <StyledCheckboxLabel testID="checkbox-label" inversed={inversed}>
               {label}
             </StyledCheckboxLabel>
           ) : null}
 
           {hint ? (
-            <StyledCheckboxHint muted testID="checkbox-hint" variant="caption">
+            <StyledCheckboxHint
+              muted
+              inversed={inversed}
+              testID="checkbox-hint"
+              variant="caption">
               {hint}
             </StyledCheckboxHint>
           ) : null}

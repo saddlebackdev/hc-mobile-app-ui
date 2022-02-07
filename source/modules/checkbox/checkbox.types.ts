@@ -23,6 +23,9 @@ export interface IProps {
   /** Determines if the checkbox is disabled or not. Defaults to false */
   disabled?: boolean;
 
+  /** If true, renders the label and hint in white color. */
+  inversed?: boolean;
+
   /** Determines if the checkbox is checked or not */
   isChecked: boolean;
 

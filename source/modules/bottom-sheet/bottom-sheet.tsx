@@ -74,6 +74,7 @@ const StyledFooterWrapper = Styled.View``;
 export const BottomSheet: React.FC<IProps> = ({
   isOpen,
   onDismiss,
+  showCloseButton = true,
   children,
   header,
   footer,
@@ -128,12 +129,14 @@ export const BottomSheet: React.FC<IProps> = ({
         <Animated.View style={{transform: [{translateY}]}}>
           <StyledContainer>
             {/* Close Button */}
-            <StyledCloseWrapper
-              activeOpacity={0.75}
-              hitSlop={LayoutUtils.addHitSlop(12)}
-              onPress={_onDismiss}>
-              <Icon type="closeCircle" color="muted" />
-            </StyledCloseWrapper>
+            {showCloseButton && (
+              <StyledCloseWrapper
+                activeOpacity={0.75}
+                hitSlop={LayoutUtils.addHitSlop(12)}
+                onPress={_onDismiss}>
+                <Icon type="closeCircle" color="muted" />
+              </StyledCloseWrapper>
+            )}
 
             {/* Sections */}
             <StyledSectionWrapper>
