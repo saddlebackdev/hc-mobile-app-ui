@@ -1,11 +1,20 @@
 # Changelog
 
+### v0.0.23
+
+- Add inversed flag for Checkbox label and hint
+- Add showCloseButton prop in BottomSheet
+
+---
+
 ### v0.0.22
 
 - Add Icon component
 - Setup SVG support with react-native-svg
 - Use React Native 0.66.3
 - Update directory structure
+
+---
 
 ### v0.0.21
 
