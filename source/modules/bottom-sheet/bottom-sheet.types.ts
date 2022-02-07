@@ -15,6 +15,9 @@ export interface IProps {
   /** Function to be called when dismissing the bottom sheet. */
   onDismiss?: any;
 
+  /** If true, renders the close button on top-right corner. */
+  showCloseButton?: boolean;
+
   /** Header component of the bottom sheet. */
   header?: IHeader;
 
