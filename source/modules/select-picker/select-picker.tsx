@@ -34,7 +34,7 @@ const getStyles = (
       fontSize: typography.sizes.regular,
     },
     viewContainer: {
-      backgroundColor: colors.white,
+      backgroundColor: isUnderlined ? 'transparent' : colors.white,
       borderColor: colors.grayThree,
       borderRadius: 3,
       borderTopWidth: isUnderlined ? 0 : 1,
@@ -63,6 +63,7 @@ const getStyles = (
       ...baseStyles,
       inputAndroid: {
         ...baseStyles.input,
+        marginLeft: isUnderlined ? -16 : 0,
         marginTop: -6,
 
         // Something wrong with Typescript
