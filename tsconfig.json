@@ -11,7 +11,7 @@
     "strict": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
-    "baseUrl": "source",
+    "baseUrl": "src",
     "outDir": "dist",
     "noEmitHelpers": true,
     "importHelpers": true,
@@ -21,7 +21,7 @@
     "declaration": true,
     "sourceMap": true
   },
-  "include": ["source"],
+  "include": ["src"],
   "exclude": [
     "dist",
     "node_modules",

@@ -1,0 +1,336 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion Interactions should open the accordion on click 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#F6F7F8",
+        "borderColor": "#DBE0E3",
+        "borderRadius": 8,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.075)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+    ]
+  }
+  testID="accordion"
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "opacity": 1,
+        "paddingBottom": 22,
+        "paddingLeft": 22,
+        "paddingRight": 22,
+        "paddingTop": 22,
+        "width": "100%",
+      }
+    }
+    testID="accordion-toggle-btn"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontFamily": "System",
+            "fontSize": 18,
+            "fontStyle": "normal",
+            "fontWeight": "600",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="accordion-title"
+      weight="semiBold"
+    >
+      Accordion 1
+    </Text>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/images/chevron-down-black.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "display": "none",
+          "paddingBottom": 22,
+          "paddingHorizontal": 22,
+          "paddingTop": 11,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="accordion-body"
+  >
+    <Text>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur obcaecati libero officiis quia et at vero ullam eos qui architecto aliquam, voluptas officia quas exercitationem sapiente similique aperiam nostrum amet.
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Accordion Rendering renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#F6F7F8",
+        "borderColor": "#DBE0E3",
+        "borderRadius": 8,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.075)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+    ]
+  }
+  testID="accordion"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "opacity": 1,
+        "paddingBottom": 22,
+        "paddingLeft": 22,
+        "paddingRight": 22,
+        "paddingTop": 22,
+        "width": "100%",
+      }
+    }
+    testID="accordion-toggle-btn"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontFamily": "System",
+            "fontSize": 18,
+            "fontStyle": "normal",
+            "fontWeight": "600",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="accordion-title"
+      weight="semiBold"
+    >
+      Accordion 1
+    </Text>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/images/chevron-down-black.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "display": "none",
+          "paddingBottom": 22,
+          "paddingHorizontal": 22,
+          "paddingTop": 11,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="accordion-body"
+  >
+    <Text>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur obcaecati libero officiis quia et at vero ullam eos qui architecto aliquam, voluptas officia quas exercitationem sapiente similique aperiam nostrum amet.
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Accordion Rendering renders in "open" state correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#F6F7F8",
+        "borderColor": "#DBE0E3",
+        "borderRadius": 8,
+        "borderStyle": "solid",
+        "borderWidth": 1,
+        "shadowColor": "rgba(0, 0, 0, 0.075)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": "100%",
+      },
+    ]
+  }
+  testID="accordion"
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "opacity": 1,
+        "paddingBottom": 22,
+        "paddingLeft": 22,
+        "paddingRight": 22,
+        "paddingTop": 22,
+        "width": "100%",
+      }
+    }
+    testID="accordion-toggle-btn"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontFamily": "System",
+            "fontSize": 18,
+            "fontStyle": "normal",
+            "fontWeight": "600",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="accordion-title"
+      weight="semiBold"
+    >
+      Accordion 1
+    </Text>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/images/chevron-up-black.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "display": "flex",
+          "paddingBottom": 22,
+          "paddingHorizontal": 22,
+          "paddingTop": 11,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="accordion-body"
+  >
+    <Text>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur obcaecati libero officiis quia et at vero ullam eos qui architecto aliquam, voluptas officia quas exercitationem sapiente similique aperiam nostrum amet.
+    </Text>
+  </View>
+</View>
+`;

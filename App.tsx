@@ -30,8 +30,8 @@ import {
   IconToggle,
   PillToggle,
   TextInput,
-} from './source';
-import Icon from './source/modules/icon/icon';
+} from './src';
+import Icon from './src/modules/icon/icon';
 
 // Interfaces
 interface IProps {}

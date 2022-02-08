@@ -5,7 +5,7 @@ const del = require('del');
 // Paths
 const paths = {
   build: './dist',
-  source: './source',
+  source: './src',
 };
 
 // Clean Destination
