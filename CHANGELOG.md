@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.24
+
+- Fix padding of Underlined SelectPicker on Android
+
+---
+
 ### v0.0.23
 
 - Add inversed flag for Checkbox label and hint
