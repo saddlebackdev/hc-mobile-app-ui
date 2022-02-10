@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.25
+
+- Add appearance and dimension utility functions
+
+---
+
 ### v0.0.24
 
 - Fix padding of Underlined SelectPicker on Android
