@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListHeader Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1C2530",
+          "fontFamily": "System",
+          "fontSize": 24,
+          "fontWeight": "700",
+          "textAlign": "left",
+        },
+      ]
+    }
+    testID="title"
+    variant="h1"
+  >
+    Categories
+  </Text>
+</View>
+`;
+
+exports[`ListHeader Rendering renders link label correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1C2530",
+          "fontFamily": "System",
+          "fontSize": 24,
+          "fontWeight": "700",
+          "textAlign": "left",
+        },
+      ]
+    }
+    testID="title"
+    variant="h1"
+  >
+    Categories
+  </Text>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="link"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#00AEFF",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontWeight": "600",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="link-label"
+      variant="h6"
+    >
+      View All
+    </Text>
+  </View>
+</View>
+`;
