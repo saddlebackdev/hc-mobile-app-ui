@@ -1,5 +1,5 @@
 // Modules
-import {Platform} from 'react-native';
+import {ColorSchemeName, Appearance, Platform} from 'react-native';
 
 /**
  * @method isAndroid
@@ -15,6 +15,22 @@ export const isAndroid: Function = (): boolean => {
  * */
 export const isIos: Function = (): boolean => {
   return Platform.OS === 'ios';
+};
+
+/**
+ * @method getColorScheme
+ * Returns the color scheme of the device.
+ * */
+export const getColorScheme = (): ColorSchemeName => {
+  return Appearance.getColorScheme();
+};
+
+/**
+ * @method isDarkModeActive
+ * Returns true if the current color scheme is "dark".
+ * */
+export const isDarkModeActive = (): boolean => {
+  return getColorScheme() === 'dark';
 };
 
 // Exports
