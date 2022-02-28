@@ -24,6 +24,20 @@ describe('Avatar', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
+    it('renders with the passed size', () => {
+      const wrapper = render(
+        <ThemeProvider theme={defaultTheme}>
+          <Avatar size={240} uri="https://example.com/baby.jpg" />
+        </ThemeProvider>,
+      );
+
+      const image = wrapper.getByTestId('avatar-image');
+
+      expect(image).toBeDefined();
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
     it('renders the passed marker correctly', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
