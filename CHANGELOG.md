@@ -2,6 +2,7 @@
 
 ### v0.0.25
 
+- Add size prop on Avatar component
 - Add appearance and dimension utility functions
 
 ---

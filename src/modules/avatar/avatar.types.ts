@@ -5,6 +5,8 @@ import {ImageProps} from 'react-native';
 // Styled Wrapper
 export interface IStyledWrapper {
   onPress?: any;
+
+  $size: number;
 }
 
 // Styled Marker
@@ -16,6 +18,8 @@ export interface IStyledMarker {
 // Styled Image
 export interface IStyledImage extends ImageProps {
   onPress?: any;
+
+  $borderRadius: number;
 }
 
 // Props
@@ -28,6 +32,9 @@ export interface IProps {
 
   /** Position of marker from right side. */
   markerOffsetRight?: number;
+
+  /** Size of the avatar. */
+  size?: number;
 
   /** Position of marker from bottom. */
   markerOffsetBottom?: number;

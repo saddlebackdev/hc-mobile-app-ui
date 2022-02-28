@@ -16,15 +16,16 @@ import Icon from '../icon/icon';
 // Styles
 const StyledWrapper = Styled.TouchableOpacity<IStyledWrapper>`
   overflow: hidden;
-  width: 33px; height: 33px;
+  width: ${({$size}) => $size}px;
+  height: ${({$size}) => $size}px;
   justify-content: center;
   align-items: center;
 `;
 const StyledImage = Styled.Image<IStyledImage>`
   width: 100%; height: 100%;
-  border-width: 1px;
   border-color: ${({theme}) => theme.colors.white};
-  border-radius: 33px;
+  border-radius: ${({$borderRadius}) => $borderRadius}px;
+  border-width: 1px;
 `;
 const StyledMarker = Styled.View<IStyledMarker>`
   position: absolute;
@@ -42,13 +43,22 @@ export const Avatar: React.FC<IProps> = ({
   markerOffsetRight = -1,
   markerOffsetBottom = -1,
   inversed = false,
+  size = 33,
   marker,
 }): React.ReactElement => {
   return (
-    <StyledWrapper activeOpacity={1} onPress={onPress} testID="avatar-button">
+    <StyledWrapper
+      $size={size}
+      activeOpacity={1}
+      onPress={onPress}
+      testID="avatar-button">
       {uri ? (
         <React.Fragment>
-          <StyledImage source={{uri}} testID="avatar-image" />
+          <StyledImage
+            $borderRadius={size}
+            testID="avatar-image"
+            source={{uri}}
+          />
 
           {marker ? (
             <StyledMarker
