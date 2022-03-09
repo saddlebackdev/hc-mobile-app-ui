@@ -92,7 +92,7 @@ export const TileGroup: React.FC<IProps> = ({
         return (
           <StyledTile
             key={item.id}
-            $height={tileSize}
+            $height={item.size || tileSize}
             $width={100 / columns}
             $disabled={item.disabled}
             activeOpacity={item.disabled ? 0.25 : 0.75}
