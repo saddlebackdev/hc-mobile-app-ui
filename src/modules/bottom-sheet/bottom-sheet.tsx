@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {Animated, Dimensions, SafeAreaView} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
 
@@ -14,22 +14,15 @@ import Heading from '../heading/heading';
 import {minorScale, majorScale} from '../scales';
 import {LayoutUtils} from '../utilities';
 
-// Constants
-const {height: SCREEN_HEIGHT} = Dimensions.get('screen');
-
 // Styles
 const StyledWrapper = Styled.View`
   width: 100%; height: 100%;
-  padding-top: ${majorScale(8)}px;
-  justify-content: flex-end;
-  flex: 1;
-`;
-const StyledContainer = Styled.View`
-  width: 100%; height: 100%;
-  background: ${({theme}) => theme.colors.white};
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
+  backgroundColor: ${({theme}) => theme.colors.white};
+  margin-top: ${majorScale(12)}px;
+  borderTopRightRadius: 12px;
+  borderTopLeftRadius: 12px;
   overflow: hidden;
+
 `;
 const StyledCloseWrapper = Styled.TouchableOpacity`
   position: absolute;
@@ -68,7 +61,9 @@ const StyledContentWrapper = Styled.View`
   justify-content: flex-start;
   flex: 1;
 `;
-const StyledFooterWrapper = Styled.View``;
+const StyledFooterWrapper = Styled.View`
+  margin-bottom: ${majorScale(8)}px;
+`;
 
 // Component
 export const BottomSheet: React.FC<IProps> = ({
@@ -79,94 +74,67 @@ export const BottomSheet: React.FC<IProps> = ({
   header,
   footer,
 }): React.ReactElement => {
-  // Animations
-  const animPanY = new Animated.Value(SCREEN_HEIGHT);
-  const animSlideUpContainer = Animated.timing(animPanY, {
-    duration: 400,
-    useNativeDriver: true,
-    toValue: 0,
-  });
-  const animSlideDownContainer = Animated.timing(animPanY, {
-    duration: 350,
-    toValue: SCREEN_HEIGHT,
-    useNativeDriver: true,
-  });
+  // Refs
+  const modalRef = React.useRef(null);
 
-  const _onDismiss = () => {
-    animSlideDownContainer.start(onDismiss);
+  // On Close Modal
+  const onCloseModal = () => {
+    // Close the modal
+    modalRef.current.close();
+
+    // Call callback function
+    onDismiss();
   };
-
-  React.useEffect(() => {
-    if (isOpen) {
-      setTimeout(() => {
-        animSlideUpContainer.start();
-      }, 400);
-    } else {
-      animSlideDownContainer.start();
-    }
-  }, [isOpen]);
-
-  const translateY = animPanY.interpolate({
-    inputRange: [-1, 0, 1],
-    outputRange: [0, 0, 1],
-  });
 
   const modalStyle = {margin: 0};
 
   return (
     <Modal
-      coverScreen
-      hasBackdrop
-      propagateSwipe
-      useNativeDriver
-      animationIn="slideInUp"
-      animationOut="slideOutDown"
-      onDismiss={_onDismiss}
-      onBackButtonPress={_onDismiss}
+      ref={modalRef}
       isVisible={isOpen}
-      style={modalStyle}>
+      onModalHide={onDismiss}
+      hideModalContentWhileAnimating
+      useNativeDriverForBackdrop
+      style={modalStyle}
+      useNativeDriver
+      propagateSwipe
+      transparent>
       <StyledWrapper>
-        <Animated.View style={{transform: [{translateY}]}}>
-          <StyledContainer>
-            {/* Close Button */}
-            {showCloseButton && (
-              <StyledCloseWrapper
-                activeOpacity={0.75}
-                hitSlop={LayoutUtils.addHitSlop(12)}
-                onPress={_onDismiss}>
-                <Icon type="closeCircle" color="muted" />
-              </StyledCloseWrapper>
-            )}
+        {/* Close Button */}
+        {showCloseButton && (
+          <StyledCloseWrapper
+            activeOpacity={0.75}
+            hitSlop={LayoutUtils.addHitSlop(12)}
+            onPress={onCloseModal}>
+            <Icon type="closeCircle" color="muted" />
+          </StyledCloseWrapper>
+        )}
 
-            {/* Sections */}
-            <StyledSectionWrapper>
-              {/* Header */}
-              {header?.title && (
-                <StyledHeader.Wrapper>
-                  <StyledHeader.Title variant="h3">
-                    {header.title}
-                  </StyledHeader.Title>
+        {/* Sections */}
+        <StyledSectionWrapper>
+          {/* Header */}
+          {header?.title && (
+            <StyledHeader.Wrapper>
+              <StyledHeader.Title variant="h3">
+                {header.title}
+              </StyledHeader.Title>
 
-                  {header?.description && (
-                    <StyledHeader.Description>
-                      {header.description}
-                    </StyledHeader.Description>
-                  )}
-                </StyledHeader.Wrapper>
+              {header?.description && (
+                <StyledHeader.Description>
+                  {header.description}
+                </StyledHeader.Description>
               )}
+            </StyledHeader.Wrapper>
+          )}
 
-              {/* Content */}
-              <StyledContentWrapper>{children}</StyledContentWrapper>
+          {/* Content */}
+          <StyledContentWrapper>{children}</StyledContentWrapper>
 
-              {/* Footer */}
-              {footer && (
-                <StyledFooterWrapper>
-                  <SafeAreaView>{footer()}</SafeAreaView>
-                </StyledFooterWrapper>
-              )}
-            </StyledSectionWrapper>
-          </StyledContainer>
-        </Animated.View>
+          {/* Footer */}
+          <StyledFooterWrapper>
+            <SafeAreaView>{footer}</SafeAreaView>
+          </StyledFooterWrapper>
+        </StyledSectionWrapper>
       </StyledWrapper>
     </Modal>
   );
