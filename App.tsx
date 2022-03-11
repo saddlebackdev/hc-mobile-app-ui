@@ -280,7 +280,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
 
   const redDotMarker = (
     // eslint-disable-next-line react-native/no-inline-styles
-    <View style={{width: '100%', height: '100%', backgroundColor: 'red'}} />
+    <View style={{width: 12, height: 12, backgroundColor: 'red'}} />
   );
 
   return (
@@ -317,10 +317,10 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 <Avatar uri={avatarUri} />
               </Row>
               <Row>
-                <Avatar uri={avatarUri} marker={redDotMarker} />
+                <Avatar uri={undefined} />
               </Row>
               <Row>
-                <Avatar uri={undefined} />
+                <Avatar uri={avatarUri} marker={redDotMarker} />
               </Row>
               <Row>
                 <Avatar uri={undefined} marker={redDotMarker} />

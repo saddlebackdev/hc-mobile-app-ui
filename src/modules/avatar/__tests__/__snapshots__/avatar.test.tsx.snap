@@ -16,11 +16,11 @@ exports[`Avatar Rendering renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "height": 33,
+      "height": 32,
       "justifyContent": "center",
       "opacity": 1,
       "overflow": "hidden",
-      "width": 33,
+      "width": 32,
     }
   }
   testID="avatar-button"
@@ -35,7 +35,7 @@ exports[`Avatar Rendering renders correctly 1`] = `
       Array [
         Object {
           "borderColor": "#FFFFFF",
-          "borderRadius": 33,
+          "borderRadius": 32,
           "borderWidth": 1,
           "height": "100%",
           "width": "100%",
@@ -63,11 +63,11 @@ exports[`Avatar Rendering renders the passed marker correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "height": 33,
+      "height": 32,
       "justifyContent": "center",
       "opacity": 1,
       "overflow": "hidden",
-      "width": 33,
+      "width": 32,
     }
   }
   testID="avatar-button"
@@ -82,7 +82,7 @@ exports[`Avatar Rendering renders the passed marker correctly 1`] = `
       Array [
         Object {
           "borderColor": "#FFFFFF",
-          "borderRadius": 33,
+          "borderRadius": 32,
           "borderWidth": 1,
           "height": "100%",
           "width": "100%",
@@ -96,12 +96,10 @@ exports[`Avatar Rendering renders the passed marker correctly 1`] = `
       Array [
         Object {
           "borderRadius": 12,
-          "bottom": -1,
-          "height": 12,
+          "bottom": 0,
           "overflow": "hidden",
           "position": "absolute",
-          "right": -1,
-          "width": 12,
+          "right": 0,
         },
       ]
     }

@@ -29,7 +29,6 @@ const StyledImage = Styled.Image<IStyledImage>`
 `;
 const StyledMarker = Styled.View<IStyledMarker>`
   position: absolute;
-  width: 12px; height: 12px;
   bottom: ${({$offsetBottom}) => $offsetBottom}px;
   right: ${({$offsetRight}) => $offsetRight}px;
   border-radius: 12px;
@@ -40,16 +39,16 @@ const StyledMarker = Styled.View<IStyledMarker>`
 export const Avatar: React.FC<IProps> = ({
   uri,
   onPress,
-  markerOffsetRight = -1,
-  markerOffsetBottom = -1,
+  markerOffsetRight = 0,
+  markerOffsetBottom = 0,
   inversed = false,
-  size = 33,
+  size = 32,
   marker,
 }): React.ReactElement => {
   return (
     <StyledWrapper
       $size={size}
-      activeOpacity={1}
+      activeOpacity={0.75}
       onPress={onPress}
       testID="avatar-button">
       {uri ? (
@@ -71,7 +70,7 @@ export const Avatar: React.FC<IProps> = ({
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Icon type="user" color={inversed ? 'white' : 'black'} size={33} />
+          <Icon type="user" color={inversed ? 'white' : 'black'} size={size} />
 
           {marker ? (
             <StyledMarker
