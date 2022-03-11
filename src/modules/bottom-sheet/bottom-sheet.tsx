@@ -79,8 +79,8 @@ export const BottomSheet: React.FC<IProps> = ({
 
   // On Close Modal
   const onCloseModal = () => {
-    // Close the modal
-    modalRef.current.close();
+    // @ts-ignore
+    modalRef?.current?.close?.();
 
     // Call callback function
     onDismiss();
@@ -97,8 +97,7 @@ export const BottomSheet: React.FC<IProps> = ({
       useNativeDriverForBackdrop
       style={modalStyle}
       useNativeDriver
-      propagateSwipe
-      transparent>
+      propagateSwipe>
       <StyledWrapper>
         {/* Close Button */}
         {showCloseButton && (
