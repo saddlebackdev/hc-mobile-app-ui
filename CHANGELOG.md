@@ -9,8 +9,7 @@
 
 ### v0.0.26
 
-- Add size prop on Avatar component
-- Add appearance and dimension utility functions
+- Allow changing height of Tiles using the height property
 
 ---
 
