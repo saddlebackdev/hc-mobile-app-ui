@@ -1,5 +1,19 @@
 # Changelog
 
+### v0.0.27
+
+- Prop size affects the size of the Icon
+- Refactor BottomSheet component
+
+---
+
+### v0.0.26
+
+- Add size prop on Avatar component
+- Add appearance and dimension utility functions
+
+---
+
 ### v0.0.25
 
 - Add size prop on Avatar component
