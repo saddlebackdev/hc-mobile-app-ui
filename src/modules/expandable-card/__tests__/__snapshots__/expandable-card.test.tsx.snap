@@ -131,7 +131,7 @@ exports[`ExpandableCard Rendering: Tile renders subTitle Marker properly 1`] = `
       "alignItems": "center",
       "flexDirection": "row",
       "opacity": 1,
-      "width": "100%",
+      "width": "70%",
     }
   }
   testID="tile"
@@ -143,10 +143,10 @@ exports[`ExpandableCard Rendering: Tile renders subTitle Marker properly 1`] = `
           "alignItems": "center",
           "backgroundColor": "#1C2530",
           "borderRadius": 10,
-          "height": 48,
+          "height": 58,
           "justifyContent": "center",
           "marginRight": 11,
-          "width": 48,
+          "width": 58,
         },
       ]
     }
@@ -173,13 +173,12 @@ exports[`ExpandableCard Rendering: Tile renders subTitle Marker properly 1`] = `
     >
       <Text
         inversed={false}
-        muted={true}
         style={
           Array [
             Object {
-              "color": "#97A4AB",
+              "color": "#1C2530",
               "fontFamily": "System",
-              "fontSize": 12,
+              "fontSize": 14,
               "fontStyle": "normal",
               "fontWeight": "400",
               "marginBottom": 4,
@@ -271,7 +270,7 @@ exports[`ExpandableCard Rendering: Tile renders title marker properly 1`] = `
       "alignItems": "center",
       "flexDirection": "row",
       "opacity": 1,
-      "width": "100%",
+      "width": "70%",
     }
   }
   testID="tile"
@@ -283,10 +282,10 @@ exports[`ExpandableCard Rendering: Tile renders title marker properly 1`] = `
           "alignItems": "center",
           "backgroundColor": "#1C2530",
           "borderRadius": 10,
-          "height": 48,
+          "height": 58,
           "justifyContent": "center",
           "marginRight": 11,
-          "width": 48,
+          "width": 58,
         },
       ]
     }
@@ -313,13 +312,12 @@ exports[`ExpandableCard Rendering: Tile renders title marker properly 1`] = `
     >
       <Text
         inversed={false}
-        muted={true}
         style={
           Array [
             Object {
-              "color": "#97A4AB",
+              "color": "#1C2530",
               "fontFamily": "System",
-              "fontSize": 12,
+              "fontSize": 14,
               "fontStyle": "normal",
               "fontWeight": "400",
               "marginBottom": 4,
@@ -411,7 +409,7 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
       "alignItems": "center",
       "flexDirection": "row",
       "opacity": 1,
-      "width": "100%",
+      "width": "70%",
     }
   }
   testID="tile"
@@ -423,10 +421,10 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
           "alignItems": "center",
           "backgroundColor": "#00AEEF",
           "borderRadius": 10,
-          "height": 48,
+          "height": 58,
           "justifyContent": "center",
           "marginRight": 11,
-          "width": 48,
+          "width": 58,
         },
       ]
     }
@@ -453,13 +451,12 @@ exports[`ExpandableCard Rendering: Tile should set tile color to passed tileColo
     >
       <Text
         inversed={false}
-        muted={true}
         style={
           Array [
             Object {
-              "color": "#97A4AB",
+              "color": "#1C2530",
               "fontFamily": "System",
-              "fontSize": 12,
+              "fontSize": 14,
               "fontStyle": "normal",
               "fontWeight": "400",
               "marginBottom": 4,
@@ -532,7 +529,7 @@ exports[`ExpandableCard Rendering: Tile tile renders correctly 1`] = `
       "alignItems": "center",
       "flexDirection": "row",
       "opacity": 1,
-      "width": "100%",
+      "width": "70%",
     }
   }
   testID="tile"
@@ -544,10 +541,10 @@ exports[`ExpandableCard Rendering: Tile tile renders correctly 1`] = `
           "alignItems": "center",
           "backgroundColor": "#1C2530",
           "borderRadius": 10,
-          "height": 48,
+          "height": 58,
           "justifyContent": "center",
           "marginRight": 11,
-          "width": 48,
+          "width": 58,
         },
       ]
     }

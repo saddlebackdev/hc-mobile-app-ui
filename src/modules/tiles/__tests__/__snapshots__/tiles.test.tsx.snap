@@ -74,18 +74,21 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "alignSelf": "flex-start",
+              "bottom": 8,
               "color": "#FFFFFF",
               "fontFamily": "System",
-              "fontSize": 14,
+              "fontSize": 16,
               "fontStyle": "normal",
-              "fontWeight": "600",
+              "fontWeight": "700",
+              "left": 6,
               "marginLeft": 4,
+              "position": "absolute",
               "textAlign": "left",
             },
           ]
         }
         testID="tile-title"
-        weight="semiBold"
+        weight="bold"
       >
         Worship
       </Text>
@@ -152,18 +155,21 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "alignSelf": "flex-start",
+              "bottom": 8,
               "color": "#FFFFFF",
               "fontFamily": "System",
-              "fontSize": 14,
+              "fontSize": 16,
               "fontStyle": "normal",
-              "fontWeight": "600",
+              "fontWeight": "700",
+              "left": 6,
               "marginLeft": 4,
+              "position": "absolute",
               "textAlign": "left",
             },
           ]
         }
         testID="tile-title"
-        weight="semiBold"
+        weight="bold"
       >
         Baptism
       </Text>
@@ -230,18 +236,21 @@ exports[`Tiles Rendering renders itself correctly 1`] = `
           Array [
             Object {
               "alignSelf": "flex-start",
+              "bottom": 8,
               "color": "#FFFFFF",
               "fontFamily": "System",
-              "fontSize": 14,
+              "fontSize": 16,
               "fontStyle": "normal",
-              "fontWeight": "600",
+              "fontWeight": "700",
+              "left": 6,
               "marginLeft": 4,
+              "position": "absolute",
               "textAlign": "left",
             },
           ]
         }
         testID="tile-title"
-        weight="semiBold"
+        weight="bold"
       >
         Prayer
       </Text>
