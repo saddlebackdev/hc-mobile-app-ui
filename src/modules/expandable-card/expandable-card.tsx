@@ -14,14 +14,14 @@ import {majorScale} from '../scales';
 
 // Styles
 const StyledTileWrapper = Styled.TouchableOpacity`
-  width: 100%;
+  width: 70%;
   flex-direction: row;
   align-items: center;
 `;
 const StyledTileIconWrapper = Styled.View<IStyledTileIconWrapper>`
   align-items: center;
   justify-content: center;
-  width: 48px; height: 48px;
+  width: 58px; height: 58px;
   margin-right: ${majorScale(1)}px;
   border-radius: 10px;
 
@@ -32,7 +32,7 @@ const StyledTileIconWrapper = Styled.View<IStyledTileIconWrapper>`
 const StyledTileDetails = Styled.View``;
 const StyledTileTitle = Styled(Heading)``;
 const StyledTileSubtitle = Styled(Text)`
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 4px;
   margin-top: 4px;
 `;
@@ -91,10 +91,7 @@ export const ExpandableCard: React.FC<IProps> = ({
         <StyledTileDetails>
           {subTitle ? (
             <StyledRow>
-              <StyledTileSubtitle
-                muted
-                inversed={inversed}
-                testID="tile-subtitle">
+              <StyledTileSubtitle inversed={inversed} testID="tile-subtitle">
                 {subTitle}
               </StyledTileSubtitle>
 
