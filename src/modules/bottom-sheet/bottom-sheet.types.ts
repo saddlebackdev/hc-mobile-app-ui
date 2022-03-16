@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Header
 export interface IHeader {
   /** Title for the bottom sheet. */
@@ -21,6 +23,6 @@ export interface IProps {
   /** Header component of the bottom sheet. */
   header?: IHeader;
 
-  /** Function that renders a component as the footer of the bottom sheet. */
-  footer?: Function;
+  /** React element to be rendered as the footer. */
+  footer?: React.ReactElement;
 }
