@@ -8,12 +8,12 @@ import {IStyledHeader, IStyledItem, IProps} from './horizontal-list.types';
 // Shared
 import Heading from '../heading/heading';
 import {majorScale} from '../scales';
+import Text from '../text/text';
 
 // Styles
 const StyledWrapper = Styled.View``;
 const StyledHeader = Styled.View<IStyledHeader>`
   flex-direction: row;
-  margin-bottom: ${majorScale(2)}px;
   justify-content: space-between;
   align-items: center;
 
@@ -22,6 +22,10 @@ const StyledHeader = Styled.View<IStyledHeader>`
   }};
 `;
 const StyledHeaderTitle = Styled(Heading)``;
+const StyledHeaderText = Styled(Text)`
+  margin-bottom: ${majorScale(2)}px;
+  margin-left: ${majorScale(2)}px;
+`;
 const StyledHeaderLink = Styled.TouchableOpacity``;
 const StyledHeaderLinkLabel = Styled(Heading)`
   color: ${({theme}) => theme.colors.primaryLight};
@@ -56,6 +60,7 @@ const StyledItem = Styled.View<IStyledItem>`
 // Component
 export const HorizontalList: React.FC<IProps> = ({
   title,
+  subTitle,
   linkLabel,
   onLinkPress,
   gutterSize = 0,
@@ -101,22 +106,25 @@ export const HorizontalList: React.FC<IProps> = ({
     <StyledWrapper>
       {/* Header */}
       {shouldShowHeader && (
-        <StyledHeader $paddedHeader={paddedHeader}>
-          <StyledHeaderTitle testID="title" variant="h1">
-            {title}
-          </StyledHeaderTitle>
+        <StyledWrapper>
+          <StyledHeader $paddedHeader={paddedHeader}>
+            <StyledHeaderTitle testID="title" variant="h1">
+              {title}
+            </StyledHeaderTitle>
 
-          {linkLabel && (
-            <StyledHeaderLink
-              testID="link"
-              activeOpacity={0.75}
-              onPress={onLinkPress}>
-              <StyledHeaderLinkLabel variant="h6" testID="link-label">
-                {linkLabel}
-              </StyledHeaderLinkLabel>
-            </StyledHeaderLink>
-          )}
-        </StyledHeader>
+            {linkLabel && (
+              <StyledHeaderLink
+                testID="link"
+                activeOpacity={0.75}
+                onPress={onLinkPress}>
+                <StyledHeaderLinkLabel variant="h6" testID="link-label">
+                  {linkLabel}
+                </StyledHeaderLinkLabel>
+              </StyledHeaderLink>
+            )}
+          </StyledHeader>
+          <StyledHeaderText>{subTitle}</StyledHeaderText>
+        </StyledWrapper>
       )}
 
       {/* List */}

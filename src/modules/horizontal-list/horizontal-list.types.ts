@@ -16,6 +16,9 @@ export interface IProps {
   /** Title of the list. */
   title?: string;
 
+  /** SubTitle of the list. */
+  subTitle?: string;
+
   /** Label for the link shown on right. */
   linkLabel?: string;
 
