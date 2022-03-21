@@ -84,68 +84,92 @@ exports[`HorizontalList Rendering should render the link 1`] = `
   <View
     style={
       Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "marginBottom": 22,
-          "paddingHorizontal": 0,
-        },
+        Object {},
       ]
     }
   >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 0,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 24,
+              "fontWeight": "700",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="title"
+        variant="h1"
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID="link"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#00AEFF",
+                "fontFamily": "System",
+                "fontSize": 14,
+                "fontWeight": "600",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="link-label"
+          variant="h6"
+        >
+          View All
+        </Text>
+      </View>
+    </View>
     <Text
       style={
         Array [
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 24,
-            "fontWeight": "700",
+            "fontSize": 18,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "marginBottom": 22,
+            "marginLeft": 22,
             "textAlign": "left",
           },
         ]
       }
-      testID="title"
-      variant="h1"
+      testID="text"
     />
-    <View
-      accessible={true}
-      collapsable={false}
-      focusable={true}
-      nativeID="animatedComponent"
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-      testID="link"
-    >
-      <Text
-        style={
-          Array [
-            Object {
-              "color": "#00AEFF",
-              "fontFamily": "System",
-              "fontSize": 14,
-              "fontWeight": "600",
-              "textAlign": "left",
-            },
-          ]
-        }
-        testID="link-label"
-        variant="h6"
-      >
-        View All
-      </Text>
-    </View>
   </View>
   <RCTScrollView
     data={
@@ -223,33 +247,57 @@ exports[`HorizontalList Rendering should render the title when passed 1`] = `
   <View
     style={
       Array [
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "marginBottom": 22,
-          "paddingHorizontal": 0,
-        },
+        Object {},
       ]
     }
   >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingHorizontal": 0,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 24,
+              "fontWeight": "700",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="title"
+        variant="h1"
+      >
+        Categories
+      </Text>
+    </View>
     <Text
       style={
         Array [
           Object {
             "color": "#1C2530",
             "fontFamily": "System",
-            "fontSize": 24,
-            "fontWeight": "700",
+            "fontSize": 18,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "marginBottom": 22,
+            "marginLeft": 22,
             "textAlign": "left",
           },
         ]
       }
-      testID="title"
-      variant="h1"
-    >
-      Categories
-    </Text>
+      testID="text"
+    />
   </View>
   <RCTScrollView
     data={
