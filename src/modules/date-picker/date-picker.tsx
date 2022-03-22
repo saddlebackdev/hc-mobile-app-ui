@@ -128,6 +128,7 @@ const DatePicker: React.FC<IProps> = React.memo(
         {/* Android */}
         {isAndroid && isOpen ? (
           <DateTimePicker
+            {...rest}
             display="spinner"
             value={selectedDate}
             onChange={onChange}
