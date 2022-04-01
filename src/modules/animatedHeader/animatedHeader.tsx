@@ -1,7 +1,6 @@
 import React from 'react';
 import {Animated, StyleSheet} from 'react-native';
 import Styled from 'styled-components/native';
-import {DeviceUtils} from '../utilities';
 import {majorScale} from '../scales';
 import {IAnimatedProps, IAnimatedHeader} from './animatedHeader.types';
 
@@ -36,8 +35,12 @@ const StyledContainer = Styled.View`
     position: 'absolute';
     left: 0;
     right: 0;
-    shadowColor: ${({theme}) => theme.colors.grayOne};
-    box-shadow: 4.65px 0px 4px black;
+    top: 0;
+    shadow-color: ${({theme}) => theme.colors.black};
+    shadow-offset: {width: 0, height: 4};
+    shadow-radius: 4.65;
+    shadowOpacity: 0.3;
+    elevation: 8;
     backgroundColor: ${({theme}) => theme.colors.grayOne};
     paddingBottom: ${majorScale(1)}px;
 `;
@@ -75,9 +78,6 @@ const AnimatedHeader: React.FC<IAnimatedHeader> = ({
 
   const finalContainerStyle = StyleSheet.flatten([
     {
-      shadowOpacity: 0.3,
-      elevation: 8,
-      top: DeviceUtils.isAndroid() ? 56 : 0,
       transform: [{translateY}],
     },
     containerStyle,
