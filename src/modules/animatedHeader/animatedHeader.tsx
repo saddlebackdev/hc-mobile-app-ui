@@ -66,13 +66,13 @@ const AnimatedHeader: React.FC<IAnimatedHeader> = ({
 }): React.ReactElement => {
   const hMaxHeight = H_MAX_HEIGHT + tagHeight;
 
-  let {opacity, translateY} = getNewInterpolationValue(
+  let {opacity: newOpacity, translateY} = getNewInterpolationValue(
     hMaxHeight,
     scrollOffsetY,
   );
 
   if (restoreOldPositions) {
-    opacity = oldOpacity;
+    newOpacity = oldOpacity;
     translateY = oldTranslateY;
   }
 
@@ -83,9 +83,9 @@ const AnimatedHeader: React.FC<IAnimatedHeader> = ({
     containerStyle,
   ]);
 
-  const wrapperStyle = StyleSheet.flatten([{opacity}, itemStyle]);
+  const wrapperStyle = StyleSheet.flatten([{newOpacity}, itemStyle]);
 
-  oldOpacity = opacity;
+  oldOpacity = newOpacity;
   oldTranslateY = translateY;
 
   return (
