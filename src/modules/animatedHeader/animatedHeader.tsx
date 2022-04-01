@@ -83,14 +83,14 @@ const AnimatedHeader: React.FC<IAnimatedHeader> = ({
     containerStyle,
   ]);
 
-  const wrrapperStyle = StyleSheet.flatten([{opacity}, itemStyle]);
+  const wrapperStyle = StyleSheet.flatten([{opacity}, itemStyle]);
 
   oldOpacity = opacity;
   oldTranslateY = translateY;
 
   return (
     <AnimatedContainer style={finalContainerStyle}>
-      <AnimatedStyledItemWrapper style={wrrapperStyle}>
+      <AnimatedStyledItemWrapper style={wrapperStyle}>
         {children}
       </AnimatedStyledItemWrapper>
     </AnimatedContainer>
