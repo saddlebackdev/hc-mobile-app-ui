@@ -5,7 +5,6 @@ import {DeviceUtils} from '../utilities';
 import {majorScale} from '../scales';
 import {IAnimatedProps, IAnimatedHeader} from './animatedHeader.types';
 
-let oldSearchTerm: string | undefined = '';
 let oldOpacity: Animated.AnimatedInterpolation | undefined;
 let oldTranslateY: Animated.AnimatedInterpolation | undefined;
 
@@ -54,12 +53,12 @@ const AnimatedStyledItemWrapper =
   Animated.createAnimatedComponent(StyledItemWrapper);
 
 const AnimatedHeader: React.FC<IAnimatedHeader> = ({
-  searchTerm,
   scrollOffsetY,
   tagHeight,
   containerStyle,
   itemStyle,
   H_MAX_HEIGHT,
+  restoreOldPositions,
   children,
 }): React.ReactElement => {
   const hMaxHeight = H_MAX_HEIGHT + tagHeight;
@@ -69,7 +68,7 @@ const AnimatedHeader: React.FC<IAnimatedHeader> = ({
     scrollOffsetY,
   );
 
-  if (oldSearchTerm !== searchTerm) {
+  if (restoreOldPositions) {
     opacity = oldOpacity;
     translateY = oldTranslateY;
   }
@@ -84,15 +83,14 @@ const AnimatedHeader: React.FC<IAnimatedHeader> = ({
     containerStyle,
   ]);
 
-  const searchBoxWrapperStyle = StyleSheet.flatten([{opacity}, itemStyle]);
+  const wrrapperStyle = StyleSheet.flatten([{opacity}, itemStyle]);
 
-  oldSearchTerm = searchTerm;
   oldOpacity = opacity;
   oldTranslateY = translateY;
 
   return (
     <AnimatedContainer style={finalContainerStyle}>
-      <AnimatedStyledItemWrapper style={searchBoxWrapperStyle}>
+      <AnimatedStyledItemWrapper style={wrrapperStyle}>
         {children}
       </AnimatedStyledItemWrapper>
     </AnimatedContainer>

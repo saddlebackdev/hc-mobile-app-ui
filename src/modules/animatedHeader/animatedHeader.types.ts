@@ -9,6 +9,7 @@ export interface IAnimatedHeader {
   searchTerm?: string | undefined;
   scrollOffsetY: Animated.Value;
   tagHeight: number;
+  restoreOldPositions: boolean;
   containerStyle: ViewStyle;
   itemStyle: ViewStyle;
   H_MAX_HEIGHT: number;
