@@ -14,7 +14,10 @@ import Heading from '../heading/heading';
 import {minorScale, majorScale} from '../scales';
 import {LayoutUtils} from '../utilities';
 
-// Styles
+/**
+ * Styles
+ * StatusBar.currentHeight is undefined for iOS devices
+ */
 const StyledWrapper = Styled.View`
   width: 100%; height: 100%;
   backgroundColor: ${({theme}) => theme.colors.white};
@@ -104,6 +107,11 @@ export const BottomSheet: React.FC<IProps> = ({
       style={modalStyle}
       useNativeDriver
       propagateSwipe>
+      {/*
+       * SafearaView is used to prevent the modal from being covered by the status bar, doing this
+       * margin-top will take effect from bottom of the notch in iOS devices
+       * https://github.com/react-native-modal/react-native-modal/issues/342
+       */}
       <SafeAreaView>
         <StyledWrapper>
           {/* Close Button */}
