@@ -105,39 +105,39 @@ export const BottomSheet: React.FC<IProps> = ({
       useNativeDriver
       propagateSwipe>
       <SafeAreaView>
-      <StyledWrapper>
-        {/* Close Button */}
-        {showCloseButton && (
-          <StyledCloseWrapper
-            activeOpacity={0.75}
-            hitSlop={LayoutUtils.addHitSlop(12)}
-            onPress={onCloseModal}>
-            <Icon type="closeCircle" color="muted" />
-          </StyledCloseWrapper>
-        )}
-        {/* Sections */}
-        <StyledSectionWrapper>
-          {/* Header */}
-          {header?.title && (
-            <StyledHeader.Wrapper>
-              <StyledHeader.Title variant="h3">
-                {header.title}
-              </StyledHeader.Title>
-              {header?.description && (
-                <StyledHeader.Description>
-                  {header.description}
-                </StyledHeader.Description>
-              )}
-            </StyledHeader.Wrapper>
+        <StyledWrapper>
+          {/* Close Button */}
+          {showCloseButton && (
+            <StyledCloseWrapper
+              activeOpacity={0.75}
+              hitSlop={LayoutUtils.addHitSlop(12)}
+              onPress={onCloseModal}>
+              <Icon type="closeCircle" color="muted" />
+            </StyledCloseWrapper>
           )}
-          {/* Content */}
-          <StyledContentWrapper>{children}</StyledContentWrapper>
-          {/* Footer */}
-          <StyledFooterWrapper>
-            <SafeAreaView>{footer}</SafeAreaView>
-          </StyledFooterWrapper>
-        </StyledSectionWrapper>
-      </StyledWrapper>
+          {/* Sections */}
+          <StyledSectionWrapper>
+            {/* Header */}
+            {header?.title && (
+              <StyledHeader.Wrapper>
+                <StyledHeader.Title variant="h3">
+                  {header.title}
+                </StyledHeader.Title>
+                {header?.description && (
+                  <StyledHeader.Description>
+                    {header.description}
+                  </StyledHeader.Description>
+                )}
+              </StyledHeader.Wrapper>
+            )}
+            {/* Content */}
+            <StyledContentWrapper>{children}</StyledContentWrapper>
+            {/* Footer */}
+            <StyledFooterWrapper>
+              <SafeAreaView>{footer}</SafeAreaView>
+            </StyledFooterWrapper>
+          </StyledSectionWrapper>
+        </StyledWrapper>
       </SafeAreaView>
     </Modal>
   );
