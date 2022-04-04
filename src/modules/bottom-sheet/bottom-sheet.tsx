@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
 import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
 
@@ -18,7 +18,13 @@ import {LayoutUtils} from '../utilities';
 const StyledWrapper = Styled.View`
   width: 100%; height: 100%;
   backgroundColor: ${({theme}) => theme.colors.white};
-  margin-top: ${majorScale(12)}px;
+  margin-top: ${
+    StatusBar.currentHeight
+      ? StatusBar.currentHeight > 24
+        ? majorScale(12)
+        : 50
+      : majorScale(12)
+  }px;
   borderTopRightRadius: 12px;
   borderTopLeftRadius: 12px;
   overflow: hidden;
