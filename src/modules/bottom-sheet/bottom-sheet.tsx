@@ -17,6 +17,7 @@ import {LayoutUtils} from '../utilities';
 /**
  * Styles
  * StatusBar.currentHeight is undefined for iOS devices
+ * An android device is considered to have a notch when the height of StatusBar is greater than 24
  */
 const StyledWrapper = Styled.View`
   width: 100%; height: 100%;
