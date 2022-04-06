@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
 import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
 
@@ -14,11 +14,21 @@ import Heading from '../heading/heading';
 import {minorScale, majorScale} from '../scales';
 import {LayoutUtils} from '../utilities';
 
-// Styles
+/**
+ * Styles
+ * StatusBar.currentHeight is undefined for iOS devices
+ * An android device is considered to have a notch when the height of StatusBar is greater than 24
+ */
 const StyledWrapper = Styled.View`
   width: 100%; height: 100%;
   backgroundColor: ${({theme}) => theme.colors.white};
-  margin-top: ${majorScale(12)}px;
+  margin-top: ${
+    StatusBar.currentHeight
+      ? StatusBar.currentHeight > 24
+        ? majorScale(12)
+        : majorScale(5.5)
+      : majorScale(5.5)
+  }px;
   borderTopRightRadius: 12px;
   borderTopLeftRadius: 12px;
   overflow: hidden;
@@ -98,43 +108,46 @@ export const BottomSheet: React.FC<IProps> = ({
       style={modalStyle}
       useNativeDriver
       propagateSwipe>
-      <StyledWrapper>
-        {/* Close Button */}
-        {showCloseButton && (
-          <StyledCloseWrapper
-            activeOpacity={0.75}
-            hitSlop={LayoutUtils.addHitSlop(12)}
-            onPress={onCloseModal}>
-            <Icon type="closeCircle" color="muted" />
-          </StyledCloseWrapper>
-        )}
-
-        {/* Sections */}
-        <StyledSectionWrapper>
-          {/* Header */}
-          {header?.title && (
-            <StyledHeader.Wrapper>
-              <StyledHeader.Title variant="h3">
-                {header.title}
-              </StyledHeader.Title>
-
-              {header?.description && (
-                <StyledHeader.Description>
-                  {header.description}
-                </StyledHeader.Description>
-              )}
-            </StyledHeader.Wrapper>
+      {/*
+       * SafearaView is used to prevent the modal from being covered by the status bar, doing this
+       * margin-top will take effect from bottom of the notch in iOS devices
+       * https://github.com/react-native-modal/react-native-modal/issues/342
+       */}
+      <SafeAreaView>
+        <StyledWrapper>
+          {/* Close Button */}
+          {showCloseButton && (
+            <StyledCloseWrapper
+              activeOpacity={0.75}
+              hitSlop={LayoutUtils.addHitSlop(12)}
+              onPress={onCloseModal}>
+              <Icon type="closeCircle" color="muted" />
+            </StyledCloseWrapper>
           )}
-
-          {/* Content */}
-          <StyledContentWrapper>{children}</StyledContentWrapper>
-
-          {/* Footer */}
-          <StyledFooterWrapper>
-            <SafeAreaView>{footer}</SafeAreaView>
-          </StyledFooterWrapper>
-        </StyledSectionWrapper>
-      </StyledWrapper>
+          {/* Sections */}
+          <StyledSectionWrapper>
+            {/* Header */}
+            {header?.title && (
+              <StyledHeader.Wrapper>
+                <StyledHeader.Title variant="h3">
+                  {header.title}
+                </StyledHeader.Title>
+                {header?.description && (
+                  <StyledHeader.Description>
+                    {header.description}
+                  </StyledHeader.Description>
+                )}
+              </StyledHeader.Wrapper>
+            )}
+            {/* Content */}
+            <StyledContentWrapper>{children}</StyledContentWrapper>
+            {/* Footer */}
+            <StyledFooterWrapper>
+              <SafeAreaView>{footer}</SafeAreaView>
+            </StyledFooterWrapper>
+          </StyledSectionWrapper>
+        </StyledWrapper>
+      </SafeAreaView>
     </Modal>
   );
 };
