@@ -777,13 +777,28 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             </Section.Title>
             <Section.Description>
               <Text variant="caption">
-                Chips (aka Tags) are compact elements that represent an input,
-                attribute, or action.
+                Links are used to navigate to other screens or to open an
+                external url.
               </Text>
             </Section.Description>
             <Section.Content>
               <Row>
                 <Link to="home" label="View All" />
+              </Row>
+              <Row>
+                <Link to="home" label="Small Label Link" small />
+              </Row>
+              <Row>
+                <Link
+                  to="home"
+                  label="Colored Label Link"
+                  color="successLight"
+                />
+              </Row>
+              <Row>
+                <Link to="home">
+                  <Text>Supports Children Too</Text>
+                </Link>
               </Row>
             </Section.Content>
           </Section.Wrapper>
@@ -966,6 +981,24 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   in voluptate velit esse cillum dolore eu fugiat nulla
                   pariatur. Excepteur sint occaecat cupidatat non proident, sunt
                   in culpa qui officia deserunt mollit anim id est laborum.
+                </Text>
+              </Row>
+              <Row>
+                <Text variant="caption" color="primaryLight">
+                  COLORED TEXT &mdash; Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam,{' '}
+                  <Text variant="subtitle" color="dangerLight">
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.
+                  </Text>{' '}
+                  Excepteur sint occaecat cupidatat non proident,{' '}
+                  <Text variant="button" color="successLight">
+                    sunt in culpa qui officia deserunt mollit anim id est
+                    laborum.
+                  </Text>
                 </Text>
               </Row>
             </Section.Content>
