@@ -32,5 +32,5 @@ export interface IProps {
   items: Array<IItem>;
 
   /** ID of the currently selected item. */
-  selected: string | number;
+  selected: string | number | Array<string | number>;
 }

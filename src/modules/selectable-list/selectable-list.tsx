@@ -62,7 +62,9 @@ export const SelectableList: React.FC<IProps> = ({
 
   // Render Item
   const renderItem = ({item}): any => {
-    const isSelected = item.id === selected;
+    const isSelected = Array.isArray(selected)
+      ? selected.includes(item.id)
+      : selected === item.id;
 
     return (
       <SelectableListItem
