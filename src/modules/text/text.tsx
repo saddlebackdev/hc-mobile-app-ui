@@ -6,7 +6,7 @@ import {IProps} from './text.types';
 
 // Component
 const Text = Styled.Text<IProps>`
-  color: ${({theme, inversed, muted}): string => {
+  color: ${({theme, color = 'graySix', inversed, muted}): string => {
     if (muted) {
       return theme.colors.grayFour;
     }
@@ -15,7 +15,7 @@ const Text = Styled.Text<IProps>`
       return theme.colors.white;
     }
 
-    return theme.colors.graySix;
+    return theme.colors?.[color];
   }};
 
   font-size: ${({theme, small, variant}): string => {

@@ -3,6 +3,16 @@ import {TextProps} from 'react-native';
 
 // Props
 export interface IProps extends TextProps {
+  /** Determines the color of the text. Can be primary, secondary, info, success, warning, danger or any color from the theme. */
+  color?:
+    | 'primary'
+    | 'secondary'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | string;
+
   /** If true, inverses the color of text. */
   inversed?: boolean;
 
