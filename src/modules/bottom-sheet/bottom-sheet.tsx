@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
 
