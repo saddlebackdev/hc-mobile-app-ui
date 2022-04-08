@@ -11,15 +11,14 @@ import Text from '../text/text';
 
 // Styles
 const StyledTouchable = Styled.TouchableOpacity``;
-const StyledLabel = Styled(Text)`
-  color: ${({theme}) => theme.colors.primaryLight};
-`;
 
 // Component
 export const Link: React.FC<IProps> = ({
   label,
   children,
   onPress,
+  color = 'primaryLight',
+  small,
   to,
 }): React.ReactElement => {
   // On Link Press
@@ -49,9 +48,9 @@ export const Link: React.FC<IProps> = ({
   return (
     <StyledTouchable activeOpacity={0.75} onPress={onLinkPress} testID="link">
       {label ? (
-        <StyledLabel weight="semiBold" testID="link-label">
+        <Text color={color} small={small} weight="semiBold" testID="link-label">
           {label}
-        </StyledLabel>
+        </Text>
       ) : (
         children
       )}

@@ -21,6 +21,7 @@ exports[`Link Rendering renders itself correctly 1`] = `
   testID="link"
 >
   <Text
+    color="primaryLight"
     style={
       Array [
         Object {

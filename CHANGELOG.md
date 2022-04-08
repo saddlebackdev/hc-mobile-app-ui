@@ -5,6 +5,32 @@
 
 ---
 
+### v0.0.31
+
+- Allow multiple list items to be selected in SelectableList
+- Add color prop on Text component
+
+---
+
+### v0.0.30
+
+- Fix issues related to Notch based devices in BottomSheet
+
+---
+
+### v0.0.29
+
+- Fix "rest" props in DatePicker
+
+---
+
+### v0.0.28
+
+- Style fixes for Tiles and ExpandableCard components
+- Add subtitle prop in HorizontalList component
+
+---
+
 ### v0.0.27
 
 - Prop size affects the size of the Icon
