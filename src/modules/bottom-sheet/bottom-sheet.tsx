@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
 
@@ -14,21 +14,11 @@ import Heading from '../heading/heading';
 import {minorScale, majorScale} from '../scales';
 import {LayoutUtils} from '../utilities';
 
-/**
- * Styles
- * StatusBar.currentHeight is undefined for iOS devices
- * An android device is considered to have a notch when the height of StatusBar is greater than 24
- */
+// Styles
 const StyledWrapper = Styled.View`
   width: 100%; height: 100%;
   backgroundColor: ${({theme}) => theme.colors.white};
-  margin-top: ${
-    StatusBar.currentHeight
-      ? StatusBar.currentHeight > 24
-        ? majorScale(12)
-        : majorScale(5.5)
-      : majorScale(5.5)
-  }px;
+  margin-top: ${majorScale(5.5)}px;
   borderTopRightRadius: 12px;
   borderTopLeftRadius: 12px;
   overflow: hidden;
