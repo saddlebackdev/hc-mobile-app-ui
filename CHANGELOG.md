@@ -1,4 +1,9 @@
 # Changelog
+### v0.0.30
+
+- BottomSheet component's margin-top is consistent in notch and non-notched iOS devices.
+
+---
 
 ### v0.0.27
 
