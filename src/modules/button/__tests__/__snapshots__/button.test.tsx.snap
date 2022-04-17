@@ -2,6 +2,7 @@
 
 exports[`Button Rendering Variants danger: should match snapshot 1`] = `
 <View
+  accessibilityLabel="button"
   accessibilityState={
     Object {
       "disabled": false,
@@ -43,6 +44,7 @@ exports[`Button Rendering Variants danger: should match snapshot 1`] = `
   testID="button"
 >
   <Text
+    accessibilityLabel="button-label"
     appearance="filled"
     color="danger"
     disabled={false}
@@ -66,6 +68,7 @@ exports[`Button Rendering Variants danger: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants default: should match snapshot 1`] = `
 <View
+  accessibilityLabel="button"
   accessibilityState={
     Object {
       "disabled": false,
@@ -107,6 +110,7 @@ exports[`Button Rendering Variants default: should match snapshot 1`] = `
   testID="button"
 >
   <Text
+    accessibilityLabel="button-label"
     appearance="filled"
     color="primary"
     disabled={false}
@@ -130,6 +134,7 @@ exports[`Button Rendering Variants default: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants info: should match snapshot 1`] = `
 <View
+  accessibilityLabel="button"
   accessibilityState={
     Object {
       "disabled": false,
@@ -171,6 +176,7 @@ exports[`Button Rendering Variants info: should match snapshot 1`] = `
   testID="button"
 >
   <Text
+    accessibilityLabel="button-label"
     appearance="filled"
     color="info"
     disabled={false}
@@ -194,6 +200,7 @@ exports[`Button Rendering Variants info: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants outline: should match snapshot 1`] = `
 <View
+  accessibilityLabel="button"
   accessibilityState={
     Object {
       "disabled": false,
@@ -235,6 +242,7 @@ exports[`Button Rendering Variants outline: should match snapshot 1`] = `
   testID="button"
 >
   <Text
+    accessibilityLabel="button-label"
     appearance="outline"
     color="primary"
     disabled={false}
@@ -258,6 +266,7 @@ exports[`Button Rendering Variants outline: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants primary: should match snapshot 1`] = `
 <View
+  accessibilityLabel="button"
   accessibilityState={
     Object {
       "disabled": false,
@@ -299,6 +308,7 @@ exports[`Button Rendering Variants primary: should match snapshot 1`] = `
   testID="button"
 >
   <Text
+    accessibilityLabel="button-label"
     appearance="filled"
     color="primary"
     disabled={false}
@@ -322,6 +332,7 @@ exports[`Button Rendering Variants primary: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
 <View
+  accessibilityLabel="button"
   accessibilityState={
     Object {
       "disabled": false,
@@ -363,6 +374,7 @@ exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
   testID="button"
 >
   <Text
+    accessibilityLabel="button-label"
     appearance="filled"
     color="secondary"
     disabled={false}
@@ -386,6 +398,7 @@ exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants small: should match snapshot 1`] = `
 <View
+  accessibilityLabel="button"
   accessibilityState={
     Object {
       "disabled": false,
@@ -427,6 +440,7 @@ exports[`Button Rendering Variants small: should match snapshot 1`] = `
   testID="button"
 >
   <Text
+    accessibilityLabel="button-label"
     appearance="filled"
     color="primary"
     disabled={false}
@@ -450,6 +464,7 @@ exports[`Button Rendering Variants small: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants success: should match snapshot 1`] = `
 <View
+  accessibilityLabel="button"
   accessibilityState={
     Object {
       "disabled": false,
@@ -491,6 +506,7 @@ exports[`Button Rendering Variants success: should match snapshot 1`] = `
   testID="button"
 >
   <Text
+    accessibilityLabel="button-label"
     appearance="filled"
     color="success"
     disabled={false}
@@ -514,6 +530,7 @@ exports[`Button Rendering Variants success: should match snapshot 1`] = `
 
 exports[`Button Rendering Variants warning: should match snapshot 1`] = `
 <View
+  accessibilityLabel="button"
   accessibilityState={
     Object {
       "disabled": false,
@@ -555,6 +572,7 @@ exports[`Button Rendering Variants warning: should match snapshot 1`] = `
   testID="button"
 >
   <Text
+    accessibilityLabel="button-label"
     appearance="filled"
     color="warning"
     disabled={false}

@@ -29,6 +29,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
     testID="button-group-item"
   >
     <View
+      accessibilityLabel="button"
       accessibilityState={
         Object {
           "disabled": false,
@@ -70,6 +71,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
       testID="button"
     >
       <Text
+        accessibilityLabel="button-label"
         appearance="filled"
         color="primary"
         disabled={false}
@@ -105,6 +107,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
     testID="button-group-item"
   >
     <View
+      accessibilityLabel="button"
       accessibilityState={
         Object {
           "disabled": false,
@@ -146,6 +149,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
       testID="button"
     >
       <Text
+        accessibilityLabel="button-label"
         appearance="filled"
         color="primary"
         disabled={false}
@@ -198,6 +202,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
     testID="button-group-item"
   >
     <View
+      accessibilityLabel="button"
       accessibilityState={
         Object {
           "disabled": false,
@@ -239,6 +244,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
       testID="button"
     >
       <Text
+        accessibilityLabel="button-label"
         appearance="filled"
         color="primary"
         disabled={false}
@@ -274,6 +280,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
     testID="button-group-item"
   >
     <View
+      accessibilityLabel="button"
       accessibilityState={
         Object {
           "disabled": false,
@@ -315,6 +322,7 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
       testID="button"
     >
       <Text
+        accessibilityLabel="button-label"
         appearance="filled"
         color="primary"
         disabled={false}
