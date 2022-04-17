@@ -48,8 +48,12 @@ export const LowerPrompt: React.FC<IProps> = ({
       isVisible={isOpen}
       style={{margin: majorScale(2)}}
       backdropOpacity={0.15}>
-      <StyledWrapper testID="lower-prompt">
-        <StyledMessage testID="message" weight="semiBold" inversed>
+      <StyledWrapper accessibilityLabel="lower-prompt" testID="lower-prompt">
+        <StyledMessage
+          accessibilityLabel="message"
+          testID="message"
+          weight="semiBold"
+          inversed>
           {children}
         </StyledMessage>
 
@@ -58,6 +62,7 @@ export const LowerPrompt: React.FC<IProps> = ({
             <ButtonGroup>
               {/* Left Button */}
               <Button
+                accessibilityLabel="left-button"
                 testID="left-button"
                 color={leftButtonColor || 'grayFour'}
                 onPress={leftButtonCallback}>
@@ -66,6 +71,7 @@ export const LowerPrompt: React.FC<IProps> = ({
 
               {/* Right Button */}
               <Button
+                accessibilityLabel="right-button"
                 testID="right-button"
                 color={intent || rightButtonColor || 'success'}
                 onPress={rightButtonCallback}>
@@ -74,6 +80,7 @@ export const LowerPrompt: React.FC<IProps> = ({
             </ButtonGroup>
           ) : (
             <Button
+              accessibilityLabel="left-button"
               testID="left-button"
               color={leftButtonColor || 'grayFour'}
               onPress={leftButtonCallback}>

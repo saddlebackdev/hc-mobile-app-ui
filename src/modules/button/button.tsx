@@ -194,6 +194,7 @@ const Button: React.FC<IProps> = React.memo(
 
     return (
       <StyledButton
+        accessibilityLabel="button"
         testID="button"
         activeOpacity={0.75}
         disabled={disabled}
@@ -208,6 +209,7 @@ const Button: React.FC<IProps> = React.memo(
         {/* Label */}
         <StyledLabel
           $font={font}
+          accessibilityLabel="button-label"
           testID="button-label"
           appearance={appearance}
           small={small}
