@@ -22,16 +22,15 @@ describe('Button', () => {
     });
 
     it('renders the label correctly', () => {
-      const {getByTestId} = render(
+      const {getByText} = render(
         <ThemeProvider theme={defaultTheme}>
           <Button testID="button-label">Primary Button</Button>
         </ThemeProvider>,
       );
 
-      const label = getByTestId('button-label');
+      const button = getByText('Primary Button');
 
-      expect(label).toBeDefined();
-      expect(label.children).toEqual(['Primary Button']);
+      expect(button).toBeDefined();
     });
 
     describe('Variants', () => {
