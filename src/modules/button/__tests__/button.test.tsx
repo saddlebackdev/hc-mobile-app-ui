@@ -12,7 +12,7 @@ describe('Button', () => {
     it('renders correctly', () => {
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Button>Primary Button</Button>
+          <Button testID="button">Primary Button</Button>
         </ThemeProvider>,
       );
 
@@ -24,7 +24,7 @@ describe('Button', () => {
     it('renders the label correctly', () => {
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Button>Primary Button</Button>
+          <Button testID="button-label">Primary Button</Button>
         </ThemeProvider>,
       );
 
@@ -133,7 +133,9 @@ describe('Button', () => {
 
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Button onPress={onPressMock}>Primary Button</Button>
+          <Button testID="button" onPress={onPressMock}>
+            Primary Button
+          </Button>
         </ThemeProvider>,
       );
 
@@ -149,7 +151,7 @@ describe('Button', () => {
 
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <Button onPress={onPressMock} disabled>
+          <Button testID="button" onPress={onPressMock} disabled>
             Primary Button
           </Button>
         </ThemeProvider>,

@@ -11,7 +11,7 @@ import Text from '../text/text';
 import {majorScale} from '../scales';
 import ButtonGroup from '../button-group/button-group';
 import Button from '../button/button';
-import {generateTestAndAccessiblityProps} from 'modules/utilities/props.util';
+import {generateTestAndAccessiblityProps} from '../utilities/props.util';
 
 // Styles
 const StyledWrapper = Styled.View`

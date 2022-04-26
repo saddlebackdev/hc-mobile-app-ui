@@ -7,7 +7,7 @@ import {IProps, IStyledButton, IStyledLabel} from './button.types';
 
 // Shared
 import {minorScale} from '../scales';
-import {generateTestAndAccessiblityProps} from 'modules/utilities/props.util';
+import {generateTestAndAccessiblityProps} from '../utilities/props.util';
 
 // Styles
 const StyledButton = Styled.TouchableOpacity<IStyledButton>`

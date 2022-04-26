@@ -15,7 +15,6 @@ exports[`Floater Rendering renders itself correctly 1`] = `
   testID="floater"
 >
   <View
-    accessibilityLabel="button"
     accessibilityState={
       Object {
         "disabled": false,
@@ -54,10 +53,8 @@ exports[`Floater Rendering renders itself correctly 1`] = `
         "width": "100%",
       }
     }
-    testID="button"
   >
     <Text
-      accessibilityLabel="button-label"
       appearance="filled"
       color="primary"
       disabled={false}
@@ -72,7 +69,6 @@ exports[`Floater Rendering renders itself correctly 1`] = `
           },
         ]
       }
-      testID="button-label"
     >
       Primary Button
     </Text>

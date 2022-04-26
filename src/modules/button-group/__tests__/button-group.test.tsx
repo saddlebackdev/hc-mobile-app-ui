@@ -31,16 +31,17 @@ describe('ButtonGroup', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
           <ButtonGroup>
-            <Button>Simple Button 1</Button>
-            <Button>Simple Button 2</Button>
+            <Button testID={'button-1'}>Simple Button 1</Button>
+            <Button testID={'button-2'}>Simple Button 2</Button>
           </ButtonGroup>
         </ThemeProvider>,
       );
 
-      const buttons = wrapper.getAllByTestId('button');
+      const button1 = wrapper.getByTestId('button-1');
+      const button2 = wrapper.getByTestId('button-2');
 
-      expect(buttons[0]).toBeDefined();
-      expect(buttons[1]).toBeDefined();
+      expect(button1).toBeDefined();
+      expect(button2).toBeDefined();
 
       expect(wrapper).toMatchSnapshot();
     });
