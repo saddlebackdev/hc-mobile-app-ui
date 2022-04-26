@@ -7,6 +7,7 @@ import {IProps, IStyledButton, IStyledLabel} from './button.types';
 
 // Shared
 import {minorScale} from '../scales';
+import {generateTestAndAccessiblityProps} from 'modules/utilities/props.util';
 
 // Styles
 const StyledButton = Styled.TouchableOpacity<IStyledButton>`
@@ -185,6 +186,8 @@ const Button: React.FC<IProps> = React.memo(
     children,
     small = false,
     hasShadow = false,
+    testID,
+    accessibilityLabel,
     ...props
   }): React.ReactElement => {
     // Do not allow overwriting styles
@@ -194,8 +197,8 @@ const Button: React.FC<IProps> = React.memo(
 
     return (
       <StyledButton
-        accessibilityLabel="button"
-        testID="button"
+        accessibilityLabel={accessibilityLabel}
+        testID={testID}
         activeOpacity={0.75}
         disabled={disabled}
         appearance={appearance}
@@ -209,8 +212,11 @@ const Button: React.FC<IProps> = React.memo(
         {/* Label */}
         <StyledLabel
           $font={font}
-          accessibilityLabel="button-label"
-          testID="button-label"
+          {...generateTestAndAccessiblityProps(
+            'styled-label',
+            testID,
+            accessibilityLabel,
+          )}
           appearance={appearance}
           small={small}
           color={color}
