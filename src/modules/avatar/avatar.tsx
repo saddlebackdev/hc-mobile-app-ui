@@ -12,6 +12,7 @@ import {
 
 // Shared
 import Icon from '../icon/icon';
+import Text from '../text/text';
 
 // Styles
 const StyledWrapper = Styled.TouchableOpacity<IStyledWrapper>`
@@ -34,6 +35,20 @@ const StyledMarker = Styled.View<IStyledMarker>`
   border-radius: 12px;
   overflow: hidden;
 `;
+const StyledInitialsWrapper = Styled.View`
+  align-items: center;
+  justify-content: center;
+  width: 100%; height: 100%;
+
+  background: ${({theme}) => theme.colors.grayTwo};
+  border-color: ${({theme}) => theme.colors.grayThree};
+  border-radius: ${({$borderRadius}) => $borderRadius}px;
+  border-width: 1px;
+`;
+const StyledInitialsText = Styled(Text)`
+  font-size: ${({$size}) => $size}px;
+  opacity: 0.75;
+`;
 
 // Component
 export const Avatar: React.FC<IProps> = ({
@@ -43,45 +58,91 @@ export const Avatar: React.FC<IProps> = ({
   markerOffsetBottom = 0,
   inversed = false,
   size = 32,
+  radius = 'full',
+  initials,
   marker,
 }): React.ReactElement => {
+  let initialsFontSize = 12;
+
+  if (size === 'tile') {
+    size = 36;
+    initialsFontSize = 14;
+  }
+
+  if (size === 'profile') {
+    size = 100;
+    initialsFontSize = 26;
+  }
+
+  let borderRadius = 0;
+
+  if (radius === 'full') {
+    borderRadius = size;
+  }
+
+  if (radius === 'small') {
+    borderRadius = 10;
+  }
+
+  // Render Marker
+  const renderMarker = () => {
+    if (!marker) {
+      return null;
+    }
+
+    return (
+      <StyledMarker
+        $offsetRight={markerOffsetRight}
+        $offsetBottom={markerOffsetBottom}
+        testID="avatar-marker">
+        {marker}
+      </StyledMarker>
+    );
+  };
+
+  const wrapperProps = {
+    $size: size,
+    activeOpacity: 0.75,
+    testID: 'avatar-button',
+    onPress,
+  };
+
+  // Placeholder with Icon
+  if (!initials && !uri) {
+    return (
+      <StyledWrapper {...wrapperProps}>
+        <Icon type="user" color={inversed ? 'white' : 'black'} size={size} />
+
+        {renderMarker()}
+      </StyledWrapper>
+    );
+  }
+
+  // Placeholder with Initials
+  if (initials && !uri) {
+    return (
+      <StyledWrapper {...wrapperProps}>
+        <StyledInitialsWrapper $borderRadius={borderRadius}>
+          <StyledInitialsText $size={initialsFontSize}>
+            {initials.toUpperCase()}
+          </StyledInitialsText>
+        </StyledInitialsWrapper>
+
+        {renderMarker()}
+      </StyledWrapper>
+    );
+  }
+
+  // Avatar with Image
   return (
-    <StyledWrapper
-      $size={size}
-      activeOpacity={0.75}
-      onPress={onPress}
-      testID="avatar-button">
-      {uri ? (
-        <React.Fragment>
-          <StyledImage
-            $borderRadius={size}
-            testID="avatar-image"
-            source={{uri}}
-          />
+    <StyledWrapper {...wrapperProps}>
+      <StyledImage
+        $borderRadius={borderRadius}
+        testID="avatar-image"
+        source={{uri}}
+      />
 
-          {marker ? (
-            <StyledMarker
-              $offsetRight={markerOffsetRight}
-              $offsetBottom={markerOffsetBottom}
-              testID="avatar-marker">
-              {marker}
-            </StyledMarker>
-          ) : null}
-        </React.Fragment>
-      ) : (
-        <React.Fragment>
-          <Icon type="user" color={inversed ? 'white' : 'black'} size={size} />
-
-          {marker ? (
-            <StyledMarker
-              $offsetRight={markerOffsetRight}
-              $offsetBottom={markerOffsetBottom}
-              testID="avatar-marker">
-              {marker}
-            </StyledMarker>
-          ) : null}
-        </React.Fragment>
-      )}
+      {renderMarker()}
     </StyledWrapper>
   );
 };

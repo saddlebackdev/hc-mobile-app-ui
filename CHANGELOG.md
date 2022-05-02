@@ -1,4 +1,12 @@
 # Changelog
+
+### v0.0.32
+
+- Add "tile" and "profile" options as "size" Avatar
+- Add "radius" prop on Avatar
+
+---
+
 ### v0.0.31
 
 - Allow multiple list items to be selected in SelectableList
