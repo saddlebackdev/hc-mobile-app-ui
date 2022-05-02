@@ -6,6 +6,8 @@ import Styled from 'styled-components/native';
 import {
   IProps,
   IStyledImage,
+  IStyledInitialsWrapper,
+  IStyledInitialsText,
   IStyledWrapper,
   IStyledMarker,
 } from './avatar.types';
@@ -35,7 +37,7 @@ const StyledMarker = Styled.View<IStyledMarker>`
   border-radius: 12px;
   overflow: hidden;
 `;
-const StyledInitialsWrapper = Styled.View`
+const StyledInitialsWrapper = Styled.View<IStyledInitialsWrapper>`
   align-items: center;
   justify-content: center;
   width: 100%; height: 100%;
@@ -45,7 +47,7 @@ const StyledInitialsWrapper = Styled.View`
   border-radius: ${({$borderRadius}) => $borderRadius}px;
   border-width: 1px;
 `;
-const StyledInitialsText = Styled(Text)`
+const StyledInitialsText = Styled(Text)<IStyledInitialsText>`
   font-size: ${({$size}) => $size}px;
   opacity: 0.75;
 `;

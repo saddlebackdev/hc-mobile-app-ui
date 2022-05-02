@@ -9,6 +9,14 @@ export interface IStyledWrapper {
   $size: number;
 }
 
+// Styled Initials Wrapper
+export interface IStyledInitialsWrapper {
+  $borderRadius: number;
+}
+export interface IStyledInitialsText {
+  $size: number;
+}
+
 // Styled Marker
 export interface IStyledMarker {
   $offsetBottom: number;
