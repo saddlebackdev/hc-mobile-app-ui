@@ -4,6 +4,8 @@
 
 - Add "tile" and "profile" options as "size" Avatar
 - Add "radius" prop on Avatar
+- Add visibility of the Button component's accessibility id in Appium inspector in android
+- Add the ability to inspect LowerPrompt components text and buttons in Appium in android
 
 ---
 
