@@ -317,13 +317,30 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 <Avatar uri={avatarUri} />
               </Row>
               <Row>
-                <Avatar uri={undefined} />
+                <Avatar uri={avatarUri} radius="small" size="tile" />
               </Row>
+              <Row>
+                <Avatar uri={avatarUri} radius="small" size="profile" />
+              </Row>
+
+              <Row>
+                <Avatar initials="AG" />
+              </Row>
+              <Row>
+                <Avatar initials="AG" radius="small" size="tile" />
+              </Row>
+              <Row>
+                <Avatar initials="AG" radius="small" size="profile" />
+              </Row>
+
               <Row>
                 <Avatar uri={avatarUri} marker={redDotMarker} />
               </Row>
               <Row>
-                <Avatar uri={undefined} marker={redDotMarker} />
+                <Avatar initials="AG" marker={redDotMarker} />
+              </Row>
+              <Row>
+                <Avatar marker={redDotMarker} />
               </Row>
             </Section.Content>
           </Section.Wrapper>

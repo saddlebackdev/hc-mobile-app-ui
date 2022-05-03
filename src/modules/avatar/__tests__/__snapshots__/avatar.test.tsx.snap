@@ -112,6 +112,69 @@ exports[`Avatar Rendering renders the passed marker correctly 1`] = `
 </View>
 `;
 
+exports[`Avatar Rendering renders with the passed initials 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 32,
+      "justifyContent": "center",
+      "opacity": 1,
+      "overflow": "hidden",
+      "width": 32,
+    }
+  }
+  testID="avatar-button"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#EDF1F5",
+          "borderColor": "#DBE0E3",
+          "borderRadius": 32,
+          "borderWidth": 1,
+          "height": "100%",
+          "justifyContent": "center",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontFamily": "System",
+            "fontSize": 12,
+            "fontStyle": "normal",
+            "fontWeight": "400",
+            "opacity": 0.75,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="text"
+    >
+      AG
+    </Text>
+  </View>
+</View>
+`;
+
 exports[`Avatar Rendering renders with the passed size 1`] = `
 <View
   accessible={true}
@@ -148,6 +211,100 @@ exports[`Avatar Rendering renders with the passed size 1`] = `
         Object {
           "borderColor": "#FFFFFF",
           "borderRadius": 240,
+          "borderWidth": 1,
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
+    }
+    testID="avatar-image"
+  />
+</View>
+`;
+
+exports[`Avatar Rendering renders with the passed size 2`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 36,
+      "justifyContent": "center",
+      "opacity": 1,
+      "overflow": "hidden",
+      "width": 36,
+    }
+  }
+  testID="avatar-button"
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://example.com/baby.jpg",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderColor": "#FFFFFF",
+          "borderRadius": 36,
+          "borderWidth": 1,
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
+    }
+    testID="avatar-image"
+  />
+</View>
+`;
+
+exports[`Avatar Rendering renders with the passed size 3`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 100,
+      "justifyContent": "center",
+      "opacity": 1,
+      "overflow": "hidden",
+      "width": 100,
+    }
+  }
+  testID="avatar-button"
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://example.com/baby.jpg",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderColor": "#FFFFFF",
+          "borderRadius": 100,
           "borderWidth": 1,
           "height": "100%",
           "width": "100%",

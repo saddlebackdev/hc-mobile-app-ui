@@ -31,9 +31,37 @@ describe('Avatar', () => {
         </ThemeProvider>,
       );
 
+      const wrapperTile = render(
+        <ThemeProvider theme={defaultTheme}>
+          <Avatar size="tile" uri="https://example.com/baby.jpg" />
+        </ThemeProvider>,
+      );
+
+      const wrapperProfile = render(
+        <ThemeProvider theme={defaultTheme}>
+          <Avatar size="profile" uri="https://example.com/baby.jpg" />
+        </ThemeProvider>,
+      );
+
       const image = wrapper.getByTestId('avatar-image');
 
       expect(image).toBeDefined();
+
+      expect(wrapper).toMatchSnapshot();
+      expect(wrapperTile).toMatchSnapshot();
+      expect(wrapperProfile).toMatchSnapshot();
+    });
+
+    it('renders with the passed initials', () => {
+      const wrapper = render(
+        <ThemeProvider theme={defaultTheme}>
+          <Avatar initials="AG" />
+        </ThemeProvider>,
+      );
+
+      const initials = wrapper.getByText('AG');
+
+      expect(initials).toBeDefined();
 
       expect(wrapper).toMatchSnapshot();
     });

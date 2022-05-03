@@ -9,6 +9,14 @@ export interface IStyledWrapper {
   $size: number;
 }
 
+// Styled Initials Wrapper
+export interface IStyledInitialsWrapper {
+  $borderRadius: number;
+}
+export interface IStyledInitialsText {
+  $size: number;
+}
+
 // Styled Marker
 export interface IStyledMarker {
   $offsetBottom: number;
@@ -34,13 +42,19 @@ export interface IProps {
   markerOffsetRight?: number;
 
   /** Size of the avatar. */
-  size?: number;
+  size?: 'tile' | 'profile' | number;
 
   /** Position of marker from bottom. */
   markerOffsetBottom?: number;
 
   /** Renders a white icon instead of a black. */
   inversed?: boolean;
+
+  /** Adds border radius of the specified size. */
+  radius?: 'none' | 'small' | 'full';
+
+  /** Shows the initials as placeholder when image is unavailable. */
+  initials?: string;
 
   /** Function to be called when the avatar is pressed. */
   onPress?: any;
