@@ -11,6 +11,7 @@ import Text from '../text/text';
 import {majorScale} from '../scales';
 import ButtonGroup from '../button-group/button-group';
 import Button from '../button/button';
+import {generateTestAndAccessiblityProps} from '../utilities/props.util';
 
 // Styles
 const StyledWrapper = Styled.View`
@@ -37,6 +38,8 @@ export const LowerPrompt: React.FC<IProps> = ({
   rightButtonColor,
   leftButtonColor,
   children,
+  testID,
+  accessibilityLabel,
 }): React.ReactElement => {
   const hasLeftButton = leftButtonLabel && leftButtonCallback;
   const hasRightButton = rightButtonLabel && rightButtonCallback;
@@ -48,8 +51,15 @@ export const LowerPrompt: React.FC<IProps> = ({
       isVisible={isOpen}
       style={{margin: majorScale(2)}}
       backdropOpacity={0.15}>
-      <StyledWrapper testID="lower-prompt">
-        <StyledMessage testID="message" weight="semiBold" inversed>
+      <StyledWrapper accessibilityLabel={accessibilityLabel} testID={testID}>
+        <StyledMessage
+          {...generateTestAndAccessiblityProps(
+            'styled-message',
+            testID,
+            accessibilityLabel,
+          )}
+          weight="semiBold"
+          inversed>
           {children}
         </StyledMessage>
 
@@ -58,7 +68,11 @@ export const LowerPrompt: React.FC<IProps> = ({
             <ButtonGroup>
               {/* Left Button */}
               <Button
-                testID="left-button"
+                {...generateTestAndAccessiblityProps(
+                  'left-button',
+                  testID,
+                  accessibilityLabel,
+                )}
                 color={leftButtonColor || 'grayFour'}
                 onPress={leftButtonCallback}>
                 {leftButtonLabel}
@@ -66,7 +80,11 @@ export const LowerPrompt: React.FC<IProps> = ({
 
               {/* Right Button */}
               <Button
-                testID="right-button"
+                {...generateTestAndAccessiblityProps(
+                  'right-button',
+                  testID,
+                  accessibilityLabel,
+                )}
                 color={intent || rightButtonColor || 'success'}
                 onPress={rightButtonCallback}>
                 {rightButtonLabel || ''}
@@ -74,7 +92,11 @@ export const LowerPrompt: React.FC<IProps> = ({
             </ButtonGroup>
           ) : (
             <Button
-              testID="left-button"
+              {...generateTestAndAccessiblityProps(
+                'left-button',
+                testID,
+                accessibilityLabel,
+              )}
               color={leftButtonColor || 'grayFour'}
               onPress={leftButtonCallback}>
               {leftButtonLabel}

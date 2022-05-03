@@ -30,7 +30,7 @@ describe('Floater', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
           <Floater alignment="bottom">
-            <Button>Primary Button</Button>
+            <Button testID="button">Primary Button</Button>
           </Floater>
         </ThemeProvider>,
       );

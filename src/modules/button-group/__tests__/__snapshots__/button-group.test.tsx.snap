@@ -67,7 +67,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
           "width": "100%",
         }
       }
-      testID="button"
+      testID="button-1"
     >
       <Text
         appearance="filled"
@@ -84,7 +84,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
             },
           ]
         }
-        testID="button-label"
+        testID="styled-label-button-1"
       >
         Simple Button 1
       </Text>
@@ -143,7 +143,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
           "width": "100%",
         }
       }
-      testID="button"
+      testID="button-2"
     >
       <Text
         appearance="filled"
@@ -160,7 +160,7 @@ exports[`ButtonGroup Rendering renders its children correctly 1`] = `
             },
           ]
         }
-        testID="button-label"
+        testID="styled-label-button-2"
       >
         Simple Button 2
       </Text>
@@ -236,7 +236,6 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
           "width": "100%",
         }
       }
-      testID="button"
     >
       <Text
         appearance="filled"
@@ -253,7 +252,6 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
             },
           ]
         }
-        testID="button-label"
       >
         Simple Button 1
       </Text>
@@ -312,7 +310,6 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
           "width": "100%",
         }
       }
-      testID="button"
     >
       <Text
         appearance="filled"
@@ -329,7 +326,6 @@ exports[`ButtonGroup Rendering renders itself correctly 1`] = `
             },
           ]
         }
-        testID="button-label"
       >
         Simple Button 2
       </Text>

@@ -40,7 +40,6 @@ exports[`Button Rendering Variants danger: should match snapshot 1`] = `
       "width": "100%",
     }
   }
-  testID="button"
 >
   <Text
     appearance="filled"
@@ -57,7 +56,6 @@ exports[`Button Rendering Variants danger: should match snapshot 1`] = `
         },
       ]
     }
-    testID="button-label"
   >
     Button
   </Text>
@@ -104,7 +102,6 @@ exports[`Button Rendering Variants default: should match snapshot 1`] = `
       "width": "100%",
     }
   }
-  testID="button"
 >
   <Text
     appearance="filled"
@@ -121,7 +118,6 @@ exports[`Button Rendering Variants default: should match snapshot 1`] = `
         },
       ]
     }
-    testID="button-label"
   >
     Button
   </Text>
@@ -168,7 +164,6 @@ exports[`Button Rendering Variants info: should match snapshot 1`] = `
       "width": "100%",
     }
   }
-  testID="button"
 >
   <Text
     appearance="filled"
@@ -185,7 +180,6 @@ exports[`Button Rendering Variants info: should match snapshot 1`] = `
         },
       ]
     }
-    testID="button-label"
   >
     Button
   </Text>
@@ -232,7 +226,6 @@ exports[`Button Rendering Variants outline: should match snapshot 1`] = `
       "width": "100%",
     }
   }
-  testID="button"
 >
   <Text
     appearance="outline"
@@ -249,7 +242,6 @@ exports[`Button Rendering Variants outline: should match snapshot 1`] = `
         },
       ]
     }
-    testID="button-label"
   >
     Button
   </Text>
@@ -296,7 +288,6 @@ exports[`Button Rendering Variants primary: should match snapshot 1`] = `
       "width": "100%",
     }
   }
-  testID="button"
 >
   <Text
     appearance="filled"
@@ -313,7 +304,6 @@ exports[`Button Rendering Variants primary: should match snapshot 1`] = `
         },
       ]
     }
-    testID="button-label"
   >
     Button
   </Text>
@@ -360,7 +350,6 @@ exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
       "width": "100%",
     }
   }
-  testID="button"
 >
   <Text
     appearance="filled"
@@ -377,7 +366,6 @@ exports[`Button Rendering Variants secondary: should match snapshot 1`] = `
         },
       ]
     }
-    testID="button-label"
   >
     Button
   </Text>
@@ -424,7 +412,6 @@ exports[`Button Rendering Variants small: should match snapshot 1`] = `
       "width": "100%",
     }
   }
-  testID="button"
 >
   <Text
     appearance="filled"
@@ -441,7 +428,6 @@ exports[`Button Rendering Variants small: should match snapshot 1`] = `
         },
       ]
     }
-    testID="button-label"
   >
     Button
   </Text>
@@ -488,7 +474,6 @@ exports[`Button Rendering Variants success: should match snapshot 1`] = `
       "width": "100%",
     }
   }
-  testID="button"
 >
   <Text
     appearance="filled"
@@ -505,7 +490,6 @@ exports[`Button Rendering Variants success: should match snapshot 1`] = `
         },
       ]
     }
-    testID="button-label"
   >
     Button
   </Text>
@@ -552,7 +536,6 @@ exports[`Button Rendering Variants warning: should match snapshot 1`] = `
       "width": "100%",
     }
   }
-  testID="button"
 >
   <Text
     appearance="filled"
@@ -569,7 +552,6 @@ exports[`Button Rendering Variants warning: should match snapshot 1`] = `
         },
       ]
     }
-    testID="button-label"
   >
     Button
   </Text>

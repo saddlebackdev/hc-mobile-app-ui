@@ -1,5 +1,7 @@
+import {AccessibilityProps} from 'react-native';
+
 // Props
-export interface IProps {
+export interface IProps extends AccessibilityProps {
   /** Determines if the prompt is open or not. */
   isOpen: boolean;
 
@@ -23,4 +25,7 @@ export interface IProps {
 
   /** Color of the right button. This gets overridden if an "intent" is specified. */
   rightButtonColor?: string;
+
+  /** Used to locate this view in end-to-end tests. */
+  testID?: string;
 }
