@@ -1,5 +1,13 @@
 # Changelog
 
+### v0.0.33
+
+- Add DataBlock component
+- Update font size and weight for Avatar
+- Fix sizing for "tile" Avatar
+
+---
+
 ### v0.0.32
 
 - Add "tile" and "profile" options as "size" Avatar
