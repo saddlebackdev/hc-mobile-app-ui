@@ -3,7 +3,7 @@ import * as React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IStyledRow, IDataBlockItem, IProps} from './data-block.types.ts';
+import {IStyledRow, IDataBlockItem, IProps} from './data-block.types';
 
 // Shared
 import Text from '../text/text';
@@ -33,7 +33,9 @@ export const StyledRightWrapper = Styled.View`
 `;
 
 // Component
-export const DataBlock: React.FC<IProps> = ({items}): React.ReactElement => {
+export const DataBlock: React.FC<IProps> = ({
+  items,
+}): React.ReactElement<any, any> | null => {
   if (!items) {
     return null;
   }
