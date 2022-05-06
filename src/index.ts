@@ -35,6 +35,10 @@ export {default as Chip} from './modules/chip/chip';
 export {IProps as ChipProps} from './modules/chip/chip.types';
 
 // Date Picker
+export {default as DataBlock} from './modules/data-block/data-block';
+export {IProps as DataBlockProps} from './modules/data-block/data-block.types';
+
+// Date Picker
 export {default as DatePicker} from './modules/date-picker/date-picker';
 export {IProps as DatePickerProps} from './modules/date-picker/date-picker.types';
 
