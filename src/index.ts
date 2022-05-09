@@ -66,6 +66,10 @@ export {IProps as IconProps} from './modules/icon/icon-external.types';
 export {default as IconToggle} from './modules/icon-toggle/icon-toggle';
 export {IProps as IconToggleProps} from './modules/icon-toggle/icon-toggle.types';
 
+// Linear Gradient View
+export {default as LinearGradientView} from './modules/linear-gradient/linear-gradient-view';
+export {IProps as LinearGradientViewProps} from './modules/linear-gradient/linear-gradient-view.types';
+
 // Link
 export {default as Link} from './modules/link/link';
 export {IProps as LinkProps} from './modules/link/link.types';
