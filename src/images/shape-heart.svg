@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>SHAPE - Heart</title>
+    <defs>
+        <path d="M11.9995557,24 C12.945672,22.9641578 18.3496117,17.0522781 21.7277086,13.361143 C24.7543578,10.0515009 24.6895143,5.2285187 21.937931,2.23720863 C19.1852987,-0.756552109 14.7381841,-0.744116549 11.9995557,2.26499952 C9.26108566,-0.744058458 4.81411612,-0.75649419 2.06164185,2.23720863 C-0.689941404,5.2285187 -0.753631187,10.0515009 2.27186429,13.361143 C5.65019193,17.0522781 11.0534393,22.9641578 11.9995557,24 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons---In-Use-(ME)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-61.000000, -274.000000)">
+            <g id="SHAPE---Heart" transform="translate(61.000000, 274.000000)">
+                <rect id="Rectangle-6" x="0" y="0" width="24" height="24"></rect>
+                <mask id="mask-2" fill="#1C2530">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Shape" fill="#1C2530" xlink:href="#path-1"></use>
+                <g id="Group" mask="url(#mask-2)" fill="#1C2530">
+                    <g id="💟-Icon-Style">
+                        <rect id="Rectangle-2" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
