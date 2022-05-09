@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PeopleTabs Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+    ]
+  }
+>
+  <View
+    accessibilityLabel="people-tab-1"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderBottomColor": "#FFFFFF",
+        "borderBottomWidth": 3,
+        "marginLeft": 0,
+        "marginRight": 11,
+        "opacity": 1,
+        "paddingBottom": 11,
+      }
+    }
+    testID="people-tab-1"
+  >
+    <Text
+      inversed={true}
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontStyle": "normal",
+            "fontWeight": "700",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="text"
+      variant="caption"
+      weight="bold"
+    >
+      Tab 1
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="people-tab-2"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderBottomColor": "transparent",
+        "borderBottomWidth": 3,
+        "marginLeft": 11,
+        "marginRight": 11,
+        "opacity": 1,
+        "paddingBottom": 11,
+      }
+    }
+    testID="people-tab-2"
+  >
+    <Text
+      inversed={false}
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontStyle": "normal",
+            "fontWeight": "700",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="text"
+      variant="caption"
+      weight="bold"
+    >
+      Tab 2
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="people-tab-3"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderBottomColor": "transparent",
+        "borderBottomWidth": 3,
+        "marginLeft": 11,
+        "marginRight": 0,
+        "opacity": 1,
+        "paddingBottom": 11,
+      }
+    }
+    testID="people-tab-3"
+  >
+    <Text
+      inversed={false}
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontStyle": "normal",
+            "fontWeight": "700",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="text"
+      variant="caption"
+      weight="bold"
+    >
+      Tab 3
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`PeopleTabs Rendering renders the selected tab correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+    ]
+  }
+>
+  <View
+    accessibilityLabel="people-tab-1"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderBottomColor": "transparent",
+        "borderBottomWidth": 3,
+        "marginLeft": 0,
+        "marginRight": 11,
+        "opacity": 1,
+        "paddingBottom": 11,
+      }
+    }
+    testID="people-tab-1"
+  >
+    <Text
+      inversed={false}
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontStyle": "normal",
+            "fontWeight": "700",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="text"
+      variant="caption"
+      weight="bold"
+    >
+      Tab 1
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="people-tab-2"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderBottomColor": "transparent",
+        "borderBottomWidth": 3,
+        "marginLeft": 11,
+        "marginRight": 11,
+        "opacity": 1,
+        "paddingBottom": 11,
+      }
+    }
+    testID="people-tab-2"
+  >
+    <Text
+      inversed={false}
+      style={
+        Array [
+          Object {
+            "color": "#1C2530",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontStyle": "normal",
+            "fontWeight": "700",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="text"
+      variant="caption"
+      weight="bold"
+    >
+      Tab 2
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="people-tab-3"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderBottomColor": "#FFFFFF",
+        "borderBottomWidth": 3,
+        "marginLeft": 11,
+        "marginRight": 0,
+        "opacity": 1,
+        "paddingBottom": 11,
+      }
+    }
+    testID="people-tab-3"
+  >
+    <Text
+      inversed={true}
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "System",
+            "fontSize": 14,
+            "fontStyle": "normal",
+            "fontWeight": "700",
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="text"
+      variant="caption"
+      weight="bold"
+    >
+      Tab 3
+    </Text>
+  </View>
+</View>
+`;
