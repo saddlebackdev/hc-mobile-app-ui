@@ -30,6 +30,7 @@ import {
   IconToggle,
   PillToggle,
   TextInput,
+  PeopleListItem,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -1208,6 +1209,44 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   multiline
                   required
                   disabled
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+
+          {/* People list item */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">People List Item</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Simple People List Item</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <PeopleListItem
+                  name="Jane doe"
+                  maritalStatus="Married"
+                  gender="M"
+                  churchEntityName="Lake Forest"
+                  profilePic={null}
+                  userId="301428"
+                  isShowCheckbox={false}
+                  rightButtons={null}
+                  leftButtons={null}
+                />
+              </Row>
+              <Row>
+                <PeopleListItem
+                  name="Jane doe"
+                  maritalStatus="Married"
+                  gender="M"
+                  churchEntityName="Lake Forest"
+                  profilePic={null}
+                  userId="301428"
+                  isShowCheckbox={true}
+                  rightButtons={null}
+                  leftButtons={null}
                 />
               </Row>
             </Section.Content>
