@@ -117,7 +117,6 @@ exports[`UserItem Rendering Clicked user item 1`] = `
         style={
           Array [
             Object {
-              "//": 10,
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
               "paddingBottom": 20,
@@ -397,7 +396,6 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
         style={
           Array [
             Object {
-              "//": 10,
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
               "paddingBottom": 20,
@@ -677,7 +675,6 @@ exports[`UserItem Rendering should render properly 1`] = `
         style={
           Array [
             Object {
-              "//": 10,
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
               "paddingBottom": 20,
