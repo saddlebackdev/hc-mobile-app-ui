@@ -5,7 +5,7 @@ exports[`CompactCardListItem Interactions should call onPress method when presse
   style={
     Array [
       Object {
-        "marginVertical": 5,
+        "marginVertical": 5.5,
       },
     ]
   }
@@ -34,22 +34,13 @@ exports[`CompactCardListItem Interactions should call onPress method when presse
       style={
         Array [
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 8,
             "flexDirection": "row",
             "marginLeft": 20,
-          },
-          Object {
             "shadowColor": "#38424D",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": -2,
-            },
             "shadowOpacity": 0.2,
             "shadowRadius": 3,
-          },
-          Object {
-            "backgroundColor": "#FFFFFF",
-            "elevation": 4,
           },
         ]
       }
@@ -166,10 +157,11 @@ exports[`CompactCardListItem Interactions should call onPress method when presse
         }
       >
         <Text
+          inversed={false}
           style={
             Array [
               Object {
-                "color": undefined,
+                "color": "#1C2530",
                 "fontFamily": "System",
                 "fontSize": 16,
                 "fontWeight": "700",
@@ -203,7 +195,7 @@ exports[`CompactCardListItem Rendering hides icon when it is null 1`] = `
   style={
     Array [
       Object {
-        "marginVertical": 5,
+        "marginVertical": 5.5,
       },
     ]
   }
@@ -232,22 +224,13 @@ exports[`CompactCardListItem Rendering hides icon when it is null 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 8,
             "flexDirection": "row",
             "marginLeft": 20,
-          },
-          Object {
             "shadowColor": "#38424D",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": -2,
-            },
             "shadowOpacity": 0.2,
             "shadowRadius": 3,
-          },
-          Object {
-            "backgroundColor": "#FFFFFF",
-            "elevation": 4,
           },
         ]
       }
@@ -359,10 +342,11 @@ exports[`CompactCardListItem Rendering hides icon when it is null 1`] = `
         }
       >
         <Text
+          inversed={false}
           style={
             Array [
               Object {
-                "color": undefined,
+                "color": "#1C2530",
                 "fontFamily": "System",
                 "fontSize": 16,
                 "fontWeight": "700",
@@ -396,7 +380,7 @@ exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
   style={
     Array [
       Object {
-        "marginVertical": 5,
+        "marginVertical": 5.5,
       },
     ]
   }
@@ -425,22 +409,13 @@ exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#FFFFFF",
             "borderRadius": 8,
             "flexDirection": "row",
             "marginLeft": 20,
-          },
-          Object {
             "shadowColor": "#38424D",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": -2,
-            },
             "shadowOpacity": 0.2,
             "shadowRadius": 3,
-          },
-          Object {
-            "backgroundColor": "#FFFFFF",
-            "elevation": 4,
           },
         ]
       }
@@ -557,10 +532,11 @@ exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
         }
       >
         <Text
+          inversed={false}
           style={
             Array [
               Object {
-                "color": undefined,
+                "color": "#1C2530",
                 "fontFamily": "System",
                 "fontSize": 16,
                 "fontWeight": "700",

@@ -482,7 +482,6 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   }
                 />
               </Row>
-
             </Section.Content>
           </Section.Wrapper>
           <Divider />
