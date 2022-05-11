@@ -62,7 +62,8 @@ const onPressMock = () => false;
 export const App: React.FC<IProps> = (): React.ReactElement => {
   const [isChecked, setIsChecked] = React.useState<boolean>(true);
   const [selectedRadio, setSelectedRadio] = React.useState<number>(2);
-  const [selectedRadioWithOptions, setSelectedRadioWithOptions] = React.useState<number>(2);
+  const [selectedRadioWithOptions, setSelectedRadioWithOptions] =
+    React.useState<number>(2);
   const [selectedDate, setSelectedDate] = React.useState<any>(new Date());
   const [activePill, setActivePill] = React.useState<number>(2);
   const [pickerValue, setPickerValue] = React.useState<number>(1);
