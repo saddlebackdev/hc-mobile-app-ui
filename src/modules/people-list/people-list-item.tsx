@@ -10,69 +10,63 @@ import Checkbox from '../checkbox/checkbox';
 import Heading from '../heading/heading';
 
 // Wrapper
-const StyleWrapper = Styled.View`
+const StyledWrapper = Styled.View`
   flex-direction: row;
   padding-bottom: ${minorScale(4)}px;
   padding-top: ${minorScale(4)}px;
-  background-color: ${({theme}) => {
-    return theme.colors.white;
-  }};
+  background-color: ${({theme}) => theme.colors.white};
 `;
 
-const StyleProfilePicCheckboxWrapper = Styled.View`
+const StyledProfilePicCheckboxWrapper = Styled.View`
   flex-direction: row; 
   justify-content: center
 `;
 
-const StyleCheckboxWrapper = Styled.View`
+const StyledCheckboxWrapper = Styled.View`
   margin-top: ${minorScale(2)}px;
   margin-right: ${minorScale(2)}px;
 `;
 
-const StyleUserDetailsWrapper = Styled.View<IProps>`
+const StyledUserDetailsWrapper = Styled.View<IProps>`
   padding-left: ${minorScale(2)}px;
   width: ${props => (props.isShowCheckbox === true ? '69%' : '82%')}};
 
 `;
 
-const StyleUserNameIdWrapper = Styled.View`
+const StyledUserNameIdWrapper = Styled.View`
   flex-direction: row; 
   justify-content: space-between
 `;
 
-const StyleOtherDetailWrapper = Styled.View`
+const StyledOtherDetailWrapper = Styled.View`
   width:100%
 `;
 
-const StyleHeadingUserNameWrapper = Styled(Heading)`
-  font-size: ${minorScale(3.6)}px;
+const StyledHeadingUserNameWrapper = Styled(Heading)`
+  font-size: ${({theme, variant = 'h3'}): string =>
+    `${theme.typography?.sizes?.headings[variant]}px`};
   width: 80%;
 `;
 
-const StyleUserIdTextWrapper = Styled(Text)`
-  font-size: ${minorScale(2.8)}px;
-  color: ${({theme}) => {
-    return theme.colors.grayFour;
-  }};
+const StyledUserIdTextWrapper = Styled(Text)`
+  font-size: ${({theme, variant = 'subtitle2'}): string =>
+    `${theme.typography?.sizes?.text[variant]}px`};
+  color: ${({theme}) => theme.colors.grayFour};
   text-align:right
 `;
 
-const StyleUserDescriptionWrapper = Styled(Text)`
-  font-size: ${minorScale(2.8)}px;
-  color: ${({theme}) => {
-    return theme.colors.grayFour;
-  }};
+const StyledUserDescriptionWrapper = Styled(Text)`
+  font-size: ${({theme, variant = 'subtitle2'}): string =>
+    `${theme.typography?.sizes?.text[variant]}px`};
+  color: ${({theme}) => theme.colors.grayFour};
   margin-top: ${minorScale(1)}px;
   margin-bottom: ${minorScale(1)}px;
 `;
 
-const StyleUserProfilePicWrapper = Styled(Avatar)`
-  testID:profile-pic`;
-
 const StyleLinkWrapper = Styled.TouchableOpacity``;
 
 export const PeopleListItem: React.FC<IProps> = ({
-  onUserClicked,
+  onPress,
   name,
   maritalStatus,
   gender,
@@ -94,12 +88,10 @@ export const PeopleListItem: React.FC<IProps> = ({
   const getOtherDetailsString = () => {
     const arrOtherDet: string[] = [];
     //churchEntityName
-    const churchEntName: string | undefined =
-      churchEntityName !== null ? churchEntityName : '';
+    const churchEntName: string | undefined = churchEntityName || '';
 
     //maritalStatus
-    const marStatus: string | undefined =
-      maritalStatus !== null ? maritalStatus : '';
+    const marStatus: string | undefined = maritalStatus || '';
 
     //gender
     const strGender: string | undefined =
@@ -109,31 +101,19 @@ export const PeopleListItem: React.FC<IProps> = ({
         ? 'Female'
         : 'Male';
 
-    if (strGender !== undefined && strGender.length > 0) {
+    if (strGender?.length > 0) {
       arrOtherDet.push(strGender);
     }
 
-    if (marStatus !== undefined && marStatus.length > 0) {
+    if (marStatus?.length > 0) {
       arrOtherDet.push(marStatus);
     }
 
-    if (churchEntName !== undefined && churchEntName.length > 0) {
+    if (churchEntName?.length > 0) {
       arrOtherDet.push(churchEntName);
     }
 
     return arrOtherDet;
-  };
-
-  const renderUserPic = () => {
-    return (
-      <StyleUserProfilePicWrapper
-        uri={profilePic!}
-        initials={getUserNameFirstLastCharacter()}
-        size={40}
-        radius="small"
-        // testID="profile-pic"
-      />
-    );
   };
 
   const getUserNameFirstLastCharacter = () => {
@@ -144,18 +124,35 @@ export const PeopleListItem: React.FC<IProps> = ({
     return `${arrName![0].charAt(0)}${arrName![0].charAt(1)}`;
   };
 
-  const renderCheckBoxOrPic = () => {
+  const renderCheckBoxAndPic = () => {
     if (isShowCheckbox && isShowCheckbox === true) {
       return (
-        <StyleProfilePicCheckboxWrapper>
-          <StyleCheckboxWrapper>
+        <StyledProfilePicCheckboxWrapper>
+          <StyledCheckboxWrapper>
             <Checkbox onPress={onCheckboxPress} isChecked={isChecked!} />
-          </StyleCheckboxWrapper>
-          {renderUserPic()}
-        </StyleProfilePicCheckboxWrapper>
+          </StyledCheckboxWrapper>
+          <Avatar
+            uri={profilePic!}
+            initials={getUserNameFirstLastCharacter()}
+            size={40}
+            radius="small"
+          />
+        </StyledProfilePicCheckboxWrapper>
       );
     }
-    return renderUserPic();
+  };
+
+  const renderProfilePic = () => {
+    if (isShowCheckbox === undefined || !isShowCheckbox) {
+      return (
+        <Avatar
+          uri={profilePic!}
+          initials={getUserNameFirstLastCharacter()}
+          size={40}
+          radius="small"
+        />
+      );
+    }
   };
 
   return (
@@ -165,36 +162,25 @@ export const PeopleListItem: React.FC<IProps> = ({
       rightButtonWidth={minorScale(17)}
       rightButtons={rightButtons}
       leftActionActivationDistance={0}>
-      <StyleLinkWrapper testID="link-wrapper" onPress={() => onUserClicked?.()}>
-        <StyleWrapper testID="main-wrapper">
-          {/* User Profile Image and checkbox */}
-          {renderCheckBoxOrPic()}
-          {/* End User Profile Image and checkbox */}
-          {/* user details View */}
-          <StyleUserDetailsWrapper isShowCheckbox={isShowCheckbox}>
-            {/* user name and User id */}
-            <StyleUserNameIdWrapper>
-              {/* user name */}
-              <StyleHeadingUserNameWrapper variant="h3">{`${name}`}</StyleHeadingUserNameWrapper>
-              {/* User Id */}
-              <StyleUserIdTextWrapper testID="user-id">
+      <StyleLinkWrapper testID="link-wrapper" onPress={onPress}>
+        <StyledWrapper testID="main-wrapper">
+          {renderCheckBoxAndPic()}
+          {renderProfilePic()}
+          <StyledUserDetailsWrapper isShowCheckbox={isShowCheckbox}>
+            <StyledUserNameIdWrapper>
+              <StyledHeadingUserNameWrapper variant="h3">{`${name}`}</StyledHeadingUserNameWrapper>
+              <StyledUserIdTextWrapper testID="user-id">
                 ID:{`${userId}`}
-              </StyleUserIdTextWrapper>
-            </StyleUserNameIdWrapper>
-            {/* End user name and User id */}
-
-            {/* footer element and other user details */}
-            <StyleOtherDetailWrapper>
-              {/* user other information like gender,maritalStatus and churchEntityName */}
-              <StyleUserDescriptionWrapper>
+              </StyledUserIdTextWrapper>
+            </StyledUserNameIdWrapper>
+            <StyledOtherDetailWrapper>
+              <StyledUserDescriptionWrapper>
                 {`${getOtherDetailsString().join(' | ')}`}
-              </StyleUserDescriptionWrapper>
-              {/* footer element */}
+              </StyledUserDescriptionWrapper>
               {footerElement}
-            </StyleOtherDetailWrapper>
-            {/* End footer element and other user details */}
-          </StyleUserDetailsWrapper>
-        </StyleWrapper>
+            </StyledOtherDetailWrapper>
+          </StyledUserDetailsWrapper>
+        </StyledWrapper>
       </StyleLinkWrapper>
     </Swipeable>
   );

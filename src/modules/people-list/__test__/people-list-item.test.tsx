@@ -51,8 +51,10 @@ describe('UserItem', () => {
 
       expect(wrapper).toMatchSnapshot();
     });
+  });
 
-    it('Clicked user item', () => {
+  describe('Interactions', () => {
+    it('should call the onPress method when card is pressed', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
           <UserItem
@@ -62,7 +64,7 @@ describe('UserItem', () => {
             churchEntityName={'Corona'}
             profilePic={null}
             userId={'512345'}
-            onUserClicked={onPressMock}
+            onPress={onPressMock}
           />
         </ThemeProvider>,
       );

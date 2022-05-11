@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UserItem Rendering Clicked user item 1`] = `
+exports[`UserItem Interactions should call the onPress method when card is pressed 1`] = `
 <View
   leftActionActivationDistance={0}
   leftActionReleaseAnimationConfig={null}
@@ -376,7 +376,7 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
     <View
       accessible={true}
       collapsable={false}
-      focusable={true}
+      focusable={false}
       nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -655,7 +655,7 @@ exports[`UserItem Rendering should render properly 1`] = `
     <View
       accessible={true}
       collapsable={false}
-      focusable={true}
+      focusable={false}
       nativeID="animatedComponent"
       onClick={[Function]}
       onResponderGrant={[Function]}

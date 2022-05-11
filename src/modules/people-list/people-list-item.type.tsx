@@ -1,44 +1,40 @@
 export interface IProps {
-  /** clicked on card */
-  onUserClicked?: () => void;
+  /** Function to be called when clicked on card */
+  onPress?: () => void;
 
-  /** user name */
+  /** Pass user name */
   name?: string | undefined;
 
-  /** user marital status */
+  /** Pass user marital status */
   maritalStatus?: string | undefined;
 
-  /** user gender */
+  /** Pass user gender */
   gender?: string | undefined;
 
-  /** church entity name */
+  /** Pass church entity name */
   churchEntityName?: string | undefined;
 
-  /** profile pic url */
+  /** Pass profile pic url */
   profilePic?: string | undefined | null;
 
-  /** user id */
+  /** Pass user id */
   userId?: string;
 
-  /** footer element */
-  footerElement?:
-    | React.ComponentType<any>
-    | React.ReactElement
-    | null
-    | undefined;
+  /** Add Custom view on footer */
+  footerElement?: React.ReactElement | null | undefined;
 
-  /** swipe left buttons */
-  leftButtons?: any | null;
+  /** Add swipe left buttons */
+  leftButtons?: React.ReactElement | null | undefined;
 
-  /** swipe right button */
-  rightButtons?: any | null;
+  /** Add swipe right button */
+  rightButtons?: React.ReactElement | null | undefined;
 
   /** show checkbox in left side */
   isShowCheckbox?: boolean;
 
-  /** checkbox press action */
+  /** Function to be called when clicked on checkbox */
   onCheckboxPress?: any;
 
   /** determine if checkbox is checked or not */
-  isChecked?: boolean | false;
+  isChecked?: boolean;
 }
