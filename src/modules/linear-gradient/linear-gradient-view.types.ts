@@ -1,4 +1,4 @@
-import { StyleProp, ViewStyle } from "react-native"
+import {StyleProp, ViewStyle} from 'react-native';
 
 // Gradient Color Prop
 interface GradientColorProp {

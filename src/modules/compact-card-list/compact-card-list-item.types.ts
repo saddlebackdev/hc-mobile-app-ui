@@ -1,8 +1,5 @@
 import * as React from 'react';
-import {
-  ImageSourcePropType,
-  GestureResponderEvent
-} from 'react-native';
+import {ImageSourcePropType, GestureResponderEvent} from 'react-native';
 
 // Gradient Color Prop
 interface GradientColorProp {
@@ -22,14 +19,27 @@ interface GradientStyleProp {
   horizontal?: boolean;
 }
 
+export interface InnerWrapperProp {
+  /** background image of Card if exists or it will display white color */
+  innerWrapperBg?: ImageSourcePropType;
+}
+
 export interface FooterWrapperProp {
   /** footer element of Card */
-  footerElement?: React.ComponentType<any> | React.ReactElement | null | undefined;
+  footerElement?:
+    | React.ComponentType<any>
+    | React.ReactElement
+    | null
+    | undefined;
 }
 
 export interface HeaderWrapperProp {
   /** header element of Card */
-  headerElement?: React.ComponentType<any> | React.ReactElement | null | undefined;
+  headerElement?:
+    | React.ComponentType<any>
+    | React.ReactElement
+    | null
+    | undefined;
 
   /** background image of Card if exists or it will display white color */
   innerWrapperBg?: ImageSourcePropType;
@@ -41,26 +51,31 @@ export interface HeaderWrapperProp {
 // Compact Card List Item Props
 export type IProps = {
   /** header element of Card */
-  headerElement?: React.ComponentType<any> | React.ReactElement | null | undefined;
+  headerElement?:
+    | React.ComponentType<any>
+    | React.ReactElement
+    | null
+    | undefined;
 
   /** footer element of Card */
-  footerElement?: React.ComponentType<any> | React.ReactElement | null | undefined;
+  footerElement?:
+    | React.ComponentType<any>
+    | React.ReactElement
+    | null
+    | undefined;
 
   /** gradient view style of left box */
-  leftGradientViewStyle: GradientStyleProp,
+  leftGradientViewStyle: GradientStyleProp;
 
   /** icon for left box */
-  icon: string | null,
+  icon: string | null;
 
   /** title of Card */
-  title: string,
-
-  /** color of the title */
-  titleColor?: string,
+  title: string;
 
   /** background image of Card if exists or it will display white color */
-  innerWrapperBg?: ImageSourcePropType,
+  innerWrapperBg?: ImageSourcePropType;
 
   /** on press event of Card */
-  onPress?: ((event: GestureResponderEvent) => void) | undefined,
-}
+  onPress?: ((event: GestureResponderEvent) => void) | undefined;
+};

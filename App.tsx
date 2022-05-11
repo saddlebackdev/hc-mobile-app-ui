@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {View, SafeAreaView} from 'react-native';
+import {View, SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
 import Styled from 'styled-components/native';
 
 import {
@@ -32,6 +32,7 @@ import {
   TextInput,
   CompactCardListItem,
   LinearGradientView,
+  defaultTheme,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -61,6 +62,41 @@ const Row = Styled.View`
   padding: 4px;
 `;
 
+const CardElementWrapper = Styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const WarningTextWrapper = Styled(Text)`
+  padding-horizontal: 10px;
+  padding-vertical: 2px;
+`;
+
+const WarningViewWrapper = Styled.View`
+  background-color: ${defaultTheme.colors.warningLight};
+  border-radius: 13px;
+  margin-top: -4px;
+`;
+
+const CheckInTextWrapper = Styled(Text)`
+  color: #FFEF00;
+`;
+
+const linearGradientView1Style = StyleSheet.flatten<ViewStyle>({
+  width: 50,
+  height: 50,
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
+const linearGradientView2Style = StyleSheet.flatten<ViewStyle>({
+  width: 100,
+  height: 100,
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
 const onPressMock = () => false;
 
 // Component
@@ -87,8 +123,8 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const gradientColors = [
     {offset: 0, color: '#E4DE74'},
     {offset: 1, color: '#96B660'},
-  ]
-    
+  ];
+
   const pickerOptions = [
     {label: 'Option 1', value: 1},
     {label: 'Option 2', value: 2},
@@ -326,26 +362,20 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Row>
                 <LinearGradientView
                   gradientColors={gradientColors}
-                  viewStyle={{
-                    width: 50,
-                    height: 50,
-                    justifyContent: "center",
-                    alignItems: "center"
-                  }}>
-                  <IconSVG file={IconShapeHeart} size={22} color={"#fff"} />
+                  viewStyle={linearGradientView1Style}>
+                  <IconSVG
+                    file={IconShapeHeart}
+                    size={22}
+                    color={defaultTheme.colors.white}
+                  />
                 </LinearGradientView>
               </Row>
               <Row>
                 <LinearGradientView
                   gradientColors={gradientColors}
                   horizontal
-                  viewStyle={{
-                    width: 100,
-                    height: 100,
-                    justifyContent: "center",
-                    alignItems: "center"
-                  }}>
-                </LinearGradientView>
+                  viewStyle={linearGradientView2Style}
+                />
               </Row>
             </Section.Content>
           </Section.Wrapper>
@@ -361,93 +391,93 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             </Section.Description>
             <Section.Content>
               <Row>
-                <CompactCardListItem 
-                  leftGradientViewStyle={{
-                    gradientColors: gradientColors
-                  }}
-                  icon={IconShapeHeart} 
-                  title="Accepted Christ"
-                  footerElement={
-                    <View style={{ flex: 1, justifyContent: "space-between", flexDirection: "row" }}>
-                      <Text style={{ textAlignVertical: "bottom", fontSize: 14, color: '#1c2530' }}>
-                        {'5 Active'}
-                      </Text>
-                      <View style={{ justifyContent: "flex-end", alignItems: "center", backgroundColor: '#f99e49', borderRadius: 13, marginTop: -4 }}>
-                        <Text weight={"semiBold"} style={{ fontSize: 14, color: "white", paddingHorizontal: 10, paddingVertical: 2 }}>
-                          {'2 Overdue'}
-                        </Text>
-                      </View>
-                    </View>
-                  }
-                />
-              </Row>
-              <Row>
-                <CompactCardListItem 
+                <CompactCardListItem
                   leftGradientViewStyle={{
                     gradientColors: gradientColors,
-                    horizontal: true
                   }}
-                  icon={IconShapeHeart} 
-                  title="Music Academy"
-                  innerWrapperBg={require("./src/images/event_gradient.png")} 
-                  headerElement={
-                    <View style={{ flexDirection: "row", alignItems: "center" }}>
-                      {/* Left text */}
-                      <Text weight={"bold"} style={{ fontSize: 14, color: "#FFEF00" }}>
-                          {"Check-in Window Open"}
-                      </Text>
-                      <View style={{ flex: 1 }} />
-                      {/* UiIcon text */}
-                      <IconSVG file={IconShapeHeart} size={14} color={"#FFEF00"} />
-                      {/* Right text */}
-                      <Text weight={"bold"} style={{ fontSize: 14, marginStart: 4, color: "#FFEF00" }}>
-                          {"Check-in"}
-                      </Text>
-                  </View>
-                  }
+                  icon={IconShapeHeart}
+                  title="Accepted Christ"
                   footerElement={
-                    <View style={{ flexDirection: "row", alignItems: "center" }}>
-                      {/* Left text */}
-                      <Text style={{ fontSize: 13, color: "white" }}>
-                        {'Tue, Jan 27, 2022 | 6:00 pm'}
-                      </Text>
-                      <View style={{ flex: 1 }} />
-                      {/* UiIcon text */}
-                      <IconSVG file={IconShapeHeart} size={13} color={"white"} />
-                      {/* Right text */}
-                      <Text style={{ fontSize: 13, marginStart: 4, color: "white" }}>
-                        {'Every 2 Weeks'}
-                      </Text>
-                  </View>
+                    <CardElementWrapper>
+                      <Text variant={'caption'}>{'5 Active'}</Text>
+                      <WarningViewWrapper>
+                        <WarningTextWrapper
+                          weight={'semiBold'}
+                          variant={'caption'}
+                          inversed>
+                          {'2 Overdue'}
+                        </WarningTextWrapper>
+                      </WarningViewWrapper>
+                    </CardElementWrapper>
                   }
                 />
               </Row>
               <Row>
-                <CompactCardListItem 
+                <CompactCardListItem
                   leftGradientViewStyle={{
-                    gradientColors: gradientColors
+                    gradientColors: gradientColors,
                   }}
-                  icon={IconShapeHeart} 
-                  title="Baptisms This Week"
+                  icon={IconShapeHeart}
+                  title="Music Academy"
+                  innerWrapperBg={require('./src/images/event_gradient.png')}
                   headerElement={
-                    <View style={{ flexDirection: "row", alignItems: "center" }}>
+                    <CardElementWrapper>
                       {/* Left text */}
-                      <Text style={{ fontSize: 14, color: "#97a4ab" }}>
-                          {"Worship Service"}
-                      </Text>
-                      <View style={{ flex: 1 }} />
-                      {/* UiIcon text */}
-                      <IconSVG file={IconShapeHeart} size={14} color={"#97a4ab"} />
+                      <CheckInTextWrapper weight={'bold'} variant={'caption'}>
+                        {'Check-in Window Open'}
+                      </CheckInTextWrapper>
                       {/* Right text */}
-                      <Text weight={"semiBold"} style={{ fontSize: 14, marginStart: 4, color: "#97a4ab" }}>
-                          {"1/25/22"}
-                      </Text>
-                  </View>
+                      <CheckInTextWrapper weight={'bold'} variant={'subtitle2'}>
+                        {/* UiIcon text */}
+                        <IconSVG
+                          file={IconShapeHeart}
+                          size={14}
+                          color={'#FFEF00'}
+                        />{' '}
+                        {'Check-in'}
+                      </CheckInTextWrapper>
+                    </CardElementWrapper>
                   }
                   footerElement={
-                    <Text style={{ fontSize: 14, color: "#1c2530" }}>
-                      <Text weight="bold" style={{ fontSize: 14 }}>
-                        {"Stephen Riley "}</Text>{"and 24 others were Baptized at Lake Forest."}
+                    <Text variant={'caption'} inversed>
+                      {'Tue, Jan 27, 2022 | 6:00 pm'}
+                      {'  '}
+                      <IconSVG
+                        file={IconShapeHeart}
+                        size={14}
+                        color={'white'}
+                      />{' '}
+                      {'Every 2 Weeks'}
+                    </Text>
+                  }
+                />
+              </Row>
+              <Row>
+                <CompactCardListItem
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColors,
+                  }}
+                  icon={IconShapeHeart}
+                  title="Baptisms This Week"
+                  headerElement={
+                    <CardElementWrapper>
+                      {/* Left text */}
+                      <Text weight={'semiBold'} variant={'caption'} muted>
+                        {'Worship Service'}
+                      </Text>
+                      {/* Right text */}
+                      <Text variant={'subtitle2'} muted>
+                        {' 1/25/22'}
+                      </Text>
+                    </CardElementWrapper>
+                  }
+                  footerElement={
+                    <Text variant={'caption'}>
+                      {/* description */}
+                      <Text variant={'subtitle2'} weight={'bold'}>
+                        {'Stephen Riley '}
+                      </Text>
+                      {'and 24 others were Baptized at Lake Forest.'}
                     </Text>
                   }
                 />
