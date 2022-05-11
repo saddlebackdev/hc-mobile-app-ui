@@ -1,0 +1,431 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UpperTabs Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "label": "Tab 1",
+          "value": 1,
+        },
+        Object {
+          "label": "Tab 2",
+          "value": 2,
+        },
+        Object {
+          "label": "Tab 3",
+          "value": 3,
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    style={
+      Array [
+        Object {},
+      ]
+    }
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="upper-tab-1"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginLeft": 0,
+              "marginRight": 11,
+              "opacity": 1,
+              "paddingBottom": 11,
+            }
+          }
+          testID="upper-tab-1"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#00AEFF",
+                  "fontFamily": "System",
+                  "fontSize": 18,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="text"
+          >
+            Tab 1
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="upper-tab-2"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginLeft": 11,
+              "marginRight": 11,
+              "opacity": 1,
+              "paddingBottom": 11,
+            }
+          }
+          testID="upper-tab-2"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#97A4AB",
+                  "fontFamily": "System",
+                  "fontSize": 18,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="text"
+          >
+            Tab 2
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="upper-tab-3"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginLeft": 11,
+              "marginRight": 0,
+              "opacity": 1,
+              "paddingBottom": 11,
+            }
+          }
+          testID="upper-tab-3"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#97A4AB",
+                  "fontFamily": "System",
+                  "fontSize": 18,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="text"
+          >
+            Tab 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`UpperTabs Rendering renders the selected tab correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "label": "Tab 1",
+          "value": 1,
+        },
+        Object {
+          "label": "Tab 2",
+          "value": 2,
+        },
+        Object {
+          "label": "Tab 3",
+          "value": 3,
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    style={
+      Array [
+        Object {},
+      ]
+    }
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="upper-tab-1"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginLeft": 0,
+              "marginRight": 11,
+              "opacity": 1,
+              "paddingBottom": 11,
+            }
+          }
+          testID="upper-tab-1"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#97A4AB",
+                  "fontFamily": "System",
+                  "fontSize": 18,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="text"
+          >
+            Tab 1
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="upper-tab-2"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginLeft": 11,
+              "marginRight": 11,
+              "opacity": 1,
+              "paddingBottom": 11,
+            }
+          }
+          testID="upper-tab-2"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#97A4AB",
+                  "fontFamily": "System",
+                  "fontSize": 18,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="text"
+          >
+            Tab 2
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="upper-tab-3"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginLeft": 11,
+              "marginRight": 0,
+              "opacity": 1,
+              "paddingBottom": 11,
+            }
+          }
+          testID="upper-tab-3"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#00AEFF",
+                  "fontFamily": "System",
+                  "fontSize": 18,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="text"
+          >
+            Tab 3
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

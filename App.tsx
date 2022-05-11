@@ -30,6 +30,7 @@ import {
   IconToggle,
   PillToggle,
   TextInput,
+  UpperTabs,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -66,6 +67,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const [activePill, setActivePill] = React.useState<number>(2);
   const [pickerValue, setPickerValue] = React.useState<number>(1);
   const [isCardExpanded, setIsCardExpanded] = React.useState<boolean>(false);
+  const [selectedUpperTab, setSelectedUpperTab] = React.useState<number>(0);
   const [selectedListItem, setSelectedListItem] =
     React.useState<string>('app-list-item-1');
   const [isBottomSheetOpen, setIsBottomSheetOpen] =
@@ -275,6 +277,21 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     },
   ];
 
+  const TabItems = [
+    {
+      label: 'Tab1',
+      value: 0,
+    },
+    {
+      label: 'Tab2',
+      value: 1,
+    },
+    {
+      label: 'Tab3',
+      value: 2,
+    },
+  ];
+
   const avatarUri =
     'https://images.unsplash.com/photo-1591907235917-3da27ce1421d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=850&q=80';
 
@@ -301,6 +318,28 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 Mobile Apps.
               </Text>
             </Section.Description>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Upper tabs */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Upper Tabs</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show upper tabs</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <UpperTabs
+                  items={TabItems}
+                  selected={selectedUpperTab}
+                  onChange={item => {
+                    setSelectedUpperTab(item.value);
+                  }}
+                />
+              </Row>
+            </Section.Content>
           </Section.Wrapper>
           <Divider />
 

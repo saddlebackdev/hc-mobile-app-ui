@@ -128,5 +128,9 @@ export {
 export {default as Tiles} from './modules/tiles/tiles';
 export {IProps as TilesProps} from './modules/tiles/tiles.types';
 
+// Upper Tabs
+export {default as UpperTabs} from './modules/upper-tabs/upper-tabs';
+export {IProps as UpperTabsProps} from './modules/upper-tabs/upper-tabs.types';
+
 // Utilities
 export {DeviceUtils, LayoutUtils} from './modules/utilities';
