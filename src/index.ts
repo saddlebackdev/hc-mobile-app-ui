@@ -108,6 +108,10 @@ export {
   IListItemProps as SelectableListItemProps,
 } from './modules/selectable-list/selectable-list.types';
 
+// Tabs
+export {default as Tabs} from './modules/tabs/tabs';
+export {IProps as TabsProps} from './modules/tabs/tabs.types';
+
 // Text
 export {default as Text} from './modules/text/text';
 export {IProps as TextProps} from './modules/text/text.types';
@@ -127,10 +131,6 @@ export {
 // Tiles
 export {default as Tiles} from './modules/tiles/tiles';
 export {IProps as TilesProps} from './modules/tiles/tiles.types';
-
-// Upper Tabs
-export {default as UpperTabs} from './modules/upper-tabs/upper-tabs';
-export {IProps as UpperTabsProps} from './modules/upper-tabs/upper-tabs.types';
 
 // Utilities
 export {DeviceUtils, LayoutUtils} from './modules/utilities';

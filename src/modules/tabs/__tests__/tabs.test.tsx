@@ -1,13 +1,13 @@
-// npx jest ./src/modules/upper-tabs/__tests__/upper-tabs.test.tsx
+// npx jest ./src/modules/tabs/__tests__/tabs.test.tsx
 
 import * as React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 
-import UpperTabs from '../upper-tabs';
+import Tabs from '../tabs';
 import ThemeProvider from '../../theming/theme-provider';
 import defaultTheme from '../../theming/default-theme';
 
-describe('UpperTabs', () => {
+describe('Tabs', () => {
   let tabItems: any, onChangeMock: any;
 
   beforeEach(() => {
@@ -25,7 +25,7 @@ describe('UpperTabs', () => {
     it('renders itself correctly', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
-          <UpperTabs
+          <Tabs
             items={tabItems}
             selected={tabItems[0].value}
             onChange={onChangeMock}
@@ -33,9 +33,9 @@ describe('UpperTabs', () => {
         </ThemeProvider>,
       );
 
-      const tab1 = wrapper.getByTestId('upper-tab-1');
-      const tab2 = wrapper.getByTestId('upper-tab-2');
-      const tab3 = wrapper.getByTestId('upper-tab-3');
+      const tab1 = wrapper.getByTestId('tab-1');
+      const tab2 = wrapper.getByTestId('tab-2');
+      const tab3 = wrapper.getByTestId('tab-3');
 
       expect(tab1).toBeDefined();
       expect(tab2).toBeDefined();
@@ -47,7 +47,7 @@ describe('UpperTabs', () => {
     it('renders the selected tab correctly', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
-          <UpperTabs
+          <Tabs
             items={tabItems}
             selected={tabItems[2].value}
             onChange={onChangeMock}
@@ -63,7 +63,7 @@ describe('UpperTabs', () => {
     it('should call onChange function on click of any tab', () => {
       const {getByTestId} = render(
         <ThemeProvider theme={defaultTheme}>
-          <UpperTabs
+          <Tabs
             items={tabItems}
             selected={tabItems[0].value}
             onChange={onChangeMock}
@@ -71,7 +71,7 @@ describe('UpperTabs', () => {
         </ThemeProvider>,
       );
 
-      const tab2 = getByTestId('upper-tab-2');
+      const tab2 = getByTestId('tab-2');
 
       fireEvent.press(tab2);
 

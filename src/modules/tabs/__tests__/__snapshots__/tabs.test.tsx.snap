@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UpperTabs Rendering renders itself correctly 1`] = `
+exports[`Tabs Rendering renders itself correctly 1`] = `
 <View
   style={
     Array [
@@ -63,7 +63,7 @@ exports[`UpperTabs Rendering renders itself correctly 1`] = `
         }
       >
         <View
-          accessibilityLabel="upper-tab-1"
+          accessibilityLabel="tab-1"
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -83,7 +83,7 @@ exports[`UpperTabs Rendering renders itself correctly 1`] = `
               "paddingBottom": 11,
             }
           }
-          testID="upper-tab-1"
+          testID="tab-1"
         >
           <Text
             style={
@@ -116,7 +116,7 @@ exports[`UpperTabs Rendering renders itself correctly 1`] = `
         }
       >
         <View
-          accessibilityLabel="upper-tab-2"
+          accessibilityLabel="tab-2"
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -136,7 +136,7 @@ exports[`UpperTabs Rendering renders itself correctly 1`] = `
               "paddingBottom": 11,
             }
           }
-          testID="upper-tab-2"
+          testID="tab-2"
         >
           <Text
             style={
@@ -169,7 +169,7 @@ exports[`UpperTabs Rendering renders itself correctly 1`] = `
         }
       >
         <View
-          accessibilityLabel="upper-tab-3"
+          accessibilityLabel="tab-3"
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -189,7 +189,7 @@ exports[`UpperTabs Rendering renders itself correctly 1`] = `
               "paddingBottom": 11,
             }
           }
-          testID="upper-tab-3"
+          testID="tab-3"
         >
           <Text
             style={
@@ -215,7 +215,7 @@ exports[`UpperTabs Rendering renders itself correctly 1`] = `
 </View>
 `;
 
-exports[`UpperTabs Rendering renders the selected tab correctly 1`] = `
+exports[`Tabs Rendering renders the selected tab correctly 1`] = `
 <View
   style={
     Array [
@@ -278,7 +278,7 @@ exports[`UpperTabs Rendering renders the selected tab correctly 1`] = `
         }
       >
         <View
-          accessibilityLabel="upper-tab-1"
+          accessibilityLabel="tab-1"
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -298,7 +298,7 @@ exports[`UpperTabs Rendering renders the selected tab correctly 1`] = `
               "paddingBottom": 11,
             }
           }
-          testID="upper-tab-1"
+          testID="tab-1"
         >
           <Text
             style={
@@ -331,7 +331,7 @@ exports[`UpperTabs Rendering renders the selected tab correctly 1`] = `
         }
       >
         <View
-          accessibilityLabel="upper-tab-2"
+          accessibilityLabel="tab-2"
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -351,7 +351,7 @@ exports[`UpperTabs Rendering renders the selected tab correctly 1`] = `
               "paddingBottom": 11,
             }
           }
-          testID="upper-tab-2"
+          testID="tab-2"
         >
           <Text
             style={
@@ -384,7 +384,7 @@ exports[`UpperTabs Rendering renders the selected tab correctly 1`] = `
         }
       >
         <View
-          accessibilityLabel="upper-tab-3"
+          accessibilityLabel="tab-3"
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -404,7 +404,7 @@ exports[`UpperTabs Rendering renders the selected tab correctly 1`] = `
               "paddingBottom": 11,
             }
           }
-          testID="upper-tab-3"
+          testID="tab-3"
         >
           <Text
             style={

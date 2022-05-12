@@ -30,7 +30,7 @@ import {
   IconToggle,
   PillToggle,
   TextInput,
-  UpperTabs,
+  Tabs,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -67,7 +67,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const [activePill, setActivePill] = React.useState<number>(2);
   const [pickerValue, setPickerValue] = React.useState<number>(1);
   const [isCardExpanded, setIsCardExpanded] = React.useState<boolean>(false);
-  const [selectedUpperTab, setSelectedUpperTab] = React.useState<number>(0);
+  const [selectedTab, setSelectedTab] = React.useState<number>(0);
   const [selectedListItem, setSelectedListItem] =
     React.useState<string>('app-list-item-1');
   const [isBottomSheetOpen, setIsBottomSheetOpen] =
@@ -321,21 +321,21 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
           </Section.Wrapper>
           <Divider />
 
-          {/* Upper tabs */}
+          {/* Tabs */}
           <Section.Wrapper>
             <Section.Title>
-              <Heading variant="h2">Upper Tabs</Heading>
+              <Heading variant="h2">Tabs</Heading>
             </Section.Title>
             <Section.Description>
-              <Text variant="caption">Used to show upper tabs</Text>
+              <Text variant="caption">Used to show tabs</Text>
             </Section.Description>
             <Section.Content>
               <Row>
-                <UpperTabs
+                <Tabs
                   items={TabItems}
-                  selected={selectedUpperTab}
+                  selected={selectedTab}
                   onChange={item => {
-                    setSelectedUpperTab(item.value);
+                    setSelectedTab(item.value);
                   }}
                 />
               </Row>

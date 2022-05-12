@@ -4,7 +4,7 @@ import {FlatList} from 'react-native';
 import Styled from 'styled-components/native';
 
 // Types
-import {IProps, IStyledText, IStyledTouchable, ITab} from './upper-tabs.types';
+import {IProps, IStyledText, IStyledTouchable, ITab} from './tabs.types';
 
 // Shared
 import Text from '../text/text';
@@ -27,7 +27,7 @@ const StyledLabel = Styled(Text)<IStyledText>`
 `;
 
 // Component
-export const UpperTabs: React.FC<IProps> = ({
+export const Tabs: React.FC<IProps> = ({
   items,
   onChange,
   selected,
@@ -47,8 +47,8 @@ export const UpperTabs: React.FC<IProps> = ({
           <StyledTouchable
             accessible
             key={item.label}
-            testID={`upper-tab-${item.value}`}
-            accessibilityLabel={`upper-tab-${item.value}`}
+            testID={`tab-${item.value}`}
+            accessibilityLabel={`tab-${item.value}`}
             onPress={() => onChange(item)}
             $isFirstChild={isFirstChild}
             $isLastChild={isLastChild}
@@ -63,4 +63,4 @@ export const UpperTabs: React.FC<IProps> = ({
 );
 
 // Exports
-export default UpperTabs;
+export default Tabs;
