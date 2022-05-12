@@ -30,6 +30,7 @@ import {
   IconToggle,
   PillToggle,
   TextInput,
+  DataBlock,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -384,6 +385,73 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                     vel officia fugiat inventore voluptatem hic nulla!
                   </Text>
                 </Accordion>
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Data Block */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Data Block</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">
+                List like component that renders a label on the right and a
+                value or a React component on the left.
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <DataBlock items={pickerOptions} />
+              </Row>
+              <Row>
+                <DataBlock
+                  items={[
+                    {
+                      label: 'Doggo 1',
+                      jsx: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="small" />
+                          </View>
+                          <View
+                            // eslint-disable-next-line react-native/no-inline-styles
+                            style={{marginLeft: 10}}>
+                            <Text variant="caption">Duffy The Pup</Text>
+                          </View>
+                        </View>
+                      ),
+                    },
+                    {
+                      label: 'Simple Value',
+                      value: 'Lookie Here!',
+                    },
+                    {
+                      label: 'Doggo 2',
+                      jsx: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="small" />
+                          </View>
+                          <View
+                            // eslint-disable-next-line react-native/no-inline-styles
+                            style={{marginLeft: 10}}>
+                            <Text variant="caption">Buffy The Pup</Text>
+                          </View>
+                        </View>
+                      ),
+                    },
+                    {
+                      label: 'Simple Value',
+                      value: 'Lookie Here Again!',
+                    },
+                  ]}
+                />
               </Row>
             </Section.Content>
           </Section.Wrapper>
