@@ -2,6 +2,7 @@
 
 ### v0.0.33
 
+- Add PeopleTab component
 - Add DataBlock component
 - Update font size and weight for Avatar
 - Fix sizing for "tile" Avatar

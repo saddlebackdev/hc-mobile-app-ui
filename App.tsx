@@ -26,6 +26,7 @@ import {
   Heading,
   Radio,
   Tiles,
+  PeopleTabs,
   ThemeProvider,
   IconToggle,
   PillToggle,
@@ -79,6 +80,8 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     React.useState<boolean>(false);
   const [selectedHorizontalRadio, setSelectedHorizontalRadio] =
     React.useState<number>(2);
+  const [selectedPeopleTabItem, setSelectedPeopleTabItem] =
+    React.useState<number>(1);
 
   const pickerOptions = [
     {label: 'Option 1', value: 1},
@@ -284,6 +287,12 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     <View style={{width: 12, height: 12, backgroundColor: 'red'}} />
   );
 
+  const peopleTabsItems = [
+    {label: 'Tab 1', value: 1},
+    {label: 'Tab 2', value: 2},
+    {label: 'Tab 3', value: 3},
+  ];
+
   return (
     <ThemeProvider>
       <SafeAreaView>
@@ -453,6 +462,39 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   ]}
                 />
               </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* People Tabs */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">People Tabs</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">
+                Tabs component used with person record and similar components.
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <View
+                  // eslint-disable-next-line react-native/no-inline-styles
+                  style={{
+                    backgroundColor: 'green',
+                    padding: 12,
+                  }}>
+                  <PeopleTabs
+                    items={peopleTabsItems}
+                    onChange={item => setSelectedPeopleTabItem(item.value)}
+                    selected={selectedPeopleTabItem}
+                  />
+                </View>
+              </Row>
+
+              <Text variant="caption" muted>
+                The green background is only used for contrast.
+              </Text>
             </Section.Content>
           </Section.Wrapper>
           <Divider />

@@ -94,6 +94,10 @@ export {
 export {default as PillToggle} from './modules/pill-toggle/pill-toggle';
 export {IProps as PillToggleProps} from './modules/pill-toggle/pill-toggle.types';
 
+// People Tabs
+export {default as PeopleTabs} from './modules/people-tabs/people-tabs';
+export {IProps as PeopleTabsProps} from './modules/people-tabs/people-tabs.types';
+
 // Radio
 export {default as Radio} from './modules/radio/radio';
 export {IProps as RadioProps} from './modules/radio/radio.types';
