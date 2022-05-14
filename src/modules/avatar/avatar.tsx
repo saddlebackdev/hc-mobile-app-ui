@@ -48,8 +48,8 @@ const StyledInitialsWrapper = Styled.View<IStyledInitialsWrapper>`
   border-width: 1px;
 `;
 const StyledInitialsText = Styled(Text)<IStyledInitialsText>`
+  color: ${({theme}) => theme.colors.secondaryDark};
   font-size: ${({$size}) => $size}px;
-  opacity: 0.75;
 `;
 
 // Component
@@ -67,8 +67,8 @@ export const Avatar: React.FC<IProps> = ({
   let initialsFontSize = 12;
 
   if (size === 'tile') {
-    size = 36;
-    initialsFontSize = 14;
+    size = 48;
+    initialsFontSize = 18;
   }
 
   if (size === 'profile') {
@@ -125,7 +125,7 @@ export const Avatar: React.FC<IProps> = ({
     return (
       <StyledWrapper {...wrapperProps}>
         <StyledInitialsWrapper $borderRadius={borderRadius}>
-          <StyledInitialsText $size={initialsFontSize}>
+          <StyledInitialsText weight="semiBold" $size={initialsFontSize}>
             {initials.toUpperCase()}
           </StyledInitialsText>
         </StyledInitialsWrapper>

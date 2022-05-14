@@ -39,6 +39,10 @@ export {default as CompactCardListItem} from './modules/compact-card-list/compac
 export {IProps as CompactCardListItemProps} from './modules/compact-card-list/compact-card-list-item.types';
 
 // Date Picker
+export {default as DataBlock} from './modules/data-block/data-block';
+export {IProps as DataBlockProps} from './modules/data-block/data-block.types';
+
+// Date Picker
 export {default as DatePicker} from './modules/date-picker/date-picker';
 export {IProps as DatePickerProps} from './modules/date-picker/date-picker.types';
 
@@ -97,6 +101,10 @@ export {
 // Pill Toggle
 export {default as PillToggle} from './modules/pill-toggle/pill-toggle';
 export {IProps as PillToggleProps} from './modules/pill-toggle/pill-toggle.types';
+
+// People Tabs
+export {default as PeopleTabs} from './modules/people-tabs/people-tabs';
+export {IProps as PeopleTabsProps} from './modules/people-tabs/people-tabs.types';
 
 // Radio
 export {default as Radio} from './modules/radio/radio';
