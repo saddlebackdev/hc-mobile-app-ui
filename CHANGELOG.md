@@ -1,15 +1,10 @@
 # Changelog
 
-### v0.0.34
-
+### v0.0.33
 - Add LinearGradient component
 - Add CompactCardListItem component
 - Add PeopleListItem component
 - Add Tab component
-
----
-
-### v0.0.33
 - Add "optionContainerStyle" `<Radio />` prop.
 - Add "leftChild" for each option in "options" `<Radio />` prop.
 - Add PeopleTab component
