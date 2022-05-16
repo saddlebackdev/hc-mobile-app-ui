@@ -32,6 +32,7 @@ import {
   PillToggle,
   TextInput,
   PeopleListItem,
+  DataBlock,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
