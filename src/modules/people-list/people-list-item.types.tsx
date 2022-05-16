@@ -37,4 +37,10 @@ export interface IProps {
 
   /** determine if checkbox is checked or not */
   isChecked?: boolean;
+
+  //red marker beside User Name
+  redMarker?: boolean;
+
+  //right side element
+  rightElement?: React.ReactElement | null | undefined;
 }

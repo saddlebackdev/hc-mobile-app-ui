@@ -1,6 +1,6 @@
 import React from 'react';
 import Swipeable from 'react-native-swipeable';
-import {IProps} from './people-list-item.type';
+import {IProps} from './people-list-item.types';
 import Styled from 'styled-components/native';
 
 import {minorScale} from '../scales';
@@ -45,7 +45,7 @@ const StyledOtherDetailWrapper = Styled.View`
 const StyledHeadingUserNameWrapper = Styled(Heading)`
   font-size: ${({theme, variant = 'h3'}): string =>
     `${theme.typography?.sizes?.headings[variant]}px`};
-  width: 80%;
+  max-width: 86%;
 `;
 
 const StyledUserIdTextWrapper = Styled(Text)`
@@ -61,9 +61,40 @@ const StyledUserDescriptionWrapper = Styled(Text)`
   color: ${({theme}) => theme.colors.grayFour};
   margin-top: ${minorScale(1)}px;
   margin-bottom: ${minorScale(1)}px;
+  min-width:80%;
 `;
 
-const StyleLinkWrapper = Styled.TouchableOpacity``;
+const StyledLinkWrapper = Styled.TouchableOpacity`
+  align-self:center;
+  width:100%;
+`;
+
+const StyledRedDotWrapper = Styled.View`
+  background-color:red;
+  width:${minorScale(2)}px;
+  height:${minorScale(2)}px;
+  border-radius: ${minorScale(2)}px;
+  margin-top:${minorScale(0.6)}px;
+  margin-left:${minorScale(1)}px;
+`;
+
+const StyledNameMarkerWrapper = Styled.View`
+  flex-direction: row;
+  width: 82%;
+  align-items: center;
+`;
+
+const StyledMiddleWrapper = Styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+const StyledRightWrapper = Styled.View`
+  align-items: flex-end;
+  margin-left:8px;
+`;
 
 export const PeopleListItem: React.FC<IProps> = ({
   onPress,
@@ -79,6 +110,8 @@ export const PeopleListItem: React.FC<IProps> = ({
   isChecked,
   leftButtons,
   rightButtons,
+  redMarker,
+  rightElement,
 }): React.ReactElement => {
   /**
    * get other data like maritalStatus,gender,churchEntName
@@ -124,37 +157,6 @@ export const PeopleListItem: React.FC<IProps> = ({
     return `${arrName![0].charAt(0)}${arrName![0].charAt(1)}`;
   };
 
-  const renderCheckBoxAndPic = () => {
-    if (isShowCheckbox && isShowCheckbox === true) {
-      return (
-        <StyledProfilePicCheckboxWrapper>
-          <StyledCheckboxWrapper>
-            <Checkbox onPress={onCheckboxPress} isChecked={isChecked!} />
-          </StyledCheckboxWrapper>
-          <Avatar
-            uri={profilePic!}
-            initials={getUserNameFirstLastCharacter()}
-            size={40}
-            radius="small"
-          />
-        </StyledProfilePicCheckboxWrapper>
-      );
-    }
-  };
-
-  const renderProfilePic = () => {
-    if (isShowCheckbox === undefined || !isShowCheckbox) {
-      return (
-        <Avatar
-          uri={profilePic!}
-          initials={getUserNameFirstLastCharacter()}
-          size={40}
-          radius="small"
-        />
-      );
-    }
-  };
-
   return (
     <Swipeable
       leftButtonWidth={minorScale(17)}
@@ -162,26 +164,43 @@ export const PeopleListItem: React.FC<IProps> = ({
       rightButtonWidth={minorScale(17)}
       rightButtons={rightButtons}
       leftActionActivationDistance={0}>
-      <StyleLinkWrapper testID="link-wrapper" onPress={onPress}>
+      <StyledLinkWrapper testID="link-wrapper" onPress={onPress}>
         <StyledWrapper testID="main-wrapper">
-          {renderCheckBoxAndPic()}
-          {renderProfilePic()}
+          <StyledProfilePicCheckboxWrapper>
+            {isShowCheckbox && (
+              <StyledCheckboxWrapper>
+                <Checkbox onPress={onCheckboxPress} isChecked={isChecked!} />
+              </StyledCheckboxWrapper>
+            )}
+            <Avatar
+              uri={profilePic!}
+              initials={getUserNameFirstLastCharacter()}
+              size={40}
+              radius="small"
+            />
+          </StyledProfilePicCheckboxWrapper>
           <StyledUserDetailsWrapper isShowCheckbox={isShowCheckbox}>
             <StyledUserNameIdWrapper>
-              <StyledHeadingUserNameWrapper variant="h3">{`${name}`}</StyledHeadingUserNameWrapper>
+              <StyledNameMarkerWrapper>
+                <StyledHeadingUserNameWrapper variant="h3">{`${name}`}</StyledHeadingUserNameWrapper>
+                {redMarker === true && <StyledRedDotWrapper />}
+              </StyledNameMarkerWrapper>
               <StyledUserIdTextWrapper testID="user-id">
                 ID:{`${userId}`}
               </StyledUserIdTextWrapper>
             </StyledUserNameIdWrapper>
             <StyledOtherDetailWrapper>
-              <StyledUserDescriptionWrapper>
-                {`${getOtherDetailsString().join(' | ')}`}
-              </StyledUserDescriptionWrapper>
+              <StyledMiddleWrapper>
+                <StyledUserDescriptionWrapper>
+                  {`${getOtherDetailsString().join(' | ')}`}
+                </StyledUserDescriptionWrapper>
+                <StyledRightWrapper>{rightElement}</StyledRightWrapper>
+              </StyledMiddleWrapper>
               {footerElement}
             </StyledOtherDetailWrapper>
           </StyledUserDetailsWrapper>
         </StyledWrapper>
-      </StyleLinkWrapper>
+      </StyledLinkWrapper>
     </Swipeable>
   );
 };

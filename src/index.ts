@@ -133,4 +133,4 @@ export {DeviceUtils, LayoutUtils} from './modules/utilities';
 
 // People-list-item
 export {default as PeopleListItem} from './modules/people-list/people-list-item';
-export {IProps as IPeopleItemProps} from './modules/people-list/people-list-item.type';
+export {IProps as IPeopleItemProps} from './modules/people-list/people-list-item.types';

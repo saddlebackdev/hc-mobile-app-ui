@@ -1249,6 +1249,33 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   leftButtons={null}
                 />
               </Row>
+              <Row>
+                <PeopleListItem
+                  name="Jane doe"
+                  maritalStatus="Married"
+                  gender="M"
+                  churchEntityName="Lake Forest"
+                  profilePic={null}
+                  userId="301428"
+                  isShowCheckbox={true}
+                  rightButtons={null}
+                  leftButtons={null}
+                  redMarker={true}
+                  rightElement={
+                    // eslint-disable-next-line react-native/no-inline-styles
+                    <Text
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        fontSize: 13,
+                        fontWeight: '700',
+                        color: 'orange',
+                        textAlign: 'right',
+                      }}>
+                      Overdue
+                    </Text>
+                  }
+                />
+              </Row>
             </Section.Content>
           </Section.Wrapper>
         </Wrapper>
