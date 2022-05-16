@@ -1,5 +1,22 @@
 # Changelog
 
+### v0.0.34
+
+- Add LinearGradient component
+- Add CompactCardListItem component
+- Add PeopleListItem component
+
+---
+
+### v0.0.33
+
+- Add PeopleTab component
+- Add DataBlock component
+- Update font size and weight for Avatar
+- Fix sizing for "tile" Avatar
+
+---
+
 ### v0.0.32
 
 - Add "tile" and "profile" options as "size" Avatar

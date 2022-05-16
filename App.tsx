@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {View, SafeAreaView} from 'react-native';
+import {View, SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
 import Styled from 'styled-components/native';
 
 import {
@@ -26,13 +26,22 @@ import {
   Heading,
   Radio,
   Tiles,
+  PeopleTabs,
   ThemeProvider,
   IconToggle,
   PillToggle,
   TextInput,
   Tabs,
+  PeopleListItem,
+  DataBlock,
+  CompactCardListItem,
+  LinearGradientView,
+  defaultTheme,
 } from './src';
 import Icon from './src/modules/icon/icon';
+
+import IconSVG from './src/modules/icon/icon-external';
+import IconShapeHeart from './src/images/shape-heart.svg';
 
 // Interfaces
 interface IProps {}
@@ -57,6 +66,41 @@ const Row = Styled.View`
   padding: 4px;
 `;
 
+const CardElementWrapper = Styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const WarningTextWrapper = Styled(Text)`
+  padding-horizontal: 10px;
+  padding-vertical: 2px;
+`;
+
+const WarningViewWrapper = Styled.View`
+  background-color: ${defaultTheme.colors.warningLight};
+  border-radius: 13px;
+  margin-top: -4px;
+`;
+
+const CheckInTextWrapper = Styled(Text)`
+  color: #FFEF00;
+`;
+
+const linearGradientView1Style = StyleSheet.flatten<ViewStyle>({
+  width: 50,
+  height: 50,
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
+const linearGradientView2Style = StyleSheet.flatten<ViewStyle>({
+  width: 100,
+  height: 100,
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
 const onPressMock = () => false;
 
 // Component
@@ -80,6 +124,13 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     React.useState<boolean>(false);
   const [selectedHorizontalRadio, setSelectedHorizontalRadio] =
     React.useState<number>(2);
+  const [selectedPeopleTabItem, setSelectedPeopleTabItem] =
+    React.useState<number>(1);
+
+  const gradientColors = [
+    {offset: 0, color: '#E4DE74'},
+    {offset: 1, color: '#96B660'},
+  ];
 
   const pickerOptions = [
     {label: 'Option 1', value: 1},
@@ -300,6 +351,12 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     <View style={{width: 12, height: 12, backgroundColor: 'red'}} />
   );
 
+  const peopleTabsItems = [
+    {label: 'Tab 1', value: 1},
+    {label: 'Tab 2', value: 2},
+    {label: 'Tab 3', value: 3},
+  ];
+
   return (
     <ThemeProvider>
       <SafeAreaView>
@@ -337,6 +394,142 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   onChange={item => {
                     setSelectedTab(item.value);
                   }}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Linear Gradient View */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Linear Gradient View</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show Linear Gradient View</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <LinearGradientView
+                  gradientColors={gradientColors}
+                  viewStyle={linearGradientView1Style}>
+                  <IconSVG
+                    file={IconShapeHeart}
+                    size={22}
+                    color={defaultTheme.colors.white}
+                  />
+                </LinearGradientView>
+              </Row>
+              <Row>
+                <LinearGradientView
+                  gradientColors={gradientColors}
+                  horizontal
+                  viewStyle={linearGradientView2Style}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Compact Card List Item */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Compact Card List Item</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show compact card list item</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <CompactCardListItem
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColors,
+                  }}
+                  icon={IconShapeHeart}
+                  title="Accepted Christ"
+                  footerElement={
+                    <CardElementWrapper>
+                      <Text variant={'caption'}>{'5 Active'}</Text>
+                      <WarningViewWrapper>
+                        <WarningTextWrapper
+                          weight={'semiBold'}
+                          variant={'caption'}
+                          inversed>
+                          {'2 Overdue'}
+                        </WarningTextWrapper>
+                      </WarningViewWrapper>
+                    </CardElementWrapper>
+                  }
+                />
+              </Row>
+              <Row>
+                <CompactCardListItem
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColors,
+                  }}
+                  icon={IconShapeHeart}
+                  title="Music Academy"
+                  innerWrapperBg={require('./src/images/event_gradient.png')}
+                  headerElement={
+                    <CardElementWrapper>
+                      {/* Left text */}
+                      <CheckInTextWrapper weight={'bold'} variant={'caption'}>
+                        {'Check-in Window Open'}
+                      </CheckInTextWrapper>
+                      {/* Right text */}
+                      <CheckInTextWrapper weight={'bold'} variant={'subtitle2'}>
+                        {/* UiIcon text */}
+                        <IconSVG
+                          file={IconShapeHeart}
+                          size={14}
+                          color={'#FFEF00'}
+                        />{' '}
+                        {'Check-in'}
+                      </CheckInTextWrapper>
+                    </CardElementWrapper>
+                  }
+                  footerElement={
+                    <Text variant={'caption'} inversed>
+                      {'Tue, Jan 27, 2022 | 6:00 pm'}
+                      {'  '}
+                      <IconSVG
+                        file={IconShapeHeart}
+                        size={14}
+                        color={'white'}
+                      />{' '}
+                      {'Every 2 Weeks'}
+                    </Text>
+                  }
+                />
+              </Row>
+              <Row>
+                <CompactCardListItem
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColors,
+                  }}
+                  icon={IconShapeHeart}
+                  title="Baptisms This Week"
+                  headerElement={
+                    <CardElementWrapper>
+                      {/* Left text */}
+                      <Text weight={'semiBold'} variant={'caption'} muted>
+                        {'Worship Service'}
+                      </Text>
+                      {/* Right text */}
+                      <Text variant={'subtitle2'} muted>
+                        {' 1/25/22'}
+                      </Text>
+                    </CardElementWrapper>
+                  }
+                  footerElement={
+                    <Text variant={'caption'}>
+                      {/* description */}
+                      <Text variant={'subtitle2'} weight={'bold'}>
+                        {'Stephen Riley '}
+                      </Text>
+                      {'and 24 others were Baptized at Lake Forest.'}
+                    </Text>
+                  }
                 />
               </Row>
             </Section.Content>
@@ -424,6 +617,106 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   </Text>
                 </Accordion>
               </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Data Block */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Data Block</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">
+                List like component that renders a label on the right and a
+                value or a React component on the left.
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <DataBlock items={pickerOptions} />
+              </Row>
+              <Row>
+                <DataBlock
+                  items={[
+                    {
+                      label: 'Doggo 1',
+                      jsx: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="small" />
+                          </View>
+                          <View
+                            // eslint-disable-next-line react-native/no-inline-styles
+                            style={{marginLeft: 10}}>
+                            <Text variant="caption">Duffy The Pup</Text>
+                          </View>
+                        </View>
+                      ),
+                    },
+                    {
+                      label: 'Simple Value',
+                      value: 'Lookie Here!',
+                    },
+                    {
+                      label: 'Doggo 2',
+                      jsx: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="small" />
+                          </View>
+                          <View
+                            // eslint-disable-next-line react-native/no-inline-styles
+                            style={{marginLeft: 10}}>
+                            <Text variant="caption">Buffy The Pup</Text>
+                          </View>
+                        </View>
+                      ),
+                    },
+                    {
+                      label: 'Simple Value',
+                      value: 'Lookie Here Again!',
+                    },
+                  ]}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* People Tabs */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">People Tabs</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">
+                Tabs component used with person record and similar components.
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <View
+                  // eslint-disable-next-line react-native/no-inline-styles
+                  style={{
+                    backgroundColor: 'green',
+                    padding: 12,
+                  }}>
+                  <PeopleTabs
+                    items={peopleTabsItems}
+                    onChange={item => setSelectedPeopleTabItem(item.value)}
+                    selected={selectedPeopleTabItem}
+                  />
+                </View>
+              </Row>
+
+              <Text variant="caption" muted>
+                The green background is only used for contrast.
+              </Text>
             </Section.Content>
           </Section.Wrapper>
           <Divider />
@@ -1247,6 +1540,70 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   multiline
                   required
                   disabled
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+
+          {/* People list item */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">People List Item</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Simple People List Item</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <PeopleListItem
+                  name="Jane doe"
+                  maritalStatus="Married"
+                  gender="M"
+                  churchEntityName="Lake Forest"
+                  profilePic={null}
+                  userId="301428"
+                  isShowCheckbox={false}
+                  rightButtons={null}
+                  leftButtons={null}
+                />
+              </Row>
+              <Row>
+                <PeopleListItem
+                  name="Jane doe"
+                  maritalStatus="Married"
+                  gender="M"
+                  churchEntityName="Lake Forest"
+                  profilePic={null}
+                  userId="301428"
+                  isShowCheckbox={true}
+                  rightButtons={null}
+                  leftButtons={null}
+                />
+              </Row>
+              <Row>
+                <PeopleListItem
+                  name="Jane doe"
+                  maritalStatus="Married"
+                  gender="M"
+                  churchEntityName="Lake Forest"
+                  profilePic={null}
+                  userId="301428"
+                  isShowCheckbox={true}
+                  rightButtons={null}
+                  leftButtons={null}
+                  redMarker={true}
+                  rightElement={
+                    <Text
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        fontSize: 13,
+                        fontWeight: '700',
+                        color: 'orange',
+                        textAlign: 'right',
+                      }}>
+                      Overdue
+                    </Text>
+                  }
                 />
               </Row>
             </Section.Content>

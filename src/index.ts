@@ -34,6 +34,14 @@ export {IProps as CheckboxProps} from './modules/checkbox/checkbox.types';
 export {default as Chip} from './modules/chip/chip';
 export {IProps as ChipProps} from './modules/chip/chip.types';
 
+// Compact Card List Item
+export {default as CompactCardListItem} from './modules/compact-card-list/compact-card-list-item';
+export {IProps as CompactCardListItemProps} from './modules/compact-card-list/compact-card-list-item.types';
+
+// Date Picker
+export {default as DataBlock} from './modules/data-block/data-block';
+export {IProps as DataBlockProps} from './modules/data-block/data-block.types';
+
 // Date Picker
 export {default as DatePicker} from './modules/date-picker/date-picker';
 export {IProps as DatePickerProps} from './modules/date-picker/date-picker.types';
@@ -66,6 +74,10 @@ export {IProps as IconProps} from './modules/icon/icon-external.types';
 export {default as IconToggle} from './modules/icon-toggle/icon-toggle';
 export {IProps as IconToggleProps} from './modules/icon-toggle/icon-toggle.types';
 
+// Linear Gradient View
+export {default as LinearGradientView} from './modules/linear-gradient/linear-gradient-view';
+export {IProps as LinearGradientViewProps} from './modules/linear-gradient/linear-gradient-view.types';
+
 // Link
 export {default as Link} from './modules/link/link';
 export {IProps as LinkProps} from './modules/link/link.types';
@@ -89,6 +101,10 @@ export {
 // Pill Toggle
 export {default as PillToggle} from './modules/pill-toggle/pill-toggle';
 export {IProps as PillToggleProps} from './modules/pill-toggle/pill-toggle.types';
+
+// People Tabs
+export {default as PeopleTabs} from './modules/people-tabs/people-tabs';
+export {IProps as PeopleTabsProps} from './modules/people-tabs/people-tabs.types';
 
 // Radio
 export {default as Radio} from './modules/radio/radio';
@@ -134,3 +150,7 @@ export {IProps as TilesProps} from './modules/tiles/tiles.types';
 
 // Utilities
 export {DeviceUtils, LayoutUtils} from './modules/utilities';
+
+// People-list-item
+export {default as PeopleListItem} from './modules/people-list/people-list-item';
+export {IProps as IPeopleItemProps} from './modules/people-list/people-list-item.types';
