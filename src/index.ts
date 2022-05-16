@@ -34,6 +34,10 @@ export {IProps as CheckboxProps} from './modules/checkbox/checkbox.types';
 export {default as Chip} from './modules/chip/chip';
 export {IProps as ChipProps} from './modules/chip/chip.types';
 
+// Compact Card List Item
+export {default as CompactCardListItem} from './modules/compact-card-list/compact-card-list-item';
+export {IProps as CompactCardListItemProps} from './modules/compact-card-list/compact-card-list-item.types';
+
 // Date Picker
 export {default as DataBlock} from './modules/data-block/data-block';
 export {IProps as DataBlockProps} from './modules/data-block/data-block.types';
@@ -69,6 +73,10 @@ export {IProps as IconProps} from './modules/icon/icon-external.types';
 // Icon Toggle
 export {default as IconToggle} from './modules/icon-toggle/icon-toggle';
 export {IProps as IconToggleProps} from './modules/icon-toggle/icon-toggle.types';
+
+// Linear Gradient View
+export {default as LinearGradientView} from './modules/linear-gradient/linear-gradient-view';
+export {IProps as LinearGradientViewProps} from './modules/linear-gradient/linear-gradient-view.types';
 
 // Link
 export {default as Link} from './modules/link/link';

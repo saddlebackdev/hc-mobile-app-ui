@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.0.34
+
+- Add LinearGradient component
+- Add CompactCardListItem component
+
+---
+
 ### v0.0.33
 
 - Add PeopleTab component

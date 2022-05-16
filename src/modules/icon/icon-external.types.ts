@@ -1,5 +1,8 @@
 // Props
 export interface IProps {
+  /** testID of the icon */
+  testID?: string;
+
   /** Size of the icon */
   size?: number;
 

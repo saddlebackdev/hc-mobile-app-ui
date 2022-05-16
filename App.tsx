@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {View, SafeAreaView} from 'react-native';
+import {View, SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
 import Styled from 'styled-components/native';
 
 import {
@@ -33,8 +33,14 @@ import {
   TextInput,
   PeopleListItem,
   DataBlock,
+  CompactCardListItem,
+  LinearGradientView,
+  defaultTheme,
 } from './src';
 import Icon from './src/modules/icon/icon';
+
+import IconSVG from './src/modules/icon/icon-external';
+import IconShapeHeart from './src/images/shape-heart.svg';
 
 // Interfaces
 interface IProps {}
@@ -58,6 +64,41 @@ const Row = Styled.View`
   margin-bottom: 10px;
   padding: 4px;
 `;
+
+const CardElementWrapper = Styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const WarningTextWrapper = Styled(Text)`
+  padding-horizontal: 10px;
+  padding-vertical: 2px;
+`;
+
+const WarningViewWrapper = Styled.View`
+  background-color: ${defaultTheme.colors.warningLight};
+  border-radius: 13px;
+  margin-top: -4px;
+`;
+
+const CheckInTextWrapper = Styled(Text)`
+  color: #FFEF00;
+`;
+
+const linearGradientView1Style = StyleSheet.flatten<ViewStyle>({
+  width: 50,
+  height: 50,
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
+const linearGradientView2Style = StyleSheet.flatten<ViewStyle>({
+  width: 100,
+  height: 100,
+  justifyContent: 'center',
+  alignItems: 'center',
+});
 
 const onPressMock = () => false;
 
@@ -83,6 +124,11 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     React.useState<number>(2);
   const [selectedPeopleTabItem, setSelectedPeopleTabItem] =
     React.useState<number>(1);
+
+  const gradientColors = [
+    {offset: 0, color: '#E4DE74'},
+    {offset: 1, color: '#96B660'},
+  ];
 
   const pickerOptions = [
     {label: 'Option 1', value: 1},
@@ -312,6 +358,142 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 Mobile Apps.
               </Text>
             </Section.Description>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Linear Gradient View */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Linear Gradient View</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show Linear Gradient View</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <LinearGradientView
+                  gradientColors={gradientColors}
+                  viewStyle={linearGradientView1Style}>
+                  <IconSVG
+                    file={IconShapeHeart}
+                    size={22}
+                    color={defaultTheme.colors.white}
+                  />
+                </LinearGradientView>
+              </Row>
+              <Row>
+                <LinearGradientView
+                  gradientColors={gradientColors}
+                  horizontal
+                  viewStyle={linearGradientView2Style}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Compact Card List Item */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Compact Card List Item</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show compact card list item</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <CompactCardListItem
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColors,
+                  }}
+                  icon={IconShapeHeart}
+                  title="Accepted Christ"
+                  footerElement={
+                    <CardElementWrapper>
+                      <Text variant={'caption'}>{'5 Active'}</Text>
+                      <WarningViewWrapper>
+                        <WarningTextWrapper
+                          weight={'semiBold'}
+                          variant={'caption'}
+                          inversed>
+                          {'2 Overdue'}
+                        </WarningTextWrapper>
+                      </WarningViewWrapper>
+                    </CardElementWrapper>
+                  }
+                />
+              </Row>
+              <Row>
+                <CompactCardListItem
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColors,
+                  }}
+                  icon={IconShapeHeart}
+                  title="Music Academy"
+                  innerWrapperBg={require('./src/images/event_gradient.png')}
+                  headerElement={
+                    <CardElementWrapper>
+                      {/* Left text */}
+                      <CheckInTextWrapper weight={'bold'} variant={'caption'}>
+                        {'Check-in Window Open'}
+                      </CheckInTextWrapper>
+                      {/* Right text */}
+                      <CheckInTextWrapper weight={'bold'} variant={'subtitle2'}>
+                        {/* UiIcon text */}
+                        <IconSVG
+                          file={IconShapeHeart}
+                          size={14}
+                          color={'#FFEF00'}
+                        />{' '}
+                        {'Check-in'}
+                      </CheckInTextWrapper>
+                    </CardElementWrapper>
+                  }
+                  footerElement={
+                    <Text variant={'caption'} inversed>
+                      {'Tue, Jan 27, 2022 | 6:00 pm'}
+                      {'  '}
+                      <IconSVG
+                        file={IconShapeHeart}
+                        size={14}
+                        color={'white'}
+                      />{' '}
+                      {'Every 2 Weeks'}
+                    </Text>
+                  }
+                />
+              </Row>
+              <Row>
+                <CompactCardListItem
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColors,
+                  }}
+                  icon={IconShapeHeart}
+                  title="Baptisms This Week"
+                  headerElement={
+                    <CardElementWrapper>
+                      {/* Left text */}
+                      <Text weight={'semiBold'} variant={'caption'} muted>
+                        {'Worship Service'}
+                      </Text>
+                      {/* Right text */}
+                      <Text variant={'subtitle2'} muted>
+                        {' 1/25/22'}
+                      </Text>
+                    </CardElementWrapper>
+                  }
+                  footerElement={
+                    <Text variant={'caption'}>
+                      {/* description */}
+                      <Text variant={'subtitle2'} weight={'bold'}>
+                        {'Stephen Riley '}
+                      </Text>
+                      {'and 24 others were Baptized at Lake Forest.'}
+                    </Text>
+                  }
+                />
+              </Row>
+            </Section.Content>
           </Section.Wrapper>
           <Divider />
 
