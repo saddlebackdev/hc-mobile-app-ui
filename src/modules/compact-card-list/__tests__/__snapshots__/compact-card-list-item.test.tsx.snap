@@ -1,0 +1,566 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompactCardListItem Interactions should call onPress method when pressed 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginVertical": 5.5,
+      },
+    ]
+  }
+  testID="compact-card"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="link"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "marginLeft": 20,
+            "shadowColor": "#38424D",
+            "shadowOpacity": 0.2,
+            "shadowRadius": 3,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "shadowColor": "#38424D",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": -2,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 3,
+            },
+            Object {
+              "alignItems": "center",
+              "height": 38,
+              "justifyContent": "center",
+              "marginLeft": -19,
+              "marginTop": 12,
+              "width": 38,
+            },
+          ]
+        }
+        testID="linear-gradient"
+      >
+        <RNSVGSvgView
+          bbHeight="100%"
+          bbWidth="100%"
+          focusable={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": "100%",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGDefs>
+              <RNSVGLinearGradient
+                gradient={
+                  Array [
+                    0,
+                    -1778060,
+                    1,
+                    -6900128,
+                  ]
+                }
+                gradientTransform={null}
+                gradientUnits={0}
+                name="grad"
+                x1="0%"
+                x2="0%"
+                y1="0%"
+                y2="100%"
+              />
+            </RNSVGDefs>
+            <RNSVGRect
+              fill={
+                Array [
+                  1,
+                  "grad",
+                ]
+              }
+              height="100%"
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rx={8}
+              width="100%"
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <SvgMock
+          fill="#FFFFFF"
+          height={16}
+          width={16}
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+              "paddingTop": 10,
+            },
+          ]
+        }
+      >
+        <Text
+          inversed={false}
+          style={
+            Array [
+              Object {
+                "color": "#1C2530",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": "700",
+                "marginTop": 0,
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="title"
+          variant="h4"
+        >
+          TestCard
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginTop": 0,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CompactCardListItem Rendering hides icon when it is null 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginVertical": 5.5,
+      },
+    ]
+  }
+  testID="compact-card"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="link"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "marginLeft": 20,
+            "shadowColor": "#38424D",
+            "shadowOpacity": 0.2,
+            "shadowRadius": 3,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "shadowColor": "#38424D",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": -2,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 3,
+            },
+            Object {
+              "alignItems": "center",
+              "height": 38,
+              "justifyContent": "center",
+              "marginLeft": -19,
+              "marginTop": 12,
+              "width": 38,
+            },
+          ]
+        }
+        testID="linear-gradient"
+      >
+        <RNSVGSvgView
+          bbHeight="100%"
+          bbWidth="100%"
+          focusable={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": "100%",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGDefs>
+              <RNSVGLinearGradient
+                gradient={
+                  Array [
+                    0,
+                    -1778060,
+                    1,
+                    -6900128,
+                  ]
+                }
+                gradientTransform={null}
+                gradientUnits={0}
+                name="grad"
+                x1="0%"
+                x2="0%"
+                y1="0%"
+                y2="100%"
+              />
+            </RNSVGDefs>
+            <RNSVGRect
+              fill={
+                Array [
+                  1,
+                  "grad",
+                ]
+              }
+              height="100%"
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rx={8}
+              width="100%"
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+              "paddingTop": 10,
+            },
+          ]
+        }
+      >
+        <Text
+          inversed={false}
+          style={
+            Array [
+              Object {
+                "color": "#1C2530",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": "700",
+                "marginTop": 0,
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="title"
+          variant="h4"
+        >
+          TestCard
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginTop": 0,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginVertical": 5.5,
+      },
+    ]
+  }
+  testID="compact-card"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="link"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "marginLeft": 20,
+            "shadowColor": "#38424D",
+            "shadowOpacity": 0.2,
+            "shadowRadius": 3,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "shadowColor": "#38424D",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": -2,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 3,
+            },
+            Object {
+              "alignItems": "center",
+              "height": 38,
+              "justifyContent": "center",
+              "marginLeft": -19,
+              "marginTop": 12,
+              "width": 38,
+            },
+          ]
+        }
+        testID="linear-gradient"
+      >
+        <RNSVGSvgView
+          bbHeight="100%"
+          bbWidth="100%"
+          focusable={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": "100%",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGDefs>
+              <RNSVGLinearGradient
+                gradient={
+                  Array [
+                    0,
+                    -1778060,
+                    1,
+                    -6900128,
+                  ]
+                }
+                gradientTransform={null}
+                gradientUnits={0}
+                name="grad"
+                x1="0%"
+                x2="0%"
+                y1="0%"
+                y2="100%"
+              />
+            </RNSVGDefs>
+            <RNSVGRect
+              fill={
+                Array [
+                  1,
+                  "grad",
+                ]
+              }
+              height="100%"
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rx={8}
+              width="100%"
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+        <SvgMock
+          fill="#FFFFFF"
+          height={16}
+          width={16}
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+              "paddingTop": 10,
+            },
+          ]
+        }
+      >
+        <Text
+          inversed={false}
+          style={
+            Array [
+              Object {
+                "color": "#1C2530",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": "700",
+                "marginTop": 0,
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="title"
+          variant="h4"
+        >
+          TestCard
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginTop": 0,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;

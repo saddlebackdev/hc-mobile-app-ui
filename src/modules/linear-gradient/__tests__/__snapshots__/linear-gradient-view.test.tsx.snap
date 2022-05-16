@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinearGradientView Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+      Object {
+        "shadowColor": "#38424D",
+        "shadowOffset": Object {
+          "height": 4,
+          "width": -2,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 3,
+      },
+      undefined,
+    ]
+  }
+  testID="linear-gradient"
+>
+  <RNSVGSvgView
+    bbHeight="100%"
+    bbWidth="100%"
+    focusable={false}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "flex": 0,
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <RNSVGGroup>
+      <RNSVGDefs>
+        <RNSVGLinearGradient
+          gradient={
+            Array [
+              0,
+              -1778060,
+              1,
+              -6900128,
+            ]
+          }
+          gradientTransform={null}
+          gradientUnits={0}
+          name="grad"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        />
+      </RNSVGDefs>
+      <RNSVGRect
+        fill={
+          Array [
+            1,
+            "grad",
+          ]
+        }
+        height="100%"
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rx={8}
+        width="100%"
+        x={0}
+        y={0}
+      />
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1C2530",
+          "fontFamily": "System",
+          "fontSize": 18,
+          "fontStyle": "normal",
+          "fontWeight": "400",
+          "textAlign": "left",
+        },
+      ]
+    }
+    testID="text"
+  >
+    Test
+  </Text>
+</View>
+`;

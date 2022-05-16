@@ -19,5 +19,10 @@ export const Icon: React.FC<IProps> = React.memo(
   },
 );
 
+// Defaults
+Icon.defaultProps = {
+  testID: 'icon',
+};
+
 // Exports
 export default Icon;
