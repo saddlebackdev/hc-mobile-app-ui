@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.33
+- Add "optionContainerStyle" `<Radio />` prop.
+- Add "leftChild" for each option in "options" `<Radio />` prop.
+
+---
+
 ### v0.0.32
 
 - Add "tile" and "profile" options as "size" Avatar
