@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataBlock Rendering should render null when items are not passed 1`] = `null`;
+
+exports[`DataBlock Rendering should render properly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderBottomColor": "#DBE0E3",
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingVertical": 11,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-start",
+            "flexBasis": 0,
+            "flexGrow": 0.6,
+            "flexShrink": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="text"
+        variant="caption"
+      >
+        Value One
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flexBasis": 0,
+            "flexGrow": 0.4,
+            "flexShrink": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        muted={true}
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="text"
+        variant="caption"
+      >
+        Label One
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderBottomColor": "#DBE0E3",
+          "borderBottomWidth": 0,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingVertical": 11,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-start",
+            "flexBasis": 0,
+            "flexGrow": 0.6,
+            "flexShrink": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="text"
+        variant="caption"
+      >
+        Value Two
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flexBasis": 0,
+            "flexGrow": 0.4,
+            "flexShrink": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        muted={true}
+        style={
+          Array [
+            Object {
+              "color": "#97A4AB",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="text"
+        variant="caption"
+      >
+        Label Two
+      </Text>
+    </View>
+  </View>
+</View>
+`;
