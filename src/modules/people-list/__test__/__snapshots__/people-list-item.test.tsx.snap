@@ -186,13 +186,13 @@ exports[`UserItem Interactions should call the onPress method when card is press
                       "fontFamily": "System",
                       "fontSize": 12,
                       "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "opacity": 0.75,
+                      "fontWeight": "600",
                       "textAlign": "left",
                     },
                   ]
                 }
                 testID="text"
+                weight="semiBold"
               >
                 SJ
               </Text>
@@ -514,13 +514,13 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
                       "fontFamily": "System",
                       "fontSize": 12,
                       "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "opacity": 0.75,
+                      "fontWeight": "600",
                       "textAlign": "left",
                     },
                   ]
                 }
                 testID="text"
+                weight="semiBold"
               >
                 SJ
               </Text>
