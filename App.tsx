@@ -1262,7 +1262,6 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   leftButtons={null}
                   redMarker={true}
                   rightElement={
-                    // eslint-disable-next-line react-native/no-inline-styles
                     <Text
                       // eslint-disable-next-line react-native/no-inline-styles
                       style={{

@@ -108,7 +108,9 @@ exports[`UserItem Interactions should call the onPress method when card is press
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignSelf": "center",
           "opacity": 1,
+          "width": "100%",
         }
       }
       testID="link-wrapper"
@@ -127,63 +129,74 @@ exports[`UserItem Interactions should call the onPress method when card is press
         testID="main-wrapper"
       >
         <View
-          accessible={true}
-          collapsable={false}
-          focusable={false}
-          nativeID="animatedComponent"
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "height": 40,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "width": 40,
-            }
+            Array [
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+              },
+            ]
           }
-          testID="avatar-button"
         >
           <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F5",
-                  "borderColor": "#DBE0E3",
-                  "borderRadius": 10,
-                  "borderWidth": 1,
-                  "height": "100%",
-                  "justifyContent": "center",
-                  "width": "100%",
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "height": 40,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
+                "width": 40,
+              }
             }
+            testID="avatar-button"
           >
-            <Text
+            <View
               style={
                 Array [
                   Object {
-                    "color": "#1C2530",
-                    "fontFamily": "System",
-                    "fontSize": 12,
-                    "fontStyle": "normal",
-                    "fontWeight": "400",
-                    "opacity": 0.75,
-                    "textAlign": "left",
+                    "alignItems": "center",
+                    "backgroundColor": "#EDF1F5",
+                    "borderColor": "#DBE0E3",
+                    "borderRadius": 10,
+                    "borderWidth": 1,
+                    "height": "100%",
+                    "justifyContent": "center",
+                    "width": "100%",
                   },
                 ]
               }
-              testID="text"
             >
-              SJ
-            </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1C2530",
+                      "fontFamily": "System",
+                      "fontSize": 12,
+                      "fontStyle": "normal",
+                      "fontWeight": "400",
+                      "opacity": 0.75,
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="text"
+              >
+                SJ
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -206,24 +219,36 @@ exports[`UserItem Interactions should call the onPress method when card is press
               ]
             }
           >
-            <Text
+            <View
               style={
                 Array [
                   Object {
-                    "color": "#1C2530",
-                    "fontFamily": "System",
-                    "fontSize": 18,
-                    "fontWeight": "700",
-                    "textAlign": "left",
-                    "width": "80%",
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "width": "82%",
                   },
                 ]
               }
-              testID="heading"
-              variant="h3"
             >
-              Stephen John
-            </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1C2530",
+                      "fontFamily": "System",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "maxWidth": "86%",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="heading"
+                variant="h3"
+              >
+                Stephen John
+              </Text>
+            </View>
             <Text
               style={
                 Array [
@@ -252,25 +277,49 @@ exports[`UserItem Interactions should call the onPress method when card is press
               ]
             }
           >
-            <Text
+            <View
               style={
                 Array [
                   Object {
-                    "color": "#97A4AB",
-                    "fontFamily": "System",
-                    "fontSize": 14,
-                    "fontStyle": "normal",
-                    "fontWeight": "400",
-                    "marginBottom": 5,
-                    "marginTop": 5,
-                    "textAlign": "left",
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "width": "100%",
                   },
                 ]
               }
-              testID="text"
             >
-              Male | Married | Corona
-            </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#97A4AB",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": "normal",
+                      "fontWeight": "400",
+                      "marginBottom": 5,
+                      "marginTop": 5,
+                      "minWidth": "80%",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="text"
+              >
+                Male | Married | Corona
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "marginLeft": 8,
+                    },
+                  ]
+                }
+              />
+            </View>
           </View>
         </View>
       </View>
@@ -387,7 +436,9 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignSelf": "center",
           "opacity": 1,
+          "width": "100%",
         }
       }
       testID="link-wrapper"
@@ -406,63 +457,74 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
         testID="main-wrapper"
       >
         <View
-          accessible={true}
-          collapsable={false}
-          focusable={false}
-          nativeID="animatedComponent"
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "height": 40,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "width": 40,
-            }
+            Array [
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+              },
+            ]
           }
-          testID="avatar-button"
         >
           <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#EDF1F5",
-                  "borderColor": "#DBE0E3",
-                  "borderRadius": 10,
-                  "borderWidth": 1,
-                  "height": "100%",
-                  "justifyContent": "center",
-                  "width": "100%",
-                },
-              ]
+              Object {
+                "alignItems": "center",
+                "height": 40,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
+                "width": 40,
+              }
             }
+            testID="avatar-button"
           >
-            <Text
+            <View
               style={
                 Array [
                   Object {
-                    "color": "#1C2530",
-                    "fontFamily": "System",
-                    "fontSize": 12,
-                    "fontStyle": "normal",
-                    "fontWeight": "400",
-                    "opacity": 0.75,
-                    "textAlign": "left",
+                    "alignItems": "center",
+                    "backgroundColor": "#EDF1F5",
+                    "borderColor": "#DBE0E3",
+                    "borderRadius": 10,
+                    "borderWidth": 1,
+                    "height": "100%",
+                    "justifyContent": "center",
+                    "width": "100%",
                   },
                 ]
               }
-              testID="text"
             >
-              SJ
-            </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1C2530",
+                      "fontFamily": "System",
+                      "fontSize": 12,
+                      "fontStyle": "normal",
+                      "fontWeight": "400",
+                      "opacity": 0.75,
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="text"
+              >
+                SJ
+              </Text>
+            </View>
           </View>
         </View>
         <View
@@ -485,24 +547,36 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               ]
             }
           >
-            <Text
+            <View
               style={
                 Array [
                   Object {
-                    "color": "#1C2530",
-                    "fontFamily": "System",
-                    "fontSize": 18,
-                    "fontWeight": "700",
-                    "textAlign": "left",
-                    "width": "80%",
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "width": "82%",
                   },
                 ]
               }
-              testID="heading"
-              variant="h3"
             >
-              Stephen John
-            </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1C2530",
+                      "fontFamily": "System",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "maxWidth": "86%",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="heading"
+                variant="h3"
+              >
+                Stephen John
+              </Text>
+            </View>
             <Text
               style={
                 Array [
@@ -531,25 +605,49 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               ]
             }
           >
-            <Text
+            <View
               style={
                 Array [
                   Object {
-                    "color": "#97A4AB",
-                    "fontFamily": "System",
-                    "fontSize": 14,
-                    "fontStyle": "normal",
-                    "fontWeight": "400",
-                    "marginBottom": 5,
-                    "marginTop": 5,
-                    "textAlign": "left",
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "width": "100%",
                   },
                 ]
               }
-              testID="text"
             >
-              Male | Married | Corona
-            </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#97A4AB",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": "normal",
+                      "fontWeight": "400",
+                      "marginBottom": 5,
+                      "marginTop": 5,
+                      "minWidth": "80%",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="text"
+              >
+                Male | Married | Corona
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "marginLeft": 8,
+                    },
+                  ]
+                }
+              />
+            </View>
           </View>
         </View>
       </View>
@@ -666,7 +764,9 @@ exports[`UserItem Rendering should render properly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignSelf": "center",
           "opacity": 1,
+          "width": "100%",
         }
       }
       testID="link-wrapper"
@@ -685,48 +785,59 @@ exports[`UserItem Rendering should render properly 1`] = `
         testID="main-wrapper"
       >
         <View
-          accessible={true}
-          collapsable={false}
-          focusable={false}
-          nativeID="animatedComponent"
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
-            Object {
-              "alignItems": "center",
-              "height": 40,
-              "justifyContent": "center",
-              "opacity": 1,
-              "overflow": "hidden",
-              "width": 40,
-            }
-          }
-          testID="avatar-button"
-        >
-          <Image
-            source={
+            Array [
               Object {
-                "uri": "https://www.google.com",
+                "flexDirection": "row",
+                "justifyContent": "center",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            nativeID="animatedComponent"
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 40,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
+                "width": 40,
               }
             }
-            style={
-              Array [
+            testID="avatar-button"
+          >
+            <Image
+              source={
                 Object {
-                  "borderColor": "#FFFFFF",
-                  "borderRadius": 10,
-                  "borderWidth": 1,
-                  "height": "100%",
-                  "width": "100%",
-                },
-              ]
-            }
-            testID="avatar-image"
-          />
+                  "uri": "https://www.google.com",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderColor": "#FFFFFF",
+                    "borderRadius": 10,
+                    "borderWidth": 1,
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                ]
+              }
+              testID="avatar-image"
+            />
+          </View>
         </View>
         <View
           style={
@@ -748,24 +859,36 @@ exports[`UserItem Rendering should render properly 1`] = `
               ]
             }
           >
-            <Text
+            <View
               style={
                 Array [
                   Object {
-                    "color": "#1C2530",
-                    "fontFamily": "System",
-                    "fontSize": 18,
-                    "fontWeight": "700",
-                    "textAlign": "left",
-                    "width": "80%",
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "width": "82%",
                   },
                 ]
               }
-              testID="heading"
-              variant="h3"
             >
-              Stephen John
-            </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1C2530",
+                      "fontFamily": "System",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "maxWidth": "86%",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="heading"
+                variant="h3"
+              >
+                Stephen John
+              </Text>
+            </View>
             <Text
               style={
                 Array [
@@ -794,25 +917,49 @@ exports[`UserItem Rendering should render properly 1`] = `
               ]
             }
           >
-            <Text
+            <View
               style={
                 Array [
                   Object {
-                    "color": "#97A4AB",
-                    "fontFamily": "System",
-                    "fontSize": 14,
-                    "fontStyle": "normal",
-                    "fontWeight": "400",
-                    "marginBottom": 5,
-                    "marginTop": 5,
-                    "textAlign": "left",
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                    "width": "100%",
                   },
                 ]
               }
-              testID="text"
             >
-              Male | Married | Corona
-            </Text>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#97A4AB",
+                      "fontFamily": "System",
+                      "fontSize": 14,
+                      "fontStyle": "normal",
+                      "fontWeight": "400",
+                      "marginBottom": 5,
+                      "marginTop": 5,
+                      "minWidth": "80%",
+                      "textAlign": "left",
+                    },
+                  ]
+                }
+                testID="text"
+              >
+                Male | Married | Corona
+              </Text>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "marginLeft": 8,
+                    },
+                  ]
+                }
+              />
+            </View>
           </View>
         </View>
       </View>
