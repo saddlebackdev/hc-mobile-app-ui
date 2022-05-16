@@ -4,6 +4,7 @@
 
 - Add LinearGradient component
 - Add CompactCardListItem component
+- Add PeopleListItem component
 
 ---
 
