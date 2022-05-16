@@ -161,13 +161,13 @@ exports[`Avatar Rendering renders with the passed initials 1`] = `
             "fontFamily": "System",
             "fontSize": 12,
             "fontStyle": "normal",
-            "fontWeight": "400",
-            "opacity": 0.75,
+            "fontWeight": "600",
             "textAlign": "left",
           },
         ]
       }
       testID="text"
+      weight="semiBold"
     >
       AG
     </Text>
@@ -238,11 +238,11 @@ exports[`Avatar Rendering renders with the passed size 2`] = `
   style={
     Object {
       "alignItems": "center",
-      "height": 36,
+      "height": 48,
       "justifyContent": "center",
       "opacity": 1,
       "overflow": "hidden",
-      "width": 36,
+      "width": 48,
     }
   }
   testID="avatar-button"
@@ -257,7 +257,7 @@ exports[`Avatar Rendering renders with the passed size 2`] = `
       Array [
         Object {
           "borderColor": "#FFFFFF",
-          "borderRadius": 36,
+          "borderRadius": 48,
           "borderWidth": 1,
           "height": "100%",
           "width": "100%",

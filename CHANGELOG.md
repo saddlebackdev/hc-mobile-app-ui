@@ -3,6 +3,10 @@
 ### v0.0.33
 - Add "optionContainerStyle" `<Radio />` prop.
 - Add "leftChild" for each option in "options" `<Radio />` prop.
+- Add PeopleTab component
+- Add DataBlock component
+- Update font size and weight for Avatar
+- Fix sizing for "tile" Avatar
 
 ---
 
