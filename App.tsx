@@ -107,6 +107,8 @@ const onPressMock = () => false;
 export const App: React.FC<IProps> = (): React.ReactElement => {
   const [isChecked, setIsChecked] = React.useState<boolean>(true);
   const [selectedRadio, setSelectedRadio] = React.useState<number>(2);
+  const [selectedRadioWithOptions, setSelectedRadioWithOptions] =
+    React.useState<number>(2);
   const [selectedDate, setSelectedDate] = React.useState<any>(new Date());
   const [activePill, setActivePill] = React.useState<number>(2);
   const [pickerValue, setPickerValue] = React.useState<number>(1);
@@ -179,6 +181,44 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     {label: 'Option 3 - Disabled', value: 3, disabled: true},
     {label: 'Option 4', value: 4},
   ];
+
+  const optionStyle = {
+    borderWidth: 1,
+    borderColor: 'red',
+    marginRight: 10,
+    width: 50,
+  };
+
+  const radioOptionsWithLeftChildren = [
+    {
+      label: 'Option 1',
+      value: 1,
+      leftChild: <Text style={optionStyle}>ABC</Text>,
+    },
+    {
+      label: 'Option 2 - Disabled',
+      value: 2,
+      disabled: true,
+      leftChild: <Text style={optionStyle}>DEF</Text>,
+    },
+    {
+      label: 'Option 3 - Disabled',
+      value: 3,
+      disabled: true,
+      leftChild: <Text style={optionStyle}>HIJ</Text>,
+    },
+    {
+      label: 'Option 4',
+      value: 4,
+      leftChild: <Text style={optionStyle}>KLM</Text>,
+    },
+  ];
+
+  const optionContainerStyle = {
+    marginBottom: 5,
+    borderColor: 'gray',
+    borderBottomWidth: 1,
+  };
 
   const horizontalOptions = [
     {label: 'Option 1', value: 1},
@@ -1372,6 +1412,23 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 />
               </Row>
             </Section.Content>
+
+            <Section.Description>
+              <Text variant="caption">Radio Optional params</Text>
+            </Section.Description>
+
+            <Section.Content>
+              <Row>
+                <Radio
+                  direction="vertical"
+                  selected={selectedRadioWithOptions}
+                  onChange={setSelectedRadioWithOptions}
+                  options={radioOptionsWithLeftChildren}
+                  optionContainerStyle={optionContainerStyle}
+                />
+              </Row>
+            </Section.Content>
+
             <Section.Description>
               <Text variant="caption">Horizontal Variant</Text>
             </Section.Description>

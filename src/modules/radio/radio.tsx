@@ -48,6 +48,10 @@ const StyledGroup = Styled.TouchableOpacity<IStyledGroup>`
     return majorScale(2, 'px');
   }};
 `;
+
+// TO DO: should we add styling for this View?
+const StyledLeft = Styled.View``;
+
 const StyledRadioOuter = Styled.View`
   width: 22px; height: 22px;
   background-color: ${({theme}) => theme.colors.white};
@@ -83,6 +87,7 @@ export const Radio: React.FC<IProps> = React.memo(
     disabled: isRadioDisabled,
     direction,
     options,
+    optionContainerStyle,
   }): React.ReactElement => (
     <StyledWrapper $direction={direction} testID="radio">
       {options.map((option, ndx) => {
@@ -98,6 +103,8 @@ export const Radio: React.FC<IProps> = React.memo(
 
         const isFirstElement = ndx === 0;
         const isLastElement = options.length - 1 === ndx;
+        const shouldRenderLeftChild =
+          !!option.leftChild && direction === 'vertical';
 
         return (
           <StyledGroup
@@ -109,7 +116,12 @@ export const Radio: React.FC<IProps> = React.memo(
             $direction={direction}
             $isFirstChild={isFirstElement}
             $isLastChild={isLastElement}
+            style={optionContainerStyle}
             disabled={isRadioDisabled || option.disabled}>
+            {shouldRenderLeftChild && (
+              <StyledLeft>{option.leftChild}</StyledLeft>
+            )}
+
             <StyledRadioOuter>
               {isSelected && (
                 <StyledRadioInner
