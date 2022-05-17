@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.35
+
+- Add done button in the DatePicker component for ios
+
+---
+
 ### v0.0.34
 - Add LinearGradient component
 - Add CompactCardListItem component
