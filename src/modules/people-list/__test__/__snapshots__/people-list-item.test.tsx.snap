@@ -122,6 +122,8 @@ exports[`UserItem Interactions should call the onPress method when card is press
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
               "paddingBottom": 20,
+              "paddingLeft": 20,
+              "paddingRight": 10,
               "paddingTop": 20,
             },
           ]
@@ -300,7 +302,7 @@ exports[`UserItem Interactions should call the onPress method when card is press
                       "fontWeight": "400",
                       "marginBottom": 5,
                       "marginTop": 5,
-                      "minWidth": "80%",
+                      "minWidth": "84%",
                       "textAlign": "left",
                     },
                   ]
@@ -450,6 +452,8 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
               "paddingBottom": 20,
+              "paddingLeft": 20,
+              "paddingRight": 10,
               "paddingTop": 20,
             },
           ]
@@ -628,7 +632,7 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
                       "fontWeight": "400",
                       "marginBottom": 5,
                       "marginTop": 5,
-                      "minWidth": "80%",
+                      "minWidth": "84%",
                       "textAlign": "left",
                     },
                   ]
@@ -778,6 +782,8 @@ exports[`UserItem Rendering should render properly 1`] = `
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
               "paddingBottom": 20,
+              "paddingLeft": 20,
+              "paddingRight": 10,
               "paddingTop": 20,
             },
           ]
@@ -940,7 +946,7 @@ exports[`UserItem Rendering should render properly 1`] = `
                       "fontWeight": "400",
                       "marginBottom": 5,
                       "marginTop": 5,
-                      "minWidth": "80%",
+                      "minWidth": "84%",
                       "textAlign": "left",
                     },
                   ]
