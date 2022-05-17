@@ -62,7 +62,7 @@ const StyledUserDescriptionWrapper = Styled(Text)`
   color: ${({theme}) => theme.colors.grayFour};
   margin-top: ${minorScale(1)}px;
   margin-bottom: ${minorScale(1)}px;
-  min-width: 84%;
+  width: 74%;
 `;
 
 const StyledLinkWrapper = Styled.TouchableOpacity`
@@ -94,7 +94,7 @@ const StyledMiddleWrapper = Styled.View`
 
 const StyledRightWrapper = Styled.View`
   align-items: flex-end;
-  margin-left: 8px;
+  margin-left: 29px;
 `;
 
 export const PeopleListItem: React.FC<IProps> = ({
