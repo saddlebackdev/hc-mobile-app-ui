@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.0.35
+- Fixed importing React issue which causes crash while implementing PeopleListItem and AnimatedHeader
+- Fixed CompactCardListItem's shadow issue on IOS side
+- Fixed PeopleListItem component UI
+
+---
+
 ### v0.0.34
 - Add LinearGradient component
 - Add CompactCardListItem component
