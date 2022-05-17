@@ -22,6 +22,11 @@ import {DeviceUtils} from '../utilities';
 
 // Styles
 const StyledTouchable = Styled.TouchableOpacity<IStyledTouchable>``;
+const StyledTouchable1 = Styled.TouchableOpacity<IStyledTouchable>`
+  alignSelf: flex-end;
+  paddingRight: 20px;
+  paddingTop: 5px;
+  `;
 const StyledWrapper = Styled.View<IStyledWrapper>`
   display: flex;
   flex-direction: row;
@@ -71,6 +76,7 @@ const DatePicker: React.FC<IProps> = React.memo(
   }): React.ReactElement => {
     // State
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
+    const [date, setDate] = React.useState(selectedDate || new Date());
 
     // Get Formatted Date
     const getFormattedDate = (date: Date): string => {
@@ -91,17 +97,29 @@ const DatePicker: React.FC<IProps> = React.memo(
       // See: https://github.com/react-native-datetimepicker/datetimepicker#basic-usage-with-state
       setIsOpen(DeviceUtils.isIos());
 
-      onDateChange(date || selectedDate);
+      if (DeviceUtils.isIos()) {
+        setDate(date);
+      } else {
+        onDateChange(date || selectedDate);
+      }
     };
 
     // Open Picker
     const openPicker = () => {
+      setDate(selectedDate);
       setIsOpen(true);
     };
 
     // Hide Picker
     const hidePicker = () => {
       setIsOpen(false);
+    };
+
+    // iOS only method
+    const onPressDone = () => {
+      onDateChange(date || selectedDate);
+      hidePicker();
+      setDate(selectedDate);
     };
 
     const isAndroid: boolean = DeviceUtils.isAndroid();
@@ -130,7 +148,7 @@ const DatePicker: React.FC<IProps> = React.memo(
           <DateTimePicker
             {...rest}
             display="spinner"
-            value={selectedDate}
+            value={date}
             onChange={onChange}
           />
         ) : null}
@@ -143,10 +161,13 @@ const DatePicker: React.FC<IProps> = React.memo(
           transparent>
           <StyledOverlay activeOpacity={1} onPress={hidePicker} />
           <StyledPickerWrapper>
+            <StyledTouchable1 onPress={onPressDone}>
+              <Text>Done</Text>
+            </StyledTouchable1>
             <DateTimePicker
               {...rest}
               display="spinner"
-              value={selectedDate}
+              value={date}
               onChange={onChange}
             />
           </StyledPickerWrapper>
