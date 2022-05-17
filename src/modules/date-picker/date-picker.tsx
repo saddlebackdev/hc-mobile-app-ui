@@ -22,6 +22,11 @@ import {DeviceUtils} from '../utilities';
 
 // Styles
 const StyledTouchable = Styled.TouchableOpacity<IStyledTouchable>``;
+const StyledTouchable1 = Styled.TouchableOpacity<IStyledTouchable>`
+  alignSelf: flex-end;
+  paddingRight: 20px;
+  paddingTop: 5px;
+  `;
 const StyledWrapper = Styled.View<IStyledWrapper>`
   display: flex;
   flex-direction: row;
@@ -67,31 +72,40 @@ const DatePicker: React.FC<IProps> = React.memo(
     customDateFormatter,
     selectedDate,
     onDateChange,
+    withDoneConfirmButtonIos = false,
     ...rest
   }): React.ReactElement => {
     // State
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
+    const [date, setDate] = React.useState(selectedDate || new Date());
 
     // Get Formatted Date
-    const getFormattedDate = (date: Date): string => {
+    const getFormattedDate = (dateInput: Date): string => {
       if (customDateFormatter) {
-        return customDateFormatter(date);
+        return customDateFormatter(dateInput);
       }
 
-      const day = date.getDate();
-      const month = date.getMonth() + 1;
-      const year = date.getFullYear();
+      const day = dateInput.getDate();
+      const month = dateInput.getMonth() + 1;
+      const year = dateInput.getFullYear();
 
       return [month, day, year].join('/');
     };
 
-    // On Change Date
-    const onChange = (_event: any, date: any): void => {
+    // On Change handler for iOS
+    const onChangeIos = (_event, dateIos) => {
+      setDate(dateIos);
+      if (!withDoneConfirmButtonIos) {
+        onDateChange(dateIos || selectedDate);
+      }
+    };
+
+    // On Change handler for Android
+    const onChangeAndroid = (_event, dateAndroid) => {
       // Weird Android Implementation
       // See: https://github.com/react-native-datetimepicker/datetimepicker#basic-usage-with-state
-      setIsOpen(DeviceUtils.isIos());
-
-      onDateChange(date || selectedDate);
+      setIsOpen(false);
+      onDateChange(dateAndroid || selectedDate);
     };
 
     // Open Picker
@@ -104,8 +118,20 @@ const DatePicker: React.FC<IProps> = React.memo(
       setIsOpen(false);
     };
 
+    // iOS only method
+    const onPressDone = () => {
+      onDateChange(date || selectedDate);
+      hidePicker();
+    };
+
     const isAndroid: boolean = DeviceUtils.isAndroid();
     const isIos: boolean = DeviceUtils.isIos();
+
+    React.useEffect(() => {
+      if (isIos) {
+        setDate(selectedDate);
+      }
+    }, [isOpen]);
 
     return (
       <React.Fragment>
@@ -131,7 +157,7 @@ const DatePicker: React.FC<IProps> = React.memo(
             {...rest}
             display="spinner"
             value={selectedDate}
-            onChange={onChange}
+            onChange={onChangeAndroid}
           />
         ) : null}
 
@@ -143,11 +169,16 @@ const DatePicker: React.FC<IProps> = React.memo(
           transparent>
           <StyledOverlay activeOpacity={1} onPress={hidePicker} />
           <StyledPickerWrapper>
+            {withDoneConfirmButtonIos && (
+              <StyledTouchable1 onPress={onPressDone}>
+                <Text>Done</Text>
+              </StyledTouchable1>
+            )}
             <DateTimePicker
               {...rest}
               display="spinner"
-              value={selectedDate}
-              onChange={onChange}
+              value={date}
+              onChange={onChangeIos}
             />
           </StyledPickerWrapper>
         </StyledModal>

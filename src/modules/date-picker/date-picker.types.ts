@@ -41,4 +41,7 @@ export interface IProps extends Partial<DatePickerOptions> {
 
   /** Enables the underlined variant for the date picker */
   isUnderlined?: boolean;
+
+  /** Enables the underlined variant for the date picker */
+  withDoneConfirmButtonIos?: boolean;
 }
