@@ -124,12 +124,14 @@ const DatePicker: React.FC<IProps> = React.memo(
       hidePicker();
     };
 
-    React.useEffect(() => {
-      setDate(selectedDate);
-    }, [isOpen]);
-
     const isAndroid: boolean = DeviceUtils.isAndroid();
     const isIos: boolean = DeviceUtils.isIos();
+
+    React.useEffect(() => {
+      if (isIos) {
+        setDate(selectedDate);
+      }
+    }, [isOpen]);
 
     return (
       <React.Fragment>
@@ -154,7 +156,7 @@ const DatePicker: React.FC<IProps> = React.memo(
           <DateTimePicker
             {...rest}
             display="spinner"
-            value={date}
+            value={selectedDate}
             onChange={onChangeAndroid}
           />
         ) : null}
