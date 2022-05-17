@@ -80,32 +80,32 @@ const DatePicker: React.FC<IProps> = React.memo(
     const [date, setDate] = React.useState(selectedDate || new Date());
 
     // Get Formatted Date
-    const getFormattedDate = (date: Date): string => {
+    const getFormattedDate = (dateInput: Date): string => {
       if (customDateFormatter) {
-        return customDateFormatter(date);
+        return customDateFormatter(dateInput);
       }
 
-      const day = date.getDate();
-      const month = date.getMonth() + 1;
-      const year = date.getFullYear();
+      const day = dateInput.getDate();
+      const month = dateInput.getMonth() + 1;
+      const year = dateInput.getFullYear();
 
       return [month, day, year].join('/');
     };
 
     // On Change handler for iOS
-    const onChangeIos = (_event, date) => {
-      setDate(date);
+    const onChangeIos = (_event, dateIos) => {
+      setDate(dateIos);
       if (!withDoneConfirmButtonIos) {
-        onDateChange(date || selectedDate);
+        onDateChange(dateIos || selectedDate);
       }
     };
 
     // On Change handler for Android
-    const onChangeAndroid = (_event, date) => {
+    const onChangeAndroid = (_event, dateAndroid) => {
       // Weird Android Implementation
       // See: https://github.com/react-native-datetimepicker/datetimepicker#basic-usage-with-state
       setIsOpen(false);
-      onDateChange(date || selectedDate);
+      onDateChange(dateAndroid || selectedDate);
     };
 
     // Open Picker
