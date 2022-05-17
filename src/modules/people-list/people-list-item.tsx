@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Swipeable from 'react-native-swipeable';
 import {IProps} from './people-list-item.types';
 import Styled from 'styled-components/native';

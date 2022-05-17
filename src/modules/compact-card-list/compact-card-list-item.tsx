@@ -67,11 +67,11 @@ const StyledInnerWrapper = Styled.View<InnerWrapperProp>(
     margin-left: ${minorScale(4)}px;
     background-color: ${innerWrapperBg ? 'transparent' : theme.colors.white}};
     `,
-    {
-      ...viewShadow(!!innerWrapperBg),
-    },
   ],
 );
+
+const innerContainerStyle = innerWrapperBg =>
+  StyleSheet.flatten([viewShadow(!!innerWrapperBg)]);
 
 const StyledChildWrapper = Styled.View`
   flex: 1;
@@ -115,7 +115,9 @@ export const CompactCardListItem: React.FC<IProps> = ({
         />
       )}
       {/* Inner Wrapper */}
-      <StyledInnerWrapper innerWrapperBg={innerWrapperBg}>
+      <StyledInnerWrapper
+        innerWrapperBg={innerWrapperBg}
+        style={innerContainerStyle(innerWrapperBg)}>
         {/* icon Box*/}
         <StyledLinearGradientWrapper
           gradientColors={leftGradientViewStyle.gradientColors}
