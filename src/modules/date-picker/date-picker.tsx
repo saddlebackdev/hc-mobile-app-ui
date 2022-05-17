@@ -106,7 +106,6 @@ const DatePicker: React.FC<IProps> = React.memo(
 
     // Open Picker
     const openPicker = () => {
-      setDate(selectedDate);
       setIsOpen(true);
     };
 
@@ -119,8 +118,11 @@ const DatePicker: React.FC<IProps> = React.memo(
     const onPressDone = () => {
       onDateChange(date || selectedDate);
       hidePicker();
-      setDate(selectedDate);
     };
+
+    React.useEffect(() => {
+      setDate(selectedDate);
+    }, [isOpen]);
 
     const isAndroid: boolean = DeviceUtils.isAndroid();
     const isIos: boolean = DeviceUtils.isIos();
