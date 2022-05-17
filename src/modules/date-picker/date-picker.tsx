@@ -72,6 +72,7 @@ const DatePicker: React.FC<IProps> = React.memo(
     customDateFormatter,
     selectedDate,
     onDateChange,
+    withDoneConfirmButtonIos = false,
     ...rest
   }): React.ReactElement => {
     // State
@@ -91,17 +92,20 @@ const DatePicker: React.FC<IProps> = React.memo(
       return [month, day, year].join('/');
     };
 
-    // On Change Date
-    const onChange = (_event: any, date: any): void => {
-      // Weird Android Implementation
-      // See: https://github.com/react-native-datetimepicker/datetimepicker#basic-usage-with-state
-      setIsOpen(DeviceUtils.isIos());
-
-      if (DeviceUtils.isIos()) {
-        setDate(date);
-      } else {
+    // On Change handler for iOS
+    const onChangeIos = (_event, date) => {
+      setDate(date);
+      if (!withDoneConfirmButtonIos) {
         onDateChange(date || selectedDate);
       }
+    };
+
+    // On Change handler for Android
+    const onChangeAndroid = (_event, date) => {
+      // Weird Android Implementation
+      // See: https://github.com/react-native-datetimepicker/datetimepicker#basic-usage-with-state
+      setIsOpen(false);
+      onDateChange(date || selectedDate);
     };
 
     // Open Picker
@@ -151,7 +155,7 @@ const DatePicker: React.FC<IProps> = React.memo(
             {...rest}
             display="spinner"
             value={date}
-            onChange={onChange}
+            onChange={onChangeAndroid}
           />
         ) : null}
 
@@ -163,14 +167,16 @@ const DatePicker: React.FC<IProps> = React.memo(
           transparent>
           <StyledOverlay activeOpacity={1} onPress={hidePicker} />
           <StyledPickerWrapper>
-            <StyledTouchable1 onPress={onPressDone}>
-              <Text>Done</Text>
-            </StyledTouchable1>
+            {withDoneConfirmButtonIos && (
+              <StyledTouchable1 onPress={onPressDone}>
+                <Text>Done</Text>
+              </StyledTouchable1>
+            )}
             <DateTimePicker
               {...rest}
               display="spinner"
               value={date}
-              onChange={onChange}
+              onChange={onChangeIos}
             />
           </StyledPickerWrapper>
         </StyledModal>
