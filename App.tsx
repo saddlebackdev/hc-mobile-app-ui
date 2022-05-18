@@ -434,6 +434,8 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   onChange={item => {
                     setSelectedTab(item.value);
                   }}
+                  linkLabel={'View All'}
+                  onLinkPress={onPressMock}
                 />
               </Row>
             </Section.Content>

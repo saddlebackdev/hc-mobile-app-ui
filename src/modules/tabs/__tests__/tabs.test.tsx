@@ -8,10 +8,11 @@ import ThemeProvider from '../../theming/theme-provider';
 import defaultTheme from '../../theming/default-theme';
 
 describe('Tabs', () => {
-  let tabItems: any, onChangeMock: any;
+  let tabItems: any, onChangeMock: any, onLinkPress: any;
 
   beforeEach(() => {
     onChangeMock = jest.fn();
+    onLinkPress = jest.fn();
 
     // Tab Items
     tabItems = [
@@ -76,6 +77,26 @@ describe('Tabs', () => {
       fireEvent.press(tab2);
 
       expect(onChangeMock).toHaveBeenCalledTimes(1);
+    });
+
+    it('should call the onLinkPress method when link is pressed', () => {
+      const wrapper = render(
+        <ThemeProvider theme={defaultTheme}>
+          <Tabs
+            items={tabItems}
+            selected={tabItems[0].value}
+            onChange={onChangeMock}
+            linkLabel={'View All'}
+            onLinkPress={onLinkPress}
+          />
+        </ThemeProvider>,
+      );
+
+      const link = wrapper.getByTestId('link');
+
+      fireEvent.press(link);
+
+      expect(onLinkPress).toHaveBeenCalledTimes(1);
     });
   });
 });

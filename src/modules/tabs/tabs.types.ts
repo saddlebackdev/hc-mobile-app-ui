@@ -21,4 +21,6 @@ export interface IProps {
   onChange: Function;
   selected: string | number | null;
   items: Array<ITab>;
+  linkLabel?: string;
+  onLinkPress?: Function;
 }

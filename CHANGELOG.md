@@ -1,10 +1,14 @@
 # Changelog
 
-### v0.0.35
-- Fixed importing React issue which causes crash while implementing PeopleListItem and AnimatedHeader
-- Fixed CompactCardListItem's shadow issue on IOS side
-- Fixed PeopleListItem component UI
+### v0.0.36
+- Fix importing React issue which causes crash while implementing PeopleListItem and AnimatedHeader
+- Fix CompactCardListItem's shadow issue on IOS side
+- Fix PeopleListItem component UI
+- Add link label in Tab component
 
+---
+
+### v0.0.35
 - Add done button in the DatePicker component for ios
 
 ---
