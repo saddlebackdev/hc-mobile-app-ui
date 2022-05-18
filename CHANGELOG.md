@@ -5,6 +5,8 @@
 - Fixed CompactCardListItem's shadow issue on IOS side
 - Fixed PeopleListItem component UI
 
+- Add done button in the DatePicker component for ios
+
 ---
 
 ### v0.0.34
