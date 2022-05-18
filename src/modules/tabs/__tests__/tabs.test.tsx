@@ -6,9 +6,10 @@ import {fireEvent, render} from '@testing-library/react-native';
 import Tabs from '../tabs';
 import ThemeProvider from '../../theming/theme-provider';
 import defaultTheme from '../../theming/default-theme';
+import {ITab} from '../tabs.types';
 
 describe('Tabs', () => {
-  let tabItems: any, onChangeMock: any, onLinkPress: any;
+  let tabItems: ITab[], onChangeMock: Function, onLinkPress: Function;
 
   beforeEach(() => {
     onChangeMock = jest.fn();
