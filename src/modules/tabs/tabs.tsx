@@ -73,7 +73,7 @@ export const Tabs: React.FC<IProps> = ({
       <StyledLink
         testID="link"
         activeOpacity={0.75}
-        onPress={() => onLinkPress && onLinkPress()}>
+        onPress={() => onLinkPress!()}>
         <StyledLinkLabel variant="h6" testID="link-label">
           {linkLabel}
         </StyledLinkLabel>
