@@ -122,6 +122,8 @@ exports[`UserItem Interactions should call the onPress method when card is press
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
               "paddingBottom": 20,
+              "paddingLeft": 20,
+              "paddingRight": 10,
               "paddingTop": 20,
             },
           ]
@@ -300,8 +302,8 @@ exports[`UserItem Interactions should call the onPress method when card is press
                       "fontWeight": "400",
                       "marginBottom": 5,
                       "marginTop": 5,
-                      "minWidth": "80%",
                       "textAlign": "left",
+                      "width": "74%",
                     },
                   ]
                 }
@@ -314,7 +316,7 @@ exports[`UserItem Interactions should call the onPress method when card is press
                   Array [
                     Object {
                       "alignItems": "flex-end",
-                      "marginLeft": 8,
+                      "marginLeft": 29,
                     },
                   ]
                 }
@@ -450,6 +452,8 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
               "paddingBottom": 20,
+              "paddingLeft": 20,
+              "paddingRight": 10,
               "paddingTop": 20,
             },
           ]
@@ -628,8 +632,8 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
                       "fontWeight": "400",
                       "marginBottom": 5,
                       "marginTop": 5,
-                      "minWidth": "80%",
                       "textAlign": "left",
+                      "width": "74%",
                     },
                   ]
                 }
@@ -642,7 +646,7 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
                   Array [
                     Object {
                       "alignItems": "flex-end",
-                      "marginLeft": 8,
+                      "marginLeft": 29,
                     },
                   ]
                 }
@@ -778,6 +782,8 @@ exports[`UserItem Rendering should render properly 1`] = `
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
               "paddingBottom": 20,
+              "paddingLeft": 20,
+              "paddingRight": 10,
               "paddingTop": 20,
             },
           ]
@@ -940,8 +946,8 @@ exports[`UserItem Rendering should render properly 1`] = `
                       "fontWeight": "400",
                       "marginBottom": 5,
                       "marginTop": 5,
-                      "minWidth": "80%",
                       "textAlign": "left",
+                      "width": "74%",
                     },
                   ]
                 }
@@ -954,7 +960,7 @@ exports[`UserItem Rendering should render properly 1`] = `
                   Array [
                     Object {
                       "alignItems": "flex-end",
-                      "marginLeft": 8,
+                      "marginLeft": 29,
                     },
                   ]
                 }

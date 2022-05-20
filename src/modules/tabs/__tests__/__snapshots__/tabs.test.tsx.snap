@@ -5,7 +5,9 @@ exports[`Tabs Rendering renders itself correctly 1`] = `
   style={
     Array [
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "paddingBottom": 11,
       },
     ]
   }
@@ -80,7 +82,6 @@ exports[`Tabs Rendering renders itself correctly 1`] = `
               "marginLeft": 0,
               "marginRight": 11,
               "opacity": 1,
-              "paddingBottom": 11,
             }
           }
           testID="tab-1"
@@ -133,7 +134,6 @@ exports[`Tabs Rendering renders itself correctly 1`] = `
               "marginLeft": 11,
               "marginRight": 11,
               "opacity": 1,
-              "paddingBottom": 11,
             }
           }
           testID="tab-2"
@@ -186,7 +186,6 @@ exports[`Tabs Rendering renders itself correctly 1`] = `
               "marginLeft": 11,
               "marginRight": 0,
               "opacity": 1,
-              "paddingBottom": 11,
             }
           }
           testID="tab-3"
@@ -220,7 +219,9 @@ exports[`Tabs Rendering renders the selected tab correctly 1`] = `
   style={
     Array [
       Object {
+        "alignItems": "center",
         "flexDirection": "row",
+        "paddingBottom": 11,
       },
     ]
   }
@@ -295,7 +296,6 @@ exports[`Tabs Rendering renders the selected tab correctly 1`] = `
               "marginLeft": 0,
               "marginRight": 11,
               "opacity": 1,
-              "paddingBottom": 11,
             }
           }
           testID="tab-1"
@@ -348,7 +348,6 @@ exports[`Tabs Rendering renders the selected tab correctly 1`] = `
               "marginLeft": 11,
               "marginRight": 11,
               "opacity": 1,
-              "paddingBottom": 11,
             }
           }
           testID="tab-2"
@@ -401,7 +400,6 @@ exports[`Tabs Rendering renders the selected tab correctly 1`] = `
               "marginLeft": 11,
               "marginRight": 0,
               "opacity": 1,
-              "paddingBottom": 11,
             }
           }
           testID="tab-3"

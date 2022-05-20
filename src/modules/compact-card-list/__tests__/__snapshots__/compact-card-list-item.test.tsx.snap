@@ -38,7 +38,13 @@ exports[`CompactCardListItem Interactions should call onPress method when presse
             "borderRadius": 8,
             "flexDirection": "row",
             "marginLeft": 20,
+          },
+          Object {
             "shadowColor": "#38424D",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": -2,
+            },
             "shadowOpacity": 0.2,
             "shadowRadius": 3,
           },
@@ -228,7 +234,13 @@ exports[`CompactCardListItem Rendering hides icon when it is null 1`] = `
             "borderRadius": 8,
             "flexDirection": "row",
             "marginLeft": 20,
+          },
+          Object {
             "shadowColor": "#38424D",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": -2,
+            },
             "shadowOpacity": 0.2,
             "shadowRadius": 3,
           },
@@ -413,7 +425,13 @@ exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
             "borderRadius": 8,
             "flexDirection": "row",
             "marginLeft": 20,
+          },
+          Object {
             "shadowColor": "#38424D",
+            "shadowOffset": Object {
+              "height": 4,
+              "width": -2,
+            },
             "shadowOpacity": 0.2,
             "shadowRadius": 3,
           },

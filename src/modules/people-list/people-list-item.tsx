@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Swipeable from 'react-native-swipeable';
 import {IProps} from './people-list-item.types';
 import Styled from 'styled-components/native';
@@ -15,11 +15,13 @@ const StyledWrapper = Styled.View`
   padding-bottom: ${minorScale(4)}px;
   padding-top: ${minorScale(4)}px;
   background-color: ${({theme}) => theme.colors.white};
+  padding-left: ${minorScale(4)}px;
+  padding-right: ${minorScale(2)}px;
 `;
 
 const StyledProfilePicCheckboxWrapper = Styled.View`
   flex-direction: row; 
-  justify-content: center
+  justify-content: center;
 `;
 
 const StyledCheckboxWrapper = Styled.View`
@@ -29,17 +31,16 @@ const StyledCheckboxWrapper = Styled.View`
 
 const StyledUserDetailsWrapper = Styled.View<IProps>`
   padding-left: ${minorScale(2)}px;
-  width: ${props => (props.isShowCheckbox === true ? '69%' : '82%')}};
-
+  width: ${props => (props.isShowCheckbox === true ? '69%' : '82%')};
 `;
 
 const StyledUserNameIdWrapper = Styled.View`
   flex-direction: row; 
-  justify-content: space-between
+  justify-content: space-between;
 `;
 
 const StyledOtherDetailWrapper = Styled.View`
-  width:100%
+  width: 100%;
 `;
 
 const StyledHeadingUserNameWrapper = Styled(Heading)`
@@ -52,7 +53,7 @@ const StyledUserIdTextWrapper = Styled(Text)`
   font-size: ${({theme, variant = 'subtitle2'}): string =>
     `${theme.typography?.sizes?.text[variant]}px`};
   color: ${({theme}) => theme.colors.grayFour};
-  text-align:right
+  text-align: right;
 `;
 
 const StyledUserDescriptionWrapper = Styled(Text)`
@@ -61,21 +62,21 @@ const StyledUserDescriptionWrapper = Styled(Text)`
   color: ${({theme}) => theme.colors.grayFour};
   margin-top: ${minorScale(1)}px;
   margin-bottom: ${minorScale(1)}px;
-  min-width:80%;
+  width: 74%;
 `;
 
 const StyledLinkWrapper = Styled.TouchableOpacity`
-  align-self:center;
-  width:100%;
+  align-self: center;
+  width: 100%;
 `;
 
 const StyledRedDotWrapper = Styled.View`
-  background-color:red;
-  width:${minorScale(2)}px;
-  height:${minorScale(2)}px;
+  background-color: red;
+  width: ${minorScale(2)}px;
+  height: ${minorScale(2)}px;
   border-radius: ${minorScale(2)}px;
-  margin-top:${minorScale(0.6)}px;
-  margin-left:${minorScale(1)}px;
+  margin-top: ${minorScale(0.6)}px;
+  margin-left: ${minorScale(1)}px;
 `;
 
 const StyledNameMarkerWrapper = Styled.View`
@@ -93,7 +94,7 @@ const StyledMiddleWrapper = Styled.View`
 
 const StyledRightWrapper = Styled.View`
   align-items: flex-end;
-  margin-left:8px;
+  margin-left: 29px;
 `;
 
 export const PeopleListItem: React.FC<IProps> = ({
