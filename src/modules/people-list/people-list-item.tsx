@@ -31,16 +31,12 @@ const StyledCheckboxWrapper = Styled.View`
 
 const StyledUserDetailsWrapper = Styled.View<IProps>`
   padding-left: ${minorScale(2)}px;
-  width: ${props => (props.isShowCheckbox === true ? '69%' : '82%')};
+  width: ${props => (props.isShowCheckbox === true ? '68%' : '82%')};
 `;
 
 const StyledUserNameIdWrapper = Styled.View`
   flex-direction: row; 
   justify-content: space-between;
-`;
-
-const StyledOtherDetailWrapper = Styled.View`
-  width: 100%;
 `;
 
 const StyledHeadingUserNameWrapper = Styled(Heading)`
@@ -54,15 +50,8 @@ const StyledUserIdTextWrapper = Styled(Text)`
     `${theme.typography?.sizes?.text[variant]}px`};
   color: ${({theme}) => theme.colors.grayFour};
   text-align: right;
-`;
-
-const StyledUserDescriptionWrapper = Styled(Text)`
-  font-size: ${({theme, variant = 'subtitle2'}): string =>
-    `${theme.typography?.sizes?.text[variant]}px`};
-  color: ${({theme}) => theme.colors.grayFour};
-  margin-top: ${minorScale(1)}px;
-  margin-bottom: ${minorScale(1)}px;
-  width: 74%;
+  align-self:flex-end;
+  min-width:27%;
 `;
 
 const StyledLinkWrapper = Styled.TouchableOpacity`
@@ -79,30 +68,15 @@ const StyledRedDotWrapper = Styled.View`
   margin-left: ${minorScale(1)}px;
 `;
 
-const StyledNameMarkerWrapper = Styled.View`
+const StyledNameMarkerWrapper = Styled.View<IProps>`
   flex-direction: row;
-  width: 82%;
+  width:  ${props => (props.isShowCheckbox === true ? '84%' : '78%')}; //84%;
   align-items: center;
-`;
-
-const StyledMiddleWrapper = Styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-`;
-
-const StyledRightWrapper = Styled.View`
-  align-items: flex-end;
-  margin-left: 29px;
 `;
 
 export const PeopleListItem: React.FC<IProps> = ({
   onPress,
   name,
-  maritalStatus,
-  gender,
-  churchEntityName,
   profilePic,
   userId,
   footerElement,
@@ -112,44 +86,8 @@ export const PeopleListItem: React.FC<IProps> = ({
   leftButtons,
   rightButtons,
   redMarker,
-  rightElement,
+  middleElement,
 }): React.ReactElement => {
-  /**
-   * get other data like maritalStatus,gender,churchEntName
-   * add data to array if data is not null and then create string using join
-   * @returns
-   */
-  const getOtherDetailsString = () => {
-    const arrOtherDet: string[] = [];
-    //churchEntityName
-    const churchEntName: string | undefined = churchEntityName || '';
-
-    //maritalStatus
-    const marStatus: string | undefined = maritalStatus || '';
-
-    //gender
-    const strGender: string | undefined =
-      gender === null
-        ? ''
-        : String(gender).toLowerCase() === 'f'
-        ? 'Female'
-        : 'Male';
-
-    if (strGender?.length > 0) {
-      arrOtherDet.push(strGender);
-    }
-
-    if (marStatus?.length > 0) {
-      arrOtherDet.push(marStatus);
-    }
-
-    if (churchEntName?.length > 0) {
-      arrOtherDet.push(churchEntName);
-    }
-
-    return arrOtherDet;
-  };
-
   const getUserNameFirstLastCharacter = () => {
     const arrName = name?.split(' ');
     if (arrName?.length === 2) {
@@ -182,23 +120,18 @@ export const PeopleListItem: React.FC<IProps> = ({
           </StyledProfilePicCheckboxWrapper>
           <StyledUserDetailsWrapper isShowCheckbox={isShowCheckbox}>
             <StyledUserNameIdWrapper>
-              <StyledNameMarkerWrapper>
+              <StyledNameMarkerWrapper isShowCheckbox={isShowCheckbox}>
                 <StyledHeadingUserNameWrapper variant="h3">{`${name}`}</StyledHeadingUserNameWrapper>
                 {redMarker === true && <StyledRedDotWrapper />}
               </StyledNameMarkerWrapper>
-              <StyledUserIdTextWrapper testID="user-id">
-                ID:{`${userId}`}
-              </StyledUserIdTextWrapper>
+              {userId !== undefined && userId.toString().length > 0 && (
+                <StyledUserIdTextWrapper testID="user-id">
+                  ID:{`${userId}`}
+                </StyledUserIdTextWrapper>
+              )}
             </StyledUserNameIdWrapper>
-            <StyledOtherDetailWrapper>
-              <StyledMiddleWrapper>
-                <StyledUserDescriptionWrapper>
-                  {`${getOtherDetailsString().join(' | ')}`}
-                </StyledUserDescriptionWrapper>
-                <StyledRightWrapper>{rightElement}</StyledRightWrapper>
-              </StyledMiddleWrapper>
-              {footerElement}
-            </StyledOtherDetailWrapper>
+            {middleElement}
+            {footerElement}
           </StyledUserDetailsWrapper>
         </StyledWrapper>
       </StyledLinkWrapper>

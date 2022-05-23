@@ -227,7 +227,7 @@ exports[`UserItem Interactions should call the onPress method when card is press
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
-                    "width": "82%",
+                    "width": "78%",
                   },
                 ]
               }
@@ -255,11 +255,13 @@ exports[`UserItem Interactions should call the onPress method when card is press
               style={
                 Array [
                   Object {
+                    "alignSelf": "flex-end",
                     "color": "#97A4AB",
                     "fontFamily": "System",
                     "fontSize": 14,
                     "fontStyle": "normal",
                     "fontWeight": "400",
+                    "minWidth": "27%",
                     "textAlign": "right",
                   },
                 ]
@@ -269,59 +271,6 @@ exports[`UserItem Interactions should call the onPress method when card is press
               ID:
               512345
             </Text>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "width": "100%",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#97A4AB",
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "marginBottom": 5,
-                      "marginTop": 5,
-                      "textAlign": "left",
-                      "width": "74%",
-                    },
-                  ]
-                }
-                testID="text"
-              >
-                Male | Married | Corona
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "flex-end",
-                      "marginLeft": 29,
-                    },
-                  ]
-                }
-              />
-            </View>
           </View>
         </View>
       </View>
@@ -557,7 +506,7 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
-                    "width": "82%",
+                    "width": "78%",
                   },
                 ]
               }
@@ -585,11 +534,13 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               style={
                 Array [
                   Object {
+                    "alignSelf": "flex-end",
                     "color": "#97A4AB",
                     "fontFamily": "System",
                     "fontSize": 14,
                     "fontStyle": "normal",
                     "fontWeight": "400",
+                    "minWidth": "27%",
                     "textAlign": "right",
                   },
                 ]
@@ -599,59 +550,6 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               ID:
               512345
             </Text>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "width": "100%",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#97A4AB",
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "marginBottom": 5,
-                      "marginTop": 5,
-                      "textAlign": "left",
-                      "width": "74%",
-                    },
-                  ]
-                }
-                testID="text"
-              >
-                Male | Married | Corona
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "flex-end",
-                      "marginLeft": 29,
-                    },
-                  ]
-                }
-              />
-            </View>
           </View>
         </View>
       </View>
@@ -871,7 +769,7 @@ exports[`UserItem Rendering should render properly 1`] = `
                   Object {
                     "alignItems": "center",
                     "flexDirection": "row",
-                    "width": "82%",
+                    "width": "78%",
                   },
                 ]
               }
@@ -899,11 +797,13 @@ exports[`UserItem Rendering should render properly 1`] = `
               style={
                 Array [
                   Object {
+                    "alignSelf": "flex-end",
                     "color": "#97A4AB",
                     "fontFamily": "System",
                     "fontSize": 14,
                     "fontStyle": "normal",
                     "fontWeight": "400",
+                    "minWidth": "27%",
                     "textAlign": "right",
                   },
                 ]
@@ -913,59 +813,6 @@ exports[`UserItem Rendering should render properly 1`] = `
               ID:
               512345
             </Text>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "width": "100%",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#97A4AB",
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "marginBottom": 5,
-                      "marginTop": 5,
-                      "textAlign": "left",
-                      "width": "74%",
-                    },
-                  ]
-                }
-                testID="text"
-              >
-                Male | Married | Corona
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "flex-end",
-                      "marginLeft": 29,
-                    },
-                  ]
-                }
-              />
-            </View>
           </View>
         </View>
       </View>

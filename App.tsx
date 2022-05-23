@@ -1616,51 +1616,104 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Row>
                 <PeopleListItem
                   name="Jane doe"
-                  maritalStatus="Married"
-                  gender="M"
-                  churchEntityName="Lake Forest"
                   profilePic={null}
-                  userId="301428"
                   isShowCheckbox={false}
                   rightButtons={null}
                   leftButtons={null}
+                  centerElement={
+                    <Text
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        fontSize: 13,
+                        fontWeight: '400',
+                        color: 'black',
+                      }}>
+                      Married | Male | 50 | Lake Forest
+                    </Text>
+                  }
+                  footerElement={
+                    <Text
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        fontSize: 13,
+                        fontWeight: '400',
+                        color: 'black',
+                      }}>
+                      Core Mile Stone
+                    </Text>
+                  }
                 />
               </Row>
               <Row>
                 <PeopleListItem
                   name="Jane doe"
-                  maritalStatus="Married"
-                  gender="M"
-                  churchEntityName="Lake Forest"
                   profilePic={null}
                   userId="301428"
                   isShowCheckbox={true}
                   rightButtons={null}
                   leftButtons={null}
+                  centerElement={
+                    <Text
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        fontSize: 13,
+                        fontWeight: '400',
+                        color: 'black',
+                      }}>
+                      Married | Male | 50 | Lake Forest
+                    </Text>
+                  }
                 />
               </Row>
               <Row>
                 <PeopleListItem
                   name="Jane doe"
-                  maritalStatus="Married"
-                  gender="M"
-                  churchEntityName="Lake Forest"
                   profilePic={null}
                   userId="301428"
                   isShowCheckbox={true}
                   rightButtons={null}
                   leftButtons={null}
                   redMarker={true}
-                  rightElement={
+                  middleElement={
+                    <View
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                      }}>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          fontSize: 13,
+                          fontWeight: '400',
+                          color: 'black',
+                        }}>
+                        Married | Male | 50 | Lake Forest
+                      </Text>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          fontSize: 13,
+                          fontWeight: '700',
+                          color: 'orange',
+                          textAlign: 'right',
+                          marginLeft: 13,
+                        }}>
+                        Overdue
+                      </Text>
+                    </View>
+                  }
+                  footerElement={
                     <Text
                       // eslint-disable-next-line react-native/no-inline-styles
                       style={{
                         fontSize: 13,
-                        fontWeight: '700',
-                        color: 'orange',
-                        textAlign: 'right',
+                        fontWeight: '400',
+                        color: 'black',
+                        width: 180,
                       }}>
-                      Overdue
+                      Core Mile Stone
                     </Text>
                   }
                 />

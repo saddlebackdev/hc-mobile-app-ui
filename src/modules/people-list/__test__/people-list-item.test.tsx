@@ -15,9 +15,6 @@ describe('UserItem', () => {
         <ThemeProvider theme={defaultTheme}>
           <UserItem
             name={'Stephen John'}
-            maritalStatus={'Married'}
-            gender={'M'}
-            churchEntityName={'Corona'}
             profilePic={'https://www.google.com'}
             userId={'512345'}
           />
@@ -34,14 +31,7 @@ describe('UserItem', () => {
     it('hides icon when it is null', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
-          <UserItem
-            name={'Stephen John'}
-            maritalStatus={'Married'}
-            gender={'M'}
-            churchEntityName={'Corona'}
-            profilePic={null}
-            userId={'512345'}
-          />
+          <UserItem name={'Stephen John'} profilePic={null} userId={'512345'} />
         </ThemeProvider>,
       );
 
@@ -59,9 +49,6 @@ describe('UserItem', () => {
         <ThemeProvider theme={defaultTheme}>
           <UserItem
             name={'Stephen John'}
-            maritalStatus={'Married'}
-            gender={'M'}
-            churchEntityName={'Corona'}
             profilePic={null}
             userId={'512345'}
             onPress={onPressMock}
