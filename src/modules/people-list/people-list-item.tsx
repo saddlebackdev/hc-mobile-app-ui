@@ -115,7 +115,11 @@ export const PeopleListItem: React.FC<IProps> = ({
                 {redMarker === true && <StyledRedDotWrapper />}
               </StyledNameMarkerWrapper>
               {userId !== undefined && userId.toString().length > 0 && (
-                <StyledUserIdTextWrapper variant="subtitle2" muted alignment='right' testID="user-id">
+                <StyledUserIdTextWrapper
+                  variant="subtitle2"
+                  muted
+                  alignment="right"
+                  testID="user-id">
                   ID:{`${userId}`}
                 </StyledUserIdTextWrapper>
               )}

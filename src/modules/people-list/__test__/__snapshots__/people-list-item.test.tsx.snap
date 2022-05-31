@@ -121,10 +121,9 @@ exports[`UserItem Interactions should call the onPress method when card is press
             Object {
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
-              "paddingBottom": 5.5,
               "paddingLeft": 22,
               "paddingRight": 11,
-              "paddingTop": 5.5,
+              "paddingVertical": 11,
             },
           ]
         }
@@ -254,6 +253,8 @@ exports[`UserItem Interactions should call the onPress method when card is press
               </Text>
             </View>
             <Text
+              alignment="right"
+              muted={true}
               style={
                 Array [
                   Object {
@@ -404,10 +405,9 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
             Object {
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
-              "paddingBottom": 5.5,
               "paddingLeft": 22,
               "paddingRight": 11,
-              "paddingTop": 5.5,
+              "paddingVertical": 11,
             },
           ]
         }
@@ -537,6 +537,8 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               </Text>
             </View>
             <Text
+              alignment="right"
+              muted={true}
               style={
                 Array [
                   Object {
@@ -687,10 +689,9 @@ exports[`UserItem Rendering should render properly 1`] = `
             Object {
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
-              "paddingBottom": 5.5,
               "paddingLeft": 22,
               "paddingRight": 11,
-              "paddingTop": 5.5,
+              "paddingVertical": 11,
             },
           ]
         }
@@ -804,6 +805,8 @@ exports[`UserItem Rendering should render properly 1`] = `
               </Text>
             </View>
             <Text
+              alignment="right"
+              muted={true}
               style={
                 Array [
                   Object {
