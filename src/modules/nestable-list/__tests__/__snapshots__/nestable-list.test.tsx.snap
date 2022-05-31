@@ -72,11 +72,7 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
       Campus
     </Text>
     <Image
-      source={
-        Object {
-          "testUri": "../../../src/images/chevron-right-black.png",
-        }
-      }
+      source="test-file-stub"
       style={
         Array [
           Object {
@@ -160,11 +156,7 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
         Lake Forest
       </Text>
       <Image
-        source={
-          Object {
-            "testUri": "../../../src/images/close-light-black.png",
-          }
-        }
+        source="test-file-stub"
         style={
           Array [
             Object {
@@ -225,11 +217,7 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
         Laguna Woods
       </Text>
       <Image
-        source={
-          Object {
-            "testUri": "../../../src/images/close-light-black.png",
-          }
-        }
+        source="test-file-stub"
         style={
           Array [
             Object {
@@ -290,11 +278,7 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
         San Diego
       </Text>
       <Image
-        source={
-          Object {
-            "testUri": "../../../src/images/close-light-black.png",
-          }
-        }
+        source="test-file-stub"
         style={
           Array [
             Object {
@@ -369,11 +353,7 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
       Category
     </Text>
     <Image
-      source={
-        Object {
-          "testUri": "../../../src/images/chevron-right-black.png",
-        }
-      }
+      source="test-file-stub"
       style={
         Array [
           Object {
@@ -447,11 +427,7 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
       Tags
     </Text>
     <Image
-      source={
-        Object {
-          "testUri": "../../../src/images/chevron-right-black.png",
-        }
-      }
+      source="test-file-stub"
       style={
         Array [
           Object {
@@ -528,11 +504,7 @@ exports[`NestableListChildItem Rendering renders itself correctly 1`] = `
     Lake Forest
   </Text>
   <Image
-    source={
-      Object {
-        "testUri": "../../../src/images/close-light-black.png",
-      }
-    }
+    source="test-file-stub"
     style={
       Array [
         Object {
@@ -597,11 +569,7 @@ exports[`NestableListParentItem Rendering renders itself correctly 1`] = `
     Campus
   </Text>
   <Image
-    source={
-      Object {
-        "testUri": "../../../src/images/chevron-right-black.png",
-      }
-    }
+    source="test-file-stub"
     style={
       Array [
         Object {

@@ -141,7 +141,7 @@ exports[`CompactCardListItem Interactions should call onPress method when presse
             />
           </RNSVGGroup>
         </RNSVGSvgView>
-        <SvgMock
+        <test-file-stub
           fill="#FFFFFF"
           height={16}
           width={16}
@@ -528,7 +528,7 @@ exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
             />
           </RNSVGGroup>
         </RNSVGSvgView>
-        <SvgMock
+        <test-file-stub
           fill="#FFFFFF"
           height={16}
           width={16}

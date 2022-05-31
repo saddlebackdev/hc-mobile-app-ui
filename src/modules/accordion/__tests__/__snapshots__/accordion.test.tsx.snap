@@ -74,11 +74,7 @@ exports[`Accordion Interactions should open the accordion on click 1`] = `
       }
     >
       <Image
-        source={
-          Object {
-            "testUri": "../../../src/images/chevron-down-black.png",
-          }
-        }
+        source="test-file-stub"
         style={
           Array [
             Object {
@@ -187,11 +183,7 @@ exports[`Accordion Rendering renders correctly 1`] = `
       }
     >
       <Image
-        source={
-          Object {
-            "testUri": "../../../src/images/chevron-down-black.png",
-          }
-        }
+        source="test-file-stub"
         style={
           Array [
             Object {
@@ -298,11 +290,7 @@ exports[`Accordion Rendering renders in "open" state correctly 1`] = `
       }
     >
       <Image
-        source={
-          Object {
-            "testUri": "../../../src/images/chevron-up-black.png",
-          }
-        }
+        source="test-file-stub"
         style={
           Array [
             Object {
