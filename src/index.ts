@@ -38,7 +38,7 @@ export {IProps as ChipProps} from './modules/chip/chip.types';
 export {default as CompactCardListItem} from './modules/compact-card-list/compact-card-list-item';
 export {IProps as CompactCardListItemProps} from './modules/compact-card-list/compact-card-list-item.types';
 
-// Date Picker
+// Data Block
 export {default as DataBlock} from './modules/data-block/data-block';
 export {IProps as DataBlockProps} from './modules/data-block/data-block.types';
 
@@ -53,6 +53,10 @@ export {IProps as DividerProps} from './modules/divider/divider.types';
 // Expandable Card
 export {default as ExpandableCard} from './modules/expandable-card/expandable-card';
 export {IProps as ExpandableCardProps} from './modules/expandable-card/expandable-card.types';
+
+//
+export {default as FilterDrawer} from './modules/filter-drawer/filter-drawer';
+export {IProps as FilterDrawerProps} from './modules/filter-drawer/filter-drawer.types';
 
 // Floater
 export {default as Floater} from './modules/floater/floater';

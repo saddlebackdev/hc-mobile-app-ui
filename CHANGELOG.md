@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.0.37
+
+- Add FilterDrawer component
+
 ### v0.0.36
 - Fix importing React issue which causes crash while implementing PeopleListItem and AnimatedHeader
 - Fix CompactCardListItem's shadow issue on IOS side

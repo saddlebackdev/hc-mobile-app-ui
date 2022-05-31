@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {View, SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
+import {Alert, View, SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
 import Styled from 'styled-components/native';
 
 import {
@@ -37,6 +37,7 @@ import {
   CompactCardListItem,
   LinearGradientView,
   defaultTheme,
+  FilterDrawer,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -82,18 +83,15 @@ const WarningViewWrapper = Styled.View`
   border-radius: 13px;
   margin-top: -4px;
 `;
-
 const CheckInTextWrapper = Styled(Text)`
   color: #FFEF00;
 `;
-
 const linearGradientView1Style = StyleSheet.flatten<ViewStyle>({
   width: 50,
   height: 50,
   justifyContent: 'center',
   alignItems: 'center',
 });
-
 const linearGradientView2Style = StyleSheet.flatten<ViewStyle>({
   width: 100,
   height: 100,
@@ -128,6 +126,12 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     React.useState<number>(2);
   const [selectedPeopleTabItem, setSelectedPeopleTabItem] =
     React.useState<number>(1);
+  const [isFilterDrawerOpen, setIsFilterDrawerOpen] =
+    React.useState<boolean>(false);
+  const [
+    isFilterDrawerSecondaryViewActive,
+    setIsFilterDrawerSecondaryViewActive,
+  ] = React.useState<boolean>(false);
 
   const gradientColors = [
     {offset: 0, color: '#E4DE74'},
@@ -436,6 +440,55 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   }}
                   linkLabel={'View All'}
                   onLinkPress={onPressMock}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Filter Drawer */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Filter Drawer</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Filter Drawer Component</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Button onPress={() => setIsFilterDrawerOpen(true)}>
+                  Open Filter Drawer
+                </Button>
+
+                <FilterDrawer
+                  onApplyFilters={() => Alert.alert('Filters Applied!')}
+                  onClearFilters={() => Alert.alert('Filters Cleared!')}
+                  onClose={() => setIsFilterDrawerOpen(false)}
+                  isOpen={isFilterDrawerOpen}
+                  onBackToPrimaryContent={() =>
+                    setIsFilterDrawerSecondaryViewActive(false)
+                  }
+                  shouldShowSecondaryContent={isFilterDrawerSecondaryViewActive}
+                  primaryChildren={
+                    <>
+                      <Text>This is the primary View.</Text>
+
+                      <Button
+                        onPress={() =>
+                          setIsFilterDrawerSecondaryViewActive(true)
+                        }>
+                        Show the Secondary View
+                      </Button>
+                    </>
+                  }
+                  secondaryChildren={
+                    <>
+                      <Text>This is the secondary View.</Text>
+                      <Text variant="caption">
+                        Use the back button to go back to the primary view.
+                      </Text>
+                    </>
+                  }
                 />
               </Row>
             </Section.Content>
