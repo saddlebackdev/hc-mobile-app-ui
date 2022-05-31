@@ -121,10 +121,10 @@ exports[`UserItem Interactions should call the onPress method when card is press
             Object {
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 10,
-              "paddingTop": 20,
+              "paddingBottom": 5.5,
+              "paddingLeft": 22,
+              "paddingRight": 11,
+              "paddingTop": 5.5,
             },
           ]
         }
@@ -205,8 +205,10 @@ exports[`UserItem Interactions should call the onPress method when card is press
           style={
             Array [
               Object {
-                "paddingLeft": 10,
-                "width": "82%",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "paddingLeft": 11,
               },
             ]
           }
@@ -225,9 +227,10 @@ exports[`UserItem Interactions should call the onPress method when card is press
               style={
                 Array [
                   Object {
-                    "alignItems": "center",
+                    "flexBasis": 0,
                     "flexDirection": "row",
-                    "width": "78%",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                   },
                 ]
               }
@@ -238,15 +241,14 @@ exports[`UserItem Interactions should call the onPress method when card is press
                     Object {
                       "color": "#1C2530",
                       "fontFamily": "System",
-                      "fontSize": 18,
+                      "fontSize": 16,
                       "fontWeight": "700",
-                      "maxWidth": "86%",
                       "textAlign": "left",
                     },
                   ]
                 }
                 testID="heading"
-                variant="h3"
+                variant="h4"
               >
                 Stephen John
               </Text>
@@ -255,18 +257,20 @@ exports[`UserItem Interactions should call the onPress method when card is press
               style={
                 Array [
                   Object {
-                    "alignSelf": "flex-end",
                     "color": "#97A4AB",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                     "fontFamily": "System",
                     "fontSize": 14,
                     "fontStyle": "normal",
                     "fontWeight": "400",
-                    "minWidth": "27%",
                     "textAlign": "right",
                   },
                 ]
               }
               testID="user-id"
+              variant="subtitle2"
             >
               ID:
               512345
@@ -400,10 +404,10 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
             Object {
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 10,
-              "paddingTop": 20,
+              "paddingBottom": 5.5,
+              "paddingLeft": 22,
+              "paddingRight": 11,
+              "paddingTop": 5.5,
             },
           ]
         }
@@ -484,8 +488,10 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
           style={
             Array [
               Object {
-                "paddingLeft": 10,
-                "width": "82%",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "paddingLeft": 11,
               },
             ]
           }
@@ -504,9 +510,10 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               style={
                 Array [
                   Object {
-                    "alignItems": "center",
+                    "flexBasis": 0,
                     "flexDirection": "row",
-                    "width": "78%",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                   },
                 ]
               }
@@ -517,15 +524,14 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
                     Object {
                       "color": "#1C2530",
                       "fontFamily": "System",
-                      "fontSize": 18,
+                      "fontSize": 16,
                       "fontWeight": "700",
-                      "maxWidth": "86%",
                       "textAlign": "left",
                     },
                   ]
                 }
                 testID="heading"
-                variant="h3"
+                variant="h4"
               >
                 Stephen John
               </Text>
@@ -534,18 +540,20 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               style={
                 Array [
                   Object {
-                    "alignSelf": "flex-end",
                     "color": "#97A4AB",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                     "fontFamily": "System",
                     "fontSize": 14,
                     "fontStyle": "normal",
                     "fontWeight": "400",
-                    "minWidth": "27%",
                     "textAlign": "right",
                   },
                 ]
               }
               testID="user-id"
+              variant="subtitle2"
             >
               ID:
               512345
@@ -679,10 +687,10 @@ exports[`UserItem Rendering should render properly 1`] = `
             Object {
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 10,
-              "paddingTop": 20,
+              "paddingBottom": 5.5,
+              "paddingLeft": 22,
+              "paddingRight": 11,
+              "paddingTop": 5.5,
             },
           ]
         }
@@ -747,8 +755,10 @@ exports[`UserItem Rendering should render properly 1`] = `
           style={
             Array [
               Object {
-                "paddingLeft": 10,
-                "width": "82%",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "paddingLeft": 11,
               },
             ]
           }
@@ -767,9 +777,10 @@ exports[`UserItem Rendering should render properly 1`] = `
               style={
                 Array [
                   Object {
-                    "alignItems": "center",
+                    "flexBasis": 0,
                     "flexDirection": "row",
-                    "width": "78%",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                   },
                 ]
               }
@@ -780,15 +791,14 @@ exports[`UserItem Rendering should render properly 1`] = `
                     Object {
                       "color": "#1C2530",
                       "fontFamily": "System",
-                      "fontSize": 18,
+                      "fontSize": 16,
                       "fontWeight": "700",
-                      "maxWidth": "86%",
                       "textAlign": "left",
                     },
                   ]
                 }
                 testID="heading"
-                variant="h3"
+                variant="h4"
               >
                 Stephen John
               </Text>
@@ -797,18 +807,20 @@ exports[`UserItem Rendering should render properly 1`] = `
               style={
                 Array [
                   Object {
-                    "alignSelf": "flex-end",
                     "color": "#97A4AB",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                     "fontFamily": "System",
                     "fontSize": 14,
                     "fontStyle": "normal",
                     "fontWeight": "400",
-                    "minWidth": "27%",
                     "textAlign": "right",
                   },
                 ]
               }
               testID="user-id"
+              variant="subtitle2"
             >
               ID:
               512345

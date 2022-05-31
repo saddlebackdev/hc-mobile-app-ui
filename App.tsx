@@ -37,6 +37,7 @@ import {
   CompactCardListItem,
   LinearGradientView,
   defaultTheme,
+  minorScale,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -1620,27 +1621,27 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   isShowCheckbox={false}
                   rightButtons={null}
                   leftButtons={null}
-                  centerElement={
-                    <Text
+                  middleElement={
+                    <View
                       // eslint-disable-next-line react-native/no-inline-styles
                       style={{
-                        fontSize: 13,
-                        fontWeight: '400',
-                        color: 'black',
+                        flex: 1,
+                        paddingVertical: minorScale(1),
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
                       }}>
-                      Married | Male | 50 | Lake Forest
-                    </Text>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          flex: 1,
+                        }}
+                        variant={'caption'}>
+                        Married | Male | 50 | Lake Forest
+                      </Text>
+                    </View>
                   }
                   footerElement={
-                    <Text
-                      // eslint-disable-next-line react-native/no-inline-styles
-                      style={{
-                        fontSize: 13,
-                        fontWeight: '400',
-                        color: 'black',
-                      }}>
-                      Core Mile Stone
-                    </Text>
+                    <Text variant={'caption'}>Core Mile Stone</Text>
                   }
                 />
               </Row>
@@ -1652,16 +1653,24 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   isShowCheckbox={true}
                   rightButtons={null}
                   leftButtons={null}
-                  centerElement={
-                    <Text
+                  middleElement={
+                    <View
                       // eslint-disable-next-line react-native/no-inline-styles
                       style={{
-                        fontSize: 13,
-                        fontWeight: '400',
-                        color: 'black',
+                        flex: 1,
+                        paddingVertical: minorScale(1),
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
                       }}>
-                      Married | Male | 50 | Lake Forest
-                    </Text>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          flex: 1,
+                        }}
+                        variant={'caption'}>
+                        Married | Male | 50 | Lake Forest
+                      </Text>
+                    </View>
                   }
                 />
               </Row>
@@ -1678,43 +1687,33 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                     <View
                       // eslint-disable-next-line react-native/no-inline-styles
                       style={{
+                        flex: 1,
+                        paddingVertical: minorScale(1),
                         flexDirection: 'row',
-                        alignItems: 'center',
                         justifyContent: 'space-between',
                       }}>
                       <Text
                         // eslint-disable-next-line react-native/no-inline-styles
                         style={{
-                          fontSize: 13,
-                          fontWeight: '400',
-                          color: 'black',
-                        }}>
+                          flex: 1,
+                        }}
+                        variant={'caption'}>
                         Married | Male | 50 | Lake Forest
                       </Text>
                       <Text
                         // eslint-disable-next-line react-native/no-inline-styles
                         style={{
-                          fontSize: 13,
-                          fontWeight: '700',
                           color: 'orange',
                           textAlign: 'right',
-                          marginLeft: 13,
-                        }}>
+                        }}
+                        variant={'caption'}
+                        weight={'bold'}>
                         Overdue
                       </Text>
                     </View>
                   }
                   footerElement={
-                    <Text
-                      // eslint-disable-next-line react-native/no-inline-styles
-                      style={{
-                        fontSize: 13,
-                        fontWeight: '400',
-                        color: 'black',
-                        width: 180,
-                      }}>
-                      Core Mile Stone
-                    </Text>
+                    <Text variant={'caption'}>Core Mile Stone</Text>
                   }
                 />
               </Row>

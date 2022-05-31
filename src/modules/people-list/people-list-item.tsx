@@ -3,7 +3,7 @@ import Swipeable from 'react-native-swipeable';
 import {IProps} from './people-list-item.types';
 import Styled from 'styled-components/native';
 
-import {minorScale} from '../scales';
+import {majorScale, minorScale} from '../scales';
 import Text from '../text/text';
 import Avatar from '../avatar/avatar';
 import Checkbox from '../checkbox/checkbox';
@@ -12,11 +12,11 @@ import Heading from '../heading/heading';
 // Wrapper
 const StyledWrapper = Styled.View`
   flex-direction: row;
-  padding-bottom: ${minorScale(4)}px;
-  padding-top: ${minorScale(4)}px;
+  padding-bottom: ${minorScale(1.1)}px;
+  padding-top: ${minorScale(1.1)}px;
   background-color: ${({theme}) => theme.colors.white};
-  padding-left: ${minorScale(4)}px;
-  padding-right: ${minorScale(2)}px;
+  padding-left: ${minorScale(4.4)}px;
+  padding-right: ${majorScale(1)}px;
 `;
 
 const StyledProfilePicCheckboxWrapper = Styled.View`
@@ -26,12 +26,12 @@ const StyledProfilePicCheckboxWrapper = Styled.View`
 
 const StyledCheckboxWrapper = Styled.View`
   margin-top: ${minorScale(2)}px;
-  margin-right: ${minorScale(2)}px;
+  margin-right: ${majorScale(1)}px;
 `;
 
 const StyledUserDetailsWrapper = Styled.View<IProps>`
-  padding-left: ${minorScale(2)}px;
-  width: ${props => (props.isShowCheckbox === true ? '68%' : '82%')};
+  padding-left: ${majorScale(1)}px;
+  flex : 1;
 `;
 
 const StyledUserNameIdWrapper = Styled.View`
@@ -40,18 +40,12 @@ const StyledUserNameIdWrapper = Styled.View`
 `;
 
 const StyledHeadingUserNameWrapper = Styled(Heading)`
-  font-size: ${({theme, variant = 'h3'}): string =>
-    `${theme.typography?.sizes?.headings[variant]}px`};
-  max-width: 86%;
 `;
 
 const StyledUserIdTextWrapper = Styled(Text)`
-  font-size: ${({theme, variant = 'subtitle2'}): string =>
-    `${theme.typography?.sizes?.text[variant]}px`};
   color: ${({theme}) => theme.colors.grayFour};
   text-align: right;
-  align-self:flex-end;
-  min-width:27%;
+  flex : 1;
 `;
 
 const StyledLinkWrapper = Styled.TouchableOpacity`
@@ -63,15 +57,14 @@ const StyledRedDotWrapper = Styled.View`
   background-color: red;
   width: ${minorScale(2)}px;
   height: ${minorScale(2)}px;
-  border-radius: ${minorScale(2)}px;
-  margin-top: ${minorScale(0.6)}px;
+  border-radius: ${minorScale(1)}px;
+  margin-top: ${minorScale(1)}px;
   margin-left: ${minorScale(1)}px;
 `;
 
 const StyledNameMarkerWrapper = Styled.View<IProps>`
   flex-direction: row;
-  width:  ${props => (props.isShowCheckbox === true ? '84%' : '78%')}; //84%;
-  align-items: center;
+  flex : 1;
 `;
 
 export const PeopleListItem: React.FC<IProps> = ({
@@ -121,11 +114,11 @@ export const PeopleListItem: React.FC<IProps> = ({
           <StyledUserDetailsWrapper isShowCheckbox={isShowCheckbox}>
             <StyledUserNameIdWrapper>
               <StyledNameMarkerWrapper isShowCheckbox={isShowCheckbox}>
-                <StyledHeadingUserNameWrapper variant="h3">{`${name}`}</StyledHeadingUserNameWrapper>
+                <StyledHeadingUserNameWrapper variant="h4">{`${name}`}</StyledHeadingUserNameWrapper>
                 {redMarker === true && <StyledRedDotWrapper />}
               </StyledNameMarkerWrapper>
               {userId !== undefined && userId.toString().length > 0 && (
-                <StyledUserIdTextWrapper testID="user-id">
+                <StyledUserIdTextWrapper variant="subtitle2" testID="user-id">
                   ID:{`${userId}`}
                 </StyledUserIdTextWrapper>
               )}
