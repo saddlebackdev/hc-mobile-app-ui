@@ -12,10 +12,9 @@ import Heading from '../heading/heading';
 // Wrapper
 const StyledWrapper = Styled.View`
   flex-direction: row;
-  padding-bottom: ${minorScale(1.1)}px;
-  padding-top: ${minorScale(1.1)}px;
+  padding-vertical: ${majorScale(1)}px;
   background-color: ${({theme}) => theme.colors.white};
-  padding-left: ${minorScale(4.4)}px;
+  padding-left: ${majorScale(2)}px;
   padding-right: ${majorScale(1)}px;
 `;
 
@@ -29,7 +28,7 @@ const StyledCheckboxWrapper = Styled.View`
   margin-right: ${majorScale(1)}px;
 `;
 
-const StyledUserDetailsWrapper = Styled.View<IProps>`
+const StyledUserDetailsWrapper = Styled.View`
   padding-left: ${majorScale(1)}px;
   flex : 1;
 `;
@@ -43,8 +42,6 @@ const StyledHeadingUserNameWrapper = Styled(Heading)`
 `;
 
 const StyledUserIdTextWrapper = Styled(Text)`
-  color: ${({theme}) => theme.colors.grayFour};
-  text-align: right;
   flex : 1;
 `;
 
@@ -62,7 +59,7 @@ const StyledRedDotWrapper = Styled.View`
   margin-left: ${minorScale(1)}px;
 `;
 
-const StyledNameMarkerWrapper = Styled.View<IProps>`
+const StyledNameMarkerWrapper = Styled.View`
   flex-direction: row;
   flex : 1;
 `;
@@ -111,14 +108,14 @@ export const PeopleListItem: React.FC<IProps> = ({
               radius="small"
             />
           </StyledProfilePicCheckboxWrapper>
-          <StyledUserDetailsWrapper isShowCheckbox={isShowCheckbox}>
+          <StyledUserDetailsWrapper>
             <StyledUserNameIdWrapper>
-              <StyledNameMarkerWrapper isShowCheckbox={isShowCheckbox}>
+              <StyledNameMarkerWrapper>
                 <StyledHeadingUserNameWrapper variant="h4">{`${name}`}</StyledHeadingUserNameWrapper>
                 {redMarker === true && <StyledRedDotWrapper />}
               </StyledNameMarkerWrapper>
               {userId !== undefined && userId.toString().length > 0 && (
-                <StyledUserIdTextWrapper variant="subtitle2" testID="user-id">
+                <StyledUserIdTextWrapper variant="subtitle2" muted alignment='right' testID="user-id">
                   ID:{`${userId}`}
                 </StyledUserIdTextWrapper>
               )}
