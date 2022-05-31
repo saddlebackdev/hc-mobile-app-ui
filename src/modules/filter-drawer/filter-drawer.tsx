@@ -1,6 +1,5 @@
 // Modules
 import * as React from 'react';
-import {Button, Link, Icon} from 'hc-mobile-app-ui';
 import {IconCloseXCircle, IconChevronLeft} from 'hc-app-icons';
 import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
@@ -11,9 +10,12 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-import {IProps} from './filter-drawer.types.ts';
+import {IProps} from './filter-drawer.types';
 
 // Shared
+import Link from '../link/link';
+import Button from '../button/button';
+import Icon from '../icon/icon-external';
 import Heading from '../heading/heading';
 import {majorScale} from '../scales';
 
@@ -190,7 +192,7 @@ export const FilterDrawer: React.FC<IProps> = ({
 
   // On Close Modal
   const onCloseModal = () => {
-    // Close modal
+    // @ts-ignore
     modalRef?.current?.close?.();
 
     // Call callback function

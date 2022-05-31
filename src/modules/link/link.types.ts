@@ -7,7 +7,7 @@ export interface IProps {
   onPress?: any;
 
   /** Path to be redirected to. It can be a URL or an in-app route. */
-  to: string;
+  to?: string;
 
   /** Determines the color of the text. Can be primary, secondary, info, success, warning, danger or any color from the theme. */
   color?:
