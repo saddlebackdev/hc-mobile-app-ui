@@ -37,6 +37,7 @@ import {
   CompactCardListItem,
   LinearGradientView,
   defaultTheme,
+  minorScale,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -683,7 +684,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   items={[
                     {
                       label: 'Doggo 1',
-                      jsx: (
+                      jsxLeftElement: (
                         <View
                           // eslint-disable-next-line react-native/no-inline-styles
                           style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -704,7 +705,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                     },
                     {
                       label: 'Doggo 2',
-                      jsx: (
+                      jsxLeftElement: (
                         <View
                           // eslint-disable-next-line react-native/no-inline-styles
                           style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -722,6 +723,99 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                     {
                       label: 'Simple Value',
                       value: 'Lookie Here Again!',
+                    },
+                  ]}
+                />
+              </Row>
+              <Row>
+                <DataBlock
+                  items={[
+                    {
+                      jsxLeftElement: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="full" />
+                          </View>
+                          <View
+                            // eslint-disable-next-line react-native/no-inline-styles
+                            style={{marginLeft: 10}}>
+                            <Heading variant="h4">Unclaimed</Heading>
+                            <View
+                              // eslint-disable-next-line react-native/no-inline-styles
+                              style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                paddingVertical: minorScale(0.5),
+                              }}>
+                              <Text
+                                numberOfLines={1}
+                                variant={'subtitle2'}
+                                color={'graySix'}>
+                                5 Active
+                                <Text
+                                  numberOfLines={1}
+                                  weight={'semiBold'}
+                                  variant={'subtitle2'}
+                                  color={'warningLight'}>
+                                  (2 Overdue)
+                                </Text>
+                              </Text>
+                            </View>
+                          </View>
+                        </View>
+                      ),
+                    },
+                  ]}
+                />
+                <DataBlock
+                  items={[
+                    {
+                      jsxLeftElement: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="full" />
+                          </View>
+                          <View
+                            // eslint-disable-next-line react-native/no-inline-styles
+                            style={{marginLeft: 10}}>
+                            <Heading variant="h4">Team Member 1</Heading>
+                            <View
+                              // eslint-disable-next-line react-native/no-inline-styles
+                              style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                paddingVertical: minorScale(0.5),
+                              }}>
+                              <Text
+                                numberOfLines={1}
+                                variant={'subtitle2'}
+                                color={'graySix'}>
+                                5/10 Complated
+                                <Text
+                                  numberOfLines={1}
+                                  weight={'semiBold'}
+                                  variant={'subtitle2'}
+                                  color={'warningLight'}>
+                                  (2 Overdue)
+                                </Text>
+                              </Text>
+                            </View>
+                          </View>
+                        </View>
+                      ),
+                      jsxRightElement: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="full" />
+                          </View>
+                        </View>
+                      ),
                     },
                   ]}
                 />

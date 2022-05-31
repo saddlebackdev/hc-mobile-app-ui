@@ -24,17 +24,18 @@ export const StyledRow = Styled.View<IStyledRow>`
   border-bottom-color: ${({theme}) => theme.colors.grayThree};
 `;
 export const StyledLeftWrapper = Styled.View`
-  flex: 0.6;
+  flex: 0.7;
   align-items: flex-start;
 `;
 export const StyledRightWrapper = Styled.View`
-  flex: 0.4;
   align-items: flex-end;
+  flex: 0.3;
 `;
 
 // Component
 export const DataBlock: React.FC<IProps> = ({
   items,
+  hideBottomLine,
 }): React.ReactElement<any, any> | null => {
   if (!items) {
     return null;
@@ -48,19 +49,23 @@ export const DataBlock: React.FC<IProps> = ({
         const isLastRow = index === items.length - 1;
 
         return (
-          <StyledRow key={key} $hideBorder={isLastRow}>
+          <StyledRow key={key} $hideBorder={hideBottomLine ? true : isLastRow}>
             <StyledLeftWrapper>
-              {item.jsx ? (
-                item.jsx
+              {item.jsxLeftElement ? (
+                item.jsxLeftElement
               ) : (
                 <Text variant="caption">{item.value}</Text>
               )}
             </StyledLeftWrapper>
 
             <StyledRightWrapper>
-              <Text variant="caption" muted>
-                {item.label}
-              </Text>
+              {item.jsxRightElement ? (
+                item.jsxRightElement
+              ) : (
+                <Text variant="caption" muted>
+                  {item.label}
+                </Text>
+              )}
             </StyledRightWrapper>
           </StyledRow>
         );
