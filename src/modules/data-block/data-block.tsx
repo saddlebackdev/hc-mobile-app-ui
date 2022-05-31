@@ -7,7 +7,7 @@ import {IStyledRow, IDataBlockItem, IProps} from './data-block.types';
 
 // Shared
 import Text from '../text/text';
-import {majorScale} from '../scales';
+import {minorScale} from '../scales';
 
 // Styles
 export const StyledWrapper = Styled.View`
@@ -18,18 +18,20 @@ export const StyledRow = Styled.View<IStyledRow>`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  padding-vertical: ${majorScale(1)}px;
+  padding-vertical: ${minorScale(3)}px;
   border-bottom-width: ${({$hideBorder}) => ($hideBorder ? 0 : 1)}px;
   border-bottom-color: ${({theme}) => theme.colors.grayThree};
 `;
 export const StyledLeftWrapper = Styled.View`
-  flex: 0.7;
+  flex: 0.6;
   align-items: flex-start;
 `;
 export const StyledRightWrapper = Styled.View`
   align-items: flex-end;
-  flex: 0.3;
+  flex: 0.4;
+`;
+export const StyledRightTextWrapper = Styled(Text)`
+  font-size: 12px;
 `;
 
 // Component
@@ -62,9 +64,9 @@ export const DataBlock: React.FC<IProps> = ({
               {item.jsxRightElement ? (
                 item.jsxRightElement
               ) : (
-                <Text variant="caption" muted>
+                <StyledRightTextWrapper muted>
                   {item.label}
-                </Text>
+                </StyledRightTextWrapper>
               )}
             </StyledRightWrapper>
           </StyledRow>
