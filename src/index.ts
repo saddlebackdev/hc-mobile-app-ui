@@ -154,3 +154,7 @@ export {DeviceUtils, LayoutUtils} from './modules/utilities';
 // People-list-item
 export {default as PeopleListItem} from './modules/people-list/people-list-item';
 export {IProps as IPeopleItemProps} from './modules/people-list/people-list-item.types';
+
+//Core Milestone
+export {default as CoreMilestone} from './modules/core-milestone/core-milestone';
+export {IProps as ICoreMilestoneProps} from './modules/core-milestone/core-milestone.types';

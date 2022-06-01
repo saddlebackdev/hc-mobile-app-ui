@@ -1,0 +1,937 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoreMilestone Rendering renders Accept Christ 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+  testID="coreMilestone"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginVertical": 5,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 0,
+            "width": 15,
+          },
+        ]
+      }
+      testID="accept-christ"
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+      testID="baptised"
+    >
+      <SvgMock
+        fill="#dde1e4"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      isWhite={false}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 5,
+            "marginRight": 5,
+          },
+        ]
+      }
+      testID="class-milestone"
+    >
+      <View
+        colorMilestone="#3A8E5D"
+        hasAttendedClass301={true}
+        hasSignedMinistryCovenant={false}
+        isWhite={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderColor": "#3A8E5D",
+              "borderRadius": 1,
+              "borderWidth": 0.5,
+              "height": 6,
+              "marginRight": -1,
+              "transform": Array [
+                Object {
+                  "rotate": "135deg",
+                },
+              ],
+              "width": 6,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <View
+          colorMilestone="#3A8E5D"
+          hasAttendedClass201={false}
+          hasSignedMaturityCovenant={false}
+          isWhite={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#dde1e4",
+                "borderColor": "transparent",
+                "borderRadius": 1,
+                "borderWidth": 0.5,
+                "height": 6,
+                "transform": Array [
+                  Object {
+                    "rotate": "135deg",
+                  },
+                ],
+                "width": 6,
+              },
+            ]
+          }
+        />
+        <View
+          colorMilestone="#3A8E5D"
+          hasAttendedClass401={true}
+          hasSignedMissionCovenant={false}
+          isWhite={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderColor": "#3A8E5D",
+                "borderRadius": 1,
+                "borderWidth": 0.5,
+                "height": 6,
+                "marginTop": 4,
+                "transform": Array [
+                  Object {
+                    "rotate": "135deg",
+                  },
+                ],
+                "width": 6,
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        colorMilestone="#3A8E5D"
+        hasAttendedClass101={true}
+        hasSignedMembershipAgreement={true}
+        isWhite={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3A8E5D",
+              "borderColor": "transparent",
+              "borderRadius": 1,
+              "borderWidth": 0.5,
+              "height": 6,
+              "marginLeft": -1,
+              "transform": Array [
+                Object {
+                  "rotate": "135deg",
+                },
+              ],
+              "width": 6,
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#dde1e4"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CoreMilestone Rendering renders Baptised 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+  testID="coreMilestone"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginVertical": 5,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 0,
+            "width": 15,
+          },
+        ]
+      }
+      testID="accept-christ"
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+      testID="baptised"
+    >
+      <SvgMock
+        fill="#dde1e4"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      isWhite={false}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 5,
+            "marginRight": 5,
+          },
+        ]
+      }
+      testID="class-milestone"
+    >
+      <View
+        colorMilestone="#3A8E5D"
+        hasAttendedClass301={true}
+        hasSignedMinistryCovenant={false}
+        isWhite={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderColor": "#3A8E5D",
+              "borderRadius": 1,
+              "borderWidth": 0.5,
+              "height": 6,
+              "marginRight": -1,
+              "transform": Array [
+                Object {
+                  "rotate": "135deg",
+                },
+              ],
+              "width": 6,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <View
+          colorMilestone="#3A8E5D"
+          hasAttendedClass201={false}
+          hasSignedMaturityCovenant={false}
+          isWhite={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#dde1e4",
+                "borderColor": "transparent",
+                "borderRadius": 1,
+                "borderWidth": 0.5,
+                "height": 6,
+                "transform": Array [
+                  Object {
+                    "rotate": "135deg",
+                  },
+                ],
+                "width": 6,
+              },
+            ]
+          }
+        />
+        <View
+          colorMilestone="#3A8E5D"
+          hasAttendedClass401={true}
+          hasSignedMissionCovenant={false}
+          isWhite={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderColor": "#3A8E5D",
+                "borderRadius": 1,
+                "borderWidth": 0.5,
+                "height": 6,
+                "marginTop": 4,
+                "transform": Array [
+                  Object {
+                    "rotate": "135deg",
+                  },
+                ],
+                "width": 6,
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        colorMilestone="#3A8E5D"
+        hasAttendedClass101={true}
+        hasSignedMembershipAgreement={true}
+        isWhite={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3A8E5D",
+              "borderColor": "transparent",
+              "borderRadius": 1,
+              "borderWidth": 0.5,
+              "height": 6,
+              "marginLeft": -1,
+              "transform": Array [
+                Object {
+                  "rotate": "135deg",
+                },
+              ],
+              "width": 6,
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#dde1e4"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CoreMilestone Rendering renders Class MileStone 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+  testID="coreMilestone"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginVertical": 5,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 0,
+            "width": 15,
+          },
+        ]
+      }
+      testID="accept-christ"
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+      testID="baptised"
+    >
+      <SvgMock
+        fill="#dde1e4"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      isWhite={false}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 5,
+            "marginRight": 5,
+          },
+        ]
+      }
+      testID="class-milestone"
+    >
+      <View
+        colorMilestone="#3A8E5D"
+        hasAttendedClass301={true}
+        hasSignedMinistryCovenant={false}
+        isWhite={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderColor": "#3A8E5D",
+              "borderRadius": 1,
+              "borderWidth": 0.5,
+              "height": 6,
+              "marginRight": -1,
+              "transform": Array [
+                Object {
+                  "rotate": "135deg",
+                },
+              ],
+              "width": 6,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <View
+          colorMilestone="#3A8E5D"
+          hasAttendedClass201={false}
+          hasSignedMaturityCovenant={false}
+          isWhite={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#dde1e4",
+                "borderColor": "transparent",
+                "borderRadius": 1,
+                "borderWidth": 0.5,
+                "height": 6,
+                "transform": Array [
+                  Object {
+                    "rotate": "135deg",
+                  },
+                ],
+                "width": 6,
+              },
+            ]
+          }
+        />
+        <View
+          colorMilestone="#3A8E5D"
+          hasAttendedClass401={true}
+          hasSignedMissionCovenant={false}
+          isWhite={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderColor": "#3A8E5D",
+                "borderRadius": 1,
+                "borderWidth": 0.5,
+                "height": 6,
+                "marginTop": 4,
+                "transform": Array [
+                  Object {
+                    "rotate": "135deg",
+                  },
+                ],
+                "width": 6,
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        colorMilestone="#3A8E5D"
+        hasAttendedClass101={true}
+        hasSignedMembershipAgreement={true}
+        isWhite={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3A8E5D",
+              "borderColor": "transparent",
+              "borderRadius": 1,
+              "borderWidth": 0.5,
+              "height": 6,
+              "marginLeft": -1,
+              "transform": Array [
+                Object {
+                  "rotate": "135deg",
+                },
+              ],
+              "width": 6,
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#dde1e4"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CoreMilestone Rendering renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+  testID="coreMilestone"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginVertical": 5,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 0,
+            "width": 15,
+          },
+        ]
+      }
+      testID="accept-christ"
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+      testID="baptised"
+    >
+      <SvgMock
+        fill="#dde1e4"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      isWhite={false}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 5,
+            "marginRight": 5,
+          },
+        ]
+      }
+      testID="class-milestone"
+    >
+      <View
+        colorMilestone="#3A8E5D"
+        hasAttendedClass301={true}
+        hasSignedMinistryCovenant={false}
+        isWhite={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderColor": "#3A8E5D",
+              "borderRadius": 1,
+              "borderWidth": 0.5,
+              "height": 6,
+              "marginRight": -1,
+              "transform": Array [
+                Object {
+                  "rotate": "135deg",
+                },
+              ],
+              "width": 6,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <View
+          colorMilestone="#3A8E5D"
+          hasAttendedClass201={false}
+          hasSignedMaturityCovenant={false}
+          isWhite={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#dde1e4",
+                "borderColor": "transparent",
+                "borderRadius": 1,
+                "borderWidth": 0.5,
+                "height": 6,
+                "transform": Array [
+                  Object {
+                    "rotate": "135deg",
+                  },
+                ],
+                "width": 6,
+              },
+            ]
+          }
+        />
+        <View
+          colorMilestone="#3A8E5D"
+          hasAttendedClass401={true}
+          hasSignedMissionCovenant={false}
+          isWhite={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderColor": "#3A8E5D",
+                "borderRadius": 1,
+                "borderWidth": 0.5,
+                "height": 6,
+                "marginTop": 4,
+                "transform": Array [
+                  Object {
+                    "rotate": "135deg",
+                  },
+                ],
+                "width": 6,
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        colorMilestone="#3A8E5D"
+        hasAttendedClass101={true}
+        hasSignedMembershipAgreement={true}
+        isWhite={false}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3A8E5D",
+              "borderColor": "transparent",
+              "borderRadius": 1,
+              "borderWidth": 0.5,
+              "height": 6,
+              "marginLeft": -1,
+              "transform": Array [
+                Object {
+                  "rotate": "135deg",
+                },
+              ],
+              "width": 6,
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#dde1e4"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 15,
+            "marginHorizontal": 5,
+            "marginLeft": 5,
+            "width": 15,
+          },
+        ]
+      }
+    >
+      <SvgMock
+        fill="#3A8E5D"
+        height={15}
+        width={15}
+      />
+    </View>
+  </View>
+</View>
+`;
