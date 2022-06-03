@@ -1,6 +1,11 @@
 # Changelog
 
+###v0.0.37
+
+- Fix PeopleListItem component UI add middle element
+
 ### v0.0.36
+
 - Fix importing React issue which causes crash while implementing PeopleListItem and AnimatedHeader
 - Fix CompactCardListItem's shadow issue on IOS side
 - Fix PeopleListItem component UI
@@ -9,11 +14,13 @@
 ---
 
 ### v0.0.35
+
 - Add done button in the DatePicker component for ios
 
 ---
 
 ### v0.0.34
+
 - Add LinearGradient component
 - Add CompactCardListItem component
 - Add PeopleListItem component

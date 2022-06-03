@@ -37,6 +37,7 @@ import {
   CompactCardListItem,
   LinearGradientView,
   defaultTheme,
+  minorScale,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -1616,52 +1617,103 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Row>
                 <PeopleListItem
                   name="Jane doe"
-                  maritalStatus="Married"
-                  gender="M"
-                  churchEntityName="Lake Forest"
                   profilePic={null}
-                  userId="301428"
                   isShowCheckbox={false}
                   rightButtons={null}
                   leftButtons={null}
+                  middleElement={
+                    <View
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        flex: 1,
+                        paddingVertical: minorScale(1),
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                      }}>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          flex: 1,
+                        }}
+                        variant={'caption'}>
+                        Married | Male | 50 | Lake Forest
+                      </Text>
+                    </View>
+                  }
+                  footerElement={
+                    <Text variant={'caption'}>Core Mile Stone</Text>
+                  }
                 />
               </Row>
               <Row>
                 <PeopleListItem
                   name="Jane doe"
-                  maritalStatus="Married"
-                  gender="M"
-                  churchEntityName="Lake Forest"
                   profilePic={null}
                   userId="301428"
                   isShowCheckbox={true}
                   rightButtons={null}
                   leftButtons={null}
+                  middleElement={
+                    <View
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        flex: 1,
+                        paddingVertical: minorScale(1),
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                      }}>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          flex: 1,
+                        }}
+                        variant={'caption'}>
+                        Married | Male | 50 | Lake Forest
+                      </Text>
+                    </View>
+                  }
                 />
               </Row>
               <Row>
                 <PeopleListItem
                   name="Jane doe"
-                  maritalStatus="Married"
-                  gender="M"
-                  churchEntityName="Lake Forest"
                   profilePic={null}
                   userId="301428"
                   isShowCheckbox={true}
                   rightButtons={null}
                   leftButtons={null}
                   redMarker={true}
-                  rightElement={
-                    <Text
+                  middleElement={
+                    <View
                       // eslint-disable-next-line react-native/no-inline-styles
                       style={{
-                        fontSize: 13,
-                        fontWeight: '700',
-                        color: 'orange',
-                        textAlign: 'right',
+                        flex: 1,
+                        paddingVertical: minorScale(1),
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
                       }}>
-                      Overdue
-                    </Text>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          flex: 1,
+                        }}
+                        variant={'caption'}>
+                        Married | Male | 50 | Lake Forest
+                      </Text>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          color: 'orange',
+                          textAlign: 'right',
+                        }}
+                        variant={'caption'}
+                        weight={'bold'}>
+                        Overdue
+                      </Text>
+                    </View>
+                  }
+                  footerElement={
+                    <Text variant={'caption'}>Core Mile Stone</Text>
                   }
                 />
               </Row>
