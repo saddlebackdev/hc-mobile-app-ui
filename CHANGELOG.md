@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.0.37
+
+- Add Right Element and Expandable element in Compact-card-list
+- Fix Avatar component prop heirarchy
+- Fix PeopleTabs spacings
+- Fix PeopleListItem component UI add middle element
+
 ### v0.0.36
 
 - Fix importing React issue which causes crash while implementing PeopleListItem and AnimatedHeader
