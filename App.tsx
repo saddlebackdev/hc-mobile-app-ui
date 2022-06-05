@@ -135,6 +135,11 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     {offset: 1, color: '#96B660'},
   ];
 
+  const gradientColorsCheckin = [
+    {offset: 0, color: '#A6CAE4'},
+    {offset: 1, color: '#7772C0'},
+  ];
+
   const pickerOptions = [
     {label: 'Option 1', value: 1},
     {label: 'Option 2', value: 2},
@@ -507,12 +512,14 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
               <Row>
                 <CompactCardListItem
-                  leftGradientViewStyle={{
-                    gradientColors: gradientColors,
-                  }}
                   icon={IconShapeHeart}
                   title="Music Academy"
-                  innerWrapperBg={require('./src/images/event_gradient.png')}
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColorsCheckin,
+                  }}
+                  cardGradientViewStyle={{
+                    gradientColors: gradientColorsCheckin,
+                  }}
                   headerElement={
                     <CardElementWrapper>
                       {/* Left text */}
@@ -571,6 +578,52 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                         {'Stephen Riley '}
                       </Text>
                       {'and 24 others were Baptized at Lake Forest.'}
+                    </Text>
+                  }
+                />
+              </Row>
+              <Row>
+                <CompactCardListItem
+                  icon={IconShapeHeart}
+                  title="Music Academy"
+                  redMarker={true}
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColorsCheckin,
+                  }}
+                  expandedElement={
+                    <View
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{paddingVertical: 10}}>
+                      <Text variant={'caption'}>
+                        Add Your child element as per your Design
+                      </Text>
+                    </View>
+                  }
+                  rightElement={
+                    <View
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flex: 1,
+                      }}>
+                      <IconSVG
+                        file={IconShapeHeart}
+                        size={20}
+                        color={'black'}
+                      />
+                    </View>
+                  }
+                  footerElement={
+                    <Text numberOfLines={1} variant={'subtitle2'}>
+                      {'5/10 Completed '}
+                      <Text
+                        numberOfLines={1}
+                        weight={'semiBold'}
+                        variant={'subtitle2'}
+                        color={'warningLight'}>
+                        (2 Overdue)
+                      </Text>
                     </Text>
                   }
                 />
