@@ -5,15 +5,6 @@ export interface IProps {
   /** Pass user name */
   name?: string | undefined;
 
-  /** Pass user marital status */
-  maritalStatus?: string | undefined;
-
-  /** Pass user gender */
-  gender?: string | undefined;
-
-  /** Pass church entity name */
-  churchEntityName?: string | undefined;
-
   /** Pass profile pic url */
   profilePic?: string | undefined | null;
 
@@ -41,6 +32,6 @@ export interface IProps {
   //red marker beside User Name
   redMarker?: boolean;
 
-  //right side element
-  rightElement?: React.ReactElement | null | undefined;
+  //center element
+  middleElement?: React.ReactElement | null | undefined;
 }

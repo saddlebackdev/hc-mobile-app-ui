@@ -104,16 +104,19 @@ export const Avatar: React.FC<IProps> = ({
 
   const wrapperProps = {
     $size: size,
-    activeOpacity: 0.75,
+    activeOpacity: onPress ? 0.75 : 1,
     testID: 'avatar-button',
     onPress,
   };
 
-  // Placeholder with Icon
-  if (!initials && !uri) {
+  if (uri) {
     return (
       <StyledWrapper {...wrapperProps}>
-        <Icon type="user" color={inversed ? 'white' : 'black'} size={size} />
+        <StyledImage
+          $borderRadius={borderRadius}
+          testID="avatar-image"
+          source={{uri}}
+        />
 
         {renderMarker()}
       </StyledWrapper>
@@ -121,7 +124,7 @@ export const Avatar: React.FC<IProps> = ({
   }
 
   // Placeholder with Initials
-  if (initials && !uri) {
+  if (initials) {
     return (
       <StyledWrapper {...wrapperProps}>
         <StyledInitialsWrapper $borderRadius={borderRadius}>
@@ -135,14 +138,10 @@ export const Avatar: React.FC<IProps> = ({
     );
   }
 
-  // Avatar with Image
+  // Placeholder with Icon
   return (
     <StyledWrapper {...wrapperProps}>
-      <StyledImage
-        $borderRadius={borderRadius}
-        testID="avatar-image"
-        source={{uri}}
-      />
+      <Icon type="user" color={inversed ? 'white' : 'black'} size={size} />
 
       {renderMarker()}
     </StyledWrapper>
