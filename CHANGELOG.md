@@ -1,7 +1,9 @@
 # Changelog
 
-###v0.0.37
+### v0.0.37
 
+- Fix Avatar component prop heirarchy
+- Fix PeopleTabs spacings
 - Fix PeopleListItem component UI add middle element
 
 ### v0.0.36
