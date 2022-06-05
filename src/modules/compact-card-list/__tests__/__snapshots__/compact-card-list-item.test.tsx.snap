@@ -25,7 +25,17 @@ exports[`CompactCardListItem Interactions should call onPress method when presse
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 8,
+        "marginLeft": 20,
         "opacity": 1,
+        "shadowColor": "#38424D",
+        "shadowOffset": Object {
+          "height": 4,
+          "width": -2,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 3,
       }
     }
     testID="link"
@@ -34,19 +44,7 @@ exports[`CompactCardListItem Interactions should call onPress method when presse
       style={
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
-            "borderRadius": 8,
             "flexDirection": "row",
-            "marginLeft": 20,
-          },
-          Object {
-            "shadowColor": "#38424D",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": -2,
-            },
-            "shadowOpacity": 0.2,
-            "shadowRadius": 3,
           },
         ]
       }
@@ -151,6 +149,7 @@ exports[`CompactCardListItem Interactions should call onPress method when presse
         style={
           Array [
             Object {
+              "elevation": 4,
               "flexBasis": 0,
               "flexGrow": 1,
               "flexShrink": 1,
@@ -162,25 +161,35 @@ exports[`CompactCardListItem Interactions should call onPress method when presse
           ]
         }
       >
-        <Text
-          inversed={false}
+        <View
           style={
             Array [
               Object {
-                "color": "#1C2530",
-                "fontFamily": "System",
-                "fontSize": 16,
-                "fontWeight": "700",
-                "marginTop": 0,
-                "textAlign": "left",
+                "flexDirection": "row",
               },
             ]
           }
-          testID="title"
-          variant="h4"
         >
-          TestCard
-        </Text>
+          <Text
+            inversed={false}
+            style={
+              Array [
+                Object {
+                  "color": "#1C2530",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "marginTop": 0,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="title"
+            variant="h4"
+          >
+            TestCard
+          </Text>
+        </View>
         <View
           style={
             Array [
@@ -221,7 +230,17 @@ exports[`CompactCardListItem Rendering hides icon when it is null 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 8,
+        "marginLeft": 20,
         "opacity": 1,
+        "shadowColor": "#38424D",
+        "shadowOffset": Object {
+          "height": 4,
+          "width": -2,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 3,
       }
     }
     testID="link"
@@ -230,19 +249,7 @@ exports[`CompactCardListItem Rendering hides icon when it is null 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
-            "borderRadius": 8,
             "flexDirection": "row",
-            "marginLeft": 20,
-          },
-          Object {
-            "shadowColor": "#38424D",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": -2,
-            },
-            "shadowOpacity": 0.2,
-            "shadowRadius": 3,
           },
         ]
       }
@@ -342,6 +349,7 @@ exports[`CompactCardListItem Rendering hides icon when it is null 1`] = `
         style={
           Array [
             Object {
+              "elevation": 4,
               "flexBasis": 0,
               "flexGrow": 1,
               "flexShrink": 1,
@@ -353,25 +361,35 @@ exports[`CompactCardListItem Rendering hides icon when it is null 1`] = `
           ]
         }
       >
-        <Text
-          inversed={false}
+        <View
           style={
             Array [
               Object {
-                "color": "#1C2530",
-                "fontFamily": "System",
-                "fontSize": 16,
-                "fontWeight": "700",
-                "marginTop": 0,
-                "textAlign": "left",
+                "flexDirection": "row",
               },
             ]
           }
-          testID="title"
-          variant="h4"
         >
-          TestCard
-        </Text>
+          <Text
+            inversed={false}
+            style={
+              Array [
+                Object {
+                  "color": "#1C2530",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "marginTop": 0,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="title"
+            variant="h4"
+          >
+            TestCard
+          </Text>
+        </View>
         <View
           style={
             Array [
@@ -412,7 +430,17 @@ exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 8,
+        "marginLeft": 20,
         "opacity": 1,
+        "shadowColor": "#38424D",
+        "shadowOffset": Object {
+          "height": 4,
+          "width": -2,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 3,
       }
     }
     testID="link"
@@ -421,19 +449,7 @@ exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
-            "borderRadius": 8,
             "flexDirection": "row",
-            "marginLeft": 20,
-          },
-          Object {
-            "shadowColor": "#38424D",
-            "shadowOffset": Object {
-              "height": 4,
-              "width": -2,
-            },
-            "shadowOpacity": 0.2,
-            "shadowRadius": 3,
           },
         ]
       }
@@ -538,6 +554,7 @@ exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
         style={
           Array [
             Object {
+              "elevation": 4,
               "flexBasis": 0,
               "flexGrow": 1,
               "flexShrink": 1,
@@ -549,25 +566,35 @@ exports[`CompactCardListItem Rendering renders itself correctly 1`] = `
           ]
         }
       >
-        <Text
-          inversed={false}
+        <View
           style={
             Array [
               Object {
-                "color": "#1C2530",
-                "fontFamily": "System",
-                "fontSize": 16,
-                "fontWeight": "700",
-                "marginTop": 0,
-                "textAlign": "left",
+                "flexDirection": "row",
               },
             ]
           }
-          testID="title"
-          variant="h4"
         >
-          TestCard
-        </Text>
+          <Text
+            inversed={false}
+            style={
+              Array [
+                Object {
+                  "color": "#1C2530",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "marginTop": 0,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="title"
+            variant="h4"
+          >
+            TestCard
+          </Text>
+        </View>
         <View
           style={
             Array [
