@@ -23,12 +23,12 @@ export const StyledRow = Styled.View<IStyledRow>`
   border-bottom-color: ${({theme}) => theme.colors.grayThree};
 `;
 export const StyledLeftWrapper = Styled.View`
-  flex: 0.6;
+  flex: 1;
   align-items: flex-start;
 `;
 export const StyledRightWrapper = Styled.View`
   align-items: flex-end;
-  flex: 0.4;
+  flex: 0.35;
 `;
 export const StyledRightTextWrapper = Styled(Text)`
   font-size: 12px;

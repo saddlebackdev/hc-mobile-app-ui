@@ -740,7 +740,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                           </View>
                           <View
                             // eslint-disable-next-line react-native/no-inline-styles
-                            style={{marginLeft: 10}}>
+                            style={{marginLeft: 10, flex: 1}}>
                             <Heading variant="h4">Unclaimed</Heading>
                             <View
                               // eslint-disable-next-line react-native/no-inline-styles
@@ -781,7 +781,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                           </View>
                           <View
                             // eslint-disable-next-line react-native/no-inline-styles
-                            style={{marginLeft: 10}}>
+                            style={{marginLeft: 10, flex: 1}}>
                             <Heading variant="h4">Team Member 1</Heading>
                             <View
                               // eslint-disable-next-line react-native/no-inline-styles

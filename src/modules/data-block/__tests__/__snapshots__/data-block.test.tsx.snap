@@ -33,7 +33,7 @@ exports[`DataBlock Rendering should render properly 1`] = `
           Object {
             "alignItems": "flex-start",
             "flexBasis": 0,
-            "flexGrow": 0.6,
+            "flexGrow": 1,
             "flexShrink": 1,
           },
         ]
@@ -64,7 +64,7 @@ exports[`DataBlock Rendering should render properly 1`] = `
           Object {
             "alignItems": "flex-end",
             "flexBasis": 0,
-            "flexGrow": 0.4,
+            "flexGrow": 0.35,
             "flexShrink": 1,
           },
         ]
@@ -111,7 +111,7 @@ exports[`DataBlock Rendering should render properly 1`] = `
           Object {
             "alignItems": "flex-start",
             "flexBasis": 0,
-            "flexGrow": 0.6,
+            "flexGrow": 1,
             "flexShrink": 1,
           },
         ]
@@ -142,7 +142,7 @@ exports[`DataBlock Rendering should render properly 1`] = `
           Object {
             "alignItems": "flex-end",
             "flexBasis": 0,
-            "flexGrow": 0.4,
+            "flexGrow": 0.35,
             "flexShrink": 1,
           },
         ]
