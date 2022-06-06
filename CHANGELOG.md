@@ -6,6 +6,7 @@
 - Fix Avatar component prop heirarchy
 - Fix PeopleTabs spacings
 - Fix PeopleListItem component UI add middle element
+- Add Core Milestone Component
 
 ### v0.0.36
 
@@ -13,7 +14,6 @@
 - Fix CompactCardListItem's shadow issue on IOS side
 - Fix PeopleListItem component UI
 - Add link label in Tab component
-- Add Core Milestone Component
 
 ---
 
