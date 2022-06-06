@@ -1,5 +1,8 @@
 # Changelog
 
+### v0.0.37
+- Modify the Data block component adding JSX element for left and right.
+
 ### v0.0.36
 - Fix importing React issue which causes crash while implementing PeopleListItem and AnimatedHeader
 - Fix CompactCardListItem's shadow issue on IOS side
