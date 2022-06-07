@@ -2,6 +2,7 @@
 
 ### v0.0.37
 
+- Added Circular progress view
 - Add Right Element and Expandable element in Compact-card-list
 - Fix Avatar component prop heirarchy
 - Fix PeopleTabs spacings

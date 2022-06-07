@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CircularProgress Rendering renders correctly 1`] = `
+<View
+  radius={20}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 40,
+        "justifyContent": "center",
+        "width": 40,
+      },
+    ]
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    bbHeight={40}
+    bbWidth={40}
+    focusable={false}
+    height={40}
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderWidth": 0,
+        },
+        Array [
+          Object {
+            "transform": Array [
+              Object {
+                "rotate": "270deg",
+              },
+            ],
+          },
+        ],
+        Object {
+          "flex": 0,
+          "height": 40,
+          "width": 40,
+        },
+      ]
+    }
+    testID="empty-circle"
+    vbHeight={64}
+    vbWidth={64}
+    width={40}
+  >
+    <RNSVGGroup
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+    >
+      <RNSVGGroup>
+        <RNSVGCircle
+          cx="50%"
+          cy="50%"
+          fill={0}
+          propList={
+            Array [
+              "fill",
+              "stroke",
+              "strokeWidth",
+              "strokeOpacity",
+            ]
+          }
+          r={26}
+          stroke={4292600035}
+          strokeOpacity={1}
+          strokeWidth={12}
+        />
+      </RNSVGGroup>
+    </RNSVGGroup>
+  </RNSVGSvgView>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "position": "absolute",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "shadowColor": "rgba(100,100,100,0.6)",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0.5,
+          },
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={40}
+        bbWidth={40}
+        focusable={false}
+        height={40}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Array [
+              Object {
+                "transform": Array [
+                  Object {
+                    "rotate": "270deg",
+                  },
+                ],
+              },
+            ],
+            Object {
+              "flex": 0,
+              "height": 40,
+              "width": 40,
+            },
+          ]
+        }
+        vbHeight={64}
+        vbWidth={64}
+        width={40}
+      >
+        <RNSVGGroup
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGCircle
+              cx="50%"
+              cy="50%"
+              propList={
+                Array [
+                  "stroke",
+                  "strokeWidth",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                ]
+              }
+              r={26}
+              stroke={4294901760}
+              strokeDasharray={
+                Array [
+                  163.36281798666926,
+                  163.36281798666926,
+                ]
+              }
+              strokeDashoffset={196.03538158400312}
+              strokeLinecap={1}
+              strokeWidth={12}
+            />
+          </RNSVGGroup>
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "shadowColor": "rgba(100,100,100,0.6)",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 0.5,
+          },
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={40}
+        bbWidth={40}
+        focusable={false}
+        height={40}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Array [
+              Object {
+                "transform": Array [
+                  Object {
+                    "rotate": "270deg",
+                  },
+                ],
+              },
+            ],
+            Object {
+              "flex": 0,
+              "height": 40,
+              "width": 40,
+            },
+          ]
+        }
+        vbHeight={64}
+        vbWidth={64}
+        width={40}
+      >
+        <RNSVGGroup
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGCircle
+              cx="50%"
+              cy="50%"
+              propList={
+                Array [
+                  "stroke",
+                  "strokeWidth",
+                  "strokeDasharray",
+                  "strokeDashoffset",
+                  "strokeLinecap",
+                ]
+              }
+              r={26}
+              stroke={4294951115}
+              strokeDasharray={
+                Array [
+                  163.36281798666926,
+                  163.36281798666926,
+                ]
+              }
+              strokeDashoffset={98.01769079200156}
+              strokeLinecap={1}
+              strokeWidth={12}
+            />
+          </RNSVGGroup>
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
