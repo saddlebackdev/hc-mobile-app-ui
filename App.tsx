@@ -43,6 +43,8 @@ import Icon from './src/modules/icon/icon';
 
 import IconSVG from './src/modules/icon/icon-external';
 import IconShapeHeart from './src/images/shape-heart.svg';
+import {IProgressValue} from './src/modules/circular-progress/circular-progress.types';
+import CircularProgress from './src/modules/circular-progress/circular-progress';
 
 // Interfaces
 interface IProps {}
@@ -101,6 +103,19 @@ const linearGradientView2Style = StyleSheet.flatten<ViewStyle>({
   justifyContent: 'center',
   alignItems: 'center',
 });
+
+const progressValues: IProgressValue[] = [
+  {
+    value: 20,
+    strokeColor: defaultTheme.colors.warningLight,
+    clockwise: false,
+  },
+  {
+    value: 40,
+    strokeColor: defaultTheme.colors.successLight,
+    clockwise: true,
+  },
+];
 
 const onPressMock = () => false;
 
@@ -442,6 +457,29 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   }}
                   linkLabel={'View All'}
                   onLinkPress={onPressMock}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Linear Gradient View */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Circular Progress View</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show Circular Progress View</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <CircularProgress
+                  radius={30}
+                  maxValue={100}
+                  inActiveStrokeWidth={12}
+                  activeStrokeWidth={12}
+                  inActiveStrokeColor={defaultTheme.colors.grayThree}
+                  progressValues={progressValues}
                 />
               </Row>
             </Section.Content>
