@@ -2,6 +2,7 @@
 
 ### v0.0.37
 
+- Modify the Data block component adding JSX element for left and right.
 - Added Circular progress view
 - Add Right Element and Expandable element in Compact-card-list
 - Fix Avatar component prop heirarchy
