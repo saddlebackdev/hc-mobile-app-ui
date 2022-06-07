@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ImageSourcePropType, GestureResponderEvent} from 'react-native';
+import {GestureResponderEvent} from 'react-native';
 
 // Gradient Color Prop
 interface GradientColorProp {
@@ -19,11 +19,6 @@ interface GradientStyleProp {
   horizontal?: boolean;
 }
 
-export interface InnerWrapperProp {
-  /** background image of Card if exists or it will display white color */
-  innerWrapperBg?: ImageSourcePropType;
-}
-
 export interface FooterWrapperProp {
   /** footer element of Card */
   footerElement?:
@@ -40,9 +35,6 @@ export interface HeaderWrapperProp {
     | React.ReactElement
     | null
     | undefined;
-
-  /** background image of Card if exists or it will display white color */
-  innerWrapperBg?: ImageSourcePropType;
 
   /** color of the title */
   titleColor?: string;
@@ -64,6 +56,23 @@ export type IProps = {
     | null
     | undefined;
 
+  /** right element of Card */
+  rightElement?:
+    | React.ComponentType<any>
+    | React.ReactElement
+    | null
+    | undefined;
+
+  /** expanded element of Card */
+  expandedElement?:
+    | React.ComponentType<any>
+    | React.ReactElement
+    | null
+    | undefined;
+
+  /** gradient view style of Card View */
+  cardGradientViewStyle?: GradientStyleProp;
+
   /** gradient view style of left box */
   leftGradientViewStyle: GradientStyleProp;
 
@@ -73,8 +82,8 @@ export type IProps = {
   /** title of Card */
   title: string;
 
-  /** background image of Card if exists or it will display white color */
-  innerWrapperBg?: ImageSourcePropType;
+  //red marker beside User Name
+  redMarker?: boolean;
 
   /** on press event of Card */
   onPress?: ((event: GestureResponderEvent) => void) | undefined;

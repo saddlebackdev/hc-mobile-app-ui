@@ -16,7 +16,7 @@ export const StyledWrapper = Styled.View`
 export const StyledTouchable = Styled.TouchableOpacity<IStyledTouchable>`
   margin-left: ${({$isFirstChild}) => ($isFirstChild ? 0 : majorScale(1))}px;
   margin-right: ${({$isLastChild}) => ($isLastChild ? 0 : majorScale(1))}px;
-  padding-bottom: ${majorScale(1)}px;
+  padding-bottom: 8px;
 
   border-bottom-width: 3px;
   border-bottom-color: ${({theme, $isActive}) => {
