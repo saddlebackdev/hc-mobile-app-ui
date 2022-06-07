@@ -121,10 +121,9 @@ exports[`UserItem Interactions should call the onPress method when card is press
             Object {
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 10,
-              "paddingTop": 20,
+              "paddingLeft": 22,
+              "paddingRight": 11,
+              "paddingVertical": 11,
             },
           ]
         }
@@ -205,8 +204,10 @@ exports[`UserItem Interactions should call the onPress method when card is press
           style={
             Array [
               Object {
-                "paddingLeft": 10,
-                "width": "82%",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "paddingLeft": 11,
               },
             ]
           }
@@ -225,9 +226,10 @@ exports[`UserItem Interactions should call the onPress method when card is press
               style={
                 Array [
                   Object {
-                    "alignItems": "center",
+                    "flexBasis": 0,
                     "flexDirection": "row",
-                    "width": "82%",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                   },
                 ]
               }
@@ -238,24 +240,28 @@ exports[`UserItem Interactions should call the onPress method when card is press
                     Object {
                       "color": "#1C2530",
                       "fontFamily": "System",
-                      "fontSize": 18,
+                      "fontSize": 16,
                       "fontWeight": "700",
-                      "maxWidth": "86%",
                       "textAlign": "left",
                     },
                   ]
                 }
                 testID="heading"
-                variant="h3"
+                variant="h4"
               >
                 Stephen John
               </Text>
             </View>
             <Text
+              alignment="right"
+              muted={true}
               style={
                 Array [
                   Object {
                     "color": "#97A4AB",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                     "fontFamily": "System",
                     "fontSize": 14,
                     "fontStyle": "normal",
@@ -265,63 +271,11 @@ exports[`UserItem Interactions should call the onPress method when card is press
                 ]
               }
               testID="user-id"
+              variant="subtitle2"
             >
               ID:
               512345
             </Text>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "width": "100%",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#97A4AB",
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "marginBottom": 5,
-                      "marginTop": 5,
-                      "textAlign": "left",
-                      "width": "74%",
-                    },
-                  ]
-                }
-                testID="text"
-              >
-                Male | Married | Corona
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "flex-end",
-                      "marginLeft": 29,
-                    },
-                  ]
-                }
-              />
-            </View>
           </View>
         </View>
       </View>
@@ -451,10 +405,9 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
             Object {
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 10,
-              "paddingTop": 20,
+              "paddingLeft": 22,
+              "paddingRight": 11,
+              "paddingVertical": 11,
             },
           ]
         }
@@ -535,8 +488,10 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
           style={
             Array [
               Object {
-                "paddingLeft": 10,
-                "width": "82%",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "paddingLeft": 11,
               },
             ]
           }
@@ -555,9 +510,10 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               style={
                 Array [
                   Object {
-                    "alignItems": "center",
+                    "flexBasis": 0,
                     "flexDirection": "row",
-                    "width": "82%",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                   },
                 ]
               }
@@ -568,24 +524,28 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
                     Object {
                       "color": "#1C2530",
                       "fontFamily": "System",
-                      "fontSize": 18,
+                      "fontSize": 16,
                       "fontWeight": "700",
-                      "maxWidth": "86%",
                       "textAlign": "left",
                     },
                   ]
                 }
                 testID="heading"
-                variant="h3"
+                variant="h4"
               >
                 Stephen John
               </Text>
             </View>
             <Text
+              alignment="right"
+              muted={true}
               style={
                 Array [
                   Object {
                     "color": "#97A4AB",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                     "fontFamily": "System",
                     "fontSize": 14,
                     "fontStyle": "normal",
@@ -595,63 +555,11 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
                 ]
               }
               testID="user-id"
+              variant="subtitle2"
             >
               ID:
               512345
             </Text>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "width": "100%",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#97A4AB",
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "marginBottom": 5,
-                      "marginTop": 5,
-                      "textAlign": "left",
-                      "width": "74%",
-                    },
-                  ]
-                }
-                testID="text"
-              >
-                Male | Married | Corona
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "flex-end",
-                      "marginLeft": 29,
-                    },
-                  ]
-                }
-              />
-            </View>
           </View>
         </View>
       </View>
@@ -781,10 +689,9 @@ exports[`UserItem Rendering should render properly 1`] = `
             Object {
               "backgroundColor": "#FFFFFF",
               "flexDirection": "row",
-              "paddingBottom": 20,
-              "paddingLeft": 20,
-              "paddingRight": 10,
-              "paddingTop": 20,
+              "paddingLeft": 22,
+              "paddingRight": 11,
+              "paddingVertical": 11,
             },
           ]
         }
@@ -849,8 +756,10 @@ exports[`UserItem Rendering should render properly 1`] = `
           style={
             Array [
               Object {
-                "paddingLeft": 10,
-                "width": "82%",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "paddingLeft": 11,
               },
             ]
           }
@@ -869,9 +778,10 @@ exports[`UserItem Rendering should render properly 1`] = `
               style={
                 Array [
                   Object {
-                    "alignItems": "center",
+                    "flexBasis": 0,
                     "flexDirection": "row",
-                    "width": "82%",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                   },
                 ]
               }
@@ -882,24 +792,28 @@ exports[`UserItem Rendering should render properly 1`] = `
                     Object {
                       "color": "#1C2530",
                       "fontFamily": "System",
-                      "fontSize": 18,
+                      "fontSize": 16,
                       "fontWeight": "700",
-                      "maxWidth": "86%",
                       "textAlign": "left",
                     },
                   ]
                 }
                 testID="heading"
-                variant="h3"
+                variant="h4"
               >
                 Stephen John
               </Text>
             </View>
             <Text
+              alignment="right"
+              muted={true}
               style={
                 Array [
                   Object {
                     "color": "#97A4AB",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
                     "fontFamily": "System",
                     "fontSize": 14,
                     "fontStyle": "normal",
@@ -909,63 +823,11 @@ exports[`UserItem Rendering should render properly 1`] = `
                 ]
               }
               testID="user-id"
+              variant="subtitle2"
             >
               ID:
               512345
             </Text>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "width": "100%",
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "justifyContent": "space-between",
-                    "width": "100%",
-                  },
-                ]
-              }
-            >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#97A4AB",
-                      "fontFamily": "System",
-                      "fontSize": 14,
-                      "fontStyle": "normal",
-                      "fontWeight": "400",
-                      "marginBottom": 5,
-                      "marginTop": 5,
-                      "textAlign": "left",
-                      "width": "74%",
-                    },
-                  ]
-                }
-                testID="text"
-              >
-                Male | Married | Corona
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "flex-end",
-                      "marginLeft": 29,
-                    },
-                  ]
-                }
-              />
-            </View>
           </View>
         </View>
       </View>
