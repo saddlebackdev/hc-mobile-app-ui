@@ -1,12 +1,16 @@
 # Changelog
 
+### v0.0.38
+
+- Add Core Milestone Component
+- Added caret icon for picker on android 
+
 ### v0.0.37
 
 - Add Right Element and Expandable element in Compact-card-list
 - Fix Avatar component prop heirarchy
 - Fix PeopleTabs spacings
 - Fix PeopleListItem component UI add middle element
-- Add Core Milestone Component
 
 ### v0.0.36
 
