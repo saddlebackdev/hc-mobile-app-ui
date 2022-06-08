@@ -22,6 +22,7 @@
     "sourceMap": true
   },
   "include": ["src"],
+  "files": ["src/styled.d.ts", "src/svg.d.ts"],
   "exclude": [
     "dist",
     "node_modules",
