@@ -49,7 +49,7 @@ const getStyles = (
       fontSize: isUnderlined ? 20 : 16,
     },
     iconContainer: {
-      marginTop: 4,
+      marginTop: DeviceUtils.isAndroid() ? 12 : 4,
       marginRight: 4,
     },
     chevronContainer: {
@@ -99,10 +99,6 @@ const getStyles = (
 // Get Icon
 const getIcon = () => {
   return () => {
-    if (DeviceUtils.isAndroid()) {
-      return null;
-    }
-
     return <Icon size={14} type="chevronDown" />;
   };
 };
