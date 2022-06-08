@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.0.38
+
+- Add Core Milestone Component
+- Added caret icon for picker on android 
+
 ### v0.0.37
 
 - Modify the Data block component adding JSX element for left and right.

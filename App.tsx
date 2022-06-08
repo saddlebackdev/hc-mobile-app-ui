@@ -37,6 +37,7 @@ import {
   CompactCardListItem,
   LinearGradientView,
   defaultTheme,
+  CoreMilestone,
   minorScale,
 } from './src';
 import Icon from './src/modules/icon/icon';
@@ -1899,6 +1900,81 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   footerElement={
                     <Text variant={'caption'}>Core Mile Stone</Text>
                   }
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Core Milestone</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Display core milestone</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <CoreMilestone
+                  isWhite={false}
+                  hasAttendedClass101={true}
+                  hasAttendedClass201={false}
+                  hasAttendedClass301={true}
+                  hasAttendedClass401={true}
+                  hasSignedMembershipAgreement={true}
+                  hasSignedMaturityCovenant={false}
+                  hasSignedMinistryCovenant={false}
+                  hasSignedMissionCovenant={false}
+                  hasAcceptedChrist={true}
+                  isBaptised={false}
+                  isInSmallGroup={false}
+                  isInMinistry={true}
+                  isActiveInMissions={true}
+                  isAdult={true}
+                  isStudent={false}
+                  isChild={false}
+                  gender={'M'}
+                />
+              </Row>
+              <Row>
+                <CoreMilestone
+                  isWhite={false}
+                  hasAttendedClass101={true}
+                  hasAttendedClass201={false}
+                  hasAttendedClass301={true}
+                  hasAttendedClass401={true}
+                  hasSignedMembershipAgreement={true}
+                  hasSignedMaturityCovenant={false}
+                  hasSignedMinistryCovenant={false}
+                  hasSignedMissionCovenant={false}
+                  hasAcceptedChrist={true}
+                  isBaptised={false}
+                  isInSmallGroup={false}
+                  isInMinistry={true}
+                  isActiveInMissions={true}
+                  isAdult={false}
+                  isStudent={true}
+                  isChild={false}
+                />
+              </Row>
+              <Row>
+                <CoreMilestone
+                  isWhite={false}
+                  hasAttendedClass101={true}
+                  hasAttendedClass201={false}
+                  hasAttendedClass301={true}
+                  hasAttendedClass401={true}
+                  hasSignedMembershipAgreement={true}
+                  hasSignedMaturityCovenant={false}
+                  hasSignedMinistryCovenant={false}
+                  hasSignedMissionCovenant={false}
+                  hasAcceptedChrist={true}
+                  isBaptised={false}
+                  isInSmallGroup={false}
+                  isInMinistry={true}
+                  isActiveInMissions={true}
+                  isAdult={false}
+                  isStudent={false}
+                  isChild={true}
                 />
               </Row>
             </Section.Content>
