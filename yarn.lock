@@ -4851,6 +4851,11 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+hc-app-icons@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/hc-app-icons/-/hc-app-icons-1.0.5.tgz#faa040bdef5f02cabbf4b6285fd0480163c42031"
+  integrity sha512-AnVR9sarte/UWZw54RChisjju1Qmbqf95T/sGcmX4eTYxmeJVclQ3yRQp2mif/7S2TVShV91uZOd/JcYD8pmqw==
+
 hermes-engine@~0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/hermes-engine/-/hermes-engine-0.9.0.tgz#84d9cfe84e8f6b1b2020d6e71b350cec84ed982f"
@@ -6688,6 +6693,11 @@ mkdirp@^0.5.1:
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
+
+moment@^2.29.3:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.3.tgz#edd47411c322413999f7a5940d526de183c031f3"
+  integrity sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==
 
 ms@2.0.0:
   version "2.0.0"
