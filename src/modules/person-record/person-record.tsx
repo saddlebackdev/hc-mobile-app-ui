@@ -15,6 +15,7 @@ import Avatar from '../avatar/avatar';
 import PeopleTabs from '../people-tabs/people-tabs';
 import CoreMilestones from '../core-milestone/core-milestone';
 import LinearGradient from '../linear-gradient/linear-gradient-view';
+import LowerPrompt from '../lower-prompt/lower-prompt';
 import {majorScale} from '../scales';
 
 // Styles
@@ -106,15 +107,121 @@ export const PersonRecord: React.FC<IProps> = ({
   onPressCall,
   onPressSms,
   onPressEmail,
+  shouldShowCallConfirmation = true,
+  shouldShowEmailConfirmation = true,
+  shouldShowSmsConfirmation = true,
   preSelectedTabValue,
   tabs = [],
 }): React.ReactElement => {
   // State
+  // prettier-ignore
   const [selectedTab, setSelectedTab] = React.useState<any>(null);
+  // prettier-ignore
+  const [isCallConfirmationShown, setIsCallConfirmationShown] = React.useState<boolean>(false);
+  // prettier-ignore
+  const [isSmsConfirmationShown, setIsSmsConfirmationShown] = React.useState<boolean>(false);
+  // prettier-ignore
+  const [isEmailConfirmationShown, setIsEmailConfirmationShown] = React.useState<boolean>(false);
 
   // On Tab Change
   const onTabChange = (tab: ITab): void => {
     setSelectedTab(tab);
+  };
+
+  // Show Call Confirmation
+  const showCallConfirmation = (): void => {
+    setIsCallConfirmationShown(true);
+  };
+
+  // Show Sms Confirmation
+  const showSmsConfirmation = (): void => {
+    setIsSmsConfirmationShown(true);
+  };
+
+  // Show Email Confirmation
+  const showEmailConfirmation = (): void => {
+    setIsEmailConfirmationShown(true);
+  };
+
+  // Hide Call Confirmation
+  const hideCallConfirmation = (): void => {
+    setIsCallConfirmationShown(false);
+  };
+
+  // Hide Sms Confirmation
+  const hideSmsConfirmation = (): void => {
+    setIsSmsConfirmationShown(false);
+  };
+
+  // Hide Email Confirmation
+  const hideEmailConfirmation = (): void => {
+    setIsEmailConfirmationShown(false);
+  };
+
+  // On Press Call Icon
+  const onPressCallIcon = () => {
+    if (!shouldShowCallConfirmation) {
+      const primaryPhone = phoneNumbers?.find(x => x?.isPrimary);
+
+      return onPressCall(primaryPhone);
+    }
+
+    showCallConfirmation();
+  };
+
+  // On Press Sms Icon
+  const onPressSmsIcon = () => {
+    if (!shouldShowSmsConfirmation) {
+      const primaryPhone = phoneNumbers?.find(x => x?.isPrimary);
+
+      return onPressSms(primaryPhone);
+    }
+
+    showSmsConfirmation();
+  };
+
+  // On Press Email Icon
+  const onPressEmailIcon = () => {
+    if (!shouldShowEmailConfirmation) {
+      const primaryEmail = emailAddresses?.find(x => x?.isPrimary);
+
+      return onPressEmail(primaryEmail);
+    }
+
+    showEmailConfirmation();
+  };
+
+  // On Confirm Call
+  const onConfirmCall = () => {
+    const primaryPhone = phoneNumbers?.find(x => x?.isPrimary);
+
+    if (primaryPhone) {
+      onPressCall(primaryPhone);
+    }
+
+    hideCallConfirmation();
+  };
+
+  // On Confirm Sms
+  const onConfirmSms = () => {
+    const primaryPhone = phoneNumbers?.find(x => x?.isPrimary);
+
+    if (primaryPhone) {
+      onPressSms(primaryPhone);
+    }
+
+    hideSmsConfirmation();
+  };
+
+  // On Confirm Email
+  const onConfirmEmail = () => {
+    const primaryEmail = emailAddresses?.find(x => x?.isPrimary);
+
+    if (primaryEmail) {
+      onPressEmail(primaryEmail);
+    }
+
+    hideEmailConfirmation();
   };
 
   React.useEffect(() => {
@@ -183,25 +290,19 @@ export const PersonRecord: React.FC<IProps> = ({
       {/* Contact Options */}
       <StyledContactOptions.Wrapper>
         <StyledContactOptions.Item $isActive={!!primaryPhone}>
-          <Link
-            onPress={() => onPressCall(primaryPhone)}
-            disabled={!!primaryPhone}>
+          <Link onPress={onPressCallIcon} disabled={!primaryPhone}>
             <Icon file={IconPhone} size={22} color="#1C93C4" />
           </Link>
         </StyledContactOptions.Item>
 
         <StyledContactOptions.Item $isActive={!!primaryPhone}>
-          <Link
-            onPress={() => onPressSms(primaryPhone)}
-            disabled={!!primaryPhone}>
+          <Link onPress={onPressSmsIcon} disabled={!primaryPhone}>
             <Icon file={IconSms} size={22} color="#56C4C4" />
           </Link>
         </StyledContactOptions.Item>
 
         <StyledContactOptions.Item $isActive={!!primaryEmail}>
-          <Link
-            onPress={() => onPressEmail(primaryEmail)}
-            disabled={!!primaryEmail}>
+          <Link onPress={onPressEmailIcon} disabled={!primaryEmail}>
             <Icon file={IconEmail} size={22} color="#C68EF6" />
           </Link>
         </StyledContactOptions.Item>
@@ -329,6 +430,45 @@ export const PersonRecord: React.FC<IProps> = ({
         {/* Tab Content */}
         <StyledTabContentWrapper>{selectedTab?.jsx}</StyledTabContentWrapper>
       </StyledScrollView>
+
+      {/* Call Confirmation Prompt */}
+      {shouldShowCallConfirmation && (
+        <LowerPrompt
+          isOpen={isCallConfirmationShown}
+          leftButtonLabel="Cancel"
+          leftButtonCallback={hideCallConfirmation}
+          rightButtonLabel="Call"
+          rightButtonCallback={onConfirmCall}
+          intent="success">
+          Are you sure you want to make a phone call?
+        </LowerPrompt>
+      )}
+
+      {/* SMS Confirmation Prompt */}
+      {shouldShowSmsConfirmation && (
+        <LowerPrompt
+          isOpen={isSmsConfirmationShown}
+          leftButtonLabel="Cancel"
+          leftButtonCallback={hideSmsConfirmation}
+          rightButtonLabel="Yes"
+          rightButtonCallback={onConfirmSms}
+          intent="success">
+          Are you sure you want to compose a text message?
+        </LowerPrompt>
+      )}
+
+      {/* Email Confirmation Prompt */}
+      {shouldShowEmailConfirmation && (
+        <LowerPrompt
+          isOpen={isEmailConfirmationShown}
+          leftButtonLabel="Cancel"
+          leftButtonCallback={hideEmailConfirmation}
+          rightButtonLabel="Yes"
+          rightButtonCallback={onConfirmEmail}
+          intent="success">
+          Are you sure you want to compose an email?
+        </LowerPrompt>
+      )}
     </>
   );
 };

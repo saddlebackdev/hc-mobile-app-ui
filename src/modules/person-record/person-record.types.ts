@@ -26,6 +26,15 @@ export interface IProps {
   /** Function to be called when the email icon is pressed. */
   onPressEmail: Function;
 
+  /** Show a confirmation prompt on click of "Call" icon. Defaults to true. */
+  shouldShowCallConfirmation?: boolean;
+
+  /** Show a confirmation prompt on click of "Email" icon. Defaults to true. */
+  shouldShowEmailConfirmation?: boolean;
+
+  /** Show a confirmation prompt on click of "SMS" icon. Defaults to true. */
+  shouldShowSmsConfirmation?: boolean;
+
   /** Basic details of this person. */
   person: {
     age: number;
