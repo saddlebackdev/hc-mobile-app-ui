@@ -1,7 +1,6 @@
 // Modules
 import * as React from 'react';
 import Styled from 'styled-components/native';
-import {IconSms, IconEmail, IconPhone} from 'hc-app-icons';
 import Moment from 'moment';
 
 // Types
@@ -17,6 +16,11 @@ import CoreMilestones from '../core-milestone/core-milestone';
 import LinearGradient from '../linear-gradient/linear-gradient-view';
 import LowerPrompt from '../lower-prompt/lower-prompt';
 import {majorScale} from '../scales';
+
+// Images
+import IconPhone from '../../images/phone.svg';
+import IconEmail from '../../images/email.svg';
+import IconSms from '../../images/sms.svg';
 
 // Styles
 const StyledContactOptions = {
