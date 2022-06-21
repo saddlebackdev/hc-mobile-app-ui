@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="24px" viewBox="0 0 14 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Chevron - Left</title>
+    <defs>
+        <path d="M5.23593668,11.8451227 C4.90226973,11.4561095 4.92272118,10.8648379 5.29596157,10.4915975 L15.4888863,0.298672846 C15.8871464,-0.0995872988 16.5111938,-0.0966484099 16.8979072,0.290064986 L18.3301472,1.72230495 C18.7163873,2.10854506 18.7130067,2.73985852 18.3215393,3.1313259 L9.60774251,11.8451227 L18.3215393,20.5589195 C18.7130067,20.9503869 18.7163873,21.5817004 18.3301472,21.9679405 L16.8979072,23.4001804 C16.5111938,23.7868938 15.8871464,23.7898327 15.4888863,23.3915726 L5.29596157,13.1986479 C4.92272118,12.8254075 4.90226973,12.2341359 5.23593668,11.8451227 L5.23593668,11.8451227 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons---In-Use-(ME)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-546.000000, -348.000000)">
+            <g id="Chevron---Left" transform="translate(541.000000, 348.000000)">
+                <rect id="Rectangle-3" x="0" y="0" width="24" height="24"></rect>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Chevron" fill="#97A4AB" xlink:href="#path-1"></use>
+                <g id="Group" mask="url(#mask-2)" fill="#1C2530">
+                    <g id="💟-Icon-Style">
+                        <rect id="Rectangle-2" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,6 +1,5 @@
 // Modules
 import * as React from 'react';
-import {IconCloseXCircle, IconChevronLeft} from 'hc-app-icons';
 import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
 import {
@@ -11,6 +10,7 @@ import {
   ScrollView,
 } from 'react-native';
 
+// Props
 import {IProps} from './filter-drawer.types';
 
 // Shared
@@ -20,6 +20,10 @@ import ButtonGroup from '../button-group/button-group';
 import Icon from '../icon/icon-external';
 import Heading from '../heading/heading';
 import {majorScale} from '../scales';
+
+// Images
+import IconCloseXCircle from '../../images/close-x-circle.svg';
+import IconChevronLeft from '../../images/chevron-left.svg';
 
 // Styles
 export const Wrapper = Styled.View`
