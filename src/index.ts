@@ -34,6 +34,10 @@ export {IProps as CheckboxProps} from './modules/checkbox/checkbox.types';
 export {default as Chip} from './modules/chip/chip';
 export {IProps as ChipProps} from './modules/chip/chip.types';
 
+// CircularProgress
+export {default as CircularProgress} from './modules/circular-progress/circular-progress';
+export {IProps as CircularProgressProps} from './modules/circular-progress/circular-progress.types';
+
 // Compact Card List Item
 export {default as CompactCardListItem} from './modules/compact-card-list/compact-card-list-item';
 export {IProps as CompactCardListItemProps} from './modules/compact-card-list/compact-card-list-item.types';
@@ -158,3 +162,7 @@ export {DeviceUtils, LayoutUtils} from './modules/utilities';
 // People-list-item
 export {default as PeopleListItem} from './modules/people-list/people-list-item';
 export {IProps as IPeopleItemProps} from './modules/people-list/people-list-item.types';
+
+//Core Milestone
+export {default as CoreMilestone} from './modules/core-milestone/core-milestone';
+export {IProps as ICoreMilestoneProps} from './modules/core-milestone/core-milestone.types';

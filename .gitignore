@@ -69,3 +69,6 @@ buck-out/
 # builds
 /dist
 *.tgz
+
+# testing
+/coverage

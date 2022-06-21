@@ -6,11 +6,13 @@ export interface IStyledRow {
 // Datablock Item
 export interface IDataBlockItem {
   label: string;
-  jsx: React.ReactElement | undefined;
+  jsxLeftElement: React.ReactElement | undefined;
+  jsxRightElement: React.ReactElement | undefined;
   value: string | undefined;
 }
 
 // Datablock
 export interface IProps {
   items: Array<IDataBlockItem>;
+  hideBottomLine: boolean | undefined;
 }

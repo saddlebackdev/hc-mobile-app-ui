@@ -38,12 +38,15 @@ import {
   LinearGradientView,
   defaultTheme,
   FilterDrawer,
+  CoreMilestone,
   minorScale,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
 import IconSVG from './src/modules/icon/icon-external';
 import IconShapeHeart from './src/images/shape-heart.svg';
+import {IProgressValue} from './src/modules/circular-progress/circular-progress.types';
+import CircularProgress from './src/modules/circular-progress/circular-progress';
 
 // Interfaces
 interface IProps {}
@@ -99,6 +102,19 @@ const linearGradientView2Style = StyleSheet.flatten<ViewStyle>({
   justifyContent: 'center',
   alignItems: 'center',
 });
+
+const progressValues: IProgressValue[] = [
+  {
+    value: 20,
+    strokeColor: defaultTheme.colors.warningLight,
+    clockwise: false,
+  },
+  {
+    value: 40,
+    strokeColor: defaultTheme.colors.successLight,
+    clockwise: true,
+  },
+];
 
 const onPressMock = () => false;
 
@@ -504,6 +520,29 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
           {/* Linear Gradient View */}
           <Section.Wrapper>
             <Section.Title>
+              <Heading variant="h2">Circular Progress View</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show Circular Progress View</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <CircularProgress
+                  radius={30}
+                  maxValue={100}
+                  inActiveStrokeWidth={12}
+                  activeStrokeWidth={12}
+                  inActiveStrokeColor={defaultTheme.colors.grayThree}
+                  progressValues={progressValues}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Linear Gradient View */}
+          <Section.Wrapper>
+            <Section.Title>
               <Heading variant="h2">Linear Gradient View</Heading>
             </Section.Title>
             <Section.Description>
@@ -790,7 +829,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   items={[
                     {
                       label: 'Doggo 1',
-                      jsx: (
+                      jsxLeftElement: (
                         <View
                           // eslint-disable-next-line react-native/no-inline-styles
                           style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -811,7 +850,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                     },
                     {
                       label: 'Doggo 2',
-                      jsx: (
+                      jsxLeftElement: (
                         <View
                           // eslint-disable-next-line react-native/no-inline-styles
                           style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -829,6 +868,99 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                     {
                       label: 'Simple Value',
                       value: 'Lookie Here Again!',
+                    },
+                  ]}
+                />
+              </Row>
+              <Row>
+                <DataBlock
+                  items={[
+                    {
+                      jsxLeftElement: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="full" />
+                          </View>
+                          <View
+                            // eslint-disable-next-line react-native/no-inline-styles
+                            style={{marginLeft: 10, flex: 1}}>
+                            <Heading variant="h4">Unclaimed</Heading>
+                            <View
+                              // eslint-disable-next-line react-native/no-inline-styles
+                              style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                paddingVertical: minorScale(0.5),
+                              }}>
+                              <Text
+                                numberOfLines={1}
+                                variant={'subtitle2'}
+                                color={'graySix'}>
+                                5 Active
+                                <Text
+                                  numberOfLines={1}
+                                  weight={'semiBold'}
+                                  variant={'subtitle2'}
+                                  color={'warningLight'}>
+                                  (2 Overdue)
+                                </Text>
+                              </Text>
+                            </View>
+                          </View>
+                        </View>
+                      ),
+                    },
+                  ]}
+                />
+                <DataBlock
+                  items={[
+                    {
+                      jsxLeftElement: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="full" />
+                          </View>
+                          <View
+                            // eslint-disable-next-line react-native/no-inline-styles
+                            style={{marginLeft: 10, flex: 1}}>
+                            <Heading variant="h4">Team Member 1</Heading>
+                            <View
+                              // eslint-disable-next-line react-native/no-inline-styles
+                              style={{
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                paddingVertical: minorScale(0.5),
+                              }}>
+                              <Text
+                                numberOfLines={1}
+                                variant={'subtitle2'}
+                                color={'graySix'}>
+                                5/10 Complated
+                                <Text
+                                  numberOfLines={1}
+                                  weight={'semiBold'}
+                                  variant={'subtitle2'}
+                                  color={'warningLight'}>
+                                  (2 Overdue)
+                                </Text>
+                              </Text>
+                            </View>
+                          </View>
+                        </View>
+                      ),
+                      jsxRightElement: (
+                        <View
+                          // eslint-disable-next-line react-native/no-inline-styles
+                          style={{flexDirection: 'row', alignItems: 'center'}}>
+                          <View>
+                            <Avatar uri={avatarUri} radius="full" />
+                          </View>
+                        </View>
+                      ),
                     },
                   ]}
                 />
@@ -1821,6 +1953,81 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   footerElement={
                     <Text variant={'caption'}>Core Mile Stone</Text>
                   }
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Core Milestone</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Display core milestone</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <CoreMilestone
+                  isWhite={false}
+                  hasAttendedClass101={true}
+                  hasAttendedClass201={false}
+                  hasAttendedClass301={true}
+                  hasAttendedClass401={true}
+                  hasSignedMembershipAgreement={true}
+                  hasSignedMaturityCovenant={false}
+                  hasSignedMinistryCovenant={false}
+                  hasSignedMissionCovenant={false}
+                  hasAcceptedChrist={true}
+                  isBaptised={false}
+                  isInSmallGroup={false}
+                  isInMinistry={true}
+                  isActiveInMissions={true}
+                  isAdult={true}
+                  isStudent={false}
+                  isChild={false}
+                  gender={'M'}
+                />
+              </Row>
+              <Row>
+                <CoreMilestone
+                  isWhite={false}
+                  hasAttendedClass101={true}
+                  hasAttendedClass201={false}
+                  hasAttendedClass301={true}
+                  hasAttendedClass401={true}
+                  hasSignedMembershipAgreement={true}
+                  hasSignedMaturityCovenant={false}
+                  hasSignedMinistryCovenant={false}
+                  hasSignedMissionCovenant={false}
+                  hasAcceptedChrist={true}
+                  isBaptised={false}
+                  isInSmallGroup={false}
+                  isInMinistry={true}
+                  isActiveInMissions={true}
+                  isAdult={false}
+                  isStudent={true}
+                  isChild={false}
+                />
+              </Row>
+              <Row>
+                <CoreMilestone
+                  isWhite={false}
+                  hasAttendedClass101={true}
+                  hasAttendedClass201={false}
+                  hasAttendedClass301={true}
+                  hasAttendedClass401={true}
+                  hasSignedMembershipAgreement={true}
+                  hasSignedMaturityCovenant={false}
+                  hasSignedMinistryCovenant={false}
+                  hasSignedMissionCovenant={false}
+                  hasAcceptedChrist={true}
+                  isBaptised={false}
+                  isInSmallGroup={false}
+                  isInMinistry={true}
+                  isActiveInMissions={true}
+                  isAdult={false}
+                  isStudent={false}
+                  isChild={true}
                 />
               </Row>
             </Section.Content>
