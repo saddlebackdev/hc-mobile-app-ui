@@ -1,9 +1,17 @@
 # Changelog
 
+### v0.0.39
+
+- Add FiltersDrawer component
+
+---
+
 ### v0.0.38
 
 - Add Core Milestone Component
 - Added caret icon for picker on android
+
+---
 
 ### v0.0.37
 
@@ -13,6 +21,8 @@
 - Fix Avatar component prop heirarchy
 - Fix PeopleTabs spacings
 - Fix PeopleListItem component UI add middle element
+
+---
 
 ### v0.0.36
 

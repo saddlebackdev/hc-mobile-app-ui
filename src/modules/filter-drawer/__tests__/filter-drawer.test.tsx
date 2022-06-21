@@ -60,6 +60,7 @@ describe('FilterDrawer', () => {
       const wrapper = render(
         <ThemeProvider theme={defaultTheme}>
           <FilterDrawer
+            shouldShowClearFiltersButton
             shouldShowSecondaryContent={false}
             primaryChildren={<Text>Left Component</Text>}
             secondaryChildren={<Text>Right Component</Text>}
