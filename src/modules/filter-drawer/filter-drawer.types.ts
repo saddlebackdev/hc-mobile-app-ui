@@ -36,4 +36,3 @@ export interface IProps {
   /** Boolean indicating whether the filter drawer is open. */
   isOpen: boolean;
 }
-
