@@ -77,6 +77,8 @@ export const PeopleListItem: React.FC<IProps> = ({
   rightButtons,
   redMarker,
   middleElement,
+  onRef,
+  onSwipeStart,
 }): React.ReactElement => {
   const getUserNameFirstLastCharacter = () => {
     const arrName = name?.split(' ');
@@ -88,6 +90,8 @@ export const PeopleListItem: React.FC<IProps> = ({
 
   return (
     <Swipeable
+      onSwipeStart={onSwipeStart}
+      onRef={onRef}
       leftButtonWidth={minorScale(17)}
       leftButtons={leftButtons}
       rightButtonWidth={minorScale(17)}
