@@ -3,7 +3,8 @@
 ### v0.0.38
 
 - Add Core Milestone Component
-- Added caret icon for picker on android 
+- Added caret icon for picker on android
+- Solved Swipe use in people list item
 
 ### v0.0.37
 
