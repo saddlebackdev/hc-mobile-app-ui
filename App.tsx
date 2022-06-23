@@ -120,7 +120,7 @@ const progressValues: IProgressValue[] = [
 
 const onPressMock = () => false;
 
-let swipeable: Array<any> = [];
+const swipeable: Array<any> = [];
 
 let prevOpenedRow;
 
@@ -151,8 +151,6 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     React.useState<number>(1);
 
   const closeRow = index => {
-    console.log(index);
-
     if (prevOpenedRow && prevOpenedRow !== swipeable[index]) {
       prevOpenedRow.recenter();
     }
