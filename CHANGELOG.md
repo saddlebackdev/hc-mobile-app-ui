@@ -6,6 +6,7 @@
 - Remove uri prop compulsion in Avatar Component
 - Add disabled prop in Link Component
 - Solved Swipe use in people list item
+- Fix people list swipe issue
 
 ---
 
