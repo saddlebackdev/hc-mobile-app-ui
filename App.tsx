@@ -120,6 +120,10 @@ const progressValues: IProgressValue[] = [
 
 const onPressMock = () => false;
 
+const swipeable: Array<any> = [];
+
+let prevOpenedRow;
+
 // Component
 export const App: React.FC<IProps> = (): React.ReactElement => {
   const [isChecked, setIsChecked] = React.useState<boolean>(true);
@@ -145,6 +149,14 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     React.useState<number>(2);
   const [selectedPeopleTabItem, setSelectedPeopleTabItem] =
     React.useState<number>(1);
+
+  const closeRow = index => {
+    if (prevOpenedRow && prevOpenedRow !== swipeable[index]) {
+      prevOpenedRow.recenter();
+    }
+
+    prevOpenedRow = swipeable[index];
+  };
 
   const gradientColors = [
     {offset: 0, color: '#E4DE74'},
@@ -1861,7 +1873,52 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
               <Row>
                 <PeopleListItem
+                  onSwipeStart={() => closeRow(0)}
+                  onRef={ref => (swipeable[0] = ref)}
                   name="Jane doe"
+                  profilePic={null}
+                  userId="301428"
+                  isShowCheckbox={true}
+                  rightButtons={null}
+                  leftButtons={null}
+                  redMarker={true}
+                  middleElement={
+                    <View
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        flex: 1,
+                        paddingVertical: minorScale(1),
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                      }}>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          flex: 1,
+                        }}
+                        variant={'caption'}>
+                        Married | Male | 50 | Lake Forest
+                      </Text>
+                      <Text
+                        // eslint-disable-next-line react-native/no-inline-styles
+                        style={{
+                          color: 'orange',
+                          textAlign: 'right',
+                        }}
+                        variant={'caption'}
+                        weight={'bold'}>
+                        Overdue
+                      </Text>
+                    </View>
+                  }
+                  footerElement={
+                    <Text variant={'caption'}>Core Mile Stone</Text>
+                  }
+                />
+                <PeopleListItem
+                  onSwipeStart={() => closeRow(1)}
+                  onRef={ref => (swipeable[1] = ref)}
+                  name="Mark doe"
                   profilePic={null}
                   userId="301428"
                   isShowCheckbox={true}

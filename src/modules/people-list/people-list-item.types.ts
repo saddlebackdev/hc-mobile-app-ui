@@ -34,4 +34,10 @@ export interface IProps {
 
   //center element
   middleElement?: React.ReactElement | null | undefined;
+
+  // receive swipeable component instance reference
+  onRef?: any;
+
+  // get event for recenter swipe
+  onSwipeStart?: (event: any) => any;
 }
