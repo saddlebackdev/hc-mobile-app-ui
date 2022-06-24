@@ -17,12 +17,17 @@ export const Link: React.FC<IProps> = ({
   label,
   children,
   onPress,
+  disabled = false,
   color = 'primaryLight',
   small,
   to,
 }): React.ReactElement => {
   // On Link Press
   const onLinkPress = async () => {
+    if (disabled) {
+      return;
+    }
+
     try {
       if (onPress) {
         return onPress(to);
@@ -46,7 +51,11 @@ export const Link: React.FC<IProps> = ({
   };
 
   return (
-    <StyledTouchable activeOpacity={0.75} onPress={onLinkPress} testID="link">
+    <StyledTouchable
+      activeOpacity={0.75}
+      onPress={onLinkPress}
+      disabled={disabled}
+      testID="link">
       {label ? (
         <Text color={color} small={small} weight="semiBold" testID="link-label">
           {label}

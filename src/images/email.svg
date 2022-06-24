@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Email</title>
+    <defs>
+        <path d="M22.62,20.9704623 C22.62,20.9704623 1.44,21.0369221 1.44,20.9704623 C0.717415005,20.9346467 0.115987029,20.3181988 0,19.4945001 L0,5.14609882 C0,5.14609882 11.04,14.3992462 10.98,14.3327863 C11.5752046,14.9577964 12.4847954,14.9577964 13.08,14.3327863 L24,5.14609882 L24,19.4945001 C23.905757,20.3043517 23.3270097,20.9233437 22.62,20.9704623 L22.62,20.9704623 Z M1.62,3 L22.38,3 L12,11.7837748 L1.62,3 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons---In-Use-(ME)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-893.000000, -203.000000)">
+            <g id="Email" transform="translate(893.000000, 200.000000)">
+                <rect id="Rectangle-7" x="0" y="0" width="24" height="24"></rect>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Email-Icon" fill="#1C2530" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

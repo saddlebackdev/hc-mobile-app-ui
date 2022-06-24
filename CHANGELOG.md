@@ -1,10 +1,20 @@
 # Changelog
 
+### v0.0.39
+
+- Add PersonRecord Component
+- Remove uri prop compulsion in Avatar Component
+- Add disabled prop in Link Component
+- Solved Swipe use in people list item
+
+---
+
 ### v0.0.38
 
 - Add Core Milestone Component
 - Added caret icon for picker on android
-- Solved Swipe use in people list item
+
+---
 
 ### v0.0.37
 
@@ -14,6 +24,8 @@
 - Fix Avatar component prop heirarchy
 - Fix PeopleTabs spacings
 - Fix PeopleListItem component UI add middle element
+
+---
 
 ### v0.0.36
 

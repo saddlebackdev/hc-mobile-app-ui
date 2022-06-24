@@ -110,6 +110,10 @@ export {IProps as PillToggleProps} from './modules/pill-toggle/pill-toggle.types
 export {default as PeopleTabs} from './modules/people-tabs/people-tabs';
 export {IProps as PeopleTabsProps} from './modules/people-tabs/people-tabs.types';
 
+// Person Record
+export {default as PersonRecord} from './modules/person-record/person-record';
+export {IProps as PersonRecordProps} from './modules/person-record/person-record.types';
+
 // Radio
 export {default as Radio} from './modules/radio/radio';
 export {IProps as RadioProps} from './modules/radio/radio.types';
