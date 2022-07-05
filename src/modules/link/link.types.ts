@@ -3,6 +3,9 @@ export interface IProps {
   /** Label for the link. */
   label?: string;
 
+  /** If true, disables the link. */
+  disabled?: boolean;
+
   /** Function to be called when the link is pressed. */
   onPress?: any;
 

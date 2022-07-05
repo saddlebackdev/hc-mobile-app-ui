@@ -33,7 +33,7 @@ export interface IStyledImage extends ImageProps {
 // Props
 export interface IProps {
   /** URL of the image */
-  uri: string | undefined;
+  uri?: string | null;
 
   /** React element to be rendered over the bottom-right corner of the image/icon. */
   marker?: React.ReactElement;
@@ -54,7 +54,7 @@ export interface IProps {
   radius?: 'none' | 'small' | 'full';
 
   /** Shows the initials as placeholder when image is unavailable. */
-  initials?: string;
+  initials?: string | null;
 
   /** Function to be called when the avatar is pressed. */
   onPress?: any;

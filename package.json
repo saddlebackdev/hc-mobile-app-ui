@@ -1,6 +1,6 @@
 {
   "name": "hc-mobile-app-ui",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "publishConfig": {
@@ -20,6 +20,7 @@
   "dependencies": {
     "@react-native-community/datetimepicker": "^3.5.2",
     "@react-native-picker/picker": "^2.1.0",
+    "moment": "^2.29.3",
     "react-native-modal": "^13.0.0",
     "react-native-picker-select": "^8.0.4",
     "react-native-svg": "^12.1.1",

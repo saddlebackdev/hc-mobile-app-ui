@@ -54,6 +54,7 @@ export const SelectableListItem: React.FC<IListItemProps> = ({
 export const SelectableList: React.FC<IProps> = ({
   items,
   selected,
+  noDivider,
 }): React.ReactElement => {
   // Key Extractor
   const keyExtractor = (item): string => {
@@ -77,7 +78,7 @@ export const SelectableList: React.FC<IProps> = ({
 
   return (
     <React.Fragment>
-      <Divider />
+      {!noDivider ? <Divider /> : null}
       <StyledFlatList
         data={items}
         keyExtractor={keyExtractor}
@@ -85,7 +86,7 @@ export const SelectableList: React.FC<IProps> = ({
         renderItem={renderItem}
         testID="list"
       />
-      <Divider />
+      {!noDivider ? <Divider /> : null}
     </React.Fragment>
   );
 };

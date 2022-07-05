@@ -33,4 +33,7 @@ export interface IProps {
 
   /** ID of the currently selected item. */
   selected: string | number | Array<string | number>;
+
+  /** Flag to specify whether to show divider is shown or not. */
+  noDivider?: boolean;
 }

@@ -1,8 +1,19 @@
 # Changelog
 
-### v0.0.39
+### v0.0.40
 
 - Add FiltersDrawer component
+
+--
+
+### v0.0.39
+
+- Add PersonRecord Component
+- Remove uri prop compulsion in Avatar Component
+- Add disabled prop in Link Component
+- Solved Swipe use in people list item
+- Fix people list swipe issue
+- Fix for lines added to top of campus selector header and bottom part
 
 ---
 
