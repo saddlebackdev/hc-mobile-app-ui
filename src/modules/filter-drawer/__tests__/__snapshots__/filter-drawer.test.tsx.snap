@@ -410,6 +410,11 @@ exports[`FilterDrawer Rendering should render 'back' action when in secondary vi
                       testID="drawer-back-action"
                     >
                       <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
                         accessible={true}
                         collapsable={false}
                         focusable={true}
@@ -728,6 +733,11 @@ exports[`FilterDrawer Rendering should render 'clear filters' action when in pri
                       testID="drawer-clear-filters-action"
                     >
                       <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
                         accessible={true}
                         collapsable={false}
                         focusable={true}
@@ -973,6 +983,11 @@ exports[`FilterDrawer Rendering should render 'clear filters' action when in pri
                       testID="drawer-back-action"
                     >
                       <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
                         accessible={true}
                         collapsable={false}
                         focusable={true}
@@ -1487,6 +1502,11 @@ exports[`FilterDrawer Rendering should render children properly 1`] = `
                       testID="drawer-back-action"
                     >
                       <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
                         accessible={true}
                         collapsable={false}
                         focusable={true}
@@ -2001,6 +2021,11 @@ exports[`FilterDrawer Rendering should render properly 1`] = `
                       testID="drawer-back-action"
                     >
                       <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
                         accessible={true}
                         collapsable={false}
                         focusable={true}
