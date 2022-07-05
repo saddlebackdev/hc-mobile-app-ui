@@ -36,14 +36,14 @@ export const Wrapper = Styled.View`
 `;
 export const CloseButtonWrapper = Styled.View`
   position: absolute;
-  width: 28px; height: 28px;
-  right: ${majorScale(1.3)}px;
-  top: ${majorScale(2)}px;
+  maxWidth: 32px; maxHeight: 32px;
+  right: ${majorScale(1)}px;
+  top: ${majorScale(1)}px;
   zIndex: 10;
 `;
 export const SectionWrapper = Styled.View`
   flex: 1;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items flex-start;
 `;
@@ -71,9 +71,7 @@ export const Header = {
 };
 export const ContentWrapper = Styled.View`
   width: 100%; height: 100%;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex: 1;
+  flexGrow: 1;
 `;
 export const FooterWrapper = Styled.View`
   margin-bottom: ${majorScale(8)}px;
@@ -109,7 +107,10 @@ export const FilterDrawer: React.FC<IProps> = ({
   primaryChildren = null,
   secondaryChildren = null,
   isOpen = false,
+  shouldShowFilterButton = true,
   onClose,
+  filterButtonLabel = 'Apply Filters',
+  headerTitle = 'Filters',
 }): React.ReactElement => {
   // Refs
   const modalRef = React.useRef(null);
@@ -259,7 +260,7 @@ export const FilterDrawer: React.FC<IProps> = ({
                       opacity: headerContentOpacity,
                       transform: [{translateX: headerContentTranslateX}],
                     }}>
-                    <Header.Title variant="h2">Filters</Header.Title>
+                    <Header.Title variant="h2">{headerTitle}</Header.Title>
 
                     {shouldShowClearFiltersButton && (
                       <Header.Action testID="drawer-clear-filters-action">
@@ -290,17 +291,21 @@ export const FilterDrawer: React.FC<IProps> = ({
                       </Button>
                     )}
 
-                    <Button
-                      color="success"
-                      testID="drawer-apply-filters-button"
-                      onPress={onApplyFilters}>
-                      Apply Filters
-                    </Button>
+                    {shouldShowFilterButton && (
+                      <Button
+                        color="success"
+                        testID="drawer-apply-filters-button"
+                        onPress={onApplyFilters}>
+                        {filterButtonLabel}
+                      </Button>
+                    )}
                   </ButtonGroup>
                 </SafeAreaView>
               </FooterWrapper>
             </PrimaryContentWrapper>
-
+          </AnimatedWrapper>
+          <AnimatedWrapper
+            style={{transform: [{translateX: contentWrapperTranslateX}]}}>
             {/* Secondary Content */}
             <SecondaryContentWrapper testID="drawer-secondary-content">
               <ScrollView showsVerticalScrollIndicator={false}>
@@ -337,7 +342,7 @@ export const FilterDrawer: React.FC<IProps> = ({
             testID="drawer-close-button"
             disabled={shouldShowSecondaryContent}
             onPress={onCloseModal}>
-            <Icon file={IconCloseXCircle} />
+            <Icon file={IconCloseXCircle} size={32} />
           </TouchableOpacity>
         </AnimatedCloseWrapper>
       </Wrapper>

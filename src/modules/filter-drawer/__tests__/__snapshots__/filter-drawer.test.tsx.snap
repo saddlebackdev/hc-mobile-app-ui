@@ -116,7 +116,7 @@ exports[`FilterDrawer Rendering should render 'back' action when in secondary vi
           Array [
             Object {
               "flexBasis": 0,
-              "flexDirection": "column",
+              "flexDirection": "row",
               "flexGrow": 1,
               "flexShrink": 1,
               "justifyContent": "space-between",
@@ -130,12 +130,8 @@ exports[`FilterDrawer Rendering should render 'back' action when in secondary vi
           style={
             Array [
               Object {
-                "flexBasis": 0,
-                "flexDirection": "row",
                 "flexGrow": 1,
-                "flexShrink": 1,
                 "height": "100%",
-                "justifyContent": "flex-start",
                 "width": "100%",
               },
               Object {
@@ -337,6 +333,27 @@ exports[`FilterDrawer Rendering should render 'back' action when in secondary vi
               </RCTSafeAreaView>
             </View>
           </View>
+        </View>
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
           <View
             style={
               Array [
@@ -448,11 +465,11 @@ exports[`FilterDrawer Rendering should render 'back' action when in secondary vi
         style={
           Array [
             Object {
-              "height": 28,
+              "maxHeight": 32,
+              "maxWidth": 32,
               "position": "absolute",
-              "right": 14.3,
-              "top": 22,
-              "width": 28,
+              "right": 11,
+              "top": 11,
               "zIndex": 10,
             },
             Object {
@@ -487,8 +504,8 @@ exports[`FilterDrawer Rendering should render 'back' action when in secondary vi
         >
           <test-file-stub
             fill="black"
-            height={24}
-            width={24}
+            height={32}
+            width={32}
           />
         </View>
       </View>
@@ -613,7 +630,7 @@ exports[`FilterDrawer Rendering should render 'clear filters' action when in pri
           Array [
             Object {
               "flexBasis": 0,
-              "flexDirection": "column",
+              "flexDirection": "row",
               "flexGrow": 1,
               "flexShrink": 1,
               "justifyContent": "space-between",
@@ -627,12 +644,8 @@ exports[`FilterDrawer Rendering should render 'clear filters' action when in pri
           style={
             Array [
               Object {
-                "flexBasis": 0,
-                "flexDirection": "row",
                 "flexGrow": 1,
-                "flexShrink": 1,
                 "height": "100%",
-                "justifyContent": "flex-start",
                 "width": "100%",
               },
               Object {
@@ -883,6 +896,27 @@ exports[`FilterDrawer Rendering should render 'clear filters' action when in pri
               </RCTSafeAreaView>
             </View>
           </View>
+        </View>
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
           <View
             style={
               Array [
@@ -994,11 +1028,11 @@ exports[`FilterDrawer Rendering should render 'clear filters' action when in pri
         style={
           Array [
             Object {
-              "height": 28,
+              "maxHeight": 32,
+              "maxWidth": 32,
               "position": "absolute",
-              "right": 14.3,
-              "top": 22,
-              "width": 28,
+              "right": 11,
+              "top": 11,
               "zIndex": 10,
             },
             Object {
@@ -1033,8 +1067,8 @@ exports[`FilterDrawer Rendering should render 'clear filters' action when in pri
         >
           <test-file-stub
             fill="black"
-            height={24}
-            width={24}
+            height={32}
+            width={32}
           />
         </View>
       </View>
@@ -1159,7 +1193,7 @@ exports[`FilterDrawer Rendering should render children properly 1`] = `
           Array [
             Object {
               "flexBasis": 0,
-              "flexDirection": "column",
+              "flexDirection": "row",
               "flexGrow": 1,
               "flexShrink": 1,
               "justifyContent": "space-between",
@@ -1173,12 +1207,8 @@ exports[`FilterDrawer Rendering should render children properly 1`] = `
           style={
             Array [
               Object {
-                "flexBasis": 0,
-                "flexDirection": "row",
                 "flexGrow": 1,
-                "flexShrink": 1,
                 "height": "100%",
-                "justifyContent": "flex-start",
                 "width": "100%",
               },
               Object {
@@ -1380,6 +1410,27 @@ exports[`FilterDrawer Rendering should render children properly 1`] = `
               </RCTSafeAreaView>
             </View>
           </View>
+        </View>
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
           <View
             style={
               Array [
@@ -1491,11 +1542,11 @@ exports[`FilterDrawer Rendering should render children properly 1`] = `
         style={
           Array [
             Object {
-              "height": 28,
+              "maxHeight": 32,
+              "maxWidth": 32,
               "position": "absolute",
-              "right": 14.3,
-              "top": 22,
-              "width": 28,
+              "right": 11,
+              "top": 11,
               "zIndex": 10,
             },
             Object {
@@ -1530,8 +1581,8 @@ exports[`FilterDrawer Rendering should render children properly 1`] = `
         >
           <test-file-stub
             fill="black"
-            height={24}
-            width={24}
+            height={32}
+            width={32}
           />
         </View>
       </View>
@@ -1656,7 +1707,7 @@ exports[`FilterDrawer Rendering should render properly 1`] = `
           Array [
             Object {
               "flexBasis": 0,
-              "flexDirection": "column",
+              "flexDirection": "row",
               "flexGrow": 1,
               "flexShrink": 1,
               "justifyContent": "space-between",
@@ -1670,12 +1721,8 @@ exports[`FilterDrawer Rendering should render properly 1`] = `
           style={
             Array [
               Object {
-                "flexBasis": 0,
-                "flexDirection": "row",
                 "flexGrow": 1,
-                "flexShrink": 1,
                 "height": "100%",
-                "justifyContent": "flex-start",
                 "width": "100%",
               },
               Object {
@@ -1877,6 +1924,27 @@ exports[`FilterDrawer Rendering should render properly 1`] = `
               </RCTSafeAreaView>
             </View>
           </View>
+        </View>
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
           <View
             style={
               Array [
@@ -1988,11 +2056,11 @@ exports[`FilterDrawer Rendering should render properly 1`] = `
         style={
           Array [
             Object {
-              "height": 28,
+              "maxHeight": 32,
+              "maxWidth": 32,
               "position": "absolute",
-              "right": 14.3,
-              "top": 22,
-              "width": 28,
+              "right": 11,
+              "top": 11,
               "zIndex": 10,
             },
             Object {
@@ -2027,8 +2095,8 @@ exports[`FilterDrawer Rendering should render properly 1`] = `
         >
           <test-file-stub
             fill="black"
-            height={24}
-            width={24}
+            height={32}
+            width={32}
           />
         </View>
       </View>

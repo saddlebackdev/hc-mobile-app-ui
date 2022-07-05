@@ -35,4 +35,13 @@ export interface IProps {
 
   /** Boolean indicating whether the filter drawer is open. */
   isOpen: boolean;
+
+  /** String to show label of filter button. */
+  filterButtonLabel?: string;
+
+  /** Boolean indicating whether the filter button is visible. */
+  shouldShowFilterButton?: boolean;
+
+  /** Title to be shown on the header. */
+  headerTitle?: string;
 }
