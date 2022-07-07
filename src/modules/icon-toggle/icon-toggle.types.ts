@@ -11,6 +11,7 @@ export interface IStyledItemContent extends ICommonProps {}
 export interface IProps {
   /** Determines if the toggle control is disabled or not. Defaults to false */
   disabled?: boolean;
+  multiSelect?: boolean;
 
   /** Value of the already selected option */
   selected: string | number;
@@ -22,6 +23,9 @@ export interface IProps {
 
     /** If true, disables the current option */
     disabled?: boolean;
+
+    /** If true, disables the current option */
+    active?: boolean;
 
     /** A function that renders the content inside the button. */
     content: Function;
