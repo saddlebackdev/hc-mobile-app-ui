@@ -52,12 +52,15 @@ const StyledItemLabel = Styled(Text)`
 export const IconToggle: React.FC<IProps> = ({
   disabled: isToggleDisabled,
   selected,
+  multiSelect,
   options,
 }): React.ReactElement => {
   return (
     <StyledWrapper testID="icon-toggle">
       {options.map(option => {
-        const isSelected = option.value === selected;
+        const isSelected = multiSelect
+          ? option.active
+          : option.value === selected;
 
         const isDisabled = isToggleDisabled || option.disabled;
 
