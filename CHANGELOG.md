@@ -3,6 +3,7 @@
 ### v0.0.40
 
 - Add FiltersDrawer component
+- Adding the ability to highlight selection of the IconToggle component
 
 --
 
