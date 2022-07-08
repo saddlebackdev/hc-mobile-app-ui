@@ -39,6 +39,8 @@ jobs:
         run: yarn install
       - name: Create Build
         run: yarn build
+      - name: Add Typescript Support
+        run: yarn tsc
       - name: Create Package
         run: yarn pack
       - name: Archive Package
