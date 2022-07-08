@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.40
+
+- Add FiltersDrawer component
+
+--
+
 ### v0.0.39
 
 - Add PersonRecord Component

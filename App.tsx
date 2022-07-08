@@ -1,6 +1,6 @@
 // Modules
 import * as React from 'react';
-import {View, SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
+import {Alert, View, SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
 import Styled from 'styled-components/native';
 
 import {
@@ -37,6 +37,7 @@ import {
   CompactCardListItem,
   LinearGradientView,
   defaultTheme,
+  FilterDrawer,
   CoreMilestone,
   minorScale,
 } from './src';
@@ -86,18 +87,15 @@ const WarningViewWrapper = Styled.View`
   border-radius: 13px;
   margin-top: -4px;
 `;
-
 const CheckInTextWrapper = Styled(Text)`
   color: #FFEF00;
 `;
-
 const linearGradientView1Style = StyleSheet.flatten<ViewStyle>({
   width: 50,
   height: 50,
   justifyContent: 'center',
   alignItems: 'center',
 });
-
 const linearGradientView2Style = StyleSheet.flatten<ViewStyle>({
   width: 100,
   height: 100,
@@ -149,6 +147,12 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     React.useState<number>(2);
   const [selectedPeopleTabItem, setSelectedPeopleTabItem] =
     React.useState<number>(1);
+  const [isFilterDrawerOpen, setIsFilterDrawerOpen] =
+    React.useState<boolean>(false);
+  const [
+    isFilterDrawerSecondaryViewActive,
+    setIsFilterDrawerSecondaryViewActive,
+  ] = React.useState<boolean>(false);
 
   const closeRow = index => {
     if (prevOpenedRow && prevOpenedRow !== swipeable[index]) {
@@ -470,6 +474,165 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   }}
                   linkLabel={'View All'}
                   onLinkPress={onPressMock}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Filter Drawer */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Filter Drawer</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Filter Drawer Component</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Button onPress={() => setIsFilterDrawerOpen(true)}>
+                  Open Filter Drawer
+                </Button>
+
+                <FilterDrawer
+                  onApplyFilters={() => Alert.alert('Filters Applied!')}
+                  onClearFilters={() => Alert.alert('Filters Cleared!')}
+                  onClose={() => setIsFilterDrawerOpen(false)}
+                  onCancel={() => setIsFilterDrawerOpen(false)}
+                  isOpen={isFilterDrawerOpen}
+                  onBackToPrimaryContent={() =>
+                    setIsFilterDrawerSecondaryViewActive(false)
+                  }
+                  shouldShowCancelButton
+                  shouldShowClearFiltersButton
+                  shouldShowSecondaryContent={isFilterDrawerSecondaryViewActive}
+                  secondaryViewTitle="Secondary View"
+                  primaryChildren={
+                    <>
+                      <Text>
+                        This is the primary View. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Dicta iste delectus
+                        similique, odit aspernatur fugit, culpa alias eum
+                        tenetur quidem officiis, non corporis quod voluptatem at
+                        facere voluptate. Dolorem, nam! Architecto corrupti fuga
+                        nisi laboriosam quae atque nemo provident sapiente omnis
+                        officiis nihil, deleniti ea unde laborum. Accusantium
+                        doloribus tempora adipisci itaque facere. Voluptatem
+                        impedit exercitationem facere voluptates distinctio
+                        blanditiis? Odit perferendis quibusdam quasi dolores rem
+                        distinctio magni! Voluptate vero commodi quibusdam
+                        dolorum nemo cupiditate libero, nulla quas sunt culpa
+                        repudiandae asperiores voluptatum eum dignissimos
+                        blanditiis veritatis assumenda laudantium earum. Fuga
+                        aut autem nobis beatae ea mollitia excepturi perferendis
+                        ab delectus optio tenetur tempora consequuntur, officiis
+                        dolorem modi quae et impedit accusantium, atque quo
+                        nemo. Quasi nisi beatae placeat quisquam. Quod sed
+                        suscipit soluta ex facere assumenda, fuga numquam quasi
+                        quis natus libero maiores blanditiis architecto
+                        asperiores saepe magnam enim. Placeat at eveniet
+                        perferendis in consequuntur ex laboriosam molestiae ab.
+                        Quisquam quod odio atque dolorem consequatur voluptas
+                        aperiam voluptatibus fuga beatae. Accusantium iusto
+                        voluptatem placeat eos, delectus deserunt saepe
+                        repudiandae id, quisquam tempore dolorum. Ipsam non
+                        magnam maiores tempora itaque. Facilis rem tempore esse
+                        dolor voluptas a soluta rerum doloremque doloribus
+                        corporis fugit autem voluptate, inventore, quas eius
+                        provident quae. Eum quia quasi accusantium! Quod, iure.
+                        Porro molestiae omnis ullam. Vitae commodi incidunt
+                        praesentium, expedita saepe magnam repellat dolorem
+                        voluptatem nobis a amet fugiat blanditiis cupiditate
+                        iste recusandae exercitationem inventore quibusdam
+                        obcaecati. Necessitatibus atque at repellendus dicta eum
+                        enim id! Consequuntur animi modi delectus reprehenderit
+                        pariatur voluptas facilis temporibus quidem aliquam nam
+                        voluptates dolorum molestiae molestias asperiores
+                        provident odit dignissimos doloremque, facere aliquid
+                        debitis necessitatibus veniam maiores? Atque, tenetur
+                        soluta! Tenetur a odit incidunt ipsum omnis! Quae quo,
+                        assumenda provident quasi laborum reprehenderit
+                        reiciendis praesentium minus, perspiciatis tenetur
+                        consectetur quos adipisci. Vitae, iste repudiandae!
+                        Dolore mollitia illum reiciendis ipsam similique? Eaque
+                        dicta totam libero quam voluptatum inventore, quas
+                        facilis numquam! Natus deleniti consequatur sapiente
+                        quod eos rem, saepe repudiandae fugiat cumque nisi illo
+                        quidem sunt est expedita, vero, inventore nihil.
+                        Nesciunt dolorem expedita ullam maxime qui earum
+                        delectus possimus vero iste porro aut eveniet provident
+                        blanditiis quod iusto, aliquam fugit voluptatum rem?
+                        Vitae esse earum cum culpa maxime in tenetur.
+                      </Text>
+
+                      <Button
+                        onPress={() =>
+                          setIsFilterDrawerSecondaryViewActive(true)
+                        }>
+                        Show the Secondary View lorem
+                      </Button>
+                    </>
+                  }
+                  secondaryChildren={
+                    <>
+                      <Text>This is the secondary View.</Text>
+                      <Text variant="caption">
+                        Use the back button to go back to the primary view.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolore assumenda itaque necessitatibus blanditiis?
+                        Repudiandae laborum debitis recusandae iure veritatis
+                        fugit dignissimos vel deleniti eveniet voluptatem
+                        consequuntur ratione repellendus, quod ducimus? Atque
+                        iste, nihil fuga beatae inventore illo optio qui enim
+                        consectetur ipsum sed asperiores ad unde nisi eaque
+                        animi quasi pariatur laudantium temporibus fugiat! Enim
+                        voluptate sit sed inventore facilis? Quibusdam,
+                        voluptate eaque. Assumenda quae autem odio placeat
+                        tenetur sequi veniam libero qui explicabo, aperiam
+                        expedita rem eum beatae? In consequuntur deserunt
+                        pariatur qui numquam ea ipsa repellendus tempora nihil.
+                        Placeat dolores aliquam distinctio provident, vel illo
+                        porro dolorem minus, delectus sint qui beatae culpa,
+                        neque quibusdam vitae? Quasi reprehenderit sed
+                        consequuntur officiis eos odit doloremque necessitatibus
+                        error praesentium fuga? Molestias, neque explicabo!
+                        Repellat corporis sapiente rerum iure facere impedit
+                        nisi nobis qui non doloribus soluta sed praesentium,
+                        dicta ullam ab porro harum omnis obcaecati. Quibusdam
+                        culpa iste facilis eum! Veniam temporibus vitae ipsum,
+                        ipsam beatae natus reiciendis officiis similique,
+                        impedit error quod. Excepturi voluptatibus, voluptatum,
+                        nulla dolores odit magnam eaque aperiam obcaecati
+                        doloremque iste maxime aut ad dolorem corrupti! Sit,
+                        veritatis hic dolore corrupti vel modi nam inventore
+                        beatae velit rerum excepturi quo! Tempora incidunt,
+                        nostrum sapiente iusto reiciendis officia. Minima
+                        nostrum iure, obcaecati voluptatum quidem molestiae
+                        aspernatur eos! Quaerat, tenetur esse ea aperiam
+                        aspernatur delectus deleniti maxime perspiciatis, sequi
+                        magnam ducimus doloremque provident sint, hic commodi
+                        reprehenderit facilis vel quod accusantium. Rem,
+                        suscipit libero impedit vel repellendus ipsa.
+                        Necessitatibus labore quaerat veritatis ex sapiente
+                        temporibus itaque eaque? Hic in doloribus dolorum
+                        delectus alias commodi unde sequi, earum suscipit ab
+                        molestias. Fugit excepturi nisi sit quia, minima unde
+                        cupiditate. Esse voluptatibus sint quis quisquam,
+                        debitis quas omnis, atque maxime repellendus ipsum
+                        distinctio alias, rerum quam dolorem ab! At esse illo
+                        reprehenderit suscipit aspernatur obcaecati perspiciatis
+                        fugit necessitatibus rem culpa. Voluptas magnam eius
+                        ducimus quae! Eligendi illo impedit dolorum voluptatem
+                        doloremque culpa quod corrupti, incidunt magnam nobis
+                        inventore veniam earum rerum quasi accusamus, modi sed
+                        rem aperiam hic at. Cum. Id corporis libero quod dolorum
+                        nostrum blanditiis ut officiis amet magnam? Obcaecati
+                        beatae et ea corrupti deserunt distinctio, veniam
+                        reiciendis quod sapiente quaerat esse minus, fugit
+                        reprehenderit dolore fuga repudiandae?
+                      </Text>
+                    </>
+                  }
                 />
               </Row>
             </Section.Content>

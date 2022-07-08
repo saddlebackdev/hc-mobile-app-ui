@@ -109,11 +109,7 @@ Array [
             List Item 1
           </Text>
           <Image
-            source={
-              Object {
-                "testUri": "../../../src/images/success-white.png",
-              }
-            }
+            source="test-file-stub"
             style={
               Array [
                 Object {
@@ -368,11 +364,7 @@ exports[`SelectableListItem Rendering renders tick icon when selected 1`] = `
     List Item 1
   </Text>
   <Image
-    source={
-      Object {
-        "testUri": "../../../src/images/success-white.png",
-      }
-    }
+    source="test-file-stub"
     style={
       Array [
         Object {
