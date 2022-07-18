@@ -1,6 +1,6 @@
 {
   "name": "hc-mobile-app-ui",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "publishConfig": {
@@ -20,7 +20,9 @@
   "dependencies": {
     "@react-native-community/datetimepicker": "^3.5.2",
     "@react-native-picker/picker": "^2.1.0",
+    "hc-app-icons": "^1.0.6",
     "moment": "^2.29.3",
+    "react-native-calendar-picker": "^7.1.2",
     "react-native-modal": "^13.0.0",
     "react-native-picker-select": "^8.0.4",
     "react-native-svg": "^12.1.1",
@@ -39,6 +41,7 @@
     "@testing-library/react-native": "^8.0.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.65.0",
+    "@types/react-native-calendar-picker": "^7.0.2",
     "@types/react-test-renderer": "^17.0.1",
     "@types/styled-components-react-native": "^5.1.1",
     "babel-jest": "^26.6.3",

@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.0.41
+
+- Add ReminderPicker Component
+- Add CalendarPicker Component
+
+---
+
 ### v0.0.40
 
 - Add FiltersDrawer component
