@@ -1830,6 +1830,15 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   value={pickerValue}
                   onValueChange={setPickerValue}
                   items={pickerOptions}
+                  label="Required Picker"
+                  required
+                />
+              </Row>
+              <Row>
+                <SelectPicker
+                  value={pickerValue}
+                  onValueChange={setPickerValue}
+                  items={pickerOptions}
                   label="Underlined"
                   isUnderlined
                 />
