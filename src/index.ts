@@ -18,6 +18,10 @@ export {IProps as ButtonProps} from './modules/button/button.types';
 export {default as ButtonGroup} from './modules/button-group/button-group';
 export {IProps as ButtonGroupProps} from './modules/button-group/button-group.types';
 
+// Calendar Picker
+export {default as CalendarPicker} from './modules/calendar-picker/calendar-picker';
+export {IProps as CalendarPickerProps} from './modules/calendar-picker/calendar-picker.types';
+
 // Card List
 export {default as CardList} from './modules/card-list/card-list';
 export {IProps as CardListProps} from './modules/card-list/card-list.types';
@@ -121,6 +125,10 @@ export {IProps as PersonRecordProps} from './modules/person-record/person-record
 // Radio
 export {default as Radio} from './modules/radio/radio';
 export {IProps as RadioProps} from './modules/radio/radio.types';
+
+// Reminder Picker
+export {default as ReminderPicker} from './modules/reminder-picker/reminder-picker';
+export {IProps as ReminderPickerProps} from './modules/reminder-picker/reminder-picker.types';
 
 // Scales
 export {majorScale, minorScale} from './modules/scales';

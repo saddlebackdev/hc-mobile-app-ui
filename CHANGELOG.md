@@ -2,6 +2,8 @@
 
 ### v0.0.41
 
+- Add ReminderPicker Component
+- Add CalendarPicker Component
 - Add Note list item component
 - Add SelectPicker Required Prop
 
