@@ -42,11 +42,15 @@ import {
   FilterDrawer,
   CoreMilestone,
   minorScale,
+  NoteListItem,
+  majorScale,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
 import IconSVG from './src/modules/icon/icon-external';
 import IconShapeHeart from './src/images/shape-heart.svg';
+import IconReminder from './src/images/Icon_reminder.svg';
+import IconPin from './src/images/Icon_pin.svg';
 import {IProgressValue} from './src/modules/circular-progress/circular-progress.types';
 import CircularProgress from './src/modules/circular-progress/circular-progress';
 
@@ -58,6 +62,7 @@ const Wrapper = Styled.ScrollView``;
 const Section = {
   Wrapper: Styled.View`
     padding: 30px;
+    flex: 1;
   `,
   Title: Styled.View``,
   Description: Styled.View`
@@ -973,6 +978,42 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 />
               </Row>
             </Section.Content>
+
+          {/* Note List Block */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Note List</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show display note list</Text>
+            </Section.Description>
+            <NoteListItem
+              notedate="00/00/00"
+              categoryName="For me"
+              subject="Communication Attempt"
+              description="I called and left a message and also texted! No response yet."
+              createdByName="Author Name"
+              onDotMenuClicked={() => Alert.alert('More action click')}
+            />
+            <NoteListItem
+              notedate="00/00/00"
+              categoryName="For me"
+              subject="Communication Attempt"
+              description="I called and left a message and also texted! No response yet."
+              createdByName="Author Name"
+              onDotMenuClicked={() => Alert.alert('More action click')}
+              leftElement={
+                <View>
+                  <View style={{marginTop: majorScale(1.45)}}>
+                    <IconSVG file={IconReminder} size={14} color={'black'} />
+                  </View>
+                  <View style={{marginTop: majorScale(1.45)}}>
+                    <IconSVG file={IconPin} size={14} color={'black'} />
+                  </View>
+                </View>
+              }
+            />
+
           </Section.Wrapper>
           <Divider />
 
@@ -1868,6 +1909,15 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   onValueChange={setPickerValue}
                   items={pickerOptions}
                   label="Default"
+                />
+              </Row>
+              <Row>
+                <SelectPicker
+                  value={pickerValue}
+                  onValueChange={setPickerValue}
+                  items={pickerOptions}
+                  label="Required Picker"
+                  required
                 />
               </Row>
               <Row>

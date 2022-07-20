@@ -178,3 +178,7 @@ export {IProps as IPeopleItemProps} from './modules/people-list/people-list-item
 //Core Milestone
 export {default as CoreMilestone} from './modules/core-milestone/core-milestone';
 export {IProps as ICoreMilestoneProps} from './modules/core-milestone/core-milestone.types';
+
+// People-note-item
+export {default as NoteListItem} from './modules/note-list/note-list';
+export {IProps as INoteListItemProps} from './modules/people-list/people-list-item.types';

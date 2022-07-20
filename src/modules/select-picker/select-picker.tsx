@@ -22,6 +22,9 @@ const StyledLabel = Styled(Text)<IStyledLabel>`
     return $addBottomMargin ? minorScale(1, 'px') : majorScale(1, 'px');
   }};
 `;
+const StyledLabelAsterisk = Styled(Text)<IStyledLabel>`
+  color: ${({theme}) => theme.colors.dangerLight};
+`;
 
 // Get Styles
 const getStyles = (
@@ -109,6 +112,7 @@ const SelectPicker: React.FC<IProps> = ({
   placeholder = 'Select an option',
   shouldShowPlaceholder = true,
   isUnderlined = false,
+  required = false,
   ...rest
 }): React.ReactElement => {
   // Hooks
@@ -134,7 +138,14 @@ const SelectPicker: React.FC<IProps> = ({
           small={isUnderlined}
           $addBottomMargin={isUnderlined}
           muted={isUnderlined}>
-          {label}
+          {label}{' '}
+          {required && (
+            <StyledLabelAsterisk
+              small={isUnderlined}
+              testID="select-picker-asterisk">
+              *
+            </StyledLabelAsterisk>
+          )}
         </StyledLabel>
       )}
 
