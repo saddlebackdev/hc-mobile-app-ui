@@ -1,8 +1,8 @@
 # Changelog
 
-
 ### v0.0.41
 
+- Add Note list item component
 - Add SelectPicker Required Prop
 
 --

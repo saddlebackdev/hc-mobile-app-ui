@@ -1,0 +1,501 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteListItem Interactions should call onPress method when pressed 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "marginLeft": 22,
+        "marginRight": 22,
+      },
+    ]
+  }
+  testID="note-card"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "flexBasis": 0,
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "paddingVertical": 22,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginTop": 2,
+          },
+        ]
+      }
+    >
+      <test-file-stub
+        fill="black"
+        height={14}
+        width={14}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "marginLeft": 5,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 11,
+            },
+          ]
+        }
+      >
+        <Text
+          muted={true}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="text"
+          variant="subtitle2"
+        >
+          00/00/00
+        </Text>
+        <Text
+          muted={true}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="text"
+          variant="subtitle2"
+        >
+          For me
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 11,
+            },
+          ]
+        }
+      >
+        <Text
+          numberOfLines={2}
+          style={
+            Array [
+              Object {
+                "color": "#1C2530",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": "700",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="heading"
+          variant="h4"
+        >
+          Communication Attempt
+        </Text>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="link"
+        >
+          <test-file-stub
+            fill="black"
+            height={16}
+            width={16}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 11,
+            },
+          ]
+        }
+      >
+        <Text
+          muted={true}
+          numberOfLines={2}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="text"
+          variant="body2"
+        >
+          I called and left a message and also texted! No response yet.
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            },
+          ]
+        }
+      >
+        <Text
+          muted={true}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontStyle": "normal",
+                "fontWeight": "600",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="text"
+          variant="body2"
+          weight="semiBold"
+        >
+          Author Name
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#e6e6e6",
+          "flex": 1,
+          "height": 1,
+          "width": "100%",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`NoteListItem Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "marginLeft": 22,
+        "marginRight": 22,
+      },
+    ]
+  }
+  testID="note-card"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "flexBasis": 0,
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "paddingVertical": 22,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginTop": 2,
+          },
+        ]
+      }
+    >
+      <test-file-stub
+        fill="black"
+        height={14}
+        width={14}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "marginLeft": 5,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 11,
+            },
+          ]
+        }
+      >
+        <Text
+          muted={true}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="text"
+          variant="subtitle2"
+        >
+          00/00/00
+        </Text>
+        <Text
+          muted={true}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="text"
+          variant="subtitle2"
+        >
+          For me
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 11,
+            },
+          ]
+        }
+      >
+        <Text
+          numberOfLines={2}
+          style={
+            Array [
+              Object {
+                "color": "#1C2530",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontWeight": "700",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="heading"
+          variant="h4"
+        >
+          Communication Attempt
+        </Text>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="link"
+        >
+          <test-file-stub
+            fill="black"
+            height={16}
+            width={16}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 11,
+            },
+          ]
+        }
+      >
+        <Text
+          muted={true}
+          numberOfLines={2}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="text"
+          variant="body2"
+        >
+          I called and left a message and also texted! No response yet.
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            },
+          ]
+        }
+      >
+        <Text
+          muted={true}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 16,
+                "fontStyle": "normal",
+                "fontWeight": "600",
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="text"
+          variant="body2"
+          weight="semiBold"
+        >
+          Author Name
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#e6e6e6",
+          "flex": 1,
+          "height": 1,
+          "width": "100%",
+        },
+      ]
+    }
+  />
+</View>
+`;
