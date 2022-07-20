@@ -1,0 +1,27 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #1C2530;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <title>ellipsis</title>
+  <g id="Giving-C-v1.1-_New-Iteration_" data-name="Giving-C-v1.1-(New-Iteration)">
+    <g id="Volunteer-Hours---01">
+      <g id="Content-List-_11v-l_" data-name="Content-List-[11v-l]">
+        <g id="Overrides_Elements_Icons_Actions_Add" data-name="Overrides/Elements/Icons/Actions/Add">
+          <rect id="Rectangle-5" class="cls-1" width="24" height="24"/>
+          <g id="Oval" fill="#1C2530">
+            <path id="path-1" class="cls-2" d="M3,9a3,3,0,0,1,0,6A3,3,0,0,1,3,9Zm9,0a3,3,0,1,1-3,3A2.9,2.9,0,0,1,12,9Zm9,0a3,3,0,1,1-3,3A2.9,2.9,0,0,1,21,9Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

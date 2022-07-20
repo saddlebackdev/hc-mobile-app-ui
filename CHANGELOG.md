@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.0.41
+
+- Add Note list item component
+
 ### v0.0.40
 
 - Add FiltersDrawer component
