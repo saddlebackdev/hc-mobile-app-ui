@@ -1,5 +1,12 @@
 # Changelog
 
+
+### v0.0.41
+
+- Add SelectPicker Required Prop
+
+--
+
 ### v0.0.40
 
 - Add FiltersDrawer component
