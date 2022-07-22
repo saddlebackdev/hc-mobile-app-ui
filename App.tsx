@@ -500,6 +500,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 </Button>
 
                 <FilterDrawer
+                  onRequestClose={() => setIsFilterDrawerOpen(false)}
                   onApplyFilters={() => Alert.alert('Filters Applied!')}
                   onClearFilters={() => Alert.alert('Filters Cleared!')}
                   onClose={() => setIsFilterDrawerOpen(false)}

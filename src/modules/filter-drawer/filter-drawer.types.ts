@@ -33,6 +33,8 @@ export interface IProps {
   /** Function to be called when "Close" button is pressed. */
   onClose: () => void;
 
+  /** Function to be called when "Back button" button is pressed. */
+  onRequestClose: () => void;
   /** Boolean indicating whether the filter drawer is open. */
   isOpen: boolean;
 
