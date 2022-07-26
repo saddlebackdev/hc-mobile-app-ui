@@ -15,7 +15,6 @@ import LinearGradient from '../linear-gradient/linear-gradient-view';
 import {majorScale} from '../scales';
 
 // Styles
-
 const StyledScrollView = Styled.ScrollView`
   flex: 1;
 `;
@@ -85,8 +84,7 @@ export const PersonRecord: React.FC<IProps> = ({
   tabs = [],
 }): React.ReactElement => {
   // State
-  // prettier-ignore
-  const [selectedTab, setSelectedTab] = React.useState<any>(null);
+  const [selectedTab, setSelectedTab] = React.useState<ITab>();
 
   // On Tab Change
   const onTabChange = (tab: ITab): void => {
@@ -147,6 +145,7 @@ export const PersonRecord: React.FC<IProps> = ({
         : `${day} ${day > 1 ? 'days' : 'day'}`;
     return humanDate || date || 'N/A';
   };
+
   const getUserNameFirstLastCharacter = () => {
     const arrName = person?.fullName?.split(' ');
     if (arrName?.length === 2) {
@@ -154,9 +153,10 @@ export const PersonRecord: React.FC<IProps> = ({
     }
     return `${arrName![0].charAt(0)}${arrName![0].charAt(1)}`;
   };
+
   const getPersonOtherDetails = () => {
-    const arrOtherDet: any[] = [];
-    const churchEntName = person.churchEntityName;
+    const arrOtherDet: string[] = [];
+    const churchEntName = person.churchEntityName ?? '';
     const marStatus = person.maritalStatus !== null ? person.maritalStatus : '';
     const gender: string =
       person.gender === null
@@ -173,9 +173,14 @@ export const PersonRecord: React.FC<IProps> = ({
       arrOtherDet.push(marStatus);
     }
 
-    arrOtherDet.push(churchEntName === 'Unknown' ? '' : churchEntName);
+    arrOtherDet.push(
+      churchEntName === null || churchEntName === 'Unknown'
+        ? ''
+        : churchEntName,
+    );
     return arrOtherDet.join(' | ');
   };
+
   const renderPrefersContactDisplayTitle = () => {
     if (
       person.contactPreferences &&
@@ -195,6 +200,7 @@ export const PersonRecord: React.FC<IProps> = ({
     }
     return '(prefers emails)';
   };
+
   const getPhoneNumber = () => {
     let strNumber = 'N/A';
     if (
@@ -215,6 +221,7 @@ export const PersonRecord: React.FC<IProps> = ({
     }
     return strNumber;
   };
+
   const renderPrefersContactDisplay = () => {
     if (
       person.contactPreferences &&
@@ -364,7 +371,7 @@ export const PersonRecord: React.FC<IProps> = ({
             <StyledTabsWrapper>
               <PeopleTabs
                 items={tabs}
-                selected={selectedTab?.value}
+                selected={selectedTab ? selectedTab.value : null}
                 onChange={onTabChange}
               />
             </StyledTabsWrapper>
