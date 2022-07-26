@@ -978,6 +978,8 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 />
               </Row>
             </Section.Content>
+          </Section.Wrapper>
+          <Divider />
 
           {/* Note List Block */}
           <Section.Wrapper>
@@ -1013,7 +1015,6 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 </View>
               }
             />
-
           </Section.Wrapper>
           <Divider />
 

@@ -10,12 +10,16 @@ import {IProps} from './reminder-picker.types';
 import {majorScale} from '../scales';
 import CalendarPicker from '../calendar-picker/calendar-picker';
 import SelectPicker from '../select-picker/select-picker';
+import Text from '../text/text';
 
 // Styles
 const StyledWrapper = Styled.View``;
 const StyledCalendarPickerWrapper = Styled.View``;
 const StyledSelectPickerWrapper = Styled.View`
   margin-bottom: ${majorScale(3)}px;
+`;
+const StyledLabel = Styled(Text)`
+  margin-bottom: ${majorScale(1)}px;
 `;
 
 const REMINDER_PICKER_VALUES = {
@@ -27,7 +31,7 @@ const REMINDER_PICKER_VALUES = {
 
 // Component
 export const ReminderPicker: React.FC<IProps> = React.memo(
-  ({onChange, ...props}): React.ReactElement => {
+  ({onChange, minDate, isRequired, ...props}): React.ReactElement => {
     // State
     // prettier-ignore
     const [isCustomReminderSet, setIsCustomerReminderSet] = React.useState<boolean>(false);
@@ -52,12 +56,20 @@ export const ReminderPicker: React.FC<IProps> = React.memo(
       onChange(Moment(date).format('YYYY-MM-DD'));
     };
 
+    const calendarPickerMinDate: Date =
+      // By default, allow selection starting tomorrow
+      minDate || Moment(new Date()).add(1, 'day').toDate();
+
     return (
       <StyledWrapper>
         <StyledSelectPickerWrapper>
+          <StyledLabel variant="caption" muted>
+            Set Reminder For{' '}
+            <Text color="dangerLight">{isRequired ? '*' : ''}</Text>
+          </StyledLabel>
+
           <SelectPicker
             {...props}
-            label="Set Reminder For"
             onValueChange={onChangeReminderDate}
             items={[
               {
@@ -83,7 +95,7 @@ export const ReminderPicker: React.FC<IProps> = React.memo(
         {isCustomReminderSet && (
           <StyledCalendarPickerWrapper>
             <CalendarPicker
-              minDate={new Date()}
+              minDate={calendarPickerMinDate}
               onDateChange={onSelectCalendarDate}
             />
           </StyledCalendarPickerWrapper>
