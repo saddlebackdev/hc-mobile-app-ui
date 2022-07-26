@@ -11,6 +11,9 @@ export interface IProps extends PickerSelectProps {
   /** Determines if the placeholder should be shown or not */
   shouldShowPlaceholder?: boolean;
 
+  /** Determines if the CustomIcon should be shown or not */
+  showCustomIcon?: boolean;
+
   /** Label for the Select Picker */
   label?: string;
 
