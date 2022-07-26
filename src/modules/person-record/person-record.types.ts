@@ -30,6 +30,12 @@ export interface IProps {
     preferredContactMethod: string | null;
     primaryPhone: string | null;
     primaryEmail: string | null;
+    contactPreferences?: any;
+    profilePhotoUrl?: string | null;
+    churchEntityName?: string | null;
+    emails?: any[];
+    phones?: any[];
+    deceasedDate?: string | null;
     isAdult?: boolean;
     isStudent?: boolean;
     isChild?: boolean;

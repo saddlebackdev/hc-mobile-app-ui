@@ -154,15 +154,14 @@ export const PersonRecord: React.FC<IProps> = ({
     }
     return `${arrName![0].charAt(0)}${arrName![0].charAt(1)}`;
   };
-  const getPersonOtherDetails = (info: any) => {
-    const arrOtherDet = [];
-    const churchEntName: any = info.churchEntityName;
-    const marStatus: any =
-      info.maritalStatus !== null ? info.maritalStatus : '';
-    const gender: any =
-      info.gender === null
+  const getPersonOtherDetails = () => {
+    const arrOtherDet: any[] = [];
+    const churchEntName = person.churchEntityName;
+    const marStatus = person.maritalStatus !== null ? person.maritalStatus : '';
+    const gender: string =
+      person.gender === null
         ? ''
-        : String(info.gender).toLowerCase() === 'f'
+        : String(person.gender).toLowerCase() === 'f'
         ? 'Female'
         : 'Male';
 
@@ -177,33 +176,33 @@ export const PersonRecord: React.FC<IProps> = ({
     arrOtherDet.push(churchEntName === 'Unknown' ? '' : churchEntName);
     return arrOtherDet.join(' | ');
   };
-  const renderPrefersContactDisplayTitle = personInfo => {
+  const renderPrefersContactDisplayTitle = () => {
     if (
-      personInfo.contactPreferences &&
-      personInfo.contactPreferences !== null &&
-      personInfo.contactPreferences.doNotContact
+      person.contactPreferences &&
+      person.contactPreferences !== null &&
+      person.contactPreferences.doNotContact
     ) {
       return '(Do Not Contact This Individual)';
     }
 
     if (
-      personInfo.contactPreferences &&
-      personInfo.contactPreferences !== null &&
-      personInfo.contactPreferences.preferredMethod &&
-      personInfo.contactPreferences.preferredMethod === 'phone'
+      person.contactPreferences &&
+      person.contactPreferences !== null &&
+      person.contactPreferences.preferredMethod &&
+      person.contactPreferences.preferredMethod === 'phone'
     ) {
       return '(prefers phone)';
     }
     return '(prefers emails)';
   };
-  const getPhoneNumber = personInfo => {
+  const getPhoneNumber = () => {
     let strNumber = 'N/A';
     if (
-      personInfo.phones &&
-      Array.isArray(personInfo.phones) &&
-      personInfo.phones.length > 0
+      person?.phones &&
+      Array.isArray(person.phones) &&
+      person.phones.length > 0
     ) {
-      const filterNumber = personInfo.phones.filter(
+      const filterNumber = person.phones.filter(
         (item: any) => item.isPrimary === true,
       );
       if (filterNumber.length > 0) {
@@ -216,25 +215,25 @@ export const PersonRecord: React.FC<IProps> = ({
     }
     return strNumber;
   };
-  const renderPrefersContactDisplay = personInfo => {
+  const renderPrefersContactDisplay = () => {
     if (
-      personInfo.contactPreferences &&
-      personInfo.contactPreferences !== null &&
-      personInfo.contactPreferences.doNotContact
+      person.contactPreferences &&
+      person.contactPreferences !== null &&
+      person.contactPreferences.doNotContact
     ) {
       return '';
     }
 
     if (
-      personInfo.contactPreferences &&
-      personInfo.contactPreferences !== null &&
-      personInfo.contactPreferences.preferredMethod &&
-      personInfo.contactPreferences.preferredMethod === 'phone'
+      person.contactPreferences &&
+      person.contactPreferences !== null &&
+      person.contactPreferences.preferredMethod &&
+      person.contactPreferences.preferredMethod === 'phone'
     ) {
-      return getPhoneNumber(personInfo);
+      return getPhoneNumber();
     }
-    return personInfo && personInfo.emails.length > 0
-      ? personInfo.emails[0].email
+    return person && Array.isArray(person.emails) && person.emails?.length > 0
+      ? person.emails[0]?.email
       : '';
   };
 
@@ -338,7 +337,7 @@ export const PersonRecord: React.FC<IProps> = ({
                   {/* Metadata */}
                   <StyledPersonDetails.Row>
                     <Text variant="caption" inversed>
-                      {getPersonOtherDetails(person)}
+                      {getPersonOtherDetails()}
                     </Text>
                   </StyledPersonDetails.Row>
                 </StyledPersonDetails.Upper>
@@ -347,14 +346,14 @@ export const PersonRecord: React.FC<IProps> = ({
                   {/* Contact Preference */}
                   <StyledPersonDetails.Row>
                     <Text variant="caption" inversed>
-                      {renderPrefersContactDisplayTitle(person)}
+                      {renderPrefersContactDisplayTitle()}
                     </Text>
                   </StyledPersonDetails.Row>
 
                   {/* Email */}
                   <StyledPersonDetails.Row>
                     <Text variant="caption" weight="bold" inversed>
-                      {renderPrefersContactDisplay(person)}
+                      {renderPrefersContactDisplay()}
                     </Text>
                   </StyledPersonDetails.Row>
                 </StyledPersonDetails.Lower>
