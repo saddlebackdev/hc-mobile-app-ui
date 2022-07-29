@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.42
+
+- Fix Filter drawer back button does not close model (Android Specific)
+
+--
+
 ### v0.0.41
 
 - Add Note list item component
