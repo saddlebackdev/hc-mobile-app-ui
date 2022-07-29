@@ -24,6 +24,10 @@ const StyledInput = Styled.TextInput<IStyledInput>`
   width: 100%;
   border-radius: 3px;
 
+  font-family: ${({theme, $font = 'primary'}) => {
+    return theme.typography.faces[`${$font}Regular`];
+  }};
+
   font-size: ${({$isUnderlined}) => ($isUnderlined ? '20px' : '16px')};
 
   padding-bottom: ${({multiline}) => (multiline ? majorScale(1, 'px') : 0)};
@@ -65,6 +69,7 @@ export const TextInput: React.FC<IProps> = ({
   label,
   required,
   disabled,
+  font = 'primary',
   placeholder,
   isUnderlined,
   onBlur,
@@ -123,6 +128,7 @@ export const TextInput: React.FC<IProps> = ({
 
       <StyledInput
         testID="input"
+        $font={font}
         $isFocused={isFocused}
         $isUnderlined={isUnderlined}
         editable={!disabled}
