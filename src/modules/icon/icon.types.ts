@@ -17,6 +17,7 @@ export interface IProps {
     | 'chevronUp'
     | 'chevronDown'
     | 'chevronRight'
+    | 'chevronLeft'
     | 'calendar'
     | 'date'
     | 'success'
