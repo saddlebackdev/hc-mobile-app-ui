@@ -1,6 +1,5 @@
 // Modules
 import * as React from 'react';
-import {IconChevronLeft, IconChevronRight} from 'hc-app-icons';
 import RNCalendarPicker from 'react-native-calendar-picker';
 
 // Types
@@ -10,7 +9,7 @@ import {IProps} from './calendar-picker.types';
 import {defaultTheme} from '../theming/default-theme';
 
 // Shared
-import Icon from '../icon/icon-external';
+import Icon from '../icon/icon';
 
 // Component
 export const CalendarPicker: React.FC<IProps> = React.memo(
@@ -20,8 +19,8 @@ export const CalendarPicker: React.FC<IProps> = React.memo(
       selectedDayTextColor={defaultTheme.colors.white}
       todayBackgroundColor={defaultTheme.colors.grayTwo}
       todayTextStyle={{color: defaultTheme.colors.black}}
-      nextComponent={<Icon size={16} file={IconChevronRight} />}
-      previousComponent={<Icon size={16} file={IconChevronLeft} />}
+      nextComponent={<Icon size={18} type="chevronRight" />}
+      previousComponent={<Icon size={18} type="chevronLeft" />}
       onDateChange={onDateChange}
       dayLabelsWrapper={{
         borderBottomWidth: 0,
