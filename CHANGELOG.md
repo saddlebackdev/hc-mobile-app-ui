@@ -4,6 +4,7 @@
 
 - Add Note list item component
 - Add SelectPicker Required Prop
+- Add SelectPicker showCustomIcon Prop
 
 --
 
