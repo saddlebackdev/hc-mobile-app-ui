@@ -5,6 +5,7 @@
 - Add Note list item component
 - Add SelectPicker Required Prop
 - Add SelectPicker showCustomIcon Prop
+- Add fontFamily on text Input
 
 --
 
