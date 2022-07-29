@@ -1,0 +1,2131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterDrawer Rendering should render 'back' action when in secondary view 1`] = `
+<Modal
+  animationType="none"
+  deviceHeight={null}
+  deviceWidth={null}
+  hardwareAccelerated={false}
+  hideModalContentWhileAnimating={true}
+  onBackdropPress={[Function]}
+  onModalHide={[Function]}
+  onModalWillHide={[Function]}
+  onModalWillShow={[Function]}
+  onRequestClose={[Function]}
+  panResponderThreshold={4}
+  scrollHorizontal={false}
+  scrollOffset={0}
+  scrollOffsetMax={0}
+  scrollTo={null}
+  statusBarTranslucent={false}
+  supportedOrientations={
+    Array [
+      "portrait",
+      "landscape",
+    ]
+  }
+  swipeThreshold={100}
+  transparent={true}
+  useNativeDriverForBackdrop={true}
+  visible={false}
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    forwardedRef={[Function]}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    deviceHeight={null}
+    deviceWidth={null}
+    forwardedRef={[Function]}
+    hideModalContentWhileAnimating={true}
+    nativeID="animatedComponent"
+    onBackdropPress={[Function]}
+    onModalHide={[Function]}
+    onModalWillHide={[Function]}
+    onModalWillShow={[Function]}
+    panResponderThreshold={4}
+    pointerEvents="box-none"
+    scrollHorizontal={false}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    statusBarTranslucent={false}
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "margin": 0,
+        "transform": Array [
+          Object {
+            "translateY": 0,
+          },
+        ],
+      }
+    }
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeThreshold={100}
+    useNativeDriverForBackdrop={true}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderTopLeftRadius": 12,
+            "borderTopRightRadius": 12,
+            "height": "100%",
+            "marginTop": 132,
+            "overflow": "hidden",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="drawer-wrapper"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "justifyContent": "space-between",
+            },
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                },
+              ]
+            }
+            testID="drawer-primary-content"
+          >
+            <RCTScrollView
+              showsVerticalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "justifyContent": "flex-start",
+                        "paddingBottom": 44,
+                        "paddingHorizontal": 22,
+                        "paddingTop": 33,
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    nativeID="animatedComponent"
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": Array [
+                          Object {
+                            "translateX": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#1C2530",
+                            "fontFamily": "System",
+                            "fontSize": 20,
+                            "fontWeight": "700",
+                            "marginBottom": 11,
+                            "paddingRight": 22,
+                            "textAlign": "left",
+                          },
+                        ]
+                      }
+                      testID="heading"
+                      variant="h2"
+                    >
+                      Filters
+                    </Text>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#1C2530",
+                        "fontFamily": "System",
+                        "fontSize": 18,
+                        "fontStyle": "normal",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                    ]
+                  }
+                  testID="text"
+                >
+                  Left Component
+                </Text>
+              </View>
+            </RCTScrollView>
+            <View
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 88,
+                    "paddingHorizontal": 22,
+                    "paddingVertical": 11,
+                  },
+                ]
+              }
+            >
+              <RCTSafeAreaView
+                emulateUnlessSupported={true}
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "flexWrap": "nowrap",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                  testID="button-group"
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "flexBasis": 0,
+                          "flexGrow": 1,
+                          "flexShrink": 1,
+                          "marginLeft": 5,
+                          "marginRight": 5,
+                        },
+                      ]
+                    }
+                    testID="button-group-item"
+                  >
+                    <View
+                      accessibilityState={
+                        Object {
+                          "disabled": false,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      focusable={false}
+                      nativeID="animatedComponent"
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#54CD86",
+                          "borderColor": "transparent",
+                          "borderRadius": 4,
+                          "borderWidth": 0,
+                          "display": "flex",
+                          "flexDirection": "row",
+                          "height": 44,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "shadowColor": "black",
+                          "shadowOffset": Object {
+                            "height": 0,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 0,
+                          "width": "100%",
+                        }
+                      }
+                      testID="drawer-apply-filters-button"
+                    >
+                      <Text
+                        appearance="filled"
+                        color="success"
+                        disabled={false}
+                        small={false}
+                        style={
+                          Array [
+                            Object {
+                              "color": "#FFFFFF",
+                              "fontFamily": "System",
+                              "fontSize": 16,
+                              "fontWeight": "600",
+                            },
+                          ]
+                        }
+                        testID="styled-label-drawer-apply-filters-button"
+                      >
+                        Apply Filters
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </RCTSafeAreaView>
+            </View>
+          </View>
+        </View>
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "height": "100%",
+                  "paddingBottom": 88,
+                  "width": "100%",
+                },
+              ]
+            }
+            testID="drawer-secondary-content"
+          >
+            <RCTScrollView
+              showsVerticalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "justifyContent": "flex-start",
+                        "paddingBottom": 44,
+                        "paddingHorizontal": 22,
+                        "paddingTop": 33,
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    nativeID="animatedComponent"
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": Array [
+                          Object {
+                            "translateX": 750,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "flexDirection": "row",
+                            "marginLeft": -2.75,
+                          },
+                        ]
+                      }
+                      testID="drawer-back-action"
+                    >
+                      <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
+                        accessible={true}
+                        collapsable={false}
+                        focusable={true}
+                        nativeID="animatedComponent"
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                        testID="link"
+                      >
+                        <test-file-stub
+                          fill="black"
+                          height={24}
+                          width={24}
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#1C2530",
+                        "fontFamily": "System",
+                        "fontSize": 18,
+                        "fontStyle": "normal",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                    ]
+                  }
+                  testID="text"
+                >
+                  Right Component
+                </Text>
+              </View>
+            </RCTScrollView>
+          </View>
+        </View>
+      </View>
+      <View
+        collapsable={false}
+        nativeID="animatedComponent"
+        style={
+          Array [
+            Object {
+              "maxHeight": 32,
+              "maxWidth": 32,
+              "position": "absolute",
+              "right": 11,
+              "top": 11,
+              "zIndex": 10,
+            },
+            Object {
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": true,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="drawer-close-button"
+        >
+          <test-file-stub
+            fill="black"
+            height={32}
+            width={32}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;
+
+exports[`FilterDrawer Rendering should render 'clear filters' action when in primary view 1`] = `
+<Modal
+  animationType="none"
+  deviceHeight={null}
+  deviceWidth={null}
+  hardwareAccelerated={false}
+  hideModalContentWhileAnimating={true}
+  onBackdropPress={[Function]}
+  onModalHide={[Function]}
+  onModalWillHide={[Function]}
+  onModalWillShow={[Function]}
+  onRequestClose={[Function]}
+  panResponderThreshold={4}
+  scrollHorizontal={false}
+  scrollOffset={0}
+  scrollOffsetMax={0}
+  scrollTo={null}
+  statusBarTranslucent={false}
+  supportedOrientations={
+    Array [
+      "portrait",
+      "landscape",
+    ]
+  }
+  swipeThreshold={100}
+  transparent={true}
+  useNativeDriverForBackdrop={true}
+  visible={false}
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    forwardedRef={[Function]}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    deviceHeight={null}
+    deviceWidth={null}
+    forwardedRef={[Function]}
+    hideModalContentWhileAnimating={true}
+    nativeID="animatedComponent"
+    onBackdropPress={[Function]}
+    onModalHide={[Function]}
+    onModalWillHide={[Function]}
+    onModalWillShow={[Function]}
+    panResponderThreshold={4}
+    pointerEvents="box-none"
+    scrollHorizontal={false}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    statusBarTranslucent={false}
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "margin": 0,
+        "transform": Array [
+          Object {
+            "translateY": 0,
+          },
+        ],
+      }
+    }
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeThreshold={100}
+    useNativeDriverForBackdrop={true}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderTopLeftRadius": 12,
+            "borderTopRightRadius": 12,
+            "height": "100%",
+            "marginTop": 132,
+            "overflow": "hidden",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="drawer-wrapper"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "justifyContent": "space-between",
+            },
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                },
+              ]
+            }
+            testID="drawer-primary-content"
+          >
+            <RCTScrollView
+              showsVerticalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "justifyContent": "flex-start",
+                        "paddingBottom": 44,
+                        "paddingHorizontal": 22,
+                        "paddingTop": 33,
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    nativeID="animatedComponent"
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": Array [
+                          Object {
+                            "translateX": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#1C2530",
+                            "fontFamily": "System",
+                            "fontSize": 20,
+                            "fontWeight": "700",
+                            "marginBottom": 11,
+                            "paddingRight": 22,
+                            "textAlign": "left",
+                          },
+                        ]
+                      }
+                      testID="heading"
+                      variant="h2"
+                    >
+                      Filters
+                    </Text>
+                    <View
+                      style={
+                        Array [
+                          Object {},
+                        ]
+                      }
+                      testID="drawer-clear-filters-action"
+                    >
+                      <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
+                        accessible={true}
+                        collapsable={false}
+                        focusable={true}
+                        nativeID="animatedComponent"
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                        testID="link"
+                      >
+                        <Text
+                          color="primaryLight"
+                          small={true}
+                          style={
+                            Array [
+                              Object {
+                                "color": "#00AEFF",
+                                "fontFamily": "System",
+                                "fontSize": 14,
+                                "fontStyle": "normal",
+                                "fontWeight": "600",
+                                "textAlign": "left",
+                              },
+                            ]
+                          }
+                          testID="link-label"
+                          weight="semiBold"
+                        >
+                          Clear Filters
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#1C2530",
+                        "fontFamily": "System",
+                        "fontSize": 18,
+                        "fontStyle": "normal",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                    ]
+                  }
+                  testID="text"
+                >
+                  Left Component
+                </Text>
+              </View>
+            </RCTScrollView>
+            <View
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 88,
+                    "paddingHorizontal": 22,
+                    "paddingVertical": 11,
+                  },
+                ]
+              }
+            >
+              <RCTSafeAreaView
+                emulateUnlessSupported={true}
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "flexWrap": "nowrap",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                  testID="button-group"
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "flexBasis": 0,
+                          "flexGrow": 1,
+                          "flexShrink": 1,
+                          "marginLeft": 5,
+                          "marginRight": 5,
+                        },
+                      ]
+                    }
+                    testID="button-group-item"
+                  >
+                    <View
+                      accessibilityState={
+                        Object {
+                          "disabled": false,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      focusable={false}
+                      nativeID="animatedComponent"
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#54CD86",
+                          "borderColor": "transparent",
+                          "borderRadius": 4,
+                          "borderWidth": 0,
+                          "display": "flex",
+                          "flexDirection": "row",
+                          "height": 44,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "shadowColor": "black",
+                          "shadowOffset": Object {
+                            "height": 0,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 0,
+                          "width": "100%",
+                        }
+                      }
+                      testID="drawer-apply-filters-button"
+                    >
+                      <Text
+                        appearance="filled"
+                        color="success"
+                        disabled={false}
+                        small={false}
+                        style={
+                          Array [
+                            Object {
+                              "color": "#FFFFFF",
+                              "fontFamily": "System",
+                              "fontSize": 16,
+                              "fontWeight": "600",
+                            },
+                          ]
+                        }
+                        testID="styled-label-drawer-apply-filters-button"
+                      >
+                        Apply Filters
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </RCTSafeAreaView>
+            </View>
+          </View>
+        </View>
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "height": "100%",
+                  "paddingBottom": 88,
+                  "width": "100%",
+                },
+              ]
+            }
+            testID="drawer-secondary-content"
+          >
+            <RCTScrollView
+              showsVerticalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "justifyContent": "flex-start",
+                        "paddingBottom": 44,
+                        "paddingHorizontal": 22,
+                        "paddingTop": 33,
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    nativeID="animatedComponent"
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": Array [
+                          Object {
+                            "translateX": 750,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "flexDirection": "row",
+                            "marginLeft": -2.75,
+                          },
+                        ]
+                      }
+                      testID="drawer-back-action"
+                    >
+                      <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
+                        accessible={true}
+                        collapsable={false}
+                        focusable={true}
+                        nativeID="animatedComponent"
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                        testID="link"
+                      >
+                        <test-file-stub
+                          fill="black"
+                          height={24}
+                          width={24}
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#1C2530",
+                        "fontFamily": "System",
+                        "fontSize": 18,
+                        "fontStyle": "normal",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                    ]
+                  }
+                  testID="text"
+                >
+                  Right Component
+                </Text>
+              </View>
+            </RCTScrollView>
+          </View>
+        </View>
+      </View>
+      <View
+        collapsable={false}
+        nativeID="animatedComponent"
+        style={
+          Array [
+            Object {
+              "maxHeight": 32,
+              "maxWidth": 32,
+              "position": "absolute",
+              "right": 11,
+              "top": 11,
+              "zIndex": 10,
+            },
+            Object {
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="drawer-close-button"
+        >
+          <test-file-stub
+            fill="black"
+            height={32}
+            width={32}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;
+
+exports[`FilterDrawer Rendering should render children properly 1`] = `
+<Modal
+  animationType="none"
+  deviceHeight={null}
+  deviceWidth={null}
+  hardwareAccelerated={false}
+  hideModalContentWhileAnimating={true}
+  onBackdropPress={[Function]}
+  onModalHide={[Function]}
+  onModalWillHide={[Function]}
+  onModalWillShow={[Function]}
+  onRequestClose={[Function]}
+  panResponderThreshold={4}
+  scrollHorizontal={false}
+  scrollOffset={0}
+  scrollOffsetMax={0}
+  scrollTo={null}
+  statusBarTranslucent={false}
+  supportedOrientations={
+    Array [
+      "portrait",
+      "landscape",
+    ]
+  }
+  swipeThreshold={100}
+  transparent={true}
+  useNativeDriverForBackdrop={true}
+  visible={false}
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    forwardedRef={[Function]}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    deviceHeight={null}
+    deviceWidth={null}
+    forwardedRef={[Function]}
+    hideModalContentWhileAnimating={true}
+    nativeID="animatedComponent"
+    onBackdropPress={[Function]}
+    onModalHide={[Function]}
+    onModalWillHide={[Function]}
+    onModalWillShow={[Function]}
+    panResponderThreshold={4}
+    pointerEvents="box-none"
+    scrollHorizontal={false}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    statusBarTranslucent={false}
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "margin": 0,
+        "transform": Array [
+          Object {
+            "translateY": 0,
+          },
+        ],
+      }
+    }
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeThreshold={100}
+    useNativeDriverForBackdrop={true}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderTopLeftRadius": 12,
+            "borderTopRightRadius": 12,
+            "height": "100%",
+            "marginTop": 132,
+            "overflow": "hidden",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="drawer-wrapper"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "justifyContent": "space-between",
+            },
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                },
+              ]
+            }
+            testID="drawer-primary-content"
+          >
+            <RCTScrollView
+              showsVerticalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "justifyContent": "flex-start",
+                        "paddingBottom": 44,
+                        "paddingHorizontal": 22,
+                        "paddingTop": 33,
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    nativeID="animatedComponent"
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": Array [
+                          Object {
+                            "translateX": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#1C2530",
+                            "fontFamily": "System",
+                            "fontSize": 20,
+                            "fontWeight": "700",
+                            "marginBottom": 11,
+                            "paddingRight": 22,
+                            "textAlign": "left",
+                          },
+                        ]
+                      }
+                      testID="heading"
+                      variant="h2"
+                    >
+                      Filters
+                    </Text>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#1C2530",
+                        "fontFamily": "System",
+                        "fontSize": 18,
+                        "fontStyle": "normal",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                    ]
+                  }
+                  testID="text"
+                >
+                  Left Component
+                </Text>
+              </View>
+            </RCTScrollView>
+            <View
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 88,
+                    "paddingHorizontal": 22,
+                    "paddingVertical": 11,
+                  },
+                ]
+              }
+            >
+              <RCTSafeAreaView
+                emulateUnlessSupported={true}
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "flexWrap": "nowrap",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                  testID="button-group"
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "flexBasis": 0,
+                          "flexGrow": 1,
+                          "flexShrink": 1,
+                          "marginLeft": 5,
+                          "marginRight": 5,
+                        },
+                      ]
+                    }
+                    testID="button-group-item"
+                  >
+                    <View
+                      accessibilityState={
+                        Object {
+                          "disabled": false,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      focusable={false}
+                      nativeID="animatedComponent"
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#54CD86",
+                          "borderColor": "transparent",
+                          "borderRadius": 4,
+                          "borderWidth": 0,
+                          "display": "flex",
+                          "flexDirection": "row",
+                          "height": 44,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "shadowColor": "black",
+                          "shadowOffset": Object {
+                            "height": 0,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 0,
+                          "width": "100%",
+                        }
+                      }
+                      testID="drawer-apply-filters-button"
+                    >
+                      <Text
+                        appearance="filled"
+                        color="success"
+                        disabled={false}
+                        small={false}
+                        style={
+                          Array [
+                            Object {
+                              "color": "#FFFFFF",
+                              "fontFamily": "System",
+                              "fontSize": 16,
+                              "fontWeight": "600",
+                            },
+                          ]
+                        }
+                        testID="styled-label-drawer-apply-filters-button"
+                      >
+                        Apply Filters
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </RCTSafeAreaView>
+            </View>
+          </View>
+        </View>
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "height": "100%",
+                  "paddingBottom": 88,
+                  "width": "100%",
+                },
+              ]
+            }
+            testID="drawer-secondary-content"
+          >
+            <RCTScrollView
+              showsVerticalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "justifyContent": "flex-start",
+                        "paddingBottom": 44,
+                        "paddingHorizontal": 22,
+                        "paddingTop": 33,
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    nativeID="animatedComponent"
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": Array [
+                          Object {
+                            "translateX": 750,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "flexDirection": "row",
+                            "marginLeft": -2.75,
+                          },
+                        ]
+                      }
+                      testID="drawer-back-action"
+                    >
+                      <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
+                        accessible={true}
+                        collapsable={false}
+                        focusable={true}
+                        nativeID="animatedComponent"
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                        testID="link"
+                      >
+                        <test-file-stub
+                          fill="black"
+                          height={24}
+                          width={24}
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#1C2530",
+                        "fontFamily": "System",
+                        "fontSize": 18,
+                        "fontStyle": "normal",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                    ]
+                  }
+                  testID="text"
+                >
+                  Right Component
+                </Text>
+              </View>
+            </RCTScrollView>
+          </View>
+        </View>
+      </View>
+      <View
+        collapsable={false}
+        nativeID="animatedComponent"
+        style={
+          Array [
+            Object {
+              "maxHeight": 32,
+              "maxWidth": 32,
+              "position": "absolute",
+              "right": 11,
+              "top": 11,
+              "zIndex": 10,
+            },
+            Object {
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="drawer-close-button"
+        >
+          <test-file-stub
+            fill="black"
+            height={32}
+            width={32}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;
+
+exports[`FilterDrawer Rendering should render properly 1`] = `
+<Modal
+  animationType="none"
+  deviceHeight={null}
+  deviceWidth={null}
+  hardwareAccelerated={false}
+  hideModalContentWhileAnimating={true}
+  onBackdropPress={[Function]}
+  onModalHide={[Function]}
+  onModalWillHide={[Function]}
+  onModalWillShow={[Function]}
+  onRequestClose={[Function]}
+  panResponderThreshold={4}
+  scrollHorizontal={false}
+  scrollOffset={0}
+  scrollOffsetMax={0}
+  scrollTo={null}
+  statusBarTranslucent={false}
+  supportedOrientations={
+    Array [
+      "portrait",
+      "landscape",
+    ]
+  }
+  swipeThreshold={100}
+  transparent={true}
+  useNativeDriverForBackdrop={true}
+  visible={false}
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    forwardedRef={[Function]}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    deviceHeight={null}
+    deviceWidth={null}
+    forwardedRef={[Function]}
+    hideModalContentWhileAnimating={true}
+    nativeID="animatedComponent"
+    onBackdropPress={[Function]}
+    onModalHide={[Function]}
+    onModalWillHide={[Function]}
+    onModalWillShow={[Function]}
+    panResponderThreshold={4}
+    pointerEvents="box-none"
+    scrollHorizontal={false}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    statusBarTranslucent={false}
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+        "margin": 0,
+        "transform": Array [
+          Object {
+            "translateY": 0,
+          },
+        ],
+      }
+    }
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeThreshold={100}
+    useNativeDriverForBackdrop={true}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderTopLeftRadius": 12,
+            "borderTopRightRadius": 12,
+            "height": "100%",
+            "marginTop": 132,
+            "overflow": "hidden",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="drawer-wrapper"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "justifyContent": "space-between",
+            },
+          ]
+        }
+      >
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "height": "100%",
+                  "width": "100%",
+                },
+              ]
+            }
+            testID="drawer-primary-content"
+          >
+            <RCTScrollView
+              showsVerticalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "justifyContent": "flex-start",
+                        "paddingBottom": 44,
+                        "paddingHorizontal": 22,
+                        "paddingTop": 33,
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    nativeID="animatedComponent"
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": Array [
+                          Object {
+                            "translateX": 0,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Array [
+                          Object {
+                            "color": "#1C2530",
+                            "fontFamily": "System",
+                            "fontSize": 20,
+                            "fontWeight": "700",
+                            "marginBottom": 11,
+                            "paddingRight": 22,
+                            "textAlign": "left",
+                          },
+                        ]
+                      }
+                      testID="heading"
+                      variant="h2"
+                    >
+                      Filters
+                    </Text>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#1C2530",
+                        "fontFamily": "System",
+                        "fontSize": 18,
+                        "fontStyle": "normal",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                    ]
+                  }
+                  testID="text"
+                >
+                  Left Component
+                </Text>
+              </View>
+            </RCTScrollView>
+            <View
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 88,
+                    "paddingHorizontal": 22,
+                    "paddingVertical": 11,
+                  },
+                ]
+              }
+            >
+              <RCTSafeAreaView
+                emulateUnlessSupported={true}
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "display": "flex",
+                        "flexDirection": "row",
+                        "flexWrap": "nowrap",
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                  testID="button-group"
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "flexBasis": 0,
+                          "flexGrow": 1,
+                          "flexShrink": 1,
+                          "marginLeft": 5,
+                          "marginRight": 5,
+                        },
+                      ]
+                    }
+                    testID="button-group-item"
+                  >
+                    <View
+                      accessibilityState={
+                        Object {
+                          "disabled": false,
+                        }
+                      }
+                      accessible={true}
+                      collapsable={false}
+                      focusable={false}
+                      nativeID="animatedComponent"
+                      onClick={[Function]}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "#54CD86",
+                          "borderColor": "transparent",
+                          "borderRadius": 4,
+                          "borderWidth": 0,
+                          "display": "flex",
+                          "flexDirection": "row",
+                          "height": 44,
+                          "justifyContent": "center",
+                          "opacity": 1,
+                          "shadowColor": "black",
+                          "shadowOffset": Object {
+                            "height": 0,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 1,
+                          "shadowRadius": 0,
+                          "width": "100%",
+                        }
+                      }
+                      testID="drawer-apply-filters-button"
+                    >
+                      <Text
+                        appearance="filled"
+                        color="success"
+                        disabled={false}
+                        small={false}
+                        style={
+                          Array [
+                            Object {
+                              "color": "#FFFFFF",
+                              "fontFamily": "System",
+                              "fontSize": 16,
+                              "fontWeight": "600",
+                            },
+                          ]
+                        }
+                        testID="styled-label-drawer-apply-filters-button"
+                      >
+                        Apply Filters
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </RCTSafeAreaView>
+            </View>
+          </View>
+        </View>
+        <View
+          collapsable={false}
+          nativeID="animatedComponent"
+          style={
+            Array [
+              Object {
+                "flexGrow": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "transform": Array [
+                  Object {
+                    "translateX": 0,
+                  },
+                ],
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "height": "100%",
+                  "paddingBottom": 88,
+                  "width": "100%",
+                },
+              ]
+            }
+            testID="drawer-secondary-content"
+          >
+            <RCTScrollView
+              showsVerticalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "justifyContent": "flex-start",
+                        "paddingBottom": 44,
+                        "paddingHorizontal": 22,
+                        "paddingTop": 33,
+                        "width": "100%",
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    nativeID="animatedComponent"
+                    style={
+                      Object {
+                        "opacity": 1,
+                        "transform": Array [
+                          Object {
+                            "translateX": 750,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "flexDirection": "row",
+                            "marginLeft": -2.75,
+                          },
+                        ]
+                      }
+                      testID="drawer-back-action"
+                    >
+                      <View
+                        accessibilityState={
+                          Object {
+                            "disabled": false,
+                          }
+                        }
+                        accessible={true}
+                        collapsable={false}
+                        focusable={true}
+                        nativeID="animatedComponent"
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                        testID="link"
+                      >
+                        <test-file-stub
+                          fill="black"
+                          height={24}
+                          width={24}
+                        />
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#1C2530",
+                        "fontFamily": "System",
+                        "fontSize": 18,
+                        "fontStyle": "normal",
+                        "fontWeight": "400",
+                        "textAlign": "left",
+                      },
+                    ]
+                  }
+                  testID="text"
+                >
+                  Right Component
+                </Text>
+              </View>
+            </RCTScrollView>
+          </View>
+        </View>
+      </View>
+      <View
+        collapsable={false}
+        nativeID="animatedComponent"
+        style={
+          Array [
+            Object {
+              "maxHeight": 32,
+              "maxWidth": 32,
+              "position": "absolute",
+              "right": 11,
+              "top": 11,
+              "zIndex": 10,
+            },
+            Object {
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="drawer-close-button"
+        >
+          <test-file-stub
+            fill="black"
+            height={32}
+            width={32}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;

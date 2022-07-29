@@ -1,9 +1,9 @@
 // Modules
 import {PickerSelectProps} from 'react-native-picker-select';
 
-// Styled Labe
+// Styled Label
 export interface IStyledLabel {
-  $addBottomMargin: boolean;
+  $addBottomMargin?: boolean;
 }
 
 // Props
@@ -19,4 +19,7 @@ export interface IProps extends PickerSelectProps {
 
   /** Enables the underlined variant for the select picker */
   isUnderlined?: boolean;
+
+  /** If true, appends an asterisk to the label */
+  required?: boolean;
 }

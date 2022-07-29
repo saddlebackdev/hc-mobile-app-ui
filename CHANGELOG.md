@@ -1,5 +1,19 @@
 # Changelog
 
+### v0.0.41
+
+- Add Note list item component
+- Add SelectPicker Required Prop
+
+--
+
+### v0.0.40
+
+- Add FiltersDrawer component
+- Adding the ability to highlight selection of the IconToggle component
+
+--
+
 ### v0.0.39
 
 - Add PersonRecord Component

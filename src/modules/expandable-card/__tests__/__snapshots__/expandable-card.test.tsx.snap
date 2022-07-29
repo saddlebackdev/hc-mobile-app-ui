@@ -73,11 +73,7 @@ exports[`ExpandableCard Rendering: Card card renders correctly 1`] = `
       testID="card-close-button"
     >
       <Image
-        source={
-          Object {
-            "testUri": "../../../src/images/shrink-black.png",
-          }
-        }
+        source="test-file-stub"
         style={
           Array [
             Object {

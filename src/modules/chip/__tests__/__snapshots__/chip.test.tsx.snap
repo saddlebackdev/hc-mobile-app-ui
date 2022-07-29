@@ -64,11 +64,7 @@ exports[`Chip Rendering renders correctly 1`] = `
     testID="chip-close-button"
   >
     <Image
-      source={
-        Object {
-          "testUri": "../../../src/images/close-x-complex-white.png",
-        }
-      }
+      source="test-file-stub"
       style={
         Array [
           Object {
