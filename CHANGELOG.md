@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.42
+
+- Update Person Record Component, Fixes UI and Functionalities.
+
+--
+
 ### v0.0.41
 
 - Add Note list item component
