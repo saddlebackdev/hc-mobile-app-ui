@@ -32,6 +32,7 @@ exports[`TextInput Rendering renders itself correctly 1`] = `
           "paddingBottom": 0,
           "paddingHorizontal": 11,
           "paddingTop": 0,
+          "textAlignVertical": "center",
           "width": "100%",
         },
       ]
@@ -94,6 +95,7 @@ exports[`TextInput Rendering should render label when passed 1`] = `
           "paddingBottom": 0,
           "paddingHorizontal": 11,
           "paddingTop": 0,
+          "textAlignVertical": "center",
           "width": "100%",
         },
       ]
@@ -173,6 +175,7 @@ exports[`TextInput Rendering should render label with an asterisk when "required
           "paddingBottom": 0,
           "paddingHorizontal": 11,
           "paddingTop": 0,
+          "textAlignVertical": "center",
           "width": "100%",
         },
       ]
