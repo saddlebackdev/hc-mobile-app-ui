@@ -100,7 +100,11 @@ const getStyles = (
 };
 
 // Get Icon
-const getIcon = () => {
+const getIcon = showCustomIcon => {
+  if (DeviceUtils.isAndroid() && !showCustomIcon) {
+    return null;
+  }
+
   return () => {
     return <Icon size={14} type="chevronDown" />;
   };
@@ -111,6 +115,7 @@ const SelectPicker: React.FC<IProps> = ({
   label,
   placeholder = 'Select an option',
   shouldShowPlaceholder = true,
+  showCustomIcon = false,
   isUnderlined = false,
   required = false,
   ...rest
@@ -150,7 +155,7 @@ const SelectPicker: React.FC<IProps> = ({
       )}
 
       <RNPickerSelect
-        Icon={getIcon()}
+        Icon={getIcon(showCustomIcon)}
         style={getStyles(theme, isUnderlined)}
         fixAndroidTouchableBug
         {...additionalProps}
