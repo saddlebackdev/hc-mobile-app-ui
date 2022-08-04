@@ -4,39 +4,17 @@ import Styled from 'styled-components/native';
 import Moment from 'moment';
 
 // Types
-import {StyledIContactOptionsItem, ITab, IProps} from './person-record.types';
+import {ITab, IProps} from './person-record.types';
 
 // Shared
-import Icon from '../icon/icon-external';
-import Link from '../link/link';
 import Text from '../text/text';
 import Avatar from '../avatar/avatar';
 import PeopleTabs from '../people-tabs/people-tabs';
 import CoreMilestones from '../core-milestone/core-milestone';
 import LinearGradient from '../linear-gradient/linear-gradient-view';
-import LowerPrompt from '../lower-prompt/lower-prompt';
 import {majorScale} from '../scales';
 
-// Images
-import IconPhone from '../../images/phone.svg';
-import IconEmail from '../../images/email.svg';
-import IconSms from '../../images/sms.svg';
-
 // Styles
-const StyledContactOptions = {
-  Wrapper: Styled.View`
-    flex-direction: row;
-    justify-content: flex-end;
-    background: ${({theme}) => theme.colors.white};
-    padding: ${majorScale(2)}px;
-    padding-top: ${majorScale(1)}px;
-    align-items: center;
-  `,
-  Item: Styled.View<StyledIContactOptionsItem>`
-    opacity: ${({$isActive}) => ($isActive ? 1 : 0.4)};
-    margin-left: ${majorScale(1)}px;
-  `,
-};
 const StyledScrollView = Styled.ScrollView`
   flex: 1;
 `;
@@ -75,7 +53,7 @@ const StyledPersonDetails = {
   `,
   Left: Styled.View``,
   Right: Styled.View`
-    padding-left: ${majorScale(2)}px;
+    padding-left: ${majorScale()}px;
     justify-content: space-between;
     flex-direction: column;
   `,
@@ -96,136 +74,21 @@ const StyledTabsWrapper = Styled.View`
   padding-horizontal: ${majorScale(2)}px;
   padding-bottom: ${majorScale(2)}px;
 `;
-const StyledTabContentWrapper = Styled.View`
-  padding: ${majorScale(2)}px;
-  padding-top: ${majorScale(3)}px;
-`;
+const StyledTabContentWrapper = Styled.View``;
 
 // Component
 export const PersonRecord: React.FC<IProps> = ({
   person,
   milestones,
-  emailAddresses,
-  contactPreferences,
-  phoneNumbers,
-  onPressCall,
-  onPressSms,
-  onPressEmail,
-  shouldShowCallConfirmation = true,
-  shouldShowEmailConfirmation = true,
-  shouldShowSmsConfirmation = true,
   preSelectedTabValue,
   tabs = [],
 }): React.ReactElement => {
   // State
-  // prettier-ignore
-  const [selectedTab, setSelectedTab] = React.useState<any>(null);
-  // prettier-ignore
-  const [isCallConfirmationShown, setIsCallConfirmationShown] = React.useState<boolean>(false);
-  // prettier-ignore
-  const [isSmsConfirmationShown, setIsSmsConfirmationShown] = React.useState<boolean>(false);
-  // prettier-ignore
-  const [isEmailConfirmationShown, setIsEmailConfirmationShown] = React.useState<boolean>(false);
+  const [selectedTab, setSelectedTab] = React.useState<ITab>();
 
   // On Tab Change
   const onTabChange = (tab: ITab): void => {
     setSelectedTab(tab);
-  };
-
-  // Show Call Confirmation
-  const showCallConfirmation = (): void => {
-    setIsCallConfirmationShown(true);
-  };
-
-  // Show Sms Confirmation
-  const showSmsConfirmation = (): void => {
-    setIsSmsConfirmationShown(true);
-  };
-
-  // Show Email Confirmation
-  const showEmailConfirmation = (): void => {
-    setIsEmailConfirmationShown(true);
-  };
-
-  // Hide Call Confirmation
-  const hideCallConfirmation = (): void => {
-    setIsCallConfirmationShown(false);
-  };
-
-  // Hide Sms Confirmation
-  const hideSmsConfirmation = (): void => {
-    setIsSmsConfirmationShown(false);
-  };
-
-  // Hide Email Confirmation
-  const hideEmailConfirmation = (): void => {
-    setIsEmailConfirmationShown(false);
-  };
-
-  // On Press Call Icon
-  const onPressCallIcon = () => {
-    if (!shouldShowCallConfirmation) {
-      const primaryPhone = phoneNumbers?.find(x => x?.isPrimary);
-
-      return onPressCall(primaryPhone);
-    }
-
-    showCallConfirmation();
-  };
-
-  // On Press Sms Icon
-  const onPressSmsIcon = () => {
-    if (!shouldShowSmsConfirmation) {
-      const primaryPhone = phoneNumbers?.find(x => x?.isPrimary);
-
-      return onPressSms(primaryPhone);
-    }
-
-    showSmsConfirmation();
-  };
-
-  // On Press Email Icon
-  const onPressEmailIcon = () => {
-    if (!shouldShowEmailConfirmation) {
-      const primaryEmail = emailAddresses?.find(x => x?.isPrimary);
-
-      return onPressEmail(primaryEmail);
-    }
-
-    showEmailConfirmation();
-  };
-
-  // On Confirm Call
-  const onConfirmCall = () => {
-    const primaryPhone = phoneNumbers?.find(x => x?.isPrimary);
-
-    if (primaryPhone) {
-      onPressCall(primaryPhone);
-    }
-
-    hideCallConfirmation();
-  };
-
-  // On Confirm Sms
-  const onConfirmSms = () => {
-    const primaryPhone = phoneNumbers?.find(x => x?.isPrimary);
-
-    if (primaryPhone) {
-      onPressSms(primaryPhone);
-    }
-
-    hideSmsConfirmation();
-  };
-
-  // On Confirm Email
-  const onConfirmEmail = () => {
-    const primaryEmail = emailAddresses?.find(x => x?.isPrimary);
-
-    if (primaryEmail) {
-      onPressEmail(primaryEmail);
-    }
-
-    hideEmailConfirmation();
   };
 
   React.useEffect(() => {
@@ -240,78 +103,150 @@ export const PersonRecord: React.FC<IProps> = ({
     setSelectedTab(selectedTabValue);
   }, [tabs]);
 
-  let metaData = '';
-
-  if (person?.gender) {
-    metaData = person?.gender;
+  let backgroundGradient = ['#56C4C4', '#56C4C4'];
+  if (person?.deceasedDate === null) {
+    if (person.isAdult === true) {
+      if (person.gender === 'M') {
+        backgroundGradient = ['#3A8E5D', '#7EAC61'];
+      }
+      if (person.gender === 'F') {
+        backgroundGradient = ['#0290B7', '#5CA9B5'];
+      }
+    } else if (person.isStudent === true) {
+      backgroundGradient = ['#CB6342', '#F7D39E'];
+    } else if (person.isChild === true) {
+      backgroundGradient = ['#5AC9F5', '#1C93C4'];
+    }
   }
 
-  if (person?.ageGroup) {
-    metaData = `${metaData} | ${person?.ageGroup}`;
+  let bgGradientColors = ['#329594', '#32959490'];
+  if (person.isAdult === true) {
+    if (person.gender === 'M') {
+      bgGradientColors = ['#7EAC61', '#7EAC6190'];
+    }
+    if (person.gender === 'F') {
+      bgGradientColors = ['#5CA9B5', '#5CA9B590'];
+    }
+  } else if (person.isStudent === true) {
+    bgGradientColors = ['#F7D39E', '#F7D39E90'];
+  } else if (person.isChild === true) {
+    bgGradientColors = ['#5AC9F5', '#5AC9F590'];
   }
 
-  if (person?.maritalStatus) {
-    metaData = `${metaData} | ${person?.maritalStatus}`;
-  }
+  const humanizeDate = (date: string | null): string => {
+    const year = Moment.duration(Moment(Moment.now()).diff(date)).years();
+    const month = Moment.duration(Moment(Moment.now()).diff(date)).months();
+    const day = Moment.duration(Moment(Moment.now()).diff(date)).days();
+    const humanDate =
+      year > 0
+        ? `${year} ${year > 1 ? 'years' : 'year'}`
+        : month > 0
+        ? `${month} ${month > 1 ? 'months' : 'month'}`
+        : `${day} ${day > 1 ? 'days' : 'day'}`;
+    return humanDate || date || 'N/A';
+  };
 
-  if (person?.campusName) {
-    metaData = `${metaData} | ${person?.campusName}`;
-  }
+  const getUserNameFirstLastCharacter = () => {
+    const arrName = person?.fullName?.split(' ');
+    if (arrName?.length === 2) {
+      return `${arrName[0].charAt(0)}${arrName[1].charAt(0)}`;
+    }
+    return `${arrName![0].charAt(0)}${arrName![0].charAt(1)}`;
+  };
 
-  let bgGradientColors = ['#329594', '#56C4C4'];
+  const getPersonOtherDetails = () => {
+    const arrOtherDet: string[] = [];
+    const churchEntName = person.churchEntityName ?? '';
+    const marStatus = person.maritalStatus !== null ? person.maritalStatus : '';
+    const gender: string =
+      person.gender === null
+        ? ''
+        : String(person.gender).toLowerCase() === 'f'
+        ? 'Female'
+        : 'Male';
 
-  if (person?.gender === 'Male') {
-    bgGradientColors = ['#3A8E5D', '#7EAC61'];
-  }
+    if (gender.length > 0) {
+      arrOtherDet.push(gender);
+    }
 
-  if (person?.gender === 'Female') {
-    bgGradientColors = ['#0290B7', '#5CA9B5'];
-  }
+    if (marStatus.length > 0) {
+      arrOtherDet.push(marStatus);
+    }
 
-  if (person?.age < 18) {
-    bgGradientColors = ['#C33580', '#F99E49'];
-  }
+    arrOtherDet.push(
+      churchEntName === null || churchEntName === 'Unknown'
+        ? ''
+        : churchEntName,
+    );
+    return arrOtherDet.join(' | ');
+  };
 
-  let preferredContactMethod;
+  const renderPrefersContactDisplayTitle = () => {
+    if (
+      person.contactPreferences &&
+      person.contactPreferences !== null &&
+      person.contactPreferences.doNotContact
+    ) {
+      return '(Do Not Contact This Individual)';
+    }
 
-  if (contactPreferences?.preferredMethod !== 'none') {
-    preferredContactMethod = contactPreferences?.preferredMethod || '';
-  }
+    if (
+      person.contactPreferences &&
+      person.contactPreferences !== null &&
+      person.contactPreferences.preferredMethod &&
+      person.contactPreferences.preferredMethod === 'phone'
+    ) {
+      return '(prefers phone)';
+    }
+    return '(prefers emails)';
+  };
 
-  const primaryEmail = emailAddresses?.find(x => x?.isPrimary);
-  const primaryPhone = phoneNumbers?.find(x => x?.isPrimary);
+  const getPhoneNumber = () => {
+    let strNumber = 'N/A';
+    if (
+      person?.phones &&
+      Array.isArray(person.phones) &&
+      person.phones.length > 0
+    ) {
+      const filterNumber = person.phones.filter(
+        (item: any) => item.isPrimary === true,
+      );
+      if (filterNumber.length > 0) {
+        strNumber =
+          filterNumber[0].displayPhoneNumber &&
+          filterNumber[0].displayPhoneNumber !== null
+            ? filterNumber[0].displayPhoneNumber
+            : 'N/A';
+      }
+    }
+    return strNumber;
+  };
 
-  const firstContactDate = milestones?.firstContactDate
-    ? Moment(milestones?.firstContactDate).fromNow().replace(' ago', '')
-    : 'N/A';
+  const renderPrefersContactDisplay = () => {
+    if (
+      person.contactPreferences &&
+      person.contactPreferences !== null &&
+      person.contactPreferences.doNotContact
+    ) {
+      return '';
+    }
 
-  const congregationDate = milestones?.congregationDate
-    ? Moment(milestones?.congregationDate).fromNow().replace(' ago', '')
-    : 'N/A';
+    if (
+      person.contactPreferences &&
+      person.contactPreferences !== null &&
+      person.contactPreferences.preferredMethod &&
+      person.contactPreferences.preferredMethod === 'phone'
+    ) {
+      return getPhoneNumber();
+    }
+    return person && Array.isArray(person.emails) && person.emails?.length > 0
+      ? person.emails[0]?.email
+      : '';
+  };
 
   return (
     <>
       {/* Contact Options */}
-      <StyledContactOptions.Wrapper>
-        <StyledContactOptions.Item $isActive={!!primaryPhone}>
-          <Link onPress={onPressCallIcon} disabled={!primaryPhone}>
-            <Icon file={IconPhone} size={22} color="#1C93C4" />
-          </Link>
-        </StyledContactOptions.Item>
-
-        <StyledContactOptions.Item $isActive={!!primaryPhone}>
-          <Link onPress={onPressSmsIcon} disabled={!primaryPhone}>
-            <Icon file={IconSms} size={22} color="#56C4C4" />
-          </Link>
-        </StyledContactOptions.Item>
-
-        <StyledContactOptions.Item $isActive={!!primaryEmail}>
-          <Link onPress={onPressEmailIcon} disabled={!primaryEmail}>
-            <Icon file={IconEmail} size={22} color="#C68EF6" />
-          </Link>
-        </StyledContactOptions.Item>
-      </StyledContactOptions.Wrapper>
-
       <StyledScrollView
         alwaysBounceVertical={false}
         showsHorizontalScrollIndicator={false}
@@ -357,7 +292,9 @@ export const PersonRecord: React.FC<IProps> = ({
                 At Saddleback
               </StyledTimespan.Label>
               <StyledTimespan.Value inversed variant="caption" weight="bold">
-                {firstContactDate}
+                {milestones?.firstContactDate
+                  ? humanizeDate(milestones?.firstContactDate)
+                  : 'N/A'}
               </StyledTimespan.Value>
             </StyledTimespan.Wrapper>
 
@@ -366,113 +303,84 @@ export const PersonRecord: React.FC<IProps> = ({
                 Member for
               </StyledTimespan.Label>
               <StyledTimespan.Value inversed variant="caption" weight="bold">
-                {congregationDate}
+                {milestones?.congregationDate
+                  ? humanizeDate(milestones?.congregationDate)
+                  : 'N/A'}
               </StyledTimespan.Value>
             </StyledTimespan.Wrapper>
           </StyledStripe>
 
           {/* Person Details */}
-          <StyledPersonDetails.Wrapper>
-            <StyledPersonDetails.Left>
-              <StyledAvatarWrapper>
-                <Avatar
-                  size="profile"
-                  initials={person?.initials}
-                  uri={person?.profilePictureUrl}
-                  radius="small"
-                />
-              </StyledAvatarWrapper>
-            </StyledPersonDetails.Left>
+          <LinearGradient
+            radius={0}
+            horizontal
+            // eslint-disable-next-line react-native/no-inline-styles
+            viewStyle={{width: '100%'}}
+            gradientColors={[
+              {offset: 0, color: backgroundGradient[0]},
+              {offset: 1, color: backgroundGradient[1]},
+            ]}>
+            <StyledPersonDetails.Wrapper>
+              <StyledPersonDetails.Left>
+                <StyledAvatarWrapper>
+                  <Avatar
+                    size="profile"
+                    initials={getUserNameFirstLastCharacter()}
+                    uri={person?.profilePhotoUrl || person?.profilePictureUrl}
+                    radius="small"
+                  />
+                </StyledAvatarWrapper>
+              </StyledPersonDetails.Left>
 
-            <StyledPersonDetails.Right>
-              <StyledPersonDetails.Upper>
-                {/* Name */}
-                <StyledPersonDetails.Row>
-                  <Text weight="bold" inversed>
-                    {person?.fullName}
-                  </Text>
-                </StyledPersonDetails.Row>
-
-                {/* Metadata */}
-                <StyledPersonDetails.Row>
-                  <Text variant="caption" inversed>
-                    {metaData}
-                  </Text>
-                </StyledPersonDetails.Row>
-              </StyledPersonDetails.Upper>
-
-              <StyledPersonDetails.Lower>
-                {/* Contact Preference */}
-                <StyledPersonDetails.Row>
-                  {preferredContactMethod ? (
-                    <Text variant="caption" inversed>
-                      (prefers {preferredContactMethod})
+              <StyledPersonDetails.Right>
+                <StyledPersonDetails.Upper>
+                  {/* Name */}
+                  <StyledPersonDetails.Row>
+                    <Text weight="bold" inversed>
+                      {person?.fullName}
                     </Text>
-                  ) : null}
-                </StyledPersonDetails.Row>
+                  </StyledPersonDetails.Row>
 
-                {/* Email */}
-                <StyledPersonDetails.Row>
-                  <Text variant="caption" inversed>
-                    {primaryEmail?.email || 'No email associated'}
-                  </Text>
-                </StyledPersonDetails.Row>
-              </StyledPersonDetails.Lower>
-            </StyledPersonDetails.Right>
-          </StyledPersonDetails.Wrapper>
+                  {/* Metadata */}
+                  <StyledPersonDetails.Row>
+                    <Text variant="caption" inversed>
+                      {getPersonOtherDetails()}
+                    </Text>
+                  </StyledPersonDetails.Row>
+                </StyledPersonDetails.Upper>
 
-          {/* Tab Buttons */}
-          <StyledTabsWrapper>
-            <PeopleTabs
-              items={tabs}
-              selected={selectedTab?.value}
-              onChange={onTabChange}
-            />
-          </StyledTabsWrapper>
+                <StyledPersonDetails.Lower>
+                  {/* Contact Preference */}
+                  <StyledPersonDetails.Row>
+                    <Text variant="caption" inversed>
+                      {renderPrefersContactDisplayTitle()}
+                    </Text>
+                  </StyledPersonDetails.Row>
+
+                  {/* Email */}
+                  <StyledPersonDetails.Row>
+                    <Text variant="caption" weight="bold" inversed>
+                      {renderPrefersContactDisplay()}
+                    </Text>
+                  </StyledPersonDetails.Row>
+                </StyledPersonDetails.Lower>
+              </StyledPersonDetails.Right>
+            </StyledPersonDetails.Wrapper>
+
+            {/* Tab Buttons */}
+            <StyledTabsWrapper>
+              <PeopleTabs
+                items={tabs}
+                selected={selectedTab ? selectedTab.value : null}
+                onChange={onTabChange}
+              />
+            </StyledTabsWrapper>
+          </LinearGradient>
         </LinearGradient>
 
         {/* Tab Content */}
         <StyledTabContentWrapper>{selectedTab?.jsx}</StyledTabContentWrapper>
       </StyledScrollView>
-
-      {/* Call Confirmation Prompt */}
-      {shouldShowCallConfirmation && (
-        <LowerPrompt
-          isOpen={isCallConfirmationShown}
-          leftButtonLabel="Cancel"
-          leftButtonCallback={hideCallConfirmation}
-          rightButtonLabel="Call"
-          rightButtonCallback={onConfirmCall}
-          intent="success">
-          Are you sure you want to make a phone call?
-        </LowerPrompt>
-      )}
-
-      {/* SMS Confirmation Prompt */}
-      {shouldShowSmsConfirmation && (
-        <LowerPrompt
-          isOpen={isSmsConfirmationShown}
-          leftButtonLabel="Cancel"
-          leftButtonCallback={hideSmsConfirmation}
-          rightButtonLabel="Yes"
-          rightButtonCallback={onConfirmSms}
-          intent="success">
-          Are you sure you want to compose a text message?
-        </LowerPrompt>
-      )}
-
-      {/* Email Confirmation Prompt */}
-      {shouldShowEmailConfirmation && (
-        <LowerPrompt
-          isOpen={isEmailConfirmationShown}
-          leftButtonLabel="Cancel"
-          leftButtonCallback={hideEmailConfirmation}
-          rightButtonLabel="Yes"
-          rightButtonCallback={onConfirmEmail}
-          intent="success">
-          Are you sure you want to compose an email?
-        </LowerPrompt>
-      )}
     </>
   );
 };
