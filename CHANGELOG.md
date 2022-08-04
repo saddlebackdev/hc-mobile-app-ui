@@ -2,13 +2,16 @@
 
 ### v0.0.42
 
+- Add SelectPicker showCustomIcon Prop
 - Add style textAlignVertical:'top' to TextInput when multiline for same behavior in both platforms
 
 --
+
 ### v0.0.41
 
 - Add Note list item component
 - Add SelectPicker Required Prop
+- Add fontFamily on text Input
 
 --
 
