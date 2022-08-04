@@ -1,10 +1,15 @@
 # Changelog
 
+### v0.0.42
+
+- Add SelectPicker showCustomIcon Prop
+
+--
+
 ### v0.0.41
 
 - Add Note list item component
 - Add SelectPicker Required Prop
-- Add SelectPicker showCustomIcon Prop
 - Add fontFamily on text Input
 
 --
