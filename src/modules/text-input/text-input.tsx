@@ -62,6 +62,7 @@ const StyledInput = Styled.TextInput<IStyledInput>`
   border-top-width: ${({$isUnderlined}) => ($isUnderlined ? 0 : '1px')};
   border-right-width: ${({$isUnderlined}) => ($isUnderlined ? 0 : '1px')};
   border-left-width: ${({$isUnderlined}) => ($isUnderlined ? 0 : '1px')};
+  text-align-vertical: ${({multiline}) => (multiline ? 'top' : 'center')};
 `;
 
 // Component

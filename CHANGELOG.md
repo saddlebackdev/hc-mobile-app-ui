@@ -3,6 +3,7 @@
 ### v0.0.42
 
 - Add SelectPicker showCustomIcon Prop
+- Add style textAlignVertical:'top' to TextInput when multiline for same behavior in both platforms
 
 --
 
