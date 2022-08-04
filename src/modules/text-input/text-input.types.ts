@@ -9,6 +9,7 @@ export interface IStyledLabel {
 // Styled Input
 export interface IStyledInput extends TextInputProps {
   $isFocused: boolean;
+  $font?: 'primary' | 'secondary' | string;
   $isUnderlined?: boolean;
 }
 
@@ -19,6 +20,9 @@ export interface IProps extends Partial<TextInputProps> {
 
   /** Label for the text input */
   label?: string;
+
+  /** Font family to use. */
+  font?: 'primary' | 'secondary' | string;
 
   /** Placeholder for the text input */
   placeholder?: string;

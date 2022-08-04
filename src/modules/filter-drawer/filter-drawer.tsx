@@ -109,6 +109,7 @@ export const FilterDrawer: React.FC<IProps> = ({
   isOpen = false,
   shouldShowFilterButton = true,
   onClose,
+  onRequestClose,
   filterButtonLabel = 'Apply Filters',
   headerTitle = 'Filters',
 }): React.ReactElement => {
@@ -239,6 +240,7 @@ export const FilterDrawer: React.FC<IProps> = ({
       ref={modalRef}
       isVisible={isOpen}
       onModalHide={onClose}
+      onBackButtonPress={onRequestClose}
       hideModalContentWhileAnimating
       useNativeDriverForBackdrop
       style={modalStyle}
