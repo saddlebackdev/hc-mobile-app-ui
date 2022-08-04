@@ -6,13 +6,13 @@
 - Update Person Record Component, Fixes UI and Functionalities.
 - Add SelectPicker showCustomIcon Prop
 - Add style textAlignVertical:'top' to TextInput when multiline for same behavior in both platforms
+- Add ReminderPicker Component
+- Add CalendarPicker Component
 
 --
 
 ### v0.0.41
 
-- Add ReminderPicker Component
-- Add CalendarPicker Component
 - Add Note list item component
 - Add SelectPicker Required Prop
 - Add fontFamily on text Input
