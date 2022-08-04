@@ -10,6 +10,7 @@ import {
   ButtonGroup,
   BottomSheet,
   Chip,
+  CalendarPicker,
   DatePicker,
   SelectPicker,
   Checkbox,
@@ -30,6 +31,7 @@ import {
   ThemeProvider,
   IconToggle,
   PillToggle,
+  ReminderPicker,
   TextInput,
   Tabs,
   PeopleListItem,
@@ -75,18 +77,15 @@ const Row = Styled.View`
   margin-bottom: 10px;
   padding: 4px;
 `;
-
 const CardElementWrapper = Styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 `;
-
 const WarningTextWrapper = Styled(Text)`
   padding-horizontal: 10px;
   padding-vertical: 2px;
 `;
-
 const WarningViewWrapper = Styled.View`
   background-color: ${defaultTheme.colors.warningLight};
   border-radius: 13px;
@@ -938,6 +937,52 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                     vel officia fugiat inventore voluptatem hic nulla!
                   </Text>
                 </Accordion>
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Calendar Picker */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Calendar Picker</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">
+                Third party package react-native-calendar-picker
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <CalendarPicker
+                  onDateChange={date => {
+                    // eslint-disable-next-line no-console
+                    console.log(date);
+                  }}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Reminder Picker */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Reminder Picker</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">
+                Third party package react-native-calendar-picker
+              </Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <ReminderPicker
+                  onChange={date => {
+                    // eslint-disable-next-line no-console
+                    console.log(date);
+                  }}
+                />
               </Row>
             </Section.Content>
           </Section.Wrapper>
