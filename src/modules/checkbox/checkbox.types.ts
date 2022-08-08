@@ -34,4 +34,7 @@ export interface IProps {
 
   /** Hint for the checkbox */
   hint?: string;
+
+  /** If true, appends an asterisk to the label */
+  required?: boolean;
 }

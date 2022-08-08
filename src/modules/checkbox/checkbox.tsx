@@ -57,6 +57,9 @@ const StyledCheckboxLabel = Styled(Text)`
   margin-bottom: 4px;
 `;
 const StyledCheckboxHint = Styled(Text)``;
+const StyledLabelAsterisk = Styled(Text)`
+  color: ${({theme}) => theme.colors.dangerLight};
+`;
 
 // Component
 export const Checkbox: React.FC<IProps> = React.memo(
@@ -67,6 +70,7 @@ export const Checkbox: React.FC<IProps> = React.memo(
     isChecked = false,
     disabled,
     onPress,
+    required,
   }): React.ReactElement => (
     <StyledWrapper
       testID="checkbox"
@@ -87,6 +91,11 @@ export const Checkbox: React.FC<IProps> = React.memo(
           {label ? (
             <StyledCheckboxLabel testID="checkbox-label" inversed={inversed}>
               {label}
+              {required && (
+                <StyledLabelAsterisk testID="input-label-asterisk">
+                  *
+                </StyledLabelAsterisk>
+              )}
             </StyledCheckboxLabel>
           ) : null}
 
