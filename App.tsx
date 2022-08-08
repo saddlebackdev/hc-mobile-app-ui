@@ -1555,9 +1555,9 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Row>
                 <Checkbox
                   isChecked={isChecked}
+                  required
                   onPress={() => setIsChecked(!isChecked)}
-                  label="Alternate Anatomy"
-                  hint="With Hint"
+                  label="Required"
                 />
               </Row>
               <Row>
@@ -1570,8 +1570,16 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
               <Row>
                 <Checkbox
-                  disabled
                   isChecked={isChecked}
+                  onPress={() => setIsChecked(!isChecked)}
+                  label="Alternate Anatomy"
+                  hint="With Hint"
+                />
+              </Row>
+              <Row>
+                <Checkbox
+                  disabled
+                  isChecked={!isChecked}
                   onPress={() => setIsChecked(!isChecked)}
                   label="Checked Disabled State"
                 />
@@ -1579,7 +1587,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <Row>
                 <Checkbox
                   disabled
-                  isChecked={!isChecked}
+                  isChecked={isChecked}
                   onPress={() => setIsChecked(!isChecked)}
                   label="Unchecked Disabled State"
                 />
