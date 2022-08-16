@@ -103,7 +103,7 @@ export const PersonRecord: React.FC<IProps> = ({
     setSelectedTab(selectedTabValue);
   }, [tabs]);
 
-  let backgroundGradient = ['#56C4C4', '#56C4C4'];
+  let backgroundGradient = ['#329594', '#56C4C4'];
   if (person?.deceasedDate === null) {
     if (person.isAdult === true) {
       if (person.gender === 'M') {
@@ -113,24 +113,24 @@ export const PersonRecord: React.FC<IProps> = ({
         backgroundGradient = ['#0290B7', '#5CA9B5'];
       }
     } else if (person.isStudent === true) {
-      backgroundGradient = ['#CB6342', '#F7D39E'];
+      backgroundGradient = ['#C33580', '#F99E49'];
     } else if (person.isChild === true) {
-      backgroundGradient = ['#5AC9F5', '#1C93C4'];
+      backgroundGradient = ['#1C93C4', '#5AC9F5'];
     }
   }
 
-  let bgGradientColors = ['#329594', '#32959490'];
+  let bgGradientColors = ['#32959490', '#56C4C4'];
   if (person.isAdult === true) {
     if (person.gender === 'M') {
-      bgGradientColors = ['#7EAC61', '#7EAC6190'];
+      bgGradientColors = ['#3A8E5D90', '#7EAC61'];
     }
     if (person.gender === 'F') {
-      bgGradientColors = ['#5CA9B5', '#5CA9B590'];
+      bgGradientColors = ['#0290B790', '#5CA9B5'];
     }
   } else if (person.isStudent === true) {
-    bgGradientColors = ['#F7D39E', '#F7D39E90'];
+    bgGradientColors = ['#C3358090', '#F99E49'];
   } else if (person.isChild === true) {
-    bgGradientColors = ['#5AC9F5', '#5AC9F590'];
+    bgGradientColors = ['#1C93C490', '#5AC9F5'];
   }
 
   const humanizeDate = (date: string | null): string => {
