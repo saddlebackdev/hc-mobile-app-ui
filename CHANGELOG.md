@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.44
+
+- Updates to Person Record Component
+
+--
+
 ### v0.0.43
 
 - Add required option for Checkbox Component
