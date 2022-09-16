@@ -1,5 +1,12 @@
 # Changelog
 
+
+### v0.0.45
+
+- Updates to Bottom Sheet Component - remove lower white strip with colored backgrounds.
+
+--
+
 ### v0.0.44
 
 - Updates to Person Record Component
