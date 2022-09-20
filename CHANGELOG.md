@@ -3,7 +3,8 @@
 
 ### v0.0.45
 
-- Updates to Bottom Sheet Component - remove lower white strip with colored backgrounds.
+- Updates to Bottom Sheet Component - remove lower white strip with colored backgrounds
+- Modify Person Record global component to show/hide milestones
 
 --
 
