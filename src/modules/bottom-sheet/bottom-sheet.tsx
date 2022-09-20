@@ -18,7 +18,8 @@ import {LayoutUtils} from '../utilities';
 const StyledWrapper = Styled.View`
   width: 100%; height: 100%;
   backgroundColor: ${({theme}) => theme.colors.white};
-  margin-top: ${majorScale(5.5)}px;
+  margin-top: ${majorScale(11)}px;
+  margin-bottom: ${majorScale(5.5)}px;
   borderTopRightRadius: 12px;
   borderTopLeftRadius: 12px;
   overflow: hidden;
