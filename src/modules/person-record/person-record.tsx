@@ -82,6 +82,7 @@ export const PersonRecord: React.FC<IProps> = ({
   milestones,
   preSelectedTabValue,
   tabs = [],
+  disableMilestones = false,
 }): React.ReactElement => {
   // State
   const [selectedTab, setSelectedTab] = React.useState<ITab>();
@@ -263,28 +264,34 @@ export const PersonRecord: React.FC<IProps> = ({
           {/* Stripe */}
           <StyledStripe>
             {/* Milestones */}
-            <CoreMilestones
-              isWhite
-              hasSignedMembershipAgreement={
-                milestones?.hasSignedMembershipAgreement
-              }
-              hasAttendedClass101={milestones?.hasAttendedClass101}
-              hasAttendedClass201={milestones?.hasAttendedClass201}
-              hasAttendedClass301={milestones?.hasAttendedClass301}
-              hasAttendedClass401={milestones?.hasAttendedClass401}
-              hasSignedMaturityCovenant={milestones?.hasSignedMaturityCovenant}
-              hasSignedMinistryCovenant={milestones?.hasSignedMinistryCovenant}
-              hasSignedMissionCovenant={milestones?.hasSignedMissionCovenant}
-              hasAcceptedChrist={milestones?.hasAcceptedChrist}
-              isBaptised={milestones?.isBaptised}
-              isInSmallGroup={milestones?.isInSmallGroup}
-              isInMinistry={milestones?.isInMinistry}
-              isActiveInMissions={milestones?.isActiveInMissions}
-              isAdult={person?.isAdult}
-              gender={person?.gender}
-              isStudent={person?.isStudent}
-              isChild={person?.isChild}
-            />
+            {!disableMilestones && (
+              <CoreMilestones
+                isWhite
+                hasSignedMembershipAgreement={
+                  milestones?.hasSignedMembershipAgreement
+                }
+                hasAttendedClass101={milestones?.hasAttendedClass101}
+                hasAttendedClass201={milestones?.hasAttendedClass201}
+                hasAttendedClass301={milestones?.hasAttendedClass301}
+                hasAttendedClass401={milestones?.hasAttendedClass401}
+                hasSignedMaturityCovenant={
+                  milestones?.hasSignedMaturityCovenant
+                }
+                hasSignedMinistryCovenant={
+                  milestones?.hasSignedMinistryCovenant
+                }
+                hasSignedMissionCovenant={milestones?.hasSignedMissionCovenant}
+                hasAcceptedChrist={milestones?.hasAcceptedChrist}
+                isBaptised={milestones?.isBaptised}
+                isInSmallGroup={milestones?.isInSmallGroup}
+                isInMinistry={milestones?.isInMinistry}
+                isActiveInMissions={milestones?.isActiveInMissions}
+                isAdult={person?.isAdult}
+                gender={person?.gender}
+                isStudent={person?.isStudent}
+                isChild={person?.isChild}
+              />
+            )}
 
             {/* Timespans */}
             <StyledTimespan.Wrapper>

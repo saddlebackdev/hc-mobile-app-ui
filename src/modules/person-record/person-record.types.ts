@@ -64,4 +64,7 @@ export interface IProps {
 
   /** Tabs to be shown below the basic details. */
   tabs: Array<ITab>;
+
+  /** show milestones if true. */
+  disableMilestones: boolean;
 }
