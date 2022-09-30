@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.0.46
+
+- Modify Person Record global component to show/hide milestones without affecting the layout
+
+--
 
 ### v0.0.45
 

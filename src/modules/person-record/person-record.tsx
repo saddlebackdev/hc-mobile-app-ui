@@ -76,6 +76,10 @@ const StyledTabsWrapper = Styled.View`
 `;
 const StyledTabContentWrapper = Styled.View``;
 
+const StyledMilestonePlaceholder = Styled.View`
+  flex:1;
+`;
+
 // Component
 export const PersonRecord: React.FC<IProps> = ({
   person,
@@ -264,7 +268,7 @@ export const PersonRecord: React.FC<IProps> = ({
           {/* Stripe */}
           <StyledStripe>
             {/* Milestones */}
-            {!disableMilestones && (
+            {!disableMilestones ? (
               <CoreMilestones
                 isWhite
                 hasSignedMembershipAgreement={
@@ -291,6 +295,8 @@ export const PersonRecord: React.FC<IProps> = ({
                 isStudent={person?.isStudent}
                 isChild={person?.isChild}
               />
+            ) : (
+              <StyledMilestonePlaceholder />
             )}
 
             {/* Timespans */}
