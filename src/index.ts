@@ -182,3 +182,7 @@ export {IProps as ICoreMilestoneProps} from './modules/core-milestone/core-miles
 // People-note-item
 export {default as NoteListItem} from './modules/note-list/note-list';
 export {IProps as INoteListItemProps} from './modules/people-list/people-list-item.types';
+
+// Group-card-list-item
+export {default as GroupCardListItem} from './modules/group-card-list/group-card-list-item';
+export {IProps as IGroupCardItemProps} from './modules/group-card-list/group-card-list-item.types';

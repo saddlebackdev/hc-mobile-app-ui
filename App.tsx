@@ -44,6 +44,7 @@ import {
   minorScale,
   NoteListItem,
   majorScale,
+  GroupListItem,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -51,6 +52,8 @@ import IconSVG from './src/modules/icon/icon-external';
 import IconShapeHeart from './src/images/shape-heart.svg';
 import IconReminder from './src/images/Icon_reminder.svg';
 import IconPin from './src/images/Icon_pin.svg';
+import IconCarrotUp from './src/images/carrot-up.svg';
+import IconTime from './src/images/time-icon.svg';
 import {IProgressValue} from './src/modules/circular-progress/circular-progress.types';
 import CircularProgress from './src/modules/circular-progress/circular-progress';
 
@@ -457,6 +460,53 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 Mobile Apps.
               </Text>
             </Section.Description>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Group list item */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Group List Item</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show Group list item</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <GroupListItem
+                  title={'610'}
+                  subTitle={'Attendees at Anaheim'}
+                  leftIcon={IconTime}
+                  leftIconColor="#F99E49"
+                  leftText={'2 Services'}
+                  rightIcon={IconCarrotUp}
+                  rightIconColor="#54CC86"
+                  rightText="33 From Last Week"
+                  gradientColors={['#F99E49', '#C33580']}
+                  expandedElement={
+                    <>
+                      {/* put your expanded contents here */}
+                      <Text>Used to show expanded content</Text>
+                    </>
+                  }
+                />
+                <GroupListItem
+                  title={'Team Jesus'}
+                  leftIcon={IconTime}
+                  leftText={'Lake Forest'}
+                  rightIcon={IconCarrotUp}
+                  rightText="3"
+                  showDivider
+                  gradientColors={['#A6CAE4', '#7772C0']}
+                  expandedElement={
+                    <>
+                      {/* put your expanded contents here */}
+                      <Text>Used to show expanded content</Text>
+                    </>
+                  }
+                />
+              </Row>
+            </Section.Content>
           </Section.Wrapper>
           <Divider />
 
