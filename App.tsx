@@ -44,7 +44,7 @@ import {
   minorScale,
   NoteListItem,
   majorScale,
-  GroupListItem,
+  GroupCardListItem,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -473,7 +473,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             </Section.Description>
             <Section.Content>
               <Row>
-                <GroupListItem
+                <GroupCardListItem
                   title={'610'}
                   subTitle={'Attendees at Anaheim'}
                   leftIcon={IconTime}
@@ -490,7 +490,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                     </>
                   }
                 />
-                <GroupListItem
+                <GroupCardListItem
                   title={'Team Jesus'}
                   leftIcon={IconTime}
                   leftText={'Lake Forest'}
