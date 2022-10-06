@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.47
+
+- Add Group card list item component
+
+--
+
 ### v0.0.46
 
 - Modify Person Record global component to show/hide milestones without affecting the layout
