@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GroupCardListItem Rendering renders itself correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginVertical": 5.5,
+        "opacity": 1,
+        "width": "100%",
+      },
+    ]
+  }
+  testID="group-card"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderBottomLeftRadius": 8,
+        "borderBottomRightRadius": 8,
+        "borderTopLeftRadius": 8,
+        "borderTopRightRadius": 8,
+        "flexDirection": "row",
+        "opacity": 1,
+        "overflow": "hidden",
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 7,
+          "width": 0,
+        },
+        "shadowOpacity": 0.11,
+        "shadowRadius": 11,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "overflow": "hidden",
+            "width": 5,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+            Object {
+              "shadowColor": "#38424D",
+              "shadowOffset": Object {
+                "height": 4,
+                "width": -2,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 3,
+            },
+            Object {
+              "flex": 1,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="linear-gradient"
+      >
+        <RNSVGSvgView
+          bbHeight="100%"
+          bbWidth="100%"
+          focusable={false}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": "100%",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGDefs>
+              <RNSVGLinearGradient
+                gradient={
+                  Array [
+                    0,
+                    -5846300,
+                    1,
+                    -8949056,
+                  ]
+                }
+                gradientTransform={null}
+                gradientUnits={0}
+                name="grad"
+                x1="0%"
+                x2="0%"
+                y1="0%"
+                y2="100%"
+              />
+            </RNSVGDefs>
+            <RNSVGRect
+              fill={
+                Array [
+                  1,
+                  "grad",
+                ]
+              }
+              height="100%"
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+              rx={0}
+              width="100%"
+              x={0}
+              y={0}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginLeft": -5,
+            "paddingHorizontal": 22,
+            "paddingVertical": 11,
+            "width": "auto",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "marginBottom": 11,
+              },
+            ]
+          }
+        >
+          <Text
+            inversed={false}
+            style={
+              Array [
+                Object {
+                  "color": "#1C2530",
+                  "fontFamily": "System",
+                  "fontSize": 18,
+                  "fontWeight": "700",
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="heading"
+            variant="h3"
+          >
+            TestCard
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "marginRight": 11,
+                },
+              ]
+            }
+          >
+            <test-file-stub
+              fill="black"
+              height={16}
+              width={16}
+            />
+          </View>
+          <Text
+            inversed={false}
+            muted={true}
+            style={
+              Array [
+                Object {
+                  "color": "#97A4AB",
+                  "fontFamily": "System",
+                  "fontSize": 14,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="text"
+            variant="caption"
+          >
+            TestLeftText
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#DBE0E3",
+                "height": "110%",
+                "marginHorizontal": 16.5,
+                "width": 0,
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "marginRight": 11,
+                },
+              ]
+            }
+          >
+            <test-file-stub
+              fill="black"
+              height={16}
+              width={16}
+            />
+          </View>
+          <Text
+            inversed={false}
+            muted={true}
+            style={
+              Array [
+                Object {
+                  "color": "#97A4AB",
+                  "fontFamily": "System",
+                  "fontSize": 14,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="text"
+            variant="caption"
+          >
+            TestLeftText
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
