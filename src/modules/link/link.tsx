@@ -21,6 +21,7 @@ export const Link: React.FC<IProps> = ({
   color = 'primaryLight',
   small,
   to,
+  ...props
 }): React.ReactElement => {
   // On Link Press
   const onLinkPress = async () => {
@@ -55,7 +56,8 @@ export const Link: React.FC<IProps> = ({
       activeOpacity={0.75}
       onPress={onLinkPress}
       disabled={disabled}
-      testID="link">
+      testID="link"
+      {...props}>
       {label ? (
         <Text color={color} small={small} weight="semiBold" testID="link-label">
           {label}
