@@ -474,15 +474,21 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             <Section.Content>
               <Row>
                 <GroupCardListItem
-                  title={'610'}
-                  subTitle={'Attendees at Anaheim'}
+                  title={'Attendees at Anaheim'}
+                  linkLabel={'610'}
+                  onLinkPress={() => {
+                    // link label pressed
+                  }}
                   leftIcon={IconTime}
                   leftIconColor="#F99E49"
                   leftText={'2 Services'}
                   rightIcon={IconCarrotUp}
                   rightIconColor="#54CC86"
                   rightText="33 From Last Week"
-                  gradientColors={['#F99E49', '#C33580']}
+                  gradientColors={[
+                    {color: '#F99E49', offset: 0},
+                    {color: '#C33580', offset: 1},
+                  ]}
                   expandedElement={
                     <>
                       {/* put your expanded contents here */}
@@ -497,7 +503,10 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                   rightIcon={IconCarrotUp}
                   rightText="3"
                   showDivider
-                  gradientColors={['#A6CAE4', '#7772C0']}
+                  gradientColors={[
+                    {color: '#A6CAE4', offset: 0},
+                    {color: '#7772C0', offset: 1},
+                  ]}
                   expandedElement={
                     <>
                       {/* put your expanded contents here */}
