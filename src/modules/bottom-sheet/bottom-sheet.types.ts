@@ -20,6 +20,9 @@ export interface IProps {
   /** If true, renders the close button on top-right corner. */
   showCloseButton?: boolean;
 
+  /** Test ID for the close button. */
+  closeButtonTestId?: string;
+
   /** Header component of the bottom sheet. */
   header?: IHeader;
 
