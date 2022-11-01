@@ -3,6 +3,7 @@
 ### v0.0.48
 
 - Link - Spread all props on touchable component
+- Bottom Sheet - Add closeButtonTestId prop
 
 --
 
