@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.48
+
+- Link - Spread all props on touchable component
+
+--
+
 ### v0.0.47
 
 - Add Group card list item component
