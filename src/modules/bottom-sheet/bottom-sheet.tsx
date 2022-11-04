@@ -71,6 +71,7 @@ export const BottomSheet: React.FC<IProps> = ({
   isOpen,
   onDismiss,
   showCloseButton = true,
+  closeButtonTestId = 'bottom-sheet-close-button',
   children,
   header,
   footer,
@@ -111,6 +112,7 @@ export const BottomSheet: React.FC<IProps> = ({
             <StyledCloseWrapper
               activeOpacity={0.75}
               hitSlop={LayoutUtils.addHitSlop(12)}
+              testID={closeButtonTestId}
               onPress={onCloseModal}>
               <Icon type="closeCircle" color="muted" />
             </StyledCloseWrapper>
