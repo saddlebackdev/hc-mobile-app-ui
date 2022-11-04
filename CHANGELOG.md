@@ -4,6 +4,7 @@
 
 - Link - Spread all props on touchable component
 - Bottom Sheet - Add closeButtonTestId prop
+- Update Group list item - added link label and modified title text
 
 --
 

@@ -1,3 +1,12 @@
+// Gradient Color Prop
+interface GradientColorProp {
+  /** color of gradient */
+  color: string;
+
+  /** offset of gradient. the offset should be passed from 0 to 1 containing decimal values if pass multiple colors. */
+  offset: number;
+}
+
 // Styled touchable
 export interface IStyledTouchable {
   $isExpanded?: boolean;
@@ -11,7 +20,8 @@ export interface IStyledDivider {
 // Props
 export interface IProps {
   title: string;
-  subTitle?: string;
+  linkLabel?: string;
+  onLinkPress?: any;
   leftIcon: any;
   leftIconColor?: string;
   leftText: string;
@@ -19,6 +29,6 @@ export interface IProps {
   rightIcon: any;
   rightIconColor?: string;
   rightText: string;
-  gradientColors?: string[];
+  gradientColors: GradientColorProp[];
   expandedElement: JSX.Element;
 }
