@@ -106,14 +106,7 @@ exports[`GroupCardListItem Rendering renders itself correctly 1`] = `
           <RNSVGGroup>
             <RNSVGDefs>
               <RNSVGLinearGradient
-                gradient={
-                  Array [
-                    0,
-                    -5846300,
-                    1,
-                    -8949056,
-                  ]
-                }
+                gradient={Array []}
                 gradientTransform={null}
                 gradientUnits={0}
                 name="grad"
@@ -172,6 +165,7 @@ exports[`GroupCardListItem Rendering renders itself correctly 1`] = `
           style={
             Array [
               Object {
+                "flexDirection": "row",
                 "marginBottom": 11,
               },
             ]
@@ -183,15 +177,19 @@ exports[`GroupCardListItem Rendering renders itself correctly 1`] = `
               Array [
                 Object {
                   "color": "#1C2530",
+                  "flexBasis": 0,
+                  "flexGrow": 1,
+                  "flexShrink": 1,
                   "fontFamily": "System",
                   "fontSize": 18,
+                  "fontStyle": "normal",
                   "fontWeight": "700",
                   "textAlign": "left",
                 },
               ]
             }
-            testID="heading"
-            variant="h3"
+            testID="text"
+            weight="bold"
           >
             TestCard
           </Text>

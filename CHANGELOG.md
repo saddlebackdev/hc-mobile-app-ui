@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.48
+
+- Update Group list item - added link label and modified title text
+
+--
+
 ### v0.0.47
 
 - Add Group card list item component

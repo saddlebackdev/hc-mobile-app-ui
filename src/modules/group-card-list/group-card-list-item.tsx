@@ -3,7 +3,6 @@ import * as React from 'react';
 import {Platform, StyleSheet, ViewStyle} from 'react-native';
 import Styled from 'styled-components/native';
 import LinearGradientView from '../linear-gradient/linear-gradient-view';
-import Heading from '../heading/heading';
 import Icon from '../icon/icon-external';
 import Text from '../text/text';
 import {minorScale, majorScale} from '../scales';
@@ -67,7 +66,14 @@ export const Header = {
     align-items: center;
   `,
   Name: Styled.View`
+    flex-direction: row;
     margin-bottom: ${majorScale(1)}px;
+  `,
+  Title: Styled(Text)`
+    flex: 1;
+  `,
+  LinkText: Styled(Text)`
+    text-decoration-line: underline;
   `,
   MetaData: Styled.View`
     flex-direction: row;
@@ -108,7 +114,8 @@ const fullLinearGradientViewStyle = StyleSheet.flatten<ViewStyle>({
 // Component
 export const GroupsListItem: React.FC<IProps> = ({
   title,
-  subTitle,
+  linkLabel,
+  onLinkPress,
   leftIcon,
   leftIconColor,
   leftText,
@@ -127,20 +134,26 @@ export const GroupsListItem: React.FC<IProps> = ({
     setIsExpanded(!isExpanded);
   };
 
-  const startGradientColor =
-    gradientColors && gradientColors.length > 0 ? gradientColors[0] : '#A6CAE4';
-  const endGradientColor =
-    gradientColors && gradientColors.length > 1 ? gradientColors[1] : '#7772C0';
-
   const renderHeaderContent = (inversed: boolean) => {
     return (
       <Header.Content>
         <Header.Row>
           <Header.Name>
-            <Heading variant="h3" inversed={inversed}>
+            <Header.Title
+              weight={linkLabel ? 'light' : 'bold'}
+              inversed={inversed}>
               {title}
-              {subTitle && <Text inversed={inversed}>{` ${subTitle}`}</Text>}
-            </Heading>
+            </Header.Title>
+            {linkLabel && (
+              <Header.LinkText
+                weight="bold"
+                color="primaryLight"
+                variant="body2"
+                inversed={inversed}
+                onPress={onLinkPress}>
+                {linkLabel}
+              </Header.LinkText>
+            )}
           </Header.Name>
         </Header.Row>
 
@@ -197,10 +210,7 @@ export const GroupsListItem: React.FC<IProps> = ({
             <LinearGradientView
               radius={0}
               viewStyle={leftLinearGradientViewStyle}
-              gradientColors={[
-                {offset: 0, color: startGradientColor},
-                {offset: 1, color: endGradientColor},
-              ]}
+              gradientColors={gradientColors}
             />
           </Header.GradientWrapper>
 
@@ -222,20 +232,14 @@ export const GroupsListItem: React.FC<IProps> = ({
           <LinearGradientView
             radius={0}
             viewStyle={leftLinearGradientViewStyle}
-            gradientColors={[
-              {offset: 0, color: startGradientColor},
-              {offset: 1, color: endGradientColor},
-            ]}
+            gradientColors={gradientColors}
           />
         </Header.GradientWrapper>
 
         <LinearGradientView
           radius={0}
           viewStyle={fullLinearGradientViewStyle}
-          gradientColors={[
-            {offset: 0, color: startGradientColor},
-            {offset: 1, color: endGradientColor},
-          ]}>
+          gradientColors={gradientColors}>
           {renderHeaderContent(isExpanded)}
         </LinearGradientView>
       </Header.Touchable>
