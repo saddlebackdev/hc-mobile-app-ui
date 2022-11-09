@@ -97,6 +97,9 @@ const WarningViewWrapper = Styled.View`
 const CheckInTextWrapper = Styled(Text)`
   color: #FFEF00;
 `;
+const BottomSheetContentWrapper = Styled.View`
+  padding-horizontal: ${majorScale(2)}px;
+`;
 const linearGradientView1Style = StyleSheet.flatten<ViewStyle>({
   width: 50,
   height: 50,
@@ -1492,11 +1495,22 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               <BottomSheet
                 header={{title: 'Select Campus'}}
                 onDismiss={() => setIsBottomSheetOpen(false)}
+                footer={
+                  <BottomSheetContentWrapper>
+                    <Button appearance="filled" color="primary" hasShadow>
+                      Footer Action
+                    </Button>
+                  </BottomSheetContentWrapper>
+                }
                 isOpen={isBottomSheetOpen}>
-                <SelectableList
-                  selected={selectedListItem}
-                  items={selectableListItems}
-                />
+                <BottomSheetContentWrapper>
+                  <Text>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Rem accusantium libero incidunt illo totam enim eligendi,
+                    exercitationem error impedit, ad commodi fugit tempora
+                    sequi. Laborum reiciendis tenetur alias modi harum.
+                  </Text>
+                </BottomSheetContentWrapper>
               </BottomSheet>
             </Section.Content>
           </Section.Wrapper>

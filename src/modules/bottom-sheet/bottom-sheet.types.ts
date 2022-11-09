@@ -1,5 +1,10 @@
 import React from 'react';
 
+// Styled Wrapper
+export interface IStyledWrapper {
+  $hasFooter: boolean;
+}
+
 // Header
 export interface IHeader {
   /** Title for the bottom sheet. */
