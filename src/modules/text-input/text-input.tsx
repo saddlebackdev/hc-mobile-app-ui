@@ -70,9 +70,12 @@ export const TextInput: React.FC<IProps> = ({
   label,
   required,
   disabled,
+  weight,
   font = 'primary',
   placeholder,
   isUnderlined,
+  small,
+  muted,
   onBlur,
   onChange,
   onFocus,
@@ -111,9 +114,9 @@ export const TextInput: React.FC<IProps> = ({
     <StyledWrapper>
       {label && (
         <StyledLabel
-          weight="bold"
-          small={isUnderlined}
-          muted={isUnderlined}
+          weight={weight || 'bold'}
+          small={small || isUnderlined}
+          muted={isUnderlined || muted}
           $addBottomMargin={isUnderlined}
           testID="input-label">
           {label}{' '}
