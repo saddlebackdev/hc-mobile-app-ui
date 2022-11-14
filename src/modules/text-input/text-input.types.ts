@@ -18,8 +18,17 @@ export interface IProps extends Partial<TextInputProps> {
   /** Enables the underlined variant for the text input */
   isUnderlined?: boolean;
 
+  /** Font size of the text */
+  small?: boolean;
+
   /** Label for the text input */
   label?: string;
+
+  /** weight of a text */
+  weight?: 'bold' | 'light' | 'regular' | 'semiBold' | undefined;
+
+  /** color for the text input */
+  muted?: boolean;
 
   /** Font family to use. */
   font?: 'primary' | 'secondary' | string;
