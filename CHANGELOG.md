@@ -3,6 +3,7 @@
 ### v0.0.49
 
 - Group list item - Fix font weight when inversed
+- Bottom Sheet - Fix footer visibility issue
 
 --
 
