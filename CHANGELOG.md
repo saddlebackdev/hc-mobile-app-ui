@@ -4,6 +4,7 @@
 
 - Group list item - Fix font weight when inversed
 - Bottom Sheet - Fix footer visibility issue
+- Added support for font size, color and weight for Text Input
 
 --
 
