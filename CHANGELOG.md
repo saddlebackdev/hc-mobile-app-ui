@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.49
+
+- Bottom Sheet - Fix footer visibility issue
+
+--
+
 ### v0.0.48
 
 - Link - Spread all props on touchable component
