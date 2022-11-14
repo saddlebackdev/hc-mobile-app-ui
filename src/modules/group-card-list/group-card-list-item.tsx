@@ -140,7 +140,7 @@ export const GroupsListItem: React.FC<IProps> = ({
         <Header.Row>
           <Header.Name>
             <Header.Title
-              weight={linkLabel ? inversed ? 'regular' : 'light' : 'bold'}
+              weight={linkLabel ? (inversed ? 'regular' : 'light') : 'bold'}
               inversed={inversed}>
               {title}
             </Header.Title>
