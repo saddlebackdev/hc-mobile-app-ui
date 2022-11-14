@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.49
+
+- Group list item - Fix font weight when inversed
+
+--
+
 ### v0.0.48
 
 - Link - Spread all props on touchable component
