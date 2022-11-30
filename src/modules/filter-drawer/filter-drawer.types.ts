@@ -1,3 +1,5 @@
+import {LayoutChangeEvent} from 'react-native';
+
 // Interfaces
 export interface IProps {
   /** Function to be called when "Cancel" button is pressed. */
@@ -46,4 +48,10 @@ export interface IProps {
 
   /** Title to be shown on the header. */
   headerTitle?: string;
+
+  /** Function to be called when "secondary screen is" mounted. */
+  onLayout: ((event: LayoutChangeEvent) => void) | undefined;
+
+  /** Boolean indicating whether secondary header needs to be sticky at top. */
+  stickySecondaryHeader: boolean;
 }

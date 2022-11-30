@@ -112,6 +112,8 @@ export const FilterDrawer: React.FC<IProps> = ({
   onRequestClose,
   filterButtonLabel = 'Apply Filters',
   headerTitle = 'Filters',
+  onLayout,
+  stickySecondaryHeader = false,
 }): React.ReactElement => {
   // Refs
   const modalRef = React.useRef(null);
@@ -310,7 +312,9 @@ export const FilterDrawer: React.FC<IProps> = ({
             style={{transform: [{translateX: contentWrapperTranslateX}]}}>
             {/* Secondary Content */}
             <SecondaryContentWrapper testID="drawer-secondary-content">
-              <ScrollView showsVerticalScrollIndicator={false}>
+              <ScrollView
+                showsVerticalScrollIndicator={false}
+                onLayout={onLayout}>
                 {/* Header */}
                 <Header.Wrapper>
                   <Animated.View
@@ -331,9 +335,9 @@ export const FilterDrawer: React.FC<IProps> = ({
                     </Header.BackAction>
                   </Animated.View>
                 </Header.Wrapper>
-
-                {secondaryChildren}
+                {!stickySecondaryHeader ? secondaryChildren : null}
               </ScrollView>
+              {stickySecondaryHeader ? secondaryChildren : null}
             </SecondaryContentWrapper>
           </AnimatedWrapper>
         </SectionWrapper>

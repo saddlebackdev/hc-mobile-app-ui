@@ -5,7 +5,7 @@ import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
 
 // Types
-import {IProps} from './bottom-sheet.types';
+import {IProps, IStyledWrapper} from './bottom-sheet.types';
 
 // Shared
 import Icon from '../icon/icon';
@@ -15,15 +15,15 @@ import {minorScale, majorScale} from '../scales';
 import {LayoutUtils} from '../utilities';
 
 // Styles
-const StyledWrapper = Styled.View`
+const StyledWrapper = Styled.View<IStyledWrapper>`
   width: 100%; height: 100%;
   backgroundColor: ${({theme}) => theme.colors.white};
-  margin-top: ${majorScale(11)}px;
-  margin-bottom: ${majorScale(5.5)}px;
   borderTopRightRadius: 12px;
   borderTopLeftRadius: 12px;
   overflow: hidden;
 
+  margin-top: ${({$hasFooter}) => majorScale($hasFooter ? 5.5 : 11)}px;
+  margin-bottom: ${({$hasFooter}) => majorScale($hasFooter ? 0 : 5.5)}px;
 `;
 const StyledCloseWrapper = Styled.TouchableOpacity`
   position: absolute;
@@ -106,7 +106,7 @@ export const BottomSheet: React.FC<IProps> = ({
        * https://github.com/react-native-modal/react-native-modal/issues/342
        */}
       <SafeAreaView>
-        <StyledWrapper>
+        <StyledWrapper $hasFooter={!!footer}>
           {/* Close Button */}
           {showCloseButton && (
             <StyledCloseWrapper

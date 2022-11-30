@@ -1,4 +1,17 @@
 # Changelog
+### v0.0.50
+
+- Filter Drawer - Added prop to make header sticky for secondary screen 
+- Filter Drawer - Added Layout prop to get layout information for secondary screen
+
+--
+### v0.0.49
+
+- Group list item - Fix font weight when inversed
+- Bottom Sheet - Fix footer visibility issue
+- Added support for font size, color and weight for Text Input
+
+--
 
 ### v0.0.48
 
