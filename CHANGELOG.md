@@ -4,7 +4,6 @@
 - Checkbox - Modify to Wrap Text 
 
 --
-# Changelog
 ### v0.0.50
 
 - Filter Drawer - Added prop to make header sticky for secondary screen 
