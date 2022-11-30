@@ -312,7 +312,9 @@ export const FilterDrawer: React.FC<IProps> = ({
             style={{transform: [{translateX: contentWrapperTranslateX}]}}>
             {/* Secondary Content */}
             <SecondaryContentWrapper testID="drawer-secondary-content">
-              <ScrollView showsVerticalScrollIndicator={false} onLayout={onLayout} >
+              <ScrollView
+                showsVerticalScrollIndicator={false}
+                onLayout={onLayout}>
                 {/* Header */}
                 <Header.Wrapper>
                   <Animated.View
