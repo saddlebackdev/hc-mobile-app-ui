@@ -91,7 +91,7 @@ export const BottomSheet: React.FC<IProps> = ({
   // Render Header
   const renderHeader = () => (
     <StyledHeader.Wrapper>
-      <StyledHeader.Title variant="h3">{header.title}</StyledHeader.Title>
+      <StyledHeader.Title variant="h3">{header?.title}</StyledHeader.Title>
 
       {header?.description && (
         <StyledHeader.Description>
@@ -139,7 +139,8 @@ export const BottomSheet: React.FC<IProps> = ({
             {shouldShowHeader && stickyHeader && renderHeader()}
 
             {/* Content */}
-            <StyledContentWrapper contentContainerStyle={scrollViewStyle}>
+            <StyledContentWrapper
+              contentContainerStyle={scrollViewStyle as any}>
               {/* Static Header */}
               {shouldShowHeader && !stickyHeader && renderHeader()}
 
