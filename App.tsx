@@ -1493,6 +1493,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
 
               <BottomSheet
+                stickyHeader={false}
                 header={{title: 'Select Campus'}}
                 onDismiss={() => setIsBottomSheetOpen(false)}
                 footer={
