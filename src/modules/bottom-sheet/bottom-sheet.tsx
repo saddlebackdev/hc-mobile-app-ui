@@ -71,7 +71,7 @@ export const BottomSheet: React.FC<IProps> = ({
   onDismiss,
   showCloseButton = true,
   closeButtonTestId = 'bottom-sheet-close-button',
-  stickyHeader,
+  stickyPrimaryHeader,
   children,
   header,
   footer,
@@ -136,13 +136,13 @@ export const BottomSheet: React.FC<IProps> = ({
           {/* Sections */}
           <StyledSectionWrapper>
             {/* Sticky Header */}
-            {shouldShowHeader && stickyHeader && renderHeader()}
+            {shouldShowHeader && stickyPrimaryHeader && renderHeader()}
 
             {/* Content */}
             <StyledContentWrapper
               contentContainerStyle={scrollViewStyle as any}>
               {/* Static Header */}
-              {shouldShowHeader && !stickyHeader && renderHeader()}
+              {shouldShowHeader && !stickyPrimaryHeader && renderHeader()}
 
               {children}
             </StyledContentWrapper>
