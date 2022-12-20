@@ -34,6 +34,6 @@ export interface IProps {
   /** React element to be rendered as the footer. */
   footer?: React.ReactElement;
 
-  /** If true, renders the primary header as fixed. */
-  stickyPrimaryHeader?: boolean;
+  /** If true, renders the header as fixed. */
+  stickyHeader?: boolean;
 }

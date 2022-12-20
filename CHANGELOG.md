@@ -2,7 +2,7 @@
 
 ### v0.0.52
 
-- Bottom Sheet - Added prop `stickyPrimaryHeader` to toggle between sticky and static header
+- Bottom Sheet - Added prop `stickyHeader` to toggle between sticky and static header
 
 ---
 
