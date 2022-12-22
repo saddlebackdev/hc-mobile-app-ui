@@ -107,12 +107,16 @@ export const BottomSheet: React.FC<IProps> = ({
 
   const shouldShowHeader = header?.title || header?.description;
 
+  const onBackButtonPress = shouldCloseOnBackButtonPress
+    ? onCloseModal
+    : undefined;
+
   return (
     <Modal
       ref={modalRef}
       isVisible={isOpen}
       onModalHide={onDismiss}
-      onBackButtonPress={shouldCloseOnBackButtonPress}
+      onBackButtonPress={onBackButtonPress}
       hideModalContentWhileAnimating
       useNativeDriverForBackdrop
       style={modalStyle}
