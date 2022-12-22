@@ -71,6 +71,7 @@ export const BottomSheet: React.FC<IProps> = ({
   onDismiss,
   showCloseButton = true,
   closeButtonTestId = 'bottom-sheet-close-button',
+  shouldCloseOnBackButtonPress = true,
   stickyHeader,
   children,
   header,
@@ -111,6 +112,7 @@ export const BottomSheet: React.FC<IProps> = ({
       ref={modalRef}
       isVisible={isOpen}
       onModalHide={onDismiss}
+      onBackButtonPress={shouldCloseOnBackButtonPress}
       hideModalContentWhileAnimating
       useNativeDriverForBackdrop
       style={modalStyle}
