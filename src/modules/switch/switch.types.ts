@@ -4,7 +4,7 @@ export interface IProps {
   isActive: boolean;
 
   /** Color of the switch when in active state. Could be "primary", "success" or a hex string. */
-  color: 'primary' | 'success' | string;
+  color?: 'primary' | 'success' | string;
 
   /** Function to be called when the switch is pressed. */
   onPress: () => void;
