@@ -2,6 +2,7 @@
 
 ### v0.0.52
 
+- Notification Center - Add new component
 - Switch - Add new component
 
 --

@@ -45,6 +45,7 @@ import {
   NoteListItem,
   majorScale,
   GroupCardListItem,
+  NotificationCenter,
   Switch,
 } from './src';
 import Icon from './src/modules/icon/icon';
@@ -164,6 +165,8 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     setIsFilterDrawerSecondaryViewActive,
   ] = React.useState<boolean>(false);
   const [isSwitchActive, setIsSwitchActive] = React.useState<boolean>(false);
+  const [areNotificationsEnabled, setAreNotificationsEnabled] =
+    React.useState<boolean>(false);
 
   const closeRow = index => {
     if (prevOpenedRow && prevOpenedRow !== swipeable[index]) {
@@ -480,6 +483,74 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 <Switch
                   isActive={isSwitchActive}
                   onPress={() => setIsSwitchActive(!isSwitchActive)}
+                />
+              </Row>
+            </Section.Content>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Notification Center */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Notification Center</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Notifications in a bottom sheet</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <NotificationCenter
+                  notifications={[
+                    {
+                      id: 1,
+                      title: 'Daily Verse - God is the truth',
+                      subtitle: 'June 19, 2021',
+                      createDate: 1672140901,
+                      isUnread: true,
+                    },
+                    {
+                      id: 2,
+                      title: 'Daily Verse - Health is wealth',
+                      subtitle: 'June 18, 2021',
+                      createDate: 1672030701,
+                      isUnread: false,
+                    },
+                    {
+                      id: 3,
+                      title: 'Daily Verse - Old is gold',
+                      subtitle: 'March 12, 2021',
+                      createDate: 1671030701,
+                      isUnread: false,
+                    },
+                  ]}
+                  hasUnreadNotifications
+                  showNotificationStatusSwitch
+                  areNotificationsEnabled={areNotificationsEnabled}
+                  onTurnOffNotifications={() => {
+                    setAreNotificationsEnabled(false);
+                  }}
+                  onTurnOnNotifications={() => {
+                    setAreNotificationsEnabled(true);
+                  }}
+                  onPressNotification={() => {
+                    Alert.alert('Notification item pressed');
+                  }}
+                />
+              </Row>
+              <Row>
+                <NotificationCenter
+                  notifications={[]}
+                  showNotificationStatusSwitch
+                  areNotificationsEnabled={areNotificationsEnabled}
+                  onTurnOffNotifications={() => {
+                    setAreNotificationsEnabled(false);
+                  }}
+                  onTurnOnNotifications={() => {
+                    setAreNotificationsEnabled(true);
+                  }}
+                  onPressNotification={() => {
+                    Alert.alert('Notification item pressed');
+                  }}
                 />
               </Row>
             </Section.Content>

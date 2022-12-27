@@ -110,6 +110,10 @@ export {
   IChildItemProps as NestableListChildProps,
 } from './modules/nestable-list/nestable-list.types';
 
+// Notification Center
+export {default as NotificationCenter} from './modules/notification-center/notification-center';
+export {IProps as NotificationCenterProps} from './modules/notification-center/notification-center.types';
+
 // Pill Toggle
 export {default as PillToggle} from './modules/pill-toggle/pill-toggle';
 export {IProps as PillToggleProps} from './modules/pill-toggle/pill-toggle.types';
