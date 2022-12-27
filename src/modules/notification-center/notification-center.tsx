@@ -102,8 +102,6 @@ export const NotificationCenter: React.FC<IProps> = ({
   const [yesterdayItems, setYesterdayItems] = React.useState<
     Array<INotification>
   >([]);
-  const [isChangingNotificationStatus, setIsChangingNotificationStatus] =
-    React.useState<boolean>(false);
 
   // Group Notifications
   // eslint-disable-next-line no-shadow
@@ -160,9 +158,11 @@ export const NotificationCenter: React.FC<IProps> = ({
 
   // On Change Notification Status
   const onChangeNotificationStatus = async (): Promise<void> => {
-    areNotificationsEnabled
-      ? await onTurnOffNotifications?.()
-      : await onTurnOnNotifications?.();
+    if (areNotificationsEnabled) {
+      await onTurnOffNotifications?.();
+    } else {
+      await onTurnOnNotifications?.();
+    }
   };
 
   React.useEffect(() => {
@@ -183,6 +183,7 @@ export const NotificationCenter: React.FC<IProps> = ({
         hitSlop={{top: 10, right: 10, bottom: 10, left: 10}}
         testID="notification-center-toggle-button"
         onPress={openDrawer}
+        // eslint-disable-next-line react-native/no-inline-styles
         style={{width: 25}}>
         {triggerJsx || <Icon file={IconAlert} />}
 
