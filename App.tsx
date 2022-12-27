@@ -45,6 +45,7 @@ import {
   NoteListItem,
   majorScale,
   GroupCardListItem,
+  Switch,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -61,7 +62,6 @@ import CircularProgress from './src/modules/circular-progress/circular-progress'
 interface IProps {}
 
 const Wrapper = Styled.ScrollView``;
-
 const Section = {
   Wrapper: Styled.View`
     padding: 30px;
@@ -163,6 +163,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     isFilterDrawerSecondaryViewActive,
     setIsFilterDrawerSecondaryViewActive,
   ] = React.useState<boolean>(false);
+  const [isSwitchActive, setIsSwitchActive] = React.useState<boolean>(false);
 
   const closeRow = index => {
     if (prevOpenedRow && prevOpenedRow !== swipeable[index]) {
@@ -463,6 +464,25 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 Mobile Apps.
               </Text>
             </Section.Description>
+          </Section.Wrapper>
+          <Divider />
+
+          {/* Switch */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Switch</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">The infamous switch component</Text>
+            </Section.Description>
+            <Section.Content>
+              <Row>
+                <Switch
+                  isActive={isSwitchActive}
+                  onPress={() => setIsSwitchActive(!isSwitchActive)}
+                />
+              </Row>
+            </Section.Content>
           </Section.Wrapper>
           <Divider />
 

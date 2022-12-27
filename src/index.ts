@@ -144,6 +144,10 @@ export {
   IListItemProps as SelectableListItemProps,
 } from './modules/selectable-list/selectable-list.types';
 
+// Switch
+export {default as Switch} from './modules/switch/switch';
+export {IProps as SwitchProps} from './modules/switch/switch.types';
+
 // Tabs
 export {default as Tabs} from './modules/tabs/tabs';
 export {IProps as TabsProps} from './modules/tabs/tabs.types';
