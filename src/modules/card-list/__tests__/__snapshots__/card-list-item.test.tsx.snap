@@ -110,6 +110,47 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
         >
           A Subtitle
         </Text>
+        <Text
+          muted={true}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "700",
+                "marginTop": 8,
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="item-eventdate"
+          variant="subtitle2"
+          weight="bold"
+        >
+          A eventDate
+          <Text
+            muted={true}
+            style={
+              Array [
+                Object {
+                  "color": "#97A4AB",
+                  "fontFamily": "System",
+                  "fontSize": 14,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "marginTop": 8,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="item-eventtime"
+            variant="subtitle2"
+          >
+            A eventTime
+          </Text>
+        </Text>
       </View>
       <View
         style={
@@ -119,11 +160,12 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
         }
       >
         <Text
+          muted={true}
           numberOfLines={2}
           style={
             Array [
               Object {
-                "color": "#1C2530",
+                "color": "#97A4AB",
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontStyle": "normal",
@@ -157,6 +199,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
                 "fontSize": 14,
                 "fontStyle": "italic",
                 "fontWeight": "700",
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]
@@ -284,6 +327,47 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
         >
           A Subtitle
         </Text>
+        <Text
+          muted={true}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "700",
+                "marginTop": 8,
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="item-eventdate"
+          variant="subtitle2"
+          weight="bold"
+        >
+          A eventDate
+          <Text
+            muted={true}
+            style={
+              Array [
+                Object {
+                  "color": "#97A4AB",
+                  "fontFamily": "System",
+                  "fontSize": 14,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "marginTop": 8,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="item-eventtime"
+            variant="subtitle2"
+          >
+            A eventTime
+          </Text>
+        </Text>
       </View>
       <View
         style={
@@ -293,11 +377,12 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
         }
       >
         <Text
+          muted={true}
           numberOfLines={2}
           style={
             Array [
               Object {
-                "color": "#1C2530",
+                "color": "#97A4AB",
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontStyle": "normal",
@@ -428,6 +513,47 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
         >
           A Subtitle
         </Text>
+        <Text
+          muted={true}
+          style={
+            Array [
+              Object {
+                "color": "#97A4AB",
+                "fontFamily": "System",
+                "fontSize": 14,
+                "fontStyle": "normal",
+                "fontWeight": "700",
+                "marginTop": 8,
+                "textAlign": "left",
+              },
+            ]
+          }
+          testID="item-eventdate"
+          variant="subtitle2"
+          weight="bold"
+        >
+          A eventDate
+          <Text
+            muted={true}
+            style={
+              Array [
+                Object {
+                  "color": "#97A4AB",
+                  "fontFamily": "System",
+                  "fontSize": 14,
+                  "fontStyle": "normal",
+                  "fontWeight": "400",
+                  "marginTop": 8,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="item-eventtime"
+            variant="subtitle2"
+          >
+            A eventTime
+          </Text>
+        </Text>
       </View>
       <View
         style={
@@ -437,11 +563,12 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
         }
       >
         <Text
+          muted={true}
           numberOfLines={2}
           style={
             Array [
               Object {
-                "color": "#1C2530",
+                "color": "#97A4AB",
                 "fontFamily": "System",
                 "fontSize": 14,
                 "fontStyle": "normal",
@@ -475,6 +602,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
                 "fontSize": 14,
                 "fontStyle": "italic",
                 "fontWeight": "700",
+                "marginTop": 8,
                 "textAlign": "left",
               },
             ]

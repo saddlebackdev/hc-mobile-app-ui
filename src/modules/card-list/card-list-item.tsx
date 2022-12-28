@@ -37,19 +37,29 @@ const StyledSubTitle = Styled(Text)`
   font-size: 12px;
   margin-top: 8px;
 `;
+const StyledDate = Styled(Text)`
+  margin-top: 8px;
+`;
+const Styledtime = Styled(Text)`
+  margin-top: 8px;
+`;
 const StyledDescription = Styled(Text)`
   margin-top: 8px;
   font-size: ${({theme}) => theme.typography.sizes.small}px;
 `;
-const StyledTags = Styled(Text)``;
-
+const StyledTags = Styled(Text)`
+  margin-top: 8px;
+`;
 // Component
 export const CardListItem: React.FC<IProps> = ({
   photoUrl,
   fallbackImage,
   title,
   marker = null,
+  timePeriod = null,
   subTitle,
+  eventDate,
+  eventTime,
   description,
   tags,
   onPress,
@@ -68,25 +78,40 @@ export const CardListItem: React.FC<IProps> = ({
             <StyledTitle variant="h4" testID="item-title">
               {title}
             </StyledTitle>
-
             {subTitle ? (
               <StyledSubTitle variant="subtitle2" testID="item-subtitle">
                 {subTitle}
               </StyledSubTitle>
             ) : null}
+            {eventDate ? (
+              <StyledDate
+                weight="bold"
+                muted
+                variant="subtitle2"
+                testID="item-eventdate">
+                {eventDate}
+                {eventTime ? (
+                  <Styledtime variant="subtitle2" muted testID="item-eventtime">
+                    {eventTime}
+                  </Styledtime>
+                ) : null}
+              </StyledDate>
+            ) : null}
+            {timePeriod ? (
+              <StyledCardMarker>{timePeriod}</StyledCardMarker>
+            ) : null}
           </StyledCardDetailsRow>
-
           {description ? (
             <StyledCardDetailsRow>
               <StyledDescription
                 numberOfLines={2}
                 variant="subtitle2"
+                muted
                 testID="item-description">
                 {description}
               </StyledDescription>
             </StyledCardDetailsRow>
           ) : null}
-
           {tags ? (
             <StyledCardDetailsRow>
               <StyledTags
@@ -110,6 +135,5 @@ export const CardListItem: React.FC<IProps> = ({
     </StyledCard>
   </React.Fragment>
 );
-
 // Exports
 export default CardListItem;

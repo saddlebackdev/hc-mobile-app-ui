@@ -7,6 +7,8 @@ exports[`CardList Rendering renders itself correctly 1`] = `
     Array [
       Object {
         "description": "A Description",
+        "eventDate": "A eventDate",
+        "eventTime": "A eventTime",
         "id": "card-list-item-1",
         "onPress": [MockFunction],
         "photoUrl": "https://images.com/abc.png",
@@ -19,6 +21,8 @@ exports[`CardList Rendering renders itself correctly 1`] = `
       },
       Object {
         "description": "A Description",
+        "eventDate": "A eventDate",
+        "eventTime": "A eventTime",
         "id": "card-list-item-2",
         "onPress": [MockFunction],
         "photoUrl": "https://images.com/abc.png",
@@ -173,11 +177,12 @@ exports[`CardList Rendering renders itself correctly 1`] = `
               }
             >
               <Text
+                muted={true}
                 numberOfLines={2}
                 style={
                   Array [
                     Object {
-                      "color": "#1C2530",
+                      "color": "#97A4AB",
                       "fontFamily": "System",
                       "fontSize": 14,
                       "fontStyle": "normal",
@@ -211,6 +216,7 @@ exports[`CardList Rendering renders itself correctly 1`] = `
                       "fontSize": 14,
                       "fontStyle": "italic",
                       "fontWeight": "700",
+                      "marginTop": 8,
                       "textAlign": "left",
                     },
                   ]
@@ -361,11 +367,12 @@ exports[`CardList Rendering renders itself correctly 1`] = `
               }
             >
               <Text
+                muted={true}
                 numberOfLines={2}
                 style={
                   Array [
                     Object {
-                      "color": "#1C2530",
+                      "color": "#97A4AB",
                       "fontFamily": "System",
                       "fontSize": 14,
                       "fontStyle": "normal",

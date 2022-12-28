@@ -15,6 +15,15 @@ export interface IProps {
   /** Subtitle for this list item. */
   subTitle?: string;
 
+  /** eventDate for this list item. */
+  eventDate?: string;
+
+  /** eventTime for this list item. */
+  eventTime?: string;
+
+  /** Subtitle for this list item. */
+  timePeriod?: ReactElement;
+
   /** Description for this list item. */
   description?: string;
 
