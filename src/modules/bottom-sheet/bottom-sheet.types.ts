@@ -33,4 +33,10 @@ export interface IProps {
 
   /** React element to be rendered as the footer. */
   footer?: React.ReactElement;
+
+  /** If true, renders the header as fixed. */
+  stickyHeader?: boolean;
+
+  /** If true, pressing the back button will close the bottom sheet. */
+  shouldCloseOnBackButtonPress?: boolean;
 }
