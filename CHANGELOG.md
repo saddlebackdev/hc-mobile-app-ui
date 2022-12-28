@@ -3,8 +3,9 @@
 ### v0.0.53
 
 - Card List Item - Added prop `eventDate`
-- Bottom Sheet - Added prop `eventTime` 
-- Bottom Sheet - Added prop `timePeriod`
+- Card List Item - Added prop `eventTime` 
+- Card List Item - Added prop `timePeriod`
+- Card List Item - Added prop `placeHolderImage`
 
 ---
 

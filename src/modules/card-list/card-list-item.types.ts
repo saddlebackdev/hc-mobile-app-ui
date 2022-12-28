@@ -9,6 +9,9 @@ export interface IProps {
   /** Fallback photo in case photoUrl is not present. */
   fallbackImage?: any;
 
+  /** placeHolder Image for placeholder. */
+  placeHolderImage?: any;
+
   /** Title for this list item. */
   title: string;
 

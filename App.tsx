@@ -482,9 +482,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               photoUrl={
                 'https://images.unsplash.com/photo-1614112539959-7b69d4343042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1576&q=80'
               }
-              fallbackImage={
-                'https://images.unsplash.com/photo-1614112539959-7b69d4343042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1576&q=80'
-              }
+              placeHolderImage={require('./src/images/calendar-black.png')}
               title={'Music Academy'}
               eventDate={'Tue, May 30, 2022'}
               eventTime={' 6:00 PM'}

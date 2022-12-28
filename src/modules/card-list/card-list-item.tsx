@@ -54,6 +54,7 @@ const StyledTags = Styled(Text)`
 export const CardListItem: React.FC<IProps> = ({
   photoUrl,
   fallbackImage,
+  placeHolderImage,
   title,
   marker = null,
   timePeriod = null,
@@ -70,6 +71,7 @@ export const CardListItem: React.FC<IProps> = ({
         <StyledCardPhotoWrapper>
           <StyledPhoto
             source={photoUrl ? {uri: photoUrl} : fallbackImage}
+            defaultSource={placeHolderImage}
             testID="item-photo"
           />
         </StyledCardPhotoWrapper>
