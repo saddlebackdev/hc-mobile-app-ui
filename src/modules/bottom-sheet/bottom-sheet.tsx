@@ -57,9 +57,8 @@ const StyledHeader = {
     margin-top: ${minorScale(0.75)}px;
   `,
 };
-const StyledContentWrapper = Styled.View`
+const StyledContentWrapper = Styled.ScrollView`
   width: 100%;
-  justify-content: flex-start;
   flex: 1;
 `;
 const StyledFooterWrapper = Styled.View`
@@ -72,6 +71,8 @@ export const BottomSheet: React.FC<IProps> = ({
   onDismiss,
   showCloseButton = true,
   closeButtonTestId = 'bottom-sheet-close-button',
+  shouldCloseOnBackButtonPress = true,
+  stickyHeader,
   children,
   header,
   footer,
@@ -88,13 +89,34 @@ export const BottomSheet: React.FC<IProps> = ({
     onDismiss();
   };
 
+  // Render Header
+  const renderHeader = () => (
+    <StyledHeader.Wrapper>
+      <StyledHeader.Title variant="h3">{header?.title}</StyledHeader.Title>
+
+      {header?.description && (
+        <StyledHeader.Description>
+          {header.description}
+        </StyledHeader.Description>
+      )}
+    </StyledHeader.Wrapper>
+  );
+
   const modalStyle = {margin: 0};
+  const scrollViewStyle = {justifyContent: 'flex-start'};
+
+  const shouldShowHeader = header?.title || header?.description;
+
+  const onBackButtonPress = shouldCloseOnBackButtonPress
+    ? onCloseModal
+    : undefined;
 
   return (
     <Modal
       ref={modalRef}
       isVisible={isOpen}
       onModalHide={onDismiss}
+      onBackButtonPress={onBackButtonPress}
       hideModalContentWhileAnimating
       useNativeDriverForBackdrop
       style={modalStyle}
@@ -119,21 +141,18 @@ export const BottomSheet: React.FC<IProps> = ({
           )}
           {/* Sections */}
           <StyledSectionWrapper>
-            {/* Header */}
-            {header?.title && (
-              <StyledHeader.Wrapper>
-                <StyledHeader.Title variant="h3">
-                  {header.title}
-                </StyledHeader.Title>
-                {header?.description && (
-                  <StyledHeader.Description>
-                    {header.description}
-                  </StyledHeader.Description>
-                )}
-              </StyledHeader.Wrapper>
-            )}
+            {/* Sticky Header */}
+            {shouldShowHeader && stickyHeader && renderHeader()}
+
             {/* Content */}
-            <StyledContentWrapper>{children}</StyledContentWrapper>
+            <StyledContentWrapper
+              contentContainerStyle={scrollViewStyle as any}>
+              {/* Static Header */}
+              {shouldShowHeader && !stickyHeader && renderHeader()}
+
+              {children}
+            </StyledContentWrapper>
+
             {/* Footer */}
             <StyledFooterWrapper>
               <SafeAreaView>{footer}</SafeAreaView>

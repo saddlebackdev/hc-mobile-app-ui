@@ -1,22 +1,32 @@
 # Changelog
+
+### v0.0.52
+
+- Bottom Sheet - Added prop `stickyHeader` to toggle between sticky and static header
+- Bottom Sheet - Added prop `shouldCloseOnBackButtonPress` to close the bottom sheet on back button press
+
+---
+
 ### v0.0.51
 
-- Checkbox - Modify to Wrap Text 
+- Checkbox - Modify to Wrap Text
 
---
+---
+
 ### v0.0.50
 
-- Filter Drawer - Added prop to make header sticky for secondary screen 
+- Filter Drawer - Added prop to make header sticky for secondary screen
 - Filter Drawer - Added Layout prop to get layout information for secondary screen
 
---
+---
+
 ### v0.0.49
 
 - Group list item - Fix font weight when inversed
 - Bottom Sheet - Fix footer visibility issue
 - Added support for font size, color and weight for Text Input
 
---
+---
 
 ### v0.0.48
 
@@ -24,38 +34,38 @@
 - Bottom Sheet - Add closeButtonTestId prop
 - Update Group list item - added link label and modified title text
 
---
+---
 
 ### v0.0.47
 
 - Add Group card list item component
 
---
+---
 
 ### v0.0.46
 
 - Modify Person Record global component to show/hide milestones without affecting the layout
 
---
+---
 
 ### v0.0.45
 
 - Updates to Bottom Sheet Component - remove lower white strip with colored backgrounds
 - Modify Person Record global component to show/hide milestones
 
---
+---
 
 ### v0.0.44
 
 - Updates to Person Record Component
 
---
+---
 
 ### v0.0.43
 
 - Add required option for Checkbox Component
 
---
+---
 
 ### v0.0.42
 
@@ -66,7 +76,7 @@
 - Add ReminderPicker Component
 - Add CalendarPicker Component
 
---
+---
 
 ### v0.0.41
 
@@ -74,14 +84,14 @@
 - Add SelectPicker Required Prop
 - Add fontFamily on text Input
 
---
+---
 
 ### v0.0.40
 
 - Add FiltersDrawer component
 - Adding the ability to highlight selection of the IconToggle component
 
---
+---
 
 ### v0.0.39
 
