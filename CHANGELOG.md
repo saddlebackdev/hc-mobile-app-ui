@@ -1,5 +1,14 @@
 # Changelog
 
+### v0.0.53
+
+- Card List Item - Added prop `eventDate`
+- Card List Item - Added prop `eventTime` 
+- Card List Item - Added prop `timePeriod`
+- Card List Item - Added prop `placeHolderImage`
+
+---
+
 ### v0.0.52
 
 - Bottom Sheet - Added prop `stickyHeader` to toggle between sticky and static header

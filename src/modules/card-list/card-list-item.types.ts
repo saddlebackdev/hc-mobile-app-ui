@@ -9,11 +9,23 @@ export interface IProps {
   /** Fallback photo in case photoUrl is not present. */
   fallbackImage?: any;
 
+  /** placeHolder Image for placeholder. */
+  placeHolderImage?: any;
+
   /** Title for this list item. */
   title: string;
 
   /** Subtitle for this list item. */
   subTitle?: string;
+
+  /** eventDate for this list item. */
+  eventDate?: string;
+
+  /** eventTime for this list item. */
+  eventTime?: string;
+
+  /** Subtitle for this list item. */
+  timePeriod?: ReactElement;
 
   /** Description for this list item. */
   description?: string;
