@@ -4,6 +4,10 @@
 
 - Notification Center - Add new component
 - Switch - Add new component
+- Card List Item - Added prop `eventDate`
+- Card List Item - Added prop `eventTime` 
+- Card List Item - Added prop `timePeriod`
+- Card List Item - Added prop `placeHolderImage`
 
 ---
 

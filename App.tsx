@@ -47,6 +47,7 @@ import {
   GroupCardListItem,
   NotificationCenter,
   Switch,
+  CardListItem,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -100,6 +101,10 @@ const CheckInTextWrapper = Styled(Text)`
 `;
 const BottomSheetContentWrapper = Styled.View`
   padding-horizontal: ${majorScale(2)}px;
+`;
+const EventElementWrapper = Styled.View`
+  flex-direction: row;
+  align-items: center;
 `;
 const linearGradientView1Style = StyleSheet.flatten<ViewStyle>({
   width: 50,
@@ -469,6 +474,40 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             </Section.Description>
           </Section.Wrapper>
           <Divider />
+          {/* Card List Item list item */}
+          <Section.Wrapper>
+            <Section.Title>
+              <Heading variant="h2">Event List Item</Heading>
+            </Section.Title>
+            <Section.Description>
+              <Text variant="caption">Used to show Event list item</Text>
+            </Section.Description>
+            <CardListItem
+              photoUrl={
+                'https://images.unsplash.com/photo-1614112539959-7b69d4343042?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1576&q=80'
+              }
+              placeHolderImage={require('./src/images/calendar-black.png')}
+              title={'Music Academy'}
+              eventDate={'Tue, May 30, 2022'}
+              eventTime={' 6:00 PM'}
+              description={'Lake Forest,CA'}
+              timePeriod={
+                <EventElementWrapper>
+                  <IconSVG
+                    file={IconCarrotUp}
+                    size={12}
+                    color={defaultTheme.colors.primaryDark}
+                  />
+                  <Text muted weight="bold" variant={'subtitle2'}>
+                    {' '}
+                    Every Month
+                  </Text>
+                </EventElementWrapper>
+              }
+              tags={['Tags']}
+              onPress={onPressMock}
+            />
+          </Section.Wrapper>
 
           {/* Switch */}
           <Section.Wrapper>
