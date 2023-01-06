@@ -12,6 +12,11 @@ export interface IStyledTouchable {
   $isExpanded?: boolean;
 }
 
+// Styled content
+export interface IStyledContent {
+  $isExpanded?: boolean;
+}
+
 // Styled divider
 export interface IStyledDivider {
   $showDivider?: boolean;

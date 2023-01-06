@@ -6,35 +6,38 @@ import LinearGradientView from '../linear-gradient/linear-gradient-view';
 import Icon from '../icon/icon-external';
 import Text from '../text/text';
 import {minorScale, majorScale} from '../scales';
+import defaultTheme from '../theming/default-theme';
 
 // Types
 import {
   IProps,
   IStyledDivider,
   IStyledTouchable,
+  IStyledContent
 } from './group-card-list-item.types';
 
 // Styles
 const viewShadow = Platform.select({
   android: {elevation: 4},
   ios: {
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 7},
-    shadowOpacity: 0.11,
-    shadowRadius: 11,
+    shadowColor: defaultTheme.colors.grayFive,
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
   },
 });
 
 // Wrapper
 export const Wrapper = Styled.View`
-  width: 100%;
+  flex: 1;
   margin-vertical: ${minorScale(1.1)};
   opacity: 1;
+  border-radius: 8px;
 `;
 // Header
 export const Header = {
   Touchable: Styled.TouchableOpacity<IStyledTouchable>`
-    width: 100%;
+    flex: 1;
     flex-direction: row;
     overflow: hidden;
     background: ${({theme}) => theme.colors.white};
@@ -54,9 +57,11 @@ export const Header = {
     height: 100%;
     width: ${minorScale(1)}px;
   `,
-  Content: Styled.View`
-    width: auto;
-    margin-left: -${minorScale(1)}px;
+  Content: Styled.View<IStyledContent>`
+    flex: 1;
+    margin-left: ${({$isExpanded}) => {
+      return $isExpanded ? '0px' : `-${minorScale(1)}px;`;
+    }};
     padding-horizontal: ${majorScale(2)}px;
     padding-vertical: ${majorScale(1)}px;
     justify-content: center;
@@ -136,7 +141,7 @@ export const GroupsListItem: React.FC<IProps> = ({
 
   const renderHeaderContent = (inversed: boolean) => {
     return (
-      <Header.Content>
+      <Header.Content $isExpanded={inversed}>
         <Header.Row>
           <Header.Name>
             <Header.Title
@@ -200,9 +205,9 @@ export const GroupsListItem: React.FC<IProps> = ({
 
   if (!isExpanded) {
     return (
-      <Wrapper testID="group-card">
+      <Wrapper style={Platform.select({ ios: viewShadow })} testID="group-card">
         <Header.Touchable
-          style={viewShadow}
+          style={Platform.select({ android: viewShadow })}
           onPress={toggleState}
           activeOpacity={0.75}>
           {/* Gradient */}
@@ -221,21 +226,13 @@ export const GroupsListItem: React.FC<IProps> = ({
   }
 
   return (
-    <Wrapper testID="group-card">
+    <Wrapper style={Platform.select({ ios: viewShadow })} testID="group-card">
       <Header.Touchable
-        style={viewShadow}
+        style={Platform.select({ android: viewShadow })}
         onPress={toggleState}
         activeOpacity={0.75}
         $isExpanded>
         {/* Gradient */}
-        <Header.GradientWrapper>
-          <LinearGradientView
-            radius={0}
-            viewStyle={leftLinearGradientViewStyle}
-            gradientColors={gradientColors}
-          />
-        </Header.GradientWrapper>
-
         <LinearGradientView
           radius={0}
           viewStyle={fullLinearGradientViewStyle}
@@ -245,7 +242,7 @@ export const GroupsListItem: React.FC<IProps> = ({
       </Header.Touchable>
 
       {/* Content */}
-      <Content testID="card-expanded-content" style={viewShadow}>
+      <Content style={Platform.select({ android: viewShadow })} testID="card-expanded-content">
         {expandedElement}
       </Content>
     </Wrapper>
