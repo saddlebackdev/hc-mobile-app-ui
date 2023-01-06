@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.54
+
+- Group list item - ios shadow fix
+
+---
+
 ### v0.0.53
 
 - Notification Center - Add new component

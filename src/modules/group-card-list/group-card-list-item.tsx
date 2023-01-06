@@ -13,7 +13,7 @@ import {
   IProps,
   IStyledDivider,
   IStyledTouchable,
-  IStyledContent
+  IStyledContent,
 } from './group-card-list-item.types';
 
 // Styles
@@ -205,9 +205,9 @@ export const GroupsListItem: React.FC<IProps> = ({
 
   if (!isExpanded) {
     return (
-      <Wrapper style={Platform.select({ ios: viewShadow })} testID="group-card">
+      <Wrapper style={Platform.select({ios: viewShadow})} testID="group-card">
         <Header.Touchable
-          style={Platform.select({ android: viewShadow })}
+          style={Platform.select({android: viewShadow})}
           onPress={toggleState}
           activeOpacity={0.75}>
           {/* Gradient */}
@@ -226,9 +226,9 @@ export const GroupsListItem: React.FC<IProps> = ({
   }
 
   return (
-    <Wrapper style={Platform.select({ ios: viewShadow })} testID="group-card">
+    <Wrapper style={Platform.select({ios: viewShadow})} testID="group-card">
       <Header.Touchable
-        style={Platform.select({ android: viewShadow })}
+        style={Platform.select({android: viewShadow})}
         onPress={toggleState}
         activeOpacity={0.75}
         $isExpanded>
@@ -242,7 +242,9 @@ export const GroupsListItem: React.FC<IProps> = ({
       </Header.Touchable>
 
       {/* Content */}
-      <Content style={Platform.select({ android: viewShadow })} testID="card-expanded-content">
+      <Content
+        style={Platform.select({android: viewShadow})}
+        testID="card-expanded-content">
         {expandedElement}
       </Content>
     </Wrapper>
