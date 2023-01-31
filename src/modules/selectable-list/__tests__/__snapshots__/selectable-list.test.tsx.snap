@@ -1,5 +1,212 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SelectableList Rendering renders itself correctly 1`] = `
+<View
+  testID="list"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#DBE0E3",
+          "height": 1,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="divider"
+  />
+  <View
+    style={
+      Array [
+        Object {},
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00AEFF",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "opacity": 1,
+          "paddingBottom": 12.5,
+          "paddingHorizontal": 22,
+          "paddingTop": 13.75,
+        }
+      }
+      testID="item"
+    >
+      <Text
+        inversed={true}
+        small={true}
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-label"
+        weight="semiBold"
+      >
+        List Item 1
+      </Text>
+      <Image
+        source="test-file-stub"
+        style={
+          Array [
+            Object {
+              "height": 12,
+              "width": 12,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "opacity": 1,
+          "paddingBottom": 12.5,
+          "paddingHorizontal": 22,
+          "paddingTop": 13.75,
+        }
+      }
+      testID="item"
+    >
+      <Text
+        inversed={false}
+        small={true}
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-label"
+        weight="semiBold"
+      >
+        List Item 2
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "opacity": 1,
+          "paddingBottom": 12.5,
+          "paddingHorizontal": 22,
+          "paddingTop": 13.75,
+        }
+      }
+      testID="item"
+    >
+      <Text
+        inversed={false}
+        small={true}
+        style={
+          Array [
+            Object {
+              "color": "#1C2530",
+              "fontFamily": "System",
+              "fontSize": 14,
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="item-label"
+        weight="semiBold"
+      >
+        List Item 3
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#DBE0E3",
+          "height": 1,
+          "width": "100%",
+        },
+      ]
+    }
+    testID="divider"
+  />
+</View>
+`;
+
 exports[`SelectableListItem Rendering renders itself correctly 1`] = `
 <View
   accessible={true}
