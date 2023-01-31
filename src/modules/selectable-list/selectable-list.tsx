@@ -76,9 +76,7 @@ export const SelectableList: React.FC<IProps> = ({
     <View testID="list">
       {!noDivider ? <Divider /> : null}
       {items.map(item => (
-        <StyledList key={item.id}>
-          {renderItem(item)}
-        </StyledList>
+        <StyledList key={item.id}>{renderItem(item)}</StyledList>
       ))}
       {!noDivider ? <Divider /> : null}
     </View>
