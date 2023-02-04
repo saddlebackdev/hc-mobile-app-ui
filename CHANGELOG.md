@@ -1,7 +1,9 @@
 # Changelog
 
+---
 ### v0.0.54
 
+- Fix Text Input Disabled Font Color to be darker
 - Group list item - ios shadow fix
 
 ---
