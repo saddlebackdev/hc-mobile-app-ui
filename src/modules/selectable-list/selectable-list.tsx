@@ -10,9 +10,10 @@ import Text from '../text/text';
 import Icon from '../icon/icon';
 import {majorScale, minorScale} from '../scales';
 import Divider from '../divider/divider';
+import {View} from 'react-native';
 
 // Styles
-const StyledFlatList = Styled.FlatList``;
+const StyledList = Styled.View``;
 const StyledItem = Styled.TouchableOpacity<IStyledItem>`
   background: ${({$isSelected, theme}) => {
     return $isSelected ? theme.colors.primaryLight : theme.colors.white;
@@ -56,13 +57,8 @@ export const SelectableList: React.FC<IProps> = ({
   selected,
   noDivider,
 }): React.ReactElement => {
-  // Key Extractor
-  const keyExtractor = (item): string => {
-    return item.id;
-  };
-
   // Render Item
-  const renderItem = ({item}): any => {
+  const renderItem = (item): any => {
     const isSelected = Array.isArray(selected)
       ? selected.includes(item.id)
       : selected === item.id;
@@ -77,17 +73,13 @@ export const SelectableList: React.FC<IProps> = ({
   };
 
   return (
-    <React.Fragment>
+    <View testID="list">
       {!noDivider ? <Divider /> : null}
-      <StyledFlatList
-        data={items}
-        keyExtractor={keyExtractor}
-        ItemSeparatorComponent={Divider}
-        renderItem={renderItem}
-        testID="list"
-      />
+      {items.map(item => (
+        <StyledList key={item.id}>{renderItem(item)}</StyledList>
+      ))}
       {!noDivider ? <Divider /> : null}
-    </React.Fragment>
+    </View>
   );
 };
 

@@ -4,6 +4,7 @@
 ### v0.0.54
 
 - Fix Text Input Disabled Font Color to be darker
+- Fix the Pagination issue on campus selection after looking at Serving Opp details
 - Group list item - ios shadow fix
 
 ---
