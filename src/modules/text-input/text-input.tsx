@@ -44,7 +44,7 @@ const StyledInput = Styled.TextInput<IStyledInput>`
   }};
 
   color: ${({editable, theme}) => {
-    return editable ? theme.colors.graySix : theme.colors.grayThree;
+    return editable ? theme.colors.graySix : theme.colors.grayFour;
   }};
 
   border: 1px solid ${({$isFocused, editable, theme}) => {
