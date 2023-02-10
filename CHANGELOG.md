@@ -1,6 +1,12 @@
 # Changelog
 
 ---
+### v0.0.55
+
+- Bug Fix the Pagination issue on campus selection after looking at Serving Opp details
+
+---
+
 ### v0.0.54
 
 - Fix Text Input Disabled Font Color to be darker
