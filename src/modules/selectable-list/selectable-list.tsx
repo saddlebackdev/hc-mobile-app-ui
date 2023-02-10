@@ -10,7 +10,7 @@ import Text from '../text/text';
 import Icon from '../icon/icon';
 import {majorScale, minorScale} from '../scales';
 import Divider from '../divider/divider';
-import {ScrollView} from 'react-native';
+import {ScrollView, View} from 'react-native';
 
 // Styles
 const StyledList = Styled.View``;
@@ -76,7 +76,10 @@ export const SelectableList: React.FC<IProps> = ({
     <ScrollView testID="list">
       {!noDivider ? <Divider /> : null}
       {items.map(item => (
-        <StyledList key={item.id}>{renderItem(item)}</StyledList>
+        <View key={item.id}>
+          <StyledList>{renderItem(item)}</StyledList>
+          <Divider />
+        </View>
       ))}
       {!noDivider ? <Divider /> : null}
     </ScrollView>
