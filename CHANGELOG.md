@@ -1,6 +1,13 @@
 # Changelog
 
 ---
+### v0.0.56
+
+- Add isScrollable to BottomSheet to fix regression adding a ScrollView  
+
+---
+
+---
 ### v0.0.55
 
 - Bug Fix the Pagination issue on campus selection after looking at Serving Opp details

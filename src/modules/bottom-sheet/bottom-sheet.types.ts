@@ -37,6 +37,9 @@ export interface IProps {
   /** If true, renders the header as fixed. */
   stickyHeader?: boolean;
 
+  /** If true, renders the modal in a Scrolling View. */
+  isScrollable?: boolean;
+
   /** If true, pressing the back button will close the bottom sheet. */
   shouldCloseOnBackButtonPress?: boolean;
 }
