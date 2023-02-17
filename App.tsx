@@ -153,6 +153,8 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
     React.useState<string>('app-list-item-1');
   const [isBottomSheetOpen, setIsBottomSheetOpen] =
     React.useState<boolean>(false);
+  const [isBottomSheetScrollOpen, setIsBottomSheetScrollOpen] =
+    React.useState<boolean>(false);
   const [isSimpleLowerPromptOpen, setIsSimpleLowerPromptOpen] =
     React.useState<boolean>(false);
   const [isSuccessLowerPromptOpen, setIsSuccessLowerPromptOpen] =
@@ -1618,25 +1620,58 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             <Section.Content>
               <Row>
                 <Button onPress={() => setIsBottomSheetOpen(true)}>
-                  Open Bottom Sheet
+                  Open Bottom Sheet Static
                 </Button>
               </Row>
 
               <BottomSheet
-                stickyHeader={false}
+                isScrollable={false}
                 header={{title: 'Select Campus'}}
                 onDismiss={() => setIsBottomSheetOpen(false)}
                 footer={
                   <BottomSheetContentWrapper>
-                    <Button appearance="filled" color="primary" hasShadow>
-                      Footer Action
-                    </Button>
+                    <View style={{backgroundColor: '#000'}}>
+                      <Button appearance="filled" color="primary" hasShadow>
+                        Footer Action
+                      </Button>
+                    </View>
                   </BottomSheetContentWrapper>
                 }
                 isOpen={isBottomSheetOpen}>
                 <BottomSheetContentWrapper>
                   <Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Rem accusantium libero incidunt illo totam enim eligendi,
+                    exercitationem error impedit, ad commodi fugit tempora
+                    sequi. Laborum reiciendis tenetur alias modi harum.
+                  </Text>
+                </BottomSheetContentWrapper>
+              </BottomSheet>
+            </Section.Content>
+
+            <Section.Content>
+              <Row>
+                <Button onPress={() => setIsBottomSheetScrollOpen(true)}>
+                  Open Bottom Sheet Scrollable
+                </Button>
+              </Row>
+              <BottomSheet
+                stickyHeader={true}
+                header={{title: 'Select Campus'}}
+                onDismiss={() => setIsBottomSheetScrollOpen(false)}
+                footer={
+                  <BottomSheetContentWrapper>
+                    <View style={{backgroundColor: '#000'}}>
+                      <Button appearance="filled" color="primary" hasShadow>
+                        Footer Action
+                      </Button>
+                    </View>
+                  </BottomSheetContentWrapper>
+                }
+                isOpen={isBottomSheetScrollOpen}>
+                <BottomSheetContentWrapper>
+                  <Text>
+                    Scrolling Lorem ipsum dolor sit amet consectetur, adipisicing.
                     Rem accusantium libero incidunt illo totam enim eligendi,
                     exercitationem error impedit, ad commodi fugit tempora
                     sequi. Laborum reiciendis tenetur alias modi harum.

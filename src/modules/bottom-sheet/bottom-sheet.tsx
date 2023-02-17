@@ -57,7 +57,11 @@ const StyledHeader = {
     margin-top: ${minorScale(0.75)}px;
   `,
 };
-const StyledContentWrapper = Styled.ScrollView`
+const StyledContentWrapperScroll = Styled.ScrollView`
+  width: 100%;
+  flex: 1;
+`;
+const StyledContentWrapperView = Styled.View`
   width: 100%;
   flex: 1;
 `;
@@ -73,6 +77,7 @@ export const BottomSheet: React.FC<IProps> = ({
   closeButtonTestId = 'bottom-sheet-close-button',
   shouldCloseOnBackButtonPress = true,
   stickyHeader,
+  isScrollable = true,
   children,
   header,
   footer,
@@ -111,6 +116,60 @@ export const BottomSheet: React.FC<IProps> = ({
     ? onCloseModal
     : undefined;
 
+  // For now, switching based off of a parameter passed if we shoudl scroll, default is yes.
+  if (isScrollable) {
+    return (
+      <Modal
+        ref={modalRef}
+        isVisible={isOpen}
+        onModalHide={onDismiss}
+        onBackButtonPress={onBackButtonPress}
+        hideModalContentWhileAnimating
+        useNativeDriverForBackdrop
+        style={modalStyle}
+        useNativeDriver
+        propagateSwipe>
+        {/*
+        * SafearaView is used to prevent the modal from being covered by the status bar, doing this
+        * margin-top will take effect from bottom of the notch in iOS devices
+        * https://github.com/react-native-modal/react-native-modal/issues/342
+        */}
+        <SafeAreaView>
+          <StyledWrapper $hasFooter={!!footer}>
+            {/* Close Button */}
+            {showCloseButton && (
+              <StyledCloseWrapper
+                activeOpacity={0.75}
+                hitSlop={LayoutUtils.addHitSlop(12)}
+                testID={closeButtonTestId}
+                onPress={onCloseModal}>
+                <Icon type="closeCircle" color="muted" />
+              </StyledCloseWrapper>
+            )}
+            {/* Sections */}
+            <StyledSectionWrapper>
+              {/* Sticky Header */}
+              {shouldShowHeader && stickyHeader && renderHeader()}
+              {/* Content */}
+
+              <StyledContentWrapperScroll
+                contentContainerStyle={scrollViewStyle as any}>
+                {/* Static Header */}
+                {shouldShowHeader && !stickyHeader && renderHeader()}
+                {children}
+              </StyledContentWrapperScroll>
+
+              {/* Footer */}
+              <StyledFooterWrapper>
+                <SafeAreaView>{footer}</SafeAreaView>
+              </StyledFooterWrapper>
+            </StyledSectionWrapper>
+          </StyledWrapper>
+        </SafeAreaView>
+      </Modal>
+    );
+  }
+
   return (
     <Modal
       ref={modalRef}
@@ -123,10 +182,10 @@ export const BottomSheet: React.FC<IProps> = ({
       useNativeDriver
       propagateSwipe>
       {/*
-       * SafearaView is used to prevent the modal from being covered by the status bar, doing this
-       * margin-top will take effect from bottom of the notch in iOS devices
-       * https://github.com/react-native-modal/react-native-modal/issues/342
-       */}
+      * SafearaView is used to prevent the modal from being covered by the status bar, doing this
+      * margin-top will take effect from bottom of the notch in iOS devices
+      * https://github.com/react-native-modal/react-native-modal/issues/342
+      */}
       <SafeAreaView>
         <StyledWrapper $hasFooter={!!footer}>
           {/* Close Button */}
@@ -141,18 +200,12 @@ export const BottomSheet: React.FC<IProps> = ({
           )}
           {/* Sections */}
           <StyledSectionWrapper>
-            {/* Sticky Header */}
-            {shouldShowHeader && stickyHeader && renderHeader()}
-
             {/* Content */}
-            <StyledContentWrapper
-              contentContainerStyle={scrollViewStyle as any}>
+            <StyledContentWrapperView>
               {/* Static Header */}
               {shouldShowHeader && !stickyHeader && renderHeader()}
-
               {children}
-            </StyledContentWrapper>
-
+            </StyledContentWrapperView>
             {/* Footer */}
             <StyledFooterWrapper>
               <SafeAreaView>{footer}</SafeAreaView>
