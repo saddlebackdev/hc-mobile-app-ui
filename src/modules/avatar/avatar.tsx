@@ -68,12 +68,12 @@ export const Avatar: React.FC<IProps> = ({
 
   if (size === 'tile') {
     size = 48;
-    initialsFontSize = 18;
+    initialsFontSize = 16;
   }
 
   if (size === 'profile') {
     size = 100;
-    initialsFontSize = 26;
+    initialsFontSize = 24;
   }
 
   let borderRadius = 0;
