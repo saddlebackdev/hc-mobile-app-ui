@@ -20,15 +20,15 @@ export const StyledRow = Styled.View<IStyledRow>`
   align-items: center;
   padding-vertical: ${minorScale(3)}px;
   border-bottom-width: ${({$hideBorder}) => ($hideBorder ? 0 : 1)}px;
-  border-bottom-color: ${({theme}) => theme.colors.grayThree};
+  border-bottom-color: ${({theme}) => theme.colors.grayTwo};
 `;
 export const StyledLeftWrapper = Styled.View`
-  flex: 1;
   align-items: flex-start;
+  flex: 1.25;
 `;
 export const StyledRightWrapper = Styled.View`
   align-items: flex-end;
-  flex: 0.35;
+  flex: 0.75;
 `;
 export const StyledRightTextWrapper = Styled(Text)`
   font-size: 12px;
@@ -64,7 +64,7 @@ export const DataBlock: React.FC<IProps> = ({
               {item.jsxRightElement ? (
                 item.jsxRightElement
               ) : (
-                <StyledRightTextWrapper muted>
+                <StyledRightTextWrapper alignment="right" muted>
                   {item.label}
                 </StyledRightTextWrapper>
               )}

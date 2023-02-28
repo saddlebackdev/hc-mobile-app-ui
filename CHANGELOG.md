@@ -1,13 +1,19 @@
 # Changelog
 
+### v0.0.57
+
+- Data Block - Fix breaking label
+- Bottom Sheet - Fix header spacing
+- Avatar - Fix font sizes
+
 ---
+
 ### v0.0.56
 
-- Add isScrollable to BottomSheet to fix regression adding a ScrollView  
+- Add isScrollable to BottomSheet to fix regression adding a ScrollView
 
 ---
 
----
 ### v0.0.55
 
 - Bug Fix the Pagination issue on campus selection after looking at Serving Opp details
@@ -27,7 +33,7 @@
 - Notification Center - Add new component
 - Switch - Add new component
 - Card List Item - Added prop `eventDate`
-- Card List Item - Added prop `eventTime` 
+- Card List Item - Added prop `eventTime`
 - Card List Item - Added prop `timePeriod`
 - Card List Item - Added prop `placeHolderImage`
 

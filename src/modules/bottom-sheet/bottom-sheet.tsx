@@ -27,10 +27,10 @@ const StyledWrapper = Styled.View<IStyledWrapper>`
 `;
 const StyledCloseWrapper = Styled.TouchableOpacity`
   position: absolute;
-  width: 28px; height: 28px;
-  right: ${majorScale(1.3)}px;
-  top: ${majorScale(2)}px;
-  zIndex: 1000;
+  maxWidth: 32px; maxHeight: 32px;
+  right: ${majorScale(1)}px;
+  top: ${majorScale(1)}px;
+  zIndex: 10;
 `;
 const StyledSectionWrapper = Styled.View`
   flex: 1;
@@ -42,7 +42,9 @@ const StyledHeader = {
   Wrapper: Styled.View`
     width: 100%;
     justify-content: flex-start;
-    padding: ${majorScale(2)}px;
+    padding-top: ${majorScale(2)}px;
+    padding-horizontal: ${majorScale(2)}px;
+    padding-bottom: ${majorScale(4)}px;
 
     border-bottom-color: ${({theme}) => theme.colors.grayThree};
     border-bottom-width: 0;
@@ -130,10 +132,10 @@ export const BottomSheet: React.FC<IProps> = ({
         useNativeDriver
         propagateSwipe>
         {/*
-        * SafearaView is used to prevent the modal from being covered by the status bar, doing this
-        * margin-top will take effect from bottom of the notch in iOS devices
-        * https://github.com/react-native-modal/react-native-modal/issues/342
-        */}
+         * SafearaView is used to prevent the modal from being covered by the status bar, doing this
+         * margin-top will take effect from bottom of the notch in iOS devices
+         * https://github.com/react-native-modal/react-native-modal/issues/342
+         */}
         <SafeAreaView>
           <StyledWrapper $hasFooter={!!footer}>
             {/* Close Button */}
@@ -182,10 +184,10 @@ export const BottomSheet: React.FC<IProps> = ({
       useNativeDriver
       propagateSwipe>
       {/*
-      * SafearaView is used to prevent the modal from being covered by the status bar, doing this
-      * margin-top will take effect from bottom of the notch in iOS devices
-      * https://github.com/react-native-modal/react-native-modal/issues/342
-      */}
+       * SafearaView is used to prevent the modal from being covered by the status bar, doing this
+       * margin-top will take effect from bottom of the notch in iOS devices
+       * https://github.com/react-native-modal/react-native-modal/issues/342
+       */}
       <SafeAreaView>
         <StyledWrapper $hasFooter={!!footer}>
           {/* Close Button */}

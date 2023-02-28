@@ -1630,11 +1630,9 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 onDismiss={() => setIsBottomSheetOpen(false)}
                 footer={
                   <BottomSheetContentWrapper>
-                    <View style={{backgroundColor: '#000'}}>
-                      <Button appearance="filled" color="primary" hasShadow>
-                        Footer Action
-                      </Button>
-                    </View>
+                    <Button appearance="filled" color="primary" hasShadow>
+                      Footer Action
+                    </Button>
                   </BottomSheetContentWrapper>
                 }
                 isOpen={isBottomSheetOpen}>
@@ -1661,20 +1659,18 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                 onDismiss={() => setIsBottomSheetScrollOpen(false)}
                 footer={
                   <BottomSheetContentWrapper>
-                    <View style={{backgroundColor: '#000'}}>
-                      <Button appearance="filled" color="primary" hasShadow>
-                        Footer Action
-                      </Button>
-                    </View>
+                    <Button appearance="filled" color="primary" hasShadow>
+                      Footer Action
+                    </Button>
                   </BottomSheetContentWrapper>
                 }
                 isOpen={isBottomSheetScrollOpen}>
                 <BottomSheetContentWrapper>
                   <Text>
-                    Scrolling Lorem ipsum dolor sit amet consectetur, adipisicing.
-                    Rem accusantium libero incidunt illo totam enim eligendi,
-                    exercitationem error impedit, ad commodi fugit tempora
-                    sequi. Laborum reiciendis tenetur alias modi harum.
+                    Scrolling Lorem ipsum dolor sit amet consectetur,
+                    adipisicing. Rem accusantium libero incidunt illo totam enim
+                    eligendi, exercitationem error impedit, ad commodi fugit
+                    tempora sequi. Laborum reiciendis tenetur alias modi harum.
                   </Text>
                 </BottomSheetContentWrapper>
               </BottomSheet>
