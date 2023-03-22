@@ -183,11 +183,7 @@ export const PersonRecord: React.FC<IProps> = ({
       arrOtherDet.push(marStatus);
     }
 
-    arrOtherDet.push(
-      churchEntName === null || churchEntName === 'Unknown'
-        ? ''
-        : churchEntName,
-    );
+    arrOtherDet.push(churchEntName === null ? '' : churchEntName);
     return arrOtherDet.join(' | ');
   };
 
