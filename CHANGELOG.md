@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.0.58
+
+- Person Record - Added onTabChangeValue function for getting current tab index 
+- Person Record - Added onPressProfile function for click on profile icon
+
+---
+
 ### v0.0.57
 
 - Data Block - Fix breaking label

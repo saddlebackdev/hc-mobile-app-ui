@@ -67,4 +67,8 @@ export interface IProps {
 
   /** show milestones if true. */
   disableMilestones: boolean;
+
+  onTabChangeValue?: Function;
+
+  onPressProfile?: Function;
 }
