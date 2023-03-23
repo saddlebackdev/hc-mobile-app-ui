@@ -49,6 +49,9 @@ const StyledChild = Styled.TouchableOpacity<IStyledChild>`
   margin-bottom: ${({$isLastChild}) => ($isLastChild ? 0 : majorScale(1.25))}px;
 `;
 const StyledChildLabel = Styled(Text)``;
+const IconWrapper = Styled.View`
+  justify-content: center;
+`;
 
 // Component
 export const NestableListChildItem: React.FC<IChildItemProps> = ({
@@ -65,7 +68,9 @@ export const NestableListChildItem: React.FC<IChildItemProps> = ({
     <StyledChildLabel variant="subtitle2" testID="child-label">
       {label}
     </StyledChildLabel>
-    <Icon type="close" size={8} />
+    <IconWrapper>
+      <Icon type="close" size={10} />
+    </IconWrapper>
   </StyledChild>
 );
 

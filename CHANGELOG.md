@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.59
+
+- NestableList - Added wrapper to Icon with justify-content center of NestableListChildItem and size increased to 10
+
+---
+
 ### v0.0.58
 
 - Person Record - Added onTabChangeValue function for getting current tab index 
