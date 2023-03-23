@@ -87,6 +87,8 @@ export const PersonRecord: React.FC<IProps> = ({
   preSelectedTabValue,
   tabs = [],
   disableMilestones = false,
+  onTabChangeValue,
+  onPressProfile,
 }): React.ReactElement => {
   // State
   const [selectedTab, setSelectedTab] = React.useState<ITab>();
@@ -94,6 +96,9 @@ export const PersonRecord: React.FC<IProps> = ({
   // On Tab Change
   const onTabChange = (tab: ITab): void => {
     setSelectedTab(tab);
+    if (onTabChangeValue) {
+      onTabChangeValue(tab);
+    }
   };
 
   React.useEffect(() => {
@@ -178,11 +183,7 @@ export const PersonRecord: React.FC<IProps> = ({
       arrOtherDet.push(marStatus);
     }
 
-    arrOtherDet.push(
-      churchEntName === null || churchEntName === 'Unknown'
-        ? ''
-        : churchEntName,
-    );
+    arrOtherDet.push(churchEntName === null ? '' : churchEntName);
     return arrOtherDet.join(' | ');
   };
 
@@ -340,6 +341,7 @@ export const PersonRecord: React.FC<IProps> = ({
                     size="profile"
                     initials={getUserNameFirstLastCharacter()}
                     uri={person?.profilePhotoUrl || person?.profilePictureUrl}
+                    onPress={onPressProfile}
                     radius="small"
                   />
                 </StyledAvatarWrapper>
