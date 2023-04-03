@@ -72,11 +72,13 @@ export const Checkbox: React.FC<IProps> = React.memo(
     disabled,
     onPress,
     required,
+    optionContainerStyle,
   }): React.ReactElement => (
     <StyledWrapper
       testID="checkbox"
       disabled={disabled}
       activeOpacity={0.75}
+      style={optionContainerStyle}
       onPress={onPress}
       hitSlop={LayoutUtils.addHitSlop(12)}>
       <StyledCheckboxOuter $isChecked={isChecked} $isDisabled={disabled}>
