@@ -46,5 +46,5 @@ export interface IProps {
     style?: object;
   }>;
   /** Overrides the option container style */
-  optionContainerStyle?: (id) => object;
+  optionContainerStyle?: (id) => void;
 }
