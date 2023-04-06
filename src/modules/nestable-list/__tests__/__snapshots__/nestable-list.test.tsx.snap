@@ -155,17 +155,27 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
       >
         Lake Forest
       </Text>
-      <Image
-        source="test-file-stub"
+      <View
         style={
           Array [
             Object {
-              "height": 8,
-              "width": 8,
+              "justifyContent": "center",
             },
           ]
         }
-      />
+      >
+        <Image
+          source="test-file-stub"
+          style={
+            Array [
+              Object {
+                "height": 10,
+                "width": 10,
+              },
+            ]
+          }
+        />
+      </View>
     </View>
     <View
       accessible={true}
@@ -216,17 +226,27 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
       >
         Laguna Woods
       </Text>
-      <Image
-        source="test-file-stub"
+      <View
         style={
           Array [
             Object {
-              "height": 8,
-              "width": 8,
+              "justifyContent": "center",
             },
           ]
         }
-      />
+      >
+        <Image
+          source="test-file-stub"
+          style={
+            Array [
+              Object {
+                "height": 10,
+                "width": 10,
+              },
+            ]
+          }
+        />
+      </View>
     </View>
     <View
       accessible={true}
@@ -277,17 +297,27 @@ exports[`NestableList Rendering renders itself correctly 1`] = `
       >
         San Diego
       </Text>
-      <Image
-        source="test-file-stub"
+      <View
         style={
           Array [
             Object {
-              "height": 8,
-              "width": 8,
+              "justifyContent": "center",
             },
           ]
         }
-      />
+      >
+        <Image
+          source="test-file-stub"
+          style={
+            Array [
+              Object {
+                "height": 10,
+                "width": 10,
+              },
+            ]
+          }
+        />
+      </View>
     </View>
   </View>
   <View
@@ -503,17 +533,27 @@ exports[`NestableListChildItem Rendering renders itself correctly 1`] = `
   >
     Lake Forest
   </Text>
-  <Image
-    source="test-file-stub"
+  <View
     style={
       Array [
         Object {
-          "height": 8,
-          "width": 8,
+          "justifyContent": "center",
         },
       ]
     }
-  />
+  >
+    <Image
+      source="test-file-stub"
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
