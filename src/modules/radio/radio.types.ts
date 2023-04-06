@@ -41,7 +41,10 @@ export interface IProps {
 
     /** Renders the element before the radio option control, 'direction' must be 'vertical' */
     leftChild?: JSX.Element;
+
+    /** Overrides the option container style */
+    style?: object;
   }>;
   /** Overrides the option container style */
-  optionContainerStyle?: object;
+  optionContainerStyle?: (id) => object;
 }
