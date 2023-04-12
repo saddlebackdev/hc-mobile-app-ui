@@ -1,8 +1,14 @@
 # Changelog
 
-### v0.0.59
+### v0.0.60
 
 - Radio Button - Add ability to have unique style per radio
+
+---
+
+### v0.0.59
+
+- NestableList - Added wrapper to Icon with justify-content center of NestableListChildItem and size increased to 10
 
 ---
 
