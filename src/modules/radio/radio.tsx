@@ -116,7 +116,11 @@ export const Radio: React.FC<IProps> = React.memo(
             $direction={direction}
             $isFirstChild={isFirstElement}
             $isLastChild={isLastElement}
-            style={optionContainerStyle}
+            style={
+              optionContainerStyle && typeof optionContainerStyle === 'function'
+                ? optionContainerStyle(option.value)
+                : optionContainerStyle
+            }
             disabled={isRadioDisabled || option.disabled}>
             {shouldRenderLeftChild && (
               <StyledLeft>{option.leftChild}</StyledLeft>

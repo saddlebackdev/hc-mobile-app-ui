@@ -37,4 +37,7 @@ export interface IProps {
 
   /** If true, appends an asterisk to the label */
   required?: boolean;
+
+  /** Overrides the option container style */
+  optionContainerStyle?: object;
 }
