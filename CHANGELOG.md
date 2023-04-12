@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.59
+
+- Radio Button - Add ability to have unique style per radio
+
+---
+
 ### v0.0.58
 
 - Person Record - Added onTabChangeValue function for getting current tab index 
