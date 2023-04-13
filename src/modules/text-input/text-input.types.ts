@@ -11,6 +11,7 @@ export interface IStyledInput extends TextInputProps {
   $isFocused: boolean;
   $font?: 'primary' | 'secondary' | string;
   $isUnderlined?: boolean;
+  $autoHeight?: boolean;
 }
 
 // Props
@@ -44,4 +45,7 @@ export interface IProps extends Partial<TextInputProps> {
 
   /** Function to call on key input event */
   onChange: any;
+
+  /** If true, sets height to auto */
+  autoHeight?: boolean;
 }
