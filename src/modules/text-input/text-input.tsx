@@ -37,7 +37,15 @@ const StyledInput = Styled.TextInput<IStyledInput>`
     return $isUnderlined ? 0 : majorScale(1, 'px');
   }};
 
-  height: ${({multiline}) => (multiline ? '88px' : '44px')};
+  height: ${({multiline, $autoHeight}) => {
+    if ($autoHeight) {
+      return 'auto';
+    }
+
+    return multiline ? '88px' : '44px';
+  }};
+
+  min-height: ${({multiline}) => (multiline ? '88px' : '44px')};
 
   background: ${({editable, theme}) => {
     return editable ? theme.colors.white : theme.colors.grayTwo;
@@ -79,6 +87,7 @@ export const TextInput: React.FC<IProps> = ({
   onBlur,
   onChange,
   onFocus,
+  autoHeight,
   ...props
 }): React.ReactElement => {
   // Hooks
@@ -135,6 +144,7 @@ export const TextInput: React.FC<IProps> = ({
         $font={font}
         $isFocused={isFocused}
         $isUnderlined={isUnderlined}
+        $autoHeight={autoHeight}
         editable={!disabled}
         selectTextOnFocus={!disabled}
         underlineColorAndroid="transparent"

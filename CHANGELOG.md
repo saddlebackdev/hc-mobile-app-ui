@@ -1,5 +1,10 @@
 # Changelog
 
+### v0.0.61
+
+- TextInput - Added autoHeight option
+
+---
 ### v0.0.60
 
 - Radio Button - Add ability to have unique style per radio
