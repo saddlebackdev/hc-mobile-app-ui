@@ -1,7 +1,15 @@
 import {AccessibilityProps} from 'react-native';
 
+// Wrapper
+export interface IWrapper {
+  $bgTheme: string;
+}
+
 // Props
 export interface IProps extends AccessibilityProps {
+  /** If true, uses the light theme. Defaults to light. */
+  theme?: 'dark' | 'light';
+
   /** Determines if the prompt is open or not. */
   isOpen: boolean;
 
