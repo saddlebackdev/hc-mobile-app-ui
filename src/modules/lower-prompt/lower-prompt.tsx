@@ -4,7 +4,7 @@ import Styled from 'styled-components/native';
 import Modal from 'react-native-modal';
 
 // Types
-import {IProps} from './lower-prompt.types';
+import {IProps, IWrapper} from './lower-prompt.types';
 
 // Shared
 import Text from '../text/text';
@@ -14,13 +14,20 @@ import Button from '../button/button';
 import {generateTestAndAccessiblityProps} from '../utilities/props.util';
 
 // Styles
-const StyledWrapper = Styled.View`
+const StyledWrapper = Styled.View<IWrapper>`
   width: 100%;
   position: absolute;
-  background: ${({theme}) => theme.colors.graySix};
   padding: ${majorScale(2)}px;
   border-radius: 8px;
   bottom: 0;
+
+  background: ${({theme, $bgTheme}) => {
+    if ($bgTheme === 'light') {
+      return theme.colors.white;
+    }
+
+    return theme.colors.graySix;
+  }};
 `;
 const StyledMessage = Styled(Text)`
   margin-bottom: ${majorScale(2)}px;
@@ -37,6 +44,7 @@ export const LowerPrompt: React.FC<IProps> = ({
   rightButtonCallback,
   rightButtonColor,
   leftButtonColor,
+  theme = 'light',
   children,
   testID,
   accessibilityLabel,
@@ -51,7 +59,10 @@ export const LowerPrompt: React.FC<IProps> = ({
       isVisible={isOpen}
       style={{margin: majorScale(2)}}
       backdropOpacity={0.15}>
-      <StyledWrapper accessibilityLabel={accessibilityLabel} testID={testID}>
+      <StyledWrapper
+        $bgTheme={theme}
+        accessibilityLabel={accessibilityLabel}
+        testID={testID}>
         <StyledMessage
           {...generateTestAndAccessiblityProps(
             'styled-message',
@@ -59,7 +70,7 @@ export const LowerPrompt: React.FC<IProps> = ({
             accessibilityLabel,
           )}
           weight="semiBold"
-          inversed>
+          inversed={theme === 'dark'}>
           {children}
         </StyledMessage>
 

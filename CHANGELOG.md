@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.62
+
+- LowerPrompt - Add `theme` prop to enable light and dark theme support
+
+---
+
 ### v0.0.61
 
 - TextInput - Added autoHeight option
@@ -19,7 +25,7 @@
 
 ### v0.0.58
 
-- Person Record - Added onTabChangeValue function for getting current tab index 
+- Person Record - Added onTabChangeValue function for getting current tab index
 - Person Record - Added onPressProfile function for click on profile icon
 
 ---
