@@ -2,7 +2,7 @@
 
 ### v0.0.63
 
-- BottomSheet - Added `customOnBackButtonPress` prop
+- BottomSheet - Added `onHardwareBackButtonPress` prop
 
 ---
 

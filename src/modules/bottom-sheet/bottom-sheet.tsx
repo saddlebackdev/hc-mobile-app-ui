@@ -83,7 +83,7 @@ export const BottomSheet: React.FC<IProps> = ({
   children,
   header,
   footer,
-  customOnBackButtonPress,
+  onHardwareBackButtonPress,
 }): React.ReactElement => {
   // Refs
   const modalRef = React.useRef(null);
@@ -117,7 +117,7 @@ export const BottomSheet: React.FC<IProps> = ({
 
   const onBackButtonPress = shouldCloseOnBackButtonPress
     ? onCloseModal
-    : customOnBackButtonPress;
+    : onHardwareBackButtonPress;
 
   // For now, switching based off of a parameter passed if we shoudl scroll, default is yes.
   if (isScrollable) {

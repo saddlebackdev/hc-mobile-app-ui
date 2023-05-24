@@ -48,5 +48,5 @@ export interface IProps {
    *
    * Requires `shouldCloseOnBackButtonPress` to be `false`
    */
-  customOnBackButtonPress?: () => void;
+  onHardwareBackButtonPress?: () => void;
 }
