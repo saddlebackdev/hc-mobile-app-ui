@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.0.63
+
+- Group list item - Added theme colors support for link text
+---
 ### v0.0.62
 
 - LowerPrompt - Add `theme` prop to enable light and dark theme support
