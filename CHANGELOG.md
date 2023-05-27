@@ -2,6 +2,7 @@
 
 ### v0.0.63
 
+- Group list item - Added theme colors support for link text
 - BottomSheet - Added `onHardwareBackButtonPress` prop
 
 ---

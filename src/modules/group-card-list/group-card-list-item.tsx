@@ -121,6 +121,7 @@ export const GroupsListItem: React.FC<IProps> = ({
   title,
   linkLabel,
   onLinkPress,
+  linkColor = 'primaryLight',
   leftIcon,
   leftIconColor,
   leftText,
@@ -152,7 +153,7 @@ export const GroupsListItem: React.FC<IProps> = ({
             {linkLabel && (
               <Header.LinkText
                 weight="bold"
-                color="primaryLight"
+                color={linkColor}
                 variant="body2"
                 inversed={inversed}
                 onPress={onLinkPress}>

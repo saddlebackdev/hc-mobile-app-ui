@@ -26,6 +26,8 @@ export interface IStyledDivider {
 export interface IProps {
   title: string;
   linkLabel?: string;
+  /**  linkColor Supports only theme specific colors */
+  linkColor?: string;
   onLinkPress?: any;
   leftIcon: any;
   leftIconColor?: string;
