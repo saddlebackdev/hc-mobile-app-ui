@@ -42,4 +42,11 @@ export interface IProps {
 
   /** If true, pressing the back button will close the bottom sheet. */
   shouldCloseOnBackButtonPress?: boolean;
+
+  /**
+   * Function to be called on back button press.
+   *
+   * Requires `shouldCloseOnBackButtonPress` to be `false`
+   */
+  onHardwareBackButtonPress?: () => void;
 }
