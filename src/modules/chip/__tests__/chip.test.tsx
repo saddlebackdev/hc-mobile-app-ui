@@ -24,6 +24,22 @@ describe('Chip', () => {
 
       expect(wrapper).toMatchSnapshot();
     });
+
+    it('should use passed color as background color', () => {
+      const wrapper = render(
+        <ThemeProvider theme={defaultTheme}>
+          <Chip label="Care" onPress={jest.fn()} color="#4499ff" />
+        </ThemeProvider>,
+      );
+
+      const label = wrapper.getByTestId('chip-label');
+
+      expect(label).toBeDefined();
+
+      expect(label.children).toEqual(['Care']);
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
   describe('Interactions', () => {

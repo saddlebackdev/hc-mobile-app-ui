@@ -3,7 +3,7 @@ import * as React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IProps} from './chip.types';
+import {IProps, IStyledWrapper} from './chip.types';
 
 // Shared
 import Text from '../text/text';
@@ -11,13 +11,13 @@ import Icon from '../icon/icon';
 import {LayoutUtils} from '../utilities';
 
 // Styles
-const StyledWrapper = Styled.View`
+const StyledWrapper = Styled.View<IStyledWrapper>`
   flex-direction: row;
   justify-content: space-between;
   align-self: flex-start;
   align-items: center;
 
-  background-color: ${({theme}) => theme.colors.grayFour};
+  background-color: ${({theme, $color}) => $color || theme.colors.grayFour};
 
   padding-vertical: 5px;
   padding-horizontal: 7px;
@@ -34,8 +34,8 @@ const StyledCloseButton = Styled.TouchableOpacity`
 
 // Component
 export const Chip: React.FC<IProps> = React.memo(
-  ({label, onPress}): React.ReactElement => (
-    <StyledWrapper testID="chip">
+  ({label, color, onPress}): React.ReactElement => (
+    <StyledWrapper $color={color} testID="chip">
       <StyledLabel testID="chip-label">{label}</StyledLabel>
 
       {onPress && (
