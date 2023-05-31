@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.64
+
+- Chip - Add `color` prop to accept hex colors as chip background
+
+---
+
 ### v0.0.63
 
 - Group list item - Added theme colors support for link text
@@ -18,6 +24,7 @@
 - TextInput - Added autoHeight option
 
 ---
+
 ### v0.0.60
 
 - Radio Button - Add ability to have unique style per radio
