@@ -12,6 +12,20 @@ import {majorScale} from '../scales';
 import ButtonGroup from '../button-group/button-group';
 import Button from '../button/button';
 import {generateTestAndAccessiblityProps} from '../utilities/props.util';
+import {Platform} from 'react-native';
+
+// Shared
+import defaultTheme from '../theming/default-theme';
+
+const viewShadow = Platform.select({
+  android: {elevation: 4},
+  ios: {
+    shadowColor: defaultTheme.colors.black,
+    shadowOffset: {width: 1, height: 1},
+    shadowOpacity: 0.4,
+    shadowRadius: 3,
+  },
+});
 
 // Styles
 const StyledWrapper = Styled.View<IWrapper>`
@@ -48,6 +62,7 @@ export const LowerPrompt: React.FC<IProps> = ({
   children,
   testID,
   accessibilityLabel,
+  shadowStyle,
 }): React.ReactElement => {
   const hasLeftButton = leftButtonLabel && leftButtonCallback;
   const hasRightButton = rightButtonLabel && rightButtonCallback;
@@ -62,7 +77,8 @@ export const LowerPrompt: React.FC<IProps> = ({
       <StyledWrapper
         $bgTheme={theme}
         accessibilityLabel={accessibilityLabel}
-        testID={testID}>
+        testID={testID}
+        style={[shadowStyle ? shadowStyle : viewShadow]}>
         <StyledMessage
           {...generateTestAndAccessiblityProps(
             'styled-message',

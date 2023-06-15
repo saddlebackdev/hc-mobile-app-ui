@@ -1,6 +1,13 @@
 // Modules
 import * as React from 'react';
-import {Alert, View, SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
+import {
+  Alert,
+  View,
+  SafeAreaView,
+  StyleSheet,
+  ViewStyle,
+  Platform,
+} from 'react-native';
 import Styled from 'styled-components/native';
 
 import {
@@ -132,6 +139,16 @@ const progressValues: IProgressValue[] = [
   },
 ];
 
+const viewShadow = Platform.select({
+  android: {elevation: 4},
+  ios: {
+    shadowColor: defaultTheme.colors.black,
+    shadowOffset: {width: 1, height: 1},
+    shadowOpacity: 1,
+    shadowRadius: 3,
+  },
+});
+
 const onPressMock = () => false;
 
 const swipeable: Array<any> = [];
@@ -156,7 +173,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const [isBottomSheetScrollOpen, setIsBottomSheetScrollOpen] =
     React.useState<boolean>(false);
   const [isSimpleLowerPromptOpen, setIsSimpleLowerPromptOpen] =
-    React.useState<boolean>(false);
+    React.useState<boolean>(true);
   const [isSuccessLowerPromptOpen, setIsSuccessLowerPromptOpen] =
     React.useState<boolean>(false);
   const [isDangerLowerPromptOpen, setIsDangerLowerPromptOpen] =
@@ -1708,6 +1725,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
 
               <LowerPrompt
+                shadowStyle={viewShadow}
                 leftButtonCallback={() => setIsSimpleLowerPromptOpen(false)}
                 isOpen={isSimpleLowerPromptOpen}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ea
