@@ -36,4 +36,7 @@ export interface IProps extends AccessibilityProps {
 
   /** Used to locate this view in end-to-end tests. */
   testID?: string;
+
+  /** custom style for shadow. */
+  shadowStyle?: any;
 }

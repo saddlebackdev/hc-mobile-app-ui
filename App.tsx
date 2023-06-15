@@ -1,6 +1,13 @@
 // Modules
 import * as React from 'react';
-import {Alert, View, SafeAreaView, StyleSheet, ViewStyle} from 'react-native';
+import {
+  Alert,
+  View,
+  SafeAreaView,
+  StyleSheet,
+  ViewStyle,
+  Platform,
+} from 'react-native';
 import Styled from 'styled-components/native';
 
 import {
@@ -131,6 +138,16 @@ const progressValues: IProgressValue[] = [
     clockwise: true,
   },
 ];
+
+const viewShadow = Platform.select({
+  android: {elevation: 4},
+  ios: {
+    shadowColor: defaultTheme.colors.black,
+    shadowOffset: {width: 1, height: 1},
+    shadowOpacity: 1,
+    shadowRadius: 3,
+  },
+});
 
 const onPressMock = () => false;
 
@@ -1708,6 +1725,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
               </Row>
 
               <LowerPrompt
+                shadowStyle={viewShadow}
                 leftButtonCallback={() => setIsSimpleLowerPromptOpen(false)}
                 isOpen={isSimpleLowerPromptOpen}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ea
