@@ -1,5 +1,9 @@
 # Changelog
 
+### v0.0.65
+
+- LowerPrompt - Add `shadow` prop to modify shadow style
+
 ### v0.0.64
 
 - Chip - Add `color` prop to accept hex colors as chip background
