@@ -173,7 +173,7 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
   const [isBottomSheetScrollOpen, setIsBottomSheetScrollOpen] =
     React.useState<boolean>(false);
   const [isSimpleLowerPromptOpen, setIsSimpleLowerPromptOpen] =
-    React.useState<boolean>(true);
+    React.useState<boolean>(false);
   const [isSuccessLowerPromptOpen, setIsSuccessLowerPromptOpen] =
     React.useState<boolean>(false);
   const [isDangerLowerPromptOpen, setIsDangerLowerPromptOpen] =
