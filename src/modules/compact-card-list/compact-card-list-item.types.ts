@@ -87,4 +87,7 @@ export type IProps = {
 
   /** on press event of Card */
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
+
+  /** get shrink and expand icon at the place of chevronUp and chevronDown */
+  useShrinkExpandIcon?: boolean;
 };
