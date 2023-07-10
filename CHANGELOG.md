@@ -1,4 +1,7 @@
 # Changelog
+### v0.0.66
+
+- CompactCardListItem - Added `useShrinkExpandIcon` prop to change default icon chevronUp/Down to shrink/expand
 
 ### v0.0.65
 

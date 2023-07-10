@@ -136,6 +136,7 @@ export const CompactCardListItem: React.FC<IProps> = ({
   expandedElement,
   title,
   redMarker,
+  useShrinkExpandIcon = false,
 }): React.ReactElement => {
   // State
   const [isCardExpanded, setCardExpanded] = React.useState<boolean>(false);
@@ -148,6 +149,13 @@ export const CompactCardListItem: React.FC<IProps> = ({
   React.useEffect(() => {
     setCardExpanded(false);
   }, []);
+
+  const _getRightIcon = () => {
+    if (isCardExpanded) {
+      return useShrinkExpandIcon ? 'shrink' : 'chevronUp';
+    }
+    return useShrinkExpandIcon ? 'expand' : 'chevronDown';
+  };
 
   return (
     <StyledWrapper testID={'compact-card'}>
@@ -210,10 +218,7 @@ export const CompactCardListItem: React.FC<IProps> = ({
           )}
           {expandedElement && (
             <StyledExpandLink onPress={() => _onToggle()}>
-              <Icon
-                type={isCardExpanded ? 'chevronUp' : 'chevronDown'}
-                size={16}
-              />
+              <Icon type={_getRightIcon()} size={16} />
             </StyledExpandLink>
           )}
         </StyledSubWrapper>
