@@ -1,7 +1,7 @@
 # Changelog
 ### v0.0.67
 
-- Update Font Size and Padding on the `Radio`component
+- Update Font Size and Padding on the `Radio` component
 
 ### v0.0.66
 
