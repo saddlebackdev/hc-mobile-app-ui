@@ -1,4 +1,8 @@
 # Changelog
+### v0.0.67
+
+- Update Font Size and Padding on the `Radio` component
+
 ### v0.0.66
 
 - CompactCardListItem - Added `useShrinkExpandIcon` prop to change default icon chevronUp/Down to shrink/expand
