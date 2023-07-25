@@ -75,6 +75,7 @@ const StyledRadioInner = Styled.View<IStyledRadioInner>`
   }};
 `;
 const StyledRadioLabelWrapper = Styled(Text)`
+  font-size: ${({theme}) => theme.typography.sizes.small}px;
   padding-left: ${majorScale(1, 'px')};
   padding-top: 2px;
 `;
