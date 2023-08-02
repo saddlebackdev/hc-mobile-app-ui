@@ -83,6 +83,8 @@ export const BottomSheet: React.FC<IProps> = ({
   children,
   header,
   footer,
+  closeButtonIconSize,
+  closeButtonIconColor = 'muted',
   onHardwareBackButtonPress,
 }): React.ReactElement => {
   // Refs
@@ -146,7 +148,11 @@ export const BottomSheet: React.FC<IProps> = ({
                 hitSlop={LayoutUtils.addHitSlop(12)}
                 testID={closeButtonTestId}
                 onPress={onCloseModal}>
-                <Icon type="closeCircle" color="muted" />
+                <Icon
+                  type="closeCircle"
+                  size={closeButtonIconSize}
+                  color={closeButtonIconColor}
+                />
               </StyledCloseWrapper>
             )}
             {/* Sections */}
@@ -198,7 +204,11 @@ export const BottomSheet: React.FC<IProps> = ({
               hitSlop={LayoutUtils.addHitSlop(12)}
               testID={closeButtonTestId}
               onPress={onCloseModal}>
-              <Icon type="closeCircle" color="muted" />
+              <Icon
+                type="closeCircle"
+                size={closeButtonIconSize}
+                color={closeButtonIconColor}
+              />
             </StyledCloseWrapper>
           )}
           {/* Sections */}

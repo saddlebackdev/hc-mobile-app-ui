@@ -49,4 +49,13 @@ export interface IProps {
    * Requires `shouldCloseOnBackButtonPress` to be `false`
    */
   onHardwareBackButtonPress?: () => void;
+
+  /** Size of the close button icon
+   *
+   * Maximum size allocated by the container is `32`
+   */
+  closeButtonIconSize?: number;
+
+  /** Determines the color of the close button icon */
+  closeButtonIconColor?: 'black' | 'muted' | 'white';
 }

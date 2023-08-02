@@ -1,4 +1,10 @@
 # Changelog
+
+### v0.0.68
+
+- `close-x-complex-black.png` - Adjusted file to contain non-transparent inner X
+- BottomSheet - Added `closeButtonIconSize` & `closeButtonIconColor` props
+
 ### v0.0.67
 
 - Update Font Size and Padding on the `Radio` component
