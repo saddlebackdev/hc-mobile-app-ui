@@ -1,5 +1,12 @@
 # Changelog
 
+### v0.0.69
+
+- GroupsListItem - Added bottomElement props for Dynamic UI UX 
+- GroupsListItem - Added isExpandable props for Stop Expandable window
+
+---
+
 ### v0.0.68
 
 - `close-x-complex-black.png` - Adjusted file to contain non-transparent inner X
