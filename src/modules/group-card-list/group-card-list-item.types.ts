@@ -29,13 +29,15 @@ export interface IProps {
   /**  linkColor Supports only theme specific colors */
   linkColor?: string;
   onLinkPress?: any;
-  leftIcon: any;
+  leftIcon?: any;
   leftIconColor?: string;
-  leftText: string;
+  leftText?: string;
   showDivider?: boolean;
-  rightIcon: any;
+  rightIcon?: any;
   rightIconColor?: string;
-  rightText: string;
+  rightText?: string;
   gradientColors: GradientColorProp[];
   expandedElement: JSX.Element;
+  isExpandable?: boolean;
+  bottomElement?: JSX.Element;
 }

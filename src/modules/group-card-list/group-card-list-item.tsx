@@ -131,12 +131,18 @@ export const GroupsListItem: React.FC<IProps> = ({
   rightText,
   gradientColors,
   expandedElement,
+  isExpandable = true,
+  bottomElement,
 }): React.ReactElement => {
   // State
   const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
 
   // Toggle State
   const toggleState = (): void => {
+    // prettier-ignore
+    if (!isExpandable){
+      return;
+    }
     setIsExpanded(!isExpanded);
   };
 
@@ -200,6 +206,7 @@ export const GroupsListItem: React.FC<IProps> = ({
             </Header.MetaData>
           ) : null}
         </Header.Row>
+        {bottomElement}
       </Header.Content>
     );
   };
