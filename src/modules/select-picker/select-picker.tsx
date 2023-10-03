@@ -14,6 +14,7 @@ import {DeviceUtils} from '../utilities';
 import Text from '../text/text';
 import {majorScale, minorScale} from '../scales';
 import Icon from '../icon/icon';
+import {View} from 'react-native';
 
 // Styles
 const StyledWrapper = Styled.View``;
@@ -68,6 +69,12 @@ const getStyles = (
         ...baseStyles.input,
         marginLeft: isUnderlined ? -16 : 0,
         marginTop: -6,
+        borderRadius: 2,
+        borderColor: `${colors.grayThree}`,
+        borderWidth: 1,
+        borderStyle: 'solid',
+        paddingLeft: 5,
+        paddingRight: 5,
 
         // Something wrong with Typescript
         // Doesnt allow using string if moved to baseStyles
@@ -158,6 +165,7 @@ const SelectPicker: React.FC<IProps> = ({
         Icon={getIcon(showCustomIcon)}
         style={getStyles(theme, isUnderlined)}
         fixAndroidTouchableBug
+        useNativeAndroidPickerStyle={false}
         {...additionalProps}
       />
     </StyledWrapper>
