@@ -4,6 +4,7 @@ import {ReactElement} from 'react';
 // Styled Tile Container
 export interface IStyledTileContainer {
   $isCentered: boolean;
+  $radius?: number;
   $color?: string;
 }
 export interface IStyledTileContent {
@@ -54,6 +55,9 @@ export interface IProps {
 
   /** Center the tile items both horizontally and vertically. */
   centered?: boolean;
+
+  /** Border radius of the tile. */
+  radius?: number;
 
   /** Number of colums to be rendered. */
   columns?: number;

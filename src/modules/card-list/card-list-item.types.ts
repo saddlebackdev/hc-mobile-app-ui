@@ -1,10 +1,16 @@
 // Modules
 import {ReactElement} from 'react';
 
+export interface IStyledCard {
+  $radius: number;
+}
 // Item
 export interface IProps {
   /** URL of photo to be shown on the left. */
   photoUrl?: string;
+
+  /** Border radius of the Card. */
+  radius?: number;
 
   /** Fallback photo in case photoUrl is not present. */
   fallbackImage?: any;

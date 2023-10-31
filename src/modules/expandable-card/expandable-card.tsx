@@ -3,7 +3,11 @@ import * as React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IStyledTileIconWrapper, IProps} from './expandable-card.types';
+import {
+  IStyledTileIconWrapper,
+  IStyledCardWrapper,
+  IProps,
+} from './expandable-card.types';
 
 // Shared
 import Text from '../text/text';
@@ -36,10 +40,10 @@ const StyledTileSubtitle = Styled(Text)`
   margin-bottom: 4px;
   margin-top: 4px;
 `;
-const StyledCardWrapper = Styled.View`
+const StyledCardWrapper = Styled.View<IStyledCardWrapper>`
   width: 100%;
   background: ${({theme}) => theme.colors.white};
-  border-radius: 10px;
+  border-radius: ${({$radius}) => $radius}px;
 `;
 const StyledCardHeaderWrapper = Styled.View`
   flex-direction: row;
@@ -72,6 +76,7 @@ export const ExpandableCard: React.FC<IProps> = ({
   tileContent,
   tileColor = 'secondaryDark',
   inversed = false,
+  radius = 10,
   subTitleMarker,
   titleMarker,
   onPress,
@@ -121,7 +126,7 @@ export const ExpandableCard: React.FC<IProps> = ({
   }
 
   return (
-    <StyledCardWrapper testID="card">
+    <StyledCardWrapper $radius={radius} testID="card">
       <StyledCardHeaderWrapper>
         <StyledCardHeaderTitle variant="h4" testID="card-title">
           {title}

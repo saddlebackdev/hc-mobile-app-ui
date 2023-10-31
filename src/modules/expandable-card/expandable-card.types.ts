@@ -6,6 +6,10 @@ export interface IStyledTileIconWrapper {
   $color?: string;
 }
 
+export interface IStyledCardWrapper {
+  $radius?: number;
+}
+
 // Props
 export interface IProps {
   /** Flag to specify whether the card is open or not. */
@@ -16,6 +20,9 @@ export interface IProps {
 
   /** A react element to be rendered inside the colored tile on the left.  */
   tileContent: ReactElement;
+
+  /** Border radius of the tile. */
+  radius?: number;
 
   /** Subtitle for the card */
   subTitle?: string;

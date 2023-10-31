@@ -3,7 +3,7 @@ import * as React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IProps} from './card-list-item.types';
+import {IProps, IStyledCard} from './card-list-item.types';
 
 // Shared
 import Text from '../text/text';
@@ -11,8 +11,9 @@ import Heading from '../heading/heading';
 import {majorScale} from '../scales';
 
 // Styles
-const StyledCard = Styled.TouchableOpacity`
+const StyledCard = Styled.TouchableOpacity<IStyledCard>`
   flex-direction: column;
+  border-radius: ${({$radius}) => $radius}px;
   padding-vertical: ${majorScale(2)}px;
 `;
 const StyledCardContent = Styled.View`
@@ -56,6 +57,7 @@ export const CardListItem: React.FC<IProps> = ({
   fallbackImage,
   placeHolderImage,
   title,
+  radius = 0,
   marker = null,
   timePeriod = null,
   subTitle,
@@ -66,7 +68,11 @@ export const CardListItem: React.FC<IProps> = ({
   onPress,
 }): React.ReactElement => (
   <React.Fragment>
-    <StyledCard activeOpacity={0.75} onPress={onPress} testID="list-item">
+    <StyledCard
+      $radius={radius}
+      activeOpacity={0.75}
+      onPress={onPress}
+      testID="list-item">
       <StyledCardContent>
         <StyledCardPhotoWrapper>
           <StyledPhoto
