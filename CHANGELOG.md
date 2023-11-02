@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.70
+
+- Added border radius in Tiles, CardListItem, ExpandableCard
+
+---
+
 ### v0.0.69
 
 - GroupsListItem - Added bottomElement props for Dynamic UI UX 

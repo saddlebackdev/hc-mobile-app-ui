@@ -15,6 +15,7 @@ exports[`CardListItem Interactions should call onPress method when pressed 1`] =
   onStartShouldSetResponder={[Function]}
   style={
     Object {
+      "borderRadius": 0,
       "flexDirection": "column",
       "opacity": 1,
       "paddingVertical": 22,
@@ -232,6 +233,7 @@ exports[`CardListItem Rendering hides tags when it is null 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
+      "borderRadius": 0,
       "flexDirection": "column",
       "opacity": 1,
       "paddingVertical": 22,
@@ -418,6 +420,7 @@ exports[`CardListItem Rendering renders itself correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
+      "borderRadius": 0,
       "flexDirection": "column",
       "opacity": 1,
       "paddingVertical": 22,

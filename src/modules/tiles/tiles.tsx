@@ -30,7 +30,7 @@ const StyledTile = Styled.TouchableOpacity<IStyledTile>`
 `;
 const StyledTileContainer = Styled.View<IStyledTileContainer>`
   width: 100%; height: 100%;
-  border-radius: 5px;
+  border-radius: ${({$radius}) => $radius}px;
 
   padding: ${({$isCentered}) => ($isCentered ? 0 : majorScale(1))}px;
 
@@ -59,6 +59,7 @@ const StyledTileTitle = Styled(Text)<IStyledTileTitle>`
 export const TileGroup: React.FC<IProps> = ({
   items,
   centered = false,
+  radius = 5,
   columns = 2,
 }): React.ReactElement => {
   // State
@@ -102,7 +103,10 @@ export const TileGroup: React.FC<IProps> = ({
             onLayout={_onLayout}
             onPress={onPress}
             testID="tile">
-            <StyledTileContainer $isCentered={centered} $color={item.color}>
+            <StyledTileContainer
+              $radius={radius}
+              $isCentered={centered}
+              $color={item.color}>
               <StyledTileContent $isCentered={centered} testID="tile-content">
                 {item.content}
               </StyledTileContent>
