@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.71
+
+- Additional changes for border radius on CardListItem & ExpandableCard
+
+---
+
 ### v0.0.70
 
 - Added border radius in Tiles, CardListItem, ExpandableCard
