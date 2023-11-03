@@ -4,6 +4,7 @@ import {ReactElement} from 'react';
 // Styled Tile Icon Wrapper
 export interface IStyledTileIconWrapper {
   $color?: string;
+  $radius?: number;
 }
 
 export interface IStyledCardWrapper {
