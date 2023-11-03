@@ -27,8 +27,7 @@ const StyledTileIconWrapper = Styled.View<IStyledTileIconWrapper>`
   justify-content: center;
   width: 58px; height: 58px;
   margin-right: ${majorScale(1)}px;
-  border-radius: 10px;
-
+  border-radius: ${({$radius}) => $radius}px;
   background: ${({theme, $color = 'secondaryDark'}) => {
     return theme.colors[$color] || theme.colors.secondaryDark;
   }};
@@ -90,7 +89,7 @@ export const ExpandableCard: React.FC<IProps> = ({
         hitSlop={LayoutUtils.addHitSlop(12)}
         onPress={onPress}
         testID="tile">
-        <StyledTileIconWrapper testID="tile-content" $color={tileColor}>
+        <StyledTileIconWrapper $radius={radius} testID="tile-content" $color={tileColor}>
           {tileContent ? tileContent : null}
         </StyledTileIconWrapper>
         <StyledTileDetails>

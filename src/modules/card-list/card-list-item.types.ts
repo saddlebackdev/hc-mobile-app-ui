@@ -1,7 +1,7 @@
 // Modules
 import {ReactElement} from 'react';
 
-export interface IStyledCard {
+export interface IStyledPhoto {
   $radius: number;
 }
 // Item

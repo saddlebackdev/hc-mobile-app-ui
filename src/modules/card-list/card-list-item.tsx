@@ -3,7 +3,7 @@ import * as React from 'react';
 import Styled from 'styled-components/native';
 
 // Types
-import {IProps, IStyledCard} from './card-list-item.types';
+import {IProps, IStyledPhoto} from './card-list-item.types';
 
 // Shared
 import Text from '../text/text';
@@ -11,9 +11,8 @@ import Heading from '../heading/heading';
 import {majorScale} from '../scales';
 
 // Styles
-const StyledCard = Styled.TouchableOpacity<IStyledCard>`
+const StyledCard = Styled.TouchableOpacity`
   flex-direction: column;
-  border-radius: ${({$radius}) => $radius}px;
   padding-vertical: ${majorScale(2)}px;
 `;
 const StyledCardContent = Styled.View`
@@ -29,9 +28,9 @@ const StyledCardDetailsWrapper = Styled.View`
   width: 65%;
 `;
 const StyledCardDetailsRow = Styled.View``;
-const StyledPhoto = Styled.Image`
+const StyledPhoto = Styled.Image<IStyledPhoto>`
   width: 96px; height: 96px;
-  border-radius: 8px;
+  border-radius: ${({$radius}) => $radius}px;
 `;
 const StyledTitle = Styled(Heading)``;
 const StyledSubTitle = Styled(Text)`
@@ -57,7 +56,7 @@ export const CardListItem: React.FC<IProps> = ({
   fallbackImage,
   placeHolderImage,
   title,
-  radius = 0,
+  radius = 8,
   marker = null,
   timePeriod = null,
   subTitle,
@@ -68,17 +67,14 @@ export const CardListItem: React.FC<IProps> = ({
   onPress,
 }): React.ReactElement => (
   <React.Fragment>
-    <StyledCard
-      $radius={radius}
-      activeOpacity={0.75}
-      onPress={onPress}
-      testID="list-item">
+    <StyledCard activeOpacity={0.75} onPress={onPress} testID="list-item">
       <StyledCardContent>
         <StyledCardPhotoWrapper>
           <StyledPhoto
             source={photoUrl ? {uri: photoUrl} : fallbackImage}
             defaultSource={placeHolderImage}
             testID="item-photo"
+            $radius={radius}
           />
         </StyledCardPhotoWrapper>
         <StyledCardDetailsWrapper>

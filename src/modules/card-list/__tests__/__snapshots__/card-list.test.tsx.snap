@@ -73,7 +73,6 @@ exports[`CardList Rendering renders itself correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "borderRadius": 0,
             "flexDirection": "column",
             "opacity": 1,
             "paddingVertical": 22,
@@ -264,7 +263,6 @@ exports[`CardList Rendering renders itself correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "borderRadius": 0,
             "flexDirection": "column",
             "opacity": 1,
             "paddingVertical": 22,
