@@ -89,7 +89,10 @@ export const ExpandableCard: React.FC<IProps> = ({
         hitSlop={LayoutUtils.addHitSlop(12)}
         onPress={onPress}
         testID="tile">
-        <StyledTileIconWrapper $radius={radius} testID="tile-content" $color={tileColor}>
+        <StyledTileIconWrapper
+          $radius={radius}
+          testID="tile-content"
+          $color={tileColor}>
           {tileContent ? tileContent : null}
         </StyledTileIconWrapper>
         <StyledTileDetails>
