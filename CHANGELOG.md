@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.72
+
+- Add Left Custom Image JSX Element for Adding Image insted of Gradian colour in Compact-card-list
+
+---
+
 ### v0.0.71
 
 - Additional changes for border radius on CardListItem & ExpandableCard
