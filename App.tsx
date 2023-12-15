@@ -66,6 +66,7 @@ import IconCarrotUp from './src/images/carrot-up.svg';
 import IconTime from './src/images/time-icon.svg';
 import {IProgressValue} from './src/modules/circular-progress/circular-progress.types';
 import CircularProgress from './src/modules/circular-progress/circular-progress';
+import IconShareBoth from './src/images/teamshare.svg';
 
 // Interfaces
 interface IProps {}
@@ -147,6 +148,27 @@ const viewShadow = Platform.select({
     shadowOpacity: 1,
     shadowRadius: 3,
   },
+});
+
+const viewShadow1 = Platform.select({
+  android: {elevation: 4},
+  ios: {
+    shadowColor: defaultTheme.colors.grayFive,
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+  },
+});
+
+const ICON_BOX_SIZE = 38;
+
+const linearGradientViewStyle = StyleSheet.flatten<ViewStyle>({
+  width: ICON_BOX_SIZE,
+  height: ICON_BOX_SIZE,
+  marginTop: 12,
+  marginLeft: -ICON_BOX_SIZE / 2,
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 const onPressMock = () => false;
@@ -1060,6 +1082,42 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
                         color={'warningLight'}>
                         (2 Overdue)
                       </Text>
+                    </Text>
+                  }
+                />
+              </Row>
+              <Row>
+                <CompactCardListItem
+                  icon={IconShapeHeart}
+                  title="My List"
+                  leftGradientViewStyle={{
+                    gradientColors: gradientColorsCheckin,
+                  }}
+                  isCustomImageElement
+                  customImageElement={
+                    <View style={[viewShadow1, linearGradientViewStyle]}>
+                      <IconSVG file={IconShareBoth} size={38} />
+                    </View>
+                  }
+                  rightElement={
+                    <View
+                      // eslint-disable-next-line react-native/no-inline-styles
+                      style={{
+                        alignItems: 'center',
+                        marginTop: 10,
+                      }}>
+                      <Text
+                        numberOfLines={1}
+                        weight={'semiBold'}
+                        variant={'subtitle2'}
+                        color={'warningLight'}>
+                        Admin
+                      </Text>
+                    </View>
+                  }
+                  footerElement={
+                    <Text numberOfLines={1} variant={'subtitle2'}>
+                      Footer element
                     </Text>
                   }
                 />

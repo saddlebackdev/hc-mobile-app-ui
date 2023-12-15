@@ -137,6 +137,8 @@ export const CompactCardListItem: React.FC<IProps> = ({
   title,
   redMarker,
   useShrinkExpandIcon = false,
+  isCustomImageElement = false,
+  customImageElement,
 }): React.ReactElement => {
   // State
   const [isCardExpanded, setCardExpanded] = React.useState<boolean>(false);
@@ -181,17 +183,24 @@ export const CompactCardListItem: React.FC<IProps> = ({
         )}
         <StyledSubWrapper>
           {/* icon Box*/}
-          <StyledLinearGradientWrapper
-            gradientColors={leftGradientViewStyle.gradientColors}
-            horizontal={leftGradientViewStyle.horizontal}
-            viewStyle={linearGradientViewStyle}>
-            <StyledIconWrapper
-              testID="icon"
-              file={icon}
-              size={16}
-              color={defaultTheme.colors.white}
-            />
-          </StyledLinearGradientWrapper>
+          {!isCustomImageElement ? (
+            <StyledLinearGradientWrapper
+              gradientColors={leftGradientViewStyle.gradientColors}
+              horizontal={leftGradientViewStyle.horizontal}
+              viewStyle={linearGradientViewStyle}>
+              <StyledIconWrapper
+                testID="icon"
+                file={icon}
+                size={16}
+                color={defaultTheme.colors.white}
+              />
+            </StyledLinearGradientWrapper>
+          ) : (
+            // <StyledTeamWrapper style={[viewShadow, linearGradientViewStyle]}>
+            //   <IconSVG file={IconShareBoth} size={38} />
+            // </StyledTeamWrapper>
+            customImageElement
+          )}
           {/* card contents*/}
           <StyledChildWrapper>
             {/* Sub Header Optional Child Components */}
