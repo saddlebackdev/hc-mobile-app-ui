@@ -90,4 +90,8 @@ export type IProps = {
 
   /** get shrink and expand icon at the place of chevronUp and chevronDown */
   useShrinkExpandIcon?: boolean;
+
+  isCustomImageElement?: boolean;
+
+  customImageElement?: JSX.Element;
 };
