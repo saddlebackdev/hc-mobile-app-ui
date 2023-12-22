@@ -18,6 +18,7 @@ const StyledCard = Styled.View`
   padding-vertical: 45px;
   width: 100%;
   height: 100%;
+  background-color: white;
 `;
 
 const AnimationWrapper = Styled.View`
@@ -47,7 +48,7 @@ export const AppDown: React.FC<IProps> = ({
         <AnimationWrapper>{animationElement}</AnimationWrapper>
         <HeadingWrapper>
           <Heading variant="h2" alignment="center">
-            We are down for maintanence.
+            We are down for maintenance.
           </Heading>
         </HeadingWrapper>
         <TextWrapper>
