@@ -61,11 +61,7 @@ export const AppDown: React.FC<IProps> = ({
             </Text>
           </TextWrapper>
           <ButtonWrapper>
-            <Button
-              color="primary"
-              appearance="filled"
-              testID="link"
-              onPress={onRestart}>
+            <Button testID="link" onPress={onRestart}>
               Restart Application
             </Button>
           </ButtonWrapper>
