@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.73
+
+- Added appDown component to display server maintenance or app downtime information.
+
+---
+
 ### v0.0.72
 
 - Add Left Custom Image JSX Element for Adding Image insted of Gradian colour in Compact-card-list
