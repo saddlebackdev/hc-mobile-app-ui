@@ -194,3 +194,7 @@ export {IProps as INoteListItemProps} from './modules/people-list/people-list-it
 // Group-card-list-item
 export {default as GroupCardListItem} from './modules/group-card-list/group-card-list-item';
 export {IProps as IGroupCardItemProps} from './modules/group-card-list/group-card-list-item.types';
+
+// app Down Screen
+export {default as AppDown} from './modules/appDown/appDown';
+export {IProps as AppDownProps} from './modules/appDown/appDown.types';

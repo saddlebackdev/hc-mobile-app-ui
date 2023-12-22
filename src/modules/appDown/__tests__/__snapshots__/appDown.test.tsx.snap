@@ -1,0 +1,339 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppDown Interactions should call onPress method when pressed 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
+    }
+    testID="app-Down-main"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "paddingHorizontal": 45,
+            "paddingVertical": 45,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 280,
+              "marginBottom": 22,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "marginBottom": 22,
+            },
+          ]
+        }
+      >
+        <Text
+          alignment="center"
+          style={
+            Array [
+              Object {
+                "color": "#1C2530",
+                "fontFamily": "System",
+                "fontSize": 20,
+                "fontWeight": "700",
+                "textAlign": "center",
+              },
+            ]
+          }
+          testID="heading"
+          variant="h2"
+        >
+          We are down for maintanence.
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "marginBottom": 33,
+            },
+          ]
+        }
+      >
+        <Text
+          alignment="center"
+          style={
+            Array [
+              Object {
+                "color": "#1C2530",
+                "fontFamily": "System",
+                "fontSize": 18,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "textAlign": "center",
+              },
+            ]
+          }
+          testID="text"
+          variant="body1"
+        >
+          We're busy making some improvements to the app. Please check back in a bit. Thanks for your patience!
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "marginBottom": 33,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00AEFF",
+              "borderColor": "transparent",
+              "borderRadius": 4,
+              "borderWidth": 0,
+              "display": "flex",
+              "flexDirection": "row",
+              "height": 44,
+              "justifyContent": "center",
+              "opacity": 1,
+              "shadowColor": "black",
+              "shadowOffset": Object {
+                "height": 0,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": "100%",
+            }
+          }
+          testID="link"
+        >
+          <Text
+            appearance="filled"
+            color="primary"
+            disabled={false}
+            small={false}
+            style={
+              Array [
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "fontWeight": "600",
+                },
+              ]
+            }
+            testID="styled-label-link"
+          >
+            Restart Application
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`AppDown Rendering renders itself correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
+    }
+    testID="app-Down-main"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "paddingHorizontal": 45,
+            "paddingVertical": 45,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 280,
+              "marginBottom": 22,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "marginBottom": 22,
+            },
+          ]
+        }
+      >
+        <Text
+          alignment="center"
+          style={
+            Array [
+              Object {
+                "color": "#1C2530",
+                "fontFamily": "System",
+                "fontSize": 20,
+                "fontWeight": "700",
+                "textAlign": "center",
+              },
+            ]
+          }
+          testID="heading"
+          variant="h2"
+        >
+          We are down for maintanence.
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "marginBottom": 33,
+            },
+          ]
+        }
+      >
+        <Text
+          alignment="center"
+          style={
+            Array [
+              Object {
+                "color": "#1C2530",
+                "fontFamily": "System",
+                "fontSize": 18,
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "textAlign": "center",
+              },
+            ]
+          }
+          testID="text"
+          variant="body1"
+        >
+          We're busy making some improvements to the app. Please check back in a bit. Thanks for your patience!
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "marginBottom": 33,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00AEFF",
+              "borderColor": "transparent",
+              "borderRadius": 4,
+              "borderWidth": 0,
+              "display": "flex",
+              "flexDirection": "row",
+              "height": 44,
+              "justifyContent": "center",
+              "opacity": 1,
+              "shadowColor": "black",
+              "shadowOffset": Object {
+                "height": 0,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 0,
+              "width": "100%",
+            }
+          }
+          testID="link"
+        >
+          <Text
+            appearance="filled"
+            color="primary"
+            disabled={false}
+            small={false}
+            style={
+              Array [
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "System",
+                  "fontSize": 16,
+                  "fontWeight": "600",
+                },
+              ]
+            }
+            testID="styled-label-link"
+          >
+            Restart Application
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
