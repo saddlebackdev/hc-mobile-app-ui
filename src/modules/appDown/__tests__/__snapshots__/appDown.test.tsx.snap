@@ -8,6 +8,7 @@ exports[`AppDown Interactions should call onPress method when pressed 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "white",
           "height": "100%",
           "justifyContent": "center",
           "paddingHorizontal": 45,
@@ -53,7 +54,7 @@ exports[`AppDown Interactions should call onPress method when pressed 1`] = `
         testID="heading"
         variant="h2"
       >
-        We are down for maintanence.
+        We are down for maintenance.
       </Text>
     </View>
     <View
@@ -168,6 +169,7 @@ exports[`AppDown Rendering renders itself correctly 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "white",
           "height": "100%",
           "justifyContent": "center",
           "paddingHorizontal": 45,
@@ -213,7 +215,7 @@ exports[`AppDown Rendering renders itself correctly 1`] = `
         testID="heading"
         variant="h2"
       >
-        We are down for maintanence.
+        We are down for maintenance.
       </Text>
     </View>
     <View
