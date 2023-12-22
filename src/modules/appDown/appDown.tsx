@@ -39,12 +39,12 @@ margin-bottom: ${majorScale(3)}px;;
 
 export const AppDown: React.FC<IProps> = ({
   onRestart,
-  AnimationElement,
+  animationElement,
 }): React.ReactElement => (
   <React.Fragment>
     <SafeAreaView>
       <StyledCard testID="app-Down-main">
-        <AnimationWrapper>{AnimationElement}</AnimationWrapper>
+        <AnimationWrapper>{animationElement}</AnimationWrapper>
         <HeadingWrapper>
           <Heading variant="h2" alignment="center">
             We are down for maintanence.

@@ -55,6 +55,7 @@ import {
   NotificationCenter,
   Switch,
   CardListItem,
+  // AppDown,
 } from './src';
 import Icon from './src/modules/icon/icon';
 
@@ -75,6 +76,9 @@ const Wrapper = Styled.ScrollView``;
 const Section = {
   Wrapper: Styled.View`
     padding: 30px;
+    flex: 1;
+  `,
+  WrapperAppDown: Styled.View`
     flex: 1;
   `,
   Title: Styled.View``,
@@ -515,6 +519,21 @@ export const App: React.FC<IProps> = (): React.ReactElement => {
             </Section.Description>
           </Section.Wrapper>
           <Divider />
+          {/* app Down component */}
+          {/* <Section.WrapperAppDown>
+            <AppDown
+              onRestart={onPressMock}
+              animationElement={
+                <>
+                  <IconSVG
+                    file={IconCarrotUp}
+                    size={280}
+                    color={defaultTheme.colors.primaryDark}
+                  />
+                </>
+              }></AppDown>
+          </Section.WrapperAppDown>
+          <Divider /> */}
           {/* Card List Item list item */}
           <Section.Wrapper>
             <Section.Title>
