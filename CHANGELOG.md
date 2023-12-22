@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.74
+
+- Modify Text and message in appDown component.
+
+---
+
 ### v0.0.73
 
 - Added appDown component to display server maintenance or app downtime information.
