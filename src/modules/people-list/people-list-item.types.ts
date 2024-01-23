@@ -40,4 +40,7 @@ export interface IProps {
 
   // get event for recenter swipe
   onSwipeStart?: (event: any) => any;
+
+  // show/hide ID prfix for user ID default true
+  showIdPrefix?: boolean;
 }

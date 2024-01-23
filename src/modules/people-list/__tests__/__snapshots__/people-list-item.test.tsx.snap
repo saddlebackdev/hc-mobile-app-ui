@@ -273,8 +273,7 @@ exports[`UserItem Interactions should call the onPress method when card is press
               testID="user-id"
               variant="subtitle2"
             >
-              ID:
-              512345
+              ID:512345
             </Text>
           </View>
         </View>
@@ -557,8 +556,7 @@ exports[`UserItem Rendering hides icon when it is null 1`] = `
               testID="user-id"
               variant="subtitle2"
             >
-              ID:
-              512345
+              ID:512345
             </Text>
           </View>
         </View>
@@ -825,8 +823,7 @@ exports[`UserItem Rendering should render properly 1`] = `
               testID="user-id"
               variant="subtitle2"
             >
-              ID:
-              512345
+              ID:512345
             </Text>
           </View>
         </View>

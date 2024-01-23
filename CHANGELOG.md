@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.0.75
+
+- Added prop to PeopleListItem component to show/hide ID Prefix
+
+---
+
 ### v0.0.74
 
 - Modify Text and message in appDown component.

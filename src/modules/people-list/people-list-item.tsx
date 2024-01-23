@@ -78,6 +78,7 @@ export const PeopleListItem: React.FC<IProps> = ({
   redMarker,
   middleElement,
   onRef,
+  showIdPrefix = true,
   onSwipeStart,
 }): React.ReactElement => {
   const getUserNameFirstLastCharacter = () => {
@@ -124,7 +125,7 @@ export const PeopleListItem: React.FC<IProps> = ({
                   muted
                   alignment="right"
                   testID="user-id">
-                  ID:{`${userId}`}
+                  {showIdPrefix ? `ID:${userId}` : userId}
                 </StyledUserIdTextWrapper>
               )}
             </StyledUserNameIdWrapper>
