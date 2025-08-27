@@ -43,32 +43,16 @@ export interface HeaderWrapperProp {
 // Compact Card List Item Props
 export type IProps = {
   /** header element of Card */
-  headerElement?:
-    | React.ComponentType<any>
-    | React.ReactElement
-    | null
-    | undefined;
+  headerElement?: React.ReactElement;
 
   /** footer element of Card */
-  footerElement?:
-    | React.ComponentType<any>
-    | React.ReactElement
-    | null
-    | undefined;
+  footerElement?: React.ReactElement;
 
   /** right element of Card */
-  rightElement?:
-    | React.ComponentType<any>
-    | React.ReactElement
-    | null
-    | undefined;
+  rightElement?: React.ReactElement;
 
   /** expanded element of Card */
-  expandedElement?:
-    | React.ComponentType<any>
-    | React.ReactElement
-    | null
-    | undefined;
+  expandedElement?: React.ReactElement;
 
   /** gradient view style of Card View */
   cardGradientViewStyle?: GradientStyleProp;

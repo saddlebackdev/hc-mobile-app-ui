@@ -17,7 +17,7 @@ const StyledWrapper = Styled.View`
   align-items: center;
   padding-bottom: ${majorScale(1)}px;
 `;
-const StyledFlatList = Styled(FlatList as new () => FlatList<ITab>)``;
+const StyledFlatList = Styled(FlatList<ITab>)``;
 const StyledTouchable = Styled.TouchableOpacity<IStyledTouchable>`
   margin-left: ${({$isFirstChild}) => ($isFirstChild ? 0 : majorScale(1))}px;
   margin-right: ${({$isLastChild}) => ($isLastChild ? 0 : majorScale(1))}px;

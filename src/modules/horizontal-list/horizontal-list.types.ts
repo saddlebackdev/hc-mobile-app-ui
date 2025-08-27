@@ -30,4 +30,6 @@ export interface IProps {
 
   /** Adds horizontal padding to the header when true. */
   paddedHeader?: boolean;
+
+  children?: React.ReactNode;
 }

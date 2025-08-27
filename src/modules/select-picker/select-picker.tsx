@@ -82,7 +82,9 @@ const getStyles = (
       ...baseStyles,
       viewContainer: {
         ...baseStyles.viewContainer,
+        // @ts-ignore
         paddingHorizontal: isUnderlined ? 0 : majorScale(1),
+        // @ts-ignore
         paddingVertical: majorScale(1),
       },
       inputIOS: {
@@ -155,6 +157,7 @@ const SelectPicker: React.FC<IProps> = ({
       )}
 
       <RNPickerSelect
+        // @ts-ignore
         Icon={getIcon(showCustomIcon)}
         style={getStyles(theme, isUnderlined)}
         fixAndroidTouchableBug

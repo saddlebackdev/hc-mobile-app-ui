@@ -40,6 +40,7 @@ export const LinearGradientView: React.FC<IProps> = ({
     <Svg style={StyleSheet.absoluteFillObject}>
       <Defs>
         {/* linear gradient background wrapper */}
+        {/*@ts-ignore*/}
         <LinearGradient
           id="grad"
           x1="0%"

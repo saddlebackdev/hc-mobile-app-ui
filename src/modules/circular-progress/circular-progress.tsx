@@ -89,6 +89,7 @@ const CircularProgress: React.FC<IProps> = ({
         height={radius * 2}
         viewBox={`0 0 ${viewBox * 2} ${viewBox * 2}`}
         testID="empty-circle">
+        {/*@ts-ignore*/}
         <G mask={maskId}>
           <Circle
             cx="50%"
@@ -109,6 +110,7 @@ const CircularProgress: React.FC<IProps> = ({
                 width={radius * 2}
                 height={radius * 2}
                 viewBox={`0 0 ${viewBox * 2} ${viewBox * 2}`}>
+                {/*@ts-ignore*/}
                 <G mask={maskId}>
                   <Circle
                     cx="50%"
