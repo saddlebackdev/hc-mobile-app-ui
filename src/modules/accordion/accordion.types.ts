@@ -13,6 +13,5 @@ export interface IProps {
   /** Renders the accordion in open state when true. */
   isOpen?: boolean;
 
-
   children?: ReactNode;
 }
