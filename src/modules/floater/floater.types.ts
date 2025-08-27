@@ -27,4 +27,6 @@ export interface IProps {
 
   /** Adds padding from the left */
   offsetLeft?: number;
+
+  children: React.ReactNode;
 }

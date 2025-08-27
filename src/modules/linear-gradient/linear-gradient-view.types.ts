@@ -22,4 +22,6 @@ export interface IProps {
 
   /** gradient colors shown in horizontal */
   horizontal?: boolean;
+
+  children?: React.ReactNode;
 }

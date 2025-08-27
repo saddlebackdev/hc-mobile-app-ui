@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 // Styled Wrapper
 export interface IStyledWrapper {
@@ -58,4 +58,6 @@ export interface IProps {
 
   /** Determines the color of the close button icon */
   closeButtonIconColor?: 'black' | 'muted' | 'white';
+
+  children?: ReactNode;
 }

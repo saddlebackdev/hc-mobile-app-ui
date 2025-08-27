@@ -42,4 +42,6 @@ export interface IProps {
 
   /** A react element to be rendered beside the card title when closed. */
   titleMarker?: ReactElement;
+
+  children: React.ReactNode;
 }

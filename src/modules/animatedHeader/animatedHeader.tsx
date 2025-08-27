@@ -4,8 +4,8 @@ import Styled from 'styled-components/native';
 import {majorScale} from '../scales';
 import {IAnimatedProps, IAnimatedHeader} from './animatedHeader.types';
 
-let oldOpacity: Animated.AnimatedInterpolation | undefined;
-let oldTranslateY: Animated.AnimatedInterpolation | undefined;
+let oldOpacity: Animated.AnimatedInterpolation<string | number> | undefined;
+let oldTranslateY: Animated.AnimatedInterpolation<string | number> | undefined;
 
 const getNewInterpolationValue = (
   hMaxHeight: number,

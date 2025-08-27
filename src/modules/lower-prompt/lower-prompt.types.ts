@@ -39,4 +39,6 @@ export interface IProps extends AccessibilityProps {
 
   /** custom style for shadow. */
   shadowStyle?: any;
+
+  children: React.ReactNode;
 }

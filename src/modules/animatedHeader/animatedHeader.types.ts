@@ -1,8 +1,8 @@
 import {Animated, ViewStyle} from 'react-native';
 
 export interface IAnimatedProps {
-  opacity?: Animated.AnimatedInterpolation;
-  translateY?: Animated.AnimatedInterpolation;
+  opacity?: Animated.AnimatedInterpolation<string | number>;
+  translateY?: Animated.AnimatedInterpolation<string | number>;
 }
 
 export interface IAnimatedHeader {

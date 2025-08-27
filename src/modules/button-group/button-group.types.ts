@@ -14,5 +14,5 @@ export interface IButtonGroupItemProps {
 
 // IProps
 export interface IProps {
-  children: unknown;
+  children: React.ReactNode;
 }

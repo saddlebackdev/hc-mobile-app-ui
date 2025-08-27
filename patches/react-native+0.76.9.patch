@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native/Libraries/Core/Devtools/getDevServer.js b/node_modules/react-native/Libraries/Core/Devtools/getDevServer.js
+index a4d886b..60a48c9 100644
+--- a/node_modules/react-native/Libraries/Core/Devtools/getDevServer.js
++++ b/node_modules/react-native/Libraries/Core/Devtools/getDevServer.js
+@@ -26,7 +26,7 @@ type DevServerInfo = {
+  * @return URL to packager with trailing slash
+  */
+ function getDevServer(): DevServerInfo {
+-  if (_cachedDevServerURL === undefined) {
++  if (_cachedDevServerURL == undefined) {
+     const scriptUrl = NativeSourceCode.getConstants().scriptURL;
+     const match = scriptUrl.match(/^https?:\/\/.*?\//);
+     _cachedDevServerURL = match ? match[0] : null;

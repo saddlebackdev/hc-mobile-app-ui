@@ -72,6 +72,7 @@ export const LowerPrompt: React.FC<IProps> = ({
   return (
     <Modal
       isVisible={isOpen}
+      // @ts-ignore
       style={{margin: majorScale(2)}}
       backdropOpacity={0.15}>
       <StyledWrapper

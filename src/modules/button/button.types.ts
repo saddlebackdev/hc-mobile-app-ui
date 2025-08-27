@@ -5,7 +5,7 @@ import {TouchableOpacityProps} from 'react-native';
 // Common Props
 interface ICommonProps {
   /** If true, disables the button. Defaults to false */
-  disabled?: boolean | null;
+  disabled?: boolean;
 
   /** Determines the appearance of the button. Can be filled or outline. Defaults to filled */
   appearance?: 'filled' | 'outline';

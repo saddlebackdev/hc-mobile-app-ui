@@ -24,4 +24,6 @@ export interface IProps {
 
   /** If true, renders the label with small font size. */
   small?: boolean;
+
+  children?: React.ReactNode;
 }
